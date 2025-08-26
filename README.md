@@ -21,7 +21,7 @@
 
 * **Janover Gonzalo Saldaña Vela    U20201B510**
 * **Hardie Alfonso Holguin Gamarra  U202220250**
-* **Nombres y apellidos    Código de estudiante**
+* **Javier Kenyi Mendoza Solis      U201824550**
 * **Nombres y apellidos    Código de estudiante**
 * **Nombres y apellidos    Código de estudiante**
 
@@ -165,7 +165,7 @@ Github Collaboration Insights proporciona un cronograma que muestra las principa
 
 * Janover Gonzalo Saldaña Vela (JanoverSaldana)
 * Hardie Alfonso Holguin Gamarra (HOLGUINUPC)
-* 
+* Javier Kenyi Mendoza Solis (Kenyi-Mendoza-Solis)
 * 
 * 
 
@@ -287,7 +287,7 @@ en cada uno de los commits.
         Acciones realizadas de TB1 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br> 
         Acciones realizadas de TB1 por el integrante 4
         <br><br>
@@ -310,7 +310,7 @@ en cada uno de los commits.
         Acciones realizadas de TP por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TP por el integrante 3
         <br><br>
@@ -338,7 +338,7 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 3
         <br><br>
@@ -366,7 +366,7 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 3
         <br><br>
@@ -417,7 +417,7 @@ en cada uno de los commits.
         Acciones realizadas de TB1 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br> 
         Acciones realizadas de TB1 por el integrante 4
         <br><br>
@@ -440,7 +440,7 @@ en cada uno de los commits.
         Acciones realizadas de TP por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TP por el integrante 3
         <br><br>
@@ -468,7 +468,7 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 3
         <br><br>
@@ -496,7 +496,7 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 3
         <br><br>
