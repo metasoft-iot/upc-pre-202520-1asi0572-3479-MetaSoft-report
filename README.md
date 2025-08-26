@@ -171,7 +171,7 @@ Github Collaboration Insights proporciona un cronograma que muestra las principa
 
 Se dividieron las siguientes ramas para la colaboración en el proyecto:
 
-* main
+* master
 * capitulo-I
 * capitulo-II
 * capitulo-III
