@@ -14,13 +14,13 @@
 ## Startup: MetaSoft
 ## Producto: Por definir
 
-</center> 
+</center>
 
 ## Relación de integrantes:
 
 
 * **Janover Gonzalo Saldaña Vela    U20201B510**
-* **Nombres y apellidos    Código de estudiante**
+* **Javier Sharvel Irigoyen Matos   U20221D156**
 * **Nombres y apellidos    Código de estudiante**
 * **Nombres y apellidos    Código de estudiante**
 * **Nombres y apellidos    Código de estudiante**
@@ -105,14 +105,14 @@
             <td>Nombre de autores</td>
             <td>Descripción de modificación</td>
         </tr>
-        <!-- Fila 9-->  
+        <!-- Fila 9-->
         <tr>
             <td>1.8</td>
             <td>Fecha</td>
             <td>Nombre de autores</td>
             <td>Descripción de modificación</td>
         </tr>
-        <!-- Fila 10--> 
+        <!-- Fila 10-->
         <tr>
             <td>1.9</td>
             <td>Fecha</td>
@@ -133,7 +133,7 @@
             <td>Nombre de autores</td>
             <td>Descripción de modificación</td>
         </tr>
-        <!-- Fila 13--> 
+        <!-- Fila 13-->
         <tr>
             <td>1.12</td>
             <td>Fecha</td>
@@ -164,10 +164,10 @@
 Github Collaboration Insights proporciona un cronograma que muestra las principales ramas y los procesos de fusión que han ocurrido. Todas las ramas se han generado siguiendo los principios de GitFlow, lo que garantiza una organización efectiva al utilizar un sistema de control de versiones.
 
 * Janover Gonzalo Saldaña Vela (JanoverSaldana)
-* 
-* 
-* 
-* 
+*
+*
+*
+*
 
 Se dividieron las siguientes ramas para la colaboración en el proyecto:
 
@@ -273,34 +273,34 @@ en cada uno de los commits.
         <br>
         <!============APELLIDO Y NOMBRES 1=========================>
         <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 1
-        <br><br>    
+        <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
         <strong>Apellidos y nombres:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
         <strong>Villegas Jipa Luis Alfonso</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
         <strong>Apellidos y nombres:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 4
         <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>  
+        <!============APELLIDO Y NOMBRES 5=========================>
         <strong>Apellidos y nombres:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 5
         <br><br>
         <!============TRABAJO PARCIAL =========================>
         <p style="text-align: center;"><strong>Presentable del TP</strong></p>
         <br>
         <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>  
+        <strong>Janover Gonzalo Saldaña Vela:</strong>
         <br>
         Acciones realizadas de TP por el integrante 1
         <br><br>
@@ -383,16 +383,16 @@ en cada uno de los commits.
     </td>
      <td>
         <strong>TB1:</strong>
-        Conclusiones generales TB1 del criterio específico 1        
+        Conclusiones generales TB1 del criterio específico 1
         <br/><br/>
         <strong>TP:</strong>
-        Conclusiones generales TP del criterio específico 1       
+        Conclusiones generales TP del criterio específico 1
         <br/><br/>
         <strong>TB2:</strong>
-        Conclusiones generales TB2 del criterio específico 1        
+        Conclusiones generales TB2 del criterio específico 1
         <br/><br/>
         <strong>TF:</strong>
-        Conclusiones generales TF del criterio específico 1        
+        Conclusiones generales TF del criterio específico 1
     </td>
 </tr>
 <!===========================================================>
@@ -403,34 +403,34 @@ en cada uno de los commits.
         <br>
         <!============APELLIDO Y NOMBRES 1=========================>
         <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 1
-        <br><br>    
+        <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
         <strong>Apellidos y nombres:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
         <strong>Villegas Jipa Luis Alfonso</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
         <strong>Apellidos y nombres:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 4
         <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>  
+        <!============APELLIDO Y NOMBRES 5=========================>
         <strong>Apellidos y nombres:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 5
         <br><br>
         <!============TRABAJO PARCIAL =========================>
         <p style="text-align: center;"><strong>Presentable del TP</strong></p>
         <br>
         <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>  
+        <strong>Janover Gonzalo Saldaña Vela:</strong>
         <br>
         Acciones realizadas de TP por el integrante 1
         <br><br>
@@ -513,16 +513,16 @@ en cada uno de los commits.
     </td>
     <td>
         <strong>TB1:</strong>
-        Conclusiones generales TB1 del criterio específico 2        
+        Conclusiones generales TB1 del criterio específico 2
         <br/><br/>
         <strong>TP:</strong>
-        Conclusiones generales TP del criterio específico 2        
+        Conclusiones generales TP del criterio específico 2
         <br/><br/>
         <strong>TB2:</strong>
-        Conclusiones generales TB2 del criterio específico 2        
+        Conclusiones generales TB2 del criterio específico 2
         <br/><br/>
         <strong>TF:</strong>
-        Conclusiones generales TF del criterio específico 2        
+        Conclusiones generales TF del criterio específico 2
     </td>
 </tr>
 </tbody>
