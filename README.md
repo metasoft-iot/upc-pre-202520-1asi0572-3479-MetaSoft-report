@@ -20,7 +20,7 @@
 
 
 * **Janover Gonzalo Saldaña Vela    U20201B510**
-* **Nombres y apellidos    Código de estudiante**
+* **Hardie Alfonso Holguin Gamarra  U202220250**
 * **Nombres y apellidos    Código de estudiante**
 * **Nombres y apellidos    Código de estudiante**
 * **Nombres y apellidos    Código de estudiante**
@@ -164,7 +164,7 @@
 Github Collaboration Insights proporciona un cronograma que muestra las principales ramas y los procesos de fusión que han ocurrido. Todas las ramas se han generado siguiendo los principios de GitFlow, lo que garantiza una organización efectiva al utilizar un sistema de control de versiones.
 
 * Janover Gonzalo Saldaña Vela (JanoverSaldana)
-* 
+* Hardie Alfonso Holguin Gamarra (HOLGUINUPC)
 * 
 * 
 * 
@@ -277,7 +277,7 @@ en cada uno de los commits.
         Acciones realizadas de TB1 por el integrante 1
         <br><br>    
         <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Holguin Gamarra Hardie Alfonso:</strong>
         <br> 
         Acciones realizadas de TB1 por el integrante 2
         <br><br>
@@ -305,7 +305,7 @@ en cada uno de los commits.
         Acciones realizadas de TP por el integrante 1
         <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Holguin Gamarra Hardie Alfonso:</strong>
         <br>
         Acciones realizadas de TP por el integrante 2
         <br><br>
@@ -333,7 +333,7 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 1
         <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Holguin Gamarra Hardie Alfonso:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
@@ -361,7 +361,7 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 1
         <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Holguin Gamarra Hardie Alfonso:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
@@ -407,7 +407,7 @@ en cada uno de los commits.
         Acciones realizadas de TB1 por el integrante 1
         <br><br>    
         <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Holguin Gamarra Hardie Alfonso:</strong>
         <br> 
         Acciones realizadas de TB1 por el integrante 2
         <br><br>
@@ -435,7 +435,7 @@ en cada uno de los commits.
         Acciones realizadas de TP por el integrante 1
         <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Holguin Gamarra Hardie Alfonso:</strong>
         <br>
         Acciones realizadas de TP por el integrante 2
         <br><br>
@@ -463,7 +463,7 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 1
         <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Holguin Gamarra Hardie Alfonso:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
@@ -491,7 +491,7 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 1
         <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Holguin Gamarra Hardie Alfonso:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
