@@ -310,12 +310,12 @@ en cada uno de los commits.
         Acciones realizadas de TP por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
+        <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TP por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TP por el integrante 4
         <br><br>
@@ -338,12 +338,12 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
+        <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Apellidos y nombres:</strong>
+         <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 4
         <br><br>
@@ -366,12 +366,12 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
+        <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 4
         <br><br>
@@ -440,12 +440,12 @@ en cada uno de los commits.
         Acciones realizadas de TP por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
+       <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TP por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TP por el integrante 4
         <br><br>
@@ -468,12 +468,12 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
+       <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 4
         <br><br>
@@ -496,12 +496,12 @@ en cada uno de los commits.
         Acciones realizadas de TB2 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
+        <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Apellidos y nombres:</strong>
+        <strong>Mendoza Solis Javier Kenyi:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 4
         <br><br>
