@@ -19,9 +19,11 @@
 ## Relación de integrantes:
 
 
-* **Janover Gonzalo Saldaña Vela    U20201B510**
-* **Hardie Alfonso Holguin Gamarra  U202220250**
-* **Javier Kenyi Mendoza Solis      U201824550**
+* **Janover Gonzalo Saldaña Vela        U20201B510**
+* **Hardie Alfonso Holguin Gamarra      U202220250**
+* **Javier Kenyi Mendoza Solis          U201824550**
+* **Gustavo Jandroel Aguirre Rodríguez  U202124162**
+* **Nombres y apellidos    Código de estudiante**
 * **Nombres y apellidos    Código de estudiante**
 * **Nombres y apellidos    Código de estudiante**
 
@@ -166,7 +168,7 @@ Github Collaboration Insights proporciona un cronograma que muestra las principa
 * Janover Gonzalo Saldaña Vela (JanoverSaldana)
 * Hardie Alfonso Holguin Gamarra (HOLGUINUPC)
 * Javier Kenyi Mendoza Solis (Kenyi-Mendoza-Solis)
-* 
+* Gustavo Jandroel Aguirre Rodríguez  (Jandroel)
 * 
 
 Se dividieron las siguientes ramas para la colaboración en el proyecto:
@@ -292,9 +294,22 @@ en cada uno de los commits.
         Acciones realizadas de TB1 por el integrante 4
         <br><br>
         <!============APELLIDO Y NOMBRES 5=========================>  
-        <strong>Apellidos y nombres:</strong>
+        <strong>Aguirre Rodríguez Gustavo Jandroel:</strong>
         <br> 
         Acciones realizadas de TB1 por el integrante 5
+        <br><br>
+        <br><br>
+        <!============APELLIDO Y NOMBRES 5=========================>  
+        <strong>Apellidos y nombres:</strong>
+        <br> 
+        Acciones realizadas de TB1 por el integrante 6
+        <br><br>
+        <br><br>
+        <!============APELLIDO Y NOMBRES 5=========================>  
+        <strong>Apellidos y nombres:</strong>
+        <br> 
+        Acciones realizadas de TB1 por el integrante 7
+        <br><br>
         <br><br>
         <!============TRABAJO PARCIAL =========================>
         <p style="text-align: center;"><strong>Presentable del TP</strong></p>
