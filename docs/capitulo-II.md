@@ -8,7 +8,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 <table style="width:100%; border-collapse:collapse;">
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Logo de AutoDoc" width="100"/>
+			<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Logo de AutoDoc" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>1. AutoDoc Perú</b><br/>
@@ -19,7 +19,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="/assets/img/capitulo-II/competidores/drivana-logo.jpeg" alt="Logo de Drivana" width="100"/>
+			<img src="/assets/img/capitulo-II/competidores/drivana-logo.jpeg" alt="Logo de Drivana" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>2. Drivana (LatAm)</b><br/>
@@ -30,7 +30,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="/assets/img/capitulo-II/competidores/obd-logo.png" alt="Logo de OBD-II" width="100"/>
+			<img src="/assets/img/capitulo-II/competidores/obd-logo.png" alt="Logo de OBD-II" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>3. Dispositivos OBD-II genéricos con apps móviles.</b><br/>
@@ -61,19 +61,19 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   <td colspan="3" align="justify">¿Por qué llevar acabo este análisis?</td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       SafeCar
-      <div style="text-align: center; margin-top: 10px;">
+      <div style="margin-top: 10px;" align="center">
                 <img src="/assets/img/safecar-logo.png" alt="SafeCar Logo" width="100px">
             </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
     Drivana (LatAm)
-    <div style="text-align: center; margin-top: 20px;">
+    <div style="margin-top: 20px;" align="center">
                 <img src="/assets/img/capitulo-II/competidores/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
         </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       OBD-II genéricos + apps
-      <div style="text-align: center; margin-top: 10px;">
+      <div style="margin-top: 10px;" align="center">
                 <img src="/assets/img/capitulo-II/competidores/obd-logo.png" alt="OBD-II genéricos + apps Logo" width="100px">
             </div>
       </td>
