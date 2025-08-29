@@ -77,15 +77,15 @@ Convertirse en la plataforma líder en mantenimiento vehicular inteligente en La
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/-.jpeg" 
+            <img src="/assets/img/capitulo-I/miembros/hardie-holguin.jpeg" 
                  alt="Miembro Foto Perfil" 
                  width="600px" 
                  style="border-radius: 12px;"/>
           </td>
-          <td><strong>---</strong></td>
+          <td><strong>Hardie Holguin Gamarra</strong></td>
           <td>Ingeniería de Software</td>
           <td align="justify">
-            ---
+            Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), con una sólida orientación hacia la tecnología y el aprendizaje continuo. Cuento con experiencia en el desarrollo de aplicaciones modernas, seguras y escalables, integrando frameworks y herramientas que permiten optimizar procesos y fomentar la innovación. Me caracterizo por asumir nuevos desafíos que potencien tanto mi crecimiento profesional como el perfeccionamiento de mis habilidades técnicas.
           </td>
           <td style="text-align: center;">
             <!-- Languages -->
