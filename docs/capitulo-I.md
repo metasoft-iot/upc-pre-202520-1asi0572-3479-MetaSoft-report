@@ -112,15 +112,15 @@ Convertirse en la plataforma líder en mantenimiento vehicular inteligente en La
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/.jpeg" 
-                 alt="Miembro Foto Perfil" 
+            <img src="/assets/img/capitulo-I/miembros/Kenyi-Mendoza.jpeg" 
+                 alt="Kenyi Foto Perfil" 
                  width="600px" 
                  style="border-radius: 12px;"/>
           </td>
-          <td><strong>---</strong></td>
+          <td><strong>Javier Kenyi Mendoza Solis</strong></td>
           <td>Ingeniería de Software</td>
           <td align="justify">
-            ---
+            Estudiante de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), con un marcado interés en la innovación y la aplicación de tecnologías modernas. Poseo conocimientos en el diseño y construcción de aplicaciones confiables y adaptables, utilizando herramientas que generan valor en el campo del software. Me defino por la capacidad de asumir proyectos que contribuyen a mi crecimiento académico y al desarrollo de mis capacidades técnicas en equipo
           </td>
           <td style="text-align: center;">
             <!-- Languages -->
