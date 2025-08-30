@@ -112,7 +112,7 @@ Convertirse en la plataforma líder en mantenimiento vehicular inteligente en La
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/Kenyi-Mendoza.jpeg" 
+            <img src="/assets/img/capitulo-I/miembros/kenyi-mendoza.jpeg" 
                  alt="Kenyi Foto Perfil" 
                  width="600px" 
                  style="border-radius: 12px;"/>
