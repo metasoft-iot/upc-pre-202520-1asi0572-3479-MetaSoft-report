@@ -354,13 +354,13 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 
 <b>Entrevista 1</b>
 <ul>
-  <li><strong>Nombre:</strong> [Nombre Apellido]</li>
-  <li><strong>Edad:</strong> [años]</li>
-  <li><strong>Ocupación:</strong> [Taxi / Delivery / Particular]</li>
-  <li><strong>Distrito:</strong> [Distrito/Ciudad]</li>
+  <li><strong>Nombre:</strong> Katy Gutierrez</li>
+  <li><strong>Edad:</strong> 23 años</li>
+  <li><strong>Ocupación:</strong> Usa carro particular </li>
+  <li><strong>Distrito:</strong> Lince </li>
   <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
-  <li><strong>Duración:</strong> [mm:ss]</li>
-  <li><strong>Screenshot:</strong> <img src="[URL-screenshot]" alt="screenshot entrevista 1" style="max-width:200px;"></li>
+  <li><strong>Duración:</strong> [04:19]</li>
+  <li><strong>Screenshot:</strong> <img src="Entrevista IoT 1.png" alt="screenshot entrevista 1" style="max-width:200px;"></li>
 </ul>
 <p align="justify">
 <strong>Resumen:</strong> [Aquí un párrafo breve (6–8 líneas) con lo más relevante: hábitos de mantenimiento, problemas frecuentes, percepciones de talleres, uso de tecnología y expectativas frente a SafeCar].
