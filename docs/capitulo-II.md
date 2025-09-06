@@ -358,13 +358,14 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Edad:</strong> 23 años</li>
   <li><strong>Ocupación:</strong> Usa carro particular </li>
   <li><strong>Distrito:</strong> Lince </li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
+  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://youtu.be/pA-nVWL7a7o</a></li>
   <li><strong>Duración:</strong> [04:19]</li>
   <li><strong>Screenshot:</strong> <img src="Entrevista IoT 1.png" alt="screenshot entrevista 1" style="max-width:200px;"></li>
 </ul>
 <p align="justify">
-<strong>Resumen:</strong> [Aquí un párrafo breve (6–8 líneas) con lo más relevante: hábitos de mantenimiento, problemas frecuentes, percepciones de talleres, uso de tecnología y expectativas frente a SafeCar].
+<strong>Resumen:</strong> Katy Gutierrez, quien ultiliza su auto par desplzarse a su centro de trabajo menciona que realiza el mantenimiento de su vehículo cada 8 a 9 meses, aunque a veces lo posterga por motivos de tiempo y costo. En el último año ha tenido dificultades principalmente con los gastos elevados en reparaciones y con la demora en los talleres. Se guía por ruidos del auto o luces en el tablero para identificar fallas y nunca ha utilizado aplicaciones o dispositivos digitales para monitorear su vehículo. Le interesa que SafeCar le brinde alertas preventivas, recomendaciones personalizadas y conexión directa con talleres de confianza. Estaría dispuesto a pagar una suscripción mensual si la ayuda con su problema agrega que prefiere recibir notificaciones a través de WhatsApp y la aplicación. 
 </p>
+
 
 <hr>
 
