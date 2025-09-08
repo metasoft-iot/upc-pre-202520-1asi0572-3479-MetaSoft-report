@@ -23,6 +23,18 @@
 		<td>Epic 2: Registro de usuarios</td>
 		<td>Implementar el registro de usuarios (conductores y talleres) en la plataforma SafeCar, accesible desde la landing page, con formularios diferenciados según el tipo de usuario.</td>
 	</tr>
+
+  	<tr>
+		<td>E3</td>
+		<td>Epic 3: Aplicación móvil SafeCar</td>
+		<td>Implementar la aplicación móvil de SafeCar para conductores y talleres, permitiendo acceder a diagnósticos IoT, gestionar mantenimientos y recibir alertas preventivas en tiempo real.	</td>
+	</tr>
+
+ 	<tr>
+		<td>E4</td>
+		<td>Epic 4:  </td>
+		<td> .	</td>
+	</tr>
 </tbody>
 </table>
 
@@ -199,6 +211,113 @@ Escenario 01: Acceso a la información general. Dado que soy un visitante, Cuand
 </tr>
 <!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 </tbody>
+
+
+
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US301</td>
+	<td>Conectar mi vehículo mediante dispositivo IoT</td>
+	<td>Como conductor. Quiero conectar mi auto al dispositivo IoT desde la app. Para recibir diagnósticos y alertas en tiempo real.</td>
+	<td>
+Escenario 01: Conexión exitosa. Dado que soy un conductor, Cuando activo el Bluetooth y selecciono el dispositivo IoT, Entonces la app confirma la conexión y muestra el estado del vehículo.
+Escenario 02: Error de conexión. Dado que intento conectar el dispositivo, Cuando el sistema no lo detecta, Entonces la app muestra un mensaje de error con instrucciones para reintentar.
+	<td>E3</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
+
+
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US302</td>
+	<td>Visualizar alertas de mantenimiento preventivo</td>
+	<td>Como conductor. Quiero recibir notificaciones en mi celular sobre posibles fallas para evitar reparaciones costosas y accidentes.</td>
+	<td>
+Escenario 01: Notificación push. Dado que el IoT detecta un problema, Cuando se genera una alerta, Entonces recibo una notificación push con el detalle.
+Escenario 02: Alerta en la app. Dado que entro a la app, Cuando accedo al panel, Entonces veo la alerta en la sección de notificaciones.
+	<td>E3</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
+
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US303</td>
+	<td>Consultar historial de mantenimientos</td>
+	<td>Como conductor. Quiero revisar en la app el historial de reparaciones y mantenimientos. Para tener un control organizado de mi vehículo.</td>
+	<td>
+Escenario 01: Visualización. Dado que soy un conductor registrado, Cuando accedo a la sección de historial, Entonces la app muestra una lista con mantenimientos anteriores.
+Escenario 02: Filtrado. Dado que quiero buscar información específica, Cuando selecciono por fecha o tipo de servicio, Entonces la app filtra los resultados correctamente.
+	<td>E3</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
+
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US304</td>
+	<td>Agendar cita con taller</td>
+	<td>Como conductor. Quiero agendar una cita en un taller disponible desde la app. Para resolver problemas detectados y ahorrar tiempo.</td>
+	<td>
+Escenario 01: Selección de taller. Dado que soy un conductor, Cuando busco un taller en la app, Entonces veo una lista de talleres cercanos con disponibilidad.
+Escenario 02: Reserva exitosa. Dado que selecciono fecha y hora, Cuando confirmo la cita, Entonces la app me muestra un mensaje de confirmación y guarda la cita en mi calendario.
+Escenario 03: Error sin cupos. Dado que intento reservar, Cuando no hay horarios disponibles, Entonces la app muestra un mensaje indicando que debo elegir otra fecha.	<td>E3</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US305</td>
+	<td>Gestionar citas como taller</td>
+	<td>Como mecánico/taller. Quiero recibir solicitudes de citas en la app. Para organizar mis reservas y atender clientes.</td>
+	<td>
+Escenario 01: Ver citas pendientes. Dado que soy un taller, Cuando accedo al panel de citas, Entonces la app muestra una lista de solicitudes nuevas.
+Escenario 02: Confirmación o rechazo. Dado que recibí una cita, Cuando selecciono “Aceptar” o “Rechazar”, Entonces la app notifica al cliente con la respuesta.
+	<td>E3</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US306</td>
+	<td>Chat entre cliente y taller</td>
+	<td>Como usuario (conductor o taller). Quiero comunicarme mediante chat dentro de la app. Para coordinar detalles de mantenimientos.</td>
+	<td>
+Escenario 01: Enviar mensaje. Dado que soy un cliente o taller, Cuando escribo un mensaje en el chat, Entonces este se envía y aparece en la conversación.
+Escenario 02: Notificación al receptor. Dado que recibo un mensaje nuevo, Cuando no tengo la app abierta, Entonces me llega una notificación push informando.
+	<td>E3</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US307</td>
+	<td>Acceder a reportes de diagnóstico detallados</td>
+	<td>Como conductor. Quiero visualizar reportes generados por el dispositivo IoT en la app. Para entender el estado real de mi vehículo.</td>
+	<td>
+Escenario 01: Reporte en panel. Dado que soy un conductor con un IoT conectado, Cuando accedo a la sección de reportes, Entonces visualizo los datos en gráficos e indicadores.
+Escenario 02: Exportar reporte. Dado que quiero guardar el diagnóstico, Cuando selecciono la opción exportar, Entonces la app me permite descargar en PDF o compartir por correo.
+	<td>E3</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
+
+
 
 
   
