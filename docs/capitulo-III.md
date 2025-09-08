@@ -16,29 +16,19 @@
 	<tbody>
 		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
 		<tr>
-			<td>E1: 	
-						</td>
-			<td>Epic 1: Landing page </td>
-			<td>Como visitante
-						Quiero visualizar una página
-						Para saber acerca de la aplicación e ingresar a la aplicación </td>
+			<td>E1:</td>
+			<td>Epic 1: Landing page</td>
+			<td>Como visitante quiero visualizar una página para saber acerca de la aplicación e ingresar a la aplicación</td>
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
-	</tbody>
-	<!-- Nota: Mantenga IDs consistentes con su backlog/jira y el repositorio de seguimiento. -->
 
-	<tbody>
-		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
 		<tr>
-			<td>E2: 	
-						</td>
-			<td>Epic 1: Registro de usuarios </td>
+			<td>E2:</td>
+			<td>Epic 1: Registro de usuarios</td>
 			<td>Implementar el registro de usuarios (conductores y talleres) en la plataforma SafeCar, accesible desde la landing page, con formularios diferenciados según el tipo de usuario.</td>
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
-	<!-- Nota: Mantenga IDs consistentes con su backlog/jira y el repositorio de seguimiento. -->
-  
 </table>
 <!-- FIN: Tabla de User Stories (Epic/Story) -->
 
