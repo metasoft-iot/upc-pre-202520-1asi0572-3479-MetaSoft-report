@@ -366,7 +366,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Edad:</strong> 23 años</li>
   <li><strong>Ocupación:</strong> Usa carro particular </li>
   <li><strong>Distrito:</strong> Lince </li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://youtu.be/pA-nVWL7a7o</a></li>
+  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://upcedupe-my.sharepoint.com/:v:/g/personal/u201824550_upc_edu_pe/EbWP7AHkagNIuoHROo6NtTgBQoBxwBqgRzKYoCUb9cJ52w?e=oCxlBU</a></li>
   <li><strong>Duración:</strong> [04:19]</li>
   <li><strong>Screenshot:</strong> <img src="Entrevista IoT 1.png" alt="screenshot entrevista 1" style="max-width:200px;"></li>
 </ul>
