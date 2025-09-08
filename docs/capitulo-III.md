@@ -177,19 +177,7 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 <tbody>
 		
 		
-			</td>
-			<td>E</td>
-		</tr>
-	</tbody>
-	<tbody>
-		<tr>
-			
-Escenario 1: Registro de profesional válido  
-Dado que el administrador accede al formulario de registro de profesionales  
-Cuando ingresa los datos requeridos  
-Entonces el sistema guarda al profesional en la base de datos y queda habilitado para trabajar.
-			</td>
-			<td>E</td>
+		
 		</tr>
 	</tbody>
 	<tbody>
