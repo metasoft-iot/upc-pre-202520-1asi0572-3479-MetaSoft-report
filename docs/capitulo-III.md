@@ -173,7 +173,68 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
+<tbody>
+		<tr>
+			<td>US</td>
+			<td>Registro de usuarios</td>
+			<td>Como visitante quiero poder registrarme en la plataforma para acceder a las funcionalidades de SafeCar</td>
+			<td>
 
+Escenario 1: Registro exitoso  
+Dado que el visitante está en el formulario de registro  
+Cuando completa los campos obligatorios y confirma el registro  
+Entonces el sistema crea su cuenta y le muestra un mensaje de confirmación.  
+
+Escenario 2: Fallo en el registro  
+Dado que el visitante intenta registrarse  
+Cuando deja campos obligatorios vacíos o ingresa datos inválidos  
+Entonces el sistema muestra mensajes de error y no permite enviar el formulario.
+			</td>
+			<td>E</td>
+		</tr>
+	</tbody>
+
+	<tbody>
+		<tr>
+			<td>US</td>
+			<td>Registrar un profesional</td>
+			<td>Como profesional quiero registrarme fácilmente en la plataforma SafeCar para ofrecer mis servicios y gestionar mis horarios</td>
+			<td>
+
+Escenario 1: Registro de profesional exitoso  
+Dado que soy un profesional interesado en unirme a SafeCar  
+Cuando completo correctamente el formulario de registro con mis datos  
+Entonces el sistema guarda la información y muestra un mensaje indicando que mi perfil será revisado.  
+
+Escenario 2: Registro fallido  
+Dado que soy un profesional que intenta registrarse  
+Cuando dejo campos obligatorios vacíos o ingreso datos inválidos  
+Entonces el sistema muestra mensajes de error y no permite continuar.
+			</td>
+			<td>E</td>
+		</tr>
+	</tbody>
+
+	<tbody>
+		<tr>
+			<td>US</td>
+			<td>Registrar un cliente</td>
+			<td>Como cliente quiero poder registrarme en la plataforma SafeCar para solicitar servicios de mantenimiento vehicular</td>
+			<td>
+
+Escenario 1: Registro de cliente exitoso  
+Dado que soy un nuevo cliente que desea registrarse  
+Cuando completo correctamente el formulario de registro  
+Entonces el sistema crea mi cuenta, muestra un mensaje de bienvenida y me redirige al panel de usuario.  
+
+Escenario 2: Registro con errores  
+Dado que intento registrarme con un correo ya registrado  
+Cuando ingreso el correo electrónico y lo envío  
+Entonces el sistema notifica que ya existe una cuenta con ese correo y sugiere iniciar sesión o recuperar la contraseña.
+			</td>
+			<td>E</td>
+		</tr>
+	</tbody>
 
 </table>
 <!-- FIN: Tabla de User Stories (Epic/Story) -->
