@@ -179,20 +179,31 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 <!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
 <tr>
 	<td>US104</td>
-	<td>Sección de planes del producto</td>
-	<td>Como visitante quiero visualizar los planes disponibles en el landing page para elegir el que más me convenga</td>
+	<td>Registrar un profesional</td>
+	<td>Como mecánico o taller automotriz. Quiero poder registrarme fácilmente en la plataforma desde la landing page. Para ofrecer mis servicios, recibir alertas de clientes cercanos y gestionar mis citas.</td>
 	<td>
-Escenario 1: Visualización de planes disponibles<br><br>
-Dado que el visitante está en el landing page<br><br>
-Cuando se encuentra en la sección de planes<br><br>
-Entonces observa la información de los planes con sus precios y beneficios.
+Escenario 01: Registro exitoso. Dado que soy un profesional interesado en ofrecer servicios, Cuando completo correctamente el formulario de registro con mis datos (nombre del taller, especialidad, ubicación y contacto) y lo envío, Entonces el sistema guarda la información, envía una notificación de recepción y muestra un mensaje indicando que el perfil será revisado. Escenario 02: Fallo en el registro. Dado que soy un profesional que intenta registrarse, Cuando dejo campos obligatorios vacíos o ingreso datos inválidos, Entonces el sistema muestra mensajes de error y no permite enviar el formulario hasta corregir los datos.
+	</td>
+	<td>E</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US</td>
+	<td>Registrar un cliente</td>
+	<td>Como conductor. Quiero poder registrarme fácilmente en la plataforma desde la landing page. Para acceder a los servicios de mantenimiento inteligente de mi vehículo y conectar con mecánicos de confianza.</td>
+	<td>
+Escenario 01: Registro exitoso. Dado que soy un nuevo cliente que desea registrarse, Cuando completo correctamente el formulario de registro con mis datos (nombre, correo, modelo de vehículo), Entonces el sistema crea mi cuenta, me muestra un mensaje de bienvenida y me redirige al panel de usuario o inicio. Escenario 02: Registro con errores o campos incompletos. Dado que intento registrarme con un correo ya registrado, Cuando ingreso el correo electrónico y lo envío, Entonces el sistema me notifica que ya existe una cuenta con ese correo y me sugiere iniciar sesión o recuperar la contraseña.
 	</td>
 	<td>E1</td>
 </tr>
 <!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 </tbody>
 
- 
+
   
 
 <!-- FIN: Tabla de User Stories (Epic/Story) -->
