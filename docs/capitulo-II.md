@@ -599,6 +599,18 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 </p>
 
 ### 2.3.3. User Journey Mapping
+<p align="justify"> Los <em>User Journey Maps</em> ilustran el recorrido completo de los usuarios objetivo de <strong>SafeCar</strong> en la situación actual (<em>As-Is</em>), es decir, sin contar aún con la implementación de la solución propuesta. Este mapeo recoge las principales <strong>acciones, metas, emociones y problemas</strong> que experimentan los conductores particulares (incluyendo uso personal, taxi y delivery) y los talleres mecánicos independientes/medianos, desde el primer contacto con la necesidad de un servicio de mantenimiento hasta la resolución del problema o abandono del servicio. </p>
+
+<strong>User Journey Map - Conductor particular(personal, taxi y delivery)</strong>
+<p align="justify"> El journey del conductor comienza cuando detecta señales de problemas en su vehículo (luces en el tablero, ruidos extraños o fallas inesperadas). A partir de allí, pasa por etapas como la búsqueda de un taller, la coordinación de una cita, el tiempo de espera por diagnóstico y reparación, y finalmente la entrega del vehículo. Durante este proceso, las emociones del conductor oscilan entre la <em>ansiedad</em> por los costos imprevistos, la <em>frustración</em> por los tiempos de espera y la <em>incertidumbre</em> respecto a la confiabilidad del taller, con pocos momentos de satisfacción. Este recorrido muestra claras oportunidades de mejora en la anticipación de fallas, en la transparencia de los costos y en la confiabilidad del servicio. </p>
+
+<img src="/assets/img/capitulo-II/journey-map-driver.png" alt="User Journey Map - Conductor" width="700"/>
+
+
+<br/><strong>User Journey Map - Taller mecánico independiente/mediano</strong>
+<p align="justify"> En el caso de los talleres mecánicos, el journey se inicia cuando reciben un vehículo sin información previa o historial digital del mismo. Esto genera un proceso más largo y dependiente de inspecciones manuales, pruebas de manejo o escaneo básico. El mecánico debe diagnosticar la falla, comunicarla al cliente, esperar su aprobación y recién proceder a la reparación. Las emociones predominantes en el taller van desde la <em>presión</em> por entregar el vehículo en el menor tiempo posible, hasta la <em>frustración</em> por la falta de datos y la desconfianza de algunos clientes frente a los diagnósticos. Las oportunidades detectadas incluyen la posibilidad de acceder a reportes digitales de fallas, contar con historiales de mantenimiento previos y reducir los tiempos de diagnóstico. </p>
+
+<img src="/assets/img/capitulo-II/journey-map-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
 
 ### 2.3.4. Empathy Mapping
 
