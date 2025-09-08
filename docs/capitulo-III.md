@@ -176,12 +176,7 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 
 <tbody>
 		
-		<tr>
-			
-Escenario 1: Registro exitoso  
-Dado que el visitante está en el formulario de registro  
-Cuando completa los campos obligatorios y confirma el registro  
-Entonces el sistema crea su cuenta y le muestra un mensaje de confirmación.
+		
 			</td>
 			<td>E</td>
 		</tr>
