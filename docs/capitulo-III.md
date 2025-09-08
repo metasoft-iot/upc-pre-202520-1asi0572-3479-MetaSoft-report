@@ -44,6 +44,7 @@
 
 
 
+
 <!-- INICIO: Tabla de User Stories (Epic/Story) -->
 <!-- Descripción: Tabla para registrar historias de usuario con Epic/Story ID, título, descripción, criterios de aceptación y relación con Epic. -->
 <table border="1" width="100%" style="border-collapse: collapse;">
