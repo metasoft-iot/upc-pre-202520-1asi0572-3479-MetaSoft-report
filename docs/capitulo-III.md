@@ -173,14 +173,7 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
-
-  	<tbody>
-		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
-		<tr>
-			<td>US</td>
-			<td> </td>
-			<td> </td>
-			<td>
+		
 
 <!-- FIN: Tabla de User Stories (Epic/Story) -->
 
