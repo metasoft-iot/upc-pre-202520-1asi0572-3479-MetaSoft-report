@@ -16,7 +16,11 @@
 	<tbody>
 		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
 		<tr>
-			<td><!-- Epic / Story ID (ej: EP-01, US-23) --> </td>
+			<td>Epic 1: Landing page
+						Como visitante
+						Quiero visualizar una página
+						Para saber acerca de la aplicación e ingresar a la aplicación	
+						</td>
 			<td><!-- Título --> </td>
 			<td><!-- Descripción --> </td>
 		</tr>
@@ -43,10 +47,57 @@
 	<tbody>
 		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
 		<tr>
-			<td><!-- Epic / Story ID (ej: EP-01, US-23) --> </td>
-			<td><!-- Título --> </td>
-			<td><!-- Descripción --> </td>
-			<td><!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
+			<td>E1-US101 </td>
+			<td>Barra de navegación en landing page </td>
+			<td>Como visitante quiero una barra de navegación de landing page para tener accesos directos a la información de la aplicación  </td>
+			<td>Escenario 1: Acceso a la sección inicio del producto
+
+Dado que el visitante está en el landing page
+
+Y utiliza la barra de navegación
+
+Cuandoselecciona “Inicio”
+
+Entonces accede a la sección hero del producto.
+
+Escenario 2: Acceso a la sección de características del producto
+
+Dado que el visitante está en el landing page
+
+Y utiliza la barra de navegación
+
+Cuandoselecciona “Características”
+
+Entonces accede a la sección que muestra las características del producto.
+
+
+Escenario 3: Acceso a la sección de planes del producto
+
+Dado que el visitante está en el landing page
+
+Y utiliza la barra de navegación
+
+Cuandoselecciona “Planes”
+
+Entonces accede a la sección de planes del producto.
+
+Escenario 4: Acceso a la sección de testimonios
+
+Dado que el visitante está en el landing page
+Y utiliza la barra de navegación
+
+Cuando selecciona "Testimonios"
+
+Entonces accede a la sección que muestra los testimonios de los usuarios.
+
+Escenario 5: Acceso a la sección de contacto
+
+Dado que el visitante está en el landing page
+Y utiliza la barra de navegación
+
+Cuando selecciona "Contacto"
+
+Entonces accede a la sección de contacto del producto.<!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
 			<td><!-- Relacionado con (Epic ID) --> </td>
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
