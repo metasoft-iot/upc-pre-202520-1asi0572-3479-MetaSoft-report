@@ -120,7 +120,7 @@ Convertirse en la plataforma líder en mantenimiento vehicular inteligente en La
           <td><strong>Javier Kenyi Mendoza Solis</strong></td>
           <td>Ingeniería de Software</td>
           <td align="justify">
-            Estudiante de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), con un marcado interés en la innovación y la aplicación de tecnologías modernas. Poseo conocimientos en el diseño y construcción de aplicaciones confiables y adaptables, utilizando herramientas que generan valor en el campo del software. Me defino por la capacidad de asumir proyectos que contribuyen a mi crecimiento académico y al desarrollo de mis capacidades técnicas en equipo
+            Soy estudiante de Ingeniería de Software en la UPC, con práctica en la construcción de aplicaciones modernas que priorizan la seguridad, la adaptabilidad y la experiencia de usuario. Mi conocimiento en frameworks actuales y metodologías ágiles me permite abordar proyectos de manera estructurada y eficiente. Me caracterizo por una mentalidad analítica y rigurosa, enfocada en entregar software de calidad que responda a las necesidades reales de empresas y usuarios.
           </td>
           <td style="text-align: center;">
             <!-- Languages -->
@@ -152,10 +152,10 @@ Convertirse en la plataforma líder en mantenimiento vehicular inteligente en La
                  width="600px" 
                  style="border-radius: 12px;"/>
           </td>
-          <td><strong>---</strong></td>
+          <td><strong>Janover Gonzalo Saldaña Vela</strong></td>
           <td>Ingeniería de Software</td>
           <td align="justify">
-            ---
+            Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), con enfoque en el desarrollo de aplicaciones confiables, adaptables y centradas en el usuario. Cuento con experiencia práctica en frameworks modernos y herramientas que potencian la productividad, así como en el uso de metodologías ágiles para la gestión de proyectos. Me defino por mi disciplina, mentalidad analítica y deseo de aportar soluciones tecnológicas que respondan a las necesidades de las personas y organizaciones.
           </td>
           <td style="text-align: center;">
             <!-- Languages -->
