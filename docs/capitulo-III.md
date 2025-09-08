@@ -183,10 +183,7 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 	</tbody>
 	<tbody>
 		<tr>
-			<td>US</td>
-			<td>Registrar un profesional</td>
-			<td>Como administrador quiero registrar a un profesional para que pueda brindar servicios en la plataforma SafeCar</td>
-			<td>
+			
 Escenario 1: Registro de profesional válido  
 Dado que el administrador accede al formulario de registro de profesionales  
 Cuando ingresa los datos requeridos  
