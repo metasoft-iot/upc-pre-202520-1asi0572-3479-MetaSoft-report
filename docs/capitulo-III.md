@@ -187,6 +187,19 @@ Escenario 01: Registro exitoso. Dado que soy un nuevo cliente que desea registra
 <!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 </tbody>
 
+<tbody>
+<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+<tr>
+	<td>US203</td>
+	<td>Visualización de la landing page de SafeCar</td>
+	<td>Quiero visualizar una landing page clara y atractiva de SafeCar. Para conocer los beneficios de la plataforma, entender cómo funciona y acceder fácilmente a las opciones de registro o inicio de sesión.</td>
+	<td>
+Escenario 01: Acceso a la información general. Dado que soy un visitante, Cuando ingreso a la landing page de SafeCar, Entonces visualizo una presentación clara con la propuesta de valor, secciones de beneficios y cómo funciona. Escenario 02: Acceso a opciones de registro. Dado que soy un visitante interesado, Cuando hago clic en “Registrarme como cliente” o “Registrarme como taller”, Entonces el sistema me redirige al formulario de registro correspondiente. Escenario 03: Acceso a inicio de sesión. Dado que soy un usuario registrado, Cuando selecciono “Iniciar sesión”, Entonces el sistema me dirige al login de la plataforma.
+	<td>E2</td>
+</tr>
+<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+
 
   
 
