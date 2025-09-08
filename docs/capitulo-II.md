@@ -481,6 +481,8 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 
 <img src="/assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
 
+<img src="/assets/img/capitulo-II/UserPersona_entrevista1.jpeg" alt="UserPersona_entrevista1" width="700"/>
+
 <br/><b>Segmento: Talleres mecánicos</b>
 
 <p align="justify"> Este segmento corresponde a propietarios y trabajadores de talleres mecánicos independientes o de tamaño mediano. Son profesionales con experiencia práctica en diagnóstico y reparación de vehículos, pero que en muchos casos carecen de soluciones digitales para agilizar sus procesos. Su principal desafío es optimizar el tiempo de diagnóstico, fidelizar a los clientes y adaptarse a nuevas tecnologías que les permitan mejorar la eficiencia de su negocio. </p>
