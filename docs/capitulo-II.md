@@ -463,10 +463,6 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 
 ### 2.2.3. Análisis de entrevistas
 
-| Nombre             | Preferencias y Recomendaciones                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Katy Gutierrez** | Prefiere recibir notificaciones por WhatsApp y app móvil. Valora mucho las alertas preventivas, recomendaciones personalizadas y conexión con talleres de confianza. Está dispuesto a pagar una suscripción mensual accesible (20–30 soles). Recomienda que la app anticipe fallas y brinde estimación de costos. Se queja principalmente de los altos precios y la demora en los talleres, además de la desconfianza por cobros excesivos. |
-
 ## 2.3. Needfinding
 
 ### 2.3.1. User Personas
