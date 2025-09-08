@@ -173,6 +173,51 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
+
+<tbody>
+		
+		<tr>
+			<td>US</td>
+			<td>Registro de usuarios</td>
+			<td>Como visitante quiero poder registrarme en la plataforma para acceder a las funcionalidades de SafeCar</td>
+			<td>
+Escenario 1: Registro exitoso  
+Dado que el visitante está en el formulario de registro  
+Cuando completa los campos obligatorios y confirma el registro  
+Entonces el sistema crea su cuenta y le muestra un mensaje de confirmación.
+			</td>
+			<td>E</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr>
+			<td>US</td>
+			<td>Registrar un profesional</td>
+			<td>Como administrador quiero registrar a un profesional para que pueda brindar servicios en la plataforma SafeCar</td>
+			<td>
+Escenario 1: Registro de profesional válido  
+Dado que el administrador accede al formulario de registro de profesionales  
+Cuando ingresa los datos requeridos  
+Entonces el sistema guarda al profesional en la base de datos y queda habilitado para trabajar.
+			</td>
+			<td>E</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr>
+			<td>US</td>
+			<td>Registrar un cliente</td>
+			<td>Como visitante quiero registrarme como cliente para solicitar servicios de mantenimiento vehicular en SafeCar</td>
+			<td>
+Escenario 1: Registro de cliente exitoso  
+Dado que el visitante completa el formulario de registro como cliente  
+Cuando ingresa sus datos correctamente  
+Entonces el sistema crea su perfil de cliente y puede comenzar a solicitar servicios.
+			</td>
+			<td>E</td>
+		</tr>
+	</tbody>
+ 
 </table>
 <!-- FIN: Tabla de User Stories (Epic/Story) -->
 
