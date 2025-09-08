@@ -160,27 +160,14 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
-	<tbody>
-		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
-		<tr>
-			<td>US103</td>
-			<td> </td>
-			<td> </td>
-			<td>
-
-<!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
-<td>E1 </td>
-		</tr>
-		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
-	</tbody>
-
+	
 	
 <tbody>
 <!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
 <tr>
-	<td>US104</td>
+	<td>US</td>
 	<td>Registrar un profesional</td>
-	<td>Como mecánico o taller automotriz. Quiero poder registrarme fácilmente en la plataforma desde la landing page. Para ofrecer mis servicios, recibir alertas de clientes cercanos y gestionar mis citas.</td>
+	<td>Como mecánico o taller automotriz. Quiero poder registrarme fácilmente en la plataforma SafeCar. Para ofrecer mis servicios, recibir alertas de clientes cercanos y gestionar mis citas.</td>
 	<td>
 Escenario 01: Registro exitoso. Dado que soy un profesional interesado en ofrecer servicios, Cuando completo correctamente el formulario de registro con mis datos (nombre del taller, especialidad, ubicación y contacto) y lo envío, Entonces el sistema guarda la información, envía una notificación de recepción y muestra un mensaje indicando que el perfil será revisado. Escenario 02: Fallo en el registro. Dado que soy un profesional que intenta registrarse, Cuando dejo campos obligatorios vacíos o ingreso datos inválidos, Entonces el sistema muestra mensajes de error y no permite enviar el formulario hasta corregir los datos.
 	</td>
