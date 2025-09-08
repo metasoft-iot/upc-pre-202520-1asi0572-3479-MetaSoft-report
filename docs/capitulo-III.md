@@ -177,10 +177,7 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 <tbody>
 		
 		<tr>
-			<td>US</td>
-			<td>Registro de usuarios</td>
-			<td>Como visitante quiero poder registrarme en la plataforma para acceder a las funcionalidades de SafeCar</td>
-			<td>
+			
 Escenario 1: Registro exitoso  
 Dado que el visitante está en el formulario de registro  
 Cuando completa los campos obligatorios y confirma el registro  
