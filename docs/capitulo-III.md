@@ -103,6 +103,76 @@ Entonces accede a la sección de contacto del producto.<!-- Criterios de Aceptac
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
 	<!-- Nota: Mantenga IDs consistentes con su backlog/jira y el repositorio de seguimiento. -->
+	<tbody>
+		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+		<tr>
+			<td>US102 </td>
+			<td>Sección hero de landing page </td>
+			<td>Como visitante quiero visualizar una sección hero en el landing page para tener una idea sobre lo que ofrece la aplicación </td>
+			<td>
+
+Escenario 1: Visualización de la presentación de la aplicación
+
+Dado que el visitante está en el landing page
+
+Cuando se encuentra en la sección de hero
+
+Entonces observa una presentación clara de la aplicación.<!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
+<td>E1 </td>
+		</tr>
+		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+	</tbody>
+	<tbody>
+		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+		<tr>
+			<td>US103 </td>
+			<td>Sección de caracteristicas del producto de landing page </td>
+			<td>Como visitante quiero visualizar características de la aplicación en el landing page para saber sobre las características que ofrece la aplicación</td>
+			<td>
+
+Escenario 1: Visualización de características del producto
+
+Dado que el visitante está en el landing page
+
+Cuando se encuentra en la sección de características del producto
+
+Entonces observa la información detallada de las características de la aplicación.<!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
+<td>E1 </td>
+		</tr>
+		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+	</tbody>
+	<tbody>
+		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+		<tr>
+			<td>US102 </td>
+			<td>Sección hero de landing page </td>
+			<td>Como visitante quiero visualizar una sección hero en el landing page para tener una idea sobre lo que ofrece la aplicación </td>
+			<td>
+
+Escenario 1: Visualización de la presentación de la aplicación
+
+Dado que el visitante está en el landing page
+
+Cuando se encuentra en la sección de hero
+
+Entonces observa una presentación clara de la aplicación.<!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
+<td>E1 </td>
+		</tr>
+		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+	</tbody>
+	<tbody>
+		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+		<tr>
+			<td>US103</td>
+			<td> </td>
+			<td> </td>
+			<td>
+
+<!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
+<td>E1 </td>
+		</tr>
+		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+	</tbody>
 </table>
 <!-- FIN: Tabla de User Stories (Epic/Story) -->
 
