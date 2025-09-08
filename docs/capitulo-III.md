@@ -46,16 +46,17 @@
 	<tbody>
 		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
 		<tr>
-			<td>E1-US101 </td>
+			<td>US101 </td>
 			<td>Barra de navegación en landing page </td>
 			<td>Como visitante quiero una barra de navegación de landing page para tener accesos directos a la información de la aplicación  </td>
-			<td>Escenario 1: Acceso a la sección inicio del producto
+			<td>
+
+Escenario 1: Acceso a la sección inicio del producto
 
 Dado que el visitante está en el landing page
+			Y utiliza la barra de navegación
 
-Y utiliza la barra de navegación
-
-Cuandoselecciona “Inicio”
+Cuando selecciona “Inicio”
 
 Entonces accede a la sección hero del producto.
 
@@ -97,7 +98,7 @@ Y utiliza la barra de navegación
 Cuando selecciona "Contacto"
 
 Entonces accede a la sección de contacto del producto.<!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
-			<td><!-- Relacionado con (Epic ID) --> </td>
+<td>E1 </td>
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
