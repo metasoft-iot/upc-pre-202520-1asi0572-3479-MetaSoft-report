@@ -1,6 +1,7 @@
 # Capítulo II: Requirements Elicitation & Analysis
 
-## 2.1. Competidores.
+## 2.1. Competidores
+
 <p align="justify">
 Después de realizar una investigación de mercado, hemos identificado tres competidores que ofrecen soluciones relacionadas con el mantenimiento vehicular y la gestión de talleres. Estas plataformas presentan características similares o alternativas a las que propone SafeCar para el mantenimiento preventivo y la conexión entre conductores y talleres. Los principales competidores son:
 </p>
@@ -19,7 +20,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="/assets/img/capitulo-II/competidores/drivana-logo.jpeg" alt="Logo de Drivana" width="600"/>
+			<img src="/assets/img/capitulo-II/drivana-logo.jpeg" alt="Logo de Drivana" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>2. Drivana (LatAm)</b><br/>
@@ -30,7 +31,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="/assets/img/capitulo-II/competidores/obd-logo.png" alt="Logo de OBD-II" width="600"/>
+			<img src="/assets/img/capitulo-II/obd-logo.png" alt="Logo de OBD-II" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>3. Dispositivos OBD-II genéricos con apps móviles.</b><br/>
@@ -41,7 +42,8 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 </table>
 
-### 2.1.1. Análisis competitivo.
+### 2.1.1. Análisis competitivo
+
 <table>
   <tr>
   <th colspan="7" valign="top" align="justify"><b>Competitive Analysis Landscape</b></th>
@@ -68,13 +70,13 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
     Drivana (LatAm)
     <div style="margin-top: 20px;" align="center">
-                <img src="/assets/img/capitulo-II/competidores/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
+                <img src="/assets/img/capitulo-II/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
         </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       OBD-II genéricos + apps
       <div style="margin-top: 10px;" align="center">
-                <img src="/assets/img/capitulo-II/competidores/obd-logo.png" alt="OBD-II genéricos + apps Logo" width="100px">
+                <img src="/assets/img/capitulo-II/obd-logo.png" alt="OBD-II genéricos + apps Logo" width="100px">
             </div>
       </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
@@ -146,7 +148,8 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   </tr>
 </table>
 
-### 2.1.2. Estrategias y tácticas frente a competidores.
+### 2.1.2. Estrategias y tácticas frente a competidores
+
 <table>
 <tr>
     <td colspan="1" rowspan="5" align="center"><p>Análisis SWOT</p></td>
@@ -280,8 +283,10 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   </tr>
 </table>
 
-## 2.2. Entrevistas.
-### 2.2.1. Diseño de entrevistas.
+## 2.2. Entrevistas
+
+### 2.2.1. Diseño de entrevistas
+
 El diseño de entrevistas se estructura en dos bloques principales:
 
 <ol>
@@ -305,6 +310,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </ol>
 
 <b>Segmento 1: Conductores particulares (incluye taxis y delivery)</b>
+
 <ol>
   <li>¿Con qué frecuencia lleva su vehículo a mantenimiento preventivo?</li>
   <li>¿Qué problemas ha tenido con el mantenimiento de su vehículo en el último año (averías, altos costos, falta de tiempo)?</li>
@@ -327,6 +333,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </ol>
 
 <b>Segmento 2: Talleres mecánicos independientes y medianos</b>
+
 <ol>
   <li>¿Cuáles son los principales retos que enfrenta su taller al atender clientes?</li>
   <li>¿Cómo diagnostican actualmente los problemas de los vehículos que reciben?</li>
@@ -348,11 +355,12 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li>¿Qué tipo de soporte tecnológico considera necesario para modernizar su taller?</li>
 </ol>
 
-### 2.2.2. Registro de entrevistas.
+### 2.2.2. Registro de entrevistas
 
 <b>Segmento: Conductores</b>
 
 <b>Entrevista 1</b>
+
 <ul>
   <li><strong>Nombre:</strong> Katy Gutierrez</li>
   <li><strong>Edad:</strong> 23 años</li>
@@ -366,10 +374,10 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <strong>Resumen:</strong> Katy Gutierrez, quien ultiliza su auto par desplzarse a su centro de trabajo menciona que realiza el mantenimiento de su vehículo cada 8 a 9 meses, aunque a veces lo posterga por motivos de tiempo y costo. En el último año ha tenido dificultades principalmente con los gastos elevados en reparaciones y con la demora en los talleres. Se guía por ruidos del auto o luces en el tablero para identificar fallas y nunca ha utilizado aplicaciones o dispositivos digitales para monitorear su vehículo. Le interesa que SafeCar le brinde alertas preventivas, recomendaciones personalizadas y conexión directa con talleres de confianza. Estaría dispuesto a pagar una suscripción mensual si la ayuda con su problema agrega que prefiere recibir notificaciones a través de WhatsApp y la aplicación. 
 </p>
 
-
 <hr>
 
 <b>Entrevista 2</b>
+
 <ul>
   <li><strong>Nombre:</strong> […]</li>
   <li><strong>Edad:</strong> […]</li>
@@ -386,6 +394,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <hr>
 
 <b>Entrevista 3</b>
+
 <ul>
   <li><strong>Nombre:</strong> […]</li>
   <li><strong>Edad:</strong> […]</li>
@@ -404,6 +413,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <b>Segmento: Talleres mecánicos</b>
 
 <b>Entrevista 1</b>
+
 <ul>
   <li><strong>Nombre del taller:</strong> [Nombre comercial]</li>
   <li><strong>Representante:</strong> [Nombre Apellido / Cargo]</li>
@@ -420,6 +430,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <hr>
 
 <b>Entrevista 2</b>
+
 <ul>
   <li><strong>Nombre del taller:</strong> [Nombre comercial]</li>
   <li><strong>Representante:</strong> [Nombre Apellido / Cargo]</li>
@@ -436,6 +447,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <hr>
 
 <b>Entrevista 3</b>
+
 <ul>
   <li><strong>Nombre del taller:</strong> [Nombre comercial]</li>
   <li><strong>Representante:</strong> [Nombre Apellido / Cargo]</li>
@@ -449,16 +461,147 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <strong>Resumen:</strong> [Párrafo breve con hallazgos clave del taller: tiempos de diagnóstico, problemas frecuentes, interés en digitalización, disposición a pagar].
 </p>
 
-### 2.2.3. Análisis de entrevistas.
+### 2.2.3. Análisis de entrevistas
 
-| Nombre        | Preferencias y Recomendaciones |
-|---------------|--------------------------------|
+| Nombre             | Preferencias y Recomendaciones                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Katy Gutierrez** | Prefiere recibir notificaciones por WhatsApp y app móvil. Valora mucho las alertas preventivas, recomendaciones personalizadas y conexión con talleres de confianza. Está dispuesto a pagar una suscripción mensual accesible (20–30 soles). Recomienda que la app anticipe fallas y brinde estimación de costos. Se queja principalmente de los altos precios y la demora en los talleres, además de la desconfianza por cobros excesivos. |
 
-## 2.3. Needfinding.
-### 2.3.1. User Personas.
-### 2.3.2. User Task Matrix.
-### 2.3.3. User Journey Mapping.
-### 2.3.4. Empathy Mapping.
-## 2.4. Big Picture EventStorming.
-## 2.5. Ubiquitous Language.
+## 2.3. Needfinding
+
+### 2.3.1. User Personas
+
+<p align="justify">
+Las User Personas permiten representar arquetipos basados en los segmentos objetivo de <strong>SafeCar</strong>. Han sido elaboradas a partir del análisis de entrevistas y del estudio de competidores, reflejando las características, necesidades, motivaciones y frustraciones más relevantes de los usuarios. Estas fichas son esenciales para guiar el diseño de las funcionalidades de la plataforma, asegurando que las soluciones estén alineadas con las expectativas tanto de los conductores como de los talleres mecánicos.
+</p>
+
+<b>Segmento: Conductores</b>
+
+<p align="justify"> Este segmento representa a los conductores de vehículos particulares que pueden usar su auto tanto para fines personales como laborales. Incluye a quienes trabajan en taxi (por aplicativo o tradicional), en servicios de delivery o simplemente utilizan su automóvil como medio de transporte propio y familiar. En todos los casos, el vehículo es un recurso vital cuya disponibilidad impacta en su economía o bienestar. Sus principales preocupaciones giran en torno a la reducción de gastos inesperados, la seguridad en carretera y la facilidad de acceder a talleres confiables. Valoran especialmente soluciones digitales simples que les ayuden a anticipar fallas, recibir recordatorios de mantenimiento y prolongar la vida útil de su vehículo. </p>
+
+<img src="/assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
+
+<br/><b>Segmento: Talleres mecánicos</b>
+
+<p align="justify"> Este segmento corresponde a propietarios y trabajadores de talleres mecánicos independientes o de tamaño mediano. Son profesionales con experiencia práctica en diagnóstico y reparación de vehículos, pero que en muchos casos carecen de soluciones digitales para agilizar sus procesos. Su principal desafío es optimizar el tiempo de diagnóstico, fidelizar a los clientes y adaptarse a nuevas tecnologías que les permitan mejorar la eficiencia de su negocio. </p>
+
+<img src="/assets/img/capitulo-II/user-persona-mechanic.png" alt="User Persona - Mecánico" width="700"/>
+
+### 2.3.2. User Task Matrix
+
+<p align="justify"> En esta sección se presenta la <strong>User Task Matrix</strong>, que concentra las tareas que los <em>User Personas</em> realizan para cumplir sus objetivos. Para el caso de <strong>SafeCar</strong>, se consideran los dos segmentos principales: <strong>conductores particulares</strong> (incluyendo uso personal, taxi y delivery) y <strong>talleres mecánicos independientes o medianos</strong>. Las tareas aquí descritas se realizan independientemente de la existencia de una solución tecnológica, ya que corresponden a actividades que ambos segmentos deben ejecutar en su día a día. </p>
+
+<table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+    <thead>
+      <tr>
+        <th rowspan="2" style="border:1px solid #ddd; padding:8px; text-align:left;">Task</th>
+        <th colspan="2" style="border:1px solid #ddd; padding:8px;">Conductor Particular (Taxi/Delivery/Personal)</th>
+        <th colspan="2" style="border:1px solid #ddd; padding:8px;">Taller Mecánico Independiente/Mediano</th>
+      </tr>
+      <tr>
+        <th style="border:1px solid #ddd; padding:8px;">Frequency</th>
+        <th style="border:1px solid #ddd; padding:8px;">Importance</th>
+        <th style="border:1px solid #ddd; padding:8px;">Frequency</th>
+        <th style="border:1px solid #ddd; padding:8px;">Importance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Revisar estado general del vehículo (luces, llantas, niveles)</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Llevar el vehículo a mantenimiento preventivo</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Atender reparaciones correctivas (fallas inesperadas)</td>
+        <td style="border:1px solid #ddd; padding:8px;">Low</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Coordinar citas o comunicación con talleres</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Registrar gastos de mantenimiento y reparaciones</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Conducir de manera eficiente para reducir desgaste</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">—</td>
+        <td style="border:1px solid #ddd; padding:8px;">—</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Diagnosticar fallas de vehículos recibidos</td>
+        <td style="border:1px solid #ddd; padding:8px;">—</td>
+        <td style="border:1px solid #ddd; padding:8px;">—</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Supervisar tiempos de reparación y entrega</td>
+        <td style="border:1px solid #ddd; padding:8px;">—</td>
+        <td style="border:1px solid #ddd; padding:8px;">—</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Gestionar relación con clientes (conductores)</td>
+        <td style="border:1px solid #ddd; padding:8px;">—</td>
+        <td style="border:1px solid #ddd; padding:8px;">—</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">Mantener historial de vehículos atendidos</td>
+        <td style="border:1px solid #ddd; padding:8px;">Low</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">Medium</td>
+        <td style="border:1px solid #ddd; padding:8px;">High</td>
+      </tr>
+    </tbody>
+</table>
+
+<strong>Explicación</strong>
+
+<p align="justify">
+    Para los <strong>conductores particulares</strong>, las tareas con mayor frecuencia e importancia son
+    <em>revisar el estado general del vehículo</em> y <em>realizar mantenimiento preventivo</em>, ya que impactan directamente en su
+    continuidad operativa y en la reducción de costos imprevistos. Las <em>reparaciones correctivas</em> ocurren con menor
+    frecuencia, pero son de alta importancia por su costo e impacto.
+  </p>
+<p align="justify">
+  En los <strong>talleres mecánicos</strong>, las tareas críticas son <em>diagnosticar fallas</em>, <em>supervisar tiempos de reparación</em> y
+  <em>gestionar la relación con clientes</em>, todas de alta frecuencia e importancia por su efecto en eficiencia y satisfacción.
+  El <em>historial de vehículos</em> no siempre se lleva con alta frecuencia, pero tiene alta importancia para mejorar calidad y confianza.
+</p>
+<p align="justify">
+  Como coincidencias, ambos segmentos asignan alta importancia a la <em>coordinación y comunicación</em> para agendar servicios y
+  al <em>registro</em> (de gastos o mantenimientos), aunque con enfoques distintos: control de costos personales en conductores y
+  optimización operativa en talleres.
+</p>
+
+### 2.3.3. User Journey Mapping
+
+### 2.3.4. Empathy Mapping
+
+## 2.4. Big Picture EventStorming
+
+## 2.5. Ubiquitous Language
