@@ -415,16 +415,16 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <b>Entrevista 1</b>
 
 <ul>
-  <li><strong>Nombre del taller:</strong> [Nombre comercial]</li>
-  <li><strong>Representante:</strong> [Nombre Apellido / Cargo]</li>
-  <li><strong>Años de operación:</strong> [años]</li>
-  <li><strong>Distrito:</strong> [Distrito/Ciudad]</li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
-  <li><strong>Duración:</strong> [mm:ss]</li>
+  <li><strong>Nombre del taller:</strong> Mecangroup</li>
+  <li><strong>Representante:</strong> Abel Holguín / Supervisor</li>
+  <li><strong>Años de operación:</strong> 27 años</li>
+  <li><strong>Distrito:</strong> La Victoria</li>
+  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://upcedupe-my.sharepoint.com/:v:/g/personal/u201824550_upc_edu_pe/EbWP7AHkagNIuoHROo6NtTgBQoBxwBqgRzKYoCUb9cJ52w?e=oCxlBU</a></li>
+  <li><strong>Duración:</strong> [03:09]</li>
   <li><strong>Screenshot:</strong> <img src="[URL-screenshot]" alt="screenshot entrevista 1" style="max-width:200px;"></li>
 </ul>
 <p align="justify">
-<strong>Resumen:</strong> [Párrafo breve con hallazgos clave del taller: tiempos de diagnóstico, problemas frecuentes, interés en digitalización, disposición a pagar].
+<strong>Resumen:</strong> Abel Holguín, compartió los desafíos que enfrenta en la gestión de su taller mecánico. Destacó que el principal reto es la creciente complejidad electrónica de los vehículos modernos, lo que exige que su personal reciba capacitación constante en electrónica avanzada y software. Actualmente, para el diagnóstico de fallas, utiliza principalmente escáneres y computadoras, y mantiene un registro digital del historial de mantenimiento de los vehículos de sus clientes. Aunque ya emplea estas herramientas, expresó que una queja común de los clientes son las demoras en el diagnóstico, ya que a veces surgen problemas inesperados. El señor Abel mostró interés en adoptar nuevas soluciones digitales, mencionando que estaría dispuesto a pagar una suscripción mensual por una plataforma que ofrezca "reportes automáticos" y ayude a reducir los tiempos de diagnóstico.
 </p>
 
 <hr>
