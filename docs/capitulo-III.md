@@ -174,27 +174,7 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
 
-<tbody>
-		
-		
-		
-		</tr>
-	</tbody>
-	<tbody>
-		<tr>
-			<td>US</td>
-			<td>Registrar un cliente</td>
-			<td>Como visitante quiero registrarme como cliente para solicitar servicios de mantenimiento vehicular en SafeCar</td>
-			<td>
-Escenario 1: Registro de cliente exitoso  
-Dado que el visitante completa el formulario de registro como cliente  
-Cuando ingresa sus datos correctamente  
-Entonces el sistema crea su perfil de cliente y puede comenzar a solicitar servicios.
-			</td>
-			<td>E</td>
-		</tr>
-	</tbody>
- 
+
 </table>
 <!-- FIN: Tabla de User Stories (Epic/Story) -->
 
