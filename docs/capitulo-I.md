@@ -4,21 +4,17 @@
 ### 1.1.1. Descripción de la Startup
 
 <p align="justify">
-<b>SafeCar</b> es una startup enfocada en <b>revolucionar el mantenimiento vehicular inteligente</b> mediante el uso de tecnologías IoT y análisis de datos en tiempo real. Nuestra plataforma conecta a conductores con mecánicos a través de un dispositivo instalado en el vehículo, capaz de recopilar información sobre el estado del motor, frenos, neumáticos, consumo de combustible y hábitos de conducción.
-</p>
-
-<p align="justify">
-Con esta información, <b>SafeCar</b> ofrece alertas personalizadas, sugiere mantenimientos preventivos y facilita la gestión de citas de servicio. Además, los mecánicos acceden a reportes automáticos desde un panel especializado que les permite anticipar fallas y optimizar reparaciones, generando así un ecosistema de confianza y eficiente entre conductores y talleres.
+<b>MetaSoft</b> es una startup tecnológica orientada a la creación de soluciones digitales inteligentes que combinan plataformas web y IoT. Su propósito es responder a las necesidades actuales de transformación digital mediante el desarrollo de herramientas capaces de convertir datos en conocimiento útil, impulsando procesos más eficientes, personalizados y sostenibles.
 </p>
 
 <b>Misión</b>
 <p align="justify">
-Transformar el mantenimiento vehicular mediante soluciones tecnológicas accesibles e inteligentes que promuevan la seguridad, la prevención y la optimización de los recursos de conductores y mecánicos.
+Transformar datos en conocimiento accionable, ofreciendo herramientas inteligentes que mejoren la toma de decisiones y optimicen procesos tanto para profesionales como para usuarios finales.
 </p>
 
 <b>Visión</b>
 <p align="justify">
-Convertirse en la plataforma líder en mantenimiento vehicular inteligente en Latinoamérica, ofreciendo herramientas basadas en IoT y analítica de datos que mejoren la seguridad vial, reduzcan fallos mecánicos y extiendan la vida útil de los vehículos.
+Convertirse en una startup referente en el desarrollo de soluciones digitales basadas en plataformas web con IoT, capaces de transformar datos en conocimiento útil para diferentes sectores, contribuyendo a una sociedad más eficiente, conectada e innovadora.
 </p>
 
 ### 1.1.2. Perfiles de integrantes del equipo
