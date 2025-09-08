@@ -16,13 +16,12 @@
 	<tbody>
 		<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
 		<tr>
-			<td>Epic 1: Landing page
-						Como visitante
-						Quiero visualizar una página
-						Para saber acerca de la aplicación e ingresar a la aplicación	
+			<td>E1: 	
 						</td>
-			<td><!-- Título --> </td>
-			<td><!-- Descripción --> </td>
+			<td>Epic 1: Landing page </td>
+			<td>Como visitante
+						Quiero visualizar una página
+						Para saber acerca de la aplicación e ingresar a la aplicación </td>
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
