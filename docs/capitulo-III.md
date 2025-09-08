@@ -173,11 +173,33 @@ Entonces observa una presentación clara de la aplicación.<!-- Criterios de Ace
 		</tr>
 		<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
 	</tbody>
-		
+
+	<tbody>
+	<!-- Fila plantilla: copie/pegue esta fila y complete los valores -->
+	<tr>
+		<td>US104</td>
+		<td>Sección de planes del producto</td>
+		<td>Como visitante quiero visualizar los planes disponibles en el landing page para elegir el que más me convenga</td>
+		<td>
+
+Escenario 1: Visualización de planes disponibles  
+
+Dado que el visitante está en el landing page  
+
+Cuando se encuentra en la sección de planes  
+
+Entonces observa la información de los planes con sus precios y beneficios.  
+
+<!-- Criterios de Aceptación: use viñetas o separe con ; --> </td>
+		<td>E1</td>
+	</tr>
+	<!-- Sugerencia: agregue más filas arriba o abajo de esta sección -->
+</tbody>
+  
 
 <!-- FIN: Tabla de User Stories (Epic/Story) -->
 
-
+	
 
 ## 3.2. Impact Mapping.
 
