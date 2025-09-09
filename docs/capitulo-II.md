@@ -379,16 +379,16 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <b>Entrevista 2</b>
 
 <ul>
-  <li><strong>Nombre:</strong> […]</li>
-  <li><strong>Edad:</strong> […]</li>
-  <li><strong>Ocupación:</strong> […]</li>
-  <li><strong>Distrito:</strong> […]</li>
+  <li><strong>Nombre:</strong> Orlando</li>
+  <li><strong>Edad:</strong> 23</l>
+  <li><strong>Ocupación:</strong> Desarrollador de software/Conductor</li>
+  <li><strong>Distrito:</strong> La molina</li>
   <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
-  <li><strong>Duración:</strong> […]</li>
-  <li><strong>Screenshot:</strong> <img src="[URL-screenshot]" alt="screenshot entrevista 2" style="max-width:200px;"></li>
+  <li><strong>Duración:</strong> 4:22 min</li>
+  <li><strong>Screenshot:</strong> <img src="https://media.discordapp.net/attachments/834550053590925412/1414777325970784316/image.png?ex=68c0cd8f&is=68bf7c0f&hm=431e0db6cc946fd4692194968b04f8ccaaa2cdcbfc821155639e772f02356b7f&=&format=webp&quality=lossless" alt="screenshot entrevista 2" style="max-width:200px;"></li>
 </ul>
 <p align="justify">
-<strong>Resumen:</strong> [Aquí un párrafo breve (6–8 líneas) con lo más relevante: hábitos de mantenimiento, problemas frecuentes, percepciones de talleres, uso de tecnología y expectativas frente a SafeCar].
+<strong>Resumen:</strong> Orlando Roca, 23 años, desarrollador de software y estudiante, con 5 años de experiencia conduciendo en Lima, comentó que realiza mantenimiento preventivo unas 3 veces al año y que sus principales problemas son pinchazos de llantas y desgaste por baches, además de frenos defectuosos. Detecta las fallas solo por señales físicas (llanta baja, ruidos), nunca ha usado soluciones digitales y gasta alrededor de 500 soles al año en reparaciones. Valora especialmente recibir alertas tempranas y un historial de precios de talleres para evitar sobrecostos, ya que su principal frustración es la desconfianza en los cobros. Prefiere WhatsApp como canal de notificación y afirmó estar dispuesto a pagar una suscripción mensual si la aplicación le ayuda a ahorrar en mantenimiento y a tener mayor transparencia.
 </p>
 
 <hr>
