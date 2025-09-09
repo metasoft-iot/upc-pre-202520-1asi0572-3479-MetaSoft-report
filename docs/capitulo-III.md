@@ -180,7 +180,7 @@
 				<p><strong>Escenario 2: Idioma coherente</strong><br/>
 				Dado que la página está en un idioma<br/>
 				Cuando el visitante revisa los testimonios<br/>
-				Entonces los textos se presentan en el mismo idioma elegido.	
+				Entonces los textos se presentan en el mismo idioma elegido.
 				</p>
 				<p><strong>Escenario 3: Cantidad mínima</strong><br/>
 				Dado que el visitante revisa la sección<br/>
@@ -777,7 +777,204 @@
 			</td>
 			<td>E05</td>
 		</tr>
-	</tbody>
+        		<!--EPIC 06-->
+    <tr>
+    	<td><b>E06</b></td>
+    	<td>App Web – Gestión de Citas del Taller</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> gestionar la agenda de citas (crear, aprobar, reprogramar, cancelar y dar seguimiento) <b>Para</b> organizar la atención y evitar choques de horario.
+    	</td>
+    	<td></td>
+    	<td></td>
+    </tr>
+    <!--STORY 01-->
+    <tr>
+    	<td>US601</td>
+    	<td>Ver agenda por día y semana</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> visualizar la agenda en vista diaria y semanal <b>Para</b> organizar el trabajo del equipo.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Vista diaria por defecto</strong><br/>
+    		Dado que ingreso a “Citas”<br/>
+    		Cuando se carga la pantalla<br/>
+    		Entonces veo la agenda del día actual.</p>
+    		<p><strong>Escenario 2: Cambiar a vista semanal</strong><br/>
+    		Dado que estoy en la vista de citas<br/>
+    		Cuando selecciono “Semana”<br/>
+    		Entonces se muestran las citas de la semana en curso.</p>
+    		<p><strong>Escenario 3: Búsqueda simple</strong><br/>
+    		Dado que necesito ubicar una cita<br/>
+    		Cuando busco por cliente o placa<br/>
+    		Entonces la lista se filtra con los resultados coincidentes.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    <!--STORY 02-->
+    <tr>
+    	<td>US602</td>
+    	<td>Crear cita manual</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> registrar una cita con cliente, vehículo, fecha y servicio <b>Para</b> agendar una visita.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Creación válida</strong><br/>
+    		Dado que completo los campos obligatorios<br/>
+    		Cuando presiono “Guardar”<br/>
+    		Entonces la cita se crea en estado “Solicitada”.</p>
+    		<p><strong>Escenario 2: Validación de obligatorios</strong><br/>
+    		Dado que falta un dato requerido<br/>
+    		Cuando intento guardar<br/>
+    		Entonces el sistema indica qué campo debo completar.</p>
+    		<p><strong>Escenario 3: Conflicto básico</strong><br/>
+    		Dado que ya existe una cita para el mismo vehículo en el mismo horario<br/>
+    		Cuando intento guardar<br/>
+    		Entonces no se crea y se muestra un aviso de conflicto.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    <!--STORY 03-->
+    <tr>
+    	<td>US603</td>
+    	<td>Aprobar cita</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> aprobar una cita solicitada <b>Para</b> confirmarla con el cliente.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Cambio a aprobada</strong><br/>
+    		Dado una cita en estado “Solicitada”<br/>
+    		Cuando presiono “Aprobar”<br/>
+    		Entonces la cita cambia a estado “Aprobada”.</p>
+    		<p><strong>Escenario 2: Registro de auditoría simple</strong><br/>
+    		Dado que apruebo una cita<br/>
+    		Cuando se actualiza el estado<br/>
+    		Entonces queda registrada la fecha y el usuario que aprobó.</p>
+    		<p><strong>Escenario 3: Idempotencia básica</strong><br/>
+    		Dado que una cita ya está “Aprobada”<br/>
+    		Cuando intento volver a aprobarla<br/>
+    		Entonces el sistema no realiza cambios y muestra que ya estaba aprobada.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    <!--STORY 04-->
+    <tr>
+    	<td>US604</td>
+    	<td>Reprogramar cita</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> reprogramar una cita aprobada <b>Para</b> moverla a una fecha/hora disponible.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Guardado de nuevo horario</strong><br/>
+    		Dado una cita “Aprobada”<br/>
+    		Cuando selecciono nueva fecha y hora y guardo<br/>
+    		Entonces la cita queda con el nuevo horario.</p>
+    		<p><strong>Escenario 2: Motivo de reprogramación</strong><br/>
+    		Dado que reprogramo una cita<br/>
+    		Cuando confirmo el cambio<br/>
+    		Entonces debo ingresar un motivo que se guarda con la cita.</p>
+    		<p><strong>Escenario 3: Conflicto de horario</strong><br/>
+    		Dado que el nuevo horario coincide con otra cita del mismo vehículo<br/>
+    		Cuando intento guardar<br/>
+    		Entonces no se permite y se muestra un aviso de conflicto.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    <!--STORY 05-->
+    <tr>
+    	<td>US605</td>
+    	<td>Rechazar o cancelar cita</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> rechazar o cancelar citas <b>Para</b> liberar espacios en la agenda.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Rechazo de solicitada</strong><br/>
+    		Dado una cita en estado “Solicitada”<br/>
+    		Cuando presiono “Rechazar”<br/>
+    		Entonces la cita pasa a “Rechazada” y se solicita un motivo.</p>
+    		<p><strong>Escenario 2: Cancelación de aprobada</strong><br/>
+    		Dado una cita en estado “Aprobada”<br/>
+    		Cuando presiono “Cancelar”<br/>
+    		Entonces la cita pasa a “Cancelada” y queda registrado el motivo.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    <!--STORY 06-->
+    <tr>
+    	<td>US606</td>
+    	<td>Check-in de llegada</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> marcar el check-in del vehículo a su llegada <b>Para</b> iniciar la atención a tiempo.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Marcar llegada</strong><br/>
+    		Dado una cita “Aprobada”<br/>
+    		Cuando marco “Llegó al taller”<br/>
+    		Entonces la cita cambia a “En recepción” y se registra la hora.</p>
+    		<p><strong>Escenario 2: No presentado</strong><br/>
+    		Dado que el cliente no llega<br/>
+    		Cuando pasan 15 minutos después de la hora programada<br/>
+    		Entonces la cita se marca como “No presentado”.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    <!--STORY 07-->
+    <tr>
+    	<td>US607</td>
+    	<td>Notas internas en la cita</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> agregar notas internas a la cita <b>Para</b> compartir detalles con el equipo.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Agregar nota</strong><br/>
+    		Dado una cita existente<br/>
+    		Cuando agrego una nota y guardo<br/>
+    		Entonces se registra la nota con fecha y autor.</p>
+    		<p><strong>Escenario 2: Ver historial de notas</strong><br/>
+    		Dado que otro usuario abre la cita<br/>
+    		Cuando accede a “Notas”<br/>
+    		Entonces visualiza el historial de notas en orden cronológico.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    <!--STORY 08-->
+    <tr>
+    	<td>US608</td>
+    	<td>Filtros por estado y fecha</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> filtrar la lista de citas por estado y rango de fechas <b>Para</b> enfocarme en lo pendiente.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Filtrar por estado</strong><br/>
+    		Dado que selecciono un estado (Solicitada, Aprobada, Cancelada, No presentado)<br/>
+    		Cuando aplico el filtro<br/>
+    		Entonces solo se muestran las citas de ese estado.</p>
+    		<p><strong>Escenario 2: Filtrar por rango</strong><br/>
+    		Dado que elijo un rango de fechas<br/>
+    		Cuando aplico el filtro<br/>
+    		Entonces se listan únicamente las citas dentro de ese periodo.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    <!--STORY 09-->
+    <tr>
+    	<td>US609</td>
+    	<td>Contadores rápidos por estado</td>
+    	<td>
+    		<b>Como</b> taller <b>Quiero</b> ver totales del día por estado de cita <b>Para</b> tener una vista rápida de la carga.
+    	</td>
+    	<td>
+    		<p><strong>Escenario 1: Totales del día</strong><br/>
+    		Dado la vista de agenda<br/>
+    		Cuando se carga la pantalla<br/>
+    		Entonces se muestran contadores del día por estado (Solicitadas, Aprobadas, Canceladas, No presentado).</p>
+    		<p><strong>Escenario 2: Cambio de fecha</strong><br/>
+    		Dado que navego a otra fecha<br/>
+    		Cuando la selecciono<br/>
+    		Entonces los contadores se recalculan para la nueva fecha.</p>
+    	</td>
+    	<td>E06</td>
+    </tr>
+    </tbody>
 </table>
 
 ## 3.2. Impact Mapping
