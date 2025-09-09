@@ -14,7 +14,7 @@
 ## Startup: MetaSoft
 ## Producto: Por definir
 
-</center> 
+</center>
 
 ## Relación de integrantes:
 
@@ -23,7 +23,7 @@
 * **Hardie Alfonso Holguin Gamarra      U202220250**
 * **Javier Kenyi Mendoza Solis          U201824550**
 * **Gustavo Jandroel Aguirre Rodríguez  U202124162**
-* **Nombres y apellidos    Código de estudiante**
+* **Javier Sharvel Irigoyen Matos       U20221D156**
 * **Nombres y apellidos    Código de estudiante**
 * **Nombres y apellidos    Código de estudiante**
 
@@ -107,14 +107,14 @@
             <td>Nombre de autores</td>
             <td>Descripción de modificación</td>
         </tr>
-        <!-- Fila 9-->  
+        <!-- Fila 9-->
         <tr>
             <td>1.8</td>
             <td>Fecha</td>
             <td>Nombre de autores</td>
             <td>Descripción de modificación</td>
         </tr>
-        <!-- Fila 10--> 
+        <!-- Fila 10-->
         <tr>
             <td>1.9</td>
             <td>Fecha</td>
@@ -135,7 +135,7 @@
             <td>Nombre de autores</td>
             <td>Descripción de modificación</td>
         </tr>
-        <!-- Fila 13--> 
+        <!-- Fila 13-->
         <tr>
             <td>1.12</td>
             <td>Fecha</td>
@@ -169,7 +169,7 @@ Github Collaboration Insights proporciona un cronograma que muestra las principa
 * Hardie Alfonso Holguin Gamarra (HOLGUINUPC)
 * Javier Kenyi Mendoza Solis (Kenyi-Mendoza-Solis)
 * Gustavo Jandroel Aguirre Rodríguez  (Jandroel)
-* 
+* Javier Sharvel Irigoyen Matos (sharvel-irigoyen)
 
 Se dividieron las siguientes ramas para la colaboración en el proyecto:
 
@@ -275,39 +275,39 @@ en cada uno de los commits.
         <br>
         <!============APELLIDO Y NOMBRES 1=========================>
         <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 1
-        <br><br>    
+        <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
         <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
         <strong>Villegas Jipa Luis Alfonso</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
         <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 4
         <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>  
+        <!============APELLIDO Y NOMBRES 5=========================>
         <strong>Aguirre Rodríguez Gustavo Jandroel:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 5
         <br><br>
         <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>  
-        <strong>Apellidos y nombres:</strong>
-        <br> 
+        <!============APELLIDO Y NOMBRES 6=========================>
+        <strong>Javier Sharvel Irigoyen Matos:</strong>
+        <br>
         Acciones realizadas de TB1 por el integrante 6
         <br><br>
         <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>  
+        <!============APELLIDO Y NOMBRES 5=========================>
         <strong>Apellidos y nombres:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 7
         <br><br>
         <br><br>
@@ -315,7 +315,7 @@ en cada uno de los commits.
         <p style="text-align: center;"><strong>Presentable del TP</strong></p>
         <br>
         <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>  
+        <strong>Janover Gonzalo Saldaña Vela:</strong>
         <br>
         Acciones realizadas de TP por el integrante 1
         <br><br>
@@ -338,6 +338,11 @@ en cada uno de los commits.
         <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TP por el integrante 5
+        <br><br>
+        <!============APELLIDO Y NOMBRES 6=========================>
+        <strong>Javier Sharvel Irigoyen Matos:</strong>
+        <br>
+        Acciones realizadas de TP por el integrante 6
         <br><br>
         <!============ TB2 =========================>
         <p style="text-align: center;"><strong>Presentable del TB2</strong></p>
@@ -367,6 +372,11 @@ en cada uno de los commits.
         <br>
         Acciones realizadas de TB2 por el integrante 5
         <br><br>
+        <!============APELLIDO Y NOMBRES 6=========================>
+        <strong>Javier Sharvel Irigoyen Matos:</strong>
+        <br>
+        Acciones realizadas de TB2 por el integrante 6
+        <br><br>
         <!============ TF =========================>
         <p style="text-align: center;"><strong>Presentable del TF</strong></p>
         <br>
@@ -395,19 +405,24 @@ en cada uno de los commits.
         <br>
         Acciones realizadas de TB2 por el integrante 5
         <br>
+        <!============APELLIDO Y NOMBRES 6=========================>
+        <strong>Javier Sharvel Irigoyen Matos:</strong>
+        <br>
+        Acciones realizadas de TB2 por el integrante 6
+        <br>
     </td>
      <td>
         <strong>TB1:</strong>
-        Conclusiones generales TB1 del criterio específico 1        
+        Conclusiones generales TB1 del criterio específico 1
         <br/><br/>
         <strong>TP:</strong>
-        Conclusiones generales TP del criterio específico 1       
+        Conclusiones generales TP del criterio específico 1
         <br/><br/>
         <strong>TB2:</strong>
-        Conclusiones generales TB2 del criterio específico 1        
+        Conclusiones generales TB2 del criterio específico 1
         <br/><br/>
         <strong>TF:</strong>
-        Conclusiones generales TF del criterio específico 1        
+        Conclusiones generales TF del criterio específico 1
     </td>
 </tr>
 <!===========================================================>
@@ -418,34 +433,39 @@ en cada uno de los commits.
         <br>
         <!============APELLIDO Y NOMBRES 1=========================>
         <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 1
-        <br><br>    
+        <br><br>
         <!============APELLIDO Y NOMBRES 2=========================>
         <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 2
         <br><br>
         <!============APELLIDO Y NOMBRES 3=========================>
         <strong>Villegas Jipa Luis Alfonso</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 3
         <br><br>
         <!============APELLIDO Y NOMBRES 4=========================>
         <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 4
         <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>  
+        <!============APELLIDO Y NOMBRES 5=========================>
         <strong>Apellidos y nombres:</strong>
-        <br> 
+        <br>
         Acciones realizadas de TB1 por el integrante 5
+        <br><br>
+        <!============APELLIDO Y NOMBRES 6=========================>
+        <strong>Javier Sharvel Irigoyen Matos:</strong>
+        <br>
+        Acciones realizadas de TB1 por el integrante 6
         <br><br>
         <!============TRABAJO PARCIAL =========================>
         <p style="text-align: center;"><strong>Presentable del TP</strong></p>
         <br>
         <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>  
+        <strong>Janover Gonzalo Saldaña Vela:</strong>
         <br>
         Acciones realizadas de TP por el integrante 1
         <br><br>
@@ -468,6 +488,11 @@ en cada uno de los commits.
         <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TP por el integrante 5
+        <br><br>
+        <!============APELLIDO Y NOMBRES 6=========================>
+        <strong>Javier Sharvel Irigoyen Matos:</strong>
+        <br>
+        Acciones realizadas de TP por el integrante 6
         <br><br>
         <!============ TB2 =========================>
         <p style="text-align: center;"><strong>Presentable del TB2</strong></p>
@@ -497,6 +522,11 @@ en cada uno de los commits.
         <br>
         Acciones realizadas de TB2 por el integrante 5
         <br><br>
+        <!============APELLIDO Y NOMBRES 6=========================>
+        <strong>Javier Sharvel Irigoyen Matos:</strong>
+        <br>
+        Acciones realizadas de TB2 por el integrante 6
+        <br><br>
         <!============ TF =========================>
         <p style="text-align: center;"><strong>Presentable del TF</strong></p>
         <br>
@@ -524,20 +554,25 @@ en cada uno de los commits.
         <strong>Apellidos y nombres:</strong>
         <br>
         Acciones realizadas de TB2 por el integrante 5
+        <br><br>
+        <!============APELLIDO Y NOMBRES 6=========================>
+        <strong>Javier Sharvel Irigoyen Matos:</strong>
+        <br>
+        Acciones realizadas de TB2 por el integrante 6
         <br>
     </td>
     <td>
         <strong>TB1:</strong>
-        Conclusiones generales TB1 del criterio específico 2        
+        Conclusiones generales TB1 del criterio específico 2
         <br/><br/>
         <strong>TP:</strong>
-        Conclusiones generales TP del criterio específico 2        
+        Conclusiones generales TP del criterio específico 2
         <br/><br/>
         <strong>TB2:</strong>
-        Conclusiones generales TB2 del criterio específico 2        
+        Conclusiones generales TB2 del criterio específico 2
         <br/><br/>
         <strong>TF:</strong>
-        Conclusiones generales TF del criterio específico 2        
+        Conclusiones generales TF del criterio específico 2
     </td>
 </tr>
 </tbody>
