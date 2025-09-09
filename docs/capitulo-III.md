@@ -23,17 +23,15 @@
 		<td>Epic 2: Registro de usuarios</td>
 		<td>Implementar el registro de usuarios (conductores y talleres) en la plataforma SafeCar, accesible desde la landing page, con formularios diferenciados según el tipo de usuario.</td>
 	</tr>
-
   	<tr>
 		<td>E3</td>
 		<td>Epic 3: Aplicación móvil SafeCar</td>
 		<td>Implementar la aplicación móvil de SafeCar para conductores y talleres, permitiendo acceder a diagnósticos IoT, gestionar mantenimientos y recibir alertas preventivas en tiempo real.	</td>
 	</tr>
-
  	<tr>
 		<td>E4</td>
 		<td>Epic 4:  </td>
-		<td> .	</td>
+		<td> 	</td>
 	</tr>
 </tbody>
 </table>
