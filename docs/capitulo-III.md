@@ -156,10 +156,10 @@
 				Cuando indica interés en un plan<br/>
 				Entonces el sistema registra el interés para análisis.
 				</p>
-				<p><strong>Escenario 4: Registro de interacción</strong><br/>
-				Dado que el visitante está en la sección de planes<br/>
-				Cuando indica interés en un plan<br/>
-				Entonces el sistema registra el interés para análisis.
+				<p><strong>Escenario 4: CTA visible por plan</strong><br/>
+				Dado que el visitante revisa la sección de planes<br/>
+				Cuando observa cada tarjeta de plan<br/>
+				Entonces cada plan muestra un botón claro de “Empezar” o “Más detalles”.
 				</p>
 			</td>
 			<td>E01</td>
@@ -355,10 +355,10 @@
 				E01
 			</td>
 		</tr>
-				<!--EPIC 02-->
+		<!--EPIC 02-->
 		<tr>
 			<td><b>E02</b></td>
-			<td>App Web – Autenticación y Cuentas</td>
+			<td>Aplicación Web – Autenticación y Cuentas</td>
 			<td>
 				<b>Como</b> usuario de SafeCar (conductor o taller) <b>Quiero</b> gestionar mi acceso y mis datos básicos de cuenta <b>Para</b> usar de forma segura las funciones web y mantener mi información actualizada.
 			</td>
@@ -499,40 +499,17 @@
 			</td>
 			<td>E02</td>
 		</tr>
-		<!--USER STORY 18-->
-		<tr>
-			<td>US207</td>
-			<td>Gestionar vehículos</td>
-			<td>
-				<b>Como</b> conductor <b>Quiero</b> registrar y administrar mis vehículos <b>Para</b> asociarlos a diagnósticos y mantenimientos.
-			</td>
-			<td>
-				<p><strong>Escenario 1: Registro válido</strong><br/>
-				Dado que el usuario está autenticado<br/>
-				Cuando proporciona datos válidos de un vehículo<br/>
-				Entonces el sistema guarda el vehículo y lo muestra en su lista.</p>
-				<p><strong>Escenario 2: Placa duplicada</strong><br/>
-				Dado que ya existe un vehículo con la misma placa<br/>
-				Cuando el usuario intenta registrarlo<br/>
-				Entonces el sistema rechaza la acción e informa la duplicidad.</p>
-				<p><strong>Escenario 3: Edición y eliminación</strong><br/>
-				Dado que el vehículo ya está registrado<br/>
-				Cuando el usuario lo edita o lo elimina<br/>
-				Entonces el sistema aplica los cambios y refleja la actualización en la lista.</p>
-			</td>
-			<td>E02</td>
-		</tr>
-				<!--EPIC 03-->
+		<!--EPIC 03-->
 		<tr>
 			<td><b>E03</b></td>
-			<td>App Móvil – Diagnóstico y alertas</td>
+			<td>Aplicación Móvil – Diagnóstico y alertas</td>
 			<td>
 				<b>Como</b> conductor <b>Quiero</b> recibir en mi móvil diagnósticos IoT y alertas preventivas <b>Para</b> anticipar fallas y reducir averías imprevistas.
 			</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<!--USER STORY 19-->
+		<!--USER STORY 18-->
 		<tr>
 			<td>US301</td>
 			<td>Recepción de alertas en tiempo real</td>
@@ -551,7 +528,7 @@
 			</td>
 			<td>E03</td>
 		</tr>
-		<!--USER STORY 20-->
+		<!--USER STORY 19-->
 		<tr>
 			<td>US302</td>
 			<td>Historial de alertas</td>
@@ -564,13 +541,13 @@
 				Cuando accede al historial de alertas<br/>
 				Entonces el sistema muestra una lista de notificaciones previas con fecha y tipo.</p>
 				<p><strong>Escenario 2: Persistencia</strong><br/>
-				Dado que el usuario cierra sesión o reinstala la app<br/>
+				Dado que el usuario cierra sesión o reinstala la aplicación<br/>
 				Cuando inicia sesión de nuevo<br/>
 				Entonces el historial de alertas permanece disponible en su cuenta.</p>
 			</td>
 			<td>E03</td>
 		</tr>
-		<!--USER STORY 21-->
+		<!--USER STORY 20-->
 		<tr>
 			<td>US303</td>
 			<td>Configuración de notificaciones</td>
@@ -589,12 +566,12 @@
 			</td>
 			<td>E03</td>
 		</tr>
-		<!--USER STORY 22-->
+		<!--USER STORY-->
 		<tr>
 			<td>US304</td>
 			<td>Visualización de diagnóstico del vehículo</td>
 			<td>
-				<b>Como</b> conductor <b>Quiero</b> ver en la app un diagnóstico básico de mi vehículo <b>Para</b> conocer su estado actual y tomar decisiones rápidas.
+				<b>Como</b> conductor <b>Quiero</b> ver en la aplicación un diagnóstico básico de mi vehículo <b>Para</b> conocer su estado actual y tomar decisiones rápidas.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Diagnóstico disponible</strong><br/>
@@ -611,14 +588,14 @@
 		<!--EPIC 04-->
 		<tr>
 			<td><b>E04</b></td>
-			<td>App Móvil – Gestión de mantenimientos</td>
+			<td>Aplicación Móvil – Gestión de mantenimientos</td>
 			<td>
 				<b>Como</b> conductor <b>Quiero</b> gestionar mantenimientos desde mi móvil <b>Para</b> organizar mis visitas a talleres y llevar control de mis gastos.
 			</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<!--USER STORY 23-->
+		<!--USER STORY-->
 		<tr>
 			<td>US305</td>
 			<td>Registro de mantenimientos realizados</td>
@@ -642,7 +619,7 @@
 			<td>US306</td>
 			<td>Consulta de historial de mantenimientos</td>
 			<td>
-				<b>Como</b> conductor <b>Quiero</b> ver el historial de mantenimientos en la app <b>Para</b> analizar la frecuencia y costos de mis reparaciones.
+				<b>Como</b> conductor <b>Quiero</b> ver el historial de mantenimientos en la aplicación <b>Para</b> analizar la frecuencia y costos de mis reparaciones.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Visualización correcta</strong><br/>
@@ -675,7 +652,7 @@
 			</td>
 			<td>E04</td>
 		</tr>
-				<!--EPIC 05-->
+		<!--EPIC 05-->
 		<tr>
 			<td><b>E05</b></td>
 			<td>Technical – Backend e Integraciones</td>
@@ -777,10 +754,10 @@
 			</td>
 			<td>E05</td>
 		</tr>
-        		<!--EPIC 06-->
+    <!--EPIC 06-->
     <tr>
     	<td><b>E06</b></td>
-    	<td>App Web – Gestión de Citas del Taller</td>
+    	<td>Aplicación Web – Gestión de Citas del Taller</td>
     	<td>
     		<b>Como</b> taller <b>Quiero</b> gestionar la agenda de citas (crear, aprobar, reprogramar, cancelar y dar seguimiento) <b>Para</b> organizar la atención y evitar choques de horario.
     	</td>
@@ -869,9 +846,9 @@
     		Cuando selecciono nueva fecha y hora y guardo<br/>
     		Entonces la cita queda con el nuevo horario.</p>
     		<p><strong>Escenario 2: Motivo de reprogramación</strong><br/>
-    		Dado que reprogramo una cita<br/>
-    		Cuando confirmo el cambio<br/>
-    		Entonces debo ingresar un motivo que se guarda con la cita.</p>
+				Dado que reprogramo una cita<br/>
+				Cuando confirmo el cambio<br/>
+				Entonces el sistema solicita un motivo y el usuario ingresa el motivo, que se guarda con la cita.</p>
     		<p><strong>Escenario 3: Conflicto de horario</strong><br/>
     		Dado que el nuevo horario coincide con otra cita del mismo vehículo<br/>
     		Cuando intento guardar<br/>
@@ -974,7 +951,98 @@
     	</td>
     	<td>E06</td>
     </tr>
-    </tbody>
+		<!--EPIC 07-->
+    <tr>
+    	<td><b>E07</b></td>
+    	<td>Gestión de Vehículos</td>
+    	<td>
+    		<b>Como</b> conductor <b>Quiero</b> registrar y administrar mis vehículos <b>Para</b> asociarlos a diagnósticos y mantenimientos.
+    	</td>
+    	<td></td>
+    	<td></td>
+    </tr>
+		<!--USER STORY 01-->
+		<tr>
+			<td>US701</td>
+			<td>Registrar vehículo</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> registrar y administrar mis vehículos <b>Para</b> asociarlos a diagnósticos y mantenimientos.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Registro válido</strong><br/>
+				Dado que el usuario está autenticado<br/>
+				Cuando proporciona datos válidos de un vehículo<br/>
+				Entonces el sistema guarda el vehículo y lo muestra en su lista.</p>
+				<p><strong>Escenario 2: Placa duplicada</strong><br/>
+				Dado que ya existe un vehículo con la misma placa<br/>
+				Cuando el usuario intenta registrarlo<br/>
+				Entonces el sistema rechaza la acción e informa la duplicidad.</p>
+			</td>
+			<td>E07</td>
+		</tr>
+		<!--USER STORY 02-->
+		<tr>
+			<td>US702</td>
+			<td>Editar y eliminar vehículo</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> editar la información de mis vehículos o eliminarlos <b>Para</b> mantener mi lista actualizada.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Edición válida</strong><br/>
+				Dado que el vehículo está registrado
+				Cuando el usuario edita datos válidos
+				Entonces el sistema actualiza la información.
+				</p>
+				<p><strong>Escenario 2: Eliminación exitosa</strong><br/>
+				Dado que el vehículo está registrado
+				Cuando el usuario lo elimina
+				Entonces desaparece de la lista y se desasocia de futuras citas o diagnósticos.
+			</td>
+			<td>E07</td>
+		</tr>
+		<!--USER STORY 03-->
+		<tr>
+			<td>US703</td>
+			<td>Listar vehículos</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> ver una lista de mis vehículos registrados <b>Para</b> seleccionar con	 cuál trabajar (diagnósticos, mantenimientos, citas).
+			</td>
+			<td>
+				<p><strong>Escenario 1: Lista disponible</strong><br/>
+				Dado que el usuario tiene vehículos registrados
+				Cuando accede a la sección “Mis vehículos”
+				Entonces el sistema muestra todos sus vehículos con placa, marca y modelo.
+				</p>
+				<p><strong>Escenario 2: Sin vehículos</strong><br/>
+				Dado que el usuario no tiene vehículos registrados
+				Cuando entra a la sección “Mis vehículos”	
+				Entonces el sistema muestra un mensaje invitando a registrar el primer vehículo.
+				</p>
+			</td>
+			<td>E07</td>
+		</tr>
+		<!--USER STORY 04-->
+		<tr>
+			<td>US704</td>
+			<td>Asociar IoT device a vehículo</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> vincular el dispositivo IoT a un vehículo específico <b>Para</b> que los diagnósticos y alertas correspondan al auto correcto.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Asociación válida</strong><br/>
+				Dado que el usuario tiene un vehículo registrado y un IoT activo
+				Cuando introduce el código de dispositivo válido
+				Entonces el sistema vincula el IoT a ese vehículo.
+				</p>
+				<p><strong>Escenario 2: Dispositivo ya asociado</strong><br/>
+				Dado que un IoT ya está vinculado a otro vehículo
+				Cuando el usuario intenta asociarlo de nuevo
+				Entonces el sistema rechaza la acción e informa el conflicto.
+				</p>
+			</td>
+			<td>E07</td>
+		</tr>
+  </tbody>
 </table>
 
 ## 3.2. Impact Mapping
