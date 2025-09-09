@@ -34,18 +34,18 @@ Convertirse en una startup referente en el desarrollo de soluciones digitales ba
       <tbody>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/gonzalo-quedena.jpeg" 
-                 alt="Gonzalo Foto Perfil" 
-                 width="600px" 
+            <img src="/assets/img/capitulo-I/miembros/gonzalo-quedena.jpeg"
+                 alt="Gonzalo Foto Perfil"
+                 width="600px"
                  style="border-radius: 12px;"/>
           </td>
           <td><strong>Gonzalo Andre Quedena</strong></td>
           <td>Ingeniería de Software</td>
           <td align="justify">
-            Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), 
-            con una profunda pasión por la tecnología y un firme compromiso con el aprendizaje continuo. 
-            Me especializo en el desarrollo de aplicaciones modernas, seguras y escalables, integrando 
-            frameworks y herramientas que impulsan la innovación en el campo del software.  
+            Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC),
+            con una profunda pasión por la tecnología y un firme compromiso con el aprendizaje continuo.
+            Me especializo en el desarrollo de aplicaciones modernas, seguras y escalables, integrando
+            frameworks y herramientas que impulsan la innovación en el campo del software.
             Busco constantemente nuevos retos que fortalezcan mis habilidades técnicas y mi crecimiento profesional.
           </td>
           <td style="text-align: center;">
@@ -73,9 +73,9 @@ Convertirse en una startup referente en el desarrollo de soluciones digitales ba
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/hardie-holguin.jpeg" 
-                 alt="Miembro Foto Perfil" 
-                 width="600px" 
+            <img src="/assets/img/capitulo-I/miembros/hardie-holguin.jpeg"
+                 alt="Miembro Foto Perfil"
+                 width="600px"
                  style="border-radius: 12px;"/>
           </td>
           <td><strong>Hardie Holguin Gamarra</strong></td>
@@ -108,9 +108,9 @@ Convertirse en una startup referente en el desarrollo de soluciones digitales ba
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/kenyi-mendoza.jpeg" 
-                 alt="Kenyi Foto Perfil" 
-                 width="600px" 
+            <img src="/assets/img/capitulo-I/miembros/kenyi-mendoza.jpeg"
+                 alt="Kenyi Foto Perfil"
+                 width="600px"
                  style="border-radius: 12px;"/>
           </td>
           <td><strong>Javier Kenyi Mendoza Solis</strong></td>
@@ -143,9 +143,9 @@ Convertirse en una startup referente en el desarrollo de soluciones digitales ba
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/.jpeg" 
-                 alt="Miembro Foto Perfil" 
-                 width="600px" 
+            <img src="/assets/img/capitulo-I/miembros/.jpeg"
+                 alt="Miembro Foto Perfil"
+                 width="600px"
                  style="border-radius: 12px;"/>
           </td>
           <td><strong>Janover Gonzalo Saldaña Vela</strong></td>
@@ -178,9 +178,47 @@ Convertirse en una startup referente en el desarrollo de soluciones digitales ba
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/.jpeg" 
-                 alt="Miembro Foto Perfil" 
-                 width="600px" 
+            <img src="/assets/img/capitulo-I/miembros/javier-irigoyen.jpeg"
+                 alt="Miembro Foto Perfil"
+                 width="600px"
+                 style="border-radius: 12px;"/>
+          </td>
+          <td><strong>Javier Sharvel Irigoyen Matos</strong></td>
+          <td>Ingeniería de Software</td>
+          <td align="justify">
+            Soy egresado de la carrera de Física por la Pontificia Universidad Católica del Perú (PUCP) y actualmente curso el noveno ciclo de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Desde siempre me ha apasionado la ciencia y la tecnología, así como el desarrollo de aplicaciones que automaticen procesos con el apoyo de la inteligencia artificial. Me considero una persona optimista, responsable y autodidacta, cualidades que me impulsan a seguir aprendiendo constantemente y a buscar soluciones innovadoras que generen un impacto positivo.
+          </td>
+          <td style="text-align: center;">
+            <!-- Languages -->
+            <p><strong>Lenguajes</strong></p>
+            <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
+            <img src="https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white" />
+            <img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white" />
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
+            <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" />
+            <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" />
+            <img src="https://img.shields.io/badge/SQL-003B57?logo=database&logoColor=white" />
+            <img src="https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white" />
+            <!-- Frameworks -->
+            <p><strong>Frameworks</strong></p>
+            <img src="https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white" />
+            <img src="https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white" />
+            <img src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white" />
+            <img src="https://img.shields.io/badge/Laravel-FF2D20?logo=laravel&logoColor=white" />
+            <img src="https://img.shields.io/badge/Filament-ffa434?logo=filament&logoColor=white" />
+            <!-- Tools -->
+            <p><strong>Otros</strong></p>
+            <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white" />
+            <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" />
+            <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" />
+            <img src="https://img.shields.io/badge/Notion-000000?logo=notion&logoColor=white" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="/assets/img/capitulo-I/miembros/.jpeg"
+                 alt="Miembro Foto Perfil"
+                 width="600px"
                  style="border-radius: 12px;"/>
           </td>
           <td><strong>---</strong></td>
@@ -213,44 +251,9 @@ Convertirse en una startup referente en el desarrollo de soluciones digitales ba
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/.jpeg" 
-                 alt="Miembro Foto Perfil" 
-                 width="600px" 
-                 style="border-radius: 12px;"/>
-          </td>
-          <td><strong>---</strong></td>
-          <td>Ingeniería de Software</td>
-          <td align="justify">
-            ---
-          </td>
-          <td style="text-align: center;">
-            <!-- Languages -->
-            <p><strong>Lenguajes</strong></p>
-            <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
-            <img src="https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white" />
-            <img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white" />
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
-            <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" />
-            <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" />
-            <img src="https://img.shields.io/badge/SQL-003B57?logo=database&logoColor=white" />
-            <!-- Frameworks -->
-            <p><strong>Frameworks</strong></p>
-            <img src="https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white" />
-            <img src="https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white" />
-            <img src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white" />
-            <!-- Tools -->
-            <p><strong>Otros</strong></p>
-            <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white" />
-            <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" />
-            <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" />
-            <img src="https://img.shields.io/badge/Notion-000000?logo=notion&logoColor=white" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src="/assets/img/capitulo-I/miembros/.jpeg" 
-                 alt="Miembro Foto Perfil" 
-                 width="600px" 
+            <img src="/assets/img/capitulo-I/miembros/.jpeg"
+                 alt="Miembro Foto Perfil"
+                 width="600px"
                  style="border-radius: 12px;"/>
           </td>
           <td><strong>---</strong></td>
@@ -448,7 +451,7 @@ El segmento inicial de lanzamiento estará compuesto por:
 
 <b>Hipótesis 2</b>
 <p align="justify">
-<b>Creemos que</b> los talleres mecánicos verán valor en SafeCar si la plataforma les permite acceder a reportes automáticos e históricos del vehículo para mejorar el diagnóstico. 
+<b>Creemos que</b> los talleres mecánicos verán valor en SafeCar si la plataforma les permite acceder a reportes automáticos e históricos del vehículo para mejorar el diagnóstico.
 </p>
 
 <p align="justify">
@@ -565,7 +568,7 @@ El segmento inicial de lanzamiento estará compuesto por:
         Principalmente en zonas urbanas y metropolitanas del Perú, donde la densidad vehicular y la demanda de movilidad (taxis, apps de delivery y transporte ligero) es alta.
       </td>
       <td style="border: 1px solid black; padding: 8px;" align="justify">
-        Priorizan la seguridad, la reducción de gastos imprevistos y el aumento de ingresos evitando tiempos de inactividad. 
+        Priorizan la seguridad, la reducción de gastos imprevistos y el aumento de ingresos evitando tiempos de inactividad.
         Valoran aplicaciones móviles que les brinden control preventivo del vehículo.
       </td>
       <td style="border: 1px solid black; padding: 8px;" align="justify">
