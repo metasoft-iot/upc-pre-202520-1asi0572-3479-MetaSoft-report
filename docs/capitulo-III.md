@@ -355,6 +355,428 @@
 				E01
 			</td>
 		</tr>
+				<!--EPIC 02-->
+		<tr>
+			<td><b>E02</b></td>
+			<td>App Web – Autenticación y Cuentas</td>
+			<td>
+				<b>Como</b> usuario de SafeCar (conductor o taller) <b>Quiero</b> gestionar mi acceso y mis datos básicos de cuenta <b>Para</b> usar de forma segura las funciones web y mantener mi información actualizada.
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<!--USER STORY 12-->
+		<tr>
+			<td>US201</td>
+			<td>Iniciar sesión con credenciales</td>
+			<td>
+				<b>Como</b> usuario registrado <b>Quiero</b> iniciar sesión con mis credenciales <b>Para</b> acceder a mis datos y funcionalidades.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Credenciales válidas</strong><br/>
+				Dado que el usuario tiene una cuenta activa<br/>
+				Cuando proporciona credenciales correctas<br/>
+				Entonces el sistema le concede acceso a su cuenta.</p>
+				<p><strong>Escenario 2: Credenciales inválidas</strong><br/>
+				Dado que el usuario intenta autenticarse<br/>
+				Cuando las credenciales son incorrectas<br/>
+				Entonces el sistema rechaza el acceso e informa el error.</p>
+				<p><strong>Escenario 3: Cuenta bloqueada</strong><br/>
+				Dado que el usuario tiene la cuenta bloqueada<br/>
+				Cuando intenta autenticarse<br/>
+				Entonces el sistema deniega el acceso e informa el estado de la cuenta.</p>
+			</td>
+			<td>E02</td>
+		</tr>
+		<!--USER STORY 13-->
+		<tr>
+			<td>US202</td>
+			<td>Registro de cuenta</td>
+			<td>
+				<b>Como</b> nuevo usuario <b>Quiero</b> registrarme con mis datos básicos <b>Para</b> crear una cuenta en SafeCar y comenzar a usar el sistema.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Registro exitoso</strong><br/>
+				Dado que el usuario proporciona información válida<br/>
+				Cuando envía la solicitud de registro<br/>
+				Entonces el sistema crea la cuenta y la deja disponible para autenticación.</p>
+				<p><strong>Escenario 2: Datos inválidos</strong><br/>
+				Dado que el usuario introduce datos con formato incorrecto o incompleto<br/>
+				Cuando solicita el registro<br/>
+				Entonces el sistema rechaza la creación e informa el error.</p>
+				<p><strong>Escenario 3: Email duplicado</strong><br/>
+				Dado que el correo ya existe en el sistema<br/>
+				Cuando el usuario intenta registrarse<br/>
+				Entonces el sistema rechaza la solicitud e informa que ya está registrado.</p>
+			</td>
+			<td>E02</td>
+		</tr>
+		<!--USER STORY 14-->
+		<tr>
+			<td>US203</td>
+			<td>Recuperar contraseña</td>
+			<td>
+				<b>Como</b> usuario <b>Quiero</b> restablecer mi contraseña a través de un enlace temporal <b>Para</b> recuperar el acceso cuando lo olvido.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Solicitud válida</strong><br/>
+				Dado que el usuario indica un correo existente<br/>
+				Cuando solicita restablecer su contraseña<br/>
+				Entonces el sistema genera un enlace temporal y lo envía al correo registrado.</p>
+				<p><strong>Escenario 2: Restablecimiento exitoso</strong><br/>
+				Dado que el usuario recibe un enlace vigente<br/>
+				Cuando define una nueva contraseña válida<br/>
+				Entonces el sistema actualiza la contraseña y habilita el inicio de sesión.</p>
+				<p><strong>Escenario 3: Enlace vencido</strong><br/>
+				Dado que el usuario intenta usar un enlace expirado<br/>
+				Cuando solicita el restablecimiento<br/>
+				Entonces el sistema deniega el acceso y ofrece generar uno nuevo.</p>
+			</td>
+			<td>E02</td>
+		</tr>
+		<!--USER STORY 15-->
+		<tr>
+			<td>US204</td>
+			<td>Cerrar sesión</td>
+			<td>
+				<b>Como</b> usuario autenticado <b>Quiero</b> cerrar sesión de manera segura <b>Para</b> proteger mi cuenta cuando termino de usar el sistema.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Cierre manual</strong><br/>
+				Dado que el usuario está autenticado<br/>
+				Cuando solicita cerrar la sesión<br/>
+				Entonces el sistema invalida la sesión y revoca el acceso.</p>
+				<p><strong>Escenario 2: Expiración por inactividad</strong><br/>
+				Dado que el usuario no interactúa durante el tiempo configurado<br/>
+				Cuando intenta acceder a una función protegida<br/>
+				Entonces el sistema exige autenticación nuevamente.</p>
+			</td>
+			<td>E02</td>
+		</tr>
+		<!--USER STORY 16-->
+		<tr>
+			<td>US205</td>
+			<td>Mantener sesión iniciada</td>
+			<td>
+				<b>Como</b> usuario frecuente <b>Quiero</b> mantener mi sesión activa en dispositivos de confianza <b>Para</b> evitar inicios repetidos.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Activación</strong><br/>
+				Dado que el usuario solicita mantener su sesión iniciada<br/>
+				Cuando la autenticación es correcta<br/>
+				Entonces el sistema conserva la sesión activa según la política definida.</p>
+				<p><strong>Escenario 2: Cierre elimina persistencia</strong><br/>
+				Dado que el usuario tiene sesión persistida<br/>
+				Cuando solicita cerrar sesión<br/>
+				Entonces el sistema invalida cualquier persistencia activa.</p>
+				<p><strong>Escenario 3: Sesión en dispositivo no confiable</strong><br/>
+				Dado que el usuario no activa la persistencia<br/>
+				Cuando finaliza la sesión<br/>
+				Entonces el sistema no conserva acceso en ese dispositivo.</p>
+			</td>
+			<td>E02</td>
+		</tr>
+		<!--USER STORY 17-->
+		<tr>
+			<td>US206</td>
+			<td>Editar perfil</td>
+			<td>
+				<b>Como</b> usuario <b>Quiero</b> actualizar mis datos de perfil básicos <b>Para</b> mantener mi información al día en el sistema.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Actualización válida</strong><br/>
+				Dado que el usuario está autenticado<br/>
+				Cuando modifica datos válidos de su perfil<br/>
+				Entonces el sistema guarda los cambios y actualiza la información.</p>
+				<p><strong>Escenario 2: Datos inválidos</strong><br/>
+				Dado que el usuario introduce información en un formato incorrecto<br/>
+				Cuando intenta actualizar el perfil<br/>
+				Entonces el sistema rechaza los cambios e informa el error.</p>
+				<p><strong>Escenario 3: Datos obligatorios</strong><br/>
+				Dado que el usuario elimina información obligatoria<br/>
+				Cuando intenta guardar los cambios<br/>
+				Entonces el sistema rechaza la acción y solicita completar los campos requeridos.</p>
+			</td>
+			<td>E02</td>
+		</tr>
+		<!--USER STORY 18-->
+		<tr>
+			<td>US207</td>
+			<td>Gestionar vehículos</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> registrar y administrar mis vehículos <b>Para</b> asociarlos a diagnósticos y mantenimientos.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Registro válido</strong><br/>
+				Dado que el usuario está autenticado<br/>
+				Cuando proporciona datos válidos de un vehículo<br/>
+				Entonces el sistema guarda el vehículo y lo muestra en su lista.</p>
+				<p><strong>Escenario 2: Placa duplicada</strong><br/>
+				Dado que ya existe un vehículo con la misma placa<br/>
+				Cuando el usuario intenta registrarlo<br/>
+				Entonces el sistema rechaza la acción e informa la duplicidad.</p>
+				<p><strong>Escenario 3: Edición y eliminación</strong><br/>
+				Dado que el vehículo ya está registrado<br/>
+				Cuando el usuario lo edita o lo elimina<br/>
+				Entonces el sistema aplica los cambios y refleja la actualización en la lista.</p>
+			</td>
+			<td>E02</td>
+		</tr>
+				<!--EPIC 03-->
+		<tr>
+			<td><b>E03</b></td>
+			<td>App Móvil – Diagnóstico y alertas</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> recibir en mi móvil diagnósticos IoT y alertas preventivas <b>Para</b> anticipar fallas y reducir averías imprevistas.
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<!--USER STORY 19-->
+		<tr>
+			<td>US301</td>
+			<td>Recepción de alertas en tiempo real</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> recibir alertas en el móvil cuando el sistema detecta problemas <b>Para</b> actuar de inmediato y evitar daños mayores.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Alerta por falla detectada</strong><br/>
+				Dado que un sensor detecta una anomalía<br/>
+				Cuando se envía la alerta<br/>
+				Entonces el usuario la recibe en su aplicación móvil en tiempo real.</p>
+				<p><strong>Escenario 2: Alerta preventiva</strong><br/>
+				Dado que el sistema calcula un desgaste crítico<br/>
+				Cuando se cumplen las condiciones<br/>
+				Entonces la aplicación envía una notificación preventiva al conductor.</p>
+			</td>
+			<td>E03</td>
+		</tr>
+		<!--USER STORY 20-->
+		<tr>
+			<td>US302</td>
+			<td>Historial de alertas</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> revisar el historial de alertas recibidas <b>Para</b> entender patrones de fallas y planificar mantenimientos.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Consulta de historial</strong><br/>
+				Dado que el usuario está autenticado<br/>
+				Cuando accede al historial de alertas<br/>
+				Entonces el sistema muestra una lista de notificaciones previas con fecha y tipo.</p>
+				<p><strong>Escenario 2: Persistencia</strong><br/>
+				Dado que el usuario cierra sesión o reinstala la app<br/>
+				Cuando inicia sesión de nuevo<br/>
+				Entonces el historial de alertas permanece disponible en su cuenta.</p>
+			</td>
+			<td>E03</td>
+		</tr>
+		<!--USER STORY 21-->
+		<tr>
+			<td>US303</td>
+			<td>Configuración de notificaciones</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> definir mis preferencias de notificaciones <b>Para</b> recibir solo las alertas relevantes en mi móvil.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Activación selectiva</strong><br/>
+				Dado que el usuario gestiona sus preferencias<br/>
+				Cuando activa o desactiva un tipo de alerta<br/>
+				Entonces el sistema aplica la configuración en adelante.</p>
+				<p><strong>Escenario 2: Persistencia de configuración</strong><br/>
+				Dado que el usuario guarda sus preferencias<br/>
+				Cuando inicia sesión desde otro dispositivo<br/>
+				Entonces las notificaciones se comportan según lo configurado.</p>
+			</td>
+			<td>E03</td>
+		</tr>
+		<!--USER STORY 22-->
+		<tr>
+			<td>US304</td>
+			<td>Visualización de diagnóstico del vehículo</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> ver en la app un diagnóstico básico de mi vehículo <b>Para</b> conocer su estado actual y tomar decisiones rápidas.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Diagnóstico disponible</strong><br/>
+				Dado que el vehículo está conectado<br/>
+				Cuando el usuario abre la vista de diagnóstico<br/>
+				Entonces el sistema muestra los indicadores básicos (ej. estado de batería, frenos, llantas).</p>
+				<p><strong>Escenario 2: Datos no disponibles</strong><br/>
+				Dado que no hay datos de sensores<br/>
+				Cuando el usuario consulta el diagnóstico<br/>
+				Entonces el sistema informa que no hay datos recientes.</p>
+			</td>
+			<td>E03</td>
+		</tr>
+		<!--EPIC 04-->
+		<tr>
+			<td><b>E04</b></td>
+			<td>App Móvil – Gestión de mantenimientos</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> gestionar mantenimientos desde mi móvil <b>Para</b> organizar mis visitas a talleres y llevar control de mis gastos.
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<!--USER STORY 23-->
+		<tr>
+			<td>US305</td>
+			<td>Registro de mantenimientos realizados</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> registrar cada mantenimiento realizado <b>Para</b> llevar un historial de intervenciones de mi vehículo.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Registro exitoso</strong><br/>
+				Dado que el usuario introduce datos válidos de un mantenimiento<br/>
+				Cuando confirma el registro<br/>
+				Entonces el sistema guarda la información en el historial del vehículo.</p>
+				<p><strong>Escenario 2: Validación de datos</strong><br/>
+				Dado que los datos del mantenimiento son inválidos<br/>
+				Cuando el usuario intenta registrarlos<br/>
+				Entonces el sistema rechaza la acción e informa el error.</p>
+			</td>
+			<td>E04</td>
+		</tr>
+		<!--USER STORY 24-->
+		<tr>
+			<td>US306</td>
+			<td>Consulta de historial de mantenimientos</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> ver el historial de mantenimientos en la app <b>Para</b> analizar la frecuencia y costos de mis reparaciones.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Visualización correcta</strong><br/>
+				Dado que existen registros de mantenimiento<br/>
+				Cuando el usuario accede al historial<br/>
+				Entonces el sistema muestra una lista con fecha, tipo de servicio y costo.</p>
+				<p><strong>Escenario 2: Sin registros</strong><br/>
+				Dado que no existen mantenimientos previos<br/>
+				Cuando el usuario accede al historial<br/>
+				Entonces el sistema informa que no hay registros aún.</p>
+			</td>
+			<td>E04</td>
+		</tr>
+		<!--USER STORY 25-->
+		<tr>
+			<td>US307</td>
+			<td>Recordatorios de mantenimiento</td>
+			<td>
+				<b>Como</b> conductor <b>Quiero</b> recibir recordatorios de próximos mantenimientos <b>Para</b> no olvidar servicios importantes de mi vehículo.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Recordatorio programado</strong><br/>
+				Dado que el sistema tiene una fecha estimada de mantenimiento<br/>
+				Cuando se cumple el plazo<br/>
+				Entonces la aplicación envía un recordatorio al usuario.</p>
+				<p><strong>Escenario 2: Recordatorio por kilometraje</strong><br/>
+				Dado que el sistema registra el kilometraje<br/>
+				Cuando se alcanza el límite configurado<br/>
+				Entonces la aplicación genera un recordatorio al conductor.</p>
+			</td>
+			<td>E04</td>
+		</tr>
+				<!--EPIC 05-->
+		<tr>
+			<td><b>E05</b></td>
+			<td>Technical – Backend e Integraciones</td>
+			<td>
+				<b>Como</b> Developer <b>Quiero</b> implementar y asegurar los servicios backend y sus integraciones <b>Para</b> soportar ingestión de datos IoT, autenticación, alertas y trazabilidad del sistema.
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<!--TECHNICAL STORY 01-->
+		<tr>
+			<td>US401</td>
+			<td>Ingestión de telemetría IoT</td>
+			<td>
+				<b>Como</b> Developer <b>Quiero</b> exponer un endpoint para recibir telemetría del dispositivo IoT con validación de esquema y persistencia confiable <b>Para</b> disponibilizar datos para diagnóstico y alertas.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Mensaje válido</strong><br/>
+				Dado que el servicio recibe un payload con esquema válido<br/>
+				Cuando procesa la solicitud<br/>
+				Entonces almacena el registro de telemetría y retorna estado de éxito.</p>
+				<p><strong>Escenario 2: Mensaje inválido</strong><br/>
+				Dado que el servicio recibe un payload que no cumple el esquema<br/>
+				Cuando valida la solicitud<br/>
+				Entonces rechaza el mensaje y retorna estado de error con causa técnica.</p>
+				<p><strong>Escenario 3: Encolado para alertas</strong><br/>
+				Dado que el registro se almacena correctamente<br/>
+				Cuando finaliza el procesamiento<br/>
+				Entonces el servicio publica un evento en la cola de análisis para el motor de alertas.</p>
+			</td>
+			<td>E05</td>
+		</tr>
+		<!--TECHNICAL STORY 02-->
+		<tr>
+			<td>US402</td>
+			<td>Motor de alertas y reglas</td>
+			<td>
+				<b>Como</b> Developer <b>Quiero</b> implementar un componente que evalúa reglas sobre eventos de telemetría <b>Para</b> generar alertas preventivas y críticas de forma confiable.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Generación de alerta</strong><br/>
+				Dado que el motor recibe un evento con umbral superado<br/>
+				Cuando evalúa las reglas configuradas<br/>
+				Entonces crea una alerta con severidad y causa técnica.</p>
+				<p><strong>Escenario 2: Idempotencia</strong><br/>
+				Dado que el mismo evento se procesa más de una vez<br/>
+				Cuando el motor identifica duplicidad<br/>
+				Entonces no crea alertas duplicadas y registra la deduplicación.</p>
+				<p><strong>Escenario 3: Emisión a notificaciones</strong><br/>
+				Dado que una alerta queda en estado creado<br/>
+				Cuando se publica al canal de notificaciones<br/>
+				Entonces el sistema emite el mensaje a la plataforma de mensajería configurada.</p>
+			</td>
+			<td>E05</td>
+		</tr>
+		<!--TECHNICAL STORY 03-->
+		<tr>
+			<td>US403</td>
+			<td>Autenticación JWT y control de acceso</td>
+			<td>
+				<b>Como</b> Developer <b>Quiero</b> proveer autenticación basada en JWT con expiración y roles <b>Para</b> proteger las APIs de web y móvil y aplicar autorización por recursos.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Emisión de token</strong><br/>
+				Dado que el servicio valida credenciales correctas<br/>
+				Cuando completa la autenticación<br/>
+				Entonces emite un token JWT con expiración y claims de rol.</p>
+				<p><strong>Escenario 2: Acceso autorizado</strong><br/>
+				Dado que la solicitud incluye un token válido con rol adecuado<br/>
+				Cuando accede a un recurso protegido<br/>
+				Entonces el sistema concede el acceso.</p>
+				<p><strong>Escenario 3: Acceso denegado</strong><br/>
+				Dado que la solicitud carece de token o el rol no cumple la política<br/>
+				Cuando intenta acceder a un recurso protegido<br/>
+				Entonces el sistema deniega el acceso y registra el intento.</p>
+			</td>
+			<td>E05</td>
+		</tr>
+		<!--TECHNICAL STORY 04-->
+		<tr>
+			<td>US404</td>
+			<td>Auditoría y trazabilidad</td>
+			<td>
+				<b>Como</b> Developer <b>Quiero</b> registrar eventos de auditoría con correlación de solicitudes <b>Para</b> disponer de trazabilidad de acciones críticas y facilitar el diagnóstico de incidentes.
+			</td>
+			<td>
+				<p><strong>Escenario 1: Registro de acciones críticas</strong><br/>
+				Dado que el sistema ejecuta una acción sensible (alta, edición o eliminación de recursos)<br/>
+				Cuando finaliza la operación<br/>
+				Entonces registra un evento de auditoría con identificadores de usuario, recurso y resultado.</p>
+				<p><strong>Escenario 2: Correlation-ID</strong><br/>
+				Dado que una solicitud entra al sistema<br/>
+				Cuando atraviesa servicios internos<br/>
+				Entonces cada servicio propaga un identificador de correlación y registra los eventos con ese identificador.</p>
+				<p><strong>Escenario 3: Retención y consulta</strong><br/>
+				Dado que existen eventos de auditoría almacenados<br/>
+				Cuando se solicita una consulta por rango de fechas y tipo de evento<br/>
+				Entonces el sistema devuelve los registros correspondientes según la política de retención.</p>
+			</td>
+			<td>E05</td>
+		</tr>
 	</tbody>
 </table>
 
