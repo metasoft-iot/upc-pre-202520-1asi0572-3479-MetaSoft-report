@@ -1015,7 +1015,7 @@
 				</p>
 				<p><strong>Escenario 2: Sin vehículos</strong><br/>
 				Dado que el usuario no tiene vehículos registrados
-				Cuando entra a la sección “Mis vehículos”	
+				Cuando entra a la sección “Mis vehículos”
 				Entonces el sistema muestra un mensaje invitando a registrar el primer vehículo.
 				</p>
 			</td>
@@ -1042,6 +1042,169 @@
 			</td>
 			<td>E07</td>
 		</tr>
+    <!--EPIC 08-->
+    <tr>
+      <td><b>E08</b></td>
+      <td>App Móvil – Citas con Taller Asignado</td>
+      <td>
+        <b>Como</b> conductor <b>Quiero</b> solicitar y gestionar citas únicamente con mi taller asignado <b>Para</b> recibir atención sin ver ni elegir otros talleres.
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <!--STORY 01-->
+    <tr>
+      <td>US801</td>
+      <td>Ver taller asignado y disponibilidad</td>
+      <td>
+        <b>Como</b> conductor <b>Quiero</b> ver mi taller asignado y sus horarios disponibles <b>Para</b> elegir una fecha y hora.
+      </td>
+      <td>
+        <p><strong>Escenario 1: Solo se muestra el taller asignado</strong><br/>
+        Dado que ingreso a “Citas”<br/>
+        Cuando abro “Mi taller”<br/>
+        Entonces veo únicamente el taller asignado (nombre, dirección y teléfono).</p>
+        <p><strong>Escenario 2: Ver horarios disponibles</strong><br/>
+        Dado que el taller publicó cupos<br/>
+        Cuando selecciono una fecha del calendario<br/>
+        Entonces se muestran los horarios disponibles de ese día.</p>
+        <p><strong>Escenario 3: Sin disponibilidad</strong><br/>
+        Dado que no hay cupos para la fecha elegida<br/>
+        Cuando consulto los horarios<br/>
+        Entonces veo el mensaje “Sin horarios disponibles” y la opción de elegir otra fecha.</p>
+      </td>
+      <td>E08</td>
+    </tr>
+    <!--STORY 02-->
+    <tr>
+      <td>US802</td>
+      <td>Solicitar nueva cita</td>
+      <td>
+        <b>Como</b> conductor <b>Quiero</b> solicitar una cita indicando fecha, hora y tipo de servicio <b>Para</b> agendar la atención en mi taller asignado.
+      </td>
+      <td>
+        <p><strong>Escenario 1: Solicitud válida</strong><br/>
+        Dado que elijo un horario disponible y un tipo de servicio<br/>
+        Cuando confirmo la solicitud<br/>
+        Entonces se crea la cita en estado “Solicitada”.</p>
+        <p><strong>Escenario 2: Validación de obligatorios</strong><br/>
+        Dado que no completo un campo requerido (fecha, hora o servicio)<br/>
+        Cuando intento enviar la solicitud<br/>
+        Entonces la app indica qué campo debo completar.</p>
+        <p><strong>Escenario 3: Confirmación en pantalla</strong><br/>
+        Dado que la cita fue creada<br/>
+        Cuando regreso al listado<br/>
+        Entonces veo la nueva cita con estado “Solicitada”.</p>
+      </td>
+      <td>E08</td>
+    </tr>
+    <!--STORY 03-->
+    <tr>
+      <td>US803</td>
+      <td>Ver estado y detalle de la cita</td>
+      <td>
+        <b>Como</b> conductor <b>Quiero</b> consultar el estado y detalles de mi cita <b>Para</b> mantenerme informado.
+      </td>
+      <td>
+        <p><strong>Escenario 1: Estados visibles</strong><br/>
+        Dado que tengo citas creadas<br/>
+        Cuando abro “Mis citas”<br/>
+        Entonces cada cita muestra su estado (Solicitada, Aprobada, Reprogramada, Cancelada).</p>
+        <p><strong>Escenario 2: Ver detalle</strong><br/>
+        Dado que selecciono una cita<br/>
+        Cuando abro su detalle<br/>
+        Entonces veo fecha, hora, servicio y notas.</p>
+        <p><strong>Escenario 3: Actualización manual</strong><br/>
+        Dado que deseo refrescar la información<br/>
+        Cuando deslizo para actualizar<br/>
+        Entonces se recarga el estado actual desde el servidor.</p>
+      </td>
+      <td>E08</td>
+    </tr>
+    <!--STORY 04-->
+    <tr>
+      <td>US804</td>
+      <td>Solicitar reprogramación</td>
+      <td>
+        <b>Como</b> conductor <b>Quiero</b> proponer un nuevo horario para mi cita aprobada <b>Para</b> ajustarla a mi disponibilidad.
+      </td>
+      <td>
+        <p><strong>Escenario 1: Enviar solicitud de cambio</strong><br/>
+        Dado una cita en estado “Aprobada”<br/>
+        Cuando pido reprogramar y elijo un nuevo horario<br/>
+        Entonces la cita queda en “Reprogramación solicitada”.</p>
+        <p><strong>Escenario 2: Confirmación del taller</strong><br/>
+        Dado que envié la solicitud<br/>
+        Cuando el taller acepta el nuevo horario<br/>
+        Entonces la cita vuelve a “Aprobada” con la nueva fecha y hora.</p>
+        <p><strong>Escenario 3: Horario no disponible</strong><br/>
+        Dado que el horario propuesto no está disponible<br/>
+        Cuando el taller responde<br/>
+        Entonces recibo un aviso y puedo elegir otra opción.</p>
+      </td>
+      <td>E08</td>
+    </tr>
+    <!--STORY 05-->
+    <tr>
+      <td>US805</td>
+      <td>Cancelar cita</td>
+      <td>
+        <b>Como</b> conductor <b>Quiero</b> poder cancelar una cita <b>Para</b> liberar el horario si no podré asistir.
+      </td>
+      <td>
+        <p><strong>Escenario 1: Cancelación con confirmación</strong><br/>
+        Dado una cita activa (Solicitada o Aprobada)<br/>
+        Cuando toco “Cancelar” y confirmo<br/>
+        Entonces la cita cambia a estado “Cancelada”.</p>
+        <p><strong>Escenario 2: Motivo opcional</strong><br/>
+        Dado que estoy cancelando<br/>
+        Cuando aparece el campo de motivo<br/>
+        Entonces puedo agregarlo y quedará registrado.</p>
+        <p><strong>Escenario 3: Aviso informativo</strong><br/>
+        Dado que faltan pocas horas para la cita<br/>
+        Cuando intento cancelarla<br/>
+        Entonces veo un aviso informativo sobre posibles penalidades definidas por el taller.</p>
+      </td>
+      <td>E08</td>
+    </tr>
+    <!--STORY 06-->
+    <tr>
+      <td>US806</td>
+      <td>Recordatorios de cita</td>
+      <td>
+        <b>Como</b> conductor <b>Quiero</b> recibir recordatorios antes de mi cita <b>Para</b> no olvidarla.
+      </td>
+      <td>
+        <p><strong>Escenario 1: Recordatorio automático</strong><br/>
+        Dado una cita en estado “Aprobada”<br/>
+        Cuando falte 24h y 1h<br/>
+        Entonces recibo un recordatorio en la app (si las notificaciones están activas).</p>
+        <p><strong>Escenario 2: Silenciar recordatorios</strong><br/>
+        Dado que prefiero no recibir avisos<br/>
+        Cuando desactivo los recordatorios en ajustes<br/>
+        Entonces la app no envía nuevos recordatorios para futuras citas.</p>
+      </td>
+      <td>E08</td>
+    </tr>
+    <!--STORY 07-->
+    <tr>
+      <td>US807</td>
+      <td>Adjuntar fotos y notas a la cita</td>
+      <td>
+        <b>Como</b> conductor <b>Quiero</b> adjuntar fotos y una nota al solicitar o editar la cita <b>Para</b> describir el problema del vehículo.
+      </td>
+      <td>
+        <p><strong>Escenario 1: Adjuntar archivos</strong><br/>
+        Dado que estoy creando o editando una cita<br/>
+        Cuando agrego hasta 3 fotos y una nota<br/>
+        Entonces la solicitud se guarda con esos adjuntos.</p>
+        <p><strong>Escenario 2: Visualizar adjuntos</strong><br/>
+        Dado que la cita tiene adjuntos<br/>
+        Cuando abro el detalle<br/>
+        Entonces puedo ver las fotos y leer la nota enviada.</p>
+      </td>
+      <td>E08</td>
+    </tr>
   </tbody>
 </table>
 
