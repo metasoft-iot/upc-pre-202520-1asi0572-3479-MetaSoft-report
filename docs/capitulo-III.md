@@ -1205,6 +1205,174 @@
       </td>
       <td>E08</td>
     </tr>
+	<tr>
+  <td><b>E09</b></td>
+  <td>Aplicación Web – Flujo de Trabajo del Servicio</td>
+  <td>
+    <b>Como</b> mecánico <b>Quiero</b> gestionar el ciclo de vida de una orden de servicio, 
+    desde el diagnóstico hasta la entrega del vehículo 
+    <b>Para</b> mantener un registro claro del trabajo y notificar al cliente sobre cada etapa.
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>US901</td>
+  <td>Iniciar Orden de Servicio y Diagnóstico</td>
+  <td>
+    <b>Como</b> mecánico <b>Quiero</b> cambiar el estado de una cita a "En Diagnóstico" 
+    cuando el vehículo ingresa al taller <b>Para</b> iniciar formalmente la orden de servicio.
+  </td>
+  <td>
+    <p><strong>Escenario 1: Iniciar diagnóstico</strong><br/>
+    Dado que una cita está en estado "En recepción"<br/>
+    Cuando presiono "Iniciar Diagnóstico"<br/>
+    Entonces la orden de servicio cambia a "En Diagnóstico" y se registra la hora de inicio.</p>
+    <p><strong>Escenario 2: Asignar mecánico</strong><br/>
+    Dado que se inicia el diagnóstico<br/>
+    Cuando el sistema no tiene un mecánico asignado<br/>
+    Entonces solicita seleccionar al mecánico responsable del diagnóstico.</p>
+  </td>
+  <td>E09</td>
+</tr>
+
+<tr>
+  <td>US902</td>
+  <td>Registrar Hallazgos y Generar Presupuesto</td>
+  <td>
+    <b>Como</b> mecánico <b>Quiero</b> registrar los hallazgos del diagnóstico y crear un presupuesto detallado 
+    <b>Para</b> enviarlo a la aprobación del cliente.
+  </td>
+  <td>
+    <p><strong>Escenario 1: Creación de presupuesto</strong><br/>
+    Dado que la orden está "En Diagnóstico"<br/>
+    Cuando agrego ítems (servicios y repuestos) con sus costos<br/>
+    Entonces se genera un presupuesto preliminar asociado a la orden.</p>
+    <p><strong>Escenario 2: Envío al cliente</strong><br/>
+    Dado que el presupuesto está listo<br/>
+    Cuando presiono "Enviar a Cliente"<br/>
+    Entonces la orden cambia a "Pendiente Aprobación Presupuesto" y el cliente recibe una notificación.</p>
+    <p><strong>Escenario 3: Presupuesto rechazado</strong><br/>
+    Dado que el cliente rechaza el presupuesto<br/>
+    Cuando el sistema recibe la notificación<br/>
+    Entonces la orden cambia a "Presupuesto Rechazado" y el taller es notificado.</p>
+  </td>
+  <td>E09</td>
+</tr>
+
+<tr>
+  <td>US903</td>
+  <td>Registrar Progreso de Reparación</td>
+  <td>
+    <b>Como</b> mecánico <b>Quiero</b> marcar la orden como "En Reparación" una vez que el presupuesto es aprobado 
+    <b>Para</b> indicar que el trabajo activo ha comenzado.
+  </td>
+  <td>
+    <p><strong>Escenario 1: Iniciar reparación</strong><br/>
+    Dado que una orden está en "Pendiente Aprobación Presupuesto"<br/>
+    Cuando el cliente aprueba el presupuesto<br/>
+    Entonces la orden cambia automáticamente a "En Reparación".</p>
+    <p><strong>Escenario 2: Notificar retraso</strong><br/>
+    Dado que la orden está "En Reparación"<br/>
+    Cuando surge un imprevisto<br/>
+    Entonces puedo enviar una notificación de "Retraso" al cliente con un motivo.</p>
+  </td>
+  <td>E09</td>
+</tr>
+
+<tr>
+  <td>US904</td>
+  <td>Finalizar Servicio y Generar Reporte</td>
+  <td>
+    <b>Como</b> mecánico <b>Quiero</b> finalizar la orden de servicio y generar un reporte técnico 
+    <b>Para</b> documentar el trabajo realizado y notificar que el vehículo está listo.
+  </td>
+  <td>
+    <p><strong>Escenario 1: Completar reparación</strong><br/>
+    Dado que la orden está "En Reparación"<br/>
+    Cuando presiono "Finalizar Reparación"<br/>
+    Entonces la orden cambia a "Servicio Finalizado / Pendiente de Entrega".</p>
+    <p><strong>Escenario 2: Generar reporte técnico</strong><br/>
+    Dado que el servicio ha finalizado<br/>
+    Cuando completo los campos del reporte (trabajos realizados, recomendaciones)<br/>
+    Entonces se genera un documento final que se adjunta al historial digital del vehículo y se notifica al cliente.</p>
+  </td>
+  <td>E09</td>
+</tr>
+
+<tr>
+  <td><b>E10</b></td>
+  <td>App Móvil – Estado y Diagnóstico del Vehículo</td>
+  <td>
+    <b>Como</b> conductor <b>Quiero</b> visualizar en mi app móvil los datos recopilados por el dispositivo IoT 
+    <b>Para</b> conocer el estado de salud de mi vehículo y mis hábitos de conducción.
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>US1001</td>
+  <td>Dashboard de Estado del Vehículo</td>
+  <td>
+    <b>Como</b> conductor <b>Quiero</b> ver un dashboard principal con los indicadores clave de mi vehículo 
+    <b>Para</b> tener un resumen rápido de su estado.
+  </td>
+  <td>
+    <p><strong>Escenario 1: Ver indicadores principales</strong><br/>
+    Dado que abro la sección de mi vehículo<br/>
+    Cuando se carga el dashboard<br/>
+    Entonces veo el estado general de la batería, la presión de los neumáticos y el kilometraje actual.</p>
+    <p><strong>Escenario 2: Datos no actualizados</strong><br/>
+    Dado que el dispositivo IoT no ha sincronizado recientemente<br/>
+    Cuando veo el dashboard<br/>
+    Entonces se muestra la fecha y hora de la última actualización de los datos.</p>
+  </td>
+  <td>E10</td>
+</tr>
+
+<tr>
+  <td>US1002</td>
+  <td>Historial de Alertas y Fallas</td>
+  <td>
+    <b>Como</b> conductor <b>Quiero</b> consultar un historial de todas las alertas y fallas detectadas por el sistema 
+    <b>Para</b> entender patrones y discutirlo con el mecánico.
+  </td>
+  <td>
+    <p><strong>Escenario 1: Ver lista de alertas</strong><br/>
+    Dado que el sistema ha generado alertas<br/>
+    Cuando accedo a la sección "Historial de Alertas"<br/>
+    Entonces veo una lista cronológica de todas las alertas (ej. "Presión de neumáticos baja", 
+    "Batería degradada", "Vibración anómala").</p>
+    <p><strong>Escenario 2: Ver detalle de una alerta</strong><br/>
+    Dado que selecciono una alerta del historial<br/>
+    Cuando se abre el detalle<br/>
+    Entonces veo la fecha, hora, una descripción del problema y recomendaciones básicas.</p>
+  </td>
+  <td>E10</td>
+</tr>
+
+<tr>
+  <td>US1003</td>
+  <td>Análisis de Hábitos de Conducción</td>
+  <td>
+    <b>Como</b> conductor <b>Quiero</b> ver un reporte sobre mis hábitos de conducción 
+    <b>Para</b> identificar áreas de mejora y conducir de forma más segura y eficiente.
+  </td>
+  <td>
+    <p><strong>Escenario 1: Resumen de conducción</strong><br/>
+    Dado que el dispositivo ha recopilado datos de viaje<br/>
+    Cuando accedo a "Mis Hábitos de Conducción"<br/>
+    Entonces veo un resumen o puntaje basado en eventos como aceleraciones bruscas, giros bruscos y excesos de velocidad.</p>
+    <p><strong>Escenario 2: Filtrar por periodo</strong><br/>
+    Dado que quiero analizar mi comportamiento<br/>
+    Cuando selecciono un periodo de tiempo (ej. última semana, último mes)<br/>
+    Entonces los datos y el puntaje se actualizan para reflejar ese periodo.</p>
+  </td>
+  <td>E10</td>
+</tr>
+
   </tbody>
 </table>
 
