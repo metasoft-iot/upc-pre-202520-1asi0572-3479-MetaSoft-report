@@ -235,25 +235,114 @@ en cada uno de los commits.
 
 ![tf-clone.png](./assets/img/develop/tf-clone.png)
 
-## Contenido
+## Tabla de Contenido
 
-# [Capítulo I: Introducción](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#cap%C3%ADtulo-i-introducci%C3%B3n)
+### **Capítulo I: Introducción**
+- **1.1. Startup Profile**
+  - 1.1.1. Descripción de la Startup
+  - 1.1.2. Perfiles de integrantes del equipo
+- **1.2. Solution Profile**
+  - 1.2.1. Antecedentes y problemática
+  - 1.2.2. Lean UX Process
+    - 1.2.2.1. Lean UX Problem Statements
+    - 1.2.2.2. Lean UX Assumptions
+    - 1.2.2.3. Lean UX Hypothesis Statements
+    - 1.2.2.4. Lean UX Canvas
+- **1.3. Segmentos objetivo**
 
-## [1.1. Startup Profile](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#11-startup-profile)
-### [1.1.1.Descripción de la Startup](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#111-descripci%C3%B3n-de-la-startup)
-### [1.1.2. Perfiles de integrantes del equipo](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#112-perfiles-de-integrantes-del-equipo)
-## [1.2. Solution Profile](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#12-solution-profile)
-### [1.2.1 Antecedentes y problemática](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#121-antecedentes-y-problem%C3%A1tica)
-### [1.2.2 Lean UX Process.](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#122-lean-ux-process)
-#### [1.2.2.1. Lean UX Problem Statements.](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#1221-lean-ux-problem-statements)
-#### [1.2.2.2. Lean UX Assumptions.](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#1222-lean-ux-assumptions)
-#### [1.2.2.3. Lean UX Hypothesis Statements.](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#1223-lean-ux-hypothesis-statements)
-#### [1.2.2.4. Lean UX Canvas.](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#1224-lean-ux-canvas)
-## [1.3. Segmentos objetivo](https://github.com/SV51-MetaSoft-App-Web/MetaSoft-Project-Report/blob/main/docs/chapter-I.md#13-segmentos-objetivo)
+### **Capítulo II: Requirements Elicitation & Analysis**
+- **2.1. Competidores**
+  - 2.1.1. Análisis competitivo
+  - 2.1.2. Estrategias y tácticas frente a competidores
+- **2.2. Entrevistas**
+  - 2.2.1. Diseño de entrevistas
+  - 2.2.2. Registro de entrevistas
+  - 2.2.3. Análisis de entrevistas
+- **2.3. Needfinding**
+  - 2.3.1. User Personas
+  - 2.3.2. User Task Matrix
+  - 2.3.3. User Journey Mapping
+  - 2.3.4. Empathy Mapping
+- **2.4. Big Picture EventStorming**
+- **2.5. Ubiquitous Language**
 
-## [Conclusiones]()
+### **Capítulo III: Requirements Specification**
+- **3.1. User Stories**
+- **3.2. Impact Mapping**
+- **3.3. Product Backlog**
 
-## [Referencias Bibliográficas]()
+### **Capítulo IV: Solution Software Design**
+- **4.1. Strategic-Level Domain-Driven Design**
+  - 4.1.1. Design-Level EventStorming
+    - 4.1.1.1. Candidate Context Discovery
+    - 4.1.1.2. Domain Message Flows Modeling
+    - 4.1.1.3. Bounded Context Canvases
+  - 4.1.2. Context Mapping
+  - 4.1.3. Software Architecture
+    - 4.1.3.1. Software Architecture System Landscape Diagram
+    - 4.1.3.2. Software Architecture Context Level Diagrams
+    - 4.1.3.3. Software Architecture Container Level Diagrams
+    - 4.1.3.4. Software Architecture Deployment Diagrams
+- **4.2. Tactical-Level Domain-Driven Design**
+  - 4.2.X. Bounded Context: \<Bounded Context Name\>
+    - 4.2.X.1. Domain Layer
+    - 4.2.X.2. Interface Layer
+    - 4.2.X.3. Application Layer
+    - 4.2.X.4. Infrastructure Layer
+    - 4.2.X.5. Bounded Context Software Architecture Component Level Diagrams
+    - 4.2.X.6. Bounded Context Software Architecture Code Level Diagrams
+      - 4.2.X.6.1. Bounded Context Domain Layer Class Diagrams
+      - 4.2.X.6.2. Bounded Context Database Design Diagram
+
+### **Capítulo V: Solution UI/UX Design**
+- **5.1. Style Guidelines**
+  - 5.1.1. General Style Guidelines
+  - 5.1.2. Web, Mobile and IoT Style Guidelines
+- **5.2. Information Architecture**
+  - 5.2.1. Organization Systems
+  - 5.2.2. Labeling Systems
+  - 5.2.3. SEO Tags and Meta Tags
+  - 5.2.4. Searching Systems
+  - 5.2.5. Navigation Systems
+- **5.3. Landing Page UI Design**
+  - 5.3.1. Landing Page Wireframe
+  - 5.3.2. Landing Page Mock-up
+- **5.4. Applications UX/UI Design**
+  - 5.4.1. Applications Wireframes
+  - 5.4.2. Applications Wireflow Diagrams
+  - 5.4.3. Applications Mock-ups
+  - 5.4.4. Applications User Flow Diagrams
+- **5.5. Applications Prototyping**
+
+### **Capítulo VI: Product Implementation, Validation & Deployment**
+- **6.1. Software Configuration Management**
+  - 6.1.1. Software Development Environment Configuration
+  - 6.1.2. Source Code Management
+  - 6.1.3. Source Code Style Guide & Conventions
+  - 6.1.4. Software Deployment Configuration
+- **6.2. Landing Page, Services & Applications Implementation**
+  - 6.2.X. Sprint n
+    - 6.2.X.1. Sprint Planning n
+    - 6.2.X.2. Aspect Leaders and Collaborators
+    - 6.2.X.3. Sprint Backlog n
+    - 6.2.X.4. Development Evidence for Sprint Review
+    - 6.2.X.5. Testing Suite Evidence for Sprint Review
+    - 6.2.X.6. Execution Evidence for Sprint Review
+    - 6.2.X.7. Services Documentation Evidence for Sprint Review
+    - 6.2.X.8. Software Deployment Evidence for Sprint Review
+    - 6.2.X.9. Team Collaboration Insights during Sprint
+- **6.3. Validation Interviews**
+  - 6.3.1. Diseño de Entrevistas
+  - 6.3.2. Registro de Entrevistas
+  - 6.3.3. Evaluaciones según heurísticas
+- **6.4. Video About-the-Product**
+
+### **Secciones Finales**
+- **Conclusiones**
+- **Conclusiones y recomendaciones**
+- **Video About-the-Team**
+- **Bibliografía**
+- **Anexos**
 
 
 ## Student Outcome
@@ -261,318 +350,141 @@ en cada uno de los commits.
 <table>
 <thead>
 <tr>
-    <th>Criterio Específico	</th>
-    <th>Acciones Realizadas	</th>
-    <th>Conclusiones</th>
+    <th style="text-align: center; width: 20%;"><strong>Criterio Específico</strong></th>
+    <th style="text-align: center; width: 60%;"><strong>Acciones Realizadas</strong></th>
+    <th style="text-align: center; width: 20%;"><strong>Conclusiones</strong></th>
 </tr>
 </thead>
 <tbody>
-<!===========================================================>
+<!-- ======================================= Criterio Específico 01 ======================================= -->
 <tr>
-    <td>Criterio Específico 01</td>
-    <td>
-        <p style="text-align: center;"><strong>Presentable del TB1</strong></p>
-        <br>
-        <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 1
-        <br><br>
-        <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 2
-        <br><br>
-        <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Villegas Jipa Luis Alfonso</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 3
-        <br><br>
-        <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 4
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Aguirre Rodríguez Gustavo Jandroel:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 5
-        <br><br>
-        <br><br>
-        <!============APELLIDO Y NOMBRES 6=========================>
-        <strong>Javier Sharvel Irigoyen Matos:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 6
-        <br><br>
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 7
-        <br><br>
-        <br><br>
-        <!============TRABAJO PARCIAL =========================>
-        <p style="text-align: center;"><strong>Presentable del TP</strong></p>
-        <br>
-        <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 1
-        <br><br>
-        <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 2
-        <br><br>
-        <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 3
-        <br><br>
-        <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 4
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 5
-        <br><br>
-        <!============APELLIDO Y NOMBRES 6=========================>
-        <strong>Javier Sharvel Irigoyen Matos:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 6
-        <br><br>
-        <!============ TB2 =========================>
-        <p style="text-align: center;"><strong>Presentable del TB2</strong></p>
-        <br>
-        <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 1
-        <br><br>
-        <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 2
-        <br><br>
-        <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 3
-        <br><br>
-        <!============APELLIDO Y NOMBRES 4=========================>
-         <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 4
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 5
-        <br><br>
-        <!============APELLIDO Y NOMBRES 6=========================>
-        <strong>Javier Sharvel Irigoyen Matos:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 6
-        <br><br>
-        <!============ TF =========================>
-        <p style="text-align: center;"><strong>Presentable del TF</strong></p>
-        <br>
-        <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 1
-        <br><br>
-        <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 2
-        <br><br>
-        <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 3
-        <br><br>
-        <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 4
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 5
-        <br>
-        <!============APELLIDO Y NOMBRES 6=========================>
-        <strong>Javier Sharvel Irigoyen Matos:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 6
-        <br>
+    <td style="text-align: center; vertical-align: top;"><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta</strong></td>
+    <td style="text-align: left; padding: 15px;">
+        <!-- TB1 Section -->
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB1</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB1 por el integrante 1</li>
+                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB1 por el integrante 2</li>
+                <li><strong>Villegas Jipa Luis Alfonso:</strong> Acciones realizadas de TB1 por el integrante 3</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB1 por el integrante 4</li>
+                <li><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Acciones realizadas de TB1 por el integrante 5</li>
+                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB1 por el integrante 6</li>
+            </ul>
+        </div>
+        <!-- TP Section -->
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TP</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TP por el integrante 1</li>
+                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TP por el integrante 2</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TP por el integrante 4</li>
+                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TP por el integrante 6</li>
+            </ul>
+        </div>
+        <!-- TB2 Section -->
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB2 por el integrante 1</li>
+                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB2 por el integrante 2</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB2 por el integrante 4</li>
+                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB2 por el integrante 6</li>
+            </ul>
+        </div>
+        <!-- TF Section -->
+        <div style="margin-bottom: 10px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TF</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TF por el integrante 1</li>
+                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TF por el integrante 2</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TF por el integrante 4</li>
+                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TF por el integrante 6</li>
+            </ul>
+        </div>
     </td>
-     <td>
-        <strong>TB1:</strong>
-        Conclusiones generales TB1 del criterio específico 1
-        <br/><br/>
-        <strong>TP:</strong>
-        Conclusiones generales TP del criterio específico 1
-        <br/><br/>
-        <strong>TB2:</strong>
-        Conclusiones generales TB2 del criterio específico 1
-        <br/><br/>
-        <strong>TF:</strong>
-        Conclusiones generales TF del criterio específico 1
+    <td style="text-align: left; vertical-align: top; padding: 15px;">
+        <div style="margin-bottom: 15px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TB1:</h5>
+            <p style="margin: 0; font-size: 14px;">Conclusiones generales TB1 del criterio específico 1</p>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TP:</h5>
+            <p style="margin: 0; font-size: 14px;">Conclusiones generales TP del criterio específico 1</p>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TB2:</h5>
+            <p style="margin: 0; font-size: 14px;">Conclusiones generales TB2 del criterio específico 1</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TF:</h5>
+            <p style="margin: 0; font-size: 14px;">Conclusiones generales TF del criterio específico 1</p>
+        </div>
     </td>
 </tr>
-<!===========================================================>
+<!-- ======================================= Criterio Específico 02 ======================================= -->
 <tr>
-     <td>Criterio Específico 02</td>
-    <td>
-        <p style="text-align: center;"><strong>Presentable del TB1</strong></p>
-        <br>
-        <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 1
-        <br><br>
-        <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 2
-        <br><br>
-        <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Villegas Jipa Luis Alfonso</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 3
-        <br><br>
-        <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 4
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 5
-        <br><br>
-        <!============APELLIDO Y NOMBRES 6=========================>
-        <strong>Javier Sharvel Irigoyen Matos:</strong>
-        <br>
-        Acciones realizadas de TB1 por el integrante 6
-        <br><br>
-        <!============TRABAJO PARCIAL =========================>
-        <p style="text-align: center;"><strong>Presentable del TP</strong></p>
-        <br>
-        <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 1
-        <br><br>
-        <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 2
-        <br><br>
-        <!============APELLIDO Y NOMBRES 3=========================>
-       <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 3
-        <br><br>
-        <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 4
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 5
-        <br><br>
-        <!============APELLIDO Y NOMBRES 6=========================>
-        <strong>Javier Sharvel Irigoyen Matos:</strong>
-        <br>
-        Acciones realizadas de TP por el integrante 6
-        <br><br>
-        <!============ TB2 =========================>
-        <p style="text-align: center;"><strong>Presentable del TB2</strong></p>
-        <br>
-        <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 1
-        <br><br>
-        <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 2
-        <br><br>
-        <!============APELLIDO Y NOMBRES 3=========================>
-       <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 3
-        <br><br>
-        <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 4
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 5
-        <br><br>
-        <!============APELLIDO Y NOMBRES 6=========================>
-        <strong>Javier Sharvel Irigoyen Matos:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 6
-        <br><br>
-        <!============ TF =========================>
-        <p style="text-align: center;"><strong>Presentable del TF</strong></p>
-        <br>
-        <!============APELLIDO Y NOMBRES 1=========================>
-        <strong>Janover Gonzalo Saldaña Vela:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 1
-        <br><br>
-        <!============APELLIDO Y NOMBRES 2=========================>
-        <strong>Holguin Gamarra Hardie Alfonso:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 2
-        <br><br>
-        <!============APELLIDO Y NOMBRES 3=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 3
-        <br><br>
-        <!============APELLIDO Y NOMBRES 4=========================>
-        <strong>Mendoza Solis Javier Kenyi:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 4
-        <br><br>
-        <!============APELLIDO Y NOMBRES 5=========================>
-        <strong>Apellidos y nombres:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 5
-        <br><br>
-        <!============APELLIDO Y NOMBRES 6=========================>
-        <strong>Javier Sharvel Irigoyen Matos:</strong>
-        <br>
-        Acciones realizadas de TB2 por el integrante 6
-        <br>
+    <td style="text-align: center; vertical-align: top;"><strong>Crea un entorno colaborativo e inclusivo, establece metas planifica tareas y cumple objetivos.</strong></td>
+    <td style="text-align: left; padding: 15px;">
+        <!-- TB1 Section -->
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB1</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB1 por el integrante 1</li>
+                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB1 por el integrante 2</li>
+                <li><strong>Villegas Jipa Luis Alfonso:</strong> Acciones realizadas de TB1 por el integrante 3</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB1 por el integrante 4</li>
+                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB1 por el integrante 6</li>
+            </ul>
+        </div>
+        <!-- TP Section -->
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TP</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TP por el integrante 1</li>
+                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TP por el integrante 2</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TP por el integrante 4</li>
+                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TP por el integrante 6</li>
+            </ul>
+        </div>
+        <!-- TB2 Section -->
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB2 por el integrante 1</li>
+                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB2 por el integrante 2</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB2 por el integrante 4</li>
+                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB2 por el integrante 6</li>
+            </ul>
+        </div>
+        <!-- TF Section -->
+        <div style="margin-bottom: 10px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TF</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TF por el integrante 1</li>
+                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TF por el integrante 2</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TF por el integrante 4</li>
+                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TF por el integrante 6</li>
+            </ul>
+        </div>
     </td>
-    <td>
-        <strong>TB1:</strong>
-        Conclusiones generales TB1 del criterio específico 2
-        <br/><br/>
-        <strong>TP:</strong>
-        Conclusiones generales TP del criterio específico 2
-        <br/><br/>
-        <strong>TB2:</strong>
-        Conclusiones generales TB2 del criterio específico 2
-        <br/><br/>
-        <strong>TF:</strong>
-        Conclusiones generales TF del criterio específico 2
+    <td style="text-align: left; vertical-align: top; padding: 15px;">
+        <div style="margin-bottom: 15px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TB1:</h5>
+            <p style="margin: 0; font-size: 14px;">Conclusiones generales TB1 del criterio específico 2</p>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TP:</h5>
+            <p style="margin: 0; font-size: 14px;">Conclusiones generales TP del criterio específico 2</p>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TB2:</h5>
+            <p style="margin: 0; font-size: 14px;">Conclusiones generales TB2 del criterio específico 2</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TF:</h5>
+            <p style="margin: 0; font-size: 14px;">Conclusiones generales TF del criterio específico 2</p>
+        </div>
     </td>
 </tr>
 </tbody>
