@@ -369,7 +369,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://upcedupe-my.sharepoint.com/:v:/g/personal/u201824550_upc_edu_pe/EbWP7AHkagNIuoHROo6NtTgBQoBxwBqgRzKYoCUb9cJ52w?e=oCxlBU</a></li>
   <li><strong>Duración:</strong> [04:19]</li>
   <div style="margin-top: 20px;" align="center">
-                <img src="/assets/img/capitulo-II/Entrevista1IOT.png" alt="Drivana (LatAm) Logo" width="80px">
+                <img src="/assets/img/capitulo-II/Entrevista1IOT.png" alt="Entrevista1IOT" width="1000px">
         </div>
 
 </ul>
