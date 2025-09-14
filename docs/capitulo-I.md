@@ -3,19 +3,15 @@
 ## 1.1. Startup Profile
 ### 1.1.1. Descripción de la Startup
 
-<p align="justify">
-<b>MetaSoft</b> es una startup tecnológica orientada a la creación de soluciones digitales inteligentes que combinan plataformas web y IoT. Su propósito es responder a las necesidades actuales de transformación digital mediante el desarrollo de herramientas capaces de convertir datos en conocimiento útil, impulsando procesos más eficientes, personalizados y sostenibles.
-</p>
+<p align="justify"> <b>MetaSoft</b> es una startup tecnológica dedicada a crear soluciones digitales inteligentes que integran plataformas web e IoT. Su propósito es acompañar a empresas y organizaciones en sus procesos de transformación digital, desarrollando herramientas capaces de transformar datos en conocimiento estratégico para optimizar procesos, anticipar necesidades y promover la sostenibilidad. </p>
 
 <b>Misión</b>
-<p align="justify">
-Transformar datos en conocimiento accionable, ofreciendo herramientas inteligentes que mejoren la toma de decisiones y optimicen procesos tanto para profesionales como para usuarios finales.
-</p>
+
+<p align="justify"> Transformar datos en conocimiento útil y accionable, ofreciendo soluciones innovadoras que impulsen la eficiencia, potencien la toma de decisiones y generen valor real para profesionales, empresas y usuarios finales. </p>
 
 <b>Visión</b>
-<p align="justify">
-Convertirse en una startup referente en el desarrollo de soluciones digitales basadas en plataformas web con IoT, capaces de transformar datos en conocimiento útil para diferentes sectores, contribuyendo a una sociedad más eficiente, conectada e innovadora.
-</p>
+
+<p align="justify"> Ser reconocida como una startup líder en el desarrollo de soluciones digitales basadas en plataformas web e IoT, destacando por su capacidad de generar impacto positivo en diferentes sectores y contribuir a la construcción de una sociedad más conectada, inteligente y sostenible. </p>
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
