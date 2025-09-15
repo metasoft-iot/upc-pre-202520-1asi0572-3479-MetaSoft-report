@@ -630,6 +630,8 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 El <strong>Big Picture EventStorming</strong> es una técnica de modelado colaborativo que permite visualizar los procesos de negocio a través de la identificación cronológica de eventos del dominio. En el contexto de <strong>SafeCar</strong>, esta metodología resulta fundamental para mapear el ecosistema completo de mantenimiento vehicular, desde la detección de problemas hasta la resolución en talleres.
 </p>
 
+Enlace de acceso a Miro (EventStorming): <a href="https://miro.com/app/board/uXjVJItKYhM=/?share_link_id=862788472423" target="_blank">https://miro.com/app/board/uXjVJItKYhM=/?share_link_id=862788472423</a>
+
 
 #### Step 1: Unstructured Exploration
 
