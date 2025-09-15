@@ -374,7 +374,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 
 </ul>
 <p align="justify">
-<strong>Resumen:</strong> Katy Gutierrez, quien ultiliza su auto par desplzarse a su centro de trabajo menciona que realiza el mantenimiento de su vehículo cada 8 a 9 meses, aunque a veces lo posterga por motivos de tiempo y costo. En el último año ha tenido dificultades principalmente con los gastos elevados en reparaciones y con la demora en los talleres. Se guía por ruidos del auto o luces en el tablero para identificar fallas y nunca ha utilizado aplicaciones o dispositivos digitales para monitorear su vehículo. Le interesa que SafeCar le brinde alertas preventivas, recomendaciones personalizadas y conexión directa con talleres de confianza. Estaría dispuesto a pagar una suscripción mensual si la ayuda con su problema agrega que prefiere recibir notificaciones a través de WhatsApp y la aplicación. 
+<strong>Resumen:</strong> Katy Gutierrez, quien ultiliza su auto par desplzarse a su centro de trabajo menciona que realiza el mantenimiento de su vehículo cada 8 a 9 meses, aunque a veces lo posterga por motivos de tiempo y costo. En el último año ha tenido dificultades principalmente con los gastos elevados en reparaciones y con la demora en los talleres. Se guía por ruidos del auto o luces en el tablero para identificar fallas y nunca ha utilizado aplicaciones o dispositivos digitales para monitorear su vehículo. Le interesa que SafeCar le brinde alertas preventivas, recomendaciones personalizadas y conexión directa con talleres de confianza. Estaría dispuesto a pagar una suscripción mensual si la ayuda con su problema agrega que prefiere recibir notificaciones a través de WhatsApp y la aplicación.
 </p>
 
 <hr>
@@ -435,16 +435,16 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <b>Entrevista 2</b>
 
 <ul>
-  <li><strong>Nombre del taller:</strong> [Nombre comercial]</li>
-  <li><strong>Representante:</strong> [Nombre Apellido / Cargo]</li>
-  <li><strong>Años de operación:</strong> [años]</li>
-  <li><strong>Distrito:</strong> [Distrito/Ciudad]</li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
-  <li><strong>Duración:</strong> [mm:ss]</li>
-  <li><strong>Screenshot:</strong> <img src="[URL-screenshot]" alt="screenshot entrevista 2" style="max-width:200px;"></li>
+  <li><strong>Nombre del taller:</strong> Eurocars</li>
+  <li><strong>Representante:</strong> Germán Figeroa</li>
+  <li><strong>Años de operación:</strong> 15 años</li>
+  <li><strong>Distrito:</strong> Los Olivos</li>
+  <li><strong>URL del video:</strong> <a href="https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing" target="_blank">[https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing]</a></li>
+  <li><strong>Duración:</strong> [08:20]</li>
+  <li><strong>Screenshot:</strong> <img src="https://drive.google.com/file/d/1gJeXNudjhx8HnZ3MxCwmhVrxrzwxCJwt/view?usp=sharing" alt="screenshot entrevista 2" style="max-width:200px;"></li>
 </ul>
 <p align="justify">
-<strong>Resumen:</strong> [Párrafo breve con hallazgos clave del taller: tiempos de diagnóstico, problemas frecuentes, interés en digitalización, disposición a pagar].
+<strong>Resumen:</strong> Germán Figueroa, dueño de un taller mediano en Los Olivos, vive con el “día a día” del oficio: fallas intermitentes que quitan tiempo, clientes que no llegan a la cita y la eterna búsqueda del historial del auto. Se apoya sobre todo en WhatsApp Business, algo de Facebook/Instagram y planillas en Google Sheets, pero siente que todo está disperso. Lo que más valora de una solución como SafeCar es tener el historial por placa/VIN con fotos, repuestos y diagnósticos en un solo lugar, reportes que le avisen qué autos están por mantener y recordatorios por WhatsApp para reducir ausencias. Si realmente le ahorra 1–2 horas diarias, pagaría S/200–S/300 al mes; mejor aún si integra WhatsApp, facturación y catálogo de repuestos, y trae soporte inicial para su equipo. Sueña con alertas claras (“crítica”, “atención”, “preventiva”) que muestren evidencia simple —“batería baja”, “temperatura anormal” para confirmar la cita rápidamente y recibir el auto ya con el camino marcado: menos adivinanzas, más confianza y eficiencia.
 </p>
 
 <hr>
@@ -719,48 +719,47 @@ El <strong>Ubiquitous Language</strong> (Lenguaje Ubicuo) es un conjunto de tér
 
 ### Ubiquitous Language – SafeCar
 
-**Vehicle (Vehículo)**  
+**Vehicle (Vehículo)**
 Unidad registrada de un cliente. Incluye marca, modelo, año y kilometraje. Es el centro de la trazabilidad.
 
-**Device (Dispositivo IoT)**  
+**Device (Dispositivo IoT)**
 Hardware conectado al vehículo que recoge datos (motor, batería, neumáticos, hábitos de conducción). Puede estar registrado, instalado, activo o inactivo.
 
-**Telemetry (Telemetría)**  
+**Telemetry (Telemetría)**
 Conjunto de datos transmitidos desde el vehículo: parámetros de motor, consumo de combustible, códigos de falla, presión de llantas, hábitos de conducción.
 
-**Alert (Alerta)**  
+**Alert (Alerta)**
 Aviso generado automáticamente cuando se detecta una condición de riesgo en el vehículo, clasificado como leve, moderado o crítico.
 
-**DriverProfile (Perfil de Conducción)**  
+**DriverProfile (Perfil de Conducción)**
 Caracterización del estilo de manejo de un conductor, con métricas de riesgo y hábitos (frenadas bruscas, giros violentos, aceleraciones fuertes).
 
-**Prediction (Predicción de Falla)**  
+**Prediction (Predicción de Falla)**
 Estimación anticipada de un posible problema mecánico basada en datos históricos y análisis.
 
-**Recommendation (Recomendación de Mantenimiento)**  
+**Recommendation (Recomendación de Mantenimiento)**
 Sugerencia de acción preventiva o correctiva para conservar el estado óptimo del vehículo.
 
-**Notification (Notificación)**  
+**Notification (Notificación)**
 Mensaje enviado al conductor con información relevante, como alertas, recordatorios o consejos de conducción.
 
-**Reminder (Recordatorio)**  
+**Reminder (Recordatorio)**
 Aviso programado que notifica al conductor sobre mantenimientos o revisiones próximas.
 
-**Appointment (Cita)**  
+**Appointment (Cita)**
 Reserva realizada en un taller autorizado para ejecutar un mantenimiento o reparación.
 
-**WorkOrder (Orden de Trabajo)**  
+**WorkOrder (Orden de Trabajo)**
 Documento digital en el taller que detalla las tareas realizadas al vehículo, checklist y diagnóstico técnico.
 
-**Workshop (Taller)**  
+**Workshop (Taller)**
 Centro de servicio autorizado que atiende vehículos, cuenta con certificaciones y mecánicos registrados.
 
-**Subscription (Suscripción)**  
+**Subscription (Suscripción)**
 Plan de servicio contratado por un cliente (ejemplo: básico, premium), que habilita o restringe funcionalidades del sistema.
 
-**Consent (Consentimiento)**  
+**Consent (Consentimiento)**
 Permiso explícito que otorga el conductor para compartir datos de su vehículo con terceros (ej. talleres).
 
-**AccessControl (Control de Acceso)**  
+**AccessControl (Control de Acceso)**
 Reglas que determinan qué actor (ej. taller, mecánico) puede acceder a ciertos datos del vehículo y bajo qué condiciones.
-
