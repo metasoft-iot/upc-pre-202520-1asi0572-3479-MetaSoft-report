@@ -956,7 +956,7 @@
     	<td><b>E07</b></td>
     	<td>Gestión de Vehículos</td>
     	<td>
-    		<b>Como</b> conductor <b>Quiero</b> registrar y administrar mis vehículos <b>Para</b> asociarlos a diagnósticos y mantenimientos.
+			<b>Como</b> conductor <b>Quiero</b> que SafeCar me permita organizar y mantener actualizada la información de mis vehículos registrados <b>Para</b> simplificar el seguimiento de su estado, los servicios realizados y los mantenimientos pendientes.
     	</td>
     	<td></td>
     	<td></td>
