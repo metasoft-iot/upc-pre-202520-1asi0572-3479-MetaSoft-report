@@ -711,5 +711,54 @@ Se establecen los contextos delimitados que agrupan funcionalidades relacionadas
 
 ## 2.5. Ubiquitous Language
 
+<p align="justify">
+El <strong>Ubiquitous Language</strong> (Lenguaje Ubicuo) es un conjunto de términos y conceptos compartidos entre todos los miembros del equipo de desarrollo y los expertos del dominio. Este lenguaje común elimina ambigüedades y asegura que todos los participantes del proyecto SafeCar tengan la misma comprensión de los conceptos clave del negocio. A continuación se presenta el glosario de términos fundamentales para el dominio de mantenimiento vehicular IoT.
+</p>
 
+### Ubiquitous Language – SafeCar
+
+**Vehicle (Vehículo)**  
+Unidad registrada de un cliente. Incluye marca, modelo, año y kilometraje. Es el centro de la trazabilidad.
+
+**Device (Dispositivo IoT)**  
+Hardware conectado al vehículo que recoge datos (motor, batería, neumáticos, hábitos de conducción). Puede estar registrado, instalado, activo o inactivo.
+
+**Telemetry (Telemetría)**  
+Conjunto de datos transmitidos desde el vehículo: parámetros de motor, consumo de combustible, códigos de falla, presión de llantas, hábitos de conducción.
+
+**Alert (Alerta)**  
+Aviso generado automáticamente cuando se detecta una condición de riesgo en el vehículo, clasificado como leve, moderado o crítico.
+
+**DriverProfile (Perfil de Conducción)**  
+Caracterización del estilo de manejo de un conductor, con métricas de riesgo y hábitos (frenadas bruscas, giros violentos, aceleraciones fuertes).
+
+**Prediction (Predicción de Falla)**  
+Estimación anticipada de un posible problema mecánico basada en datos históricos y análisis.
+
+**Recommendation (Recomendación de Mantenimiento)**  
+Sugerencia de acción preventiva o correctiva para conservar el estado óptimo del vehículo.
+
+**Notification (Notificación)**  
+Mensaje enviado al conductor con información relevante, como alertas, recordatorios o consejos de conducción.
+
+**Reminder (Recordatorio)**  
+Aviso programado que notifica al conductor sobre mantenimientos o revisiones próximas.
+
+**Appointment (Cita)**  
+Reserva realizada en un taller autorizado para ejecutar un mantenimiento o reparación.
+
+**WorkOrder (Orden de Trabajo)**  
+Documento digital en el taller que detalla las tareas realizadas al vehículo, checklist y diagnóstico técnico.
+
+**Workshop (Taller)**  
+Centro de servicio autorizado que atiende vehículos, cuenta con certificaciones y mecánicos registrados.
+
+**Subscription (Suscripción)**  
+Plan de servicio contratado por un cliente (ejemplo: básico, premium), que habilita o restringe funcionalidades del sistema.
+
+**Consent (Consentimiento)**  
+Permiso explícito que otorga el conductor para compartir datos de su vehículo con terceros (ej. talleres).
+
+**AccessControl (Control de Acceso)**  
+Reglas que determinan qué actor (ej. taller, mecánico) puede acceder a ciertos datos del vehículo y bajo qué condiciones.
 
