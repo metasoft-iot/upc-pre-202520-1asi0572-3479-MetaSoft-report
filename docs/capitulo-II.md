@@ -626,4 +626,90 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 
 ## 2.4. Big Picture EventStorming
 
+<p align="justify">
+El <strong>Big Picture EventStorming</strong> es una técnica de modelado colaborativo que permite visualizar los procesos de negocio a través de la identificación cronológica de eventos del dominio. En el contexto de <strong>SafeCar</strong>, esta metodología resulta fundamental para mapear el ecosistema completo de mantenimiento vehicular, desde la detección de problemas hasta la resolución en talleres.
+</p>
+
+
+#### Step 1: Unstructured Exploration
+
+<p align="justify">
+Este paso consiste en identificar todos los eventos del dominio de manera libre y sin orden específico. Los participantes generan eventos en formato pasado ("algo pasó") para capturar toda la actividad relevante del ecosistema SafeCar.
+</p>
+
+<img src="/assets/img/capitulo-II/unstructured-exploration.png" alt="Step 1:Unstructured Exploration" width="700"/>
+
+#### Step 2: Timelines
+
+<p align="justify">
+Se organizan los eventos identificados en orden cronológico para crear flujos de trabajo coherentes. Este paso establece la secuencia temporal de los procesos de mantenimiento vehicular.
+</p>
+
+<img src="/assets/img/capitulo-II/timelines-event-storming.png" alt="Step 2:Timelines" width="700"/>
+
+#### Step 3: Paint Points
+
+<p align="justify">
+Se identifican los puntos problemáticos o fricciones en el proceso actual. Estos representan oportunidades de mejora que SafeCar puede abordar con su solución tecnológica.
+</p>
+
+<img src="/assets/img/capitulo-II/paint-points-event-storming.png" alt="Step 3:Paint Points" width="700"/>
+
+#### Step 4: Pivotal Points
+
+<p align="justify">
+Se marcan los eventos críticos que determinan el éxito o fracaso del proceso. Son los momentos clave donde las decisiones tienen mayor impacto en el resultado.
+</p>
+
+<img src="/assets/img/capitulo-II/pivotal-points-event-storming.png" alt="Step 4:Pivotal Points" width="700"/>
+
+#### Step 5: Commands
+
+<p align="justify">
+Se definen las acciones o comandos que desencadenan los eventos del sistema. Representan las intenciones de usuarios y sistemas que inician procesos específicos.
+</p>
+
+<img src="/assets/img/capitulo-II/commands-event-storming.png" alt="Step 5:Commands" width="700"/>
+
+#### Step 6: Policies
+
+<p align="justify">
+Se establecen las reglas de negocio que determinan cuándo y cómo se ejecutan procesos automáticos. Son las políticas que gobiernan el comportamiento del sistema.
+</p>
+
+<img src="/assets/img/capitulo-II/policies-event-storming.png" alt="Step 6:Policies" width="700"/>
+
+#### Step 7: Read Models
+
+<p align="justify">
+Se identifican las vistas de información que los usuarios necesitan para tomar decisiones. Son las representaciones de datos que consume la interfaz de usuario.
+</p>
+
+#### Step 8: External Systems
+
+<p align="justify">
+Se mapean los sistemas externos con los que SafeCar debe integrarse. Incluye APIs, servicios de terceros y sistemas existentes necesarios para el funcionamiento completo.
+</p>
+
+<img src="/assets/img/capitulo-II/external-systems-event-storming.png" alt="Step 8:External Systems" width="700"/>
+
+#### Step 9: Aggregates
+
+<p align="justify">
+Se definen las entidades de dominio que encapsulan comportamientos y datos relacionados. Son los objetos principales del negocio que mantienen consistencia interna.
+</p>
+
+<img src="/assets/img/capitulo-II/aggregates-event-storming.png" alt="Step 9:Aggregates" width="700"/>
+
+#### Step 10: Bounded Contexts
+
+<p align="justify">
+Se establecen los contextos delimitados que agrupan funcionalidades relacionadas. Define las fronteras claras entre diferentes áreas de responsabilidad del sistema.
+</p>
+
+<img src="/assets/img/capitulo-II/bounded-contexts-event-storming.png" alt="Step 10:Bounded Contexts" width="700"/>
+
 ## 2.5. Ubiquitous Language
+
+
+
