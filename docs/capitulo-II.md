@@ -717,49 +717,95 @@ Se establecen los contextos delimitados que agrupan funcionalidades relacionadas
 El <strong>Ubiquitous Language</strong> (Lenguaje Ubicuo) es un conjunto de términos y conceptos compartidos entre todos los miembros del equipo de desarrollo y los expertos del dominio. Este lenguaje común elimina ambigüedades y asegura que todos los participantes del proyecto SafeCar tengan la misma comprensión de los conceptos clave del negocio. A continuación se presenta el glosario de términos fundamentales para el dominio de mantenimiento vehicular IoT.
 </p>
 
-### Ubiquitous Language – SafeCar
+### Ubiquitous Language — SafeCar
 
-**Vehicle (Vehículo)**
-Unidad registrada de un cliente. Incluye marca, modelo, año y kilometraje. Es el centro de la trazabilidad.
+#### 1. Vehículo y componentes
+• **Vehicle (Vehículo)**: Unidad automotriz identificada por placa y características (marca, modelo, año) sobre la que se realizan diagnósticos, mantenimientos y reparaciones.  
+• **Odometer (Odómetro)**: Indicador acumulado de kilómetros recorridos por el vehículo.  
+• **Powertrain (Tren motriz)**: Conjunto de elementos que transmiten potencia (motor, transmisión y ejes).  
+• **Engine (Motor)**: Conjunto mecánico que genera potencia para el movimiento del vehículo.  
+• **Battery (Batería)**: Fuente de energía eléctrica para arranque y sistemas auxiliares.  
+• **Cooling System (Sistema de enfriamiento)**: Circuito (radiador, bomba, termostato) que mantiene la temperatura operativa del motor.  
+• **Brake System (Sistema de frenos)**: Conjunto (discos, pastillas, líquido) que permite desaceleración y detención segura.  
+• **Tire (Neumático/Llanta)**: Elemento de contacto con la calzada; su presión y desgaste impactan seguridad y consumo.  
+• **Suspension (Suspensión)**: Conjunto que absorbe irregularidades del camino y mantiene estabilidad.  
+• **Steering (Dirección)**: Sistema que permite orientar las ruedas y controlar la trayectoria.  
+• **Exhaust System (Sistema de escape)**: Conduce y trata gases producto de la combustión.  
+• **Fuel System (Sistema de combustible)**: Almacena y suministra combustible al motor.  
+• **OBD-II**: On-Board Diagnostics II para lectura de parámetros y códigos de falla (DTC: Diagnostic Trouble Codes).  
+• **Telematics Device (Dispositivo telemático/IoT)**: Equipo instalado en el vehículo que captura datos operativos y de uso.
 
-**Device (Dispositivo IoT)**
-Hardware conectado al vehículo que recoge datos (motor, batería, neumáticos, hábitos de conducción). Puede estar registrado, instalado, activo o inactivo.
+#### 2. Uso y condiciones de operación
+• **Trip (Viaje/Trayecto)**: Desplazamiento continuo del vehículo entre dos momentos de encendido y apagado.  
+• **Driving Habit (Hábito de conducción)**: Patrón de manejo observado (aceleraciones fuertes, frenadas bruscas, giros violentos).  
+• **Harsh Braking (Frenada brusca)**: Evento de desaceleración súbita que supera un umbral definido.  
+• **Harsh Acceleration (Aceleración fuerte)**: Evento de incremento rápido de velocidad que supera un umbral.  
+• **Harsh Cornering (Giro brusco)**: Cambio violento de dirección que excede un umbral de aceleración lateral.
 
-**Telemetry (Telemetría)**
-Conjunto de datos transmitidos desde el vehículo: parámetros de motor, consumo de combustible, códigos de falla, presión de llantas, hábitos de conducción.
+#### 3. Diagnóstico y códigos
+• **Diagnostic Trouble Code – DTC (Código de falla)**: Código estándar que indica una anomalía detectada por el vehículo.  
+• **Active DTC (DTC activo)**: Falla presente actualmente.  
+• **Stored DTC (DTC almacenado)**: Falla registrada históricamente, no presente al momento.  
+• **Health Check (Chequeo de salud)**: Evaluación general del estado del vehículo basada en lecturas y umbrales.  
+• **Inspection (Inspección)**: Revisión visual o instrumental de componentes según una pauta definida.  
+• **Technical Report (Reporte técnico)**: Documento que resume hallazgos, diagnósticos y acciones recomendadas.
 
-**Alert (Alerta)**
-Aviso generado automáticamente cuando se detecta una condición de riesgo en el vehículo, clasificado como leve, moderado o crítico.
+#### 4. Mantenimiento y servicios
+• **Preventive Maintenance (Mantenimiento preventivo)**: Intervenciones programadas para evitar fallas (por tiempo o kilometraje).  
+• **Corrective Maintenance (Mantenimiento correctivo)**: Reparación una vez ocurrida una falla.  
+• **Service Interval (Intervalo de servicio)**: Frecuencia recomendada para realizar un mantenimiento (p.ej., cada 10 000 km o 6 meses).  
+• **Oil Change (Cambio de aceite)**: Sustitución de aceite y, normalmente, del filtro correspondiente.  
+• **Filter Replacement (Cambio de filtro)**: Sustitución de filtros (aceite, aire, combustible, cabina).  
+• **Brake Service (Servicio de frenos)**: Revisión/sustitución de pastillas, discos, líquido y purgado.  
+• **Tire Rotation (Rotación de neumáticos)**: Cambio de posición de neumáticos para distribuir desgaste.  
+• **Tire Replacement (Cambio de neumáticos)**: Sustitución cuando hay desgaste, daño o antigüedad.  
+• **Wheel Alignment (Alineación)**: Ajuste de ángulos de dirección para estabilidad y desgaste homogéneo.  
+• **Wheel Balancing (Balanceo)**: Corrección de desbalances para evitar vibraciones.  
+• **Coolant Flush (Cambio de refrigerante)**: Renovación del fluido del sistema de enfriamiento.  
+• **Battery Test (Prueba de batería)**: Verificación de capacidad de arranque y estado de carga.
 
-**DriverProfile (Perfil de Conducción)**
-Caracterización del estilo de manejo de un conductor, con métricas de riesgo y hábitos (frenadas bruscas, giros violentos, aceleraciones fuertes).
+#### 5. Alertas y recomendaciones
+• **Condition (Condición)**: Situación detectada que requiere evaluación (p.ej., presión baja).  
+• **Alert (Alerta)**: Aviso al conductor o taller por condición de riesgo o atención requerida.  
+• **Severity (Severidad)**: Nivel de criticidad de una alerta (leve, moderada, crítica).  
+• **Priority (Prioridad)**: Orden de atención sugerido según severidad y contexto.  
+• **Recommendation (Recomendación)**: Sugerencia de mantenimiento o acción preventiva.  
+• **Reminder (Recordatorio)**: Aviso programado para un servicio futuro por fecha o kilometraje.  
+• **Risk Score (Puntaje de riesgo)**: Valor que sintetiza el nivel de riesgo operativo derivado de hábitos y estado del vehículo.  
+• **Driving Profile (Perfil de conducción)**: Clasificación del estilo de manejo (seguro, económico, riesgoso) según hábitos.
 
-**Prediction (Predicción de Falla)**
-Estimación anticipada de un posible problema mecánico basada en datos históricos y análisis.
+#### 6. Relación con el taller
+• **Workshop (Taller)**: Centro autorizado que presta servicios de mantenimiento y reparación.  
+• **Mechanic (Mecánico)**: Profesional que realiza diagnósticos, mantenimientos y reparaciones.  
+• **Service Advisor (Asesor de servicio)**: Persona que recibe al cliente, acuerda trabajos y comunica avances.  
+• **Appointment (Cita)**: Reserva de fecha y hora para atención del vehículo en el taller.  
+• **Check-in (Recepción)**: Registro de llegada del vehículo para iniciar el proceso en taller.  
+• **Work Order – WO (Orden de trabajo)**: Documento operativo que detalla los trabajos autorizados, insumos y tiempos.  
+• **Estimate (Presupuesto)**: Propuesta económica previa a la ejecución, con ítems y costos.  
+• **Customer Approval (Aprobación del cliente)**: Autorización expresa para ejecutar el trabajo y costos asociados.  
+• **Parts (Repuestos)**: Componentes o consumibles necesarios para la intervención.  
+• **Service Status (Estado del servicio)**: Etapas del proceso en taller (en recepción, en diagnóstico, en reparación, finalizado).  
+• **Delivery (Entrega)**: Devolución del vehículo al cliente tras finalizar el servicio.
 
-**Recommendation (Recomendación de Mantenimiento)**
-Sugerencia de acción preventiva o correctiva para conservar el estado óptimo del vehículo.
+#### 7. Garantía, calidad y cumplimiento
+• **Quality Check (Control de calidad)**: Verificación final de trabajos antes de la entrega.  
+• **Service History (Historial de mantenimiento)**: Registro cronológico de servicios realizados a un vehículo.  
+• **Inspection Report (Informe de inspección)**: Resultado documentado de una inspección oficial o interna.
 
-**Notification (Notificación)**
-Mensaje enviado al conductor con información relevante, como alertas, recordatorios o consejos de conducción.
+#### 8. Planes y relación comercial
+• **Membership Plan (Plan de membresía)**: Paquete de beneficios y condiciones que habilita el uso de servicios SafeCar.  
+• **Coverage (Cobertura)**: Alcance de servicios y límites incluidos en el plan o garantía.  
+• **Service Package (Paquete de servicio)**: Conjunto de servicios preventivos ofrecidos a precio preferente.  
+• **Customer (Cliente/Conductor)**: Persona titular del vehículo que solicita y paga servicios.  
+• **Consent (Consentimiento)**: Autorización del cliente para compartir datos de su vehículo con un taller.  
+• **Service Policy (Política de servicio)**: Reglas del taller sobre citas, cancelaciones, tiempos y garantías.
 
-**Reminder (Recordatorio)**
-Aviso programado que notifica al conductor sobre mantenimientos o revisiones próximas.
+#### 9. Medición y métricas de operación
+• **Mileage/Kilometrage (Kilometraje)**: Distancia total recorrida por el vehículo en odómetro.  
+• **Operating Hours (Horas de operación)**: Tiempo acumulado de motor encendido.  
+• **Fuel Economy (Consumo de combustible)**: Rendimiento de combustible por distancia (p.ej., km/L).  
+• **Wear Indicator (Indicador de desgaste)**: Señal que sugiere proximidad a recambio de pieza o servicio.  
+• **Service Due (Servicio pendiente)**: Mantenimiento que corresponde por fecha o kilometraje alcanzado.  
+• **Overheat (Sobrecalentamiento)**: Condición de temperatura del motor por encima de límites seguros.  
+• **Low Pressure (Presión baja)**: Presión de neumáticos por debajo del umbral recomendado.
 
-**Appointment (Cita)**
-Reserva realizada en un taller autorizado para ejecutar un mantenimiento o reparación.
-
-**WorkOrder (Orden de Trabajo)**
-Documento digital en el taller que detalla las tareas realizadas al vehículo, checklist y diagnóstico técnico.
-
-**Workshop (Taller)**
-Centro de servicio autorizado que atiende vehículos, cuenta con certificaciones y mecánicos registrados.
-
-**Subscription (Suscripción)**
-Plan de servicio contratado por un cliente (ejemplo: básico, premium), que habilita o restringe funcionalidades del sistema.
-
-**Consent (Consentimiento)**
-Permiso explícito que otorga el conductor para compartir datos de su vehículo con terceros (ej. talleres).
-
-**AccessControl (Control de Acceso)**
-Reglas que determinan qué actor (ej. taller, mecánico) puede acceder a ciertos datos del vehículo y bajo qué condiciones.
