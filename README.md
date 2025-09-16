@@ -24,8 +24,8 @@
 * **Javier Kenyi Mendoza Solis          U201824550**
 * **Gustavo Jandroel Aguirre Rodríguez  U202124162**
 * **Javier Sharvel Irigoyen Matos       U20221D156**
-* **Nombres y apellidos    Código de estudiante**
-* **Nombres y apellidos    Código de estudiante**
+* **Gonzalo Andre Zavala Quedena        U202113656**
+* **Anaely    Código de estudiante**
 
 
 
@@ -54,109 +54,249 @@
         <!-- Fila 1-->
         <tr>
             <td>1.0</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>03/09/2025</td>
+            <td>Janover Gonzalo Saldaña Vela</td>
+            <td>Facilitación y documentación inicial del taller de Event Storming, identificando los principales eventos y contextos del sistema.</td>
         </tr>
-         <!-- Fila 2-->
+        <!-- Fila 2-->
         <tr>
             <td>1.1</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>04/09/2025</td>
+            <td>Hardie Alfonso Holguin Gamarra</td>
+            <td>Participación activa en el mapeo de eventos clave y propuesta de mejoras en la segmentación de contextos.</td>
         </tr>
-         <!-- Fila 3-->
+        <!-- Fila 3-->
         <tr>
             <td>1.2</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>05/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Colaboración en la identificación de eventos y refinamiento de los límites de contexto durante el Event Storming.</td>
         </tr>
-         <!-- Fila 4-->
+        <!-- Fila 4-->
         <tr>
             <td>1.3</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>06/09/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Aporte de ideas para la definición de eventos y sugerencias para la integración de los contextos descubiertos.</td>
         </tr>
-         <!-- Fila 5-->
+        <!-- Fila 5-->
         <tr>
             <td>1.4</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>07/09/2025</td>
+            <td>Gustavo Jandroel Aguirre Rodríguez</td>
+            <td>Apoyo en la organización visual del taller y registro de los eventos principales identificados.</td>
         </tr>
-         <!-- Fila 6-->
+        <!-- Fila 6-->
         <tr>
             <td>1.5</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>08/09/2025</td>
+            <td>Javier Sharvel Irigoyen Matos</td>
+            <td>Colaboración en la priorización de eventos y discusión sobre posibles mejoras en los flujos del sistema.</td>
         </tr>
-         <!-- Fila 7-->
+        <!-- Fila 7-->
         <tr>
             <td>1.6</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>09/09/2025</td>
+            <td>Anaely</td>
+            <td>Participación en la lluvia de ideas y aporte en la definición de eventos relevantes para el sistema.</td>
         </tr>
         <!-- Fila 8-->
         <tr>
             <td>1.7</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>10/09/2025</td>
+            <td>Janover Gonzalo Saldaña Vela</td>
+            <td>Modelado de flujos de mensajes entre dominios y elaboración de los primeros Bounded Context Canvases.</td>
         </tr>
         <!-- Fila 9-->
         <tr>
             <td>1.8</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>11/09/2025</td>
+            <td>Hardie Alfonso Holguin Gamarra</td>
+            <td>Refinamiento de los flujos de mensajes y validación de la coherencia entre los contextos definidos.</td>
         </tr>
         <!-- Fila 10-->
         <tr>
             <td>1.9</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>12/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Apoyo en la documentación de los flujos de mensajes y revisión de los Bounded Context Canvases.</td>
         </tr>
         <!-- Fila 11-->
         <tr>
             <td>1.10</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>13/09/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Discusión y ajuste de los límites de contexto, asegurando la correcta separación de responsabilidades.</td>
         </tr>
         <!-- Fila 12-->
         <tr>
             <td>1.11</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>13/09/2025</td>
+            <td>Gustavo Jandroel Aguirre Rodríguez</td>
+            <td>Validación de los modelos de contexto y sugerencias para optimizar la comunicación entre dominios.</td>
         </tr>
         <!-- Fila 13-->
         <tr>
             <td>1.12</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>13/09/2025</td>
+            <td>Javier Sharvel Irigoyen Matos</td>
+            <td>Colaboración en la revisión final de los Bounded Context Canvases y aportes en la documentación.</td>
         </tr>
         <!-- Fila 14-->
         <tr>
             <td>1.13</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td>13/09/2025</td>
+            <td>Anaely</td>
+            <td>Participación en la consolidación de los contextos y revisión de los flujos de mensajes.</td>
         </tr>
-        <!-- Fila 15 -->
+        <!-- Fila 15-->
+        <tr>
+            <td>1.14</td>
+            <td>13/09/2025</td>
+            <td>Janover Gonzalo Saldaña Vela</td>
+            <td>Coordinación del taller de Big Picture EventStorming y desarrollo del glosario de lenguaje ubicuo.</td>
+        </tr>
+        <!-- Fila 16-->
+        <tr>
+            <td>1.15</td>
+            <td>13/09/2025</td>
+            <td>Hardie Alfonso Holguin Gamarra</td>
+            <td>Colaboración en la definición de términos clave y validación del lenguaje ubicuo con el equipo.</td>
+        </tr>
+        <!-- Fila 17-->
+        <tr>
+            <td>1.16</td>
+            <td>13/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Apoyo en la elaboración del glosario y discusión sobre la alineación conceptual del equipo.</td>
+        </tr>
+        <!-- Fila 18-->
+        <tr>
+            <td>1.17</td>
+            <td>13/09/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Revisión y aportes en la definición de términos y conceptos del lenguaje ubicuo.</td>
+        </tr>
+        <!-- Fila 19-->
+        <tr>
+            <td>1.18</td>
+            <td>13/09/2025</td>
+            <td>Gustavo Jandroel Aguirre Rodríguez</td>
+            <td>Participación en la validación del lenguaje ubicuo y sugerencias para su aplicación en el proyecto.</td>
+        </tr>
+        <!-- Fila 20-->
+        <tr>
+            <td>1.19</td>
+            <td>13/09/2025</td>
+            <td>Javier Sharvel Irigoyen Matos</td>
+            <td>Colaboración en la integración del lenguaje ubicuo en la documentación del proyecto.</td>
+        </tr>
+        <!-- Fila 21-->
+        <tr>
+            <td>1.20</td>
+            <td>13/09/2025</td>
+            <td>Anaely</td>
+            <td>Apoyo en la revisión final del glosario y aportes en la comunicación del equipo.</td>
+        </tr>
+        <!-- Fila 22-->
+        <tr>
+            <td>1.21</td>
+            <td>13/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Redacción y estructuración completa del Capítulo I, incluyendo perfiles y segmentos objetivo.</td>
+        </tr>
+        <!-- Fila 23-->
+        <tr>
+            <td>1.22</td>
+            <td>13/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Elaboración de User Personas para el Capítulo III, detallando arquetipos y necesidades de usuarios.</td>
+        </tr>
+        <!-- Fila 24-->
+        <tr>
+            <td>1.23</td>
+            <td>13/09/2025</td>
+            <td>Hardie Alfonso Holguin Gamarra</td>
+            <td>Definición de problemáticas y supuestos en el proceso Lean UX, aportando ideas para el canvas.</td>
+        </tr>
+        <!-- Fila 25-->
+        <tr>
+            <td>1.24</td>
+            <td>13/09/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Análisis de competidores y redacción del apartado de estrategias frente a la competencia.</td>
+        </tr>
+        <!-- Fila 26-->
+        <tr>
+            <td>1.25</td>
+            <td>13/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Diseño de la guía de entrevistas para la recolección de información de usuarios.</td>
+        </tr>
+        <!-- Fila 27-->
+        <tr>
+            <td>1.26</td>
+            <td>13/09/2025</td>
+            <td>Hardie Alfonso Holguin Gamarra</td>
+            <td>Registro y sistematización de las entrevistas realizadas a usuarios clave.</td>
+        </tr>
+        <!-- Fila 28-->
+        <tr>
+            <td>1.27</td>
+            <td>13/09/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Documentación de hallazgos y aprendizajes obtenidos en las entrevistas con usuarios.</td>
+        </tr>
+        <!-- Fila 29-->
+        <tr>
+            <td>1.28</td>
+            <td>13/09/2025</td>
+            <td>Javier Sharvel Irigoyen Matos</td>
+            <td>Colaboración en el registro y análisis de entrevistas, aportando perspectivas adicionales.</td>
+        </tr>
+        <!-- Fila 30-->
+        <tr>
+            <td>1.29</td>
+            <td>13/09/2025</td>
+            <td>Anaely</td>
+            <td>Desarrollo de segmentos objetivo y apoyo en la elaboración del empathy mapping.</td>
+        </tr>
+        <!-- Fila 31-->
+        <tr>
+            <td>1.30</td>
+            <td>15/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Elaboración de los diagramas de arquitectura de software a nivel de contenedores y contexto, asegurando claridad en la visión del sistema.</td>
+        </tr>
+        <!-- Fila 32-->
+        <tr>
+            <td>1.31</td>
+            <td>15/09/2025</td>
+            <td>Gustavo Jandroel Aguirre Rodríguez</td>
+            <td>Desarrollo del diagrama de landscape del sistema, integrando los principales componentes tecnológicos.</td>
+        </tr>
+        <!-- Fila 33-->
+        <tr>
+            <td>1.32</td>
+            <td>13/09/2025</td>
+            <td>Hardie Alfonso Holguin Gamarra</td>
+            <td>Diseño y documentación del Impact Mapping para alinear objetivos y funcionalidades del sistema.</td>
+        </tr>
+        <!-- Fila 34-->
+        <tr>
+            <td>1.33</td>
+            <td>13/09/2025</td>
+            <td>Janover Gonzalo Saldaña Vela</td>
+            <td>Coordinación y consolidación del Product Backlog, integrando los aportes de todo el equipo.</td>
+        </tr>
+        <!-- Fila 35-->
         <tr>
             <td>2.0</td>
-            <td>Fecha</td>
-            <td>Nombre de autores</td>
-            <td>Descripción de modificación</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
-</tbody>
+    </tbody>
 </table>
 
 ## Project Report Collaboration Insights
