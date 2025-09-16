@@ -38,7 +38,7 @@
 				Barra de navegación en landing page por secciones
 			</td>
 			<td>
-				<b>Como</b> visitante <b>Quiero</b> desplazarme entre las secciones principales de la página <b>Para</b> encontrar la información que necesito sin perder tiempo.
+				<b>Como</b> visitante <b>Quiero</b> desplazarme entre las secciones de la página <b>Para</b> encontrar la información que necesito sin perder tiempo.
 			</td>
 			<td >
 				<p><strong>Escenario 1: Accede a Inicio</strong>
@@ -78,7 +78,7 @@
 				Acceso visible a la aplicación web
 			</td>
 			<td>
-				<b>Como</b> visitante <b>Quiero</b> un acceso claro hacia la aplicación web <b>Para</b> continuar con el uso del servicio cuando lo decida.
+				<b>Como</b> visitante <b>Quiero</b> un acceso visible hacia la aplicación web <b>Para</b> continuar con el uso del servicio cuando lo decida.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Acceso desde presentación</strong><br/>
@@ -110,7 +110,7 @@
 				Cambio de idioma en landing page (ES/EN)
 			</td>
 			<td>
-				<b>Como</b> visitante <b>Quiero</b> cambiar el idioma de la página entre español e inglés <b>Para</b> leer la información en mi idioma preferido.
+				<b>Como</b> visitante <b>Quiero</b> cambiar el idioma de la página entre español e inglés <b>Para</b> leer la información en el idioma que requiera.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Cambia a inglés</strong><br/>
@@ -303,7 +303,7 @@
 				Visualización correcta en distintos dispositivos
 			</td>
 			<td>
-				<b>Como</b> visitante <b>Quiero</b> que la página se vea bien desde mi celular o computadora <b>Para</b> acceder cómodamente desde cualquier lugar.
+				<b>Como</b> visitante <b>Quiero</b> que la página se vea bien desde cualquier dispositivo <b>Para</b> acceder cómodamente desde cualquier lugar.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Teléfono</strong><br/>
@@ -330,7 +330,7 @@
 		<tr>
 			<td>US111</td>
 			<td>
-				Carga rápida y accesible
+				Rendimiento optimo y facil navegación 
 			</td>
 			<td>
 				<b>Como</b> visitante <b>Quiero</b> que la página cargue rápido y sea fácil de navegar <b>Para</b> no frustrarme ni abandonar el sitio.
@@ -481,7 +481,7 @@
 			<td>US206</td>
 			<td>Editar perfil</td>
 			<td>
-				<b>Como</b> usuario <b>Quiero</b> actualizar mis datos de perfil básicos <b>Para</b> mantener mi información al día en el sistema.
+				<b>Como</b> usuario <b>Quiero</b> modificar mis datos de perfil básicos <b>Para</b> mantener mi información al día en el sistema.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Actualización válida</strong><br/>
@@ -531,9 +531,9 @@
 		<!--USER STORY 19-->
 		<tr>
 			<td>US302</td>
-			<td>Historial de alertas</td>
+			<td>Reporte de alertas</td>
 			<td>
-				<b>Como</b> conductor <b>Quiero</b> revisar el historial de alertas recibidas <b>Para</b> entender patrones de fallas y planificar mantenimientos.
+				<b>Como</b> conductor <b>Quiero</b> revisar el reporte de alertas recibidas <b>Para</b> entender patrones de fallas y planificar mantenimientos.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Consulta de historial</strong><br/>
@@ -571,7 +571,7 @@
 			<td>US304</td>
 			<td>Visualización de diagnóstico del vehículo</td>
 			<td>
-				<b>Como</b> conductor <b>Quiero</b> ver en la aplicación un diagnóstico básico de mi vehículo <b>Para</b> conocer su estado actual y tomar decisiones rápidas.
+				<b>Como</b> conductor <b>Quiero</b> ver en la aplicación un diagnóstico  de mi vehículo <b>Para</b> conocer su estado actual y tomar decisiones rápidas.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Diagnóstico disponible</strong><br/>
@@ -597,7 +597,7 @@
 		</tr>
 		<!--USER STORY-->
 		<tr>
-			<td>US305</td>
+			<td>US405</td>
 			<td>Registro de mantenimientos realizados</td>
 			<td>
 				<b>Como</b> conductor <b>Quiero</b> registrar cada mantenimiento realizado <b>Para</b> llevar un historial de intervenciones de mi vehículo.
@@ -616,7 +616,7 @@
 		</tr>
 		<!--USER STORY 24-->
 		<tr>
-			<td>US306</td>
+			<td>US406</td>
 			<td>Consulta de historial de mantenimientos</td>
 			<td>
 				<b>Como</b> conductor <b>Quiero</b> ver el historial de mantenimientos en la aplicación <b>Para</b> analizar la frecuencia y costos de mis reparaciones.
@@ -635,7 +635,7 @@
 		</tr>
 		<!--USER STORY 25-->
 		<tr>
-			<td>US307</td>
+			<td>US407</td>
 			<td>Recordatorios de mantenimiento</td>
 			<td>
 				<b>Como</b> conductor <b>Quiero</b> recibir recordatorios de próximos mantenimientos <b>Para</b> no olvidar servicios importantes de mi vehículo.
@@ -664,7 +664,7 @@
 		</tr>
 		<!--TECHNICAL STORY 01-->
 		<tr>
-			<td>US401</td>
+			<td>US501</td>
 			<td>Ingestión de telemetría IoT</td>
 			<td>
 				<b>Como</b> Developer <b>Quiero</b> exponer un endpoint para recibir telemetría del dispositivo IoT con validación de esquema y persistencia confiable <b>Para</b> disponibilizar datos para diagnóstico y alertas.
@@ -687,7 +687,7 @@
 		</tr>
 		<!--TECHNICAL STORY 02-->
 		<tr>
-			<td>US402</td>
+			<td>US502</td>
 			<td>Motor de alertas y reglas</td>
 			<td>
 				<b>Como</b> Developer <b>Quiero</b> implementar un componente que evalúa reglas sobre eventos de telemetría <b>Para</b> generar alertas preventivas y críticas de forma confiable.
@@ -710,7 +710,7 @@
 		</tr>
 		<!--TECHNICAL STORY 03-->
 		<tr>
-			<td>US403</td>
+			<td>US503</td>
 			<td>Autenticación JWT y control de acceso</td>
 			<td>
 				<b>Como</b> Developer <b>Quiero</b> proveer autenticación basada en JWT con expiración y roles <b>Para</b> proteger las APIs de web y móvil y aplicar autorización por recursos.
@@ -733,7 +733,7 @@
 		</tr>
 		<!--TECHNICAL STORY 04-->
 		<tr>
-			<td>US404</td>
+			<td>US504</td>
 			<td>Auditoría y trazabilidad</td>
 			<td>
 				<b>Como</b> Developer <b>Quiero</b> registrar eventos de auditoría con correlación de solicitudes <b>Para</b> disponer de trazabilidad de acciones críticas y facilitar el diagnóstico de incidentes.
