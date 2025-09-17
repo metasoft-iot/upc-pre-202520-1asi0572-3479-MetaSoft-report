@@ -14,9 +14,19 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
         safeCarPlatform = softwareSystem "SafeCar Platform" "IoT platform for smart vehicle maintenance." {
             website = container "SafeCar Website" "Client-site safeCar application executed in the user's browser." "HTML, JavaScript and Tailwindcss v4"
             webApp = container "SafeCar Web Application" "An application where mechanics can view vehicle status data from the IoT device and schedule appointments to prevent mechanical breakdowns for drivers." "Angular v20"
-            backend = container "SafeCar backend platform" "Backend platform that receives and sends responses based on user requests." "SpringBoot [Java 17]"
+            
             database = container "SafeCar database" "Data persistence of our SafeCar platform" "MySQL" {
                 tags "Database"
+            }
+            
+            backend = container "SafeCar backend platform" "Backend platform that receives and sends responses based on user requests." "SpringBoot [Java 17]" {
+                // --- Bounded Context: Analytics and Recommendations 
+                analyticsFacade = component "Analytics Facade"          "Orchestrates analytics and recommendations operations, exposing a simplified API to other backend modules." "Java, Spring Boot" "Facade"
+                driverProfileComponent = component "Driver Profile Component"   "Handles creation and risk recalculation of driver profiles." "Java, Spring Boot"
+                predictionComponent = component "Prediction Component"       "Predicts future mechanical failures and manages prediction updates and discards." "Java, Spring Boot"
+                recommendationComponent = component "Recommendation Component"   "Generates maintenance recommendations using domain rules and AI." "Java, Spring Boot"
+                analyticsRepository = component "Analytics Repository"       "Persists and retrieves analytics data (driver profiles, predictions, recommendations) to the MySQL database." "Spring Data JPA" "Repository"
+                openAiClient = component "OpenAI Client"              "Encapsulates calls to the external OpenAI Service." "Java HTTP Client"
             }
             
             mobileApp = container "SafeCar Mobile Application" "Mobile app with notifications for critical failures, efficient driving tips, and real-time status." "Flutter"
@@ -52,6 +62,18 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
         
         // --- Components
         
+        // --- Bounded Context (Relations): Analytics and Recommendations
+        openAiClient -> openAiService 
+        analyticsFacade -> driverProfileComponent "Delegates driver profile operations"
+        analyticsFacade -> predictionComponent "Delegates prediction operations"
+        analyticsFacade -> recommendationComponent "Delegates recommendation operations"
+        driverProfileComponent -> analyticsRepository "Uses"
+        predictionComponent -> analyticsRepository "Uses"
+        recommendationComponent -> analyticsRepository "Uses"
+        recommendationComponent -> openAiClient "Invokes for recommendation text"
+        analyticsRepository -> database "Stores and retrieves analytics data"
+        
+        // --- Bounded Context (Relations): 
     }
     
     views {
@@ -61,6 +83,11 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
             autolayout tb
         }
         Container safeCarPlatform "SystemContainer" {
+            include *
+            autolayout tb
+        }
+        
+        component backend "BC-AnalyticsRecommendationsComponents" {
             include *
             autolayout tb
         }
@@ -94,7 +121,16 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
                 background #808080
             }
             
-        
+            element "Facade" {
+                background #ffcc00
+                color #000000
+            }
+            
+            element "Repository" {
+                shape folder
+                background #438dd5
+                color #ffffff
+            }
         }
     }
 
