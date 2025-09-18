@@ -1249,14 +1249,207 @@ El esquema relacional define cómo se almacenan los objetos del dominio *Analyti
 
 
 ### 4.2.5. Bounded Context: Driver Engagement
+
+Impulsar hábitos de conducción **seguros y eficientes** mediante *coaching*, **retos** y **recompensas**, aprovechando señales de negocio (p. ej., *Safety Score*, *Harsh Events*) publicadas por otros BCs (sin invadir sus modelos).
+
+---
+
 #### 4.2.5.1. Domain Layer
+
+**Propósito del BC**
+Aumentar la participación del conductor y mejorar su desempeño, orquestando objetivos medibles, sesiones de coaching y beneficios, de acuerdo con preferencias de comunicación y políticas del cliente.
+
+**A) Agregado y Entidades (diccionario)**
+
+- **Aggregate Root: `EngagementProfile`**
+  - **Propósito:** estado de participación del conductor y reglas de elegibilidad.
+  - **Invariantes:** un perfil por conductor; preferencias de comunicación no vacías; retos activos pertenecen al mismo `driverId`.
+  - **Atributos (clave):** `driverId: UUID`, `preferences: CommunicationPreferences`, `engagementLevel: EngagementLevel`, `activeChallenges: List<ChallengeId>`, `joinedAt: LocalDateTime`.
+  - **Comportamientos:** `enroll(...)`, `updatePreferences(...)`, `acceptChallenge(...)`, `completeChallenge(...)`, `scheduleCoaching(...)`.
+
+- **`Challenge`**
+  - **Propósito:** objetivo con periodo y criterio de éxito.
+  - **Atributos:** `id`, `driverId`, `name`, `period: DateRange`, `target: MetricTarget`, `status: ChallengeStatus`, `createdAt`.
+  - **Comportamientos:** `canBeAccepted(...)`, `registerProgress(...)`, `evaluateCompletion(assessor)`, `markCompleted()`.
+
+- **`CoachingSession`**
+  - **Propósito:** sesión de retroalimentación planificada o realizada.
+  - **Atributos:** `id`, `driverId`, `scheduledAt`, `notes: CoachingNotes`, `status: CoachingStatus`, `completedAt?`.
+  - **Comportamiento:** `complete(outcome: CoachingOutcome)`.
+
+- **`Reward`** *(inmutable)*
+  - **Propósito:** beneficio por logro.
+  - **Atributos:** `id`, `driverId`, `reason: RewardReason`, `value: RewardValue`, `issuedAt`, `expiresAt?`.
+
+**B) Value Objects & Enums**
+
+- `CommunicationPreferences { primaryChannel: Channel, allowPush: boolean, quietHours: QuietHours }`
+- `DateRange { start: LocalDate, end: LocalDate }` *(valida `start ≤ end`)*
+- `MetricTarget { metric: BusinessMetric, direction: Direction, baseline: BigDecimal, target: BigDecimal }`
+- `ProgressSnapshot { metric: BusinessMetric, value: BigDecimal, takenAt: LocalDateTime }`
+- `RewardValue { points: int | currency+amount }` *(una opción u otra)*
+- **Enums:**
+  - `EngagementLevel = LOW | MEDIUM | HIGH`
+  - `BusinessMetric = SAFETY_SCORE | HARSH_EVENTS | IDLE_TIME | FUEL_EFFICIENCY`
+  - `Direction = INCREASE | DECREASE`
+  - `ChallengeStatus = DRAFT | ACTIVE | COMPLETED | EXPIRED`
+  - `CoachingStatus = SCHEDULED | COMPLETED | CANCELLED`
+  - `RewardReason = CHALLENGE_COMPLETED | SUSTAINED_IMPROVEMENT | SAFETY_MILESTONE`
+  - `Channel = APP | EMAIL | SMS`
+
+**C) Servicios de Dominio (interfaces)**
+
+- `ChallengeAssessor.isCompleted(challenge, progress[]) : boolean`
+- `RewardPolicyEngine.deriveRewards(challenge) : List<Reward>`
+- `CoachingPlanner.planNextSession(profile, latestScore) : CoachingSession`
+
+**D) Repositorios (puertos del dominio)**
+
+- `EngagementProfileRepository { save, findByDriverId, existsByDriverId }`
+- `ChallengeRepository { save, findActiveByDriverId, findById }`
+- `CoachingSessionRepository { save, findScheduledByDriverId, findHistoryByDriverId }`
+- `RewardRepository { save, findAllByDriverId }`
+
+**E) Commands & Queries**
+
+- **Commands:**
+  `EnrollDriverCommand`, `UpdatePreferencesCommand`, `DefineChallengeCommand`,
+  `AcceptChallengeCommand`, `RegisterProgressCommand`, `CompleteChallengeCommand`,
+  `ScheduleCoachingCommand`, `CompleteCoachingCommand`
+- **Queries:**
+  `GetEngagementProfileQuery`, `GetActiveChallengesQuery`, `GetCoachingScheduleQuery`, `GetRewardsHistoryQuery`
+
+**F) Domain Events**
+
+`DriverEnrolledEvent`, `PreferencesUpdatedEvent`, `ChallengeDefinedEvent`, `ChallengeAcceptedEvent`,
+`ChallengeCompletedEvent`, `RewardGrantedEvent`, `CoachingSessionScheduledEvent`, `CoachingSessionCompletedEvent`
+
+**G) Facade (contratos con otros BCs)**
+
+- `ExternalAnalyticsFacade.latestScore(driverId)` / `recentMetric(driverId, metric, range)`
+- `ExternalNotificationPort.notify(driverId, template, payload)` *(solo interfaz; implementación fuera del dominio)*
+
+**H) Excepciones de Dominio**
+`EngagementProfileAlreadyExistsException`, `ChallengeNotFoundException`, `ChallengeNotActiveException`, `InvalidMetricTargetException`
+
+---
+
 #### 4.2.5.2. Interface Layer
+
+**A) Controladores (REST)**
+
+- `EngagementProfileController`
+  - `POST /api/v1/engagement/profiles` → `EnrollDriverCommand`
+  - `PUT /api/v1/engagement/profiles/{driverId}/preferences` → `UpdatePreferencesCommand`
+  - `GET /api/v1/engagement/profiles/{driverId}` → `GetEngagementProfileQuery`
+
+- `ChallengeController`
+  - `POST /api/v1/engagement/challenges` → `DefineChallengeCommand`
+  - `POST /api/v1/engagement/challenges/{challengeId}/accept` → `AcceptChallengeCommand`
+  - `POST /api/v1/engagement/challenges/{challengeId}/complete` → `CompleteChallengeCommand`
+  - `GET /api/v1/engagement/challenges?driverId=...` → `GetActiveChallengesQuery`
+
+- `CoachingController`
+  - `POST /api/v1/engagement/coaching` → `ScheduleCoachingCommand`
+  - `POST /api/v1/engagement/coaching/{sessionId}/complete` → `CompleteCoachingCommand`
+  - `GET /api/v1/engagement/coaching?driverId=...` → `GetCoachingScheduleQuery`
+
+- `RewardController`
+  - `GET /api/v1/engagement/rewards?driverId=...` → `GetRewardsHistoryQuery`
+
+**B) Resources (DTOs)**
+
+- **Requests:** `EnrollDriverResource`, `UpdatePreferencesResource`, `DefineChallengeResource`, `AcceptChallengeResource`, `ScheduleCoachingResource`, `CompleteCoachingResource`
+- **Responses:** `EngagementProfileResource`, `ChallengeResource`, `CoachingSessionResource`, `RewardResource`
+
+**C) Assemblers (mapeadores)**
+`EngagementProfileResourceAssembler`, `ChallengeResourceAssembler`, `CoachingResourceAssembler`, `RewardResourceAssembler`
+
+**D) Contrato & Errores**
+- `Problem+JSON` para errores (`400`, `404`, `422`, `500`)
+- `X-Request-Id` para trazabilidad; versionado `/api/v1`
+- Validaciones: rangos de fechas, targets, preferencias no vacías.
+
+---
+
 #### 4.2.5.3. Application Layer
+
+**A) Command Services**
+
+- `EngagementProfileCommandServiceImpl` → alta/actualización del perfil; emite `DriverEnrolledEvent`, `PreferencesUpdatedEvent`.
+- `ChallengeCommandServiceImpl` → define/acepta/completa retos, evalúa con `ChallengeAssessor`, otorga recompensas con `RewardPolicyEngine`; emite `Challenge*` y `RewardGrantedEvent`.
+- `CoachingCommandServiceImpl` → agenda/completa sesiones con `CoachingPlanner`; emite `CoachingSession*Event`.
+
+**B) Query Services**
+`EngagementProfileQueryServiceImpl`, `ChallengeQueryServiceImpl`, `CoachingQueryServiceImpl`, `RewardQueryServiceImpl`.
+
+**C) Event Handlers (integración)**
+
+- `OnSafetyScoreUpdatedHandler` *(escucha `SafetyScoreUpdated` de Analytics)*: registra `ProgressSnapshot`, re-evalúa retos, dispara `CompleteChallengeCommand` si corresponde.
+- `OnInsightDetectedHandler` *(escucha `InsightDetected`)*: agenda `CoachingSession` según políticas.
+
+**D) Outbound Services / ACL**
+`ExternalAnalyticsService` (impl de `ExternalAnalyticsFacade`) y `NotificationAdapter` (impl de `ExternalNotificationPort`).
+
+**E) Publicación de eventos**
+`DomainEventPublisher` (outbox + DLQ recomendado), transacciones iniciadas en Application.
+
+---
+
 #### 4.2.5.4. Infrastructure Layer
+
+**A) Persistencia (JPA/MySQL)**
+Entidades: `EngagementProfileEntity`, `ChallengeEntity`, `CoachingSessionEntity`, `RewardEntity`
+Repositorios: `EngagementProfileJpaRepository`, `ChallengeJpaRepository`, `CoachingSessionJpaRepository`, `RewardJpaRepository`
+Adaptadores (puertos dominio): `EngagementProfileRepositoryImpl`, `ChallengeRepositoryImpl`, `CoachingSessionRepositoryImpl`, `RewardRepositoryImpl`
+Mappers: `EngagementProfileMapper`, `ChallengeMapper`, `CoachingMapper`, `RewardMapper`
+Bloqueo optimista con `@Version`; índices por `driver_id`, `status`, fechas.
+
+**B) Integraciones**
+- `ExternalAnalyticsService` (HTTP/Feign) con *timeouts*, *retry*, *circuit breaker*.
+- `NotificationAdapter` (HTTP) hacia *Notification Gateway* (plantillas/canales).
+
+**C) Eventos & Observabilidad**
+`DomainEventPublisherImpl` (Spring Events o broker), *outbox*, *DLQ*; métricas y logs con `X-Request-Id`.
+
+**D) Migraciones & Config**
+Flyway/Liquibase (DDL + índices); `PersistenceConfig`, `ClientsConfig`.
+
+---
+
 #### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+<img src="/assets/img/capitulo-IV/Bounded Context Software Architecture Component Level Diagrams.png" alt="Bounded Context Software Architecture Component Level Diagrams" width="1000"/>
+
+Breve guía de lectura:
+- **Interface:** controllers → orquestan command/query services y ensamblan DTOs.
+- **Application:** command/query services + event handlers + ACL (Analytics/Notification).
+- **Domain:** aggregates (`EngagementProfile`, `Challenge`, `CoachingSession`, `Reward`), domain services, repos (puertos).
+- **Infrastructure:** repos JPA, mappers, clients externos, event publisher → DB / Notification / Analytics.
+
+---
+
 #### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
 #### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+<img src="/assets/img/capitulo-IV/Bounded Context Domain Layer Class Diagrams.png" alt="Bounded Context Software Architecture Component Level Diagrams" width="1000"/>
+
+Notas: composición **1—N** de `EngagementProfile` con `Challenge`, `CoachingSession`, `Reward`; VOs con invariantes; interfaces de dominio separadas de implementaciones; eventos asociados a sus entidades.
+
+---
+
 ##### 4.2.5.6.2. Bounded Context Database Design Diagram
+
+<img src="/assets/img/capitulo-IV/Bounded Context Database Design Diagram.png" alt=" Bounded Context Database Design Diagram" width="1000"/>
+
+Descripción breve del diseño y constraints:
+- **Tablas:** `engagement_profiles` (único por `driver_id`), `challenges`, `coaching_sessions`, `rewards` con FK a perfil.
+- **Cardinalidades:** `engagement_profiles 1—N challenges | coaching_sessions | rewards`.
+- **Integridad:** `ON DELETE RESTRICT`; locking optimista en `engagement_profiles`.
+- **Desnormalización:** duplicar `driver_id` en tablas hijas para consultas rápidas por conductor.
+- **Reglas:** `RewardValue` exige puntos **o** monto (constraint/validación).
+- **Rendimiento:** índices compuestos por conductor/fecha/estado y columnas de periodo para filtros eficientes.
+
 
 ### 4.2.6. Bounded Context: Workshop Operations
 #### 4.2.6.1. Domain Layer
