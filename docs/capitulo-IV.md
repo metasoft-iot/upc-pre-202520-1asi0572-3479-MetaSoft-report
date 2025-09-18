@@ -131,10 +131,15 @@ El <b>Container Diagram</b> representa la arquitectura de alto nivel de la plata
 Este nivel permite visualizar claramente cómo se distribuyen las responsabilidades entre los distintos componentes y cómo cada contenedor cumple un rol específico dentro de la solución.
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
+<p align="justify">
+Los <b>Deployment Diagrams</b> representan la arquitectura física de despliegue de la plataforma SafeCar, mostrando cómo los contenedores de software se distribuyen en la infraestructura tecnológica. Este nivel de detalle es esencial para comprender los aspectos operacionales del sistema, incluyendo la configuración de servidores, bases de datos, servicios en la nube y las conexiones de red entre los diferentes nodos de la infraestructura.
+</p>
 
+<p align="justify">
+En SafeCar, el despliegue se ha diseñado considerando escalabilidad, disponibilidad y seguridad. La arquitectura aprovecha tanto infraestructura local como servicios en la nube para garantizar un rendimiento óptimo y la capacidad de manejar el crecimiento de usuarios y dispositivos IoT conectados.
+</p>
 
-
-
+<img src="/assets/img/capitulo-IV/Software-Architecture-Deployment-Diagrams.png" alt="Deployment Diagram SafeCar" width="1000"/>
 
 
 ## 4.2. Tactical-Level Domain-Driven Design
