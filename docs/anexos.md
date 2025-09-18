@@ -29,3 +29,18 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
         <td>Landing Page de SafeCar.</td>
     </tr>
 </table>
+
+### Anexo B. Videos de Exposiciones
+
+<table>
+    <tr>
+        <th>Video</th>
+        <th>Link to Video</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>TB1</td>
+        <td>https://shorturl.at/vTY8x</td>
+        <td>Video explicativo del proyecto SafeCar para la primera entrega del proyecto</td>
+    </tr>
+</table>
