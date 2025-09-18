@@ -69,6 +69,164 @@ Notification Gateway
 
 ### 4.1.2. Context Mapping
 
+Se describe las relaciones estructurales entre los **Bounded Contexts** de la plataforma, los **patrones DDD** aplicados y los **contratos** (eventos/APIs) que conectan los contextos.
+
+<img src="/assets/img/capitulo-IV/context-mapping.png" alt="Context mapping" width="1000"/>
+
+<table>
+  <caption>Relaciones clave entre Bounded Contexts y patrones DDD</caption>
+  <thead>
+    <tr>
+      <th>Desde</th>
+      <th>Hacia</th>
+      <th>Propósito</th>
+      <th>Patrón DDD</th>
+      <th>Contrato</th>
+      <th>Mensajes / Consultas</th>
+      <th>SLA / Notas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Device Management</td>
+      <td>Telemetry Processing</td>
+      <td>Propagar alta/estado de dispositivo</td>
+      <td>Published Language (+ Conformist en TP)</td>
+      <td>Eventos</td>
+      <td><code>DeviceProvisioned</code>, <code>DeviceAssigned</code>, <code>DeviceDecommissioned</code></td>
+      <td>Entrega eventual ≤ 1 min</td>
+    </tr>
+    <tr>
+      <td>Telemetry Processing</td>
+      <td>Analytics &amp; Recommendations</td>
+      <td>Alimentar analítica con datos normalizados</td>
+      <td>Customer/Supplier</td>
+      <td>Eventos</td>
+      <td><code>TelemetryNormalized</code>, <code>TripSegmentClosed</code></td>
+      <td>p95 ≤ 5 s; pérdida &lt; 0.1%</td>
+    </tr>
+    <tr>
+      <td>Telemetry Processing</td>
+      <td>Admin &amp; Billing</td>
+      <td>Medición de uso para facturación</td>
+      <td>Customer/Supplier</td>
+      <td>Evento</td>
+      <td><code>UsageMetered</code></td>
+      <td>Corte diario 23:59 UTC</td>
+    </tr>
+    <tr>
+      <td>Analytics &amp; Recommendations</td>
+      <td>Alerting</td>
+      <td>Disparar alertas según insights</td>
+      <td>Published Language</td>
+      <td>Eventos</td>
+      <td><code>InsightDetected</code>, <code>AnomalyDetected</code></td>
+      <td>Entrega ≤ 10 s</td>
+    </tr>
+    <tr>
+      <td>Analytics &amp; Recommendations</td>
+      <td>Driver Engagement</td>
+      <td>Actualizar puntaje de conductor</td>
+      <td>Conformist</td>
+      <td>Evento</td>
+      <td><code>SafetyScoreUpdated</code></td>
+      <td>Consistencia eventual</td>
+    </tr>
+    <tr>
+      <td>Analytics &amp; Recommendations</td>
+      <td>Workshop Operations</td>
+      <td>Recomendar mantenimientos</td>
+      <td>Published Language</td>
+      <td>Evento</td>
+      <td><code>MaintenanceRecommendation</code></td>
+      <td>Ventana de programación configurable</td>
+    </tr>
+    <tr>
+      <td>Alerting</td>
+      <td>Notification Gateway</td>
+      <td>Enviar mensajes transaccionales</td>
+      <td>Open-Host Service</td>
+      <td>API / Comando</td>
+      <td><code>SendMessage(tenant, template, channel, payload)</code></td>
+      <td>Tasa de entrega ≥ 99%</td>
+    </tr>
+    <tr>
+      <td>Driver Engagement</td>
+      <td>Notification Gateway</td>
+      <td>Enviar coaching/campañas</td>
+      <td>Open-Host Service</td>
+      <td>API / Comando</td>
+      <td><code>SendMessage(...)</code></td>
+      <td>Respeta ventanas de silencio</td>
+    </tr>
+    <tr>
+      <td>Workshop Operations</td>
+      <td>Device Management</td>
+      <td>Solicitar cambio de dispositivo</td>
+      <td>Open-Host Service</td>
+      <td>API / Comando</td>
+      <td><code>RequestDeviceSwap(vehicle, oldDevice, newDevice)</code></td>
+      <td>Idempotencia por <code>requestId</code></td>
+    </tr>
+    <tr>
+      <td>Workshop Operations</td>
+      <td>Admin &amp; Billing</td>
+      <td>Generar cargos por servicio</td>
+      <td>Published Language</td>
+      <td>Evento</td>
+      <td><code>WorkOrderClosed</code></td>
+      <td>Corte semanal</td>
+    </tr>
+    <tr>
+      <td>Admin &amp; Billing</td>
+      <td>(DM / AL / DE / WO)</td>
+      <td>Señalar suspensión/reactivación de servicio</td>
+      <td>Published Language</td>
+      <td>Eventos</td>
+      <td><code>SubscriptionSuspended</code>, <code>SubscriptionReactivated</code></td>
+      <td>Efecto ≤ 1 min</td>
+    </tr>
+    <tr>
+      <td>Security &amp; Compliance</td>
+      <td>Todos</td>
+      <td>Publicar/actualizar políticas y auditar</td>
+      <td>Policy Provider (+ Published Language)</td>
+      <td>Evento</td>
+      <td><code>SecurityPolicyUpdated</code>, <code>AuditRecord</code></td>
+      <td>Retención y acceso por tenant</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Decisiones y supuestos
+
+- **Driver Score** vive en **Analytics** y se **publica** a Driver Engagement (`SafetyScoreUpdated`) para evitar duplicación de cálculo.
+- **Elegibilidad de servicio** depende de **Admin & Billing** y se comunica por eventos (`SubscriptionSuspended/Reactived`), no con consultas síncronas en el camino crítico.
+- **Notification Gateway** es un **OHS** común; centraliza plantillas y trazabilidad de entrega.
+- **Security & Compliance** actúa como **Policy Provider** y emite `SecurityPolicyUpdated`; cada contexto aplica retención y acceso de acuerdo a su categoría de datos.
+- Todos los eventos se **versionan** (`type`, `version`, `occurredAt`, `tenantId`, `entityId`) y se implementa **Outbox + DLQ** para entrega fiable.
+
+---
+
+## Riesgos y mitigaciones (resumen)
+
+- **Tormenta de alertas** → *Throttling*, deduplicación, prioridades por severidad/tenant.
+- **Late data** en telemetría → ventanas de tolerancia por negocio, reprocesos controlados.
+- **Inconsistencias de elegibilidad** → event-sourcing de `SubscriptionStatus` + reconciliación diaria.
+- **Lock-in analítico** → contratos de PL claros y gobernanza de versiones; evitar Shared Kernel salvo taxonomías muy estables.
+
+---
+
+## Glosario de patrones
+
+- **Published Language (PL)**: el upstream publica un idioma/contrato estable (eventos o API) que downstreams consumen.
+- **Conformist (CF)**: el downstream adopta el modelo del upstream para ir rápido (menos protección).
+- **Customer/Supplier (CS)**: relación con expectativas y **SLA** claros entre consumidor y proveedor.
+- **Open‑Host Service (OHS)**: API pública y estable que varios contextos pueden usar sin coordinaciones especiales.
+- **Policy Provider (PP)**: contexto que define y emite políticas transversales (acceso, retención, auditoría).
+
+
 ### 4.1.3. Software Architecture
 <p align="justify">
 La arquitectura de software de <b>SafeCar</b> se ha diseñado aplicando el modelo <b>C4</b>, lo que permite representar de manera jerárquica y clara los distintos niveles de abstracción del sistema: desde la visión general hasta los detalles de implementación y despliegue. Este enfoque asegura que todos los involucrados comprendan cómo se organiza la solución y cómo interactúan sus diferentes componentes.
@@ -1102,125 +1260,125 @@ El esquema relacional define cómo se almacenan los objetos del dominio *Analyti
 
 ### 4.2.6. Bounded Context: Workshop Operations
 #### 4.2.6.1. Domain Layer
-**Propósito del BC**  
+**Propósito del BC**
 Gestionar la **operación del taller**: agenda de servicios, órdenes de trabajo y asignación de recursos (mecánicos/bahías), garantizando disponibilidad y trazabilidad del servicio.
 
 **A) Agregados y Entidades (diccionario)**
 
-- **Aggregate Root: `Workshop`**  
-  **Propósito:** representar un taller con su oferta y capacidades.  
-  **Invariantes:** (i) horarios válidos (`open < close`), (ii) `ServiceCatalogItem.code` único por taller.  
+- **Aggregate Root: `Workshop`**
+  **Propósito:** representar un taller con su oferta y capacidades.
+  **Invariantes:** (i) horarios válidos (`open < close`), (ii) `ServiceCatalogItem.code` único por taller.
   **Atributos (clave):** `workshopId: UUID`, `name`, `address`, `openingHours: WeeklyHours`, `serviceCatalog: List<ServiceCatalogItem>`, `resources: List<WorkshopResource>`.
 
-- **Aggregate Root: `WorkOrder`**  
-  **Propósito:** ciclo de vida de una **orden de servicio**.  
-  **Estados:** `REQUESTED → SCHEDULED → IN_PROGRESS → COMPLETED` (o `CANCELLED`).  
-  **Invariantes:** no se puede iniciar si no está `SCHEDULED`; una orden `COMPLETED` es inmutable.  
+- **Aggregate Root: `WorkOrder`**
+  **Propósito:** ciclo de vida de una **orden de servicio**.
+  **Estados:** `REQUESTED → SCHEDULED → IN_PROGRESS → COMPLETED` (o `CANCELLED`).
+  **Invariantes:** no se puede iniciar si no está `SCHEDULED`; una orden `COMPLETED` es inmutable.
   **Atributos:** `workOrderId: UUID`, `workshopId: UUID`, `vehicleId: UUID`, `driverId: UUID`, `requestedServices: List<ServiceItem>`, `scheduledSlot: TimeSlot?`, `assigned: Assignment?`, `status: WorkOrderStatus`, `estimatedCost: Money`, `notes: String?`.
 
-- **Entidad: `Appointment`** (si se usa reserva separada)  
+- **Entidad: `Appointment`** (si se usa reserva separada)
   `appointmentId`, `workshopId`, `vehicleId`, `driverId`, `slot: TimeSlot`, `status: AppointmentStatus`.
 
-- **Entidad: `WorkshopResource`**  
+- **Entidad: `WorkshopResource`**
   `resourceId: UUID`, `type: ResourceType (MECHANIC|BAY)`, `name`, `skills: Set<ServiceCode>`.
 
-**B) Value Objects**  
+**B) Value Objects**
 `WeeklyHours`, `TimeSlot(start, end)`, `ServiceCode`, `Money(amount, currency)`, `Assignment(mechanicId, bayId)`, `ServiceItem(code, laborMinutes)`.
 
-**C) Servicios de Dominio (interfaces)**  
-- `SchedulingPolicy` → `findFirstAvailableSlot(workshopId, services, after: Instant): TimeSlot`  
-- `AssignmentPolicy` → `selectResources(workshopId, services, slot): Assignment`  
+**C) Servicios de Dominio (interfaces)**
+- `SchedulingPolicy` → `findFirstAvailableSlot(workshopId, services, after: Instant): TimeSlot`
+- `AssignmentPolicy` → `selectResources(workshopId, services, slot): Assignment`
 - `CostEstimator` → `estimate(services, laborRates, parts): Money`
 
-**D) Repositorios (puertos de dominio)**  
+**D) Repositorios (puertos de dominio)**
 `WorkshopRepository`, `WorkOrderRepository`, (opc.) `AppointmentRepository`.
 
-**E) Commands & Queries (records)**  
-**Commands:** `CreateWorkshop`, `AddServiceToCatalog`, `CreateAppointment`, `ScheduleWorkOrder`, `StartWorkOrder`, `CompleteWorkOrder`, `CancelWorkOrder`, `RescheduleAppointment`.  
+**E) Commands & Queries (records)**
+**Commands:** `CreateWorkshop`, `AddServiceToCatalog`, `CreateAppointment`, `ScheduleWorkOrder`, `StartWorkOrder`, `CompleteWorkOrder`, `CancelWorkOrder`, `RescheduleAppointment`.
 **Queries:** `GetWorkshopSchedule`, `GetNextAvailableSlot`, `GetWorkOrdersByWorkshop`, `GetWorkOrderDetails`.
 
-**F) Domain Events**  
+**F) Domain Events**
 `AppointmentRequested`, `AppointmentScheduled`, `WorkOrderCreated`, `WorkOrderStarted`, `WorkOrderCompleted`, `WorkOrderCancelled`, `WorkOrderRescheduled`.
 
-**G) Facades entre BCs (puertos)**  
-- `ExternalDriverFacade` → `existsDriver(driverId)`, `getVehicleBasic(vehicleId)` (*Driver Engagement*).  
-- `ExternalBillingFacade` → `openInvoiceFor(workOrderId, amount)` (*Admin & Billing*).  
+**G) Facades entre BCs (puertos)**
+- `ExternalDriverFacade` → `existsDriver(driverId)`, `getVehicleBasic(vehicleId)` (*Driver Engagement*).
+- `ExternalBillingFacade` → `openInvoiceFor(workOrderId, amount)` (*Admin & Billing*).
 - (Opc.) `ExternalAlertingFacade` para cerrar alertas asociadas.
 
-**H) Excepciones de Dominio**  
+**H) Excepciones de Dominio**
 `InvalidTimeSlotException`, `NoResourcesAvailableException`, `WorkOrderStateException`, `WorkshopNotFoundException`.
 
 #### 4.2.6.2. Interface Layer
 **A) REST Controllers**
 
 1) **`WorkshopsController`**
-- `POST /api/v1/workshops` → `CreateWorkshop`  
-- `POST /api/v1/workshops/{id}/catalog` → `AddServiceToCatalog`  
+- `POST /api/v1/workshops` → `CreateWorkshop`
+- `POST /api/v1/workshops/{id}/catalog` → `AddServiceToCatalog`
 - `GET  /api/v1/workshops/{id}/schedule?from=&to=` → `GetWorkshopSchedule`
 
 2) **`AppointmentsController`**
-- `POST /api/v1/workshops/{id}/appointments` → `CreateAppointment`  
-- `PUT  /api/v1/appointments/{appointmentId}/reschedule` → `RescheduleAppointment`  
+- `POST /api/v1/workshops/{id}/appointments` → `CreateAppointment`
+- `PUT  /api/v1/appointments/{appointmentId}/reschedule` → `RescheduleAppointment`
 - `DELETE /api/v1/appointments/{appointmentId}` → `CancelWorkOrder`
 
 3) **`WorkOrdersController`**
-- `POST /api/v1/workshops/{id}/work-orders` → `ScheduleWorkOrder`  
-- `PUT  /api/v1/work-orders/{id}/start` → `StartWorkOrder`  
-- `PUT  /api/v1/work-orders/{id}/complete` → `CompleteWorkOrder`  
-- `GET  /api/v1/workshops/{id}/work-orders?status=` → `GetWorkOrdersByWorkshop`  
+- `POST /api/v1/workshops/{id}/work-orders` → `ScheduleWorkOrder`
+- `PUT  /api/v1/work-orders/{id}/start` → `StartWorkOrder`
+- `PUT  /api/v1/work-orders/{id}/complete` → `CompleteWorkOrder`
+- `GET  /api/v1/workshops/{id}/work-orders?status=` → `GetWorkOrdersByWorkshop`
 - `GET  /api/v1/work-orders/{id}` → `GetWorkOrderDetails`
 
-**B) DTOs**  
-`CreateWorkshopResource`, `ServiceCatalogItemResource`, `CreateAppointmentResource(driverId, vehicleId, services[], preferredWindow)`,  
+**B) DTOs**
+`CreateWorkshopResource`, `ServiceCatalogItemResource`, `CreateAppointmentResource(driverId, vehicleId, services[], preferredWindow)`,
 `ScheduleWorkOrderResource(appointmentId?, services[], preferredWindow)`, `WorkOrderResource(id, status, slot, assignment, estimatedCost, services[])`.
 
-**C) Assemblers**  
+**C) Assemblers**
 `WorkshopResourceAssembler`, `AppointmentResourceAssembler`, `WorkOrderResourceAssembler`.
 
-**D) Errores (contrato)**  
+**D) Errores (contrato)**
 `Problem+JSON`, `400` validación, `404` no encontrado, `409` conflicto de agenda, `422` reglas de negocio.
 
 
 #### 4.2.6.3. Application Layer
 
-**Command Services**  
-- `WorkshopCommandService` → `createWorkshop`, `addServiceToCatalog`  
-- `AppointmentCommandService` → `create`, `reschedule`, `cancel`  
-- `WorkOrderCommandService` → `schedule`, `start`, `complete`, `cancel`  
+**Command Services**
+- `WorkshopCommandService` → `createWorkshop`, `addServiceToCatalog`
+- `AppointmentCommandService` → `create`, `reschedule`, `cancel`
+- `WorkOrderCommandService` → `schedule`, `start`, `complete`, `cancel`
   - En `complete(..)`: calcula costo (via `CostEstimator`) y **publica** `WorkOrderCompleted(amount)`.
 
-**Query Services**  
+**Query Services**
 `WorkshopQueryService`, `WorkOrderQueryService`.
 
-**Event Handlers**  
-- `OnAppointmentRequested` → intenta `ScheduleWorkOrder`.  
+**Event Handlers**
+- `OnAppointmentRequested` → intenta `ScheduleWorkOrder`.
 - `OnWorkOrderCompleted` → `ExternalBillingFacade.openInvoiceFor(..)`.
 
-**ACL / Outbound**  
+**ACL / Outbound**
 `ExternalDriverService` (impl de `ExternalDriverFacade`), `ExternalBillingService` (impl de `ExternalBillingFacade`).
 
 #### 4.2.6.4. Infrastructure Layer
 
-**Persistencia (JPA/MySQL)**  
-- `WorkshopEntity(id, name, address, openingHoursJson)`  
-- `ServiceCatalogItemEntity(id, workshopId, code, name, laborMinutes, basePrice)`  
-- `WorkOrderEntity(id, workshopId, driverId, vehicleId, status, slotStart, slotEnd, estimatedAmount, currency, createdAt, updatedAt)`  
-- `WorkOrderServiceEntity(workOrderId, code, laborMinutes, price, currency)`  
-- `ResourceEntity(id, workshopId, type, name, skillsJson)`  
-Repos `*JpaRepository` + adaptadores `*RepositoryImpl` (mappers Entity ⇄ Aggregate).  
+**Persistencia (JPA/MySQL)**
+- `WorkshopEntity(id, name, address, openingHoursJson)`
+- `ServiceCatalogItemEntity(id, workshopId, code, name, laborMinutes, basePrice)`
+- `WorkOrderEntity(id, workshopId, driverId, vehicleId, status, slotStart, slotEnd, estimatedAmount, currency, createdAt, updatedAt)`
+- `WorkOrderServiceEntity(workOrderId, code, laborMinutes, price, currency)`
+- `ResourceEntity(id, workshopId, type, name, skillsJson)`
+Repos `*JpaRepository` + adaptadores `*RepositoryImpl` (mappers Entity ⇄ Aggregate).
 Migraciones con Flyway/Liquibase. Índices: `(workshop_id, status, slot_start)`.
 
-**Integraciones**  
-- (Opc.) Email/SMS al confirmar cita (cliente Twilio).  
+**Integraciones**
+- (Opc.) Email/SMS al confirmar cita (cliente Twilio).
 - Observabilidad y métricas de tiempos de agendado.
 
 #### 4.2.6.5. Bounded Context Software Architecture Component Level Diagrams
 
 **Componentes (y responsabilidades):**
-- **Scheduling Component** (Application+Domain): orquesta `SchedulingPolicy` y repos.  
-- **Work Orders Component** (Application+Domain): gestiona ciclo de vida de órdenes.  
-- **Catalog Component** (Application+Domain): catálogo y recursos.  
-- **Persistence Adapter** (Infrastructure): JPA para Workshop/WorkOrder.  
+- **Scheduling Component** (Application+Domain): orquesta `SchedulingPolicy` y repos.
+- **Work Orders Component** (Application+Domain): gestiona ciclo de vida de órdenes.
+- **Catalog Component** (Application+Domain): catálogo y recursos.
+- **Persistence Adapter** (Infrastructure): JPA para Workshop/WorkOrder.
 - **Driver ACL / Billing ACL** (Application outbound): integración inter-BC.
 
 //Diagrama
@@ -1232,63 +1390,63 @@ Migraciones con Flyway/Liquibase. Índices: `(workshop_id, status, slot_start)`.
 
 Diagram
 
-Tablas:  
-- `workshops(id PK, name, address, opening_hours JSON, created_at)`  
-- `service_catalog_items(id PK, workshop_id FK, code, name, labor_minutes, base_price, currency, UNIQUE(workshop_id, code))`  
-- `work_orders(id PK, workshop_id FK, driver_id, vehicle_id, status, slot_start, slot_end, estimated_amount, currency, created_at, updated_at)`  
-- `work_order_services(id PK, work_order_id FK, code, labor_minutes, price, currency)`  
-- `workshop_resources(id PK, workshop_id FK, type, name, skills JSON)`  
+Tablas:
+- `workshops(id PK, name, address, opening_hours JSON, created_at)`
+- `service_catalog_items(id PK, workshop_id FK, code, name, labor_minutes, base_price, currency, UNIQUE(workshop_id, code))`
+- `work_orders(id PK, workshop_id FK, driver_id, vehicle_id, status, slot_start, slot_end, estimated_amount, currency, created_at, updated_at)`
+- `work_order_services(id PK, work_order_id FK, code, labor_minutes, price, currency)`
+- `workshop_resources(id PK, workshop_id FK, type, name, skills JSON)`
 Índices: `workshop_id`, `status`, `(slot_start, slot_end)`.
 
 
 ### 4.2.7. Bounded Context: Admin and Billing
 #### 4.2.7.1. Domain Layer
 
-**Propósito del BC**  
+**Propósito del BC**
 Administrar **planes, suscripciones, facturación y pagos** para conductores y talleres; integrar con **pasarela de pagos** e impuestos.
 
 **A) Agregados y Entidades**
 
-- **Aggregate Root: `Plan`**  
+- **Aggregate Root: `Plan`**
   `planId`, `name`, `features: Set<FeatureFlag>`, `price: Money`, `billingCycle: BillingCycle (MONTHLY|YEARLY)`, `currency`, `active`.
 
-- **Aggregate Root: `Subscription`**  
-  `subscriptionId`, `accountId`, `planId`, `status: SubscriptionStatus (ACTIVE|PAST_DUE|CANCELLED)`, `startDate`, `currentPeriodEnd`, `paymentMethodRef`, `trialEndsAt?`.  
+- **Aggregate Root: `Subscription`**
+  `subscriptionId`, `accountId`, `planId`, `status: SubscriptionStatus (ACTIVE|PAST_DUE|CANCELLED)`, `startDate`, `currentPeriodEnd`, `paymentMethodRef`, `trialEndsAt?`.
   **Reglas:** prorrateo al cambiar de plan; no cobrar fuera de ciclo.
 
-- **Aggregate Root: `Invoice`**  
+- **Aggregate Root: `Invoice`**
   `invoiceId`, `accountId`, `periodStart`, `periodEnd`, `lines: List<InvoiceLine>`, `subtotal: Money`, `taxes: Money`, `total: Money`, `status: InvoiceStatus (OPEN|PAID|VOID|FAILED)`.
 
-- **Entidad: `Payment`**  
+- **Entidad: `Payment`**
   `paymentId`, `invoiceId`, `amount: Money`, `provider: PaymentProvider`, `providerRef`, `status: PaymentStatus (PENDING|SUCCEEDED|FAILED|REFUNDED)`.
 
-- **Entidad: `Account`**  
+- **Entidad: `Account`**
   `accountId`, `type (DRIVER|WORKSHOP)`, `email`, `taxId?`, `billingAddress?`.
 
-**B) Value Objects**  
+**B) Value Objects**
 `Money`, `Percentage`, `BillingCycle`, `TaxRate`, `Coupon(code, percentOff?)`, `PaymentMethodToken`.
 
-**C) Servicios de Dominio**  
-- `BillingService` → `generateInvoice(subscriptionId, period): Invoice`  
-- `ProrationService` → `prorate(oldPlan, newPlan, remainingDays): Money`  
-- `TaxService` → `applyTaxes(subtotal, country): Money`  
+**C) Servicios de Dominio**
+- `BillingService` → `generateInvoice(subscriptionId, period): Invoice`
+- `ProrationService` → `prorate(oldPlan, newPlan, remainingDays): Money`
+- `TaxService` → `applyTaxes(subtotal, country): Money`
 - `PaymentProcessor` (puerto) → `charge(invoiceId, amount, token): PaymentResult`
 
-**D) Repositorios (puertos)**  
+**D) Repositorios (puertos)**
 `PlanRepository`, `SubscriptionRepository`, `InvoiceRepository`, `PaymentRepository`, `AccountRepository`.
 
-**E) Commands & Queries**  
-**Commands:** `CreatePlan`, `CreateSubscription`, `ChangePlan`, `CancelSubscription`, `GenerateInvoice`, `ChargeInvoice`, `RefundPayment`.  
+**E) Commands & Queries**
+**Commands:** `CreatePlan`, `CreateSubscription`, `ChangePlan`, `CancelSubscription`, `GenerateInvoice`, `ChargeInvoice`, `RefundPayment`.
 **Queries:** `GetActiveSubscriptionByAccount`, `ListInvoicesByAccount`, `GetInvoiceDetails`, `GetPlans`.
 
-**F) Domain Events**  
+**F) Domain Events**
 `SubscriptionCreated`, `SubscriptionCancelled`, `InvoiceGenerated`, `PaymentSucceeded`, `PaymentFailed`, `PaymentRefunded`.
 
-**G) Facades**  
-- `ExternalIAMFacade` → validar identidad/correo.  
+**G) Facades**
+- `ExternalIAMFacade` → validar identidad/correo.
 - **BillingFacade (expuesto a otros BCs):** `openInvoiceFor(workOrderId, amount)` para *Workshop Operations*.
 
-**H) Excepciones**  
+**H) Excepciones**
 `InvalidPlanException`, `SubscriptionNotActiveException`, `InvoiceAlreadyPaidException`, `PaymentGatewayException`.
 
 
@@ -1296,81 +1454,81 @@ Administrar **planes, suscripciones, facturación y pagos** para conductores y t
 
 **A) REST Controllers**
 
-1) **`PlansController`**  
-- `POST /api/v1/billing/plans` → `CreatePlan`  
+1) **`PlansController`**
+- `POST /api/v1/billing/plans` → `CreatePlan`
 - `GET  /api/v1/billing/plans` → `GetPlans`
 
-2) **`SubscriptionsController`**  
-- `POST /api/v1/billing/subscriptions` → `CreateSubscription`  
-- `PUT  /api/v1/billing/subscriptions/{id}/change-plan` → `ChangePlan`  
-- `DELETE /api/v1/billing/subscriptions/{id}` → `CancelSubscription`  
+2) **`SubscriptionsController`**
+- `POST /api/v1/billing/subscriptions` → `CreateSubscription`
+- `PUT  /api/v1/billing/subscriptions/{id}/change-plan` → `ChangePlan`
+- `DELETE /api/v1/billing/subscriptions/{id}` → `CancelSubscription`
 - `GET  /api/v1/billing/subscriptions/active?accountId=` → `GetActiveSubscriptionByAccount`
 
-3) **`InvoicesController`**  
-- `POST /api/v1/billing/invoices` → `GenerateInvoice`  
-- `POST /api/v1/billing/invoices/{id}/charge` → `ChargeInvoice`  
-- `POST /api/v1/billing/invoices/{id}/refund` → `RefundPayment`  
-- `GET  /api/v1/billing/invoices?accountId=` → `ListInvoicesByAccount`  
+3) **`InvoicesController`**
+- `POST /api/v1/billing/invoices` → `GenerateInvoice`
+- `POST /api/v1/billing/invoices/{id}/charge` → `ChargeInvoice`
+- `POST /api/v1/billing/invoices/{id}/refund` → `RefundPayment`
+- `GET  /api/v1/billing/invoices?accountId=` → `ListInvoicesByAccount`
 - `GET  /api/v1/billing/invoices/{id}` → `GetInvoiceDetails`
 
-**B) DTOs**  
-`PlanResource`, `CreatePlanResource`,  
-`CreateSubscriptionResource(accountId, planId, paymentMethodToken)`,  
-`ChangePlanResource(newPlanId)`,  
-`InvoiceResource(id, total, status, periodStart, periodEnd, lines[])`,  
+**B) DTOs**
+`PlanResource`, `CreatePlanResource`,
+`CreateSubscriptionResource(accountId, planId, paymentMethodToken)`,
+`ChangePlanResource(newPlanId)`,
+`InvoiceResource(id, total, status, periodStart, periodEnd, lines[])`,
 `ChargeInvoiceResource(paymentMethodToken)`.
 
-**C) Assemblers**  
+**C) Assemblers**
 `PlanResourceAssembler`, `SubscriptionResourceAssembler`, `InvoiceResourceAssembler`.
 
-**D) Errores (contrato)**  
+**D) Errores (contrato)**
 `400` validación, `402` *Payment Required*, `404`, `409` conflictos, `422` reglas (prorrateo/estado).
 
 
 #### 4.2.7.3. Application Layer
 
-**Command Services**  
-- `PlanCommandService` → alta/edición de planes.  
-- `SubscriptionCommandService` → create/change/cancel (incluye prorrateo).  
-- `InvoicingCommandService` → `generate`, `charge`, `refund` (usa `PaymentProcessor`).  
+**Command Services**
+- `PlanCommandService` → alta/edición de planes.
+- `SubscriptionCommandService` → create/change/cancel (incluye prorrateo).
+- `InvoicingCommandService` → `generate`, `charge`, `refund` (usa `PaymentProcessor`).
 
-**Query Services**  
+**Query Services**
 `SubscriptionQueryService`, `InvoiceQueryService`, `PlanQueryService`.
 
-**Event Handlers**  
-- `OnWorkOrderCompleted` (desde *Workshop Operations*): `GenerateInvoice(accountId, amount)` y luego `ChargeInvoice`.  
-- `OnPaymentSucceeded` → marcar factura como `PAID`, emitir recibo.  
+**Event Handlers**
+- `OnWorkOrderCompleted` (desde *Workshop Operations*): `GenerateInvoice(accountId, amount)` y luego `ChargeInvoice`.
+- `OnPaymentSucceeded` → marcar factura como `PAID`, emitir recibo.
 - `OnPaymentFailed` → marcar `PAST_DUE`, notificar.
 
-**ACL / Outbound**  
-- `StripePaymentProcessor` o `MercadoPagoPaymentProcessor` (impl de `PaymentProcessor`) con *timeouts/retry/circuit-breaker*.  
+**ACL / Outbound**
+- `StripePaymentProcessor` o `MercadoPagoPaymentProcessor` (impl de `PaymentProcessor`) con *timeouts/retry/circuit-breaker*.
 - (Opc.) `TaxServiceClient`.
 
 
 #### 4.2.7.4. Infrastructure Layer
 
-**Persistencia (JPA/MySQL)**  
-- `plans(id, name, price_amount, currency, billing_cycle, active)`  
-- `accounts(id, type, email, tax_id, billing_address_json)`  
-- `subscriptions(id, account_id FK, plan_id FK, status, start_date, current_period_end, payment_method_ref, trial_ends_at)`  
-- `invoices(id, account_id FK, period_start, period_end, subtotal_amount, tax_amount, total_amount, currency, status, created_at)`  
-- `invoice_lines(id, invoice_id FK, description, quantity, unit_price_amount, currency)`  
-- `payments(id, invoice_id FK, amount, currency, provider, provider_ref, status, created_at)`  
+**Persistencia (JPA/MySQL)**
+- `plans(id, name, price_amount, currency, billing_cycle, active)`
+- `accounts(id, type, email, tax_id, billing_address_json)`
+- `subscriptions(id, account_id FK, plan_id FK, status, start_date, current_period_end, payment_method_ref, trial_ends_at)`
+- `invoices(id, account_id FK, period_start, period_end, subtotal_amount, tax_amount, total_amount, currency, status, created_at)`
+- `invoice_lines(id, invoice_id FK, description, quantity, unit_price_amount, currency)`
+- `payments(id, invoice_id FK, amount, currency, provider, provider_ref, status, created_at)`
 Repos Spring Data + adaptadores `*RepositoryImpl`. Índices: `account_id`, `status`, `created_at`.
 
-**Integraciones**  
+**Integraciones**
 Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `payment_intent.succeeded/failed`.
 
 
 #### 4.2.7.5. Bounded Context Software Architecture Component Level Diagrams
 
-**Componentes (y responsabilidades):**  
-- **Plans Component** — catálogo de planes.  
-- **Subscriptions Component** — altas/cambios/bajas, prorrateo.  
-- **Invoicing Component** — generación y estado de facturas.  
-- **Payments Component** — cargos y reembolsos (usa `PaymentProcessor`).  
-- **Persistence Adapter** — JPA MySQL.  
-- **Payment Gateway Adapter** — Stripe/MercadoPago (ACL).  
+**Componentes (y responsabilidades):**
+- **Plans Component** — catálogo de planes.
+- **Subscriptions Component** — altas/cambios/bajas, prorrateo.
+- **Invoicing Component** — generación y estado de facturas.
+- **Payments Component** — cargos y reembolsos (usa `PaymentProcessor`).
+- **Persistence Adapter** — JPA MySQL.
+- **Payment Gateway Adapter** — Stripe/MercadoPago (ACL).
 - **Billing API** — controladores REST.
 
 
@@ -1385,11 +1543,11 @@ Incluir: `Plan`, `Subscription`, `Invoice` (con `InvoiceLine`), `Payment`, VOs (
 
 ##### 4.2.7.6.2. Bounded Context Database Design Diagram
 
-Relaciones:  
-- `accounts 1—N subscriptions`  
-- `subscriptions 1—N invoices`  
-- `invoices 1—N invoice_lines`  
-- `invoices 1—N payments`  
+Relaciones:
+- `accounts 1—N subscriptions`
+- `subscriptions 1—N invoices`
+- `invoices 1—N invoice_lines`
+- `invoices 1—N payments`
 Índices por `account_id`, `status`, `(period_start, period_end)`; FKs con `ON UPDATE CASCADE`, `ON DELETE RESTRICT`.
 
 ### 4.2.8. Bounded Context: Security and Compliance
