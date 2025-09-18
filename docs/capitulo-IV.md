@@ -1381,7 +1381,8 @@ Migraciones con Flyway/Liquibase. Índices: `(workshop_id, status, slot_start)`.
 - **Persistence Adapter** (Infrastructure): JPA para Workshop/WorkOrder.
 - **Driver ACL / Billing ACL** (Application outbound): integración inter-BC.
 
-//Diagrama
+<img src="/assets/img/capitulo-IV/BC-Workshop.png" alt="BC Workshop Container C4"/>
+
 #### 4.2.6.6. Bounded Context Software Architecture Code Level Diagrams
 
 
@@ -1531,6 +1532,7 @@ Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `p
 - **Payment Gateway Adapter** — Stripe/MercadoPago (ACL).
 - **Billing API** — controladores REST.
 
+<img src="/assets/img/capitulo-IV/BC-Billing.png" alt="BC Billing Container C4"/>
 
 #### 4.2.7.6. Bounded Context Software Architecture Code Level Diagrams
 
