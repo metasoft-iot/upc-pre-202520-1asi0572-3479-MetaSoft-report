@@ -18,7 +18,7 @@ La arquitectura de software de <b>SafeCar</b> se ha diseñado aplicando el model
 Este diagrama ilustra el panorama general del ecosistema en el que se ubica SafeCar. Representa al sistema dentro de su contexto, mostrando los principales actores (conductores, mecánicos) y los sistemas externos con los que interactúa.
 </p>
 
-<img src="/assets/img/capitulo-IV/C4-Landscape-Diagram-SafeCar-Platform" alt="System Landscape Diagram"/>
+<img src="/assets/img/capitulo-IV/C4-Landscape-Diagram-SafeCar-Platform.png" alt="System Landscape Diagram"/>
 
 <br/>**Explicación:**  
 <p align="justify">
