@@ -40,7 +40,7 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
     </tr>
     <tr>
         <td>TB1</td>
-        <td>https://shorturl.at/vTY8x</td>
+        <td>https://upcedupe-my.sharepoint.com/:v:/g/personal/u202113656_upc_edu_pe/EX_2Lc6LkChFo1czg6Gtx84B4EMW3EkCYI47C5Ld27FTiQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=QZmwoR</td>
         <td>Video explicativo del proyecto SafeCar para la primera entrega del proyecto</td>
     </tr>
 </table>
