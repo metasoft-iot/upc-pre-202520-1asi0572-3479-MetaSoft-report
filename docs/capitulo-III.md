@@ -2004,8 +2004,14 @@
 En esta sección, se presentarán los mapas de impacto para cada segmento objetivo definido para el desarrollo del proyecto. El objetivo de desarrollar estos mapas es alinear los objetivos de negocio con las necesidades de los usuarios. También, se puede visualizar de manera clara qué impacto se desea generar en el comportamiento de los usuarios finales y qué entregables se deben desarrollar para lograr alcanzar cada una de las metas mencionadas.
 
 ● Segmento objetivo 1:
+Este mapa se enfoca en cómo la plataforma ayudará a los conductores a mantener su vehículo en óptimas condiciones, anticipar problemas y tomar el control de su mantenimiento.
+
+
 
 ● Segmento objetivo 2: 
+Este mapa se centra en cómo la plataforma puede mejorar la eficiencia operativa, la gestión de clientes y la rentabilidad de los talleres.
+
+
 
 ## 3.3. Product Backlog
 
