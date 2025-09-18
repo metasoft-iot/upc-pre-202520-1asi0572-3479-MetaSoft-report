@@ -247,12 +247,13 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/.jpeg"
+            <img src="/assets/img/capitulo-I/miembros/Anaely-photo.jpeg"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
           </td>
-          <td><strong>---</strong></td>
+          <td><strong>Soy una persona con experiencia en el manejo de metodologías ágiles como SCRUM y conocimientos en la gestión de bases de datos SQL. Cuento con habilidades de comunicación, atención al detalle y busco aportar soluciones lógicas para el proyecto.
+</strong></td>
           <td>Ingeniería de Software</td>
           <td align="justify">
           ---
