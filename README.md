@@ -507,7 +507,7 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <div style="margin-bottom: 20px;">
             <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB1</h4>
             <ul style="margin: 0; padding-left: 20px;">
-                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB1 por el integrante 1</li>
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Lideré y coordiné la facilitación y documentación inicial del taller de Event Storming, identificando los principales eventos y contextos del sistema SafeCar. Posteriormente, dirigí el modelado de flujos de mensajes entre dominios y la elaboración de los primeros Bounded Context Canvases, asegurando la coherencia conceptual del proyecto. Además, coordiné el taller de Big Picture EventStorming y desarrollé el glosario de lenguaje ubicuo, estableciendo una terminología común para el equipo. Finalmente, consolidé el Product Backlog integrando los aportes de todos los miembros, garantizando la alineación entre los requisitos del usuario y la arquitectura del sistema.</li>
                 <li><strong>Hardie Alfonso Holguin Gamarra:</strong>  Lideré y ejecuté la entrevista del segmento talleres , documentando las respuestas del entrevistado y a partir de esta información elaboré la User Persona correspondiente y definí sus User Stories, asegurando la representación precisa de sus necesidades. Asimismo, participé en la construcción del Capítulo IV, III y II, , y la sección Bounded Context Device Manangement, donde adapté y consolidé los contextos delimitados en base  a SafeCar. Con estas actividades aseguré la coherencia entre los hallazgos de usuario y el diseño estratégico del sistema, contribuyendo al entendimiento del dominio como en la arquitectura planteada.</li>
                 <li><strong>Villegas Jipa Luis Alfonso:</strong> Acciones realizadas de TB1 por el integrante 3</li>
                 <li><strong>Javier Kenyi Mendoza Solis:</strong> 
@@ -578,7 +578,7 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <div style="margin-bottom: 20px;">
             <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB1</h4>
             <ul style="margin: 0; padding-left: 20px;">
-                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB1 por el integrante 1</li>
+                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Promoví un entorno colaborativo e inclusivo mediante la facilitación de talleres de Event Storming, donde aseguré la participación activa de todos los miembros del equipo. Establecí metas claras para cada fase del proyecto, planifiqué las tareas de modelado de dominios y flujos de mensajes, y cumplí los objetivos de documentación y consolidación del Product Backlog. Mi liderazgo en la coordinación del Big Picture EventStorming y el desarrollo del lenguaje ubicuo facilitó la comunicación efectiva entre los miembros, creando un marco común de entendimiento que fortaleció la cohesión del equipo.</li>
                 <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB1 por el integrante 2</li>
                 <li><strong>Villegas Jipa Luis Alfonso:</strong> Acciones realizadas de TB1 por el integrante 3</li>
                 <li><strong>Javier Kenyi Mendoza Solis:</strong> 
