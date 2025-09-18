@@ -103,14 +103,443 @@ Este nivel permite visualizar claramente cómo se distribuyen las responsabilida
 ##### 4.2.3.6.2. Bounded Context Database Design Diagram
 
 ### 4.2.4. Bounded Context: Analytics and Recommendations
+
 #### 4.2.4.1. Domain Layer
+
+**Propósito del BC**  
+Calcular riesgo del conductor, predecir fallas probables y generar recomendaciones de mantenimiento, garantizando invariantes y evitando invasión de dominio entre BCs.
+
+<b>A) Agregado y Entidades (diccionario)</b>
+
+- **Aggregate Root: `DriverProfile`**  
+  **Propósito:** concentrar reglas y estado del conductor (riesgo, predicciones, recomendaciones).  
+  **Invariantes:**  
+  - `RiskScore.value ∈ [0, 1]`  
+  - `PredictionConfidence.value ∈ [0, 1]`  
+  - `Recommendation` es inmutable.  
+  **Atributos:**  
+  - `driverId: UUID`  
+  - `riskScore: RiskScore`  
+  - `drivingStats: DrivingStats`  
+  - `predictions: List<Prediction>`  
+  - `recommendations: List<Recommendation>`  
+  **Métodos:**  
+  - `recalculateRisk(stats: DrivingStats): void`  
+  - `addPrediction(prediction: Prediction): void`  
+  - `addRecommendation(recommendation: Recommendation): void`
+
+- **`Prediction`**  
+  **Propósito:** registrar una falla probable.  
+  **Atributos:** `id: UUID`, `predictedFault: String`, `confidence: PredictionConfidence`, `timestamp: LocalDateTime`  
+  **Métodos:** `updateConfidence(newConfidence: PredictionConfidence)`, `discard()`
+
+- **`Recommendation`**  
+  **Propósito:** acción de mantenimiento sugerida (inmutable).  
+  **Atributos:** `id: UUID`, `recommendationText: String`, `timestamp: LocalDateTime`
+
+<b>B) Value Objects (records/enums)</b>
+
+- **`RiskScore` (record):** `value: float` (0..1)  
+- **`DrivingStats` (record):** `avgSpeed: float`, `harshAccelerations: int`, `harshBrakes: int`  
+- **`PredictionConfidence` (record):** `value: float` (0..1)  
+- **`RiskBand` (enum):** `LOW`, `MEDIUM`, `HIGH`
+
+<b>C) Servicios de Dominio (interfaces)</b>
+
+- **`RiskCalculator`** → `calculate(stats: DrivingStats): RiskScore`  
+- **`PredictionEngine`** → `predict(profile: DriverProfile): Prediction`  
+- **`RecommendationGenerator`** → `generate(profile: DriverProfile, prediction: Prediction): Recommendation`
+
+> Implementaciones concretas fuera del dominio (Application/Infrastructure).
+
+<b>D) Repositorios (puertos del dominio)</b>
+
+- **`DriverProfileRepository`**  
+  - `save(profile: DriverProfile): DriverProfile`  
+  - `findByDriverId(driverId: UUID): Optional<DriverProfile>`
+
+- **`PredictionRepository`**  
+  - `save(prediction: Prediction): Prediction`  
+  - `findById(id: UUID): Optional<Prediction>`  
+  - `findAllByDriverId(driverId: UUID): List<Prediction>`
+
+- **`RecommendationRepository`**  
+  - `save(recommendation: Recommendation): Recommendation`  
+  - `findAllByDriverId(driverId: UUID): List<Recommendation>`
+
+<b>E) Commands & Queries (records en dominio)</b>
+
+**Commands**  
+- `CreateDriverProfileCommand(driverId: UUID, initialStats: DrivingStats)`  
+- `RecalculateRiskCommand(driverId: UUID, stats: DrivingStats)`  
+- `PredictFailureCommand(driverId: UUID)`  
+- `UpdatePredictionConfidenceCommand(predictionId: UUID, confidence: PredictionConfidence)`  
+- `DiscardPredictionCommand(predictionId: UUID)`  
+- `GenerateRecommendationCommand(driverId: UUID, predictionId: UUID)`
+
+**Queries**  
+- `GetDriverProfileByDriverIdQuery(driverId: UUID)`  
+- `GetAllPredictionsByDriverIdQuery(driverId: UUID)`  
+- `GetAllRecommendationsByDriverIdQuery(driverId: UUID)`
+
+> Las **implementaciones** de orquestación para estos comandos/consultas estarán en *Application* como `*CommandServiceImpl` / `*QueryServiceImpl` (p. ej., `PredictionCommandServiceImpl`), mientras que las **interfaces** de servicios se declaran en `domain/services`.
+
+<b>F) Domain Events </b>
+
+- `DriverRiskRecalculatedEvent` (driverId, oldRisk, newRisk, occurredOn)  
+- `PredictionCreatedEvent` (predictionId, driverId, occurredOn)  
+- `RecommendationGeneratedEvent` (recommendationId, driverId, occurredOn)
+
+<b>G) Facade (contrato entre BCs)</b>
+
+- **Interface en dominio:** `ExternalDriverContextFacade`  
+  **Propósito:** leer datos publicados por otros BCs sin invasión de dominio.  
+  **Métodos ejemplo:**  
+  - `fetchLatestDrivingStats(driverId: UUID): DrivingStats`  
+  - `existsDriver(driverId: UUID): boolean`  
+
+> La **implementación** vivirá en *Application/outboundservices/acl* con la nomenclatura: `ExternalDriverContextService` (análoga a tu ejemplo `ExternalProfileService`).
+
+<b>H) Excepciones de Dominio</b> 
+
+- `DriverProfileNotFoundException`  
+- `InvalidRiskScoreException`  
+- `PredictionNotFoundException`
+
 #### 4.2.4.2. Interface Layer
+<b>A) Controladores (REST Controllers)</b>
+
+1) **`DriverProfileController`**
+- **Responsabilidad:** endpoints para crear perfil y recalcular riesgo.
+- **Dependencias:** `DriverProfileCommandService`, `DriverProfileQueryService`, `DriverProfileResourceFromEntityAssembler`.
+- **Rutas:**
+  - `POST /api/v1/analytics/driver-profiles` – crear perfil  
+    - **Request:** `CreateDriverProfileResource`  
+    - **Command:** `CreateDriverProfileCommand`  
+    - **Response:** `DriverProfileResource`
+  - `PUT /api/v1/analytics/driver-profiles/{driverId}/risk` – recalcular riesgo  
+    - **Request:** `RecalculateRiskResource`  
+    - **Command:** `RecalculateRiskCommand`  
+    - **Response:** `DriverProfileResource`
+  - `GET /api/v1/analytics/driver-profiles/{driverId}` – obtener perfil  
+    - **Query:** `GetDriverProfileByDriverIdQuery`  
+    - **Response:** `DriverProfileResource`
+
+2) **`PredictionController`**
+- **Responsabilidad:** endpoints de gestión de predicciones.
+- **Dependencias:** `PredictionCommandService`, `PredictionQueryService`, `PredictionResourceFromEntityAssembler`.
+- **Rutas:**
+  - `POST /api/v1/analytics/predictions` – predecir falla  
+    - **Request:** `PredictFailureResource`  
+    - **Command:** `PredictFailureCommand`  
+    - **Response:** `PredictionResource`
+  - `PATCH /api/v1/analytics/predictions/{predictionId}/confidence` – actualizar confianza  
+    - **Request:** `UpdatePredictionConfidenceResource`  
+    - **Command:** `UpdatePredictionConfidenceCommand`  
+    - **Response:** `PredictionResource`
+  - `DELETE /api/v1/analytics/predictions/{predictionId}` – descartar  
+    - **Command:** `DiscardPredictionCommand`
+  - `GET /api/v1/analytics/predictions?driverId={driverId}` – listar por conductor  
+    - **Query:** `GetAllPredictionsByDriverIdQuery`  
+    - **Response:** `PredictionSummaryResource[]`
+
+3) **`RecommendationController`**
+- **Responsabilidad:** generación y consulta de recomendaciones.
+- **Dependencias:** `RecommendationCommandService`, `RecommendationQueryService`, `RecommendationResourceFromEntityAssembler`.
+- **Rutas:**
+  - `POST /api/v1/analytics/recommendations` – generar recomendación  
+    - **Request:** `GenerateRecommendationResource`  
+    - **Command:** `GenerateRecommendationCommand`  
+    - **Response:** `RecommendationResource`
+  - `GET /api/v1/analytics/recommendations?driverId={driverId}` – listar por conductor  
+    - **Query:** `GetAllRecommendationsByDriverIdQuery`  
+    - **Response:** `RecommendationResource[]`
+
+---
+
+<b>B) Resources (DTOs de entrada/salida)</b>
+
+Ubicación: `interfaces/resources`
+
+**Requests**
+- `CreateDriverProfileResource { driverId: string, initialStats: DrivingStatsResource }`
+- `RecalculateRiskResource { stats: DrivingStatsResource }`
+- `PredictFailureResource { driverId: string }`
+- `UpdatePredictionConfidenceResource { confidence: number }`
+- `GenerateRecommendationResource { driverId: string, predictionId: string }`
+
+**Responses**
+- `DriverProfileResource { driverId: string, riskScore: number, riskBand: string, drivingStats: DrivingStatsResource, predictions: PredictionSummaryResource[], recommendations: RecommendationResource[] }`
+- `PredictionResource { id: string, driverId: string, predictedFault: string, confidence: number, timestamp: string }`
+- `PredictionSummaryResource { id: string, predictedFault: string, confidence: number, timestamp: string }`
+- `RecommendationResource { id: string, driverId: string, recommendationText: string, timestamp: string }`
+- `DrivingStatsResource { avgSpeed: number, harshAccelerations: number, harshBrakes: number }`
+
+> **Validaciones** (Bean Validation):  
+> `@NotNull`, `@PositiveOrZero`, `@DecimalMin("0.0") @DecimalMax("1.0")` para `confidence` y `riskScore`.
+
+---
+
+<b>C) Assemblers (mapeadores)</b>
+
+Ubicación: `interfaces/transform`
+
+- **`DriverProfileResourceFromEntityAssembler`**
+  - `toResource(DriverProfile domain): DriverProfileResource`
+  - `toDomain(CreateDriverProfileResource r): CreateDriverProfileCommand`
+  - `toDomain(RecalculateRiskResource r, UUID driverId): RecalculateRiskCommand`
+
+- **`PredictionResourceFromEntityAssembler`**
+  - `toResource(Prediction domain): PredictionResource`
+  - `toDomain(PredictFailureResource r): PredictFailureCommand`
+  - `toDomain(UpdatePredictionConfidenceResource r, UUID predictionId): UpdatePredictionConfidenceCommand`
+
+- **`RecommendationResourceFromEntityAssembler`**
+  - `toResource(Recommendation domain): RecommendationResource`
+  - `toDomain(GenerateRecommendationResource r): GenerateRecommendationCommand`
+
+> Los *Assemblers* son **puentes** entre DTOs y el modelo del dominio (records/commands/queries).  
+> Los *Controller* **no** construyen entidades/commands manualmente; delegan al *Assembler*.
+
+---
+
+<b>D) Manejo de errores y contrato</b>
+
+- Respuestas de error estandarizadas (`Problem+JSON`):  
+  - `400` errores de validación.  
+  - `404` (`DriverProfileNotFoundException`, `PredictionNotFoundException`).  
+  - `422` reglas de negocio (p. ej., `InvalidRiskScoreException`).  
+  - `500` errores no controlados.
+- Correlación de peticiones: encabezado `X-Request-Id`.
+- Versionado de API: prefijo `/api/v1` y *content negotiation* (`application/json`).
+
+
 #### 4.2.4.3. Application Layer
+
+<b>A) Command Services (implementaciones)</b>
+
+1) **`DriverProfileCommandServiceImpl`** (`application/internal/commandservices`)
+- **create(cmd: CreateDriverProfileCommand): DriverProfile**  
+  1. Verifica existencia de conductor vía `ExternalDriverContextService.existsDriver`.  
+  2. Construye `DriverProfile` con `initialStats`.  
+  3. Calcula `riskScore` usando `RiskCalculator`.  
+  4. `driverProfileRepository.save(..)` y publica `DriverRiskRecalculatedEvent`.
+- **recalculateRisk(cmd: RecalculateRiskCommand): RiskScore**  
+  1. Carga perfil por `driverId`.  
+  2. Si `stats` es `null`, consulta `ExternalDriverContextService.fetchLatestDrivingStats`.  
+  3. Invoca `driverProfile.recalculateRisk(stats)` y persiste.  
+  4. Publica `DriverRiskRecalculatedEvent` y retorna nuevo `RiskScore`.
+
+2) **`PredictionCommandServiceImpl`**
+- **predict(cmd: PredictFailureCommand): Prediction**  
+  1. Carga `DriverProfile`.  
+  2. Usa `PredictionEngine.predict(profile)`.  
+  3. `predictionRepository.save(..)`, asocia al perfil y publica `PredictionCreatedEvent`.
+- **updateConfidence(cmd: UpdatePredictionConfidenceCommand): Prediction**  
+  1. Carga predicción; ejecuta `updateConfidence`.  
+  2. Persiste cambios.
+- **discard(cmd: DiscardPredictionCommand): void**  
+  1. Carga predicción; ejecuta `discard()` y persiste.
+
+3) **`RecommendationCommandServiceImpl`**
+- **generate(cmd: GenerateRecommendationCommand): Recommendation**  
+  1. Carga `DriverProfile` y `Prediction`.  
+  2. Usa `RecommendationGenerator` (puede delegar a `OpenAiClient` vía infraestructura).  
+  3. Guarda `Recommendation` en `recommendationRepository`.  
+  4. Publica `RecommendationGeneratedEvent`.
+
+> **Nota:** los *CommandServiceImpl* dependen de **interfaces de dominio**: `DriverProfileRepository`, `PredictionRepository`, `RecommendationRepository`, `RiskCalculator`, `PredictionEngine`, `RecommendationGenerator` y del **Facade** `ExternalDriverContextFacade` (implementado aquí como ACL).
+
+<b>B) Query Services (implementaciones)</b>
+
+1) **`DriverProfileQueryServiceImpl`**  
+- **handle(q: GetDriverProfileByDriverIdQuery): Optional<DriverProfile>** → lectura consistente desde `DriverProfileRepository`.
+
+2) **`PredictionQueryServiceImpl`**  
+- **handle(q: GetAllPredictionsByDriverIdQuery): List<Prediction>**
+
+3) **`RecommendationQueryServiceImpl`**  
+- **handle(q: GetAllRecommendationsByDriverIdQuery): List<Recommendation>**
+
+> **Optimización opcional:** proyecciones/DTOs de lectura o *read models* si se requiere performance.
+
+<b>C) Event Handlers</b>
+
+Ubicación: `application/internal/eventhandlers`
+
+- **`NotifyHighRiskEventHandler`**  
+  - **Escucha:** `DriverRiskRecalculatedEvent`  
+  - **Acción:** si `RiskBand` es `HIGH`, delega a infraestructura (TwilioClient/Email) para notificar.
+- **`AutoGenerateRecommendationOnPredictionHandler`**  
+  - **Escucha:** `PredictionCreatedEvent`  
+  - **Acción:** invoca `RecommendationCommandService.generate(..)` para crear recomendación automática.
+- **`AuditRecommendationGeneratedHandler`**  
+  - **Escucha:** `RecommendationGeneratedEvent`  
+  - **Acción:** registra auditoría (tabla/log).
+
+> **Publicación de eventos:** los *CommandServiceImpl* publican eventos de dominio mediante un `DomainEventPublisher` (puerto) con implementación en infraestructura o usando *ApplicationEventPublisher* de Spring.
+
+<b>D) Outbound Services / ACL (Facade entre BCs)</b>
+
+Ubicación: `application/outboundservices/acl`
+
+- **Interface en dominio:** `ExternalDriverContextFacade`
+- **Implementación (ACL):** **`ExternalDriverContextService`**  
+  - **existsDriver(driverId: UUID): boolean** — consulta segura al BC *Driver Engagement* (o IAM) mediante API interna.  
+  - **fetchLatestDrivingStats(driverId: UUID): DrivingStats** — obtiene agregados de telemetría del BC *Telemetry Processing* sin acoplar modelos (traduce DTO externo → `DrivingStats`).  
+  - **Manejo de fallos:** *timeouts*, *circuit breaker*, *fallback* (retornar `Optional<DrivingStats>`).
+
+> Esta capa evita invasión de dominio traduciendo contratos externos a **Value Objects** del dominio.
+
 #### 4.2.4.4. Infrastructure Layer
+
+<b>A) Persistencia (JPA / MySQL)</b>
+
+**Entidades JPA (solo para persistencia):**
+- `DriverProfileEntity` ↔ tabla `driver_profiles`
+- `PredictionEntity` ↔ tabla `predictions`
+- `RecommendationEntity` ↔ tabla `recommendations`
+
+**Repositorios Spring Data (infra):**
+- `DriverProfileJpaRepository extends JpaRepository<DriverProfileEntity, Long>`  
+  - `Optional<DriverProfileEntity> findByDriverId(UUID driverId)`
+- `PredictionJpaRepository extends JpaRepository<PredictionEntity, Long>`  
+  - `List<PredictionEntity> findAllByDriverId(UUID driverId)`
+- `RecommendationJpaRepository extends JpaRepository<RecommendationEntity, Long>`  
+  - `List<RecommendationEntity> findAllByDriverId(UUID driverId)`
+
+**Adaptadores que implementan puertos del dominio:**
+- `DriverProfileRepositoryImpl implements DriverProfileRepository`  
+  - Usa `DriverProfileJpaRepository` + *mappers* para convertir **Entity ↔ Aggregate**.
+- `PredictionRepositoryImpl implements PredictionRepository`
+- `RecommendationRepositoryImpl implements RecommendationRepository`
+
+**Mappers (infra/persistence/mapping):**
+- `DriverProfileMapper`  
+  - `toEntity(DriverProfile)` / `toAggregate(DriverProfileEntity)`
+- `PredictionMapper`  
+- `RecommendationMapper`
+
+**Transaccionalidad y consistencia:**
+- Métodos de `*RepositoryImpl` son invocados dentro de transacciones iniciadas en *Application* (`@Transactional`).
+- Estrategia de *optimistic locking* opcional vía `@Version` en entidades.
+
+<b>B) Integración con servicios externos</b>
+
+**Cliente OpenAI (infra/external/openai):**
+- `OpenAiClientImpl implements OpenAiClient`  
+  - HTTP con `WebClient` o `RestTemplate`.  
+  - *Configuración:* `OPENAI_BASE_URL`, `OPENAI_API_KEY` (en `infrastructure/config`).  
+  - *Resiliencia:* *timeouts*, *retry*, *circuit breaker* (Resilience4j).  
+  - *Responsabilidad:* construir prompts y mapear respuesta → texto para `RecommendationGenerator`.
+
+**Cliente de notificaciones (opcional para eventos de alto riesgo):**
+- `TwilioEmailClientImpl`  
+  - Enviar correo/SMS cuando lo dispare un *EventHandler*.  
+  - Variables seguras vía `TWILIO_ACCOUNT_SID`, `TWILIO_TOKEN`.
+
+<b>C) Publicación de eventos</b>
+
+**Adaptador:** `DomainEventPublisherImpl` (infra/events)  
+- Implementa puerto `DomainEventPublisher` (de aplicación o dominio).  
+- Usa `ApplicationEventPublisher` (Spring) o una cola si se requiere (ej. RabbitMQ en futuro).  
+- Serializa eventos (`DriverRiskRecalculatedEvent`, `PredictionCreatedEvent`, `RecommendationGeneratedEvent`) para auditoría.
+
+<b>D) Configuración & migraciones</b>
+
+- **Config:** `OpenAiClientConfig`, `PersistenceConfig` (nombres de paquetes, `JpaRepositories`, `EntityScan`).  
+- **Migraciones:** `db/migration` (Flyway/Liquibase) con DDL para `driver_profiles`, `predictions`, `recommendations`.  
+- **Observabilidad:** *logging* con `X-Request-Id`, métricas para `OpenAiClientImpl` (latencia, errores).
+
+
 #### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+<b>A) Componentes y responsabilidades</b>
+
+- **Analytics Facade**  
+  - **Capa:** Application (coordinación de casos de uso del BC).  
+  - **Responsabilidad:** Punto de entrada interno del BC; orquesta *CommandServices*/*QueryServices* y centraliza políticas transversales (transacciones, logging, trazas).  
+  - **Depende de:** `DriverProfileCommandServiceImpl`, `PredictionCommandServiceImpl`, `RecommendationCommandServiceImpl`.
+
+- **Driver Profile Component**  
+  - **Capa:** Application + Domain  
+  - **Responsabilidad:** Crear/actualizar `DriverProfile`, recalcular riesgo usando `RiskCalculator`.  
+  - **Interfaces dominio usadas:** `DriverProfileCommandService`/`DriverProfileQueryService`, `DriverProfileRepository`, `RiskCalculator`.  
+  - **Infra usada:** `DriverProfileRepositoryImpl` (JPA).
+
+- **Prediction Component**  
+  - **Capa:** Application + Domain  
+  - **Responsabilidad:** Ejecutar predicciones con `PredictionEngine`; actualizar confianza; descartar.  
+  - **Interfaces dominio usadas:** `PredictionCommandService`/`PredictionQueryService`, `PredictionRepository`, `PredictionEngine`.  
+  - **Infra usada:** `PredictionRepositoryImpl` (JPA).
+
+- **Recommendation Component**  
+  - **Capa:** Application + Domain  
+  - **Responsabilidad:** Generar recomendaciones con `RecommendationGenerator` (puede delegar en OpenAI a través del cliente infra).  
+  - **Interfaces dominio usadas:** `RecommendationCommandService`/`RecommendationQueryService`, `RecommendationRepository`, `RecommendationGenerator`.  
+  - **Infra usada:** `RecommendationRepositoryImpl` (JPA), `OpenAiClientImpl`.
+
+- **Analytics Repository** *(ver refactor abajo)*  
+  - **Capa:** Infrastructure (persistencia)  
+  - **Responsabilidad:** Adaptador de acceso a datos para los agregados del BC.  
+  - **Tecnología:** Spring Data JPA sobre MySQL.
+
+- **OpenAI Client**  
+  - **Capa:** Infrastructure (cliente HTTP externo)  
+  - **Responsabilidad:** Invocar al **OpenAI Service** para generar texto de recomendaciones; resiliencia (timeouts/retry/circuit-breaker).  
+  - **Tecnología:** Spring WebClient/RestTemplate.
+
+- **(Sugerido) External Driver Context Service (ACL/Facade)**  
+  - **Capa:** Application/outboundservices/acl  
+  - **Responsabilidad:** Implementa `ExternalDriverContextFacade` para obtener `DrivingStats` y validar existencia de conductor desde otros BCs sin invadir dominio.  
+  - **Tecnología:** HTTP client interno/feign.
+
+- **(Sugerido) Domain Event Publisher**  
+  - **Capa:** Infrastructure (events)  
+  - **Responsabilidad:** Publicación de `DriverRiskRecalculatedEvent`, `PredictionCreatedEvent`, `RecommendationGeneratedEvent`.  
+  - **Tecnología:** Spring Application Events (o broker futuro).
+
+- **(Opcional) Twilio Email/SMS Client**  
+  - **Capa:** Infrastructure (external/notifications)  
+  - **Responsabilidad:** Enviar notificaciones cuando un *EventHandler* lo requiera.
+
+<b>B) Relaciones (resumen)</b>
+
+- `Analytics Facade → Driver Profile Component | Prediction Component | Recommendation Component`  
+- `Driver Profile Component → DriverProfileRepository` (→ MySQL)  
+- `Prediction Component → PredictionRepository` (→ MySQL)  
+- `Recommendation Component → RecommendationRepository` (→ MySQL)  
+- `Recommendation Component → OpenAI Client → OpenAI Service`  
+- `Driver Profile Component → (ACL) External Driver Context Service`  
+- `*Component → Domain Event Publisher` (publica eventos de dominio)
+
+<b>C) Mapeo a <b>nomenclaturas</b> y <b>paquetes</b></b>
+
+- **Application/internal/commandservices**  
+  - `DriverProfileCommandServiceImpl`, `PredictionCommandServiceImpl`, `RecommendationCommandServiceImpl`
+- **Application/internal/queryservices**  
+  - `DriverProfileQueryServiceImpl`, `PredictionQueryServiceImpl`, `RecommendationQueryServiceImpl`
+- **Application/outboundservices/acl**  
+  - `ExternalDriverContextService` *(impl de `ExternalDriverContextFacade`)*
+- **Interfaces/resources**  
+  - `CreateDriverProfileResource`, `PredictFailureResource`, `GenerateRecommendationResource`, etc.
+- **Interfaces/transform (assemblers)**  
+  - `DriverProfileResourceFromEntityAssembler`, `PredictionResourceFromEntityAssembler`, `RecommendationResourceFromEntityAssembler`
+- **Infrastructure/persistence/jpa**  
+  - `DriverProfileRepositoryImpl`, `PredictionRepositoryImpl`, `RecommendationRepositoryImpl`
+- **Infrastructure/external/openai**  
+  - `OpenAiClientImpl`
+- **Infrastructure/events**  
+  - `DomainEventPublisherImpl`
+
+<br/>
+
+<img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-container-c4.svg" alt="BC Analytics and Recommendations Container C4"/>
+
 #### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
 ##### 4.2.4.6.2. Bounded Context Database Design Diagram
+
 
 ### 4.2.5. Bounded Context: Driver Engagement
 #### 4.2.5.1. Domain Layer

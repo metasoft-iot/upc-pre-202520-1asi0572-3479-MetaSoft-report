@@ -21,12 +21,23 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
             
             backend = container "SafeCar backend platform" "Backend platform that receives and sends responses based on user requests." "SpringBoot [Java 17]" {
                 // --- Bounded Context: Analytics and Recommendations 
-                analyticsFacade = component "Analytics Facade"          "Orchestrates analytics and recommendations operations, exposing a simplified API to other backend modules." "Java, Spring Boot" "Facade"
-                driverProfileComponent = component "Driver Profile Component"   "Handles creation and risk recalculation of driver profiles." "Java, Spring Boot"
-                predictionComponent = component "Prediction Component"       "Predicts future mechanical failures and manages prediction updates and discards." "Java, Spring Boot"
-                recommendationComponent = component "Recommendation Component"   "Generates maintenance recommendations using domain rules and AI." "Java, Spring Boot"
-                analyticsRepository = component "Analytics Repository"       "Persists and retrieves analytics data (driver profiles, predictions, recommendations) to the MySQL database." "Spring Data JPA" "Repository"
-                openAiClient = component "OpenAI Client"              "Encapsulates calls to the external OpenAI Service." "Java HTTP Client"
+                analyticsFacade = component "Analytics Facade" "Orchestrates analytics and recommendations operations, exposing a simplified API to other backend modules." "Java, Spring Boot" "Facade"
+                driverProfileComponent = component "Driver Profile Component" "Handles creation and risk recalculation of driver profiles." "Java, Spring Boot"
+                predictionComponent = component "Prediction Component" "Predicts future mechanical failures and manages prediction updates and discards." "Java, Spring Boot"
+                recommendationComponent = component "Recommendation Component" "Generates maintenance recommendations using domain rules and AI." "Java, Spring Boot"
+                    // --- Infrastructure
+                driverProfileRepo = component "DriverProfile Repository" "Infra adapter for DriverProfileRepository (JPA)." "Spring Data JPA" "Repository"
+                predictionRepo = component "Prediction Repository" "Infra adapter for PredictionRepository (JPA)." "Spring Data JPA" "Repository"
+                recommendationRepo = component "Recommendation Repository" "Infra adapter for RecommendationRepository (JPA)." "Spring Data JPA" "Repository"
+                    // --- External clients, ACL and Events
+                openAiClient = component "OpenAI Client" "Encapsulates calls to the external OpenAI Service." "Java HTTP Client"
+                externalDriverContextService = component "External Driver Context Service (ACL)" "Implements ExternalDriverContextFacade to query other BCs safely (e.g., latest DrivingStats)." "Java, Spring Boot" "Facade"
+                domainEventPublisher = component "Domain Event Publisher" "Publishes domain events for audit/notifications." "Spring Application Events"
+            
+                
+                // --- Bounded Context: <bounded-context-name>
+                    // --- Infrastructure
+                    // --- External clients, ACL and Events
             }
             
             mobileApp = container "SafeCar Mobile Application" "Mobile app with notifications for critical failures, efficient driving tips, and real-time status." "Flutter"
@@ -60,20 +71,30 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
         backend -> openAiService "Requests AI-based analysis and recommendations"
         backend -> twilioService "Sends notifications and transactional emails"
         
-        // --- Components
-        
-        // --- Bounded Context (Relations): Analytics and Recommendations
-        openAiClient -> openAiService 
+        // --- Components (Relations) : Analytics and Recommendations
         analyticsFacade -> driverProfileComponent "Delegates driver profile operations"
         analyticsFacade -> predictionComponent "Delegates prediction operations"
         analyticsFacade -> recommendationComponent "Delegates recommendation operations"
-        driverProfileComponent -> analyticsRepository "Uses"
-        predictionComponent -> analyticsRepository "Uses"
-        recommendationComponent -> analyticsRepository "Uses"
+            //--
+        driverProfileComponent -> driverProfileRepo "Uses"
+        predictionComponent -> predictionRepo "Uses"
+        recommendationComponent -> recommendationRepo "Uses"
         recommendationComponent -> openAiClient "Invokes for recommendation text"
-        analyticsRepository -> database "Stores and retrieves analytics data"
+        openAiClient -> openAiService
+        driverProfileComponent -> externalDriverContextService "Fetches latest DrivingStats / validates driver"
+            // --- publisher
+        driverProfileComponent -> domainEventPublisher "Publishes domain events"
+        predictionComponent -> domainEventPublisher "Publishes domain events"
+        recommendationComponent -> domainEventPublisher "Publishes domain events"
+            // --- persistence
+        driverProfileRepo -> database "Stores and retrieves driver profiles"
+        predictionRepo -> database "Stores and retrieves predictions"
+        recommendationRepo -> database "Stores and retrieves recommendations"
         
-        // --- Bounded Context (Relations): 
+        // --- Components (Relations) : <bounded-context-name>
+            //--
+            // --- publisher
+            // --- persistence
     }
     
     views {
@@ -92,9 +113,7 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
             autolayout tb
         }
 
-
         styles {
-         
             element "Person" {
                 shape Person
                 background #d1cc41
