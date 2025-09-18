@@ -2169,5 +2169,5 @@ Este mapa se centra en cómo la plataforma puede mejorar la eficiencia operativa
 	</tbody>
 </table>
 
-![Texto alternativo para la imagen](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-III/assets/img/capitulo-III/sprint backlog.png)
+![Sprint Backlog](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-III/assets/img/capitulo-III/sprintbacklog.png)
 
