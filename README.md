@@ -510,7 +510,9 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
                 <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB1 por el integrante 1</li>
                 <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB1 por el integrante 2</li>
                 <li><strong>Villegas Jipa Luis Alfonso:</strong> Acciones realizadas de TB1 por el integrante 3</li>
-                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB1 por el integrante 4</li>
+                <li><strong>Javier Kenyi Mendoza Solis:</strong> 
+                Lideré y ejecuté la entrevista del segmento conductor con vehículo propio, documentando las respuestas del entrevistado y a partir de esta información elaboré la User Persona correspondiente y definí sus User Stories, asegurando la representación precisa de sus necesidade. Asimismo, participé en la construcción del Capítulo IV, desarrollando la sección Domain Message Flows Modeling, donde diseñé los flujos de mensajes de dominio para reflejar los procesos centrales de solicitud y gestión de mantenimientos, y la sección Bounded Context Canvases, donde adapté y consolidé los contextos delimitados de SafeCar. Con estas actividades aseguré la coherencia entre los hallazgos de usuario y el diseño estratégico del sistema, contribuyendo al entendimiento del dominio como en la arquitectura planteada. 
+                </li>
                 <li><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Acciones realizadas de TB1 por el integrante 5</li>
                 <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB1 por el integrante 6</li>
                 <li align="justify">
@@ -580,7 +582,7 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
                 <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB1 por el integrante 2</li>
                 <li><strong>Villegas Jipa Luis Alfonso:</strong> Acciones realizadas de TB1 por el integrante 3</li>
                 <li><strong>Javier Kenyi Mendoza Solis:</strong> 
-                Lideré y ejecuté la entrevista del segmento conductor con vehículo propio, documentando las respuestas del entrevistado y a partir de esta información, elaboré la User Persona correspondiente y definí sus User Stories, asegurando la representación precisa de sus necesidades en el sistema SafeCar. Asimismo, participé en la construcción del Capítulo IV, desarrollando la sección Domain Message Flows Modeling, donde diseñé los flujos de mensajes de dominio para reflejar los procesos centrales de solicitud y gestión de mantenimientos, y la sección Bounded Context Canvases, donde adapté y consolidé los contextos delimitados de SafeCar. Con estas actividades, aseguré la coherencia entre los hallazgos de usuario y el diseño estratégico del sistema, contribuyendo tanto al entendimiento del dominio como a la claridad en la arquitectura planteada.    
+                Asumió un rol central en la recopilación, análisis y transformación de información clave, garantizando la alineación entre las necesidades de los usuarios y el diseño del sistema. Contribuyó activamente a la construcción de entregables estratégicos, promoviendo la claridad conceptual, la coherencia metodológica y la calidad en la documentación generada, fortaleciendo así la visión y el avance del proyecto SafeCar. 
                 </li>
                 <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB1 por el integrante 6</li>
                 <li align="justify">
