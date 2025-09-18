@@ -2006,12 +2006,13 @@ En esta sección, se presentarán los mapas de impacto para cada segmento objeti
 ● Segmento objetivo 1:
 Este mapa se enfoca en cómo la plataforma ayudará a los conductores a mantener su vehículo en óptimas condiciones, anticipar problemas y tomar el control de su mantenimiento.
 
+![Texto alternativo para la imagen](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-III/assets/img/capitulo-III/Impact%20map%201.png)
 
 
 ● Segmento objetivo 2: 
 Este mapa se centra en cómo la plataforma puede mejorar la eficiencia operativa, la gestión de clientes y la rentabilidad de los talleres.
 
-
+![Texto alternativo para la imagen](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-III/assets/img/capitulo-III/Impact%20map%202.png)
 
 ## 3.3. Product Backlog
 
