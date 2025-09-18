@@ -1,39 +1,35 @@
-<center>
+<div align="center">
 
-# Universidad Peruana De Ciencas Aplicadas
-## 1ASI0572 Desarrollo de Soluciones IOT - Ingeniería de Software
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" alt="UPC Logo" width="150"/>
 
-</center>
+# Universidad Peruana de Ciencias Aplicadas
+### Ingeniería de Software
+### Curso: Desarrollo de Soluciones IOT (1ASI0572)
 
-<p style="text-align: center;" > <img src = "https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png"></img> </p>
+---
 
-<center>
+## "Informe de Trabajo Final"
 
-# "Informe de Trabajo Final"
-## Docente: Angel Augusto Velasquez Nuñez
-## Startup: MetaSoft
-## Producto: Por definir
+**Startup:** MetaSoft  
+**Producto:** Por definir  
+**Docente:** Angel Augusto Velasquez Nuñez  
+**Ciclo:** 2025-02
 
-</center>
+</div>
 
-## Relación de integrantes:
+---
 
+## Relación de Integrantes
 
-* **Janover Gonzalo Saldaña Vela        U20201B510**
-* **Hardie Alfonso Holguin Gamarra      U202220250**
-* **Javier Kenyi Mendoza Solis          U201824550**
-* **Gustavo Jandroel Aguirre Rodríguez  U202124162**
-* **Javier Sharvel Irigoyen Matos       U20221D156**
-* **Gonzalo Andre Zavala Quedena        U202113656**
-* **Anaely Zarely Burga Loarte          U202118264**
-
-
-
-<center>
-
-### 2025 - 02
-
-</center>
+| **Nombre Completo** | **Código de Estudiante** |
+|---------------------|---------------------------|
+| **Janover Gonzalo Saldaña Vela** | U20201B510 |
+| **Hardie Alfonso Holguin Gamarra** | U202220250 |
+| **Javier Kenyi Mendoza Solis** | U201824550 |
+| **Gustavo Jandroel Aguirre Rodríguez** | U202124162 |
+| **Javier Sharvel Irigoyen Matos** | U20221D156 |
+| **Gonzalo Andre Zavala Quedena** | U202113656 |
+| **Anaely Zarely Burga Loarte** | U202118264 |
 
 ---
 
