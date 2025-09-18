@@ -22,7 +22,7 @@ Este diagrama ilustra el panorama general del ecosistema en el que se ubica Safe
 
 <br/>**Explicación:**  
 <p align="justify">
-SafeCar se posiciona como una plataforma IoT de mantenimiento vehicular inteligente que conecta a conductores con mecánicos. El sistema recibe datos desde el dispositivo instalado en el vehículo y genera reportes accesibles para los mecánicos. También se comunica con servicios externos como pasarelas de pago y sistemas de notificaciones para brindar un ecosistema completo.
+SafeCar se posiciona como una plataforma IoT de mantenimiento vehicular inteligente que conecta a conductores con mecánicos. El sistema recibe datos desde el dispositivo instalado en el vehículo y genera reportes accesibles para los mecánicos. También se comunica con servicios externos como sistemas de notificaciones para brindar un ecosistema completo.
 </p>
 
 #### 4.1.3.2. Software Architecture Context Level Diagrams
@@ -70,6 +70,12 @@ El <b>Container Diagram</b> representa la arquitectura de alto nivel de la plata
 Este nivel permite visualizar claramente cómo se distribuyen las responsabilidades entre los distintos componentes y cómo cada contenedor cumple un rol específico dentro de la solución.
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
+
+
+
+
+
+
 ## 4.2. Tactical-Level Domain-Driven Design
 
 ### 4.2.1. Bounded Context: Device Management
