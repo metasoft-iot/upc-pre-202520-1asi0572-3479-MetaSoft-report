@@ -139,7 +139,7 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/.jpeg"
+            <img src="/assets/img/capitulo-I/miembros/janover-saldana.jpg"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
