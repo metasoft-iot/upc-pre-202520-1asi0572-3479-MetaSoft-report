@@ -212,7 +212,7 @@
         </tr>
         <tr>
           <td>
-            <img src="https://media.discordapp.net/attachments/834550053590925412/1418040909831999670/1749846772019.png?ex=68ccad02&is=68cb5b82&hm=a24b607a2741b0eea40317d5ba17f01a2ffb75680ab0ace1d860e717408cf98c&=&format=webp&quality=lossless"
+            <img src="/assets/img/capitulo-I/miembros/gustavo-aguirre.jpeg"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
