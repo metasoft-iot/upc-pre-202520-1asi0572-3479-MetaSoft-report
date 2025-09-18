@@ -388,8 +388,12 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Distrito:</strong> La molina</li>
   <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
   <li><strong>Duración:</strong> 4:22 min</li>
-  <li><strong>Screenshot:</strong> <img src="https://media.discordapp.net/attachments/834550053590925412/1414777325970784316/image.png?ex=68c0cd8f&is=68bf7c0f&hm=431e0db6cc946fd4692194968b04f8ccaaa2cdcbfc821155639e772f02356b7f&=&format=webp&quality=lossless" alt="screenshot entrevista 2" style="max-width:200px;"></li>
+  <li><strong>Screenshot:</strong></li>
 </ul>
+
+<div style="margin-top: 10px;" align="center">
+  <img src="https://media.discordapp.net/attachments/834550053590925412/1414777325970784316/image.png?ex=68c0cd8f&is=68bf7c0f&hm=431e0db6cc946fd4692194968b04f8ccaaa2cdcbfc821155639e772f02356b7f&=&format=webp&quality=lossless" alt="screenshot entrevista 2" width="600px">
+</div>
 <p align="justify">
 <strong>Resumen:</strong> Orlando Roca, 23 años, desarrollador de software y estudiante, con 5 años de experiencia conduciendo en Lima, comentó que realiza mantenimiento preventivo unas 3 veces al año y que sus principales problemas son pinchazos de llantas y desgaste por baches, además de frenos defectuosos. Detecta las fallas solo por señales físicas (llanta baja, ruidos), nunca ha usado soluciones digitales y gasta alrededor de 500 soles al año en reparaciones. Valora especialmente recibir alertas tempranas y un historial de precios de talleres para evitar sobrecostos, ya que su principal frustración es la desconfianza en los cobros. Prefiere WhatsApp como canal de notificación y afirmó estar dispuesto a pagar una suscripción mensual si la aplicación le ayuda a ahorrar en mantenimiento y a tener mayor transparencia.
 </p>
@@ -405,8 +409,12 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Distrito:</strong> […]</li>
   <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
   <li><strong>Duración:</strong> […]</li>
-  <li><strong>Screenshot:</strong> <img src="[URL-screenshot]" alt="screenshot entrevista 3" style="max-width:200px;"></li>
+  <li><strong>Screenshot:</strong></li>
 </ul>
+
+<div style="margin-top: 10px;" align="center">
+  <img src="[URL-screenshot]" alt="screenshot entrevista 3" width="600px">
+</div>
 <p align="justify">
 <strong>Resumen:</strong> [Aquí un párrafo breve (6–8 líneas) con lo más relevante: hábitos de mantenimiento, problemas frecuentes, percepciones de talleres, uso de tecnología y expectativas frente a SafeCar].
 </p>
@@ -424,8 +432,12 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Distrito:</strong> La Victoria</li>
   <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://upcedupe-my.sharepoint.com/:v:/g/personal/u201824550_upc_edu_pe/EbWP7AHkagNIuoHROo6NtTgBQoBxwBqgRzKYoCUb9cJ52w?e=oCxlBU</a></li>
   <li><strong>Duración:</strong> [03:09]</li>
-  <li><strong>Screenshot:</strong> <img src="[URL-screenshot]" alt="screenshot entrevista 1" style="max-width:200px;"></li>
+  <li><strong>Screenshot:</strong></li>
 </ul>
+
+<div style="margin-top: 10px;" align="center">
+  <img src="[URL-screenshot]" alt="screenshot entrevista 1" width="600px">
+</div>
 <p align="justify">
 <strong>Resumen:</strong> Abel Holguín, compartió los desafíos que enfrenta en la gestión de su taller mecánico. Destacó que el principal reto es la creciente complejidad electrónica de los vehículos modernos, lo que exige que su personal reciba capacitación constante en electrónica avanzada y software. Actualmente, para el diagnóstico de fallas, utiliza principalmente escáneres y computadoras, y mantiene un registro digital del historial de mantenimiento de los vehículos de sus clientes. Aunque ya emplea estas herramientas, expresó que una queja común de los clientes son las demoras en el diagnóstico, ya que a veces surgen problemas inesperados. El señor Abel mostró interés en adoptar nuevas soluciones digitales, mencionando que estaría dispuesto a pagar una suscripción mensual por una plataforma que ofrezca "reportes automáticos" y ayude a reducir los tiempos de diagnóstico.
 </p>
@@ -441,8 +453,12 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Distrito:</strong> Los Olivos</li>
   <li><strong>URL del video:</strong> <a href="https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing" target="_blank">[https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing]</a></li>
   <li><strong>Duración:</strong> [08:20]</li>
-  <li><strong>Screenshot:</strong> <img src="./../assets/img/capitulo-II/entrevista-2.png" alt="screenshot entrevista 2" style="max-width:200px;"></li>
+  <li><strong>Screenshot:</strong></li>
 </ul>
+
+<div style="margin-top: 10px;" align="center">
+  <img src="./../assets/img/capitulo-II/entrevista-2.png" alt="screenshot entrevista 2" width="600px">
+</div>
 <p align="justify">
 <strong>Resumen:</strong> Germán Figueroa, dueño de un taller mediano en Los Olivos, vive con el “día a día” del oficio: fallas intermitentes que quitan tiempo, clientes que no llegan a la cita y la eterna búsqueda del historial del auto. Se apoya sobre todo en WhatsApp Business, algo de Facebook/Instagram y planillas en Google Sheets, pero siente que todo está disperso. Lo que más valora de una solución como SafeCar es tener el historial por placa/VIN con fotos, repuestos y diagnósticos en un solo lugar, reportes que le avisen qué autos están por mantener y recordatorios por WhatsApp para reducir ausencias. Si realmente le ahorra 1–2 horas diarias, pagaría S/200–S/300 al mes; mejor aún si integra WhatsApp, facturación y catálogo de repuestos, y trae soporte inicial para su equipo. Sueña con alertas claras (“crítica”, “atención”, “preventiva”) que muestren evidencia simple —“batería baja”, “temperatura anormal” para confirmar la cita rápidamente y recibir el auto ya con el camino marcado: menos adivinanzas, más confianza y eficiencia.
 </p>
@@ -452,16 +468,21 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <b>Entrevista 3</b>
 
 <ul>
-  <li><strong>Nombre del taller:</strong> [Nombre comercial]</li>
-  <li><strong>Representante:</strong> [Nombre Apellido / Cargo]</li>
-  <li><strong>Años de operación:</strong> [años]</li>
-  <li><strong>Distrito:</strong> [Distrito/Ciudad]</li>
+  <li><strong>Nombre del taller:</strong> Lizzo </li>
+  <li><strong>Representante:</strong> Jean Franco Quintana Carpo - Supervisor del taller</li>
+  <li><strong>Años de operación:</strong> 7 años</li>
+  <li><strong>Distrito:</strong> San Martin de Porres </li>
   <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
   <li><strong>Duración:</strong> [mm:ss]</li>
-  <li><strong>Screenshot:</strong> <img src="[URL-screenshot]" alt="screenshot entrevista 3" style="max-width:200px;"></li>
+  <li><strong>Screenshot:</strong></li>
 </ul>
+
+<div style="margin-top: 10px;" align="center">
+  <img src="/assets/img/capitulo-II/entrevista-taller-lizzo.png" alt="screenshot entrevista 3" width="600px">
+</div>
+
 <p align="justify">
-<strong>Resumen:</strong> [Párrafo breve con hallazgos clave del taller: tiempos de diagnóstico, problemas frecuentes, interés en digitalización, disposición a pagar].
+<strong>Resumen:</strong> La persona entrevistada es Jean Franco Quintana Carpo, de 26 años, mecánico con 6–7 años de experiencia que actualmente supervisa a ocho técnicos y se encarga de asignar trabajos, realizar diagnósticos complejos, pruebas de ruta y apoyar en la comunicación técnica con clientes. Trabaja en un taller especializado mayormente en Chevrolet, donde toda la comunicación interna se gestiona vía WhatsApp mediante fotos y videos como evidencias, sistema que él mismo propuso. Aunque cuentan con herramientas como escáner y osciloscopio, los diagnósticos varían entre 30 minutos y 2 días según la complejidad, y pronto implementarán el sistema Sigma para agilizar la consulta de historiales. Entre los principales retos destacan la falta de un especialista en electrónica, la carencia de diagramas eléctricos actualizados, la negativa a invertir en el programa oficial de Chevrolet, las dificultades para digitalizar procesos en taller y las quejas de clientes por demoras en la entrega de información. Pese a ello, ve con optimismo herramientas como Sigma, siempre que sean prácticas y fáciles de usar en el piso de trabajo.
 </p>
 
 ### 2.2.3. Análisis de entrevistas
