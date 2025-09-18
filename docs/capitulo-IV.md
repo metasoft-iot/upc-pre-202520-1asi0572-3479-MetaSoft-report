@@ -431,7 +431,7 @@ Ubicación: `application/outboundservices/acl`
 
 <br/>
 
-<img src="/assets/img/capitulo-IV/bc-device-management-container-c4.svg" alt="BC Device Management Container C4"/>
+<img src="/assets/img/capitulo-IV/bc-device managment.png" alt="BC Device Management Container C4"/>
 
 ---
 #### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
