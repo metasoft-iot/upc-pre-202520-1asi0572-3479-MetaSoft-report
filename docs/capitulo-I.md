@@ -212,15 +212,15 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/.jpeg"
+            <img src="https://media.discordapp.net/attachments/834550053590925412/1418040909831999670/1749846772019.png?ex=68ccad02&is=68cb5b82&hm=a24b607a2741b0eea40317d5ba17f01a2ffb75680ab0ace1d860e717408cf98c&=&format=webp&quality=lossless"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
           </td>
-          <td><strong>---</strong></td>
+          <td><strong>Gustavo Jandroel Aguirre Rodríguez</strong></td>
           <td>Ingeniería de Software</td>
           <td align="justify">
-            ---
+            Mi nombre es Gustavo Jandroel Aguirre Rodríguez y soy estudiante de Ingeniería de Software mi aporte principal al equipo radica en mis conocimientos en planificación y diseño de software. Durante mi formación, he trabajado en varios proyectos con diferentes tecnologías. Espero aplicar mis habilidades en este proyecto y colaborar con el equipo para alcanzar nuestros objetivos.
           </td>
           <td style="text-align: center;">
             <!-- Languages -->
