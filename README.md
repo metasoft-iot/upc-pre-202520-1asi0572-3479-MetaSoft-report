@@ -25,7 +25,7 @@
 * **Gustavo Jandroel Aguirre Rodríguez  U202124162**
 * **Javier Sharvel Irigoyen Matos       U20221D156**
 * **Gonzalo Andre Zavala Quedena        U202113656**
-* **Anaely    Código de estudiante**
+* **Anaely Zarely Burga Loarte          U202118264**
 
 
 
