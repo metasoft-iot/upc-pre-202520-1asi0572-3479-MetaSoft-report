@@ -2001,6 +2001,12 @@
 
 ## 3.2. Impact Mapping
 
+En esta sección, se presentarán los mapas de impacto para cada segmento objetivo definido para el desarrollo del proyecto. El objetivo de desarrollar estos mapas es alinear los objetivos de negocio con las necesidades de los usuarios. También, se puede visualizar de manera clara qué impacto se desea generar en el comportamiento de los usuarios finales y qué entregables se deben desarrollar para lograr alcanzar cada una de las metas mencionadas.
+
+● Segmento objetivo 1:
+
+● Segmento objetivo 2: 
+
 ## 3.3. Product Backlog
 
 <!-- INICIO: Tabla de product backlog -->
