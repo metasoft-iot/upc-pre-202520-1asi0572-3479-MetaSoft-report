@@ -325,51 +325,11 @@ A continuación se presentan los gráficos de colaboración de los integrantes d
 
 **Gráficos de colaboración de los integrantes del equipo**
 
-![Imagen 1]()
+![tf-Network-graph.png](./assets/img/master/tb1-Network-graph.png)
 
-![Imagen 2]()
+![tf-pulse.png](./assets/img/master/tb1-pulse.png)
 
-![Imagen 3]()
-
-### ENTREGABLE TRABAJO PARCIAL (TP)
-
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
-repositorio de nuestro segundo sprint. Estos gráficos ofrecen una representación visual de la cantidad
-de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
-cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
-en cada uno de los commits.
-
-![Imagen 1]()
-
-![Imagen 2]()
-
-![Imagen 3]()
-
-
-### ENTREGABLE TB2
-
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el repositorio de nuestro Tercer sprint. Estos gráficos ofrecen una representación visual de la cantidad de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado en cada uno de los commits.
-
-![Imagen 1]()
-
-![Imagen 2]()
-
-![Imagen 3]()
-
-
-### ENTREGABLE TRABAJO FINAL (TF)
-
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
-repositorio de nuestro segundo sprint. Estos gráficos ofrecen una representación visual de la cantidad
-de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
-cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
-en cada uno de los commits.
-
-![tf-Network-graph.png](./assets/img/develop/tf-Network-graph.png)
-
-![tf-pulse.png](./assets/img/develop/tf-pulse.png)
-
-![tf-clone.png](./assets/img/develop/tf-clone.png)
+![tf-clone.png](./assets/img/master/tb1-contributors.png)
 
 ## Tabla de Contenido
 
