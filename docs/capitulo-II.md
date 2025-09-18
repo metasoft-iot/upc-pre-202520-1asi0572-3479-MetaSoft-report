@@ -436,7 +436,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="[URL-screenshot]" alt="screenshot entrevista 1" width="600px">
+  <img src="./../assets/img/capitulo-II/entrevista-taller-holguin.png" alt="screenshot entrevista 1" width="600px">
 </div>
 <p align="justify">
 <strong>Resumen:</strong> Abel Holguín, compartió los desafíos que enfrenta en la gestión de su taller mecánico. Destacó que el principal reto es la creciente complejidad electrónica de los vehículos modernos, lo que exige que su personal reciba capacitación constante en electrónica avanzada y software. Actualmente, para el diagnóstico de fallas, utiliza principalmente escáneres y computadoras, y mantiene un registro digital del historial de mantenimiento de los vehículos de sus clientes. Aunque ya emplea estas herramientas, expresó que una queja común de los clientes son las demoras en el diagnóstico, ya que a veces surgen problemas inesperados. El señor Abel mostró interés en adoptar nuevas soluciones digitales, mencionando que estaría dispuesto a pagar una suscripción mensual por una plataforma que ofrezca "reportes automáticos" y ayude a reducir los tiempos de diagnóstico.
