@@ -537,8 +537,137 @@ Ubicación: `application/outboundservices/acl`
 <img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-container-c4.svg" alt="BC Analytics and Recommendations Container C4"/>
 
 #### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
+<p align="justify">
+El diagrama modela el núcleo de negocio del BC Analytics & Recommendations dentro del monolito. Muestra entidades/agregado, value objects, interfaces (servicios de dominio, repositorios y façade inter-BC), la enumeración de riesgo y los eventos de dominio, con atributos/métodos y alcance (+ público, − privado), así como direcciones y multiplicidades en las relaciones.
+</p>
+
+<img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-domain-class-diagram.png" alt="BC Analytics and Recommendations Domain Class Diagram"/>
+
+<b>2) Agregado y entidades (Core Model)</b>
+- **DriverProfile (Aggregate Root)**  
+  Representa el estado analítico del conductor. Mantiene las invariantes y la consistencia de su grafo:  
+  - Atributos clave: `driverId` (+), `riskScore` (−, `RiskScore`), `drivingStats` (−, `DrivingStats`), colecciones (−) de `Prediction` y `Recommendation`.  
+  - Comportamientos: `recalculateRisk(...)`, `addPrediction(...)`, `addRecommendation(...)`.  
+  - **Relaciones:**  
+    - `DriverProfile "1" o-- "0..*" Prediction` y `Recommendation`: composición («contains») porque las vidas de predicciones/recomendaciones dependen del perfil.  
+    - `DriverProfile --> RiskScore` y `DrivingStats`: asociación de «tiene» («has»).
+
+- **Prediction**  
+  Describe una **falla probable** estimada.  
+  - Atributos: `predictedFault` (+), `confidence` (−, `PredictionConfidence`), `timestamp` (+).  
+  - Métodos: `updateConfidence(newConfidence)`, `discard()`.  
+  - **Relación:** `Prediction --> PredictionConfidence` («has»).
+
+- **Recommendation**  
+  Acción de **mantenimiento sugerida** (inmutable en dominio).  
+  - Atributos: `recommendationText` (+), `timestamp` (+).  
+  - No expone mutadores de negocio.
+
+<b>3) Value Objects y Enum</b>
+- **RiskScore**, **DrivingStats**, **PredictionConfidence** (<<ValueObject>>): encapsulan valores y validaciones de rango/consistencia; exponen `getValue()`/`of(...)` o métodos equivalentes.  
+- **RiskBand (enum)**: `LOW | MEDIUM | HIGH`.  
+  - **Relación:** `RiskScore --> RiskBand` («derives») para mapear un puntaje numérico a una banda de riesgo.
+
+<b>4) Servicios de Dominio (Interfaces)</b>
+- **RiskCalculator**: `calculate(DrivingStats): RiskScore`. Implementa reglas puras para riesgo.  
+- **PredictionEngine**: `predict(DriverProfile): Prediction`. Aplica heurísticas/modelos (sin acoplarse a infra).  
+- **RecommendationGenerator**: `generate(DriverProfile, Prediction): Recommendation`. Orquesta reglas de mantenimiento; su implementación puede delegar fuera del dominio (p. ej., cliente OpenAI en Infraestructura).  
+- **Relaciones:** flechas **de uso** («uses», «returns») muestran dirección desde el servicio hacia los tipos que consume/produce.
+
+<b>5) Puertos de persistencia (Repositories)</b>
+Interfaces **del dominio**:  
+- `DriverProfileRepository`, `PredictionRepository`, `RecommendationRepository`.  
+- Métodos públicos (+) especifican las **operaciones permitidas** sobre agregados/entidades.  
+- **Relaciones:** `Repository ..> Entity` con etiqueta «persists»; la implementación concreta vive en **Infrastructure** (adaptadores JPA) y no se muestra aquí para mantener el dominio **puro**.
+
+<b>6) Façade inter-BC (Puerto)</b>
+- **ExternalDriverContextFacade**: contrato para consultar datos de otros bounded contexts sin invadir el modelo (p. ej., `fetchLatestDrivingStats(driverId)`).  
+- **Relación:** `Facade ..> DrivingStats` («provides»), indicando que entrega VO del dominio; las traducciones DTO-externo → VO ocurren en la **ACL** de *Application*.
+
+<b>7) Eventos de Dominio</b>
+- `DriverRiskRecalculatedEvent`, `PredictionCreatedEvent`, `RecommendationGeneratedEvent`.  
+- **Relaciones «about»** hacia `DriverProfile`, `Prediction` o `Recommendation` dejan claro **sobre qué entidad** versa el evento.  
+- Se publican desde *Application* (CommandServiceImpl) por un **publisher** de infraestructura; aquí solo se modela el **contrato**.
+
+<b>8) Multiplicidades y calificaciones</b>
+- **Composición**: `1 — 0..*` entre `DriverProfile` y `Prediction/Recommendation` para reflejar propiedad y ciclo de vida ligado.  
+- **Asociaciones dirigidas**: flechas señalan **quién usa a quién** (servicios → tipos, repositorios → entidades, façade → VO).  
+- **Etiquetas** («contains», «has», «uses», «returns», «persists», «derives», «about») califican la **intención** de cada relación.
+
+<b>9) Visibilidad (scope)</b>
+- **Atributos privados (−)** en VO/entidades cuando se requiere invariantes (`RiskScore.value`, `Prediction.confidence`).  
+- **Operaciones públicas (+)** para comportamiento del agregado/entidades (`recalculateRisk`, `updateConfidence`) y para contratos (`interfaces`).  
+- Esto comunica explícitamente qué **se puede** y **qué no se puede** modificar desde fuera del agregado.
+
+<b>10) Trazabilidad con las capas</b>
+- **Domain**: todo lo mostrado (entidades, VO, repos, servicios, façade, eventos) son **contratos o modelos puros**.  
+- **Application/Infrastructure**: implementan **cómo** (CommandServiceImpl, RepositoryImpl JPA, OpenAI/Twilio clients, publisher), pero no alteran este modelo.
+
+<b>11) Por qué este diseño cumple DDD en monolito</b>
+- **Reglas de negocio** encapsuladas en el agregado/servicios.  
+- **Dependencias hacia adentro** (UI → Application → Domain) y puertos para infra (repos/façade), manteniendo bajo acoplamiento.  
+- **Expansión futura**: el monolito puede extraer este BC a un microservicio manteniendo estos **puertos** intactos.
+
 ##### 4.2.4.6.2. Bounded Context Database Design Diagram
+
+<b>1) Visión general</b>
+<p align="justify">
+El esquema relacional define cómo se almacenan los objetos del dominio *Analytics & Recommendations* en **MySQL**. Se ha diseñado para mantener la integridad referencial, permitir consultas eficientes y soportar la evolución del modelo sin comprometer las reglas del dominio.
+</p>
+
+<img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-database-diagram.png" alt="BC Analytics and Recommendations Database Design Diagram"/>
+
+<b>2) Tablas principales</b>
+- **driver_profiles**  
+  - Representa la raíz de agregado `DriverProfile`.  
+  - Atributos clave:  
+    - `driver_id`: UUID del conductor, único en la tabla.  
+    - `risk_score`: valor actual de riesgo normalizado.  
+    - `driving_stats`: columna JSON para métricas agregadas de conducción (flexibilidad ante cambios de atributos).  
+    - `created_at`, `updated_at`: control de auditoría.  
+  - **Constraint:** `UNIQUE(driver_id)` asegura que cada conductor tenga un único perfil.
+
+- **predictions**  
+  - Representa instancias de `Prediction`.  
+  - Atributos clave:  
+    - `driver_profile_id`: FK → `driver_profiles.id` para asegurar pertenencia al perfil.  
+    - `driver_id`: redundancia para acelerar consultas directas por conductor.  
+    - `predicted_fault`, `confidence`, `timestamp`.  
+  - **Índices:** combinados en `(driver_id, timestamp)` para consultas de historial en orden temporal.
+
+- **recommendations**  
+  - Representa instancias de `Recommendation`.  
+  - Atributos clave:  
+    - `driver_profile_id`: FK → `driver_profiles.id`.  
+    - `driver_id`: redundancia para consultas.  
+    - `recommendation_text`, `timestamp`.  
+  - **Índices:** similares a `predictions` para optimizar consultas por conductor y fecha.
+
+<b>3) Relaciones y cardinalidades</b>
+- **driver_profiles 1 — N predictions**  
+  Cada perfil puede tener múltiples predicciones asociadas.  
+- **driver_profiles 1 — N recommendations**  
+  Cada perfil puede tener múltiples recomendaciones asociadas.  
+- **Restricciones ON DELETE RESTRICT**  
+  Evitan eliminar perfiles con predicciones/recomendaciones, garantizando la trazabilidad histórica.
+
+<b>4) Índices y constraints</b>
+- **Índices en `driver_id` y `timestamp`** optimizan consultas frecuentes (ej. “todas las predicciones del último mes para un conductor”).  
+- **Foreign Keys con ON UPDATE CASCADE** aseguran consistencia si cambia el `id` del perfil (raro, pero soportado).  
+- **Columnas JSON en `driving_stats`** permiten flexibilidad en las métricas sin necesidad de alterar el esquema frecuentemente.
+
+<b>5) Decisiones de diseño</b>
+- **Normalización:** entidades principales (`DriverProfile`, `Prediction`, `Recommendation`) en tablas separadas.  
+- **Desnormalización controlada:** duplicación de `driver_id` en `predictions` y `recommendations` para queries rápidas sin `JOIN`.  
+- **Escalabilidad:** uso de índices compuestos (`driver_id, timestamp`) y JSON para evitar migraciones disruptivas.  
+- **Trazabilidad:** no se borran predicciones/recomendaciones automáticamente; se mantiene historial completo.
+
+<b>6) Alineación con el dominio</b>
+- Las tablas corresponden directamente a las entidades del dominio.  
+- Los value objects (`RiskScore`, `DrivingStats`, `PredictionConfidence`) se almacenan como tipos primitivos (`DECIMAL`, `JSON`) en columnas específicas.  
+- Los eventos de dominio no se materializan en tablas propias, pero pueden ser persistidos en una tabla de **event store** aparte si se requiere.
 
 
 ### 4.2.5. Bounded Context: Driver Engagement
