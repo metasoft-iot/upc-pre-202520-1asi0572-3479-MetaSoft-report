@@ -486,6 +486,9 @@ en cada uno de los commits.
 
 
 ## Student Outcome
+<p align="justify">
+La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos. En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del <b>ABET – EAC - Student Outcome 5.</b>
+</p>
 
 <table>
 <thead>
@@ -510,6 +513,9 @@ en cada uno de los commits.
                 <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB1 por el integrante 4</li>
                 <li><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Acciones realizadas de TB1 por el integrante 5</li>
                 <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB1 por el integrante 6</li>
+                <li align="justify">
+                <strong>Gonzalo Andre Zavala Quedena</strong><br/>Lideró y ejecutó la identificación y refinamiento de eventos, la documentación de los flujos de mensajes, la revisión y consolidación de los Bounded Context Canvases, la redacción y estructuración completa del Capítulo I (incluyendo perfiles y segmentos objetivo), la elaboración de User Personas para el Capítulo III, el diseño de la guía de entrevistas para usuarios y la elaboración de los diagramas de arquitectura de software a nivel de contenedores y contexto, asegurando claridad y cohesión en la visión del sistema.
+                </li>
             </ul>
         </div>
         <!-- TP Section -->
@@ -546,7 +552,7 @@ en cada uno de los commits.
     <td style="text-align: left; vertical-align: top; padding: 15px;">
         <div style="margin-bottom: 15px;">
             <h5 style="color: #e74c3c; margin-bottom: 8px;">TB1:</h5>
-            <p style="margin: 0; font-size: 14px;">Conclusiones generales TB1 del criterio específico 1</p>
+            <p align="justify">Durante el desarrollo del TB1, el equipo demostró una colaboración efectiva, distribuyendo roles y responsabilidades de manera equitativa. Destacó la gestión de versiones, la integración de aportes y la planificación conjunta, lo que permitió mantener la coherencia y calidad del entregable. El liderazgo compartido, la comunicación constante y la organización de tareas fueron claves para alcanzar los objetivos propuestos.
         </div>
         <div style="margin-bottom: 15px;">
             <h5 style="color: #e74c3c; margin-bottom: 8px;">TP:</h5>
@@ -575,6 +581,9 @@ en cada uno de los commits.
                 <li><strong>Villegas Jipa Luis Alfonso:</strong> Acciones realizadas de TB1 por el integrante 3</li>
                 <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB1 por el integrante 4</li>
                 <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB1 por el integrante 6</li>
+                <li align="justify">
+                <strong>Gonzalo Andre Zavala Quedena:</strong><br/> Asumió un rol central en la planificación, coordinación y ejecución de tareas clave, promoviendo la colaboración y comunicación entre los miembros. Se encargó de la integración de aportes, la estructuración de entregables, la elaboración de perfiles y segmentos objetivo, la documentación de procesos y la generación de artefactos fundamentales para el avance del equipo, asegurando el cumplimiento de los objetivos y la calidad del trabajo final.
+                </li>
             </ul>
         </div>
         <!-- TP Section -->
@@ -611,7 +620,7 @@ en cada uno de los commits.
     <td style="text-align: left; vertical-align: top; padding: 15px;">
         <div style="margin-bottom: 15px;">
             <h5 style="color: #e74c3c; margin-bottom: 8px;">TB1:</h5>
-            <p style="margin: 0; font-size: 14px;">Conclusiones generales TB1 del criterio específico 2</p>
+            <p align="justify">Durante el desarrollo del TB1, el equipo demostró una colaboración efectiva, distribuyendo roles y responsabilidades de manera equitativa. Destacó la gestión de versiones, la integración de aportes y la planificación conjunta, lo que permitió mantener la coherencia y calidad del entregable. El liderazgo compartido, la comunicación constante y la organización de tareas fueron claves para alcanzar los objetivos propuestos.</p>
         </div>
         <div style="margin-bottom: 15px;">
             <h5 style="color: #e74c3c; margin-bottom: 8px;">TP:</h5>
