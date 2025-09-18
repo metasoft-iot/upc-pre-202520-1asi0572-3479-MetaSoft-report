@@ -79,14 +79,362 @@ Este nivel permite visualizar claramente cómo se distribuyen las responsabilida
 ## 4.2. Tactical-Level Domain-Driven Design
 
 ### 4.2.1. Bounded Context: Device Management
+
 #### 4.2.1.1. Domain Layer
+
+**Propósito del BC**
+Gestionar el ciclo de vida completo de los dispositivos IoT, desde su registro y configuración inicial hasta su asignación a un vehículo y eventual desactivación. Este BC es la fuente de verdad sobre qué dispositivo está instalado en qué vehículo.
+
+<b>A) Agregado y Entidades (diccionario)</b>
+
+- **Aggregate Root: `Device`**
+  - **Propósito:** Encapsular toda la información, estado y reglas de negocio de un dispositivo IoT.
+  - **Invariantes:**
+    - Un `serialNumber` es único y no puede cambiar una vez registrado.
+    - Un dispositivo solo puede ser asignado a un vehículo a la vez (`vehicleId`).
+    - Un dispositivo debe estar en estado `ACTIVE` para ser asignado.
+    - El estado (`status`) debe seguir un ciclo de vida válido (ej. no se puede pasar de `MAINTENANCE` a `ASSIGNED` directamente).
+  - **Atributos:**
+    - `deviceId: UUID`
+    - `serialNumber: String`
+    - `model: String`
+    - `firmwareVersion: FirmwareVersion`
+    - `status: DeviceStatus`
+    - `vehicleId: Optional<UUID>`
+  - **Métodos:**
+    - `assignToVehicle(vehicleId: UUID): void`
+    - `unassignFromVehicle(): void`
+    - `updateFirmware(newVersion: FirmwareVersion): void`
+    - `activate(): void`
+    - `deactivate(): void`
+    - `placeInMaintenance(): void`
+
+<b>B) Value Objects (records/enums)</b>
+
+- **`FirmwareVersion` (record):** `major: int`, `minor: int`, `patch: int` (encapsula la lógica de comparación de versiones).
+- **`DeviceStatus` (enum):** `REGISTERED`, `ACTIVE`, `INACTIVE`, `MAINTENANCE`, `EOL` (End-of-Life).
+
+<b>C) Servicios de Dominio (interfaces)</b>
+
+- **`DeviceProvisioner`** → `provision(device: Device): ProvisioningResult`
+- **`SerialNumberUniquenessChecker`** → `isUnique(serialNumber: String): boolean`
+
+> Implementaciones concretas de estos servicios residen en la capa de Infraestructura.
+
+<b>D) Repositorios (puertos del dominio)</b>
+
+- **`DeviceRepository`**
+  - `save(device: Device): Device`
+  - `findByDeviceId(deviceId: UUID): Optional<Device>`
+  - `findBySerialNumber(serialNumber: String): Optional<Device>`
+  - `findByVehicleId(vehicleId: UUID): Optional<Device>`
+
+<b>E) Commands & Queries (records en dominio)</b>
+
+**Commands**
+- `RegisterDeviceCommand(serialNumber: String, model: String, initialFirmwareVersion: FirmwareVersion)`
+- `AssignDeviceToVehicleCommand(deviceId: UUID, vehicleId: UUID)`
+- `UnassignDeviceFromVehicleCommand(deviceId: UUID)`
+- `UpdateDeviceFirmwareCommand(deviceId: UUID, newFirmwareVersion: FirmwareVersion)`
+- `DeactivateDeviceCommand(deviceId: UUID)`
+
+**Queries**
+- `GetDeviceByDeviceIdQuery(deviceId: UUID)`
+- `GetDeviceByVehicleIdQuery(vehicleId: UUID)`
+- `GetAllDevicesQuery(page: int, size: int)`
+
+<b>F) Domain Events </b>
+
+- `DeviceRegisteredEvent` (deviceId, serialNumber, occurredOn)
+- `DeviceAssignedToVehicleEvent` (deviceId, vehicleId, occurredOn)
+- `DeviceUnassignedFromVehicleEvent` (deviceId, vehicleId, occurredOn)
+- `DeviceFirmwareUpdatedEvent` (deviceId, oldVersion, newVersion, occurredOn)
+- `DeviceStatusChangedEvent` (deviceId, oldStatus, newStatus, occurredOn)
+
+<b>G) Facade (contrato entre BCs)</b>
+
+- **Interface en dominio:** `ExternalVehicleContextFacade`
+  - **Propósito:** Consultar información del BC de Flota de Vehículos sin acoplamiento directo.
+  - **Métodos ejemplo:**
+    - `existsVehicle(vehicleId: UUID): boolean`
+
+<b>H) Excepciones de Dominio</b>
+
+- `DeviceNotFoundException`
+- `SerialNumberAlreadyExistsException`
+- `DeviceAlreadyAssignedException`
+- `InvalidDeviceStatusTransitionException`
+
+---
 #### 4.2.1.2. Interface Layer
+<b>A) Controladores (REST Controllers)</b>
+
+1) **`DeviceController`**
+- **Responsabilidad:** Exponer endpoints para la gestión completa del ciclo de vida de los dispositivos.
+- **Dependencias:** `DeviceCommandService`, `DeviceQueryService`, `DeviceResourceFromEntityAssembler`.
+- **Rutas:**
+  - `POST /api/v1/devices` – registrar un nuevo dispositivo.
+    - **Request:** `RegisterDeviceResource`
+    - **Command:** `RegisterDeviceCommand`
+    - **Response:** `DeviceResource`
+  - `PUT /api/v1/devices/{deviceId}/assignment` – asignar un dispositivo a un vehículo.
+    - **Request:** `AssignDeviceResource`
+    - **Command:** `AssignDeviceToVehicleCommand`
+    - **Response:** `DeviceResource`
+  - `DELETE /api/v1/devices/{deviceId}/assignment` – desasignar un dispositivo.
+    - **Command:** `UnassignDeviceFromVehicleCommand`
+    - **Response:** `204 No Content`
+  - `PATCH /api/v1/devices/{deviceId}/firmware` – actualizar la versión del firmware.
+    - **Request:** `UpdateFirmwareResource`
+    - **Command:** `UpdateDeviceFirmwareCommand`
+    - **Response:** `DeviceResource`
+  - `GET /api/v1/devices/{deviceId}` – obtener un dispositivo por su ID.
+    - **Query:** `GetDeviceByDeviceIdQuery`
+    - **Response:** `DeviceResource`
+  - `GET /api/v1/devices?vehicleId={vehicleId}` – obtener un dispositivo por el ID del vehículo.
+    - **Query:** `GetDeviceByVehicleIdQuery`
+    - **Response:** `DeviceResource`
+
+---
+
+<b>B) Resources (DTOs de entrada/salida)</b>
+
+Ubicación: `interfaces/resources`
+
+**Requests**
+- `RegisterDeviceResource { serialNumber: string, model: string, initialFirmwareVersion: string }`
+- `AssignDeviceResource { vehicleId: string }`
+- `UpdateFirmwareResource { newFirmwareVersion: string }`
+
+**Responses**
+- `DeviceResource { deviceId: string, serialNumber: string, model: string, firmwareVersion: string, status: string, vehicleId: string | null }`
+
+> **Validaciones** (Bean Validation): `@NotNull`, `@NotBlank`, `@Pattern` para `serialNumber` y `firmwareVersion`.
+
+---
+
+<b>C) Assemblers (mapeadores)</b>
+
+Ubicación: `interfaces/transform`
+
+- **`DeviceResourceFromEntityAssembler`**
+  - `toResource(Device domain): DeviceResource`
+  - `toDomain(RegisterDeviceResource r): RegisterDeviceCommand`
+  - `toDomain(AssignDeviceResource r, UUID deviceId): AssignDeviceToVehicleCommand`
+  - `toDomain(UpdateFirmwareResource r, UUID deviceId): UpdateDeviceFirmwareCommand`
+
+---
+
+<b>D) Manejo de errores y contrato</b>
+
+- Respuestas de error estandarizadas (`Problem+JSON`):
+  - `400` Bad Request (validación de DTO).
+  - `404` Not Found (`DeviceNotFoundException`).
+  - `409` Conflict (`SerialNumberAlreadyExistsException`, `DeviceAlreadyAssignedException`).
+- Versionado de API: prefijo `/api/v1` y *content negotiation* (`application/json`).
+
+---
 #### 4.2.1.3. Application Layer
+
+<b>A) Command Services (implementaciones)</b>
+
+1) **`DeviceCommandServiceImpl`** (`application/internal/commandservices`)
+- **register(cmd: RegisterDeviceCommand): Device**
+  1. Verifica unicidad usando `SerialNumberUniquenessChecker.isUnique`. Si no, lanza `SerialNumberAlreadyExistsException`.
+  2. Crea una nueva instancia del agregado `Device`.
+  3. Opcional: Invoca `DeviceProvisioner.provision(device)` para registrarlo en el Hub IoT.
+  4. Persiste con `deviceRepository.save(..)` y publica `DeviceRegisteredEvent`.
+- **assignToVehicle(cmd: AssignDeviceToVehicleCommand): Device**
+  1. Carga el `Device` por `deviceId`.
+  2. Verifica si el vehículo existe usando `ExternalVehicleContextFacade.existsVehicle`.
+  3. Invoca `device.assignToVehicle(cmd.vehicleId)`. El agregado valida sus invariantes (ej. estado `ACTIVE`).
+  4. Persiste los cambios y publica `DeviceAssignedToVehicleEvent`.
+
+<b>B) Query Services (implementaciones)</b>
+
+1) **`DeviceQueryServiceImpl`**
+- **handle(q: GetDeviceByDeviceIdQuery): Optional<Device>** → `deviceRepository.findByDeviceId(..)`
+- **handle(q: GetDeviceByVehicleIdQuery): Optional<Device>** → `deviceRepository.findByVehicleId(..)`
+
+<b>C) Event Handlers</b>
+
+Ubicación: `application/internal/eventhandlers`
+
+- **`NotifyTelemetryOnAssignmentHandler`**
+  - **Escucha:** `DeviceAssignedToVehicleEvent`
+  - **Acción:** Publica un evento de integración para notificar al BC de *Telemetry Processing* que debe empezar a escuchar datos de este dispositivo para el vehículo asociado.
+- **`AuditDeviceLifecycleHandler`**
+  - **Escucha:** `DeviceRegisteredEvent`, `DeviceStatusChangedEvent`, `DeviceAssignedToVehicleEvent`.
+  - **Acción:** Escribe un registro de auditoría en un log o tabla separada para trazabilidad.
+
+<b>D) Outbound Services / ACL (Facade entre BCs)</b>
+
+Ubicación: `application/outboundservices/acl`
+
+- **Interface en dominio:** `ExternalVehicleContextFacade`
+- **Implementación (ACL):** **`ExternalVehicleContextService`**
+  - **existsVehicle(vehicleId: UUID): boolean** — Llama a un endpoint del BC *Vehicle Fleet Management* para validar que el vehículo existe.
+  - **Manejo de fallos:** *timeouts*, *circuit breaker*, *fallback*.
+
+---
 #### 4.2.1.4. Infrastructure Layer
+
+<b>A) Persistencia (JPA / MySQL)</b>
+
+**Entidades JPA (solo para persistencia):**
+- `DeviceEntity` ↔ tabla `devices`
+
+**Repositorios Spring Data (infra):**
+- `DeviceJpaRepository extends JpaRepository<DeviceEntity, Long>`
+  - `Optional<DeviceEntity> findByDeviceId(UUID deviceId)`
+  - `Optional<DeviceEntity> findBySerialNumber(String serialNumber)`
+  - `Optional<DeviceEntity> findByVehicleId(UUID vehicleId)`
+
+**Adaptadores que implementan puertos del dominio:**
+- `DeviceRepositoryImpl implements DeviceRepository`
+  - Usa `DeviceJpaRepository` + *mappers* para convertir **Entity ↔ Aggregate**.
+
+**Mappers (infra/persistence/mapping):**
+- `DeviceMapper`
+  - `toEntity(Device)` / `toAggregate(DeviceEntity)`
+
+<b>B) Integración con servicios externos</b>
+
+**Cliente IoT Hub (infra/external/iot):**
+- `AzureIoTHubClientImpl implements DeviceProvisioner`
+  - HTTP con SDK de Azure IoT Hub.
+  - *Configuración:* `IOTHUB_CONNECTION_STRING` (en `infrastructure/config`).
+  - *Resiliencia:* *timeouts*, *retry*, *circuit breaker* (Resilience4j).
+
+<b>C) Publicación de eventos</b>
+
+**Adaptador:** `DomainEventPublisherImpl` (infra/events)
+- Implementa puerto `DomainEventPublisher`.
+- Usa `ApplicationEventPublisher` (Spring) para despachar eventos dentro de la misma transacción.
+
+<b>D) Configuración & migraciones</b>
+
+- **Config:** `PersistenceConfig`, `AzureIoTHubConfig`.
+- **Migraciones:** `db/migration` (Flyway/Liquibase) con DDL para la tabla `devices`.
+- **Observabilidad:** *logging* con `X-Request-Id`, métricas para `AzureIoTHubClientImpl`.
+
+---
 #### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+<b>A) Componentes y responsabilidades</b>
+
+- **Device Management Facade**
+  - **Capa:** Application (coordinación de casos de uso del BC).
+  - **Responsabilidad:** Orquesta `CommandServices`/`QueryServices` y centraliza políticas transversales.
+- **Device Component**
+  - **Capa:** Application + Domain
+  - **Responsabilidad:** Gestionar el agregado `Device`, aplicando las reglas de negocio e invariantes.
+  - **Interfaces dominio usadas:** `DeviceRepository`, `DeviceProvisioner`, `SerialNumberUniquenessChecker`.
+- **Device Repository**
+  - **Capa:** Infrastructure (persistencia)
+  - **Responsabilidad:** Adaptador de acceso a datos para el agregado `Device`.
+  - **Tecnología:** Spring Data JPA sobre MySQL.
+- **IoT Hub Client**
+  - **Capa:** Infrastructure (cliente externo)
+  - **Responsabilidad:** Implementa `DeviceProvisioner`. Se comunica con la plataforma IoT externa.
+- **External Vehicle Context Service (ACL)**
+  - **Capa:** Application/outboundservices/acl
+  - **Responsabilidad:** Implementa `ExternalVehicleContextFacade` para obtener datos del BC de Flota de Vehículos de forma segura.
+
+<b>B) Relaciones (resumen)</b>
+
+- `Device Management Facade → Device Component`
+- `Device Component → Device Repository` (→ MySQL)
+- `Device Component → IoT Hub Client` (→ Azure/AWS IoT Hub)
+- `Device Component → External Vehicle Context Service` (→ Vehicle Fleet BC)
+- `Device Component → Domain Event Publisher`
+
+<b>C) Mapeo a <b>nomenclaturas</b> y <b>paquetes</b></b>
+
+- **Application/internal/commandservices**
+  - `DeviceCommandServiceImpl`
+- **Application/internal/queryservices**
+  - `DeviceQueryServiceImpl`
+- **Application/outboundservices/acl**
+  - `ExternalVehicleContextService`
+- **Interfaces/resources**
+  - `RegisterDeviceResource`, `AssignDeviceResource`, etc.
+- **Interfaces/transform (assemblers)**
+  - `DeviceResourceFromEntityAssembler`
+- **Infrastructure/persistence/jpa**
+  - `DeviceRepositoryImpl`
+- **Infrastructure/external/iot**
+  - `AzureIoTHubClientImpl`
+- **Infrastructure/events**
+  - `DomainEventPublisherImpl`
+
+<br/>
+
+<img src="/assets/img/capitulo-IV/bc-device-management-container-c4.svg" alt="BC Device Management Container C4"/>
+
+---
 #### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
-##### 4.2.1.6.2. Bounded Context Database Design Diagram
+<p align="justify">
+El diagrama de clases ilustra el modelo de dominio del BC Device Management. Define el agregado `Device` como la pieza central, sus Value Objects asociados como `FirmwareVersion` y la enumeración `DeviceStatus`. También especifica los contratos (interfaces) que el dominio expone para la persistencia (`DeviceRepository`), servicios de dominio (`DeviceProvisioner`) y comunicación inter-BC (`ExternalVehicleContextFacade`), manteniendo el núcleo de negocio agnóstico a la implementación tecnológica.
+</p>
+
+<img src="/assets/img/capitulo-IV/bc-device-management-domain-class-diagram.png" alt="BC Device Management Domain Class Diagram"/>
+
+<b>2) Agregado y VOs</b>
+- **Device (Aggregate Root)**
+  - Responsable de mantener su estado consistente a través de métodos como `assignToVehicle(...)` y `updateFirmware(...)`.
+  - **Relaciones:**
+    - `Device --> FirmwareVersion` («has a»): Usa el VO para representar la versión del firmware.
+    - `Device --> DeviceStatus` («has a»): Usa el enum para gestionar su estado en el ciclo de vida.
+
+<b>3) Puertos (Interfaces)</b>
+- **`DeviceRepository`**: Define las operaciones de persistencia requeridas por el dominio. Su implementación en Infraestructura usará JPA.
+- **`DeviceProvisioner`**: Abstrae la lógica de provisionamiento en una plataforma IoT externa. Permite cambiar de proveedor (ej. de Azure a AWS) sin alterar el dominio.
+- **`ExternalVehicleContextFacade`**: Contrato para interactuar con el BC de Vehículos. Su implementación (ACL) en Application se encargará de la comunicación real (ej. REST).
+
+<b>4) Eventos de Dominio</b>
+- Se modelan como clases simples que contienen los datos relevantes del suceso.
+- Una relación «about» los vincula con el agregado `Device` para indicar el sujeto del evento.
+
+---
+#### 4.2.1.6.2. Bounded Context Database Design Diagram
+
+<b>1) Visión general</b>
+<p align="justify">
+El siguiente esquema de base de datos para MySQL soporta la persistencia del agregado `Device`. Está optimizado para consultas comunes, como buscar un dispositivo por su ID de serie o por el vehículo al que está asignado, y asegura la unicidad de los identificadores clave.
+</p>
+
+<img src="/assets/img/capitulo-IV/bc-device-management-database-diagram.png" alt="BC Device Management Database Design Diagram"/>
+
+<b>2) Tablas principales</b>
+- **devices**
+  - Representa la raíz de agregado `Device`.
+  - Atributos clave:
+    - `id` (BIGINT, PK): Clave primaria técnica.
+    - `device_id` (BINARY(16), UUID): Clave de negocio, única en la tabla.
+    - `serial_number` (VARCHAR): Número de serie, debe ser único.
+    - `model` (VARCHAR): Modelo del dispositivo.
+    - `firmware_version` (VARCHAR): Versión actual del firmware.
+    - `status` (VARCHAR): Estado del ciclo de vida del dispositivo.
+    - `vehicle_id` (BINARY(16), UUID, NULLABLE): ID del vehículo al que está asignado.
+    - `created_at`, `updated_at`: Control de auditoría.
+  - **Constraints:** `UNIQUE(device_id)`, `UNIQUE(serial_number)`.
+
+<b>3) Relaciones y cardinalidades</b>
+- No existen relaciones con clave foránea (FK) a otras tablas de otros BCs para mantener un bajo acoplamiento a nivel de base de datos.
+- La relación `Device 1 -- 0..1 Vehicle` es lógica y se mantiene a través del campo `vehicle_id`, que es gestionado por la capa de aplicación.
+
+<b>4) Índices y constraints</b>
+- **Índice Único en `device_id`** para garantizar la unicidad y acelerar las búsquedas por el identificador de negocio.
+- **Índice Único en `serial_number`** para evitar registros duplicados y optimizar las búsquedas por este campo.
+- **Índice en `vehicle_id`** para encontrar rápidamente el dispositivo asignado a un vehículo concreto.
+
+<b>5) Decisiones de diseño</b>
+- **Desacoplamiento de Base de Datos:** La ausencia de una FK a una tabla `vehicles` es una decisión consciente para que el BC sea autónomo y no dependa del esquema de otro BC. La integridad referencial se garantiza en la capa de Aplicación a través del `ExternalVehicleContextFacade`.
+- **UUID como `BINARY(16)`:** Se utiliza el tipo de dato binario para almacenar UUIDs, lo cual es más eficiente en espacio y rendimiento de indexación que un `VARCHAR(36)`.
+- **Estado como `VARCHAR`**: En lugar de un `ENUM` nativo de MySQL, se usa `VARCHAR` para facilitar la adición de nuevos estados en el futuro sin necesidad de una migración de esquema (`ALTER TABLE`).
 
 ### 4.2.2. Bounded Context: Telemetry Processing
 #### 4.2.2.1. Domain Layer
