@@ -4,6 +4,9 @@
 
 ### 4.1.1. Design-Level EventStorming
 #### 4.1.1.1 Candidate Context Discovery
+
+<img src="/assets/img/capitulo-IV/Candidate Context Discovery.jpg" alt="Candidate Context Discovery" width="1000"/>
+
 #### 4.1.1.2 Domain Message Flows Modeling
 
 <img src="/assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
