@@ -571,7 +571,7 @@
 			<td>US304</td>
 			<td>Visualización de diagnóstico del vehículo</td>
 			<td>
-				<b>Como</b> conductor <b>Quiero</b> ver en la aplicación un diagnóstico  de mi vehículo <b>Para</b> conocer su estado actual y tomar decisiones rápidas.
+				<b>Como</b> mecánico del taller <b>Quiero</b> ver en la aplicación un diagnóstico  de mi vehículo <b>Para</b> conocer su estado actual y tomar decisiones rápidas.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Diagnóstico disponible</strong><br/>
