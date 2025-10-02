@@ -600,13 +600,13 @@
 			<td>US405</td>
 			<td>Registro de mantenimientos realizados</td>
 			<td>
-				<b>Como</b> conductor <b>Quiero</b> registrar cada mantenimiento realizado <b>Para</b> llevar un historial de intervenciones de mi vehículo.
+				<b>Como</b> conductor <b>Quiero</b> registrar cada mantenimiento realizado <b>Para</b> llevar un registro de intervenciones de mi vehículo.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Registro exitoso</strong><br/>
 				Dado que el usuario introduce datos válidos de un mantenimiento<br/>
 				Cuando confirma el registro<br/>
-				Entonces el sistema guarda la información en el historial del vehículo.</p>
+				Entonces el sistema guarda la información en el registro del vehículo.</p>
 				<p><strong>Escenario 2: Validación de datos</strong><br/>
 				Dado que los datos del mantenimiento son inválidos<br/>
 				Cuando el usuario intenta registrarlos<br/>
@@ -906,10 +906,10 @@
     		Dado una cita existente<br/>
     		Cuando agrego una nota y guardo<br/>
     		Entonces se registra la nota con fecha y autor.</p>
-    		<p><strong>Escenario 2: Ver historial de notas</strong><br/>
+    		<p><strong>Escenario 2: Ver registro de notas</strong><br/>
     		Dado que otro usuario abre la cita<br/>
     		Cuando accede a “Notas”<br/>
-    		Entonces visualiza el historial de notas en orden cronológico.</p>
+    		Entonces visualiza el registro de notas en orden cronológico.</p>
     	</td>
     	<td>E06</td>
     </tr>
