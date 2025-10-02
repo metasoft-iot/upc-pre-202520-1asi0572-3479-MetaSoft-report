@@ -1495,7 +1495,7 @@
 			<td>15</td>
 			<td>US601</td>
 			<td>Ver agenda por día y semana</td>
-			<td>Como taller Quiero visualizar la agenda en vista diaria y semanal Para organizar el trabajo del equipo.</td>
+			<td>Como mecánico del taller Quiero visualizar la agenda en vista diaria y semanal Para organizar el trabajo del equipo.</td>
 			<td>3</td>
 		</tr>
 		<tr>
