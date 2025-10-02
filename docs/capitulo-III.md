@@ -536,14 +536,14 @@
 				<b>Como</b> conductor <b>Quiero</b> revisar el reporte de alertas recibidas <b>Para</b> entender patrones de fallas y planificar mantenimientos.
 			</td>
 			<td>
-				<p><strong>Escenario 1: Consulta de historial</strong><br/>
+				<p><strong>Escenario 1: Consulta de reportes</strong><br/>
 				Dado que el usuario está autenticado<br/>
-				Cuando accede al historial de alertas<br/>
+				Cuando accede al reporte de alertas<br/>
 				Entonces el sistema muestra una lista de notificaciones previas con fecha y tipo.</p>
 				<p><strong>Escenario 2: Persistencia</strong><br/>
 				Dado que el usuario cierra sesión o reinstala la aplicación<br/>
 				Cuando inicia sesión de nuevo<br/>
-				Entonces el historial de alertas permanece disponible en su cuenta.</p>
+				Entonces el reporte de alertas permanece disponible en su cuenta.</p>
 			</td>
 			<td>E03</td>
 		</tr>
