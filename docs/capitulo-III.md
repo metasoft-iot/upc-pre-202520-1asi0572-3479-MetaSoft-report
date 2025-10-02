@@ -110,23 +110,18 @@
 				Cambio de idioma en landing page (ES/EN)
 			</td>
 			<td>
-				<b>Como</b> visitante <b>Quiero</b> cambiar el idioma de la página entre español e inglés <b>Para</b> leer la información en el idioma que requiera.
+				<b>Como</b> visitante <b>Quiero</b> cambiar el idioma de la página <b>Para</b> leer la información en el idioma que requiera.
 			</td>
 			<td>
-				<p><strong>Escenario 1: Cambia a inglés</strong><br/>
-				Dado que el visitante visualiza la página en español<br/>
-				Cuando elige inglés como idioma<br/>
-				Entonces todos los textos visibles se muestran en inglés.
-				</p>
-				<p><strong>Escenario 2: Cambia a español</strong><br/>
-				Dado que el visitante visualiza la página en inglés<br/>
-				Cuando elige español como idioma<br/>
-				Entonces todos los textos visibles se muestran en español.
+				<p><strong>Escenario 1: Cambia a idioma de preferencia</strong><br/>
+				Dado que el visitante visualiza la página en un idioma<br/>
+				Cuando elige otro idioma<br/>
+				Entonces todos los textos visibles se muestran en el idioma elegido.
 				</p>
 				<p><strong>Escenario 3: Persistencia de idioma</strong><br/>
 				Dado que el visitante seleccionó un idioma<br/>
-				Cuando recarga la página o navega entre secciones<br/>
-				Entonces la página se mantiene en el idioma elegido.
+				Cuando recarga la página, cierra y vuelve a abrir el navegador o navega a otra URL de la aplicación<br/>
+				Entonces la interfaz de la aplicación se carga inmediatamente en el idioma elegido.
 				</p>
 			</td>
 			<td>
