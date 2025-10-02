@@ -368,13 +368,14 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Distrito:</strong> Lince </li>
   <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://upcedupe-my.sharepoint.com/:v:/g/personal/u201824550_upc_edu_pe/EbWP7AHkagNIuoHROo6NtTgBQoBxwBqgRzKYoCUb9cJ52w?e=oCxlBU</a></li>
   <li><strong>Duración:</strong> [04:19]</li>
+<li><strong>Inicio de la entrevista:</strong> [0:25]</li>
   <div style="margin-top: 20px;" align="center">
                 <img src="/assets/img/capitulo-II/Entrevista1IOT.png" alt="Entrevista1IOT" width="1000px">
         </div>
 
 </ul>
 <p align="justify">
-<strong>Resumen:</strong> Katy Gutierrez, quien ultiliza su auto par desplzarse a su centro de trabajo menciona que realiza el mantenimiento de su vehículo cada 8 a 9 meses, aunque a veces lo posterga por motivos de tiempo y costo. En el último año ha tenido dificultades principalmente con los gastos elevados en reparaciones y con la demora en los talleres. Se guía por ruidos del auto o luces en el tablero para identificar fallas y nunca ha utilizado aplicaciones o dispositivos digitales para monitorear su vehículo. Le interesa que SafeCar le brinde alertas preventivas, recomendaciones personalizadas y conexión directa con talleres de confianza. Estaría dispuesto a pagar una suscripción mensual si la ayuda con su problema agrega que prefiere recibir notificaciones a través de WhatsApp y la aplicación.
+<strong>Resumen:</strong> Katy Gutierrez, quien ultiliza su auto para desplazarse a su centro de trabajo menciona que realiza el mantenimiento de su vehículo cada 8 a 9 meses, aunque a veces lo posterga por motivos de tiempo y costo. En el último año ha tenido dificultades principalmente con los gastos elevados en reparaciones y con la demora en los talleres. Se guía por ruidos del auto o luces en el tablero para identificar fallas y nunca ha utilizado aplicaciones o dispositivos digitales para monitorear su vehículo. Le interesa que SafeCar le brinde alertas preventivas, recomendaciones personalizadas y conexión directa con talleres de confianza. Estaría dispuesto a pagar una suscripción mensual si la ayuda con su problema agrega que prefiere recibir notificaciones a través de WhatsApp y la aplicación. Ademas menciona que los nagedorers qeu usa son google chrome el cual suele usarla en su telefono celular, al igual que usa los canales de whatsapp, youtube e instagram 
 </p>
 
 <hr>
@@ -501,7 +502,6 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 
 <img src="/assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
 
-<img src="/assets/img/capitulo-II/UserPersona_entrevista1.jpeg" alt="UserPersona_entrevista1" width="700"/>
 
 <br/><b>Segmento: Talleres mecánicos</b>
 
