@@ -1502,7 +1502,7 @@
 			<td>16</td>
 			<td>US602</td>
 			<td>Crear cita manual</td>
-			<td>Como taller Quiero registrar una cita con cliente, vehículo, fecha y servicio Para agendar una visita.</td>
+			<td>Como mecánico del taller Quiero registrar una cita con cliente, vehículo, fecha y servicio Para agendar una visita.</td>
 			<td>3</td>
 		</tr>
 		<tr>
