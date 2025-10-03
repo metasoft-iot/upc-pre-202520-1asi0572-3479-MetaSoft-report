@@ -1597,6 +1597,66 @@
 			<td>Como mecánico de taller Quiero ver totales del día por estado de cita Para tener una vista rápida de la carga.</td>
 			<td>2</td>
 		</tr>
+
+		<tr>
+			<td>35</td>
+			<td>US801</td>
+			<td>Ver taller asignado y disponibilidad</td>
+			<td>Como conductor deseo ver mi taller asignado y sus horarios disponibles para elegir una fecha y hora.</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>36</td>
+			<td>US802</td>
+			<td>Solicitar nueva cita</td>
+			<td>Como conductor deseo solicitar una cita indicando fecha, hora y tipo de servicio para agendar la atención en mi 					taller asignado.</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>37</td>
+			<td>US803</td>
+			<td>Ver estado y detalle de la cita</td>
+			<td>Como conductor deseo consultar el estado y detalles de mi cita para mantenerme informado.</td>
+			<td>2</td>
+		</tr>
+
+		<tr>
+			<td>38</td>
+			<td>US804</td>
+			<td>Solicitar reprogramación</td>
+			<td>Como conductor deseo proponer un nuevo horario para mi cita aprobada para ajustarla a mi disponibilidad.</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>39</td>
+			<td>US805</td>
+			<td>Cancelar cita</td>
+			<td>Como conductor deseo poder cancelar una cita para liberar el horario si no podré asistir.</td>
+			<td>2</td>
+		</tr>
+
+		<tr>
+			<td>40</td>
+			<td>US806</td>
+			<td>Recordatorios de cita</td>
+			<td>Como conductor deseo recibir recordatorios antes de mi cita para no olvidarla.</td>
+			<td>2</td>
+		</tr>
+
+		<tr>
+			<td>41</td>
+			<td>US807</td>
+			<td>Adjuntar fotos y notas a la cita</td>
+			<td>Como conductor deseo adjuntar fotos y una nota al solicitar o editar la cita para describir el problema del  vehículo.</td>
+			<td>2</td>
+		</tr>
+
+		
+
+		
 		<!-- PRIORIDAD MEDIA-BAJA: Gestión de Mantenimientos -->
 		<tr>
 			<td>35</td>
