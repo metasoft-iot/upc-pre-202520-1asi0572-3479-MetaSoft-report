@@ -77,21 +77,21 @@
 				US102
 			</td>
 			<td>
-				Acceso visible a la aplicación web
+				Acceso visible a la aplicación
 			</td>
 			<td align="justify">
-				<b>Como</b> visitante, <b>quiero</b> un acceso visible hacia la aplicación web <b>para</b> continuar con el uso del servicio cuando lo decida.
+				<b>Como</b> visitante, <b>quiero</b> un acceso visible hacia la aplicación<b>para</b> continuar con el uso del servicio cuando lo decida.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Acceso desde presentación</strong><br/>
 					<b>Dado</b> que el visitante está en la sección de presentación<br/>
 					<b>Cuando</b> activa el acceso directo a la aplicación<br/>
-					<b>Entonces</b> el sistema lo dirige a la URL pública de la aplicación web
+					<b>Entonces</b> el sistema lo dirige a la URL pública de la aplicación
 				</p>
 				<p><strong>Escenario 2: Acceso disponible en todo momento</strong><br/>
 					<b>Dado</b> que el visitante navega por cualquier sección<br/>
 					<b>Cuando</b> decide continuar al producto<br/>
-					<b>Entonces</b> encuentra un acceso visible hacia la aplicación web
+					<b>Entonces</b> encuentra un acceso visible hacia la aplicacion
 				</p>
 				<p><strong>Escenario 3: Acceso rastreable</strong><br/>
 					<b>Dado</b> que el visitante usa el acceso a la aplicación<br/>
@@ -1434,8 +1434,8 @@
 		<tr>
 			<td>12</td>
 			<td>US102</td>
-			<td>Acceso visible a la aplicación web</td>
-			<td>Como visitante Quiero un acceso visible hacia la aplicación web Para continuar con el uso del servicio cuando lo decida.</td>
+			<td>Acceso visible a la aplicación</td>
+			<td>Como visitante Quiero un acceso visible hacia la aplicación para continuar con el uso del servicio cuando lo decida.</td>
 			<td>1</td>
 		</tr>
 		<tr>
