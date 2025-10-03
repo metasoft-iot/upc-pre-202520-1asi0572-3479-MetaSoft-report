@@ -1646,6 +1646,34 @@
 			<td>Como conductor deseo adjuntar fotos y una nota al solicitar o editar la cita para describir el problema del  vehículo.</td>
 			<td>2</td>
 		</tr>
+		<tr>
+			<td>42</td>
+			<td>US901</td>
+			<td>Iniciar Orden de Servicio y Diagnóstico</td>
+			<td>Como mecánico deseo cambiar el estado de una cita a "En Diagnóstico" cuando el vehículo ingresa al taller para iniciar formalmente la orden de servicio.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>43</td>
+			<td>US902</td>
+			<td>Registrar Hallazgos y Generar Presupuesto</td>
+			<td>Como mecánico deseo registrar los hallazgos del diagnóstico y crear un presupuesto detallado para enviarlo a la aprobación del cliente.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>44</td>
+			<td>US903</td>
+			<td>Registrar Progreso de Reparación</td>
+			<td>Como mecánico deseo marcar la orden como "En Reparación" una vez que el presupuesto es aprobado para indicar que el trabajo activo ha comenzado.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>45</td>
+			<td>US904</td>
+			<td>Finalizar Servicio y Generar Reporte</td>
+			<td>Como mecánico deseo finalizar la orden de servicio y generar un reporte técnico para documentar el trabajo realizado y notificar que el vehículo está listo.</td>
+			<td>3</td>
+		</tr>
 		<!-- PRIORIDAD MEDIA-BAJA: Gestión de Mantenimientos -->
 		<tr>
 			<td>35</td>
