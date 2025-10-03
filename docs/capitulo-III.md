@@ -331,7 +331,7 @@
 		<tr>
 			<td><b>E02</b></td>
 			<td>Autenticación y Cuentas</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> usuario de SafeCar (conductor o mecánico), <b>deseo</b> gestionar mi acceso y mis datos de cuenta <b>para</b> usar de forma segura las funciones de la app y mantener mi información actualizada.
 			</td>
 			<td></td>
@@ -364,7 +364,7 @@
 		<tr>
 			<td>US202</td>
 			<td>Registro de cuenta</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> nuevo usuario, <b>deseo</b> registrarme con mis datos básicos <b>para</b> crear una cuenta en SafeCar y comenzar a usar el sistema.
 			</td>
 			<td>
@@ -387,7 +387,7 @@
 		<tr>
 			<td>US203</td>
 			<td>Recuperar contraseña</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> usuario, <b>deseo</b> restablecer mi contraseña a través de un enlace temporal <b>para</b> recuperar el acceso a mi cuenta registrada.
 			</td>
 			<td>
@@ -410,7 +410,7 @@
 		<tr>
 			<td>US204</td>
 			<td>Cerrar sesión</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> usuario autenticado, <b>deseo</b> cerrar sesión de manera segura <b>para</b> proteger mi cuenta.
 			</td>
 			<td>
@@ -429,7 +429,7 @@
 		<tr>
 			<td>US205</td>
 			<td>Mantener sesión iniciada</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> usuario frecuente, <b>deseo</b> mantener mi sesión activa en mis dispositivos de confianza <b>para</b> evitar inicios repetidos.
 			</td>
 			<td>
@@ -452,7 +452,7 @@
 		<tr>
 			<td>US206</td>
 			<td>Editar perfil</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> usuario <b>deseo</b> modificar mis credenciales básicas de perfil <b>para</b> mantener mi información al día.
 			</td>
 			<td>
@@ -475,7 +475,7 @@
 		<tr>
 			<td><b>E03</b></td>
 			<td>Diagnóstico y alertas (Aplicación Móvil)</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> recibir en mi móvil diagnósticos IoT y alertas preventivas <b>para</b> anticipar fallas y reducir averías imprevistas.
 			</td>
 			<td></td>
@@ -485,7 +485,7 @@
 		<tr>
 			<td>US301</td>
 			<td>Recepción de alertas en tiempo real</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> recibir alertas en el móvil cuando el sistema detecta problemas <b>para</b> actuar de inmediato y evitar daños mayores.
 			</td>
 			<td>
@@ -504,7 +504,7 @@
 		<tr>
 			<td>US302</td>
 			<td>Reporte de alertas</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> revisar el reporte de alertas recibidas <b>para</b> entender patrones de fallas y planificar mantenimientos.
 			</td>
 			<td>
@@ -531,7 +531,7 @@
 		<tr>
 			<td>US303</td>
 			<td>Configuración de notificaciones</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> definir mis preferencias de notificaciones <b>para</b> recibir solo las alertas relevantes en la aplicación móvil.
 			</td>
 			<td>
@@ -550,7 +550,7 @@
 		<tr>
 			<td>US304</td>
 			<td>Visualización de diagnóstico del vehículo</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> conductor <b>deseo</b> ver en la aplicación el diagnóstico de mi vehículo <b>para</b> conocer su estado actual y tomar decisiones rápidas.
 			</td>
 			<td>
@@ -569,7 +569,7 @@
 		<tr>
 			<td><b>E04</b></td>
 			<td>Gestión de mantenimientos (Aplicación Móvil)</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> gestionar mantenimientos desde mi móvil <b>para</b> organizar mis visitas a talleres y llevar control de mis gastos.
 			</td>
 			<td></td>
@@ -579,7 +579,7 @@
 		<tr>
 			<td>US406</td>
 			<td>Consulta de historial de mantenimientos</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> ver el historial de mantenimientos en la aplicación <b>para</b> analizar la frecuencia y costos de mis reparaciones.
 			</td>
 			<td>
@@ -598,7 +598,7 @@
 		<tr>
 			<td>US407</td>
 			<td>Recordatorios de mantenimiento</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> recibir recordatorios de próximos mantenimientos <b>para</b> no olvidar servicios importantes de mi vehículo.
 			</td>
 			<td>
@@ -617,7 +617,7 @@
 		<tr>
 			<td><b>E05</b></td>
 			<td>Technical – Backend e Integraciones</td>
-			<td>
+			<td align="justify">
 				<b>Como</b> Developer <b>deseo</b> implementar y asegurar los servicios backend y sus integraciones <b>Para</b> soportar ingestión de datos IoT, autenticación, alertas y trazabilidad del sistema.
 			</td>
 			<td></td>
@@ -718,9 +718,9 @@
     <!--EPIC 06-->
     <tr>
     	<td><b>E06</b></td>
-    	<td>Aplicación Web – Gestión de Citas del Taller</td>
-    	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> gestionar la agenda de citas (crear, aprobar, reprogramar, cancelar y dar seguimiento) <b>Para</b> organizar la atención y evitar choques de horario.
+    	<td>Gestión de Citas del Taller (Aplicación Web)</td>
+    	<td align="justify">
+    		<b>Como</b> mecánico de taller, <b>deseo</b> gestionar la agenda de citas <b>para</b> organizar la atención y evitar choques de horario.
     	</td>
     	<td></td>
     	<td></td>
@@ -729,16 +729,16 @@
     <tr>
     	<td>US601</td>
     	<td>Ver agenda por día y semana</td>
-    	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> visualizar la agenda en vista diaria y semanal <b>Para</b> organizar el trabajo del equipo.
+    	<td align="justify">
+    		<b>Como</b> mecánico de taller, <b>deseo</b> visualizar la agenda en vista diaria y semanal <b>para</b> organizar el trabajo del equipo.
     	</td>
     	<td>
     		<p><strong>Escenario 1: Vista diaria por defecto</strong><br/>
-    		<b>Dado</b> que ingreso a “Citas”<br/>
+    		<b>Dado</b> que ingreso a la sección “Citas”<br/>
     		<b>Cuando</b> se carga la pantalla<br/>
     		<b>Entonces</b> veo la agenda del día actual</p>
     		<p><strong>Escenario 2: Cambiar a vista semanal</strong><br/>
-    		<b>Dado</b> que estoy en la vista de citas<br/>
+    		<b>Dado</b> que estoy en la sección de citas<br/>
     		<b>Cuando</b> selecciono “Semana”<br/>
     		<b>Entonces</b> se muestran las citas de la semana en curso</p>
     		<p><strong>Escenario 3: Búsqueda simple</strong><br/>
@@ -753,21 +753,21 @@
     	<td>US602</td>
     	<td>Crear cita manual</td>
     	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> registrar una cita con cliente, vehículo, fecha y servicio <b>Para</b> agendar una visita.
+    		<b>Como</b> mecánico de taller, <b>deseo</b> registrar manualmente una cita para un cliente <b>para</b> agender la visita correctamente.
     	</td>
     	<td>
     		<p><strong>Escenario 1: Creación válida</strong><br/>
-    		<b>Dado</b> que completo los campos obligatorios<br/>
+    		<b>Dado</b> que completo los campos de datos del cliente obligatorios<br/>
     		<b>Cuando</b> presiono “Guardar”<br/>
     		<b>Entonces</b> la cita se crea en estado “Solicitada”</p>
-    		<p><strong>Escenario 2: Validación de obligatorios</strong><br/>
-    		<b>Dado</b> que falta un dato requerido<br/>
+    		<p><strong>Escenario 2: Validación de campos obligatorios</strong><br/>
+    		<b>Dado</b> que falta un campo de dato del cliente requerido<br/>
     		<b>Cuando</b> intento guardar<br/>
-    		<b>Entonces</b> el sistema indica qué campo debo completar</p>
+    		<b>Entonces</b> la aplicación indica qué campo debo completar</p>
     		<p><strong>Escenario 3: Conflicto básico</strong><br/>
     		<b>Dado</b> que ya existe una cita para el mismo vehículo en el mismo horario<br/>
     		<b>Cuando</b> intento guardar<br/>
-    		<b>Entonces</b> no se crea y se muestra un aviso de conflicto</p>
+    		<b>Entonces</b> no se crea y se muestra un aviso "Conflicto de horarios"</p>
     	</td>
     	<td>E06</td>
     </tr>
@@ -776,7 +776,7 @@
     	<td>US603</td>
     	<td>Aprobar cita</td>
     	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> aprobar una cita solicitada <b>Para</b> confirmarla con el cliente.
+    		<b>Como</b> mecánico de taller, <b>deseo</b> aprobar una cita solicitada <b>para</b> confirmarla con el cliente.
     	</td>
     	<td>
     		<p><strong>Escenario 1: Cambio a aprobada</strong><br/>
@@ -799,21 +799,21 @@
     	<td>US604</td>
     	<td>Reprogramar cita</td>
     	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> reprogramar una cita aprobada <b>Para</b> moverla a una fecha/hora disponible.
+    		<b>Como</b> mecánico de taller, <b>deseo</b> reprogramar una cita ya aprobada <b>para</b> moverla a otra fecha y hora disponible.
     	</td>
     	<td>
-    		<p><strong>Escenario 1: Guardado de nuevo horario</strong><br/>
+    		<p><strong>Escenario 1: Reprogramación de cita</strong><br/>
     		Dado una cita “Aprobada”<br/>
-    		<b>Cuando</b> selecciono nueva fecha y hora y guardo<br/>
-    		<b>Entonces</b> la cita queda con el nuevo horario</p>
+    		<b>Cuando</b> selecciono nueva fecha/hora disponible y guardo.<br/>
+    		<b>Entonces</b> la cita se reprograma con el nuevo horario</p>
     		<p><strong>Escenario 2: Motivo de reprogramación</strong><br/>
-				<b>Dado</b> que reprogramo una cita<br/>
-				<b>Cuando</b> confirmo el cambio<br/>
-				<b>Entonces</b> el sistema solicita un motivo y el usuario ingresa el motivo, que se guarda con la cita</p>
+			<b>Dado</b> que se reprogramo una cita<br/>
+			<b>Cuando</b> confirmo el cambio<br/>
+			<b>Entonces</b> la aplicación solicita al mecánico ingresar el motivo de la reprogramación</p>
     		<p><strong>Escenario 3: Conflicto de horario</strong><br/>
-    		<b>Dado</b> que el nuevo horario coincide con otra cita del mismo vehículo<br/>
+    		<b>Dado</b> que el nuevo horario coincide con uno ya ocupado<br/>
     		<b>Cuando</b> intento guardar<br/>
-    		<b>Entonces</b> no se permite y se muestra un aviso de conflicto</p>
+    		<b>Entonces</b> no procede y se muestra un aviso de conflicto</p>
     	</td>
     	<td>E06</td>
     </tr>
@@ -822,7 +822,7 @@
     	<td>US605</td>
     	<td>Rechazar o cancelar cita</td>
     	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> rechazar o cancelar citas <b>Para</b> liberar espacios en la agenda.
+    		<b>Como</b> mecánico de taller, <b>deseo</b> rechazar o cancelar citas <b>para</b> liberar espacios en la agenda.
     	</td>
     	<td>
     		<p><strong>Escenario 1: Rechazo de solicitada</strong><br/>
@@ -860,7 +860,7 @@
     	<td>US607</td>
     	<td>Notas internas en la cita</td>
     	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> agregar notas internas a la cita <b>Para</b> compartir detalles con el equipo.
+    		<b>Como</b> mecánico de taller, <b>deseo</b> agregar notas internas a la cita <b>para</b> compartir observaciones con el equipo.
     	</td>
     	<td>
     		<p><strong>Escenario 1: Agregar nota</strong><br/>
@@ -868,7 +868,7 @@
     		<b>Cuando</b> agrego una nota y guardo<br/>
     		<b>Entonces</b> se registra la nota con fecha y autor</p>
     		<p><strong>Escenario 2: Ver registro de notas</strong><br/>
-    		<b>Dado</b> que otro usuario abre la cita<br/>
+    		<b>Dado</b> que otro mecánico abre la cita<br/>
     		<b>Cuando</b> accede a “Notas”<br/>
     		<b>Entonces</b> visualiza el registro de notas en orden cronológico</p>
     	</td>
@@ -879,17 +879,17 @@
     	<td>US608</td>
     	<td>Filtros por estado y fecha</td>
     	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> filtrar la lista de citas por estado y rango de fechas <b>Para</b> enfocarme en lo pendiente.
+    		<b>Como</b> mecánico de taller, <b>deseo</b> filtrar la lista de citas por estado y rango de fechas <b>para</b> enfocarme en lo pendiente.
     	</td>
     	<td>
     		<p><strong>Escenario 1: Filtrar por estado</strong><br/>
-    		<b>Dado</b> que selecciono un estado (Solicitada, Aprobada, Cancelada, No presentado)<br/>
+    		<b>Dado</b> que filtro citas por estado (Solicitada, Aprobada, Cancelada, No presentado)<br/>
     		<b>Cuando</b> aplico el filtro<br/>
-    		<b>Entonces</b> solo se muestran las citas de ese estado</p>
-    		<p><strong>Escenario 2: Filtrar por rango</strong><br/>
-    		<b>Dado</b> que elijo un rango de fechas<br/>
+    		<b>Entonces</b> solo se muestran las citas del estado seleccionado</p>
+    		<p><strong>Escenario 2: Filtrar por rango de fecha</strong><br/>
+    		<b>Dado</b> que filtro en un rango de fechas<br/>
     		<b>Cuando</b> aplico el filtro<br/>
-    		<b>Entonces</b> se listan únicamente las citas dentro de ese periodo</p>
+    		<b>Entonces</b> se listan las citas dentro de ese periodo de tiempo</p>
     	</td>
     	<td>E06</td>
     </tr>
@@ -898,7 +898,7 @@
     	<td>US609</td>
     	<td>Contadores rápidos por estado</td>
     	<td>
-    		<b>Como</b> mecánico del taller <b>deseo</b> ver totales del día por estado de cita <b>Para</b> tener una vista rápida de la carga.
+    		<b>Como</b> mecánico de taller, <b>deseo</b> ver totales del día por estado de cita <b>para</b> tener una vista rápida de la carga.
     	</td>
     	<td>
     		<p><strong>Escenario 1: Totales del día</strong><br/>
@@ -917,7 +917,7 @@
     	<td><b>E07</b></td>
     	<td>Gestión de Vehículos</td>
     	<td>
-    		<b>Como</b> conductor <b>deseo</b> registrar y administrar mis vehículos <b>Para</b> asociarlos a diagnósticos y mantenimientos.
+    		<b>Como</b> conductor, <b>deseo</b> registrar y administrar mis vehículos <b>para</b> asociarlos a diagnósticos y mantenimientos.
     	</td>
     	<td></td>
     	<td></td>
@@ -927,7 +927,7 @@
 			<td>US701</td>
 			<td>Registrar vehículo</td>
 			<td>
-				<b>Como</b> conductor <b>deseo</b> registrar y administrar mis vehículos <b>Para</b> asociarlos a diagnósticos y mantenimientos.
+				<b>Como</b> conductor, <b>deseo</b> registrar y administrar mis vehículos <b>para</b> asociarlos a diagnósticos y mantenimientos.
 			</td>
 			<td>
 				<p><strong>Escenario 1: Registro válido</strong><br/>
