@@ -1354,145 +1354,270 @@
 		</tr>
 	</thead>
 	<tbody>
+		<!-- PRIORIDAD ALTA: Autenticación y Gestión de Usuarios -->
 		<tr>
 			<td>1</td>
-			<td>US501</td>
-			<td>Ingestión de telemetría IoT</td>
-			<td>Como Developer Quiero exponer un endpoint para recibir telemetría del dispositivo IoT con validación de esquema y persistencia confiable Para disponibilizar datos para diagnóstico y alertas.</td>
-			<td>5</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>US502</td>
-			<td>Motor de alertas y reglas</td>
-			<td>Como Developer Quiero implementar un componente que evalúa reglas sobre eventos de telemetría Para generar alertas preventivas y críticas de forma confiable.</td>
-			<td>8</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>US503</td>
-			<td>Autenticación JWT y control de acceso</td>
-			<td>Como Developer Quiero proveer autenticación basada en JWT con expiración y roles Para proteger las APIs de web y móvil y aplicar autorización por recursos.</td>
-			<td>5</td>
-		</tr>
-		<tr>
-			<td>4</td>
 			<td>US202</td>
 			<td>Registro de cuenta</td>
 			<td>Como nuevo usuario Quiero registrarme con mis datos básicos Para crear una cuenta en SafeCar y comenzar a usar el sistema.</td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>5</td>
+			<td>2</td>
 			<td>US201</td>
 			<td>Iniciar sesión con credenciales</td>
 			<td>Como usuario registrado Quiero iniciar sesión con mis credenciales Para acceder a mis datos y funcionalidades.</td>
 			<td>2</td>
 		</tr>
 		<tr>
-			<td>6</td>
-			<td>US701</td>
-			<td>Registrar vehículo</td>
-			<td>Como conductor Quiero registrar y administrar mis vehículos Para asociarlos a diagnósticos y mantenimientos.</td>
 			<td>3</td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td>US704</td>
-			<td>Asociar IoT device a vehículo</td>
-			<td>Como conductor Quiero vincular el dispositivo IoT a un vehículo específico Para que los diagnósticos y alertas correspondan al auto correcto.</td>
-			<td>2</td>
-		</tr>
-		<tr>
-			<td>8</td>
-			<td>US301</td>
-			<td>Recepción de alertas en tiempo real</td>
-			<td>Como conductor Quiero recibir alertas en el móvil cuando el sistema detecta problemas Para actuar de inmediato y evitar daños mayores.</td>
-			<td>5</td>
-		</tr>
-		<tr>
-			<td>9</td>
-			<td>US304</td>
-			<td>Visualización de diagnóstico del vehículo</td>
-			<td>Como conductor Quiero ver en la aplicación un diagnóstico de mi vehículo Para conocer su estado actual y tomar decisiones rápidas.</td>
-			<td>5</td>
-		</tr>
-		<tr>
-			<td>10</td>
-			<td>US101</td>
-			<td>Barra de navegación en landing page por secciones</td>
-			<td>Como visitante Quiero desplazarme entre las secciones de la página Para encontrar la información que necesito sin perder tiempo.</td>
-			<td>1</td>
-		</tr>
-		<tr>
-			<td>11</td>
-			<td>US104</td>
-			<td>Visualización de planes y precios</td>
-			<td>Como visitante Quiero ver claramente los planes y precios de SafeCar Para evaluar cuál se ajusta mejor a mis necesidades.</td>
-			<td>2</td>
-		</tr>
-		<tr>
-			<td>12</td>
-			<td>US102</td>
-			<td>Acceso visible a la aplicación</td>
-			<td>Como visitante Quiero un acceso visible hacia la aplicación para continuar con el uso del servicio cuando lo decida.</td>
-			<td>1</td>
-		</tr>
-		<tr>
-			<td>13</td>
-			<td>US802</td>
-			<td>Solicitar nueva cita</td>
-			<td>Como conductor Quiero solicitar una cita indicando fecha, hora y tipo de servicio Para agendar la atención en mi taller asignado.</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td>14</td>
-			<td>US803</td>
-			<td>Ver estado y detalle de la cita</td>
-			<td>Como conductor Quiero consultar el estado y detalles de mi cita Para mantenerme informado.</td>
-			<td>2</td>
-		</tr>
-		<tr>
-			<td>15</td>
-			<td>US601</td>
-			<td>Ver agenda por día y semana</td>
-			<td>Como mecánico del taller Quiero visualizar la agenda en vista diaria y semanal Para organizar el trabajo del equipo.</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td>16</td>
-			<td>US602</td>
-			<td>Crear cita manual</td>
-			<td>Como mecánico del taller Quiero registrar una cita con cliente, vehículo, fecha y servicio Para agendar una visita.</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td>17</td>
-			<td>US405</td>
-			<td>Registro de mantenimientos realizados</td>
-			<td>Como conductor Quiero registrar cada mantenimiento realizado Para llevar un historial de intervenciones de mi vehículo.</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td>18</td>
-			<td>US407</td>
-			<td>Recordatorios de mantenimiento</td>
-			<td>Como conductor Quiero recibir recordatorios de próximos mantenimientos Para no olvidar servicios importantes de mi vehículo.</td>
-			<td>2</td>
-		</tr>
-		<tr>
-			<td>19</td>
 			<td>US203</td>
 			<td>Recuperar contraseña</td>
 			<td>Como usuario Quiero restablecer mi contraseña a través de un enlace temporal Para recuperar el acceso cuando lo olvido.</td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>20</td>
+			<td>4</td>
 			<td>US204</td>
 			<td>Cerrar sesión</td>
 			<td>Como usuario autenticado Quiero cerrar sesión de manera segura Para proteger mi cuenta cuando termino de usar el sistema.</td>
 			<td>1</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>US205</td>
+			<td>Mantener sesión iniciada</td>
+			<td>Como usuario frecuente Quiero mantener mi sesión activa en mis dispositivos de confianza Para evitar inicios repetidos.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>US206</td>
+			<td>Editar perfil</td>
+			<td>Como usuario Quiero modificar mis credenciales básicas de perfil Para mantener mi información al día.</td>
+			<td>2</td>
+		</tr>
+		<!-- PRIORIDAD ALTA: Gestión de Vehículos -->
+		<tr>
+			<td>7</td>
+			<td>US701</td>
+			<td>Registrar vehículo</td>
+			<td>Como conductor Quiero registrar y administrar mis vehículos Para asociarlos a diagnósticos y mantenimientos.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>US702</td>
+			<td>Editar y eliminar vehículo</td>
+			<td>Como conductor Quiero editar la información de mis vehículos o eliminarlos Para mantener mi lista actualizada.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>US703</td>
+			<td>Listar vehículos</td>
+			<td>Como conductor Quiero ver una lista de mis vehículos registrados Para seleccionar con cuál trabajar (diagnósticos, mantenimientos, citas).</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>US704</td>
+			<td>Asociar IoT device a vehículo</td>
+			<td>Como conductor Quiero vincular el dispositivo IoT a un vehículo específico Para que los diagnósticos y alertas correspondan al auto correcto.</td>
+			<td>3</td>
+		</tr>
+		<!-- PRIORIDAD ALTA: Funcionalidades Core de Diagnóstico -->
+		<tr>
+			<td>11</td>
+			<td>US301</td>
+			<td>Recepción de alertas en tiempo real</td>
+			<td>Como conductor Quiero recibir alertas en el móvil cuando el sistema detecta problemas Para actuar de inmediato y evitar daños mayores.</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>US304</td>
+			<td>Visualización de diagnóstico del vehículo</td>
+			<td>Como conductor Quiero ver en la aplicación un diagnóstico de mi vehículo Para conocer su estado actual y tomar decisiones rápidas.</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>US302</td>
+			<td>Reporte de alertas</td>
+			<td>Como conductor Quiero revisar el reporte de alertas recibidas Para entender patrones de fallas y planificar mantenimientos.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>US303</td>
+			<td>Configuración de notificaciones</td>
+			<td>Como conductor Quiero definir mis preferencias de notificaciones Para recibir solo las alertas relevantes en la aplicación móvil.</td>
+			<td>2</td>
+		</tr>
+		<!-- PRIORIDAD MEDIA: Landing Page -->
+		<tr>
+			<td>15</td>
+			<td>US101</td>
+			<td>Barra de navegación en landing page por secciones</td>
+			<td>Como visitante Quiero desplazarme entre las secciones de la página Para encontrar la información que necesito sin perder tiempo.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>US102</td>
+			<td>Acceso visible a la aplicación</td>
+			<td>Como visitante Quiero un acceso visible hacia la aplicación Para continuar con el uso del servicio cuando lo decida.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>US103</td>
+			<td>Cambio de idioma en landing page (ES/EN)</td>
+			<td>Como visitante Quiero cambiar el idioma de la página Para leer la información en el idioma que prefiera.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>US104</td>
+			<td>Visualización de planes y precios</td>
+			<td>Como visitante Quiero ver claramente los planes y precios de SafeCar Para evaluar cuál se ajusta mejor a mis necesidades.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td>US105</td>
+			<td>Lectura de testimonios</td>
+			<td>Como visitante Quiero leer opiniones de usuarios sobre SafeCar Para confiar en la plataforma antes de registrarme.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>US106</td>
+			<td>Sección "Acerca de" con explicación y video</td>
+			<td>Como visitante Quiero entender la misión y visión de SafeCar Para confiar en la plataforma antes de registrarme.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>21</td>
+			<td>US107</td>
+			<td>Sección "Nuestro equipo"</td>
+			<td>Como visitante Quiero conocer al equipo detrás de SafeCar Para aumentar mi confianza en el proyecto.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>22</td>
+			<td>US108</td>
+			<td>Sección "Formulario de contacto"</td>
+			<td>Como visitante Quiero enviar mis datos de contacto y un mensaje Para recibir más información o resolver dudas.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>23</td>
+			<td>US109</td>
+			<td>Redes sociales en el pie de página</td>
+			<td>Como visitante Quiero acceder a las redes sociales oficiales desde el pie de página Para seguir las novedades de SafeCar.</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>24</td>
+			<td>US110</td>
+			<td>Visualización correcta en distintos dispositivos</td>
+			<td>Como visitante Quiero que la página se vea bien en cualquier dispositivo Para acceder cómodamente desde cualquier lugar.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>25</td>
+			<td>US111</td>
+			<td>Carga rápida y accesible</td>
+			<td>Como visitante Quiero que la landing page cargue rápido y sea fácil de navegar Para no frustrarme ni abandonar el sitio.</td>
+			<td>2</td>
+		</tr>
+		<!-- PRIORIDAD MEDIA: Gestión de Citas del Taller -->
+		<tr>
+			<td>26</td>
+			<td>US601</td>
+			<td>Ver agenda por día y semana</td>
+			<td>Como mecánico de taller Quiero visualizar la agenda en vista diaria y semanal Para organizar el trabajo del equipo.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>27</td>
+			<td>US602</td>
+			<td>Crear cita manual</td>
+			<td>Como mecánico de taller Quiero registrar manualmente una cita para un cliente Para agendar la visita correctamente.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>28</td>
+			<td>US603</td>
+			<td>Aprobar cita</td>
+			<td>Como mecánico de taller Quiero aprobar una cita solicitada Para confirmarla con el cliente.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>29</td>
+			<td>US604</td>
+			<td>Reprogramar cita</td>
+			<td>Como mecánico de taller Quiero reprogramar una cita ya aprobada Para moverla a otra fecha y hora disponible.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>30</td>
+			<td>US605</td>
+			<td>Rechazar o cancelar cita</td>
+			<td>Como mecánico de taller Quiero rechazar o cancelar citas Para liberar espacios en la agenda.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>31</td>
+			<td>US606</td>
+			<td>Check-in de llegada</td>
+			<td>Como mecánico del taller Quiero marcar el check-in del vehículo a su llegada Para iniciar la atención a tiempo.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>32</td>
+			<td>US607</td>
+			<td>Notas internas en la cita</td>
+			<td>Como mecánico de taller Quiero agregar notas internas a la cita Para compartir observaciones con el equipo.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>33</td>
+			<td>US608</td>
+			<td>Filtros por estado y fecha</td>
+			<td>Como mecánico de taller Quiero filtrar la lista de citas por estado y rango de fechas Para enfocarme en lo pendiente.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>34</td>
+			<td>US609</td>
+			<td>Contadores rápidos por estado</td>
+			<td>Como mecánico de taller Quiero ver totales del día por estado de cita Para tener una vista rápida de la carga.</td>
+			<td>2</td>
+		</tr>
+		<!-- PRIORIDAD MEDIA-BAJA: Gestión de Mantenimientos -->
+		<tr>
+			<td>35</td>
+			<td>US405</td>
+			<td>Registro de mantenimientos realizados</td>
+			<td>Como conductor Quiero registrar cada mantenimiento realizado Para llevar un historial de intervenciones de mi vehículo.</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>36</td>
+			<td>US406</td>
+			<td>Consulta de historial de mantenimientos</td>
+			<td>Como conductor Quiero ver el historial de mantenimientos en la aplicación Para analizar la frecuencia y costos de mis reparaciones.</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>37</td>
+			<td>US407</td>
+			<td>Recordatorios de mantenimiento</td>
+			<td>Como conductor Quiero recibir recordatorios de próximos mantenimientos Para no olvidar servicios importantes de mi vehículo.</td>
+			<td>3</td>
 		</tr>
 	</tbody>
 </table>
