@@ -1745,6 +1745,218 @@
     <td>E13</td>
 </tr>
 
+<!--EPIC 14-->
+<tr>
+    <td><b>E14</b></td>
+    <td>Alertas y Notificaciones</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar el sistema de alertas y notificaciones automáticas que permita comunicar de forma oportuna al conductor y al mecánico cualquier evento relevante <b>para</b> garantizar la entrega confiable por múltiples canales, como fallas detectadas por sensores, recordatorios de mantenimiento o cambios en el estado de un servicio.
+    </td>
+    <td></td>
+    <td></td>
+</tr>
+<!--TECHNICAL STORY 01-->
+<tr>
+    <td>TS1401</td>
+    <td>API para Generación de Alertas IoT</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un servicio que detecte y genere alertas automáticas a partir de datos enviados por los dispositivos IoT del vehículo <b>para</b> avisar en tiempo real al usuario ante cualquier anomalía como temperatura, voltaje, fallas, etc.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Alerta generada correctamente (Happy Path)</strong><br/>
+        <b>Dado</b> que el dispositivo IoT envía datos que superan los umbrales críticos de temperatura<br/>
+        <b>Cuando</b> el sistema procesa el paquete de datos y valida el valor<br/>
+        <b>Entonces</b> crea una alerta con tipo, severidad, descripción y marca temporal, enviándola al conductor asociado</p>
+        <p><strong>Escenario 02: Datos inválidos o incompletos (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el dispositivo IoT envía un registro con campos vacíos o valores nulos<br/>
+        <b>Cuando</b> el sistema intenta procesarlo<br/>
+        <b>Entonces</b> devuelve un error 400 Bad Request y registra el evento en los logs sin generar la alerta</p>
+    </td>
+    <td>E14</td>
+</tr>
+<!--TECHNICAL STORY 02-->
+<tr>
+    <td>TS1402</td>
+    <td>Notificaciones Multicanal (Push, Correo, SMS)</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> integrar una capa de comunicación multicanal que envíe notificaciones push, correos electrónicos o mensajes SMS según el tipo de alerta y las preferencias configuradas por el usuario <b>para</b> garantizar que reciba la información sin importar el canal.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Envío exitoso por canal configurado (Happy Path)</strong><br/>
+        <b>Dado</b> que se genera una alerta crítica para un conductor<br/>
+        <b>Cuando</b> el sistema evalúa sus preferencias de notificación<br/>
+        <b>Entonces</b> envía el mensaje por los canales activos (push y correo) y registra el estado como "Enviado"</p>
+        <p><strong>Escenario 02: Falla en un canal de envío (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el envío por correo electrónico falla por error del proveedor<br/>
+        <b>Cuando</b> el sistema recibe la notificación de error<br/>
+        <b>Entonces</b> reintenta por canal alternativo (SMS) y actualiza el estado a "Reenviado"</p>
+    </td>
+    <td>E14</td>
+</tr>
+<!--TECHNICAL STORY 03-->
+<tr>
+    <td>TS1403</td>
+    <td>Recordatorios Automáticos de Mantenimiento</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar un sistema de recordatorios automáticos que notifique a los conductores cuando se acerque la fecha o el kilometraje de mantenimiento preventivo <b>para</b> que puedan agendar sus citas a tiempo.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Envío automático de recordatorio (Happy Path)</strong><br/>
+        <b>Dado</b> que el vehículo ha recorrido el 90% del kilometraje recomendado para mantenimiento<br/>
+        <b>Cuando</b> el sistema ejecuta la tarea programada diaria<br/>
+        <b>Entonces</b> genera una notificación tipo "Recordatorio de mantenimiento" y la envía al conductor</p>
+        <p><strong>Escenario 02: Conductor con recordatorios desactivados (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un conductor desactivó la opción de recibir recordatorios<br/>
+        <b>Cuando</b> el sistema detecta que se cumple el criterio de envío<br/>
+        <b>Entonces</b> omite la notificación y solo registra el evento en la bitácora de recordatorios</p>
+    </td>
+    <td>E14</td>
+</tr>
+<!--TECHNICAL STORY 04-->
+<tr>
+    <td>TS1404</td>
+    <td>Historial Centralizado de Alertas</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar una API que permita listar, filtrar y marcar alertas y notificaciones como leídas o no leídas <b>para</b> que los usuarios puedan gestionar su historial desde la aplicación móvil o web.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Consulta de alertas exitosamente (Happy Path)</strong><br/>
+        <b>Dado</b> que el usuario accede a su panel de alertas<br/>
+        <b>Cuando</b> realiza una solicitud GET /alerts con su userId<br/>
+        <b>Entonces</b> el sistema devuelve una lista paginada con las alertas ordenadas por fecha y estado</p>
+        <p><strong>Escenario 02: Intento de acceso no autorizado (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un usuario intenta consultar alertas pertenecientes a otro perfil<br/>
+        <b>Cuando</b> el sistema valida los permisos<br/>
+        <b>Entonces</b> responde con un 403 Forbidden y mensaje "No tiene permiso para acceder a esta información"</p>
+    </td>
+    <td>E14</td>
+</tr>
+<!--TECHNICAL STORY 05-->
+<tr>
+    <td>TS1405</td>
+    <td>Configuración de Preferencias de Notificación</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> construir un servicio que permita a cada usuario configurar los tipos de notificaciones que desea recibir (por canal y tipo de evento) <b>para</b> mejorar la personalización y evitar saturación informativa.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Preferencias actualizadas correctamente (Happy Path)</strong><br/>
+        <b>Dado</b> que el usuario modifica sus opciones de notificación<br/>
+        <b>Cuando</b> envía una solicitud PUT /notification-settings<br/>
+        <b>Entonces</b> el sistema guarda las nuevas preferencias y responde con 200 OK</p>
+        <p><strong>Escenario 02: Datos de configuración inválidos (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el usuario envía un formato de configuración con valores no permitidos<br/>
+        <b>Cuando</b> el sistema valida los datos<br/>
+        <b>Entonces</b> responde con 400 Bad Request e indica el campo incorrecto</p>
+    </td>
+    <td>E14</td>
+</tr>
+
+<!--EPIC 15-->
+<tr>
+    <td><b>E15</b></td>
+    <td>Reportes y Analítica</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar servicios que permitan generar, consolidar y exponer información técnica y estadística sobre vehículos, mantenimientos, alertas y desempeño general del sistema <b>para</b> que conductores y mecánicos puedan visualizar indicadores relevantes y descargar reportes personalizados que faciliten la toma de decisiones.
+    </td>
+    <td></td>
+    <td></td>
+</tr>
+<!--TECHNICAL STORY 01-->
+<tr>
+    <td>TS1501</td>
+    <td>API de Consolidación de Datos Vehiculares</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> construir un servicio que recopile y consolide los datos técnicos del vehículo provenientes de diferentes fuentes del sistema <b>para</b> ofrecer información centralizada que sirva de base para los reportes, incluyendo kilometraje, consumo de combustible, temperatura y fallas registradas.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Consolidación exitosa de datos (Happy Path)</strong><br/>
+        <b>Dado</b> que el sistema posee registros actualizados en los módulos de IoT, mantenimiento y diagnósticos<br/>
+        <b>Cuando</b> se ejecuta la rutina de consolidación de datos<br/>
+        <b>Entonces</b> el sistema unifica la información, la almacena en una tabla analítica y genera un resumen por vehículo con fecha y fuente de actualización</p>
+        <p><strong>Escenario 02: Falla en la obtención de datos parciales (Unhappy Path)</strong><br/>
+        <b>Dado</b> que uno de los módulos no responde a la solicitud de datos<br/>
+        <b>Cuando</b> se intenta consolidar la información<br/>
+        <b>Entonces</b> el sistema omite temporalmente ese bloque, registra el error en logs y continúa el proceso con los datos disponibles, manteniendo la consistencia del registro</p>
+    </td>
+    <td>E15</td>
+</tr>
+<!--TECHNICAL STORY 02-->
+<tr>
+    <td>TS1502</td>
+    <td>API para Generación de Reportes Técnicos en PDF</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar una API que genere reportes técnicos descargables en formato PDF <b>para</b> que los conductores y mecánicos puedan obtener documentación completa de los servicios realizados, integrando información de mantenimientos, diagnósticos, consumo y kilometraje.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Generación exitosa de reporte (Happy Path)</strong><br/>
+        <b>Dado</b> que el usuario solicita un reporte técnico desde la aplicación<br/>
+        <b>Cuando</b> el sistema recibe los parámetros de fecha y tipo de información<br/>
+        <b>Entonces</b> genera un PDF con los datos solicitados y devuelve la ruta de descarga</p>
+        <p><strong>Escenario 02: Parámetros inválidos o sin datos (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el usuario solicita un rango de fechas donde no existen registros<br/>
+        <b>Cuando</b> el sistema intenta generar el reporte<br/>
+        <b>Entonces</b> responde con un mensaje informativo "No se encontraron datos para el período seleccionado" y no crea el archivo</p>
+    </td>
+    <td>E15</td>
+</tr>
+<!--TECHNICAL STORY 03-->
+<tr>
+    <td>TS1503</td>
+    <td>API de Métricas de Rendimiento y Consumo</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar una API que calcule métricas de rendimiento (consumo por km, horas de motor, alertas críticas por periodo) <b>para</b> que se puedan visualizar en un dashboard los indicadores de desempeño del vehículo y del taller.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Cálculo de métricas exitoso (Happy Path)</strong><br/>
+        <b>Dado</b> que los registros de consumo y kilometraje están actualizados<br/>
+        <b>Cuando</b> el sistema ejecuta el cálculo de rendimiento<br/>
+        <b>Entonces</b> devuelve las métricas con formato JSON incluyendo promedios, variaciones y alertas asociadas</p>
+        <p><strong>Escenario 02: Error por datos inconsistentes (Unhappy Path)</strong><br/>
+        <b>Dado</b> que los datos de kilometraje contienen valores anómalos o negativos<br/>
+        <b>Cuando</b> se intenta calcular el rendimiento<br/>
+        <b>Entonces</b> el sistema detiene la operación, marca el registro como inválido y registra el incidente en la bitácora de análisis</p>
+    </td>
+    <td>E15</td>
+</tr>
+<!--TECHNICAL STORY 04-->
+<tr>
+    <td>TS1504</td>
+    <td>Panel de Analítica para Talleres y Conductores</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> crear un endpoint que provea información consolidada para los paneles de analítica de conductores y mecánicos <b>para</b> mostrar indicadores clave de productividad, tiempo promedio de atención, alertas más frecuentes y nivel de satisfacción general.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Consulta de indicadores exitosa (Happy Path)</strong><br/>
+        <b>Dado</b> que el usuario autenticado solicita el panel de analítica<br/>
+        <b>Cuando</b> el sistema valida su rol (conductor o mecánico)<br/>
+        <b>Entonces</b> responde con los indicadores correspondientes al tipo de usuario y periodo actual</p>
+        <p><strong>Escenario 02: Intento de acceso sin autorización (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un usuario intenta acceder a indicadores de otro rol<br/>
+        <b>Cuando</b> el sistema valida los permisos<br/>
+        <b>Entonces</b> responde con un código 403 Forbidden y mensaje "Acceso no autorizado al panel solicitado"</p>
+    </td>
+    <td>E15</td>
+</tr>
+<!--TECHNICAL STORY 05-->
+<tr>
+    <td>TS1505</td>
+    <td>Exportación de Datos en Formato CSV</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar una funcionalidad que permita exportar los datos de reportes y métricas en formato CSV <b>para</b> que los usuarios puedan realizar análisis adicionales o importar la información en otras herramientas.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Exportación correcta (Happy Path)</strong><br/>
+        <b>Dado</b> que el usuario solicita la exportación de sus métricas<br/>
+        <b>Cuando</b> el sistema genera el archivo CSV<br/>
+        <b>Entonces</b> devuelve un enlace de descarga temporal con fecha de expiración y registro en auditoría</p>
+        <p><strong>Escenario 02: Error por volumen excesivo de datos (Unhappy Path)</strong><br/>
+        <b>Dado</b> que la consulta supera el límite permitido (por ejemplo, 100.000 registros)<br/>
+        <b>Cuando</b> se ejecuta la exportación<br/>
+        <b>Entonces</b> el sistema divide el resultado en varios archivos o devuelve un mensaje indicando que debe aplicarse un filtro por fechas</p>
+    </td>
+    <td>E15</td>
+</tr>
+
   </tbody>
 </table>
 
