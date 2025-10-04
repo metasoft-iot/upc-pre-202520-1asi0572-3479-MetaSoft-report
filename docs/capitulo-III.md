@@ -1601,6 +1601,150 @@
     <td>E12</td>
 </tr>
 
+<!--EPIC 13-->
+<tr>
+    <td><b>E13</b></td>
+    <td>Mantenimiento y Servicios</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar los servicios que gestionen el ciclo completo de mantenimiento vehicular —desde la programación de citas hasta la generación del reporte técnico final— <b>para</b> conectar a conductores y mecánicos en un flujo automatizado, seguro y trazable dentro de SAFECar.
+    </td>
+    <td></td>
+    <td></td>
+</tr>
+<!--TECHNICAL STORY 01-->
+<tr>
+    <td>TS1301</td>
+    <td>API para Registro y Gestión de Citas</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un endpoint que permita a los conductores registrar, consultar, modificar o cancelar citas de mantenimiento con los mecánicos disponibles <b>para</b> garantizar la validación de horarios y disponibilidad.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Cita registrada correctamente (Happy Path)</strong><br/>
+        <b>Dado</b> que un conductor envía una solicitud POST /appointments con datos válidos (fecha, hora, tipo de servicio, taller)<br/>
+        <b>Cuando</b> el sistema valida la disponibilidad del mecánico<br/>
+        <b>Entonces</b> registra la cita, devuelve un 201 Created con el identificador de la cita y envía una notificación de confirmación</p>
+        <p><strong>Escenario 02: Horario no disponible (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un conductor selecciona un horario que ya está ocupado<br/>
+        <b>Cuando</b> el sistema procesa la solicitud<br/>
+        <b>Entonces</b> devuelve un 409 Conflict con el mensaje "El horario seleccionado no está disponible"</p>
+    </td>
+    <td>E13</td>
+</tr>
+<!--TECHNICAL STORY 02-->
+<tr>
+    <td>TS1302</td>
+    <td>Gestión del Estado del Servicio</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar un sistema que permita actualizar el estado de cada servicio (pendiente, en curso, finalizado, cancelado) <b>para</b> que los mecánicos puedan reflejar el progreso de cada atención de manera estructurada.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Actualización exitosa del estado (Happy Path)</strong><br/>
+        <b>Dado</b> que el mecánico envía una solicitud PUT /services/{id}/status con el nuevo estado "En curso"<br/>
+        <b>Cuando</b> el sistema valida el ID del servicio y el cambio permitido<br/>
+        <b>Entonces</b> actualiza el estado y devuelve una respuesta 200 OK</p>
+        <p><strong>Escenario 02: Cambio no permitido (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un mecánico intenta cambiar un servicio "Finalizado" a "Pendiente"<br/>
+        <b>Cuando</b> el sistema valida el flujo<br/>
+        <b>Entonces</b> devuelve un 400 Bad Request con el mensaje "El cambio de estado no está permitido"</p>
+    </td>
+    <td>E13</td>
+</tr>
+<!--TECHNICAL STORY 03-->
+<tr>
+    <td>TS1303</td>
+    <td>Registro del Diagnóstico Técnico</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> crear un endpoint que permita registrar diagnósticos técnicos realizados por el mecánico <b>para</b> construir un historial técnico completo, combinando observaciones propias con los datos IoT del vehículo.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Diagnóstico guardado correctamente (Happy Path)</strong><br/>
+        <b>Dado</b> que el mecánico envía un JSON válido con observaciones, códigos DTC y valores de sensores<br/>
+        <b>Cuando</b> el sistema recibe la solicitud POST /diagnostics<br/>
+        <b>Entonces</b> almacena la información, la asocia al vehículo y devuelve un 201 Created</p>
+        <p><strong>Escenario 02: JSON incompleto (Unhappy Path)</strong><br/>
+        <b>Dado</b> que faltan campos obligatorios como vehicleId o observaciones<br/>
+        <b>Cuando</b> el sistema intenta registrar el diagnóstico<br/>
+        <b>Entonces</b> devuelve un 400 Bad Request con el mensaje "Campos obligatorios faltantes"</p>
+    </td>
+    <td>E13</td>
+</tr>
+<!--TECHNICAL STORY 04-->
+<tr>
+    <td>TS1304</td>
+    <td>Generación de Presupuestos Digitales</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un servicio que genere presupuestos automáticos basados en los diagnósticos técnicos <b>para</b> facilitar la aprobación del conductor, integrando repuestos, costos de mano de obra y tiempos estimados.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Presupuesto generado exitosamente (Happy Path)</strong><br/>
+        <b>Dado</b> que existe un diagnóstico técnico con datos completos<br/>
+        <b>Cuando</b> el sistema ejecuta el cálculo del presupuesto<br/>
+        <b>Entonces</b> genera un documento con el detalle de costos, lo asocia al servicio y devuelve 200 OK</p>
+        <p><strong>Escenario 02: Falta de información para el cálculo (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un diagnóstico no tiene valores de tiempo o costo definidos<br/>
+        <b>Cuando</b> el sistema intenta generar el presupuesto<br/>
+        <b>Entonces</b> devuelve un 422 Unprocessable Entity con el mensaje "Faltan datos para calcular el presupuesto"</p>
+    </td>
+    <td>E13</td>
+</tr>
+<!--TECHNICAL STORY 05-->
+<tr>
+    <td>TS1305</td>
+    <td>Aprobación o Rechazo de Presupuestos</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> permitir que los conductores aprueben o rechacen los presupuestos generados <b>para</b> registrar su decisión en el historial del servicio.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Presupuesto aprobado correctamente (Happy Path)</strong><br/>
+        <b>Dado</b> que el conductor revisa un presupuesto pendiente<br/>
+        <b>Cuando</b> envía una solicitud PATCH /budgets/{id}/approve<br/>
+        <b>Entonces</b> el sistema cambia el estado a "Aprobado" y notifica al mecánico</p>
+        <p><strong>Escenario 02: Presupuesto rechazado (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el conductor decide no aceptar el presupuesto<br/>
+        <b>Cuando</b> realiza la solicitud PATCH /budgets/{id}/reject<br/>
+        <b>Entonces</b> el sistema marca el presupuesto como "Rechazado" y actualiza el registro</p>
+    </td>
+    <td>E13</td>
+</tr>
+<!--TECHNICAL STORY 06-->
+<tr>
+    <td>TS1306</td>
+    <td>Registro de Evidencias del Servicio</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un módulo que permita a los mecánicos adjuntar evidencias multimedia (fotos, videos, notas) durante el proceso de mantenimiento <b>para</b> sustentar las acciones realizadas.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Evidencia registrada exitosamente (Happy Path)</strong><br/>
+        <b>Dado</b> que el mecánico sube una foto o video válido asociado a un servicio<br/>
+        <b>Cuando</b> el sistema recibe el archivo<br/>
+        <b>Entonces</b> lo almacena en el servidor o bucket correspondiente y devuelve 201 Created</p>
+        <p><strong>Escenario 02: Archivo no válido (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el archivo excede el tamaño permitido o tiene un formato no admitido<br/>
+        <b>Cuando</b> se intenta subir<br/>
+        <b>Entonces</b> el sistema devuelve 415 Unsupported Media Type</p>
+    </td>
+    <td>E13</td>
+</tr>
+<!--TECHNICAL STORY 07-->
+<tr>
+    <td>TS1307</td>
+    <td>Cierre y Reporte Final del Servicio</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> generar un reporte técnico final al cerrar un servicio <b>para</b> mantener trazabilidad documental, consolidando diagnósticos, presupuestos, evidencias y observaciones finales.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Cierre correcto y generación de reporte (Happy Path)</strong><br/>
+        <b>Dado</b> que un servicio se encuentra con diagnóstico y presupuesto aprobados<br/>
+        <b>Cuando</b> el mecánico marca el servicio como "Finalizado"<br/>
+        <b>Entonces</b> el sistema genera un reporte en formato PDF con toda la información y devuelve 200 OK</p>
+        <p><strong>Escenario 02: Información incompleta para el cierre (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el servicio no tiene diagnóstico o presupuesto<br/>
+        <b>Cuando</b> el sistema intenta generar el reporte<br/>
+        <b>Entonces</b> devuelve un 400 Bad Request con el mensaje "El servicio no tiene datos suficientes para ser cerrado"</p>
+    </td>
+    <td>E13</td>
+</tr>
+
   </tbody>
 </table>
 
