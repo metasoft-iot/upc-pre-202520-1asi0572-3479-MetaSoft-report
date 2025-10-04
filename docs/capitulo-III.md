@@ -1350,11 +1350,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar endpoints para registrar y autenticar usuarios utilizando tokens JWT <b>para</b> asegurar la validación de credenciales y el almacenamiento seguro de contraseñas.
     </td>
     <td>
-        <p><strong>Escenario 01: Registro exitoso del usuario (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Registro exitoso del usuario</strong><br/>
         <b>Dado</b> que un usuario completa el formulario de registro con datos válidos (correo, contraseña, nombre y rol)<br/>
         <b>Cuando</b> el sistema recibe la solicitud POST /auth/register<br/>
         <b>Entonces</b> crea el usuario, cifra la contraseña con algoritmo seguro, guarda la información en la base de datos y devuelve una respuesta 201 Created con el token JWT y los datos del perfil</p>
-        <p><strong>Escenario 02: Error por correo electrónico duplicado (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Error por correo electrónico duplicado</strong><br/>
         <b>Dado</b> que un usuario intenta registrarse con un correo ya existente<br/>
         <b>Cuando</b> el sistema valida la solicitud<br/>
         <b>Entonces</b> devuelve una respuesta 409 Conflict con un mensaje indicando que el correo ya está registrado y no crea una nueva cuenta</p>
@@ -1369,11 +1369,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar un sistema de control de acceso basado en roles (RBAC) <b>para</b> restringir el uso de endpoints según el tipo de usuario, garantizando la protección de recursos sensibles.
     </td>
     <td>
-        <p><strong>Escenario 01: Acceso autorizado según rol (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Acceso autorizado según rol</strong><br/>
         <b>Dado</b> que un usuario con rol mecánico inicia sesión con un token JWT válido<br/>
         <b>Cuando</b> intenta acceder a un endpoint restringido al rol mecánico<br/>
         <b>Entonces</b> el sistema valida su rol y permite el acceso devolviendo 200 OK</p>
-        <p><strong>Escenario 02: Intento de acceso no autorizado (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Intento de acceso no autorizado</strong><br/>
         <b>Dado</b> que un usuario con rol conductor intenta acceder a un endpoint reservado para mecánicos<br/>
         <b>Cuando</b> el sistema verifica el token<br/>
         <b>Entonces</b> devuelve un código 403 Forbidden con un mensaje claro indicando "No tiene permisos para acceder a este recurso"</p>
@@ -1388,11 +1388,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar un mecanismo que permita restablecer contraseñas a través de un código de verificación enviado al correo registrado del usuario <b>para</b> garantizar un proceso seguro y sin intervención manual.
     </td>
     <td>
-        <p><strong>Escenario 01: Recuperación de contraseña exitosa (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Recuperación de contraseña exitosa</strong><br/>
         <b>Dado</b> que un usuario olvida su contraseña e ingresa su correo válido en el formulario de recuperación<br/>
         <b>Cuando</b> el sistema recibe la solicitud POST /auth/forgot-password<br/>
         <b>Entonces</b> envía un código de verificación al correo del usuario y permite registrar una nueva contraseña tras validarlo</p>
-        <p><strong>Escenario 02: Correo no registrado (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Correo no registrado</strong><br/>
         <b>Dado</b> que un usuario ingresa un correo que no existe en la base de datos<br/>
         <b>Cuando</b> el sistema intenta enviar el código<br/>
         <b>Entonces</b> devuelve una respuesta 404 Not Found indicando que no existe ningún usuario asociado a ese correo</p>
@@ -1407,11 +1407,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar un sistema que mantenga las sesiones activas mediante tokens de actualización (refresh tokens) y permita el cierre de sesión manual y automático <b>para</b> proteger las cuentas de accesos no autorizados.
     </td>
     <td>
-        <p><strong>Escenario 01: Renovación de sesión activa (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Renovación de sesión activa</strong><br/>
         <b>Dado</b> que el token de sesión ha expirado<br/>
         <b>Cuando</b> el cliente envía una solicitud con un refresh token válido<br/>
         <b>Entonces</b> el sistema genera un nuevo token JWT y lo devuelve en la respuesta, manteniendo la sesión activa sin necesidad de volver a iniciar sesión</p>
-        <p><strong>Escenario 02: Cierre manual de sesión (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Cierre manual de sesión</strong><br/>
         <b>Dado</b> que un usuario decide cerrar sesión<br/>
         <b>Cuando</b> realiza una solicitud POST /auth/logout<br/>
         <b>Entonces</b> el sistema invalida los tokens activos y devuelve un mensaje confirmando el cierre de sesión exitoso</p>
@@ -1426,11 +1426,11 @@
         <b>Como</b> backend developer, <b>quiero</b> aplicar políticas de validación de contraseñas (mínimo de caracteres, uso de mayúsculas, números y símbolos) <b>para</b> asegurar que las credenciales sean seguras y cumplan con los estándares definidos.
     </td>
     <td>
-        <p><strong>Escenario 01: Contraseña válida (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Contraseña válida</strong><br/>
         <b>Dado</b> que un usuario ingresa una contraseña con los requisitos mínimos de seguridad<br/>
         <b>Cuando</b> el sistema la valida<br/>
         <b>Entonces</b> permite continuar con el registro o cambio de contraseña</p>
-        <p><strong>Escenario 02: Contraseña débil (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Contraseña débil</strong><br/>
         <b>Dado</b> que la contraseña ingresada no cumple con los criterios establecidos<br/>
         <b>Cuando</b> el sistema la evalúa<br/>
         <b>Entonces</b> devuelve un error 400 Bad Request con un mensaje indicando las reglas que deben cumplirse</p>
@@ -1445,11 +1445,11 @@
         <b>Como</b> backend developer, <b>quiero</b> registrar los intentos de autenticación exitosos y fallidos, incluyendo dirección IP, usuario y timestamp <b>para</b> disponer de trazabilidad ante posibles intentos de acceso no autorizados.
     </td>
     <td>
-        <p><strong>Escenario 01: Registro de intento exitoso (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Registro de intento exitoso</strong><br/>
         <b>Dado</b> que un usuario inicia sesión correctamente<br/>
         <b>Cuando</b> el sistema valida las credenciales<br/>
         <b>Entonces</b> registra el intento exitoso con los datos de auditoría en el log del sistema</p>
-        <p><strong>Escenario 02: Intento fallido por credenciales incorrectas (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Intento fallido por credenciales incorrectas</strong><br/>
         <b>Dado</b> que un usuario ingresa una contraseña errónea<br/>
         <b>Cuando</b> el sistema rechaza la solicitud<br/>
         <b>Entonces</b> registra el intento fallido con la hora exacta y la IP de origen</p>
@@ -1475,11 +1475,11 @@
         <b>Como</b> backend developer, <b>quiero</b> crear un endpoint que permita a los conductores registrar sus vehículos <b>para</b> mantener un inventario estructurado y trazable dentro del sistema, almacenando información como marca, modelo, año, tipo de combustible y número de placa.
     </td>
     <td>
-        <p><strong>Escenario 01: Registro exitoso del vehículo (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Registro exitoso del vehículo</strong><br/>
         <b>Dado</b> que un conductor envía un formulario con datos válidos (marca, modelo, año, tipo de combustible, placa)<br/>
         <b>Cuando</b> el sistema recibe la solicitud POST /vehicles/register<br/>
         <b>Entonces</b> valida la información, almacena el vehículo en la base de datos y devuelve una respuesta 201 Created con el identificador único del vehículo</p>
-        <p><strong>Escenario 02: Error por datos incompletos (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Error por datos incompletos</strong><br/>
         <b>Dado</b> que el conductor omite campos obligatorios como el número de placa o el tipo de combustible<br/>
         <b>Cuando</b> el sistema intenta registrar la información<br/>
         <b>Entonces</b> devuelve un error 400 Bad Request con un mensaje indicando los campos faltantes</p>
@@ -1494,11 +1494,11 @@
         <b>Como</b> backend developer, <b>quiero</b> crear un servicio que permita vincular un vehículo con un dispositivo IoT (OBD-II) <b>para</b> habilitar la recepción de datos en tiempo real de dicho vehículo, verificando su número de serie único y disponibilidad.
     </td>
     <td>
-        <p><strong>Escenario 01: Emparejamiento exitoso (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Emparejamiento exitoso</strong><br/>
         <b>Dado</b> que el vehículo y el dispositivo IoT existen y no están vinculados<br/>
         <b>Cuando</b> se ejecuta la solicitud POST /vehicles/{id}/pair-device con el número de serie del OBD-II<br/>
         <b>Entonces</b> el sistema crea la relación y devuelve una respuesta 200 OK con el estado "Vinculado correctamente"</p>
-        <p><strong>Escenario 02: Dispositivo ya vinculado (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Dispositivo ya vinculado</strong><br/>
         <b>Dado</b> que el número de serie del dispositivo IoT ya se encuentra asociado a otro vehículo<br/>
         <b>Cuando</b> se intenta realizar la vinculación<br/>
         <b>Entonces</b> el sistema devuelve un código 409 Conflict con el mensaje "El dispositivo ya está emparejado con otro vehículo"</p>
@@ -1513,11 +1513,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar un endpoint que reciba los datos que envían los dispositivos IoT <b>para</b> garantizar integridad y consistencia, validando y almacenando con su respectivo sello de tiempo datos como temperatura, velocidad, voltaje, nivel de combustible o RPM.
     </td>
     <td>
-        <p><strong>Escenario 01: Recepción correcta de datos IoT (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Recepción correcta de datos IoT</strong><br/>
         <b>Dado</b> que un dispositivo IoT envía datos válidos en formato JSON<br/>
         <b>Cuando</b> el sistema recibe la solicitud POST /iot/data<br/>
         <b>Entonces</b> valida el formato, guarda los datos junto con la fecha y hora del envío, y devuelve un 200 OK con confirmación de registro</p>
-        <p><strong>Escenario 02: Error por formato incorrecto (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Error por formato incorrecto</strong><br/>
         <b>Dado</b> que el JSON enviado por el dispositivo contiene errores de estructura o tipos de datos<br/>
         <b>Cuando</b> el sistema intenta procesar la información<br/>
         <b>Entonces</b> devuelve un 400 Bad Request y un mensaje "Formato de datos inválido"</p>
@@ -1532,11 +1532,11 @@
         <b>Como</b> backend developer, <b>quiero</b> diseñar un servicio que procese los códigos de falla (DTC) enviados por los dispositivos IoT y los traduzca a descripciones legibles según el estándar OBD-II <b>para</b> facilitar su interpretación en la interfaz del usuario.
     </td>
     <td>
-        <p><strong>Escenario 01: Decodificación exitosa (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Decodificación exitosa</strong><br/>
         <b>Dado</b> que el dispositivo IoT envía un código DTC válido (por ejemplo, P0171)<br/>
         <b>Cuando</b> el sistema consulta su base de datos de códigos<br/>
         <b>Entonces</b> devuelve la descripción correspondiente "Mezcla pobre – Banco 1" y la almacena en el historial del vehículo</p>
-        <p><strong>Escenario 02: Código desconocido (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Código desconocido</strong><br/>
         <b>Dado</b> que el sistema recibe un código que no figura en la base de datos de referencia<br/>
         <b>Cuando</b> intenta decodificarlo<br/>
         <b>Entonces</b> devuelve un 422 Unprocessable Entity con el mensaje "Código no reconocido"</p>
@@ -1551,11 +1551,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar un proceso que analice los datos IoT en tiempo real y genere alertas automáticas cuando se detecten valores críticos o fuera del rango normal <b>para</b> advertir al conductor o mecánico.
     </td>
     <td>
-        <p><strong>Escenario 01: Alerta generada correctamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Alerta generada correctamente</strong><br/>
         <b>Dado</b> que el sensor de temperatura supera el valor crítico establecido (por ejemplo, 120°C)<br/>
         <b>Cuando</b> el sistema evalúa la lectura<br/>
         <b>Entonces</b> genera una alerta de tipo "Sobrecalentamiento del motor" y la registra con su nivel de severidad</p>
-        <p><strong>Escenario 02: Lectura anómala descartada (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Lectura anómala descartada</strong><br/>
         <b>Dado</b> que se recibe una lectura con un salto atípico o inconsistente<br/>
         <b>Cuando</b> el sistema aplica las reglas de validación<br/>
         <b>Entonces</b> descarta la alerta y la registra como "Lectura no confiable" en los logs técnicos</p>
@@ -1570,11 +1570,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar un proceso que sincronice los datos almacenados localmente en los dispositivos IoT cuando estos recuperan conexión <b>para</b> evitar pérdida de información y mantener actualizado el historial técnico del vehículo.
     </td>
     <td>
-        <p><strong>Escenario 01: Sincronización correcta tras reconexión (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Sincronización correcta tras reconexión</strong><br/>
         <b>Dado</b> que un dispositivo estuvo sin conexión y luego envía datos pendientes<br/>
         <b>Cuando</b> el sistema recibe los paquetes de información<br/>
         <b>Entonces</b> los almacena en orden cronológico y actualiza el historial del vehículo</p>
-        <p><strong>Escenario 02: Duplicación detectada (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Duplicación detectada</strong><br/>
         <b>Dado</b> que algunos registros enviados ya existen en la base de datos<br/>
         <b>Cuando</b> el sistema compara los identificadores de lectura<br/>
         <b>Entonces</b> evita duplicar los datos y guarda únicamente los nuevos registros</p>
@@ -1589,11 +1589,11 @@
         <b>Como</b> backend developer, <b>quiero</b> crear un servicio que supervise la conectividad y estado de cada dispositivo IoT <b>para</b> mejorar la trazabilidad y soporte técnico, registrando desconexiones, reconexiones o fallas de hardware.
     </td>
     <td>
-        <p><strong>Escenario 01: Estado de conexión actualizado (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Estado de conexión actualizado</strong><br/>
         <b>Dado</b> que un dispositivo se desconecta o vuelve a conectarse<br/>
         <b>Cuando</b> el sistema detecta el evento<br/>
         <b>Entonces</b> actualiza el estado del dispositivo a "Desconectado" o "Activo" en la base de datos</p>
-        <p><strong>Escenario 02: Falla prolongada sin datos (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Falla prolongada sin datos</strong><br/>
         <b>Dado</b> que un dispositivo no ha enviado datos durante más de 30 minutos<br/>
         <b>Cuando</b> el sistema ejecuta el proceso de monitoreo<br/>
         <b>Entonces</b> genera una alerta técnica interna indicando posible falla del sensor o pérdida de comunicación</p>
@@ -1619,11 +1619,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar un endpoint que permita a los conductores registrar, consultar, modificar o cancelar citas de mantenimiento con los mecánicos disponibles <b>para</b> garantizar la validación de horarios y disponibilidad.
     </td>
     <td>
-        <p><strong>Escenario 01: Cita registrada correctamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Cita registrada correctamente</strong><br/>
         <b>Dado</b> que un conductor envía una solicitud POST /appointments con datos válidos (fecha, hora, tipo de servicio, taller)<br/>
         <b>Cuando</b> el sistema valida la disponibilidad del mecánico<br/>
         <b>Entonces</b> registra la cita, devuelve un 201 Created con el identificador de la cita y envía una notificación de confirmación</p>
-        <p><strong>Escenario 02: Horario no disponible (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Horario no disponible</strong><br/>
         <b>Dado</b> que un conductor selecciona un horario que ya está ocupado<br/>
         <b>Cuando</b> el sistema procesa la solicitud<br/>
         <b>Entonces</b> devuelve un 409 Conflict con el mensaje "El horario seleccionado no está disponible"</p>
@@ -1638,11 +1638,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar un sistema que permita actualizar el estado de cada servicio (pendiente, en curso, finalizado, cancelado) <b>para</b> que los mecánicos puedan reflejar el progreso de cada atención de manera estructurada.
     </td>
     <td>
-        <p><strong>Escenario 01: Actualización exitosa del estado (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Actualización exitosa del estado</strong><br/>
         <b>Dado</b> que el mecánico envía una solicitud PUT /services/{id}/status con el nuevo estado "En curso"<br/>
         <b>Cuando</b> el sistema valida el ID del servicio y el cambio permitido<br/>
         <b>Entonces</b> actualiza el estado y devuelve una respuesta 200 OK</p>
-        <p><strong>Escenario 02: Cambio no permitido (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Cambio no permitido</strong><br/>
         <b>Dado</b> que un mecánico intenta cambiar un servicio "Finalizado" a "Pendiente"<br/>
         <b>Cuando</b> el sistema valida el flujo<br/>
         <b>Entonces</b> devuelve un 400 Bad Request con el mensaje "El cambio de estado no está permitido"</p>
@@ -1657,11 +1657,11 @@
         <b>Como</b> backend developer, <b>quiero</b> crear un endpoint que permita registrar diagnósticos técnicos realizados por el mecánico <b>para</b> construir un historial técnico completo, combinando observaciones propias con los datos IoT del vehículo.
     </td>
     <td>
-        <p><strong>Escenario 01: Diagnóstico guardado correctamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Diagnóstico guardado correctamente</strong><br/>
         <b>Dado</b> que el mecánico envía un JSON válido con observaciones, códigos DTC y valores de sensores<br/>
         <b>Cuando</b> el sistema recibe la solicitud POST /diagnostics<br/>
         <b>Entonces</b> almacena la información, la asocia al vehículo y devuelve un 201 Created</p>
-        <p><strong>Escenario 02: JSON incompleto (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: JSON incompleto</strong><br/>
         <b>Dado</b> que faltan campos obligatorios como vehicleId o observaciones<br/>
         <b>Cuando</b> el sistema intenta registrar el diagnóstico<br/>
         <b>Entonces</b> devuelve un 400 Bad Request con el mensaje "Campos obligatorios faltantes"</p>
@@ -1676,11 +1676,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar un servicio que genere presupuestos automáticos basados en los diagnósticos técnicos <b>para</b> facilitar la aprobación del conductor, integrando repuestos, costos de mano de obra y tiempos estimados.
     </td>
     <td>
-        <p><strong>Escenario 01: Presupuesto generado exitosamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Presupuesto generado exitosamente</strong><br/>
         <b>Dado</b> que existe un diagnóstico técnico con datos completos<br/>
         <b>Cuando</b> el sistema ejecuta el cálculo del presupuesto<br/>
         <b>Entonces</b> genera un documento con el detalle de costos, lo asocia al servicio y devuelve 200 OK</p>
-        <p><strong>Escenario 02: Falta de información para el cálculo (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Falta de información para el cálculo</strong><br/>
         <b>Dado</b> que un diagnóstico no tiene valores de tiempo o costo definidos<br/>
         <b>Cuando</b> el sistema intenta generar el presupuesto<br/>
         <b>Entonces</b> devuelve un 422 Unprocessable Entity con el mensaje "Faltan datos para calcular el presupuesto"</p>
@@ -1695,11 +1695,11 @@
         <b>Como</b> backend developer, <b>quiero</b> permitir que los conductores aprueben o rechacen los presupuestos generados <b>para</b> registrar su decisión en el historial del servicio.
     </td>
     <td>
-        <p><strong>Escenario 01: Presupuesto aprobado correctamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Presupuesto aprobado correctamente</strong><br/>
         <b>Dado</b> que el conductor revisa un presupuesto pendiente<br/>
         <b>Cuando</b> envía una solicitud PATCH /budgets/{id}/approve<br/>
         <b>Entonces</b> el sistema cambia el estado a "Aprobado" y notifica al mecánico</p>
-        <p><strong>Escenario 02: Presupuesto rechazado (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Presupuesto rechazado</strong><br/>
         <b>Dado</b> que el conductor decide no aceptar el presupuesto<br/>
         <b>Cuando</b> realiza la solicitud PATCH /budgets/{id}/reject<br/>
         <b>Entonces</b> el sistema marca el presupuesto como "Rechazado" y actualiza el registro</p>
@@ -1714,11 +1714,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar un módulo que permita a los mecánicos adjuntar evidencias multimedia (fotos, videos, notas) durante el proceso de mantenimiento <b>para</b> sustentar las acciones realizadas.
     </td>
     <td>
-        <p><strong>Escenario 01: Evidencia registrada exitosamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Evidencia registrada exitosamente</strong><br/>
         <b>Dado</b> que el mecánico sube una foto o video válido asociado a un servicio<br/>
         <b>Cuando</b> el sistema recibe el archivo<br/>
         <b>Entonces</b> lo almacena en el servidor o bucket correspondiente y devuelve 201 Created</p>
-        <p><strong>Escenario 02: Archivo no válido (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Archivo no válido</strong><br/>
         <b>Dado</b> que el archivo excede el tamaño permitido o tiene un formato no admitido<br/>
         <b>Cuando</b> se intenta subir<br/>
         <b>Entonces</b> el sistema devuelve 415 Unsupported Media Type</p>
@@ -1733,11 +1733,11 @@
         <b>Como</b> backend developer, <b>quiero</b> generar un reporte técnico final al cerrar un servicio <b>para</b> mantener trazabilidad documental, consolidando diagnósticos, presupuestos, evidencias y observaciones finales.
     </td>
     <td>
-        <p><strong>Escenario 01: Cierre correcto y generación de reporte (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Cierre correcto y generación de reporte</strong><br/>
         <b>Dado</b> que un servicio se encuentra con diagnóstico y presupuesto aprobados<br/>
         <b>Cuando</b> el mecánico marca el servicio como "Finalizado"<br/>
         <b>Entonces</b> el sistema genera un reporte en formato PDF con toda la información y devuelve 200 OK</p>
-        <p><strong>Escenario 02: Información incompleta para el cierre (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Información incompleta para el cierre</strong><br/>
         <b>Dado</b> que el servicio no tiene diagnóstico o presupuesto<br/>
         <b>Cuando</b> el sistema intenta generar el reporte<br/>
         <b>Entonces</b> devuelve un 400 Bad Request con el mensaje "El servicio no tiene datos suficientes para ser cerrado"</p>
@@ -1763,11 +1763,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar un servicio que detecte y genere alertas automáticas a partir de datos enviados por los dispositivos IoT del vehículo <b>para</b> avisar en tiempo real al usuario ante cualquier anomalía como temperatura, voltaje, fallas, etc.
     </td>
     <td>
-        <p><strong>Escenario 01: Alerta generada correctamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Alerta generada correctamente</strong><br/>
         <b>Dado</b> que el dispositivo IoT envía datos que superan los umbrales críticos de temperatura<br/>
         <b>Cuando</b> el sistema procesa el paquete de datos y valida el valor<br/>
         <b>Entonces</b> crea una alerta con tipo, severidad, descripción y marca temporal, enviándola al conductor asociado</p>
-        <p><strong>Escenario 02: Datos inválidos o incompletos (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Datos inválidos o incompletos</strong><br/>
         <b>Dado</b> que el dispositivo IoT envía un registro con campos vacíos o valores nulos<br/>
         <b>Cuando</b> el sistema intenta procesarlo<br/>
         <b>Entonces</b> devuelve un error 400 Bad Request y registra el evento en los logs sin generar la alerta</p>
@@ -1782,11 +1782,11 @@
         <b>Como</b> backend developer, <b>quiero</b> integrar una capa de comunicación multicanal que envíe notificaciones push, correos electrónicos o mensajes SMS según el tipo de alerta y las preferencias configuradas por el usuario <b>para</b> garantizar que reciba la información sin importar el canal.
     </td>
     <td>
-        <p><strong>Escenario 01: Envío exitoso por canal configurado (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Envío exitoso por canal configurado</strong><br/>
         <b>Dado</b> que se genera una alerta crítica para un conductor<br/>
         <b>Cuando</b> el sistema evalúa sus preferencias de notificación<br/>
         <b>Entonces</b> envía el mensaje por los canales activos (push y correo) y registra el estado como "Enviado"</p>
-        <p><strong>Escenario 02: Falla en un canal de envío (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Falla en un canal de envío</strong><br/>
         <b>Dado</b> que el envío por correo electrónico falla por error del proveedor<br/>
         <b>Cuando</b> el sistema recibe la notificación de error<br/>
         <b>Entonces</b> reintenta por canal alternativo (SMS) y actualiza el estado a "Reenviado"</p>
@@ -1801,11 +1801,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar un sistema de recordatorios automáticos que notifique a los conductores cuando se acerque la fecha o el kilometraje de mantenimiento preventivo <b>para</b> que puedan agendar sus citas a tiempo.
     </td>
     <td>
-        <p><strong>Escenario 01: Envío automático de recordatorio (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Envío automático de recordatorio</strong><br/>
         <b>Dado</b> que el vehículo ha recorrido el 90% del kilometraje recomendado para mantenimiento<br/>
         <b>Cuando</b> el sistema ejecuta la tarea programada diaria<br/>
         <b>Entonces</b> genera una notificación tipo "Recordatorio de mantenimiento" y la envía al conductor</p>
-        <p><strong>Escenario 02: Conductor con recordatorios desactivados (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Conductor con recordatorios desactivados</strong><br/>
         <b>Dado</b> que un conductor desactivó la opción de recibir recordatorios<br/>
         <b>Cuando</b> el sistema detecta que se cumple el criterio de envío<br/>
         <b>Entonces</b> omite la notificación y solo registra el evento en la bitácora de recordatorios</p>
@@ -1820,11 +1820,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar una API que permita listar, filtrar y marcar alertas y notificaciones como leídas o no leídas <b>para</b> que los usuarios puedan gestionar su historial desde la aplicación móvil o web.
     </td>
     <td>
-        <p><strong>Escenario 01: Consulta de alertas exitosamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Consulta de alertas exitosamente</strong><br/>
         <b>Dado</b> que el usuario accede a su panel de alertas<br/>
         <b>Cuando</b> realiza una solicitud GET /alerts con su userId<br/>
         <b>Entonces</b> el sistema devuelve una lista paginada con las alertas ordenadas por fecha y estado</p>
-        <p><strong>Escenario 02: Intento de acceso no autorizado (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Intento de acceso no autorizado</strong><br/>
         <b>Dado</b> que un usuario intenta consultar alertas pertenecientes a otro perfil<br/>
         <b>Cuando</b> el sistema valida los permisos<br/>
         <b>Entonces</b> responde con un 403 Forbidden y mensaje "No tiene permiso para acceder a esta información"</p>
@@ -1839,11 +1839,11 @@
         <b>Como</b> backend developer, <b>quiero</b> construir un servicio que permita a cada usuario configurar los tipos de notificaciones que desea recibir (por canal y tipo de evento) <b>para</b> mejorar la personalización y evitar saturación informativa.
     </td>
     <td>
-        <p><strong>Escenario 01: Preferencias actualizadas correctamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Preferencias actualizadas correctamente</strong><br/>
         <b>Dado</b> que el usuario modifica sus opciones de notificación<br/>
         <b>Cuando</b> envía una solicitud PUT /notification-settings<br/>
         <b>Entonces</b> el sistema guarda las nuevas preferencias y responde con 200 OK</p>
-        <p><strong>Escenario 02: Datos de configuración inválidos (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Datos de configuración inválidos</strong><br/>
         <b>Dado</b> que el usuario envía un formato de configuración con valores no permitidos<br/>
         <b>Cuando</b> el sistema valida los datos<br/>
         <b>Entonces</b> responde con 400 Bad Request e indica el campo incorrecto</p>
@@ -1869,11 +1869,11 @@
         <b>Como</b> backend developer, <b>quiero</b> construir un servicio que recopile y consolide los datos técnicos del vehículo provenientes de diferentes fuentes del sistema <b>para</b> ofrecer información centralizada que sirva de base para los reportes, incluyendo kilometraje, consumo de combustible, temperatura y fallas registradas.
     </td>
     <td>
-        <p><strong>Escenario 01: Consolidación exitosa de datos (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Consolidación exitosa de datos</strong><br/>
         <b>Dado</b> que el sistema posee registros actualizados en los módulos de IoT, mantenimiento y diagnósticos<br/>
         <b>Cuando</b> se ejecuta la rutina de consolidación de datos<br/>
         <b>Entonces</b> el sistema unifica la información, la almacena en una tabla analítica y genera un resumen por vehículo con fecha y fuente de actualización</p>
-        <p><strong>Escenario 02: Falla en la obtención de datos parciales (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Falla en la obtención de datos parciales</strong><br/>
         <b>Dado</b> que uno de los módulos no responde a la solicitud de datos<br/>
         <b>Cuando</b> se intenta consolidar la información<br/>
         <b>Entonces</b> el sistema omite temporalmente ese bloque, registra el error en logs y continúa el proceso con los datos disponibles, manteniendo la consistencia del registro</p>
@@ -1888,11 +1888,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar una API que genere reportes técnicos descargables en formato PDF <b>para</b> que los conductores y mecánicos puedan obtener documentación completa de los servicios realizados, integrando información de mantenimientos, diagnósticos, consumo y kilometraje.
     </td>
     <td>
-        <p><strong>Escenario 01: Generación exitosa de reporte (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Generación exitosa de reporte</strong><br/>
         <b>Dado</b> que el usuario solicita un reporte técnico desde la aplicación<br/>
         <b>Cuando</b> el sistema recibe los parámetros de fecha y tipo de información<br/>
         <b>Entonces</b> genera un PDF con los datos solicitados y devuelve la ruta de descarga</p>
-        <p><strong>Escenario 02: Parámetros inválidos o sin datos (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Parámetros inválidos o sin datos</strong><br/>
         <b>Dado</b> que el usuario solicita un rango de fechas donde no existen registros<br/>
         <b>Cuando</b> el sistema intenta generar el reporte<br/>
         <b>Entonces</b> responde con un mensaje informativo "No se encontraron datos para el período seleccionado" y no crea el archivo</p>
@@ -1907,11 +1907,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar una API que calcule métricas de rendimiento (consumo por km, horas de motor, alertas críticas por periodo) <b>para</b> que se puedan visualizar en un dashboard los indicadores de desempeño del vehículo y del taller.
     </td>
     <td>
-        <p><strong>Escenario 01: Cálculo de métricas exitoso (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Cálculo de métricas exitoso</strong><br/>
         <b>Dado</b> que los registros de consumo y kilometraje están actualizados<br/>
         <b>Cuando</b> el sistema ejecuta el cálculo de rendimiento<br/>
         <b>Entonces</b> devuelve las métricas con formato JSON incluyendo promedios, variaciones y alertas asociadas</p>
-        <p><strong>Escenario 02: Error por datos inconsistentes (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Error por datos inconsistentes</strong><br/>
         <b>Dado</b> que los datos de kilometraje contienen valores anómalos o negativos<br/>
         <b>Cuando</b> se intenta calcular el rendimiento<br/>
         <b>Entonces</b> el sistema detiene la operación, marca el registro como inválido y registra el incidente en la bitácora de análisis</p>
@@ -1926,11 +1926,11 @@
         <b>Como</b> backend developer, <b>quiero</b> crear un endpoint que provea información consolidada para los paneles de analítica de conductores y mecánicos <b>para</b> mostrar indicadores clave de productividad, tiempo promedio de atención, alertas más frecuentes y nivel de satisfacción general.
     </td>
     <td>
-        <p><strong>Escenario 01: Consulta de indicadores exitosa (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Consulta de indicadores exitosa</strong><br/>
         <b>Dado</b> que el usuario autenticado solicita el panel de analítica<br/>
         <b>Cuando</b> el sistema valida su rol (conductor o mecánico)<br/>
         <b>Entonces</b> responde con los indicadores correspondientes al tipo de usuario y periodo actual</p>
-        <p><strong>Escenario 02: Intento de acceso sin autorización (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Intento de acceso sin autorización</strong><br/>
         <b>Dado</b> que un usuario intenta acceder a indicadores de otro rol<br/>
         <b>Cuando</b> el sistema valida los permisos<br/>
         <b>Entonces</b> responde con un código 403 Forbidden y mensaje "Acceso no autorizado al panel solicitado"</p>
@@ -1945,11 +1945,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar una funcionalidad que permita exportar los datos de reportes y métricas en formato CSV <b>para</b> que los usuarios puedan realizar análisis adicionales o importar la información en otras herramientas.
     </td>
     <td>
-        <p><strong>Escenario 01: Exportación correcta (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Exportación correcta</strong><br/>
         <b>Dado</b> que el usuario solicita la exportación de sus métricas<br/>
         <b>Cuando</b> el sistema genera el archivo CSV<br/>
         <b>Entonces</b> devuelve un enlace de descarga temporal con fecha de expiración y registro en auditoría</p>
-        <p><strong>Escenario 02: Error por volumen excesivo de datos (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Error por volumen excesivo de datos</strong><br/>
         <b>Dado</b> que la consulta supera el límite permitido (por ejemplo, 100.000 registros)<br/>
         <b>Cuando</b> se ejecuta la exportación<br/>
         <b>Entonces</b> el sistema divide el resultado en varios archivos o devuelve un mensaje indicando que debe aplicarse un filtro por fechas</p>
@@ -1975,11 +1975,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar un servicio que analice las variables de aceleración, frenado y velocidad del vehículo <b>para</b> identificar patrones de conducción riesgosa o eficiente y ofrecer retroalimentación útil al conductor.
     </td>
     <td>
-        <p><strong>Escenario 01: Detección de conducción riesgosa (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Detección de conducción riesgosa</strong><br/>
         <b>Dado</b> que el sistema recibe datos de telemetría continua (aceleración, frenado, giros)<br/>
         <b>Cuando</b> el motor de análisis detecta desviaciones frecuentes respecto a parámetros seguros<br/>
         <b>Entonces</b> genera un registro de comportamiento "riesgoso" con fecha, tipo de patrón y nivel de severidad</p>
-        <p><strong>Escenario 02: Falta de datos suficientes (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Falta de datos suficientes</strong><br/>
         <b>Dado</b> que los datos recibidos del IoT son incompletos o contienen inconsistencias<br/>
         <b>Cuando</b> el sistema intenta procesar la información<br/>
         <b>Entonces</b> devuelve un mensaje de error y registra la causa en el log técnico sin generar alertas falsas</p>
@@ -1994,11 +1994,11 @@
         <b>Como</b> backend developer, <b>quiero</b> implementar una API que calcule un índice de conducción ("Driving Score") basado en métricas como velocidad promedio, aceleraciones bruscas, alertas generadas y cumplimiento de mantenimiento <b>para</b> que los conductores puedan visualizar su desempeño de manera cuantitativa.
     </td>
     <td>
-        <p><strong>Escenario 01: Cálculo exitoso del puntaje (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Cálculo exitoso del puntaje</strong><br/>
         <b>Dado</b> que el sistema posee los registros recientes de telemetría<br/>
         <b>Cuando</b> se ejecuta el cálculo del Driving Score<br/>
         <b>Entonces</b> genera un valor ponderado entre 0 y 100, con detalles por categoría (seguridad, consumo, mantenimiento)</p>
-        <p><strong>Escenario 02: Datos insuficientes para cálculo (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Datos insuficientes para cálculo</strong><br/>
         <b>Dado</b> que el conductor no tiene registros de conducción suficientes<br/>
         <b>Cuando</b> se solicita el cálculo del puntaje<br/>
         <b>Entonces</b> el sistema devuelve un mensaje informativo "No hay suficientes datos para calcular el Driving Score"</p>
@@ -2013,11 +2013,11 @@
         <b>Como</b> backend developer, <b>quiero</b> desarrollar un motor predictivo que utilice modelos de aprendizaje automático para anticipar posibles fallas en componentes del vehículo <b>para</b> ayudar a prevenir averías mayores a partir de la telemetría y el historial de mantenimiento.
     </td>
     <td>
-        <p><strong>Escenario 01: Predicción de falla con alta probabilidad (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Predicción de falla con alta probabilidad</strong><br/>
         <b>Dado</b> que el modelo analiza los registros históricos de temperatura, consumo y códigos DTC<br/>
         <b>Cuando</b> identifica patrones que coinciden con fallas conocidas<br/>
         <b>Entonces</b> genera una alerta de "falla potencial" indicando componente afectado, nivel de confianza y ventana de tiempo estimada</p>
-        <p><strong>Escenario 02: Modelo sin entrenamiento suficiente (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Modelo sin entrenamiento suficiente</strong><br/>
         <b>Dado</b> que no existen suficientes registros históricos o el modelo no está actualizado<br/>
         <b>Cuando</b> se intenta ejecutar la predicción<br/>
         <b>Entonces</b> el sistema devuelve un mensaje de "modelo en entrenamiento" y no genera predicciones hasta su reentrenamiento</p>
@@ -2032,11 +2032,11 @@
         <b>Como</b> backend developer, <b>quiero</b> diseñar un endpoint seguro que permita el reentrenamiento periódico del modelo predictivo de fallas <b>para</b> mejorar la precisión y adaptabilidad del sistema a nuevos contextos de uso, usando nuevos registros de mantenimiento y datos IoT.
     </td>
     <td>
-        <p><strong>Escenario 01: Reentrenamiento completado con éxito (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Reentrenamiento completado con éxito</strong><br/>
         <b>Dado</b> que existen nuevos datos etiquetados de fallas confirmadas<br/>
         <b>Cuando</b> el sistema ejecuta el proceso de reentrenamiento<br/>
         <b>Entonces</b> actualiza los parámetros del modelo y registra su versión y precisión alcanzada</p>
-        <p><strong>Escenario 02: Fallo en el proceso de reentrenamiento (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Fallo en el proceso de reentrenamiento</strong><br/>
         <b>Dado</b> que uno de los conjuntos de datos está dañado o contiene valores nulos<br/>
         <b>Cuando</b> se inicia el proceso de reentrenamiento<br/>
         <b>Entonces</b> el sistema detiene la ejecución, genera una alerta técnica y mantiene la versión anterior del modelo</p>
@@ -2051,11 +2051,11 @@
         <b>Como</b> backend developer, <b>quiero</b> que el sistema genere recomendaciones automáticas de mantenimiento preventivo a partir de las predicciones del modelo de IA y el uso del vehículo <b>para</b> reducir riesgos y optimizar la vida útil de los componentes.
     </td>
     <td>
-        <p><strong>Escenario 01: Recomendación generada correctamente (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Recomendación generada correctamente</strong><br/>
         <b>Dado</b> que se detecta una tendencia anómala en la temperatura del motor<br/>
         <b>Cuando</b> el sistema correlaciona esa información con el historial del vehículo<br/>
         <b>Entonces</b> genera una recomendación "Revisar sistema de refrigeración" y la asocia al perfil del conductor</p>
-        <p><strong>Escenario 02: Error en la correlación de datos (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Error en la correlación de datos</strong><br/>
         <b>Dado</b> que la información de sensores llega desincronizada o duplicada<br/>
         <b>Cuando</b> el sistema intenta generar la recomendación<br/>
         <b>Entonces</b> cancela la operación y registra un evento técnico para revisión manual</p>
@@ -2070,11 +2070,11 @@
         <b>Como</b> backend developer, <b>quiero</b> crear una API que almacene los resultados de los análisis y predicciones generadas por la IA <b>para</b> que tanto los conductores como los mecánicos puedan consultar el historial de evaluaciones y predicciones anteriores.
     </td>
     <td>
-        <p><strong>Escenario 01: Consulta exitosa del historial (Happy Path)</strong><br/>
+        <p><strong>Escenario 01: Consulta exitosa del historial</strong><br/>
         <b>Dado</b> que el usuario solicita las predicciones anteriores<br/>
         <b>Cuando</b> el sistema valida sus credenciales<br/>
         <b>Entonces</b> devuelve un listado con la fecha del análisis, tipo de predicción y nivel de confianza</p>
-        <p><strong>Escenario 02: Intento de acceso sin autorización (Unhappy Path)</strong><br/>
+        <p><strong>Escenario 02: Intento de acceso sin autorización</strong><br/>
         <b>Dado</b> que un usuario intenta acceder al historial de otro vehículo<br/>
         <b>Cuando</b> el sistema verifica la identidad<br/>
         <b>Entonces</b> devuelve un 403 Forbidden y registra el intento en los logs de seguridad</p>
