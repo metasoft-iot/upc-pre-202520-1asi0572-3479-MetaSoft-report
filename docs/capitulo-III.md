@@ -1457,6 +1457,150 @@
     <td>E11</td>
 </tr>
 
+<!--EPIC 12-->
+<tr>
+    <td><b>E12</b></td>
+    <td>Gestión de Vehículos e Integración IoT</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> diseñar e implementar los servicios que permitan registrar vehículos, asociarlos con dispositivos IoT (OBD-II) y procesar los datos que estos envían <b>para</b> que SAFECar pueda monitorear el estado del vehículo en tiempo real y detectar anomalías mecánicas de forma preventiva.
+    </td>
+    <td></td>
+    <td></td>
+</tr>
+<!--TECHNICAL STORY 01-->
+<tr>
+    <td>TS1201</td>
+    <td>API de Registro de Vehículos</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> crear un endpoint que permita a los conductores registrar sus vehículos <b>para</b> mantener un inventario estructurado y trazable dentro del sistema, almacenando información como marca, modelo, año, tipo de combustible y número de placa.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Registro exitoso del vehículo (Happy Path)</strong><br/>
+        <b>Dado</b> que un conductor envía un formulario con datos válidos (marca, modelo, año, tipo de combustible, placa)<br/>
+        <b>Cuando</b> el sistema recibe la solicitud POST /vehicles/register<br/>
+        <b>Entonces</b> valida la información, almacena el vehículo en la base de datos y devuelve una respuesta 201 Created con el identificador único del vehículo</p>
+        <p><strong>Escenario 02: Error por datos incompletos (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el conductor omite campos obligatorios como el número de placa o el tipo de combustible<br/>
+        <b>Cuando</b> el sistema intenta registrar la información<br/>
+        <b>Entonces</b> devuelve un error 400 Bad Request con un mensaje indicando los campos faltantes</p>
+    </td>
+    <td>E12</td>
+</tr>
+<!--TECHNICAL STORY 02-->
+<tr>
+    <td>TS1202</td>
+    <td>Emparejamiento con Dispositivo IoT (OBD-II)</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> crear un servicio que permita vincular un vehículo con un dispositivo IoT (OBD-II) <b>para</b> habilitar la recepción de datos en tiempo real de dicho vehículo, verificando su número de serie único y disponibilidad.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Emparejamiento exitoso (Happy Path)</strong><br/>
+        <b>Dado</b> que el vehículo y el dispositivo IoT existen y no están vinculados<br/>
+        <b>Cuando</b> se ejecuta la solicitud POST /vehicles/{id}/pair-device con el número de serie del OBD-II<br/>
+        <b>Entonces</b> el sistema crea la relación y devuelve una respuesta 200 OK con el estado "Vinculado correctamente"</p>
+        <p><strong>Escenario 02: Dispositivo ya vinculado (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el número de serie del dispositivo IoT ya se encuentra asociado a otro vehículo<br/>
+        <b>Cuando</b> se intenta realizar la vinculación<br/>
+        <b>Entonces</b> el sistema devuelve un código 409 Conflict con el mensaje "El dispositivo ya está emparejado con otro vehículo"</p>
+    </td>
+    <td>E12</td>
+</tr>
+<!--TECHNICAL STORY 03-->
+<tr>
+    <td>TS1203</td>
+    <td>Recepción de Datos IoT en Tiempo Real</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar un endpoint que reciba los datos que envían los dispositivos IoT <b>para</b> garantizar integridad y consistencia, validando y almacenando con su respectivo sello de tiempo datos como temperatura, velocidad, voltaje, nivel de combustible o RPM.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Recepción correcta de datos IoT (Happy Path)</strong><br/>
+        <b>Dado</b> que un dispositivo IoT envía datos válidos en formato JSON<br/>
+        <b>Cuando</b> el sistema recibe la solicitud POST /iot/data<br/>
+        <b>Entonces</b> valida el formato, guarda los datos junto con la fecha y hora del envío, y devuelve un 200 OK con confirmación de registro</p>
+        <p><strong>Escenario 02: Error por formato incorrecto (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el JSON enviado por el dispositivo contiene errores de estructura o tipos de datos<br/>
+        <b>Cuando</b> el sistema intenta procesar la información<br/>
+        <b>Entonces</b> devuelve un 400 Bad Request y un mensaje "Formato de datos inválido"</p>
+    </td>
+    <td>E12</td>
+</tr>
+<!--TECHNICAL STORY 04-->
+<tr>
+    <td>TS1204</td>
+    <td>Procesamiento de Códigos de Falla (DTC)</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> diseñar un servicio que procese los códigos de falla (DTC) enviados por los dispositivos IoT y los traduzca a descripciones legibles según el estándar OBD-II <b>para</b> facilitar su interpretación en la interfaz del usuario.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Decodificación exitosa (Happy Path)</strong><br/>
+        <b>Dado</b> que el dispositivo IoT envía un código DTC válido (por ejemplo, P0171)<br/>
+        <b>Cuando</b> el sistema consulta su base de datos de códigos<br/>
+        <b>Entonces</b> devuelve la descripción correspondiente "Mezcla pobre – Banco 1" y la almacena en el historial del vehículo</p>
+        <p><strong>Escenario 02: Código desconocido (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el sistema recibe un código que no figura en la base de datos de referencia<br/>
+        <b>Cuando</b> intenta decodificarlo<br/>
+        <b>Entonces</b> devuelve un 422 Unprocessable Entity con el mensaje "Código no reconocido"</p>
+    </td>
+    <td>E12</td>
+</tr>
+<!--TECHNICAL STORY 05-->
+<tr>
+    <td>TS1205</td>
+    <td>Generación Automática de Alertas IoT</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un proceso que analice los datos IoT en tiempo real y genere alertas automáticas cuando se detecten valores críticos o fuera del rango normal <b>para</b> advertir al conductor o mecánico.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Alerta generada correctamente (Happy Path)</strong><br/>
+        <b>Dado</b> que el sensor de temperatura supera el valor crítico establecido (por ejemplo, 120°C)<br/>
+        <b>Cuando</b> el sistema evalúa la lectura<br/>
+        <b>Entonces</b> genera una alerta de tipo "Sobrecalentamiento del motor" y la registra con su nivel de severidad</p>
+        <p><strong>Escenario 02: Lectura anómala descartada (Unhappy Path)</strong><br/>
+        <b>Dado</b> que se recibe una lectura con un salto atípico o inconsistente<br/>
+        <b>Cuando</b> el sistema aplica las reglas de validación<br/>
+        <b>Entonces</b> descarta la alerta y la registra como "Lectura no confiable" en los logs técnicos</p>
+    </td>
+    <td>E12</td>
+</tr>
+<!--TECHNICAL STORY 06-->
+<tr>
+    <td>TS1206</td>
+    <td>Sincronización Automática de Datos de Dispositivos IoT</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar un proceso que sincronice los datos almacenados localmente en los dispositivos IoT cuando estos recuperan conexión <b>para</b> evitar pérdida de información y mantener actualizado el historial técnico del vehículo.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Sincronización correcta tras reconexión (Happy Path)</strong><br/>
+        <b>Dado</b> que un dispositivo estuvo sin conexión y luego envía datos pendientes<br/>
+        <b>Cuando</b> el sistema recibe los paquetes de información<br/>
+        <b>Entonces</b> los almacena en orden cronológico y actualiza el historial del vehículo</p>
+        <p><strong>Escenario 02: Duplicación detectada (Unhappy Path)</strong><br/>
+        <b>Dado</b> que algunos registros enviados ya existen en la base de datos<br/>
+        <b>Cuando</b> el sistema compara los identificadores de lectura<br/>
+        <b>Entonces</b> evita duplicar los datos y guarda únicamente los nuevos registros</p>
+    </td>
+    <td>E12</td>
+</tr>
+<!--TECHNICAL STORY 07-->
+<tr>
+    <td>TS1207</td>
+    <td>Monitoreo del Estado del Dispositivo IoT</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> crear un servicio que supervise la conectividad y estado de cada dispositivo IoT <b>para</b> mejorar la trazabilidad y soporte técnico, registrando desconexiones, reconexiones o fallas de hardware.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Estado de conexión actualizado (Happy Path)</strong><br/>
+        <b>Dado</b> que un dispositivo se desconecta o vuelve a conectarse<br/>
+        <b>Cuando</b> el sistema detecta el evento<br/>
+        <b>Entonces</b> actualiza el estado del dispositivo a "Desconectado" o "Activo" en la base de datos</p>
+        <p><strong>Escenario 02: Falla prolongada sin datos (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un dispositivo no ha enviado datos durante más de 30 minutos<br/>
+        <b>Cuando</b> el sistema ejecuta el proceso de monitoreo<br/>
+        <b>Entonces</b> genera una alerta técnica interna indicando posible falla del sensor o pérdida de comunicación</p>
+    </td>
+    <td>E12</td>
+</tr>
+
   </tbody>
 </table>
 
