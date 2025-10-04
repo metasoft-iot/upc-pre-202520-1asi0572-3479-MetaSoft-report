@@ -1957,6 +1957,131 @@
     <td>E15</td>
 </tr>
 
+<!--EPIC 16-->
+<tr>
+    <td><b>E16</b></td>
+    <td>Inteligencia Artificial (IA)</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> diseñar e implementar servicios de inteligencia artificial que analicen los datos de conducción y telemetría recopilados por los dispositivos IoT <b>para</b> predecir posibles fallas, generar recomendaciones de mantenimiento preventivo y calcular el puntaje de conducción de cada usuario, mejorando así la eficiencia y seguridad vehicular.
+    </td>
+    <td></td>
+    <td></td>
+</tr>
+<!--TECHNICAL STORY 01-->
+<tr>
+    <td>TS1601</td>
+    <td>Motor de Análisis de Patrones de Conducción</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un servicio que analice las variables de aceleración, frenado y velocidad del vehículo <b>para</b> identificar patrones de conducción riesgosa o eficiente y ofrecer retroalimentación útil al conductor.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Detección de conducción riesgosa (Happy Path)</strong><br/>
+        <b>Dado</b> que el sistema recibe datos de telemetría continua (aceleración, frenado, giros)<br/>
+        <b>Cuando</b> el motor de análisis detecta desviaciones frecuentes respecto a parámetros seguros<br/>
+        <b>Entonces</b> genera un registro de comportamiento "riesgoso" con fecha, tipo de patrón y nivel de severidad</p>
+        <p><strong>Escenario 02: Falta de datos suficientes (Unhappy Path)</strong><br/>
+        <b>Dado</b> que los datos recibidos del IoT son incompletos o contienen inconsistencias<br/>
+        <b>Cuando</b> el sistema intenta procesar la información<br/>
+        <b>Entonces</b> devuelve un mensaje de error y registra la causa en el log técnico sin generar alertas falsas</p>
+    </td>
+    <td>E16</td>
+</tr>
+<!--TECHNICAL STORY 02-->
+<tr>
+    <td>TS1602</td>
+    <td>API de Cálculo de Driving Score</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar una API que calcule un índice de conducción ("Driving Score") basado en métricas como velocidad promedio, aceleraciones bruscas, alertas generadas y cumplimiento de mantenimiento <b>para</b> que los conductores puedan visualizar su desempeño de manera cuantitativa.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Cálculo exitoso del puntaje (Happy Path)</strong><br/>
+        <b>Dado</b> que el sistema posee los registros recientes de telemetría<br/>
+        <b>Cuando</b> se ejecuta el cálculo del Driving Score<br/>
+        <b>Entonces</b> genera un valor ponderado entre 0 y 100, con detalles por categoría (seguridad, consumo, mantenimiento)</p>
+        <p><strong>Escenario 02: Datos insuficientes para cálculo (Unhappy Path)</strong><br/>
+        <b>Dado</b> que el conductor no tiene registros de conducción suficientes<br/>
+        <b>Cuando</b> se solicita el cálculo del puntaje<br/>
+        <b>Entonces</b> el sistema devuelve un mensaje informativo "No hay suficientes datos para calcular el Driving Score"</p>
+    </td>
+    <td>E16</td>
+</tr>
+<!--TECHNICAL STORY 03-->
+<tr>
+    <td>TS1603</td>
+    <td>Motor de Predicción de Fallas Mecánicas</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un motor predictivo que utilice modelos de aprendizaje automático para anticipar posibles fallas en componentes del vehículo <b>para</b> ayudar a prevenir averías mayores a partir de la telemetría y el historial de mantenimiento.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Predicción de falla con alta probabilidad (Happy Path)</strong><br/>
+        <b>Dado</b> que el modelo analiza los registros históricos de temperatura, consumo y códigos DTC<br/>
+        <b>Cuando</b> identifica patrones que coinciden con fallas conocidas<br/>
+        <b>Entonces</b> genera una alerta de "falla potencial" indicando componente afectado, nivel de confianza y ventana de tiempo estimada</p>
+        <p><strong>Escenario 02: Modelo sin entrenamiento suficiente (Unhappy Path)</strong><br/>
+        <b>Dado</b> que no existen suficientes registros históricos o el modelo no está actualizado<br/>
+        <b>Cuando</b> se intenta ejecutar la predicción<br/>
+        <b>Entonces</b> el sistema devuelve un mensaje de "modelo en entrenamiento" y no genera predicciones hasta su reentrenamiento</p>
+    </td>
+    <td>E16</td>
+</tr>
+<!--TECHNICAL STORY 04-->
+<tr>
+    <td>TS1604</td>
+    <td>API de Reentrenamiento del Modelo Predictivo</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> diseñar un endpoint seguro que permita el reentrenamiento periódico del modelo predictivo de fallas <b>para</b> mejorar la precisión y adaptabilidad del sistema a nuevos contextos de uso, usando nuevos registros de mantenimiento y datos IoT.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Reentrenamiento completado con éxito (Happy Path)</strong><br/>
+        <b>Dado</b> que existen nuevos datos etiquetados de fallas confirmadas<br/>
+        <b>Cuando</b> el sistema ejecuta el proceso de reentrenamiento<br/>
+        <b>Entonces</b> actualiza los parámetros del modelo y registra su versión y precisión alcanzada</p>
+        <p><strong>Escenario 02: Fallo en el proceso de reentrenamiento (Unhappy Path)</strong><br/>
+        <b>Dado</b> que uno de los conjuntos de datos está dañado o contiene valores nulos<br/>
+        <b>Cuando</b> se inicia el proceso de reentrenamiento<br/>
+        <b>Entonces</b> el sistema detiene la ejecución, genera una alerta técnica y mantiene la versión anterior del modelo</p>
+    </td>
+    <td>E16</td>
+</tr>
+<!--TECHNICAL STORY 05-->
+<tr>
+    <td>TS1605</td>
+    <td>Generación de Recomendaciones de Mantenimiento Preventivo</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> que el sistema genere recomendaciones automáticas de mantenimiento preventivo a partir de las predicciones del modelo de IA y el uso del vehículo <b>para</b> reducir riesgos y optimizar la vida útil de los componentes.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Recomendación generada correctamente (Happy Path)</strong><br/>
+        <b>Dado</b> que se detecta una tendencia anómala en la temperatura del motor<br/>
+        <b>Cuando</b> el sistema correlaciona esa información con el historial del vehículo<br/>
+        <b>Entonces</b> genera una recomendación "Revisar sistema de refrigeración" y la asocia al perfil del conductor</p>
+        <p><strong>Escenario 02: Error en la correlación de datos (Unhappy Path)</strong><br/>
+        <b>Dado</b> que la información de sensores llega desincronizada o duplicada<br/>
+        <b>Cuando</b> el sistema intenta generar la recomendación<br/>
+        <b>Entonces</b> cancela la operación y registra un evento técnico para revisión manual</p>
+    </td>
+    <td>E16</td>
+</tr>
+<!--TECHNICAL STORY 06-->
+<tr>
+    <td>TS1606</td>
+    <td>API de Historial de Análisis e IA</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> crear una API que almacene los resultados de los análisis y predicciones generadas por la IA <b>para</b> que tanto los conductores como los mecánicos puedan consultar el historial de evaluaciones y predicciones anteriores.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Consulta exitosa del historial (Happy Path)</strong><br/>
+        <b>Dado</b> que el usuario solicita las predicciones anteriores<br/>
+        <b>Cuando</b> el sistema valida sus credenciales<br/>
+        <b>Entonces</b> devuelve un listado con la fecha del análisis, tipo de predicción y nivel de confianza</p>
+        <p><strong>Escenario 02: Intento de acceso sin autorización (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un usuario intenta acceder al historial de otro vehículo<br/>
+        <b>Cuando</b> el sistema verifica la identidad<br/>
+        <b>Entonces</b> devuelve un 403 Forbidden y registra el intento en los logs de seguridad</p>
+    </td>
+    <td>E16</td>
+</tr>
+
   </tbody>
 </table>
 
