@@ -1332,6 +1332,131 @@
   <td>E10</td>
 </tr>
 
+<!--EPIC 11-->
+<tr>
+    <td><b>E11</b></td>
+    <td>Autenticación y Gestión de Usuarios</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un sistema de autenticación confiable que permita registrar, identificar y gestionar usuarios (conductores y mecánicos) <b>para</b> garantizar el acceso seguro y adecuado a las funciones del sistema SAFECar aplicando políticas de seguridad, cifrado de contraseñas y control de roles.
+    </td>
+    <td></td>
+    <td></td>
+</tr>
+<!--TECHNICAL STORY 01-->
+<tr>
+    <td>TS1101</td>
+    <td>API de Registro y Login Seguro</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar endpoints para registrar y autenticar usuarios utilizando tokens JWT <b>para</b> asegurar la validación de credenciales y el almacenamiento seguro de contraseñas.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Registro exitoso del usuario (Happy Path)</strong><br/>
+        <b>Dado</b> que un usuario completa el formulario de registro con datos válidos (correo, contraseña, nombre y rol)<br/>
+        <b>Cuando</b> el sistema recibe la solicitud POST /auth/register<br/>
+        <b>Entonces</b> crea el usuario, cifra la contraseña con algoritmo seguro, guarda la información en la base de datos y devuelve una respuesta 201 Created con el token JWT y los datos del perfil</p>
+        <p><strong>Escenario 02: Error por correo electrónico duplicado (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un usuario intenta registrarse con un correo ya existente<br/>
+        <b>Cuando</b> el sistema valida la solicitud<br/>
+        <b>Entonces</b> devuelve una respuesta 409 Conflict con un mensaje indicando que el correo ya está registrado y no crea una nueva cuenta</p>
+    </td>
+    <td>E11</td>
+</tr>
+<!--TECHNICAL STORY 02-->
+<tr>
+    <td>TS1102</td>
+    <td>Control de Roles y Permisos (RBAC)</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> desarrollar un sistema de control de acceso basado en roles (RBAC) <b>para</b> restringir el uso de endpoints según el tipo de usuario, garantizando la protección de recursos sensibles.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Acceso autorizado según rol (Happy Path)</strong><br/>
+        <b>Dado</b> que un usuario con rol mecánico inicia sesión con un token JWT válido<br/>
+        <b>Cuando</b> intenta acceder a un endpoint restringido al rol mecánico<br/>
+        <b>Entonces</b> el sistema valida su rol y permite el acceso devolviendo 200 OK</p>
+        <p><strong>Escenario 02: Intento de acceso no autorizado (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un usuario con rol conductor intenta acceder a un endpoint reservado para mecánicos<br/>
+        <b>Cuando</b> el sistema verifica el token<br/>
+        <b>Entonces</b> devuelve un código 403 Forbidden con un mensaje claro indicando "No tiene permisos para acceder a este recurso"</p>
+    </td>
+    <td>E11</td>
+</tr>
+<!--TECHNICAL STORY 03-->
+<tr>
+    <td>TS1103</td>
+    <td>Recuperación de Contraseña con Verificación por Correo</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar un mecanismo que permita restablecer contraseñas a través de un código de verificación enviado al correo registrado del usuario <b>para</b> garantizar un proceso seguro y sin intervención manual.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Recuperación de contraseña exitosa (Happy Path)</strong><br/>
+        <b>Dado</b> que un usuario olvida su contraseña e ingresa su correo válido en el formulario de recuperación<br/>
+        <b>Cuando</b> el sistema recibe la solicitud POST /auth/forgot-password<br/>
+        <b>Entonces</b> envía un código de verificación al correo del usuario y permite registrar una nueva contraseña tras validarlo</p>
+        <p><strong>Escenario 02: Correo no registrado (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un usuario ingresa un correo que no existe en la base de datos<br/>
+        <b>Cuando</b> el sistema intenta enviar el código<br/>
+        <b>Entonces</b> devuelve una respuesta 404 Not Found indicando que no existe ningún usuario asociado a ese correo</p>
+    </td>
+    <td>E11</td>
+</tr>
+<!--TECHNICAL STORY 04-->
+<tr>
+    <td>TS1104</td>
+    <td>Mantenimiento y Cierre Seguro de Sesión</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> implementar un sistema que mantenga las sesiones activas mediante tokens de actualización (refresh tokens) y permita el cierre de sesión manual y automático <b>para</b> proteger las cuentas de accesos no autorizados.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Renovación de sesión activa (Happy Path)</strong><br/>
+        <b>Dado</b> que el token de sesión ha expirado<br/>
+        <b>Cuando</b> el cliente envía una solicitud con un refresh token válido<br/>
+        <b>Entonces</b> el sistema genera un nuevo token JWT y lo devuelve en la respuesta, manteniendo la sesión activa sin necesidad de volver a iniciar sesión</p>
+        <p><strong>Escenario 02: Cierre manual de sesión (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un usuario decide cerrar sesión<br/>
+        <b>Cuando</b> realiza una solicitud POST /auth/logout<br/>
+        <b>Entonces</b> el sistema invalida los tokens activos y devuelve un mensaje confirmando el cierre de sesión exitoso</p>
+    </td>
+    <td>E11</td>
+</tr>
+<!--TECHNICAL STORY 05-->
+<tr>
+    <td>TS1105</td>
+    <td>Políticas de Validación de Contraseñas</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> aplicar políticas de validación de contraseñas (mínimo de caracteres, uso de mayúsculas, números y símbolos) <b>para</b> asegurar que las credenciales sean seguras y cumplan con los estándares definidos.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Contraseña válida (Happy Path)</strong><br/>
+        <b>Dado</b> que un usuario ingresa una contraseña con los requisitos mínimos de seguridad<br/>
+        <b>Cuando</b> el sistema la valida<br/>
+        <b>Entonces</b> permite continuar con el registro o cambio de contraseña</p>
+        <p><strong>Escenario 02: Contraseña débil (Unhappy Path)</strong><br/>
+        <b>Dado</b> que la contraseña ingresada no cumple con los criterios establecidos<br/>
+        <b>Cuando</b> el sistema la evalúa<br/>
+        <b>Entonces</b> devuelve un error 400 Bad Request con un mensaje indicando las reglas que deben cumplirse</p>
+    </td>
+    <td>E11</td>
+</tr>
+<!--TECHNICAL STORY 06-->
+<tr>
+    <td>TS1106</td>
+    <td>Auditoría de Intentos de Autenticación</td>
+    <td align="justify">
+        <b>Como</b> backend developer, <b>quiero</b> registrar los intentos de autenticación exitosos y fallidos, incluyendo dirección IP, usuario y timestamp <b>para</b> disponer de trazabilidad ante posibles intentos de acceso no autorizados.
+    </td>
+    <td>
+        <p><strong>Escenario 01: Registro de intento exitoso (Happy Path)</strong><br/>
+        <b>Dado</b> que un usuario inicia sesión correctamente<br/>
+        <b>Cuando</b> el sistema valida las credenciales<br/>
+        <b>Entonces</b> registra el intento exitoso con los datos de auditoría en el log del sistema</p>
+        <p><strong>Escenario 02: Intento fallido por credenciales incorrectas (Unhappy Path)</strong><br/>
+        <b>Dado</b> que un usuario ingresa una contraseña errónea<br/>
+        <b>Cuando</b> el sistema rechaza la solicitud<br/>
+        <b>Entonces</b> registra el intento fallido con la hora exacta y la IP de origen</p>
+    </td>
+    <td>E11</td>
+</tr>
+
   </tbody>
 </table>
 
