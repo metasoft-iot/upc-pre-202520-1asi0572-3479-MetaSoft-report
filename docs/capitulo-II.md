@@ -20,7 +20,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="/assets/img/capitulo-II/drivana-logo.jpeg" alt="Logo de Drivana" width="600"/>
+			<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/drivana-logo.jpeg" alt="Logo de Drivana" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>2. Drivana (LatAm)</b><br/>
@@ -31,7 +31,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="/assets/img/capitulo-II/obd-logo.png" alt="Logo de OBD-II" width="600"/>
+			<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/obd-logo.png" alt="Logo de OBD-II" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>3. Dispositivos OBD-II genéricos con apps móviles.</b><br/>
@@ -64,19 +64,19 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       SafeCar
       <div style="margin-top: 10px;" align="center">
-                <img src="/assets/img/safecar-logo.png" alt="SafeCar Logo" width="100px">
-            </div>
+        <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/safecar-logo.png" alt="SafeCar Logo" width="100px">
+      </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
     Drivana (LatAm)
     <div style="margin-top: 20px;" align="center">
-                <img src="/assets/img/capitulo-II/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
+        <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
         </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       OBD-II genéricos + apps
       <div style="margin-top: 10px;" align="center">
-                <img src="/assets/img/capitulo-II/obd-logo.png" alt="OBD-II genéricos + apps Logo" width="100px">
+                <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/obd-logo.png" alt="OBD-II genéricos + apps Logo" width="100px">
             </div>
       </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
@@ -370,7 +370,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Duración:</strong> [04:19]</li>
 <li><strong>Inicio de la entrevista:</strong> [0:25]</li>
   <div style="margin-top: 20px;" align="center">
-                <img src="/assets/img/capitulo-II/Entrevista1IOT.png" alt="Entrevista1IOT" width="1000px">
+                <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/Entrevista1IOT.png" alt="Entrevista1IOT" width="1000px">
         </div>
 
 </ul>
@@ -437,7 +437,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="./../assets/img/capitulo-II/entrevista-taller-holguin.png" alt="screenshot entrevista 1" width="600px">
+  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/entrevista-taller-holguin.png" alt="screenshot entrevista 1" width="600px">
 </div>
 <p align="justify">
 <strong>Resumen:</strong> Abel Holguín, compartió los desafíos que enfrenta en la gestión de su taller mecánico. Destacó que el principal reto es la creciente complejidad electrónica de los vehículos modernos, lo que exige que su personal reciba capacitación constante en electrónica avanzada y software. Actualmente, para el diagnóstico de fallas, utiliza principalmente escáneres y computadoras, y mantiene un registro digital del historial de mantenimiento de los vehículos de sus clientes. Aunque ya emplea estas herramientas, expresó que una queja común de los clientes son las demoras en el diagnóstico, ya que a veces surgen problemas inesperados. El señor Abel mostró interés en adoptar nuevas soluciones digitales, mencionando que estaría dispuesto a pagar una suscripción mensual por una plataforma que ofrezca "reportes automáticos" y ayude a reducir los tiempos de diagnóstico.
@@ -452,13 +452,13 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Representante:</strong> Germán Figeroa</li>
   <li><strong>Años de operación:</strong> 15 años</li>
   <li><strong>Distrito:</strong> Los Olivos</li>
-  <li><strong>URL del video:</strong> <a href="https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing" target="_blank">[https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing]</a></li>
+  <li><strong>URL del video:</strong> <a href="https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing" target="_blank">https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing</a></li>
   <li><strong>Duración:</strong> [08:20]</li>
   <li><strong>Screenshot:</strong></li>
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="./../assets/img/capitulo-II/entrevista-2.png" alt="screenshot entrevista 2" width="600px">
+  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/entrevista-2.png" alt="screenshot entrevista 2" width="600px">
 </div>
 <p align="justify">
 <strong>Resumen:</strong> Germán Figueroa, dueño de un taller mediano en Los Olivos, vive con el “día a día” del oficio: fallas intermitentes que quitan tiempo, clientes que no llegan a la cita y la eterna búsqueda del historial del auto. Se apoya sobre todo en WhatsApp Business, algo de Facebook/Instagram y planillas en Google Sheets, pero siente que todo está disperso. Lo que más valora de una solución como SafeCar es tener el historial por placa/VIN con fotos, repuestos y diagnósticos en un solo lugar, reportes que le avisen qué autos están por mantener y recordatorios por WhatsApp para reducir ausencias. Si realmente le ahorra 1–2 horas diarias, pagaría S/200–S/300 al mes; mejor aún si integra WhatsApp, facturación y catálogo de repuestos, y trae soporte inicial para su equipo. Sueña con alertas claras (“crítica”, “atención”, “preventiva”) que muestren evidencia simple —“batería baja”, “temperatura anormal” para confirmar la cita rápidamente y recibir el auto ya con el camino marcado: menos adivinanzas, más confianza y eficiencia.
@@ -479,7 +479,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="/assets/img/capitulo-II/entrevista-taller-lizzo.png" alt="screenshot entrevista 3" width="600px">
+  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/entrevista-taller-lizzo.png" alt="screenshot entrevista 3" width="600px">
 </div>
 
 <p align="justify">
@@ -626,24 +626,24 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 <strong>User Journey Map - Conductor particular(personal, taxi y delivery)</strong>
 <p align="justify"> El journey del conductor comienza cuando detecta señales de problemas en su vehículo (luces en el tablero, ruidos extraños o fallas inesperadas). A partir de allí, pasa por etapas como la búsqueda de un taller, la coordinación de una cita, el tiempo de espera por diagnóstico y reparación, y finalmente la entrega del vehículo. Durante este proceso, las emociones del conductor oscilan entre la <em>ansiedad</em> por los costos imprevistos, la <em>frustración</em> por los tiempos de espera y la <em>incertidumbre</em> respecto a la confiabilidad del taller, con pocos momentos de satisfacción. Este recorrido muestra claras oportunidades de mejora en la anticipación de fallas, en la transparencia de los costos y en la confiabilidad del servicio. </p>
 
-<img src="/assets/img/capitulo-II/journey-map-driver.png" alt="User Journey Map - Conductor" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/user-persona-driver.png" alt="User Journey Map - Conductor" width="700"/>
 
 
 <br/><strong>User Journey Map - Taller mecánico independiente/mediano</strong>
 <p align="justify"> En el caso de los talleres mecánicos, el journey se inicia cuando reciben un vehículo sin información previa o historial digital del mismo. Esto genera un proceso más largo y dependiente de inspecciones manuales, pruebas de manejo o escaneo básico. El mecánico debe diagnosticar la falla, comunicarla al cliente, esperar su aprobación y recién proceder a la reparación. Las emociones predominantes en el taller van desde la <em>presión</em> por entregar el vehículo en el menor tiempo posible, hasta la <em>frustración</em> por la falta de datos y la desconfianza de algunos clientes frente a los diagnósticos. Las oportunidades detectadas in◊cluyen la posibilidad de acceder a reportes digitales de fallas, contar con historiales de mantenimiento previos y reducir los tiempos de diagnóstico. </p>
 
-<img src="/assets/img/capitulo-II/journey-map-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/user-persona-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
 
 ### 2.3.4. Empathy Mapping
 <p align="justify"> Los <em>Empathy Maps</em> permiten profundizar en la comprensión de los <strong>User Personas</strong> definidos para SafeCar, capturando no solo sus acciones y necesidades, sino también sus percepciones, emociones, frustraciones y expectativas. En esta sección se presentan los mapas elaborados en la herramienta indicada, vinculados a cada uno de los segmentos objetivo (Conductores Particulares y Talleres Mecánicos). </p>
 
 <strong>Empathy Mapping - Conductor particular(personal, taxi y delivery)</strong>
 <p align="justify"> Este mapa refleja el día a día de los conductores que utilizan su vehículo como recurso principal, ya sea para uso personal, trabajo en taxi o delivery. Sus emociones y decisiones giran en torno a la necesidad de mantener el automóvil siempre operativo, ya que cualquier avería implica costos elevados y pérdida de ingresos. A través del empathy map se evidencian sus motivaciones, frustraciones y lo que dicen, ven, piensan y escuchan en relación al mantenimiento de sus vehículos. </p>
-<img src="/assets/img/capitulo-II/empathy-map-driver.png" alt="Empathy Map - Conductor" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/empathy-map-driver.png" alt="Empathy Map - Conductor" width="700"/>
 
 <br/><strong>Empathy Mapping - Taller mecánico independiente/mediano</strong>
 <p align="justify"> Este mapa refleja el día a día de los conductores que utilizan su vehículo como recurso principal, ya sea para uso personal, trabajo en taxi o delivery. Sus emociones y decisiones giran en torno a la necesidad de mantener el automóvil siempre operativo, ya que cualquier avería implica costos elevados y pérdida de ingresos. A través del empathy map se evidencian sus motivaciones, frustraciones y lo que dicen, ven, piensan y escuchan en relación al mantenimiento de sus vehículos. </p>
-<img src="/assets/img/capitulo-II/empathy-map-mechanic.png" alt="Empathy Map - Mecánico" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/empathy-map-mechanic.png" alt="Empathy Map - Mecánico" width="700"/>
 
 ## 2.4. Big Picture EventStorming
 
@@ -660,7 +660,7 @@ Enlace de acceso a Miro (EventStorming): <a href="https://miro.com/app/board/uXj
 Este paso consiste en identificar todos los eventos del dominio de manera libre y sin orden específico. Los participantes generan eventos en formato pasado ("algo pasó") para capturar toda la actividad relevante del ecosistema SafeCar.
 </p>
 
-<img src="/assets/img/capitulo-II/unstructured-exploration.png" alt="Step 1:Unstructured Exploration" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/unstructured-exploration.png" alt="Step 1:Unstructured Exploration" width="700"/>
 
 #### Step 2: Timelines
 
@@ -668,7 +668,7 @@ Este paso consiste en identificar todos los eventos del dominio de manera libre 
 Se organizan los eventos identificados en orden cronológico para crear flujos de trabajo coherentes. Este paso establece la secuencia temporal de los procesos de mantenimiento vehicular.
 </p>
 
-<img src="/assets/img/capitulo-II/timelines-event-storming.png" alt="Step 2:Timelines" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/timelines-event-storming.png" alt="Step 2:Timelines" width="700"/>
 
 #### Step 3: Paint Points
 
@@ -676,7 +676,7 @@ Se organizan los eventos identificados en orden cronológico para crear flujos d
 Se identifican los puntos problemáticos o fricciones en el proceso actual. Estos representan oportunidades de mejora que SafeCar puede abordar con su solución tecnológica.
 </p>
 
-<img src="/assets/img/capitulo-II/paint-points-event-storming.png" alt="Step 3:Paint Points" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/paint-points-event-storming.png" alt="Step 3:Paint Points" width="700"/>
 
 #### Step 4: Pivotal Points
 
@@ -684,7 +684,7 @@ Se identifican los puntos problemáticos o fricciones en el proceso actual. Esto
 Se marcan los eventos críticos que determinan el éxito o fracaso del proceso. Son los momentos clave donde las decisiones tienen mayor impacto en el resultado.
 </p>
 
-<img src="/assets/img/capitulo-II/pivotal-points-event-storming.png" alt="Step 4:Pivotal Points" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/pivotal-points-event-storming.png" alt="Step 4:Pivotal Points" width="700"/>
 
 #### Step 5: Commands
 
@@ -692,7 +692,7 @@ Se marcan los eventos críticos que determinan el éxito o fracaso del proceso. 
 Se definen las acciones o comandos que desencadenan los eventos del sistema. Representan las intenciones de usuarios y sistemas que inician procesos específicos.
 </p>
 
-<img src="/assets/img/capitulo-II/commands-event-storming.png" alt="Step 5:Commands" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/commands-event-storming.png" alt="Step 5:Commands" width="700"/>
 
 #### Step 6: Policies
 
@@ -700,7 +700,7 @@ Se definen las acciones o comandos que desencadenan los eventos del sistema. Rep
 Se establecen las reglas de negocio que determinan cuándo y cómo se ejecutan procesos automáticos. Son las políticas que gobiernan el comportamiento del sistema.
 </p>
 
-<img src="/assets/img/capitulo-II/policies-event-storming.png" alt="Step 6:Policies" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/policies-event-storming.png" alt="Step 6:Policies" width="700"/>
 
 #### Step 7: Read Models
 
@@ -714,7 +714,7 @@ Se identifican las vistas de información que los usuarios necesitan para tomar 
 Se mapean los sistemas externos con los que SafeCar debe integrarse. Incluye APIs, servicios de terceros y sistemas existentes necesarios para el funcionamiento completo.
 </p>
 
-<img src="/assets/img/capitulo-II/external-systems-event-storming.png" alt="Step 8:External Systems" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/external-systems-event-storming.png" alt="Step 8:External Systems" width="700"/>
 
 #### Step 9: Aggregates
 
@@ -722,7 +722,7 @@ Se mapean los sistemas externos con los que SafeCar debe integrarse. Incluye API
 Se definen las entidades de dominio que encapsulan comportamientos y datos relacionados. Son los objetos principales del negocio que mantienen consistencia interna.
 </p>
 
-<img src="/assets/img/capitulo-II/aggregates-event-storming.png" alt="Step 9:Aggregates" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/aggregates-event-storming.png" alt="Step 9:Aggregates" width="700"/>
 
 #### Step 10: Bounded Contexts
 
@@ -730,7 +730,7 @@ Se definen las entidades de dominio que encapsulan comportamientos y datos relac
 Se establecen los contextos delimitados que agrupan funcionalidades relacionadas. Define las fronteras claras entre diferentes áreas de responsabilidad del sistema.
 </p>
 
-<img src="/assets/img/capitulo-II/bounded-contexts-event-storming.png" alt="Step 10:Bounded Contexts" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/bounded-contexts-event-storming.png" alt="Step 10:Bounded Contexts" width="700"/>
 
 ## 2.5. Ubiquitous Language
 
