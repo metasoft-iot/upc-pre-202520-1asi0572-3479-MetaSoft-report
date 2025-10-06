@@ -505,14 +505,14 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 
 <p align="justify"> Este segmento representa a los conductores de vehículos particulares que pueden usar su auto tanto para fines personales como laborales. Incluye a quienes trabajan en taxi (por aplicativo o tradicional), en servicios de delivery o simplemente utilizan su automóvil como medio de transporte propio y familiar. En todos los casos, el vehículo es un recurso vital cuya disponibilidad impacta en su economía o bienestar. Sus principales preocupaciones giran en torno a la reducción de gastos inesperados, la seguridad en carretera y la facilidad de acceder a talleres confiables. Valoran especialmente soluciones digitales simples que les ayuden a anticipar fallas, recibir recordatorios de mantenimiento y prolongar la vida útil de su vehículo. </p>
 
-<img src="/assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
 
 
 <br/><b>Segmento: Talleres mecánicos</b>
 
 <p align="justify"> Este segmento corresponde a propietarios y trabajadores de talleres mecánicos independientes o de tamaño mediano. Son profesionales con experiencia práctica en diagnóstico y reparación de vehículos, pero que en muchos casos carecen de soluciones digitales para agilizar sus procesos. Su principal desafío es optimizar el tiempo de diagnóstico, fidelizar a los clientes y adaptarse a nuevas tecnologías que les permitan mejorar la eficiencia de su negocio. </p>
 
-<img src="/assets/img/capitulo-II/user-persona-mechanic.png" alt="User Persona - Mecánico" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/user-persona-mechanic.png" alt="User Persona - Mecánico" width="700"/>
 
 ### 2.3.2. User Task Matrix
 
@@ -631,13 +631,13 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 <strong>User Journey Map - Conductor particular(personal, taxi y delivery)</strong>
 <p align="justify"> El journey del conductor comienza cuando detecta señales de problemas en su vehículo (luces en el tablero, ruidos extraños o fallas inesperadas). A partir de allí, pasa por etapas como la búsqueda de un taller, la coordinación de una cita, el tiempo de espera por diagnóstico y reparación, y finalmente la entrega del vehículo. Durante este proceso, las emociones del conductor oscilan entre la <em>ansiedad</em> por los costos imprevistos, la <em>frustración</em> por los tiempos de espera y la <em>incertidumbre</em> respecto a la confiabilidad del taller, con pocos momentos de satisfacción. Este recorrido muestra claras oportunidades de mejora en la anticipación de fallas, en la transparencia de los costos y en la confiabilidad del servicio. </p>
 
-<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/user-persona-driver.png" alt="User Journey Map - Conductor" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/journey-map-driver.png" alt="User Journey Map - Conductor" width="700"/>
 
 
 <br/><strong>User Journey Map - Taller mecánico independiente/mediano</strong>
 <p align="justify"> En el caso de los talleres mecánicos, el journey se inicia cuando reciben un vehículo sin información previa o historial digital del mismo. Esto genera un proceso más largo y dependiente de inspecciones manuales, pruebas de manejo o escaneo básico. El mecánico debe diagnosticar la falla, comunicarla al cliente, esperar su aprobación y recién proceder a la reparación. Las emociones predominantes en el taller van desde la <em>presión</em> por entregar el vehículo en el menor tiempo posible, hasta la <em>frustración</em> por la falta de datos y la desconfianza de algunos clientes frente a los diagnósticos. Las oportunidades detectadas in◊cluyen la posibilidad de acceder a reportes digitales de fallas, contar con historiales de mantenimiento previos y reducir los tiempos de diagnóstico. </p>
 
-<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/user-persona-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
+<img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/journey-map-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
 
 ### 2.3.4. Empathy Mapping
 <p align="justify"> Los <em>Empathy Maps</em> permiten profundizar en la comprensión de los <strong>User Personas</strong> definidos para SafeCar, capturando no solo sus acciones y necesidades, sino también sus percepciones, emociones, frustraciones y expectativas. En esta sección se presentan los mapas elaborados en la herramienta indicada, vinculados a cada uno de los segmentos objetivo (Conductores Particulares y Talleres Mecánicos). </p>
