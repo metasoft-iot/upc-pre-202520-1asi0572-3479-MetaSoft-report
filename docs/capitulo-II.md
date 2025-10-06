@@ -476,7 +476,9 @@ La entrevistada muestra un claro interés en una solución que resuelva sus frus
   <li><strong>Representante:</strong> Jean Franco Quintana Carpo - Supervisor del taller</li>
   <li><strong>Años de operación:</strong> 7 años</li>
   <li><strong>Distrito:</strong> San Martin de Porres </li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
+  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">
+    https://shorturl.at/8XSyv
+  </a></li>
   <li><strong>Duración:</strong> [mm:ss]</li>
   <li><strong>Screenshot:</strong></li>
 </ul>
