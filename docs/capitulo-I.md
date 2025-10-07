@@ -551,6 +551,8 @@ A través del enfoque Lean UX, exploramos cómo validar nuestras suposiciones cl
 
 ## 1.3. Segmentos objetivo.
 
+Para que SafeCar logre un impacto significativo y una adopción efectiva en el mercado, es fundamental identificar con claridad los segmentos de usuarios a los que está dirigida la solución. A continuación, se describen los perfiles detallados de nuestros usuarios objetivo.
+
 <table style="width:100%; border-collapse: collapse; text-align: center;">
   <thead style="background-color: #f2f2f2;">
     <tr>
