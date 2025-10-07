@@ -493,7 +493,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </div>
 <p align="justify">
 <strong>Resumen:</strong> Abel Holguín, es un supervisor de taller  de 59 años con 27 años de experiencia en el sector, de perfil metodico. Está trabajando en la zona de Santa Catalina, La Victoria. Su taller ya integra tecnología en sus operaciones diarias: utiliza escáneres y computadoras para diagnosticar vehículos modernos (un proceso que toma en promedio 15-20 minutos) y mantiene un historial digital de cada vehículo accesible por número de placa. Para la gestión de clientes, su principal canal de comunicación y agendamiento de citas es WhatsApp.
-El principal reto que enfrenta Abel es la brecha de conocimiento de su personal frente a la modernización de los vehículos; insiste en que se necesita capacitación constante en electrónica y software para poder atenderlos eficientemente. Esta necesidad de agilidad se conecta con la queja más común de sus clientes: las demoras en el servicio. Al buscar modernizar su taller, Abel considera que el soporte tecnológico más importante es la capacitación electrónica para sus técnicos. Se mostró interesado en una plataforma que ofrezca "reportes automáticos" y confirmó que estaría dispuesto a pagar una suscripción mensual si esta ayuda a mejorar el taller, por ejemplo, reduciendo los tiempos de diagnóstico..
+El principal reto que enfrenta Abel es la brecha de conocimiento de su personal frente a la modernización de los vehículos; insiste en que se necesita capacitación constante en electrónica y software para poder atenderlos eficientemente. Esta necesidad de agilidad se conecta con la queja más común de sus clientes: las demoras en el servicio. Al buscar modernizar su taller, Abel considera que el soporte tecnológico más importante es la capacitación electrónica para sus técnicos. Se mostró interesado en una plataforma que ofrezca "reportes automáticos" y confirmó que estaría dispuesto a pagar una suscripción mensual si esta ayuda a mejorar el taller, por ejemplo, reduciendo los tiempos de diagnóstico.
 </p>
 
 <hr>
@@ -542,6 +542,32 @@ El principal reto que enfrenta Abel es la brecha de conocimiento de su personal 
 </p>
 
 ### 2.2.3. Análisis de entrevistas
+
+**Conductores**
+
+Los conductores entrevistados son también usuarios frecuentes de herramientas digitales y aplicaciones móviles, lo que les permite reconocer el valor de soluciones tecnológicas prácticas. Aunque no utilizan actualmente plataformas para el mantenimiento vehicular, valoran la posibilidad de recibir información en tiempo real sobre el estado del auto y notificaciones automáticas que les permitan anticiparse a las fallas.
+
+Identifican como principales problemáticas la falta de control sobre los diagnósticos mecánicos, la desconfianza hacia los talleres y la dificultad para planificar gastos imprevistos. Por ello, ven como una gran oportunidad integrar un sistema que brinde alertas predictivas y reportes claros, ayudándoles a tomar decisiones informadas sobre el cuidado de su vehículo.
+
+Coinciden en que una solución ideal debe ser fácil de usar, confiable y accesible, permitiendo gestionar mantenimientos sin depender de la intuición o del criterio de terceros. Además, destacan el valor de canales de comunicación directos como WhatsApp que simplifiquen el seguimiento y fortalezcan la transparencia en cada servicio.
+
+<div style="margin-top: 20px;" align="center">
+                <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/Prioridades del segmento Conductores.png" alt="Prioridades del segmento Conductores" width="1000px">
+        </div>
+
+**Talleres mecánicos**
+
+Los talleres entrevistados presentan distintos niveles de digitalización, pero comparten el interés por modernizar su gestión y reducir los tiempos de diagnóstico. Utilizan herramientas como escáneres, planillas digitales y canales como WhatsApp Business para coordinar con clientes, aunque reconocen que la información suele estar dispersa entre varios sistemas.
+
+Entre las principales problemáticas identificadas se encuentran la falta de capacitación en electrónica y software, la demora en los diagnósticos y la dificultad para mantener un historial completo de cada vehículo. Los tres coinciden en que la integración de tecnología puede mejorar la eficiencia operativa y la comunicación con los clientes, siempre que sea fácil de usar y adaptable al ritmo de trabajo del taller.
+
+Ven en SafeCar una herramienta de apoyo técnico y organizacional, capaz de centralizar datos, generar reportes automáticos y enviar recordatorios preventivos que reduzcan las ausencias o retrasos en las citas. También valoran la posibilidad de recibir alertas automáticas sobre fallas críticas o recurrentes, mejorando así la planificación del servicio y la confianza del cliente.
+
+En conjunto, los talleres consideran que una solución como SafeCar puede aumentar la productividad, optimizar recursos y profesionalizar la atención, siempre que incluya capacitación, soporte inicial y compatibilidad con los canales de comunicación que ya utilizan.
+
+<div style="margin-top: 20px;" align="center">
+                <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-II/assets/img/capitulo-II/Prioridades del segmento Talleres mecánicos.png" alt="Prioridades del segmento Talleres mecánicos" width="1000px">
+        </div>
 
 ## 2.3. Needfinding
 
