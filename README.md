@@ -306,6 +306,7 @@ Github Collaboration Insights proporciona un cronograma que muestra las principa
 * Javier Kenyi Mendoza Solis (Kenyi-Mendoza-Solis)
 * Gustavo Jandroel Aguirre Rodríguez  (Jandroel)
 * Javier Sharvel Irigoyen Matos (sharvel-irigoyen)
+* Anaely Burga Loarte (userxx1000)
 
 Se dividieron las siguientes ramas para la colaboración en el proyecto:
 
