@@ -350,31 +350,6 @@ en cada uno de los commits.
 ![Imagen 3]()
 
 
-### ENTREGABLE TB2
-
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el repositorio de nuestro Tercer sprint. Estos gráficos ofrecen una representación visual de la cantidad de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado en cada uno de los commits.
-
-![Imagen 1]()
-
-![Imagen 2]()
-
-![Imagen 3]()
-
-
-### ENTREGABLE TRABAJO FINAL (TF)
-
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
-repositorio de nuestro segundo sprint. Estos gráficos ofrecen una representación visual de la cantidad
-de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
-cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
-en cada uno de los commits.
-
-![tf-Network-graph.png](./assets/img/develop/tf-Network-graph.png)
-
-![tf-pulse.png](./assets/img/develop/tf-pulse.png)
-
-![tf-clone.png](./assets/img/develop/tf-clone.png)
-
 ## Tabla de Contenido
 
 ### **Capítulo I: Introducción**
@@ -509,7 +484,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
             <ul style="margin: 0; padding-left: 20px;">
                 <li><strong>Janover Gonzalo Saldaña Vela:</strong> Lideré y coordiné la facilitación y documentación inicial del taller de Event Storming, identificando los principales eventos y contextos del sistema SafeCar. Posteriormente, dirigí el modelado de flujos de mensajes entre dominios y la elaboración de los primeros Bounded Context Canvases, asegurando la coherencia conceptual del proyecto. Además, coordiné el taller de Big Picture EventStorming y desarrollé el glosario de lenguaje ubicuo, estableciendo una terminología común para el equipo. Finalmente, consolidé el Product Backlog integrando los aportes de todos los miembros, garantizando la alineación entre los requisitos del usuario y la arquitectura del sistema.</li>
                 <li><strong>Hardie Alfonso Holguin Gamarra:</strong>  Lideré y ejecuté la entrevista del segmento talleres , documentando las respuestas del entrevistado y a partir de esta información elaboré la User Persona correspondiente y definí sus User Stories, asegurando la representación precisa de sus necesidades. Asimismo, participé en la construcción del Capítulo IV, III y II, , y la sección Bounded Context Device Manangement, donde adapté y consolidé los contextos delimitados en base  a SafeCar. Con estas actividades aseguré la coherencia entre los hallazgos de usuario y el diseño estratégico del sistema, contribuyendo al entendimiento del dominio como en la arquitectura planteada.</li>
-                <li><strong>Villegas Jipa Luis Alfonso:</strong> Acciones realizadas de TB1 por el integrante 3</li>
                 <li><strong>Javier Kenyi Mendoza Solis:</strong>
                 Lideré y ejecuté la entrevista del segmento conductor con vehículo propio, documentando las respuestas del entrevistado y a partir de esta información elaboré la User Persona correspondiente y definí sus User Stories, asegurando la representación precisa de sus necesidade. Asimismo, participé en la construcción del Capítulo IV, desarrollando la sección Domain Message Flows Modeling, donde diseñé los flujos de mensajes de dominio para reflejar los procesos centrales de solicitud y gestión de mantenimientos, y la sección Bounded Context Canvases, donde adapté y consolidé los contextos delimitados de SafeCar. Con estas actividades aseguré la coherencia entre los hallazgos de usuario y el diseño estratégico del sistema, contribuyendo al entendimiento del dominio como en la arquitectura planteada.
                 </li>
@@ -528,26 +502,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
                 <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TP por el integrante 2</li>
                 <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TP por el integrante 4</li>
                 <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TP por el integrante 6</li>
-            </ul>
-        </div>
-        <!-- TB2 Section -->
-        <div style="margin-bottom: 20px;">
-            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
-            <ul style="margin: 0; padding-left: 20px;">
-                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB2 por el integrante 1</li>
-                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB2 por el integrante 2</li>
-                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB2 por el integrante 4</li>
-                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB2 por el integrante 6</li>
-            </ul>
-        </div>
-        <!-- TF Section -->
-        <div style="margin-bottom: 10px;">
-            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TF</h4>
-            <ul style="margin: 0; padding-left: 20px;">
-                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TF por el integrante 1</li>
-                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TF por el integrante 2</li>
-                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TF por el integrante 4</li>
-                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TF por el integrante 6</li>
             </ul>
         </div>
     </td>
@@ -601,26 +555,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
                 <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TP por el integrante 6</li>
             </ul>
         </div>
-        <!-- TB2 Section -->
-        <div style="margin-bottom: 20px;">
-            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
-            <ul style="margin: 0; padding-left: 20px;">
-                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TB2 por el integrante 1</li>
-                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TB2 por el integrante 2</li>
-                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TB2 por el integrante 4</li>
-                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TB2 por el integrante 6</li>
-            </ul>
-        </div>
-        <!-- TF Section -->
-        <div style="margin-bottom: 10px;">
-            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TF</h4>
-            <ul style="margin: 0; padding-left: 20px;">
-                <li><strong>Janover Gonzalo Saldaña Vela:</strong> Acciones realizadas de TF por el integrante 1</li>
-                <li><strong>Hardie Alfonso Holguin Gamarra:</strong> Acciones realizadas de TF por el integrante 2</li>
-                <li><strong>Javier Kenyi Mendoza Solis:</strong> Acciones realizadas de TF por el integrante 4</li>
-                <li><strong>Javier Sharvel Irigoyen Matos:</strong> Acciones realizadas de TF por el integrante 6</li>
-            </ul>
-        </div>
     </td>
     <td style="text-align: left; vertical-align: top; padding: 15px;">
         <div style="margin-bottom: 15px;">
@@ -630,14 +564,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <div style="margin-bottom: 15px;">
             <h5 style="color: #e74c3c; margin-bottom: 8px;">TP:</h5>
             <p style="margin: 0; font-size: 14px;">Conclusiones generales TP del criterio específico 2</p>
-        </div>
-        <div style="margin-bottom: 15px;">
-            <h5 style="color: #e74c3c; margin-bottom: 8px;">TB2:</h5>
-            <p style="margin: 0; font-size: 14px;">Conclusiones generales TB2 del criterio específico 2</p>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <h5 style="color: #e74c3c; margin-bottom: 8px;">TF:</h5>
-            <p style="margin: 0; font-size: 14px;">Conclusiones generales TF del criterio específico 2</p>
         </div>
     </td>
 </tr>
