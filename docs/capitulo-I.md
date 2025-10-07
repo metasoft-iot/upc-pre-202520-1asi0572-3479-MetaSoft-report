@@ -484,6 +484,8 @@ El segmento inicial de lanzamiento estará compuesto por:
 
 #### 1.2.2.4. Lean UX Canvas.
 
+A través del enfoque Lean UX, exploramos cómo validar nuestras suposiciones clave, reducir riesgos y diseñar una solución que realmente resuelva los problemas más importantes de nuestros usuarios.
+
 <table style="width: 50%; border-collapse: collapse;">
     <tr>
         <td style="border: 1px solid black; text-align: justify; padding: 8px;">
