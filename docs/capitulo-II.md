@@ -505,11 +505,7 @@ El principal reto que enfrenta Abel es la brecha de conocimiento de su personal 
   <li><strong>Representante:</strong> Germán Figeroa</li>
   <li><strong>Años de operación:</strong> 15 años</li>
   <li><strong>Distrito:</strong> Los Olivos</li>
-  <li><strong>URL del video:</strong> 
-  <a href="https://bit.ly/4nELgFt" target="_blank">https://bit.ly/4nELgFt</a>
-</li>
-
-https://bit.ly/4nELgFt</a></li>
+  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://bit.ly/4nELgFt</a></li>
   <li><strong>Duración:</strong> [08:20]</li>
   <li><strong>Screenshot:</strong></li>
 </ul>
