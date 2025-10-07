@@ -283,6 +283,58 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   </tr>
 </table>
 
+# **Estrategias y Tácticas frente a Competidores – SafeCar**
+
+**Estrategia de diferenciación tecnológica**
+
+SafeCar busca posicionarse como una solución integral e inteligente de mantenimiento vehicular al incorporar dispositivos IoT accesibles incluso para autos sin puerto OBD-II, combinados con alertas predictivas y personalizadas.
+A diferencia de competidores como Drivana o los OBD-II genéricos, SafeCar ofrece una integración completa entre conductor, vehículo y taller, brindando diagnósticos automáticos y reportes en tiempo real que optimizan la atención mecánica.
+
+**Tácticas**
+
+Desarrollar algoritmos de mantenimiento predictivo basados en el uso del vehículo y su historial.
+
+Crear reportes automáticos que se compartan directamente con los talleres afiliados.
+
+Integrar la aplicación móvil y la web en un mismo ecosistema conductor–taller para mejorar la experiencia del usuario.
+
+**Estrategia de enfoque de nicho en mantenimiento preventivo**
+
+SafeCar se enfoca en el nicho de conductores urbanos y flotas pequeñas que buscan evitar fallas y reducir costos mediante mantenimiento preventivo.
+Mientras Drivana apunta a flotas corporativas grandes y los OBD-II genéricos solo ofrecen datos básicos, SafeCar adapta su propuesta a la realidad peruana, ofreciendo precios accesibles, simplicidad y soporte local.
+
+**Tácticas**
+
+Dirigir campañas hacia conductores de taxis, delivery y autos personales en Lima y principales provincias.
+
+Ofrecer paquetes especiales para talleres medianos que aún no están digitalizados.
+
+Crear una interfaz sencilla y educativa que explique los beneficios del mantenimiento preventivo.
+
+**Estrategia de escalabilidad y fácil adopción**
+
+SafeCar apuesta por una infraestructura fácil de instalar y escalar regionalmente sin necesidad de personal técnico especializado. El dispositivo puede configurarse en minutos, reduciendo las barreras de entrada para nuevos usuarios y talleres.
+
+**Tácticas**
+
+Diseñar guías visuales y videos breves sobre instalación y configuración del dispositivo IoT.
+
+Implementar soporte remoto y asistencia técnica automatizada desde la app.
+
+Aprovechar marketplaces y alianzas con talleres locales para distribución masiva a bajo costo.
+
+**Estrategia de posicionamiento y educación del mercado**
+
+Ante la baja cultura de mantenimiento preventivo en Perú, SafeCar prioriza una estrategia de educación y confianza. La marca busca ser reconocida como pionera en tecnología de diagnóstico inteligente accesible.
+
+**Tácticas**
+
+Crear contenido educativo en redes sociales, blogs y webinars sobre la importancia del mantenimiento predictivo.
+
+Publicar casos de éxito de talleres afiliados y usuarios satisfechos.
+
+Colaborar con aseguradoras y asociaciones automotrices para promover la prevención y seguridad vehicular.
+
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
