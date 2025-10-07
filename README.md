@@ -514,14 +514,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
             <h5 style="color: #e74c3c; margin-bottom: 8px;">TP:</h5>
             <p style="margin: 0; font-size: 14px;">Conclusiones generales TP del criterio específico 1</p>
         </div>
-        <div style="margin-bottom: 15px;">
-            <h5 style="color: #e74c3c; margin-bottom: 8px;">TB2:</h5>
-            <p style="margin: 0; font-size: 14px;">Conclusiones generales TB2 del criterio específico 1</p>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <h5 style="color: #e74c3c; margin-bottom: 8px;">TF:</h5>
-            <p style="margin: 0; font-size: 14px;">Conclusiones generales TF del criterio específico 1</p>
-        </div>
     </td>
 </tr>
 <!-- ======================================= Criterio Específico 02 ======================================= -->
