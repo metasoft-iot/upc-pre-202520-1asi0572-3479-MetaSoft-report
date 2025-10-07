@@ -4,19 +4,25 @@
 
 ### 4.1.1. Design-Level EventStorming
 
+El <b>EventStorming</b> permite visualizar cómo diferentes usuarios interactúan con el sistema y qué eventos son generados, sirviendo como base para el diseño de módulos, definición de responsabilidades y validación de requerimientos funcionales.
+
 <img src="/assets/img/capitulo-IV/Level EventStorming.jpg" alt="Level EventStorming" width="1000"/>
 
 #### 4.1.1.1 Candidate Context Discovery
+
+En esta seccion se identifican los módulos o subdominios funcionales dentro de la solución SafeCar, agrupando los eventos, comandos y usuarios por áreas de responsabilidad.
 
 <img src="/assets/img/capitulo-IV/Candidate Context Discovery.jpg" alt="Candidate Context Discovery" width="1000"/>
 
 #### 4.1.1.2 Domain Message Flows Modeling
 
-<img src="/assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
-
 El Usuario utiliza la app/web de SafeCar para recibir datos de sensores IoT relacionados con su vehículo. El sistema Maintenance Management recibe los datos, los procesa y verifica con Vehicle & Sensor Management la necesidad de mantenimiento (consultando la información recopilada por el IoT).
 
 Si se confirma una condición crítica, se genera una alerta de mantenimiento (evento “Maintenance Alert Created”), la cual se envía al Notification System. Este sistema notifica al usuario en la app/web y, en caso necesario, también avisa al taller asignado para coordinar la atención preventiva.
+
+<img src="/assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
+
+
 
 
 #### 4.1.1.3 Bounded Context Canvases
