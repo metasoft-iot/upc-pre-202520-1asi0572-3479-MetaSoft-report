@@ -476,6 +476,54 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
+    <tr>
+        <td rowspan="9">US204</td>
+        <td rowspan="9">Como usuario autenticado deseo cerrar sesión de manera segura para proteger mi cuenta cuando termino de usar el sistema</td>
+        <td>T38</td>
+        <td rowspan="9">Cierre de sesión de usuario en la Aplicación Web</td>
+        <td>
+          Botón de "Sign Out" en la UI del perfil de usuario y cierre de sesión
+        </td>
+        <td>3</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T39</td>
+        <td>
+          Botón de "Sign Out" en la UI del perfil de usuario y cierre de sesión
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T40</td>
+        <td>
+           Redirección a la UI de SignIn luego de hacer SignOut
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T41</td>
+        <td>
+           Mostrar mensaje de confirmación en la UI después de cerrar sesión
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T42</td>
+        <td>
+           Eliminar token de autenticación en LocalStorage para que el usuario no acceda después de cerrar sesión
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
 </table>
 
 #### 6.2.1.4. Development Evidence for Sprint Review
