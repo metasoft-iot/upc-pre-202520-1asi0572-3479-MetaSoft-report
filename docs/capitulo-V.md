@@ -1,17 +1,230 @@
-### **Capítulo V: Solution UI/UX Design**
-- **5.1. Style Guidelines**
-  - 5.1.1. General Style Guidelines
-  - 5.1.2. Web, Mobile and IoT Style Guidelines
-- **5.2. Information Architecture**
-  - 5.2.1. Organization Systems
-  - 5.2.2. Labeling Systems
-  - 5.2.3. SEO Tags and Meta Tags
-  - 5.2.4. Searching Systems
-  - 5.2.5. Navigation Systems
-- **5.3. Landing Page UI Design**
+# Capítulo V: Solution UI/UX Design
+## 5.1. Style Guidelines
+### 5.1.1. General Style Guidelines
+Aquí documentaremos las decisiones transversales de la identidad visual y del lenguaje de marca:
+
+<b>Colors</b></br>
+<p align="justify">
+Para la elección de los colores representativos para los productos, escogimos investigar la reacción que causaría en los usuarios durante el uso de la aplicación o landing page. En este proyecto, se decidió utilizar los colores negro y rojo, con esto creamos la paleta de colores característica de LawConnect. Con estos colores esperamos transmitir un sentido de modernidad y calidez. En este caso, escogimos negro para tener una base sólida, también, transmite un aire de confianza, que es justamente lo que esperamos con hacer por la importancia de la aplicación en la vida de nuestros usuarios; así, también tiene un toque de elegancia y seriedad. Además, utilizamos rojo suave para que transmita energía, algo que llama bastante la atención de los usuarios. Por eso es que será utilizado en las llamadas de acción, botones y puntos clave de la aplicación. En sí, buscamos que haya un balance y armonía visual en el diseño de los productos y lo logramos con ambos colores.
+</p>
+
+<img alt="Paleta de color" src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/color-palette.png" />
+
+<b>Typography</b></br>
+<p align="justify">
+Familia(s), jerarquía tipográfica (display, títulos, cuerpos), escala modular y line-height para lectura cómoda.Spacing & Grid: unidad base (4/8 px), columnas y gutters para desktop/tablet/móvil, y reglas de alineación. 
+</p>
+<img alt="Matriz tipográfica: jerarquías y escala modular" src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/typography.png"/>
+
+### 5.1.2. Web, Mobile and IoT Style Guidelines
+
+##### **Spacing**
+
+El spacing a utilizar se presentará en los siguientes puntos, estos variarán dependiendo del lenguaje o sistema operativo utilizado.  
+De esta manera, permitimos que la información se vea ordenada.
+
+##### **Para Landing Page**
+
+- **Button padding:**
+  - Vertical: `12px`
+  - Horizontal: `24px`
+
+- **Input fields:**
+  - Altura: `48px`
+  - Espacio entre campos: `16px`
+
+- **Margin entre secciones:** `64px`
+- **Height entre textos:** `30px`
+
+##### **Para Android**
+
+- **Button padding:**
+  - Vertical: `12dp`
+  - Horizontal: `18dp`
+
+- **Input fields:**
+  - Altura: `40dp`
+  - Espacio entre campos: `16dp`
+
+- **Margin entre secciones:**
+  - Principales: `32dp` a `38dp`
+  - Internas: `16dp`
+
+- **Spacing entre textos:**
+  - Título y subtítulos: `16dp`
+  - Párrafos: `12dp`
+
+##### **Para iOS**
+
+- **Button padding:** `12pt` (vertical), `20pt` (horizontal)
+- **Input fields:** `56pt` (altura), `16pt` (espacio entre campos)
+- **Margin entre secciones:**
+  - Principales: `32pt` a `38pt`
+  - Internas: `16pt`
+- **Spacing entre textos:**
+  - Título y subtítulo: `16pt`
+  - Párrafos: `12pt`
+
+<b>Dimensions</b></br>
+<p align="justify">
+Se prefirió usar un tono ligeramente formal, y amigable; pero, de igual manera, se mantiene el respeto hacia los usuarios. Con SafeCar, preferimos utilizar un lenguaje más serio debido a la importancia de los temas que se tratan.
+</p>
+
+## 5.2. Information Architecture
+### 5.2.1. Organization Systems
+
+##### **Organización Visual**
+
+En SafeCar, se aplicó una **jerarquía visual** que permite a los usuarios —principalmente **conductores particulares** y **mecánicos de taller**— navegar de forma intuitiva y comprender la información según su nivel de prioridad.  
+
+El diseño establece una clara distinción entre los elementos informativos y los interactivos, utilizando **tamaños y pesos tipográficos diferentes** para guiar la atención del usuario.  
+Por ejemplo, los títulos de las secciones principales como *“Panel de Control”*, *“Mis Vehículos”* o *“Órdenes de Servicio”* utilizan un tamaño de letra mayor y color de alto contraste, mientras que los subtítulos o descripciones presentan un estilo más liviano para mantener jerarquía y legibilidad.  
+
+Este principio se refuerza con un diseño de **organización secuencial**, que orienta a los conductores a seguir un flujo paso a paso —desde el registro del vehículo hasta la solicitud y confirmación del mantenimiento—, y a los mecánicos a **gestionar eficientemente sus órdenes de trabajo**, desde la verificación inicial hasta el cierre del servicio.  
+Gracias a esta estructura, la plataforma asegura una **experiencia fluida y predecible** para ambos segmentos.
+
+##### **Esquema de Categorización**
+
+SafeCar adopta un modelo híbrido de categorización que facilita el acceso rápido a la información según el tipo de tarea o perfil de usuario:
+
+- **Alfabético:**  
+  Utilizado principalmente en los listados de servicios y piezas del vehículo (p. ej., *Aceite*, *Batería*, *Frenos*, *Motor*).  
+  Esto permite a los mecánicos encontrar rápidamente los componentes específicos que deben revisar o reemplazar, y a los conductores identificar el servicio que necesitan solicitar.
+
+- **Por tópico:**  
+  Empleado para agrupar información técnica según la categoría del mantenimiento (por ejemplo: *Preventivo*, *Correctivo*, *Diagnóstico*).  
+  Esta organización facilita al conductor entender la naturaleza del servicio y al mecánico ubicar los procedimientos asociados.
+
+- **Cronológico:**  
+  Aplicado en la sección *“Historial de Mantenimientos”*, donde las órdenes se presentan desde la más reciente hasta la más antigua.  
+  Esto permite a los conductores visualizar la evolución del estado de su vehículo y a los mecánicos revisar intervenciones previas antes de ejecutar un nuevo servicio.
+
+- **Por audiencia:**  
+  Dado que SafeCar atiende a **dos segmentos principales**, se ha personalizado la interfaz y la disposición de la información:
+  - **Conductores Particulares:** visualizan recordatorios, próximos servicios, recomendaciones y diagnósticos simplificados en un lenguaje claro y accesible.  
+  - **Mecánicos de Taller:** acceden a vistas detalladas de órdenes, listas de chequeo, reportes técnicos y métricas de desempeño del vehículo.  
+
+
+### 5.2.2. Labeling Systems
+
+Para el sistema de etiquetas en SafeCar, se estableció una estrategia enfocada en **claridad, consistencia y reconocimiento inmediato**, utilizando íconos y textos breves que permiten a los **conductores particulares** y **mecánicos de taller** comprender rápidamente la función de cada elemento dentro de la interfaz.
+
+##### **Etiquetas para la Landing Page**
+
+En la página principal de SafeCar, se definieron etiquetas cortas y directas que reflejan las secciones clave de la navegación superior (header), alineadas a la arquitectura de información general del sitio:
+
+- "Home"  
+- "Features" *(Características)*  
+- "Plans" *(Planes)*  
+- "Testimonials" *(Testimonios)*  
+- "Contact" *(Contáctanos)*  
+- "Free Trial" *(Prueba Gratis)*  
+- 🌐 Selector de idioma *(ícono de globo terráqueo para alternar entre inglés y español)*
+
+Estas etiquetas buscan mantener una **estructura simple y accesible**, permitiendo que el visitante comprenda la oferta de la plataforma y acceda fácilmente a la aplicación web o móvil.
+
+<img alt="Barra de navegación de la Landing Page de SafeCar" src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/labeling-system.png" />
+
+##### **Etiquetas para la Aplicación Móvil**
+
+En la aplicación móvil de SafeCar, tanto en Android como en iOS, se utilizan etiquetas funcionales y consistentes que acompañan las principales acciones de los usuarios.  
+El objetivo es mantener una comunicación **breve, directa y contextual**, evitando redundancias y maximizando la comprensión.
+
+- "Guardar" *(para registrar un nuevo mantenimiento o diagnóstico)*  
+- "Cancelar" *(para descartar o retroceder acciones)*  
+- "Agendar Servicio" *(creación de cita para mantenimiento o revisión técnica)*  
+- "Mis Vehículos" *(listado de autos registrados por el conductor)*  
+- "Historial" *(seguimiento de servicios anteriores)*  
+- "Revisar Caso" *(consulta de diagnósticos o reparaciones en curso)*  
+- "Confirmar Servicio" *(acción de aprobación del mecánico o conductor)*  
+- "Reportar Fallo" *(creación de un nuevo incidente técnico)*  
+
+Cada etiqueta fue seleccionada con base en su **frecuencia de uso y contexto funcional**, manteniendo un tono neutral y orientado a la acción, favoreciendo la **rapidez en la toma de decisiones dentro de la aplicación**.
+
+##### **Lineamientos Generales**
+
+- Las etiquetas no deben superar las **dos palabras**.  
+- Se prioriza el **lenguaje funcional** sobre el técnico.  
+- Se evita el uso de abreviaturas o jerga especializada.  
+- El texto se mantiene en **Mayúscula Inicial** para una mejor legibilidad.  
+- Los íconos se acompañan de texto únicamente cuando la acción no sea evidente.
+
+Este sistema garantiza que las interfaces de SafeCar sean **claras, consistentes y accesibles** para ambos segmentos principales: **conductores** y **mecánicos**, optimizando la comunicación visual y la usabilidad general de la plataforma.
+
+### 5.2.3. SEO Tags and Meta Tags
+
+### **5.2.3. SEO Tags and Meta Tags**
+
+<p>
+Para los <b>SEO Tags</b> y <b>Meta Tags</b> se implementaron palabras clave que incrementan la visibilidad de <b>SafeCar</b> en los motores de búsqueda, alineadas a su propuesta de valor: conectar a conductores particulares con mecánicos de taller calificados, optimizando el mantenimiento vehicular mediante tecnología e IoT.
+</p>
+
+##### **Landing Page**
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeCar — Mantenimiento Automotriz Inteligente</title>
+  <meta
+    name="description"
+    content="SafeCar conecta conductores con mecánicos de confianza para mantener su vehículo en óptimas condiciones. Agenda, monitorea y gestiona tus mantenimientos desde una sola plataforma."
+  />
+  <meta
+    name="keywords"
+    content="mantenimiento automotriz, mecánicos en línea, taller digital, IoT automotriz, diagnóstico vehicular, SafeCar, revisión técnica, plataforma de mantenimiento"
+  />
+  <meta name="author" content="SafeCar Team" />
+  <link href="./src/styles/output.css" rel="stylesheet" />
+</head>
+```
+
+<p align="justify">
+Con estos Tags, la Landing Page de SafeCar mejora su posicionamiento en buscadores (SEO), permitiendo aparecer entre los primeros resultados al buscar servicios relacionados con mantenimiento vehicular, talleres automotrices o diagnósticos digitales.
+</p>
+
+### 5.2.4. Searching Systems
+
+<p align="justify">
+En esta ocasión, la landing page no contará con una barra de búsqueda, solo tendrá disponibles secciones claras, y botones "call to action" para llevarlos a la aplicación móvil. En el caso de la aplicación móvil, sería en dos perfiles de usuario:
+</p>
+
+<ul>
+  <li><strong>El mecánico de taller</strong> tendrá la opción de buscar entre las órdenes de servicio asignadas, para encontrarlas con mayor facilidad. Por ejemplo, puede buscar por el nombre del cliente, número de placa del vehículo, o tipo de mantenimiento, y le aparecerán las órdenes relacionadas.</li>
+  <li><strong>El conductor particular</strong> tendrá la opción de buscar entre sus vehículos registrados y su historial de mantenimientos. Por ejemplo, si recuerda una palabra clave sobre un servicio anterior o el nombre del taller, inmediatamente aparecerá la lista de resultados filtrados.</li>
+</ul>
+
+### 5.2.5. Navigation Systems
+<p align="justify">
+Para el sistema de navegación hemos preferido mantener una navegación jerárquica para la landing page, en donde "Prueba Gratis" e "Iniciar Sesión" son los principales "call to action"; también, escogimos distintos patrones conocidos de Mobile UI. A continuación se va a explicar cómo será el funcionamiento de cada uno en la aplicación móvil:
+</p>
+
+<ul align="justify">
+  <li><strong>Content-based Navigation:</strong> Una implementación de este tipo de navegación sería que, a partir de la tarjeta del mecánico de taller, el conductor pueda tocarla y pasar al perfil del mecánico (que cuenta con su información de contacto, servicios ofrecidos y calificaciones); otra situación es cuando el mecánico desea ver más información de una orden de servicio y toca la tarjeta de la misma.</li>
+
+  <li><strong>Morphing Controls:</strong> En este caso, lo usaremos para el botón de "agendar servicio", este pasará a ser el de "guardar servicio" y, finalmente, "confirmar mecánico" (a partir del matchmaking). El botón evoluciona según el estado del proceso de agendamiento.</li>
+
+  <li><strong>"Sticky" Fixed Navigation:</strong> Se considera usar un menú inferior fijo que cuente con botones de "Dashboard", "Mis Vehículos", "Órdenes de Servicio" y "Historial".</li>
+
+  <li><strong>Vertical Navigation:</strong> Usaremos este tipo de navegación para que los usuarios visualicen la lista de vehículos registrados, órdenes de servicio activas y historial de mantenimientos.</li>
+
+  <li><strong>Popovers:</strong> Se utilizarán las ventanas emergentes en distintos casos:
+    <ul>
+      <li>Asegurarse de si el conductor quiere cancelar la solicitud de servicio.</li>
+      <li>Si quiere marcar el servicio como completado, lo cual implicaría que el mantenimiento fue realizado exitosamente.</li>
+      <li>Si está seguro de que adjuntó toda la información necesaria del vehículo para el diagnóstico.</li>
+      <li>Si está seguro de aceptar o rechazar el mecánico sugerido por la aplicación mediante el sistema de matchmaking.</li>
+      <li>Confirmación antes de reportar una falla o problema técnico.</li>
+    </ul>
+  </li>
+
+  <li><strong>Sidebars:</strong> En este caso, usaremos el "menú hamburguesa", que anida "Mi Perfil", "Configuración", "Soporte Técnico" y "Cerrar Sesión".</li>
+</ul>
+
+## 5.3. Landing Page UI Design
   - 5.3.1. Landing Page Wireframe
   - 5.3.2. Landing Page Mock-up
-- **5.4. Applications UX/UI Design**
+## 5.4. Applications UX/UI Design
   - 5.4.1. Applications Wireframes
 - Estos wireframes presentan la estructura y el flujo de la plataforma de MetaSoft, que busca transformar datos en conocimiento estratégico a través de soluciones web e IoT. Las pantallas están diseñadas para guiar a los usuarios a través de un proceso claro y eficiente, desde el inicio de sesión hasta la gestión detallada de información, cumpliendo con la visión de la startup de generar un impacto positivo y ser un líder en soluciones digitales.
 
