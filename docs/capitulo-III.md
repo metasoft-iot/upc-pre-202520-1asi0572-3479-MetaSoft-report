@@ -2087,6 +2087,19 @@
 
 ## 3.2. Impact Mapping
 
+**Segmento CONDUCTORES**
+
+<div style="margin-top: 20px;" align="center">
+                <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-III/assets/img/capitulo-III/Impact map Conductores.png" alt="Impact map Conductores" width="1000px">
+        </div>
+		
+**Segmento TALLER MECANICO**
+
+<div style="margin-top: 20px;" align="center">
+                <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/capitulo-III/assets/img/capitulo-III/Impact map Talleres mecanico.png" alt="Impact map Talleres mecanico" width="1000px">
+        </div>
+
+
 ## 3.3. Product Backlog
 
 <!-- INICIO: Tabla de product backlog -->
