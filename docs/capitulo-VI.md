@@ -233,7 +233,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>T14</td>
         <td rowspan="7">Accesibilidad a Planes de la Landing Page</td>
         <td>
-            Implementar UI de sección de Planes con plan Estandar en Landing Page
+            Implementar UI de sección de Planes con plan Estándar en Landing Page
         </td>
         <td>1</td>
         <td>Gonzalo Quedena</td>
@@ -278,7 +278,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
     <tr>
         <td>T19</td>
         <td>
-            Redireccionar al proceso de compra luego de click en "Select" de algún plan mostrado en sección "Plans" del la Landing Page
+            Redireccionar al proceso de compra luego de click en "Select" de algún plan mostrado en sección "Plans" de la Landing Page
         </td>
         <td>1</td>
         <td>Gonzalo Quedena</td>
@@ -287,7 +287,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
     <tr>
         <td>T20</td>
         <td>
-            Botones por plan "Select"en la UI de la Landing page
+            Botones por plan "Select" en la UI de la Landing page
         </td>
         <td>1</td>
         <td>Gonzalo Quedena</td>
@@ -405,7 +405,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>T31</td>
+        <td>T32</td>
         <td>
            Mostrar mensajes de error de validación de los campos nombre, apellidos, teléfono
         </td>
@@ -414,7 +414,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>T32</td>
+        <td>T33</td>
         <td>
            Mostrar mensajes de error (email existente / formato inválido) en UI para SignUp
         </td>
@@ -423,7 +423,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>T33</td>
+        <td>T34</td>
         <td>
            Mostrar mensajes de error (Requerimientos de contraseña inválida) en UI de SignUp
         </td>
@@ -432,7 +432,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>T34</td>
+        <td>T35</td>
         <td>
            Servidor valida campo nombre y apellido que solo sean caracteres y máximo 50 caracteres cada uno
         </td>
@@ -441,16 +441,16 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>T35</td>
+        <td>T36</td>
         <td>
            Mostrar mensaje de éxito al registrarse (Se registró correctamente) y redirección a SignIn
         </td>
         <td>2</td>
-        <td>Janover Saldaño</td>
+        <td>Janover Saldaña</td>
         <td>Done</td>
     </tr>
      <tr>
-        <td>T36</td>
+        <td>T37</td>
         <td>
            Servidor valida contraseña de usuario segura (+8 caracteres, >= 1 simbolo)
         </td>
@@ -459,7 +459,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>T37</td>
+        <td>T38</td>
         <td>
            Servidor verifica unicidad de email al momento de realizar SignUp
         </td>
@@ -468,7 +468,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>T38</td>
+        <td>T39</td>
         <td>
            Servidor valida teléfono de usuario (solo dígitos, máx. 9)
         </td>
@@ -477,10 +477,10 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td rowspan="9">US204</td>
-        <td rowspan="9">Como usuario autenticado deseo cerrar sesión de manera segura para proteger mi cuenta cuando termino de usar el sistema</td>
-        <td>T38</td>
-        <td rowspan="9">Cierre de sesión de usuario en la Aplicación Web</td>
+        <td rowspan="5">US204</td>
+        <td rowspan="5">Como usuario autenticado deseo cerrar sesión de manera segura para proteger mi cuenta cuando termino de usar el sistema</td>
+        <td>T40</td>
+        <td rowspan="5">Cierre de sesión de usuario en la Aplicación Web</td>
         <td>
           Botón de "Sign Out" en la UI del perfil de usuario y cierre de sesión
         </td>
@@ -489,38 +489,86 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>T39</td>
-        <td>
-          Botón de "Sign Out" en la UI del perfil de usuario y cierre de sesión
-        </td>
-        <td>1</td>
-        <td>Gonzalo Quedena</td>
-        <td>Done</td>
-    </tr>
-    <tr>
-        <td>T40</td>
+        <td>T41</td>
         <td>
            Redirección a la UI de SignIn luego de hacer SignOut
         </td>
         <td>1</td>
-        <td>Gonzalo Quedena</td>
-        <td>Done</td>
-    </tr>
-    <tr>
-        <td>T41</td>
-        <td>
-           Mostrar mensaje de confirmación en la UI después de cerrar sesión
-        </td>
-        <td>1</td>
-        <td>Gonzalo Quedena</td>
+        <td>Janover Saldaña</td>
         <td>Done</td>
     </tr>
     <tr>
         <td>T42</td>
         <td>
+           Mostrar mensaje de confirmación en la UI después de cerrar sesión
+        </td>
+        <td>2</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T43</td>
+        <td>
            Eliminar token de autenticación en LocalStorage para que el usuario no acceda después de cerrar sesión
         </td>
-        <td>1</td>
+        <td>3</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td rowspan="6">US206</td>
+        <td rowspan="6">Como usuario deseo modificar mis credenciales básicas de perfil para mantener mi información al día</td>
+        <td>T44</td>
+        <td rowspan="6"></td>
+        <td>
+          Servidor guarda cambios de credenciales modificadas del perfil y UI muestra mensaje de confirmación
+        </td>
+        <td>3</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T45</td>
+        <td>
+           Ver nombre, teléfono, entre otros datos personales desde UI luego de edición
+        </td>
+        <td>2</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T46</td>
+        <td>
+           Botón "Editar" para los campos nombre, teléfono (campos obligatorios) desde la Aplicación Web
+        </td>
+        <td>2</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T47</td>
+        <td>
+            Implementar UI de formulario en Aplicación Web para edición de credenciales (nombre, apellido, correo, contraseña, etc)
+        </td>
+        <td>2</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T48</td>
+        <td>
+            Mostrar mensaje de error cuando los datos editados no cumplan con el formato (teléfono, correo o nombre inválido) en la UI de la Aplicación Web
+        </td>
+        <td>2</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T49</td>
+        <td>
+            Mostrar mensajes de confirmación o error en la UI de Aplicación Web según el resultado de la actualización
+        </td>
+        <td>2</td>
         <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
