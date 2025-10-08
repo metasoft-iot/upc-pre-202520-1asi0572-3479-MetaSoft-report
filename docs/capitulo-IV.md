@@ -678,24 +678,225 @@ El siguiente esquema de base de datos para MySQL soporta la persistencia del agr
 - **Estado como `VARCHAR`**: En lugar de un `ENUM` nativo de MySQL, se usa `VARCHAR` para facilitar la adición de nuevos estados en el futuro sin necesidad de una migración de esquema (`ALTER TABLE`).
 
 ### 4.2.2. Bounded Context: Telemetry Processing
+
+- Adquisición de Datos y Normalización del Flujo (Stream Processing).
+Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimiento (asociación de vehículo), gestión de la sesión de viaje y la publicación de un flujo de datos limpio y canónico (TelemetryNormalizedEvent) para todos los consumidores downstream.
+
 #### 4.2.2.1. Domain Layer
+| Concepto                   | Detalles Robustos de DDD Táctico                                                                                                                                                                                                                                                                  |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Aggregate Root**         | `TelemetryStream (ID: VehicleId)`.<br>El estado agregado no es la telemetría histórica, sino el estado de la sesión activa (ej. `tripActive: boolean`, `lastHeartbeat: timestamp`, `segmentStartLocation`).<br>**Invariante:** un vehículo solo puede tener un `TelemetryStream` activo a la vez. |
+| **Value Objects**          | - `RawPayload (String/Byte Array)`: dato crudo e inmutable.<br>- `ProcessingStatus (Enum: PENDING, NORMALIZED, DROPPED_INVALID)`.<br>- `TripMetrics (distance_km, max_speed)`: VOs de solo lectura generados durante un segmento.                                                                 |
+| **Servicios de Dominio**   | - **DataCoherencyValidator:** algoritmo para detectar glitches de GPS o datos fuera de rango.<br>`isCoherent(current: RawDataPoint, previous: NormalizedDataPoint): boolean`.<br>- **TripSegmentCloser:** lógica para determinar el cierre de un viaje (ej. 10 min de inactividad).               |
+| **Repositorios (Puertos)** | **TelemetryStateRepository:** interfaz para el almacén de estado transitorio (Redis/DynamoDB). Crucial para persistencia de baja latencia entre mensajes.                                                                                                                                         |
+| **Domain Events**          | - `TelemetryNormalizedEvent`: evento canónico con `VehicleId`, `NormalizedDataPoint` y metadatos (sin incluir `RawPayload`).<br>- `TripSegmentClosedEvent`: señal transaccional con métricas finales enviada a Billing/Analytics.                                                                 |
+| **Facade (ACL)**           | **ExternalDeviceContextFacade:** `getVehicleAssignment(deviceId: String): VehicleAssignmentVO`. Retorna un VO ligero con `VehicleId` y `TenantId`. Debe ser tolerante a fallos y rápido.                                                                                                          |
+
 #### 4.2.2.2. Interface Layer
+
+> ### Ingestion Gateway (Listener)
+> **Componente:** `TelemetryStreamListener` (Ej. KafkaConsumer o EventHubsReceiver)  
+>
+> ---
+>
+> **Propósito del BC**  
+> Este es el punto de entrada primario del *Bounded Context (BC)*.  
+> **Responsabilidad clave:** Escuchar continuamente el topic de telemetría cruda, deserializar el mensaje (por ejemplo, de Avro, JSON o Protobuf) y validar el formato sintáctico básico.
+>
+> ---
+>
+> **Acción Central**  
+> El Listener NO realiza lógica de negocio compleja (como validación de rangos o deduplicación).  
+> Su única función es transformar el mensaje de entrada (`RawPayload`) en el Command del BC:  
+> `ProcessTelemetryDataCommand`.
+>
+> ---
+>
+> **Resources (DTOs)**  
+> - `RawDataPointResource`: Representa el payload deserializado del broker de mensajes.  
+>   Incluye metadatos (como offset y partition) esenciales para la semántica "At-Least-Once".  
+> - `NormalizationErrorResource`: DTO específico para serializar errores de formato y enviarlos a la DLQ.
+>
+> ---
+>
+> **Controlador REST**  
+> No aplica. Este BC es event-driven y stream-based.  
+> Si se requiere una consulta síncrona de diagnóstico, podría exponerse:
+>
+> ```
+> GET /api/v1/ingestion/status
+> ```
+> Permite verificar la salud del listener, pero no se utiliza para la ingesta de datos.
+>
+> ---
+>
+> **Manejo de Errores**  
+> Estrategia: Dead Letter Queue (DLQ)  
+> - Los errores manejables (formato JSON inválido, datos ininteligibles) no deben detener el stream.  
+> - Se encapsulan en un `NormalizationErrorResource` y se envían de forma asíncrona a un DLQ Topic dedicado.  
+> - Esto permite su revisión o reprocesamiento manual, garantizando la resiliencia del flujo principal.
+>
+> ---
+>
+> **Protocolo**  
+> Modelo: Asíncrono / Push Model  
+> Basado en message brokers como Kafka, Event Hubs o Kinesis, asegurando:  
+> - Escalabilidad horizontal  
+> - Capacidad de absorber picos de tráfico  
+> - Sin backpressure directo hacia los dispositivos IoT
+
+
 #### 4.2.2.3. Application Layer
+
+| Componente          | Detalles Robustos                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Command Service** | `TelemetryProcessingServiceImpl`:<br>1. Carga/Crea `TelemetryStream` desde `TelemetryStateRepository`.<br>2. Valida (`DataCoherencyValidator`).<br>3. Enriquece (`ExternalDeviceContextService`).<br>4. Aplica mutación (marcar como `DROPPED` si aplica).<br>5. Persiste nuevo estado.<br>6. Publica `TelemetryNormalizedEvent` y `TripSegmentClosedEvent` si aplica. |
+| **Event Handler**   | `ProcessDeviceProvisionedHandler`: escucha `DeviceProvisionedEvent` del BC *Device Management* para preinicializar un estado vacío.                                                                                                                                                                                                                                    |
+| **ACL (Outbound)**  | **ExternalDeviceContextService:** implementa `ExternalDeviceContextFacade`. Usa patrón *Cache-Aside* (Redis) sobre llamada REST síncrona al BC *Device Management*.                                                                                                                                                                                                    |
+
 #### 4.2.2.4. Infrastructure Layer
+
+| Componente                 | Detalles Robustos                                                                                                                                                                                                                          |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Persistencia**           | - `TelemetryStateRepositoryImpl`: usa Redis Cluster o AWS DynamoDB Global Tables para escalabilidad y baja latencia.<br>- `RawDataArchiveRepositoryImpl`: usa S3 o GCS con esquema Parquet/Avro para almacenamiento económico y analítico. |
+| **Integración IoT**        | **KafkaStreamAdapter:** usa Kafka Streams o Spring Cloud Stream para alto rendimiento. Gestiona offsets y semántica *At Least Once* con DLQ.                                                                                               |
+| **Publicación de Eventos** | **KafkaDomainEventPublisherImpl:** serializa eventos (TelemetryNormalizedEvent) en formato Avro con Schema Registry.                                                                                                                       |
+
 #### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+| **Componente**                  | **Capa DDD**         | **Responsabilidad Clave**                                                                                                       | **Dependencias Críticas**                 |
+| ------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| **Telemetry Ingestion Gateway** | Interface (ACL)      | Consume mensajes crudos del broker (Kafka) y los convierte en `ProcessTelemetryDataCommand`. Gestiona la *DLQ*.                 | External Broker (Kafka / Event Hub)       |
+| **Telemetry Stream Processor**  | Application / Domain | Punto de control central. Orquesta la validación, el enriquecimiento, la gestión del estado y la publicación de eventos.        | `TelemetryStateStore`, `DeviceContextACL` |
+| **Data Validator / Enricher**   | Domain               | Implementa la lógica de negocio pura: chequeo de rangos (`DataValidator`) y adición de metadatos (`DataEnricher`).              | N/A (Pura lógica de dominio)              |
+| **Telemetry State Store**       | Infrastructure       | Persiste el estado del `TelemetryStream` (ej. viaje activo) con baja latencia para el procesador.                               | Redis / DynamoDB                          |
+| **Device Context ACL**          | Application (ACL)    | Implementa `ExternalDeviceContextFacade`. Traduce la consulta `DeviceId → VehicleId` y aplica políticas de caché / resiliencia. | External BC (Device Management)           |
+| **Domain Event Publisher**      | Infrastructure       | Garantiza la serialización Avro/JSON y la publicación fiable de eventos canónicos (`TelemetryNormalizedEvent`).                 | Internal Broker (Kafka / Topics)          |
+
+
 #### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+| **Carpeta / Paquete** | **Contenido**                                                                                                     | **Rol**                                                                                   | **Ejemplos de Clases**                                                         |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **domain**            | Modelos y contratos puros. Agregados, VOs, eventos, repositorios (interfaces), servicios de dominio (interfaces). | El corazón del negocio. Sin dependencias de frameworks externos (Spring, JPA).            | `TelemetryStream`, `RawDataPoint`, `TelemetryStateRepository`, `DataValidator` |
+| **application**       | Orquestación del caso de uso. *Command Services*, *Event Handlers*, *ACLs* (implementaciones), *Query Services*.  | Coordinación de flujos. Implementa lógica de persistencia y publicación.                  | `TelemetryProcessingServiceImpl`, `ExternalDeviceContextService (ACL)`         |
+| **interfaces**        | Puntos de entrada/salida. *Listeners*, *Resources (DTOs)*.                                                        | Adaptación de protocolo. Traduce tráfico de red o mensajería a comandos.                  | `TelemetryStreamListener`, `RawDataPointResource`                              |
+| **infrastructure**    | Adaptadores técnicos. Implementaciones de repositorios, conectores a Kafka/DB.                                    | Detalles técnicos y persistencia. Aloja la complejidad del middleware y la base de datos. | `TelemetryStateRepositoryImpl (Redis)`, `KafkaEventPublisherImpl`              |
+
+
 #### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+| **Clase / Interface**           | **Tipo**                        | **Rol**                                                | **Relaciones y Multiplicidad**          |
+| ------------------------------- | ------------------------------- | ------------------------------------------------------ | --------------------------------------- |
+| **TelemetryStream**             | Aggregate Root                  | Estado de la sesión de procesamiento de un vehículo.   | Composition (1) → (1) `VehicleId (VO)`  |
+| **RawDataPoint**                | Entidad / Inmutable             | Dato de entrada antes del procesamiento.               | Uses (1) → (1) `DataSchemaVersion (VO)` |
+| **NormalizedDataPoint**         | Entidad / Inmutable             | Dato canónico, validado y enriquecido.                 | Uses (1) → (1) `VehicleLocation (VO)`   |
+| **TelemetryStateRepository**    | Puerto (Interface)              | Contrato para acceder al estado del `TelemetryStream`. | Persists (1) → (1) `TelemetryStream`    |
+| **DataValidator**               | Servicio de Dominio (Interface) | Regla de coherencia de datos.                          | Uses → `RawDataPoint`                   |
+| **ExternalDeviceContextFacade** | Puerto (Interface)              | Contrato para consultar la identidad del vehículo.     | Returns → `VehicleId (VO)`              |
+| **TelemetryNormalizedEvent**    | Evento de Dominio               | Señal de salida canónica.                              | About → `NormalizedDataPoint`           |
+| **TripSegmentClosedEvent**      | Evento de Dominio               | Señal transaccional de cierre de viaje.                | About → `TelemetryStream`               |
+
+
 ##### 4.2.2.6.2. Bounded Context Database Design Diagram
 
+| Tabla / Almacén          | Tipo                  | Propósito                                                               | Claves y Optimización                                                                               |
+| ------------------------ | --------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `telemetry_stream_state` | Redis Hash / DynamoDB | Estado de Flujo (TelemetryStream). Lectura/Escritura de alta velocidad. | **Partition Key:** `vehicleId`. Atributos: `lastHeartbeatTime`, `currentSegmentId`, `isTripActive`. |
+| `device_vehicle_cache`   | Redis Set / Hash      | Caché del ACL (`ExternalDeviceContextService`).                         | **Key:** `deviceId`. TTL: 1 hora.                                                                   |
+| `trip_segments`          | PostgreSQL / MySQL    | Read Model para viajes finalizados.                                     | **PK:** `segment_id`. Índice: (`vehicle_id`, `end_time`).                                           |
+| `raw_data_archive`       | S3 / GCS (Parquet)    | Archivo inmutable de datos crudos.                                      | Particionado por `tenantId` y `date`.                                                               |
+
+
 ### 4.2.3. Bounded Context: Alerting
+- Motor de Reglas y Gestión de Incidentes Críticos.
+- Responsable de evaluar la criticidad de los datos entrantes (telemetría/insights), aplicar deduplicación y supresión (invariante: prevenir la “Tormenta de Alertas”), y gestionar el ciclo de vida de la alerta hasta su resolución.
+  
 #### 4.2.3.1. Domain Layer
+
+| Concepto                   | Detalles Robustos de DDD Táctico                                                                                                                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Aggregate Root**         | `Alert (ID: AlertId)`.<br>Encapsula contexto, estado transaccional e historial de gestión.<br>**Invariante:** transición de estado debe seguir `CREATED → ACKNOWLEDGED → RESOLVED`. |
+| **Entidades**              | - `AlertRule`: entidad inmutable que representa el criterio que dispara la alerta.<br>- `AlertHistoryEntry`: detalle inmutable de las acciones tomadas.                             |
+| **Value Objects**          | - `SuppressionKey`: VO usado para deduplicar (`vehicleId + ruleId + severity`).<br>- `AlertContext`: JSON inmutable con los datos que violaron la regla.                            |
+| **Servicios de Dominio**   | - **AlertDeduplicator:** `getExistingAlert(incoming: AlertRule): Optional<Alert>`.<br>- **EscalationPolicyMatcher:** determina si notificar al conductor, mecánico o ambos.         |
+| **Repositorios (Puertos)** | - `AlertRepository`: persiste el agregado `Alert`.<br>- `AlertRuleRepository`: acceso a la configuración de reglas.                                                                 |
+| **Domain Events**          | - `MaintenanceAlertCreatedEvent`: indica que una alerta es real, única y accionable.<br>- `AlertEscalatedEvent`: notifica si no se reconoce a tiempo.                               |
+| **Facade (ACL)**           | **ExternalNotificationFacade:** API del BC *Notification Gateway* (`sendMessage(NotificationCommand)`).                                                                             |
+
 #### 4.2.3.2. Interface Layer
+
+| **Componente**                  | **Rol y Detalles Robustos**                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Inbound Alert Listener**      | Entrada **asíncrona** (Kafka/Event Hubs Consumer). Consume `TelemetryNormalizedEvent` y `InsightDetectedEvent`. <br> 🔹 **Responsabilidad Clave:** Deserializar el evento y transformarlo directamente en el input necesario para el `RuleEvaluationHandler` (payload que contiene `VehicleId` y `ContextData`).                                                  |
+| **Alert Management Controller** | Entrada **síncrona** (REST API). Expone endpoints para la gestión externa del ciclo de vida de la alerta por parte de operadores o sistemas downstream. <br> 🔹 **Endpoints Críticos:** <br> `PATCH /api/v1/alerts/{alertId}/status` (para transiciones a `ACKNOWLEDGED` o `RESOLVED`). <br> `GET /api/v1/alerts/active?vehicleId=...` (consultas de Read Model). |
+| **Resources (DTOs)**            | - `AlertContextResource`: transporta datos del evento al `RuleEvaluationHandler`. <br> - `UpdateAlertStatusResource`: entrada PATCH que contiene `newStatus` y `userId`. <br> - `AlertResource`: DTO optimizado para lectura (Query).                                                                                                                             |
+| **Assemblers (Mappers)**        | - `AlertResourceFromEntityAssembler`: mapea el agregado `Alert` y sus VOs a `AlertResource`. <br> - `AlertCommandAssembler`: mapea `UpdateAlertStatusResource` a los comandos de dominio (`AcknowledgeAlertCommand`, `ResolveAlertCommand`).                                                                                                                      |
+| **Contrato y Errores**          | Basado en **Problem Details for HTTP APIs (RFC 7807)**. <br> 🔸 **Códigos de estado:** <br> `409 Conflict` → `InvalidStatusTransitionException` (intentar resolver una alerta ya resuelta). <br> `404 Not Found` → `AlertNotFoundException`. <br> `503 Service Unavailable` → Motor de reglas inoperativo.                                                        |
+
+
 #### 4.2.3.3. Application Layer
+
+| Componente          | Detalles Robustos                                                                                                                                                                                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Command Service** | `AlertCreationServiceImpl`:<br>1. Deduplica (`AlertDeduplicator`).<br>2. Si es nueva, crea `Alert` y persiste transaccionalmente.<br>3. Publica `MaintenanceAlertCreatedEvent`.                                                                            |
+| **Event Handler**   | - `RuleEvaluationHandler`: escucha eventos entrantes, evalúa reglas y despacha `CreateAlertCommand`.<br>- `NotificationTriggerHandler`: escucha `MaintenanceAlertCreatedEvent`, llama a `EscalationPolicyMatcher` y luego a `ExternalNotificationService`. |
+| **ACL (Outbound)**  | **ExternalNotificationService:** implementa `ExternalNotificationFacade`. Traduce modelo `Alert` → `SendMessageCommand`.                                                                                                                                   |
+
 #### 4.2.3.4. Infrastructure Layer
+
+| Componente                 | Detalles Robustos                                                                                                                                         |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Persistencia**           | **AlertRepositoryImpl:** usa PostgreSQL/MySQL con transacciones ACID. Implementa patrón *Outbox* para publicar eventos solo si la transacción es exitosa. |
+| **Motor de Reglas**        | **AlertRuleEngineImpl:** evalúa reglas mediante Drools o MVEL/SpEL, permitiendo actualización dinámica sin despliegue.                                    |
+| **Publicación de Eventos** | **TransactionalEventPublisherImpl:** usa patrón *Outbox* (tabla + polling) para publicación confiable.                                                    |
+
 #### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+| Tabla           | Propósito                                  | Claves y Optimización                                                |
+| --------------- | ------------------------------------------ | -------------------------------------------------------------------- |
+| `alerts`        | Raíz del agregado `Alert`.                 | **PK:** `alert_id (UUID)`. Índice: (`vehicle_id`, `status`).         |
+| `alert_history` | Historial inmutable (`AlertHistoryEntry`). | **PK:** `history_id`. FK estricta a `alerts` (`ON DELETE RESTRICT`). |
+| `alert_rules`   | Configuración de reglas.                   | **PK:** `rule_id`. Columna JSON: `condition_definition`.             |
+| `outbox`        | Patrón *Outbox* para publicación fiable.   | **PK:** `id`, `event_type`, `event_payload (JSON)`, `published_at`.  |
+
+
 #### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+| **Clase/Interface**              | **Tipo**                        | **Rol**                                                                            | **Relaciones y Multiplicidad**                                                    |
+| -------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Alert**                        | Aggregate Root                  | Implementa la Máquina de Estado Finito de la alerta (transición de `AlertStatus`). | `Composition (1) → (0..*) AlertHistoryEntry` <br> `Uses (1) → (1) SuppressionKey` |
+| **AlertHistoryEntry**            | Entidad                         | Registro inmutable de cada cambio o acción.                                        | `Belongs to (FK) → Alert`                                                         |
+| **SuppressionKey**               | Value Object                    | Clave compuesta para deduplicación (`Vehicle ID + Rule ID + Time Window`).         | `Enforced by AlertDeduplicator`                                                   |
+| **AlertDeduplicator**            | Servicio de Dominio (Interface) | Lógica para buscar un duplicado activo o reciente.                                 | `Uses → AlertRepository`                                                          |
+| **EscalationPolicyMatcher**      | Servicio de Dominio (Interface) | Determina el canal y objetivo de notificación.                                     | `Returns → NotificationPolicyVO`                                                  |
+| **AlertRepository**              | Puerto (Interface)              | Contrato para persistencia transaccional del agregado.                             | `Persists → Alert`                                                                |
+| **ExternalNotificationFacade**   | Puerto (Interface)              | Envío de comandos al BC de Notificación.                                           | `Accepts → NotificationCommand (DTO)`                                             |
+| **MaintenanceAlertCreatedEvent** | Evento de Dominio               | Señal accionable (post-deduplicación).                                             | `About → Alert`                                                                   |
+
+
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+| **Clase/Interface**              | **Tipo**                        | **Rol**                                                                            | **Relaciones y Multiplicidad**                                                    |
+| -------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Alert**                        | Aggregate Root                  | Implementa la Máquina de Estado Finito de la alerta (transición de `AlertStatus`). | `Composition (1) → (0..*) AlertHistoryEntry` <br> `Uses (1) → (1) SuppressionKey` |
+| **AlertHistoryEntry**            | Entidad                         | Registro inmutable de cada cambio o acción.                                        | `Belongs to (FK) → Alert`                                                         |
+| **SuppressionKey**               | Value Object                    | Clave compuesta para deduplicación (`Vehicle ID + Rule ID + Time Window`).         | `Enforced by AlertDeduplicator`                                                   |
+| **AlertDeduplicator**            | Servicio de Dominio (Interface) | Lógica para buscar un duplicado activo o reciente.                                 | `Uses → AlertRepository`                                                          |
+| **EscalationPolicyMatcher**      | Servicio de Dominio (Interface) | Determina el canal y objetivo de notificación.                                     | `Returns → NotificationPolicyVO`                                                  |
+| **AlertRepository**              | Puerto (Interface)              | Contrato para persistencia transaccional del agregado.                             | `Persists → Alert`                                                                |
+| **ExternalNotificationFacade**   | Puerto (Interface)              | Envío de comandos al BC de Notificación.                                           | `Accepts → NotificationCommand (DTO)`                                             |
+| **MaintenanceAlertCreatedEvent** | Evento de Dominio               | Señal accionable (post-deduplicación).                                             | `About → Alert`                                                                   |
+
+
 ##### 4.2.3.6.2. Bounded Context Database Design Diagram
+
+| **Tabla**         | **Propósito**                                                      | **Claves y Optimización**                                                                                                                                                            |
+| ----------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **alerts**        | Raíz del Agregado `Alert`. Almacena el estado transaccional.       | `alert_id (UUID, PK)`, `vehicle_id (Índice)`, `status`, `severity`, `suppression_key (Índice)`.<br> 🔹 **Índice compuesto:** `(vehicle_id, status)` para consultas rápidas en el UI. |
+| **alert_history** | Entidad `AlertHistoryEntry`. Mantiene la trazabilidad.             | `history_id (PK)`, `alert_id (FK a alerts)`, `timestamp`, `old_status`, `new_status`, `action_user_id`.<br> 🔸 **Restricción:** FK estricta `ON DELETE RESTRICT`.                    |
+| **alert_rules**   | Configuración de reglas.                                           | `rule_id (PK)`, `name`, `severity`, `is_active`, `condition_definition (JSON/TEXT)` con la lógica del Motor de Reglas (ej. MVEL, SpEL).                                              |
+| **outbox**        | Patrón **Outbox Implementation**. Garantiza fiabilidad de eventos. | `id (PK)`, `aggregate_id (alert_id)`, `type`, `payload_json`, `created_at`, `processed_at`.                                                                                          |
 
 ### 4.2.4. Bounded Context: Analytics and Recommendations
 
