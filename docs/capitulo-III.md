@@ -2089,13 +2089,20 @@
 
 **Segmento CONDUCTORES**
 
+Este diagrama permite visualizar cómo los impactos esperados se materializan en entregables concretos, asegurando que las historias de usuario desarrolladas estén alineadas con las metas de negocio y las necesidades reales de los conductores.
+
+En este caso, el mapa se centra en los conductores particulares como usuarios principales de la aplicación, quienes buscan mantener un control preventivo sobre el estado de su vehículo, reducir gastos imprevistos y recibir alertas oportunas que les permitan actuar con anticipación teniendo como objetivo de negocio principal reducir en un 40 % las fallas vehiculares imprevistas y aumentar en un 35 % la planificación preventiva de mantenimientos durante el primer año, mediante la integración de tecnología IoT, diagnósticos predictivos, historial digital y conexión directa con talleres afiliados.
+
 <div align="center" style="margin-top: 20px;">
   <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-III/assets/img/capitulo-III/Impact%20map%20Conductores.png" 
        alt="Impact map Conductores" width="1000px">
 </div>
-
 		
+
 **Segmento TALLER MECANICO**
+
+Para este caso, el mapa se centra en los talleres afiliados como principales usuarios del sistema, quienes buscan mejorar la organización de sus procesos, disminuir los tiempos de diagnóstico y fortalecer la comunicación directa con los conductores.
+El objetivo de negocio principal consiste en reducir en un 40 % los fallos mecánicos inesperados y aumentar en un 30 % la eficiencia operativa de los talleres afiliados durante el primer año, a través de la implementación de tecnología IoT, diagnósticos predictivos y una conexión digital continua entre conductores y talleres.
 
 <div align="center" style="margin-top: 20px;">
   <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-III/assets/img/capitulo-III/Impact%20map%20Talleres%20mecanico.png" 
