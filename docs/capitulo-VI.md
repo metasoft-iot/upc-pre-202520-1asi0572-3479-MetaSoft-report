@@ -102,10 +102,10 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Status (To-do / In-Process / To-Review / Done)</td>
     </tr>
     <tr>
-        <td>US101</td>
-        <td>Como visitante deseo desplazarme entre las secciones de la landing page para encontrar la información sobre de SafeCar de forma rápida</td>
+        <td rowspan="6">US101</td>
+        <td rowspan="6">Como visitante deseo desplazarme entre las secciones de la landing page para encontrar la información sobre de SafeCar de forma rápida</td>
         <td>T1</td>
-        <td>Navegación mediante el navbar</td>
+        <td rowspan="6">Navegación mediante el navbar de la Landing Page</td>
         <td>
             Implementar navbar opciones de redirección a las secciones (home, features, plans, testimonials y contact) de la Landing Page
         </td>
@@ -114,10 +114,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T2</td>
-        <td>Navegación mediante el navbar</td>
         <td>
             Redirección a sección "Features" desde el navbar de la Landing Page
         </td>
@@ -126,10 +123,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T3</td>
-        <td>Navegación mediante el navbar</td>
         <td>
            Redirección a sección "Hero" al hacer click en opción "home" desde el navbar de la Landing Page
         </td>
@@ -138,10 +132,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T4</td>
-        <td>Navegación mediante el navbar</td>
         <td>
             Redirección a sección "Testimonials" al hacer click en la opción "testimonials"  desde el navbar de la Landing Page
         </td>
@@ -150,10 +141,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T5</td>
-        <td>Navegación mediante el navbar</td>
         <td>
             Redirección a sección "Contact" al hacer click en la opción "contact" desde el navbar de la Landing Page
         </td>
@@ -162,10 +150,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T6</td>
-        <td>Navegación mediante el navbar</td>
         <td>
             Redirección a sección "Plans" al hacer click en la opción "plans" desde el navbar de la Landing Page
         </td>
@@ -174,10 +159,10 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>US102</td>
-        <td>Como visitante deseo un acceso visible hacia la aplicación para continuar con el uso del servicio cuando lo decida</td>
+        <td rowspan="2">US102</td>
+        <td rowspan="2">Como visitante deseo un acceso visible hacia la aplicación para continuar con el uso del servicio cuando lo decida</td>
         <td>T7</td>
-        <td>Implementación del botón call-to-action</td>
+        <td rowspan="2">Implementación del botón call-to-action de la Landing Page</td>
         <td>
             Implementar UI del botón call-to-action en sección Hero de Landing Page
         </td>
@@ -186,10 +171,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T8</td>
-        <td>Implementación del botón call-to-action</td>
         <td>
             Implementación de la redirección del botón call-to-action en la Landing Page
         </td>
@@ -198,10 +180,10 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>US103</td>
-        <td>Como visitante deseo cambiar el idioma de la página para leer la información en el idioma que prefiera</td>
+        <td rowspan="5">US103</td>
+        <td rowspan="5">Como visitante deseo cambiar el idioma de la página para leer la información en el idioma que prefiera</td>
         <td>T9</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
+        <td rowspan="5">Soporte de internacionalización de la Landing Page</td>
         <td>
             Configurar archivo de internacionalización (i18n) para la Landing Page con texto en idioma Español
         </td>
@@ -210,10 +192,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T10</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
             Configurar archivo de internacionalización (i18n) para la Landing Page con texto en idioma Inglés
         </td>
@@ -222,10 +201,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T11</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
             Guardar la preferencia de idioma (en localStorage o cookies) para mantener persistencia en la Landing Page
         </td>
@@ -234,10 +210,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T12</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
             Implementar selector de idioma para posterior (i18n)
         </td>
@@ -246,10 +219,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T13</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
            Implementación de internacionalización (i18n)
         </td>
@@ -258,10 +228,10 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td>US104</td>
-        <td>Como visitante deseo ver claramente los planes y precios de SafeCar para evaluar cuál se ajusta mejor a mis necesidades</td>
+        <td rowspan="7">US104</td>
+        <td rowspan="7">Como visitante deseo ver claramente los planes y precios de SafeCar para evaluar cuál se ajusta mejor a mis necesidades</td>
         <td>T14</td>
-        <td>Accesibilidad a Planes</td>
+        <td rowspan="7">Accesibilidad a Planes de la Landing Page</td>
         <td>
             Implementar UI de sección de Planes con plan Estandar en Landing Page
         </td>
@@ -270,10 +240,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T15</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
            Implementar UI de sección de Planes con plan Premium en Landing Page
         </td>
@@ -282,10 +249,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T16</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
           Implementar UI de sección de Planes con plan Básico en Landing Page
         </td>
@@ -294,10 +258,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T17</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
            Implementar accesibilidad de secciones de la Landing Page mediante etiquetas alternativas.
         </td>
@@ -306,10 +267,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T18</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
            Implementar accesibilidad de secciones de la Landing Page mediante lectura por lectores de pantalla
         </td>
@@ -318,12 +276,18 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
         <td>T19</td>
-        <td>Soporte de internacionalización de la Landing Page</td>
         <td>
             Redireccionar al proceso de compra luego de click en "Select" de algún plan mostrado en sección "Plans" del la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T20</td>
+        <td>
+            Botones por plan "Select"en la UI de la Landing page
         </td>
         <td>1</td>
         <td>Gonzalo Quedena</td>
