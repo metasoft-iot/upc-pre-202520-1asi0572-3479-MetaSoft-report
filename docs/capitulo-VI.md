@@ -245,6 +245,90 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T13</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+           Implementación de internacionalización (i18n)
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>US104</td>
+        <td>Como visitante deseo ver claramente los planes y precios de SafeCar para evaluar cuál se ajusta mejor a mis necesidades</td>
+        <td>T14</td>
+        <td>Accesibilidad a Planes</td>
+        <td>
+            Implementar UI de sección de Planes con plan Estandar en Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T15</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+           Implementar UI de sección de Planes con plan Premium en Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T16</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+          Implementar UI de sección de Planes con plan Básico en Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T17</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+           Implementar accesibilidad de secciones de la Landing Page mediante etiquetas alternativas.
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T18</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+           Implementar accesibilidad de secciones de la Landing Page mediante lectura por lectores de pantalla
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T19</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+            Redireccionar al proceso de compra luego de click en "Select" de algún plan mostrado en sección "Plans" del la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
 </table>
 
 #### 6.2.1.4. Development Evidence for Sprint Review
