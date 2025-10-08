@@ -2,13 +2,253 @@
 
 ## 6.1. Software Configuration Management
 
+<p align="justify">
+En esta sección el equipo MetaSoft establece las decisiones y convenciones fundamentales que permitirán mantener la consistencia durante todo el ciclo de vida del proyecto SafeCar. Se definen los estándares para la gestión del código fuente, configuración del entorno de desarrollo y despliegue de la solución, asegurando que todos los miembros del equipo trabajen bajo las mismas especificaciones y buenas prácticas de la industria.
+</p>
+
 ### 6.1.1. Software Development Environment Configuration
+
+<p align="justify">
+En esta sección el equipo especifica, describe e indica los nombres de productos, el propósito de uso en el proyecto, la ruta de referencia (para software basado en modelos SaaS) o ruta de descarga (para productos que se ejecutan en el computador del miembro del equipo) de cada uno de los productos de software que deben utilizar los miembros del equipo para colaborar en el ciclo de vida de los productos digitales que forman la solución SafeCar. Se consideran todas las actividades de Project Management, Requirements Management, Product UX/UI Design, Software Development, Software Deployment y Software Documentation.
+</p>
+
+A continuación se detalla el **entorno de desarrollo** para SafeCar, indicando producto, propósito y ruta de acceso (SaaS o descarga). Todo el equipo debe instalar/usar estas herramientas para garantizar consistencia.
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Categoría</th>
+      <th>Producto</th>
+      <th>Propósito en el proyecto</th>
+      <th>Tipo</th>
+      <th>Ruta de referencia / Descarga</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Project Management</td>
+      <td>Trello</td>
+      <td>Gestión de backlog, Sprints, board Kanban, Definition of Done</td>
+      <td>SaaS</td>
+      <td><a href="https://trello.com/" target="_blank" rel="noopener noreferrer">https://trello.com/</a></td>
+    </tr>
+    <tr>
+      <td>Requirements</td>
+      <td>Google Docs / Sheets</td>
+      <td>Redacción de requisitos, matrices, trazabilidad</td>
+      <td>SaaS</td>
+      <td><a href="https://docs.google.com/" target="_blank" rel="noopener noreferrer">https://docs.google.com/</a></td>
+    </tr>
+    <tr>
+      <td>UX/UI Design</td>
+      <td>Figma</td>
+      <td>Wireframes, mockups, prototipos, handoff</td>
+      <td>SaaS</td>
+      <td><a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">https://www.figma.com/</a></td>
+    </tr>
+    <tr>
+      <td>Repos &amp; CI</td>
+      <td>GitHub</td>
+      <td>Repositorios, PRs, Issues</td>
+      <td>SaaS</td>
+      <td><a href="https://github.com/" target="_blank" rel="noopener noreferrer">https://github.com/</a></td>
+    </tr>
+    <tr>
+      <td>Editor</td>
+      <td>Visual Studio Code</td>
+      <td>Editor principal (HTML, JS, Tailwind, Vue)</td>
+      <td>Desktop</td>
+      <td><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com/</a></td>
+    </tr>
+    <tr>
+      <td>API Testing</td>
+      <td>Postman</td>
+      <td>Colecciones para pruebas de endpoints</td>
+      <td>Desktop/SaaS</td>
+      <td><a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">https://www.postman.com/</a></td>
+    </tr>
+    <tr>
+      <td>Frontend Tooling</td>
+      <td>Node.js (LTS) &amp; npm</td>
+      <td>Construcción, scripts, Vue CLI, Vite</td>
+      <td>Desktop</td>
+      <td><a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">https://nodejs.org/</a></td>
+    </tr>
+    <tr>
+      <td>CSS Framework</td>
+      <td>Tailwind CSS</td>
+      <td>Estilos utility-first de la Landing Page y WebApp</td>
+      <td>NPM</td>
+      <td><a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">https://tailwindcss.com/</a></td>
+    </tr>
+    <tr>
+      <td>Navegadores</td>
+      <td>Chrome / Edge</td>
+      <td>Pruebas y DevTools</td>
+      <td>Desktop</td>
+      <td><a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">https://www.google.com/chrome/</a></td>
+    </tr>
+    <tr>
+      <td>Software Documentation</td>
+      <td>Markdown</td>
+      <td>Documentación técnica, README, guías de contribución</td>
+      <td>Texto plano</td>
+      <td><a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener noreferrer">https://daringfireball.net/projects/markdown/</a></td>
+    </tr>
+    <tr>
+      <td>Comunicación</td>
+      <td>Google Meet</td>
+      <td>Reuniones de sincronización</td>
+      <td>SaaS</td>
+      <td><a href="https://meet.google.com/" target="_blank" rel="noopener noreferrer">https://meet.google.com/</a></td>
+    </tr>
+  </tbody>
+</table>
+
+**Extensiones VS Code recomendadas**: ESLint, Prettier, Tailwind CSS IntelliSense, Vue Language Features (Volar), GitHub Pull Requests & Issues.
 
 ### 6.1.2. Source Code Management
 
-### 6.1.3. Source Code Style Guide & Conventions
+<p align="justify">
+En esta sección el equipo establece los medios y esquema de organización que aplicará para el seguimiento de modificaciones utilizando GitHub como plataforma y sistema de control de versiones. Se incluyen los URLs de los repositorios para cada producto: Landing Page, Web Services y Frontend Web Applications. Cada repositorio contiene el código fuente del proyecto y la documentación técnica correspondiente.
+</p>
+
+Los repositorios de código fuente del proyecto SafeCar se encuentran organizados en la organización GitHub **MetaSoft‑IoT**:
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Tecnologías</th>
+      <th>Repositorio GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Landing Page</td>
+      <td>HTML + Tailwind CSS</td>
+      <td><a href="https://github.com/MetaSoft-IOT/safecar-landing-page" target="_blank" rel="noopener noreferrer">upc-pre-202520-1asi0572-3479-MetaSoft-Landing</a></td>
+    </tr>
+    <tr>
+      <td>Backend</td>
+      <td>Spring Boot + Java</td>
+      <td><a href="https://github.com/MetaSoft-IOT/safecar-backend" target="_blank" rel="noopener noreferrer">upc-pre-202520-1asi0572-3479-MetaSoft-Backend</a></td>
+    </tr>
+    <tr>
+      <td>Web Application</td>
+      <td>Vue.js + JavaScript</td>
+      <td><a href="https://github.com/MetaSoft-IOT/upc-1asi0572-2520-3479-iot-safecar-web-application-frontend" target="_blank" rel="noopener noreferrer">upc-pre-202520-1asi0572-3479-MetaSoft-WebApp</a></td>
+    </tr>
+  </tbody>
+</table>
+
+> **Nota (Sprint 1):** Durante el **primer sprint** todo el trabajo se realizó **directamente en `main`** (hotfixes incluidos), con revisiones por PR y QA manual, a fin de acelerar el baseline (landing + skeleton web). A partir del **Sprint 2** se activará **GitFlow completo** para aislar desarrollo y lanzamientos.
+
+**Implementación de GitFlow Workflow**
+
+El equipo implementa GitFlow como workflow de control de versiones siguiendo el modelo de Vincent Driessen:
+
+- **Ramas principales**: 
+  - `main` (producción): Contiene el código estable y listo para producción
+  - `develop` (integración): Rama de desarrollo donde se integran todas las features
+
+- **Ramas de soporte**: 
+  - `feature/<scope-resumen>`: Para desarrollo de nuevas funcionalidades
+  - `release/<version>`: Para preparación de nuevas versiones
+  - `hotfix/<ticket|short>`: Para correcciones urgentes en producción
+
+- **Convenciones de nombres**:
+  - Features: `feature/i18n-toggle`, `feature/navbar-accessibility`, `feature/user-authentication`
+  - Releases: `release/1.1.0`, `release/2.0.0`
+  - Hotfixes: `hotfix/fix-lang-selector-null`, `hotfix/security-patch`
+
+**Reglas de PR**
+- Base: `develop` (o `main` solo para `hotfix/*`).
+- Requisitos: build OK, lint OK, ≥1 reviewer, squash & merge.
+- Commits: seguir **Conventional Commits**.
+
+**Versionado semántico (SemVer)**
+- Formato: `MAJOR.MINOR.PATCH` (ej.: `v1.0.0`).
+- Tag en Git: cada release estable en `main` debe etiquetarse (`v1.0.0`).
+
+**Conventional Commits (ejemplos)**
+```
+feat(i18n): add language toggle button in header
+fix(nav): prevent anchor jump on mobile menu toggle
+docs(readme): add deployment steps for GitHub Pages
+refactor(ui): extract card component for pricing plans
+chore(ci): add actions/setup-node to build workflow
+```
+
+### 6.1.3. Source Code Style Guide & Coding Conventions
+
+<p align="justify">
+En esta sección el equipo explica e indica las referencias que adoptará para nombrar elementos y programar en los lenguajes utilizados en la solución SafeCar (HTML, CSS, JavaScript, TypeScript, Java, así como Gherkin para los archivos .feature). Para todos los lenguajes se aplica la nomenclatura en inglés, adoptando convenciones estándares para coding que garanticen la legibilidad, mantenibilidad y consistencia del código a lo largo del proyecto.
+</p>
+
+**Idioma**: todo el **código, nombres y comentarios** en **inglés**.
+
+**HTML**
+- Semántico (`<header>`, `<nav>`, `<section>`, `<footer>`), indentación 2 espacios.
+- Atributos de accesibilidad: `alt`, `aria-*`, `role` cuando aplique.
+- Clases en **kebab-case**.
+
+**CSS – TailwindCSS**
+- Enfoque **utility‑first**; evitar CSS custom excepto tokens globales.
+- Orden sugerido en atributos de clase: display/layout → spacing → sizing → typography → color → effects → responsive.
+- Reutilización vía **component classes** o `@apply` solo si es necesario.
+
+**JavaScript (ES6+)**
+- `const`/`let`, arrow functions, template literals; evitar variables globales.
+- **Naming**: camelCase para funciones/variables; PascalCase para constructores.
+- Guía: [Google JavaScript Style Guide].
+
+**JavaScript / Vue**
+- Guía: [Vue 3 Style Guide]. Nombres de archivos en kebab-case: `user-profile.vue`.
+- Componentes en PascalCase; Options API utilizada; validación de props con PropTypes cuando sea necesario.
+
+**Java / Spring Boot**
+- Guía: [Google Java Style Guide]. Paquetes en `lowercase`, clases en PascalCase.
+- Capas: `api` (controllers), `application`, `domain`, `infrastructure` (Clean Architecture/DDD alineado a bounded contexts).
+
+**Gherkin (.feature)**
+- Estructura: `Feature`, `Scenario`, `Given/When/Then`; pasos en inglés, claros y testables.
+
+**Lint & Format**
+- **ESLint + Prettier** para JS; hooks con **Husky** (pre-commit: `lint --fix` y `format`).
+
+_Referencias:_ HTML Style Guide and Coding Conventions; Google HTML/CSS Style Guide; Vue 3 Style Guide; Google Java Style Guide; Google JavaScript Style Guide; Spring Boot Features; Gherkin Conventions for Readable Specifications.
 
 ### 6.1.4. Software Deployment Configuration
+
+<p align="justify">
+En esta sección el equipo especifica la configuración del despliegue de la solución SafeCar, incluyendo los pasos necesarios para que, a partir de los repositorios de código fuente, se pueda lograr el despliegue o publicación satisfactorio de cada uno de los productos digitales en la solución (Landing Page, Web Services, Web Applications). La estrategia de despliegue garantiza la disponibilidad, escalabilidad y mantenibilidad de todos los componentes del sistema.
+</p>
+
+**Landing Page (GitHub Pages)**
+1) `main` actualizado con `/dist` (según build local) o con fuentes estáticas.
+2) En **Settings → Pages**: Source = `Deploy from a branch` utilizando rama `main`.
+3) **Despliegue**: archivos estáticos se publican automáticamente desde la rama principal.
+4) Verificación: URL pública activa + chequeo de recursos (`/assets/*`).
+
+**Web Application Vue (configuración para despliegue futuro)**
+- **Estrategia**: contenedores Docker con despliegue manual gestionado.
+- **Build**: `npm run build` (Vite) → `docker build -t safecar-web:$(git rev-parse --short HEAD) .`
+- **Env (placeholders)**: `VITE_API_BASE_URL`, `VITE_AUTH_ISSUER`, `VITE_SENTRY_DSN`.
+- **Staging**: deploy automático al hacer merge a `develop`.
+- **Producción**: release desde `release/*` → tag SemVer → deploy a `main`.
+
+**Web Services (Spring Boot)**
+- **Estrategia**: contenedores Docker + deployment en cloud provider.
+- **Build**: `mvn clean package` → `docker build -t safecar-api:$(git rev-parse --short HEAD) .`
+- **Env**: `SPRING_PROFILES_ACTIVE`, `DATABASE_URL`, `JWT_SECRET`.
+
+**Checklist de despliegue (general)**
+- [ ] Variables de entorno definidas y almacenadas como **GitHub Secrets**.
+- [ ] Pipeline con jobs: `build` → `security-scan` → `deploy`.
+- [ ] Verificación tras el deploy (status 200, assets, i18n, navegación básica).
+
+> **Nota**: La Landing Page utiliza **TailwindCSS** y está **desplegada en GitHub Pages**. La aplicación web Vue utiliza **Vite** como build tool y **Options API** para la estructura de componentes. Los Web Services Spring Boot siguen arquitectura de capas con controladores REST. La configuración completa se implementará según los entornos definidos.
 
 ## 6.2. Landing Page, Services & Applications Implementation
 
