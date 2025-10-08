@@ -7,6 +7,7 @@
 ## 6.2. Landing Page, Services & Applications Implementation
 
 ### 6.2.1. Sprint 1
+#### 6.2.1.1. Sprint Planning 1
 
 <p align="justify">
 El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciendo las bases fundamentales y los flujos de trabajo del equipo. Durante este primer ciclo se valida la arquitectura propuesta y se implementan las funcionalidades core que servirán como cimiento para las iteraciones posteriores del desarrollo.
@@ -73,7 +74,6 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
     </tr>
 </table>
 
-#### 6.2.1.1. Sprint Planning 1
 #### 6.2.1.2. Aspect Leaders and Collaborators
 #### 6.2.1.3. Sprint Backlog 1
 #### 6.2.1.4. Development Evidence for Sprint Review
