@@ -335,6 +335,63 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
+    <tr>
+        <td rowspan="6">US201</td>
+        <td rowspan="6">Como usuario registrado deseo iniciar sesión con mis credenciales para acceder a mis datos y funcionalidades</td>
+        <td>T25</td>
+        <td rowspan="6">Registro de usuario en la Aplicación Web</td>
+        <td>
+           UI para el SignIn del usuario con los campos (email + password)
+        </td>
+        <td>2</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T26</td>
+        <td>
+           Mostrar mensaje de éxito (Datos correctamente ingresados) en UI de SignIn de la Aplicación Web
+        </td>
+        <td>2</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T27</td>
+        <td>
+           Redireccionar UI "Home" de la Aplicación Web luego del SignIn del usuario
+        </td>
+        <td>1</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T28</td>
+        <td>
+           Mostrar mensaje de error (Contraseña inválida del usuario existente) en UI de SignIn de la Aplicación Web
+        </td>
+        <td>2</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T29</td>
+        <td>
+           Servidor valida credenciales de email y contraseña para SignIn
+        </td>
+        <td>2</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T30</td>
+        <td>
+           Mostrar mensaje de error (Usuario no registrado con ese correo) en UI de SignIn
+        </td>
+        <td>2</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
 </table>
 
 #### 6.2.1.4. Development Evidence for Sprint Review
