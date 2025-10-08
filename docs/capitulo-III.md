@@ -577,7 +577,7 @@
 		</tr>
 		<!--USER STORY 24-->
 		<tr>
-			<td>US406</td>
+			<td>US401</td>
 			<td>Consulta de historial de mantenimientos</td>
 			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> ver el historial de mantenimientos en la aplicación <b>para</b> analizar la frecuencia y costos de mis reparaciones.
@@ -596,7 +596,7 @@
 		</tr>
 		<!--USER STORY 25-->
 		<tr>
-			<td>US407</td>
+			<td>US402</td>
 			<td>Recordatorios de mantenimiento</td>
 			<td align="justify">
 				<b>Como</b> conductor, <b>deseo</b> recibir recordatorios de próximos mantenimientos <b>para</b> no olvidar servicios importantes de mi vehículo.
@@ -2177,14 +2177,14 @@
 		<!-- PRIORIDAD ALTA: Gestión de Mantenimientos -->
 		<tr>
 			<td>11</td>
-			<td>US406</td>
+			<td>US401</td>
 			<td>Consulta de historial de mantenimientos</td>
 			<td>Como conductor deseo ver el historial de mantenimientos en la aplicación para analizar la frecuencia y costos de mis reparaciones.</td>
 			<td>2</td>
 		</tr>
 		<tr>
 			<td>12</td>
-			<td>US407</td>
+			<td>US402</td>
 			<td>Recordatorios de mantenimiento</td>
 			<td>Como conductor deseo recibir recordatorios de próximos mantenimientos para no olvidar servicios importantes de mi vehículo.</td>
 			<td>3</td>
