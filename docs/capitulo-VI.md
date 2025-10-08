@@ -477,10 +477,10 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Done</td>
     </tr>
     <tr>
-        <td rowspan="5">US204</td>
-        <td rowspan="5">Como usuario autenticado deseo cerrar sesión de manera segura para proteger mi cuenta cuando termino de usar el sistema</td>
+        <td rowspan="4">US204</td>
+        <td rowspan="4">Como usuario autenticado deseo cerrar sesión de manera segura para proteger mi cuenta cuando termino de usar el sistema</td>
         <td>T40</td>
-        <td rowspan="5">Cierre de sesión de usuario en la Aplicación Web</td>
+        <td rowspan="4">Cierre de sesión de usuario en la Aplicación Web</td>
         <td>
           Botón de "Sign Out" en la UI del perfil de usuario y cierre de sesión
         </td>
