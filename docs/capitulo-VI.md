@@ -84,24 +84,12 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
 
 <table width="100%">
     <tr>
-        <th colspan="1">Sprint #</th>
-        <th colspan="7">Sprint 1</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    <tr>
+        <th colspan="2">Sprint #</th>
+        <th colspan="6">Sprint 1</th>
+    </tr>
     <tr>
         <td colspan="2">User Story</td>
         <td colspan="6">Work-Item / Task</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
         <td>Id</td>
@@ -112,7 +100,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Estimation (Hours)</td>
         <td>Assigned To</td>
         <td>Status (To-do / In-Process / To-Review / Done)</td>
-    <tr>
+    </tr>
     <tr>
         <td>US101</td>
         <td>Como visitante deseo desplazarme entre las secciones de la landing page para encontrar la información sobre de SafeCar de forma rápida</td>
@@ -124,7 +112,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>1</td>
         <td>Gonzalo Quedena</td>
         <td>Done</td>
-    <tr>
+    </tr>
     <tr>
         <td></td>
         <td></td>
@@ -136,7 +124,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>1</td>
         <td>Gonzalo Quedena</td>
         <td>Done</td>
-    <tr>
+    </tr>
     <tr>
         <td></td>
         <td></td>
@@ -148,7 +136,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>1</td>
         <td>Gonzalo Quedena</td>
         <td>Done</td>
-    <tr>
+    </tr>
     <tr>
         <td></td>
         <td></td>
@@ -160,7 +148,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>1</td>
         <td>Gonzalo Quedena</td>
         <td>Done</td>
-    <tr>
+    </tr>
     <tr>
         <td></td>
         <td></td>
@@ -172,7 +160,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>1</td>
         <td>Gonzalo Quedena</td>
         <td>Done</td>
-    <tr>
+    </tr>
     <tr>
         <td></td>
         <td></td>
@@ -184,7 +172,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>1</td>
         <td>Gonzalo Quedena</td>
         <td>Done</td>
-    <tr>
+    </tr>
 </table>
 
 #### 6.2.1.4. Development Evidence for Sprint Review
