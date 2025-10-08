@@ -929,3 +929,13 @@ Durante el Sprint 1, el equipo realizó avances significativos en la implementac
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 #### 6.2.1.8. Software Deployment Evidence for Sprint Review
 #### 6.2.1.9. Team Collaboration Insights during Sprint
+
+<p align="justify">
+Durante el Sprint 1, el equipo MetaSoft demostró una colaboración efectiva en el desarrollo de los productos de SafeCar, evidenciada a través de los analíticos de GitHub que reflejan la participación activa de todos los miembros en la implementación de la Landing Page y la aplicación web. Los datos de colaboración muestran una distribución equilibrada del trabajo, con cada miembro contribuyendo según su rol asignado en la matriz LACX y cumpliendo con las tareas específicas del Sprint Backlog.
+</p>
+
+##### Analíticos de Colaboración en GitHub
+
+<p align="justify">
+Los siguientes analíticos proporcionan una visión detallada de la actividad de colaboración del equipo durante el Sprint 1, incluyendo la frecuencia de commits, la distribución de contribuciones por miembro y los patrones de trabajo colaborativo en los repositorios del proyecto.
+</p>
