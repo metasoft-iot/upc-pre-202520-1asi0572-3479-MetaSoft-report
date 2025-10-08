@@ -293,6 +293,27 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
+    <tr>
+        <td rowspan="2">US109</td>
+        <td rowspan="2">Como visitante deseo acceder a las redes sociales oficiales desde el pie de página para seguir las novedades de SafeCar</td>
+        <td>T21</td>
+        <td rowspan="2">Accesibilidad redes sociales de SafeCar desde Landing Page</td>
+        <td>
+            Implementar redirección a las redes oficiales de SafeCar (Facebook, Instagram,  X)
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T22</td>
+        <td>
+            Implementar redirección de redes sociales en una nueva pestaña
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
 </table>
 
 #### 6.2.1.4. Development Evidence for Sprint Review
