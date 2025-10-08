@@ -222,10 +222,12 @@ Para el sistema de navegación hemos preferido mantener una navegación jerárqu
 </ul>
 
 ## 5.3. Landing Page UI Design
-  - 5.3.1. Landing Page Wireframe
-  - 5.3.2. Landing Page Mock-up
+### 5.3.1. Landing Page Wireframe
+### 5.3.2. Landing Page Mock-up
+
 ## 5.4. Applications UX/UI Design
-  - 5.4.1. Applications Wireframes
+
+### 5.4.1. Applications Wireframes
 - Estos wireframes presentan la estructura y el flujo de la plataforma de MetaSoft, que busca transformar datos en conocimiento estratégico a través de soluciones web e IoT. Las pantallas están diseñadas para guiar a los usuarios a través de un proceso claro y eficiente, desde el inicio de sesión hasta la gestión detallada de información, cumpliendo con la visión de la startup de generar un impacto positivo y ser un líder en soluciones digitales.
 
 ##### Login
@@ -319,11 +321,11 @@ Para el sistema de navegación hemos preferido mantener una navegación jerárqu
 
 - Este wireframe de Reporte muestra una vista de detalle muy extensa y vertical. La información está segmentada en numerosos bloques y secciones que contienen texto, campos, y grandes espacios reservados para imágenes o gráficos (indicados con las "X"). Esta vista permite un análisis exhaustivo y minucioso de un reporte individual.
 
-  - 5.4.2. Applications Wireflow Diagrams
-  - 5.4.3. Applications Mock-ups
-  - 5.4.4. Applications User Flow Diagrams
+### 5.4.2. Applications Wireflow Diagrams
+### 5.4.3. Applications Mock-ups
+### 5.4.4. Applications User Flow Diagrams
   
-- **5.5. Applications Prototyping**
+## **5.5. Applications Prototyping**
 
 
 
