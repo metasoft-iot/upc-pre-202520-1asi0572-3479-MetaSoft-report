@@ -1965,10 +1965,156 @@ Relaciones:
 
 ### 4.2.8. Bounded Context: Security and Compliance
 #### 4.2.8.1. Domain Layer
+
+**Propósito del BC**
+Gestionar la **identidad, autenticación, autorización y auditoría** de todos los actores del sistema. Asegura que solo usuarios autorizados puedan acceder a los recursos y realizar acciones permitidas, registrando eventos de seguridad para cumplimiento y análisis.
+
+**A) Agregados y Entidades**
+
+- **Aggregate Root: `User`**
+  `userId`, `username`, `email: EmailAddress`, `hashedPassword: HashedPassword`, `roles: Set<RoleId>`, `status: UserStatus (ACTIVE|LOCKED|SUSPENDED)`, `failedLoginAttempts`, `lastLoginAt?`.
+  **Reglas:** el `username` y `email` deben ser únicos. La cuenta se bloquea (`LOCKED`) tras N intentos fallidos.
+
+- **Aggregate Root: `Role`**
+  `roleId`, `name`, `permissions: Set<Permission>`.
+  **Reglas:** el `name` del rol es único (ej. `ADMIN`, `DRIVER`, `WORKSHOP_OWNER`).
+
+- **Entidad (o Value Object): `Permission`**
+  `permissionCode` (ej. `invoices:read`, `work-orders:create`).
+
+- **Aggregate Root: `AuditLog`**
+  `logId`, `actorId`, `action`, `timestamp`, `ipAddress: IpAddress`, `details: Map<String, String>`, `status: (SUCCESS|FAILURE)`.
+
+**B) Value Objects**
+`HashedPassword`, `EmailAddress`, `IpAddress`, `JwtToken`.
+
+**C) Servicios de Dominio**
+- `AuthenticationService` → `authenticate(username, password): User`
+- `AuthorizationService` → `canPerform(userId, permissionCode): boolean`
+- `PasswordPolicyService` → `hash(plainPassword): HashedPassword`, `matches(plainPassword, hashedPassword): boolean`
+- `TokenGenerationService` → `generateFor(user): JwtToken`
+
+**D) Repositorios (puertos)**
+`UserRepository`, `RoleRepository`, `AuditLogRepository`.
+
+**E) Commands & Queries**
+**Commands:** `RegisterUser`, `AuthenticateUser`, `LockUserAccount`, `AssignRoleToUser`, `LogAuditEvent`, `ResetPassword`.
+**Queries:** `GetUserByUsername`, `ListRolesForUser`, `GetAuditLogs`.
+
+**F) Domain Events**
+`UserRegistered`, `UserAuthenticated`, `AuthenticationFailed`, `UserLockedOut`, `RoleAssignedToUser`, `PasswordResetRequested`.
+
+**G) Facades**
+Este BC es fundamental y no expone fachadas complejas. En cambio, otros BCs reaccionan a sus eventos (ej. `UserRegistered`).
+
+**H) Excepciones**
+`AuthenticationException`, `UserNotFoundException`, `PermissionDeniedException`, `AccountLockedException`, `WeakPasswordException`, `UsernameAlreadyExistsException`.
+
+
 #### 4.2.8.2. Interface Layer
+
+**A) REST Controllers**
+
+1) **`AuthController`**
+- `POST /api/v1/security/auth/token` → `AuthenticateUser` (retorna JWT).
+- `POST /api/v1/security/auth/logout` → (Opcional) Invalida token si se usa una *blacklist*.
+
+2) **`UsersController`**
+- `POST /api/v1/security/users/register` → `RegisterUser`.
+- `POST /api/v1/security/users/{id}/lock` → `LockUserAccount`.
+- `POST /api/v1/security/users/request-password-reset` → `ResetPassword`.
+
+3) **`RolesController`**
+- `POST /api/v1/security/users/{userId}/roles` → `AssignRoleToUser`.
+
+**B) DTOs**
+`AuthRequest(username, password)`,
+`AuthResponse(accessToken, refreshToken, expiresIn)`,
+`RegisterUserResource(username, email, password)`,
+`AssignRoleResource(roleName)`.
+
+**C) Assemblers**
+`UserResourceAssembler`, `TokenResourceAssembler`.
+
+**D) Errores (contrato)**
+`400` Bad Request, `401` Unauthorized, `403` Forbidden, `404` Not Found, `409` Conflict (usuario ya existe).
+
+
 #### 4.2.8.3. Application Layer
+
+**Command Services**
+- `AuthenticationCommandService` → orquesta la autenticación, el conteo de intentos fallidos y la generación de tokens (`TokenGenerationService`).
+- `UserManagementCommandService` → maneja el registro, bloqueo y reseteo de contraseñas.
+- `AuditCommandService` → se encarga de persistir los logs de auditoría.
+
+**Query Services**
+`UserQueryService`, `AuditQueryService`.
+
+**Event Handlers**
+- `OnAuthenticationFailed` → incrementa `failedLoginAttempts` y bloquea la cuenta si se alcanza el umbral. Dispara `LogAuditEvent`.
+- `OnUserAuthenticated` → resetea `failedLoginAttempts`, actualiza `lastLoginAt`. Dispara `LogAuditEvent`.
+- `OnDriverCreated` / `OnWorkshopCreated` (eventos de otros BCs) → invoca el comando `RegisterUser` para crear la identidad correspondiente.
+
+**ACL / Outbound**
+- `TokenService` (impl. de `TokenGenerationService` usando JWT).
+- `NotificationService` (puerto) para enviar correos de bienvenida o de reseteo de contraseña.
+
+
 #### 4.2.8.4. Infrastructure Layer
+
+**Persistencia (JPA/MySQL)**
+- `users(id, username, email, hashed_password, status, failed_login_attempts, last_login_at)`
+- `roles(id, name)`
+- `permissions(id, permission_code)`
+- `user_roles(user_id FK, role_id FK)`
+- `role_permissions(role_id FK, permission_id FK)`
+- `audit_logs(id, actor_id, action, ip_address, details_json, status, created_at)`
+Repositorios con Spring Data JPA. Índices únicos en `users.username` y `users.email`.
+
+**Integraciones**
+- Librería de JWT (ej. `io.jsonwebtoken.jjwt`).
+- Librería de hashing de contraseñas (ej. `Spring Security BCryptPasswordEncoder`).
+- Cliente SMTP para `NotificationService`.
+- Secret Manager (ej. HashiCorp Vault, AWS Secrets Manager) para almacenar la clave de firma del JWT.
+
+
 #### 4.2.8.5. Bounded Context Software Architecture Component Level Diagrams
+
+**Componentes (y responsabilidades):**
+- **Authentication Component** — Valida credenciales y genera tokens de sesión (JWT).
+- **User Management Component** — Administra el ciclo de vida de las cuentas de usuario (registro, bloqueo).
+- **Authorization Component** — Gestiona roles y permisos, y verifica el acceso.
+- **Auditing Component** — Registra todos los eventos relevantes de seguridad.
+- **Persistence Adapter** — Implementación de repositorios con JPA/MySQL.
+- **Security API** — Controladores REST para exponer la funcionalidad del BC.
+
+<img src="/assets/img/capitulo-IV/Bounded Context Segurity.png" alt="BC Security Container C4"/>
+
 #### 4.2.8.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 4.2.8.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama debe incluir las relaciones entre los agregados y entidades principales:
+
+- `User` (Aggregate Root) tiene una relación many-to-many con `Role` (Aggregate Root).
+- `Role` tiene una relación many-to-many con `Permission` (Value Object o Entidad).
+- `AuthenticationService` y `AuthorizationService` utilizan `UserRepository` y `RoleRepository`.
+- Se disparan eventos como `UserRegistered` y `AuthenticationFailed`.
+- Se utilizan Value Objects como `HashedPassword` y `EmailAddress` dentro de la entidad `User`.
+- `AuditLog` (Aggregate Root) captura información del `User` que realiza una acción.
+
+
 ##### 4.2.8.6.2. Bounded Context Database Design Diagram
+
+El diseño de la base de datos refleja el modelo de dominio con tablas normalizadas:
+
+- **Tablas:** `users`, `roles`, `permissions`, `audit_logs`.
+- **Tablas de Unión (Join Tables):** `user_roles` (para la relación N-M entre `users` y `roles`) y `role_permissions` (para la relación N-M entre `roles` y `permissions`).
+- **Relaciones y Claves Foráneas (FK):**
+  - `user_roles.user_id` → `users.id`
+  - `user_roles.role_id` → `roles.id`
+  - `role_permissions.role_id` → `roles.id`
+  - `role_permissions.permission_id` → `permissions.id`
+  - `audit_logs.actor_id` → `users.id` (puede ser nulo para acciones del sistema).
+- **Índices Clave:** Índices únicos en `users(username)` y `users(email)`. Índices en las claves foráneas para optimizar los *joins*.
+- **Restricciones:** `ON DELETE CASCADE` en las tablas de unión si al borrar un usuario/rol se deben eliminar sus asignaciones. `ON DELETE RESTRICT` si se prefiere evitar borrados en cascada.
