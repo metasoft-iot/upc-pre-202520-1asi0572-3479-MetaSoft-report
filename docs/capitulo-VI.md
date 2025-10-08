@@ -314,6 +314,27 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
+    <tr>
+        <td rowspan="2">US110</td>
+        <td rowspan="2">Como visitante deseo que la página se vea bien en cualquier dispositivo para acceder cómodamente desde cualquier lugar</td>
+        <td>T23</td>
+        <td rowspan="2">Responsividad de la Landing Page</td>
+        <td>
+            Implementación responsive de la Landing Page
+        </td>
+        <td>2</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T24</td>
+        <td>
+            Implementación responsive de la aplicación web
+        </td>
+        <td>2</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
 </table>
 
 #### 6.2.1.4. Development Evidence for Sprint Review
