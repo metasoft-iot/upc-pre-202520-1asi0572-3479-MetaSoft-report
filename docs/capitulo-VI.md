@@ -173,6 +173,30 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
+    <tr>
+        <td>US102</td>
+        <td>Como visitante deseo un acceso visible hacia la aplicación para continuar con el uso del servicio cuando lo decida</td>
+        <td>T7</td>
+        <td>Implementación del botón call-to-action</td>
+        <td>
+            Implementar UI del botón call-to-action en sección Hero de Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T8</td>
+        <td>Implementación del botón call-to-action</td>
+        <td>
+            Implementación de la redirección del botón call-to-action en la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
 </table>
 
 #### 6.2.1.4. Development Evidence for Sprint Review
