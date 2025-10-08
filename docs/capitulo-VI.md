@@ -75,7 +75,118 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
 </table>
 
 #### 6.2.1.2. Aspect Leaders and Collaborators
+
 #### 6.2.1.3. Sprint Backlog 1
+
+<p align="justify">
+
+</p>
+
+<table width="100%">
+    <tr>
+        <th colspan="1">Sprint #</th>
+        <th colspan="7">Sprint 1</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    <tr>
+    <tr>
+        <td colspan="2">User Story</td>
+        <td colspan="6">Work-Item / Task</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Estimation (Hours)</td>
+        <td>Assigned To</td>
+        <td>Status (To-do / In-Process / To-Review / Done)</td>
+    <tr>
+    <tr>
+        <td>US101</td>
+        <td>Como visitante deseo desplazarme entre las secciones de la landing page para encontrar la información sobre de SafeCar de forma rápida</td>
+        <td>T1</td>
+        <td>Navegación mediante el navbar</td>
+        <td>
+            Implementar navbar opciones de redirección a las secciones (home, features, plans, testimonials y contact) de la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    <tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T2</td>
+        <td>Navegación mediante el navbar</td>
+        <td>
+            Redirección a sección "Features" desde el navbar de la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    <tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T3</td>
+        <td>Navegación mediante el navbar</td>
+        <td>
+           Redirección a sección "Hero" al hacer click en opción "home" desde el navbar de la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    <tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T4</td>
+        <td>Navegación mediante el navbar</td>
+        <td>
+            Redirección a sección "Testimonials" al hacer click en la opción "testimonials"  desde el navbar de la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    <tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T5</td>
+        <td>Navegación mediante el navbar</td>
+        <td>
+            Redirección a sección "Contact" al hacer click en la opción "contact" desde el navbar de la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    <tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T6</td>
+        <td>Navegación mediante el navbar</td>
+        <td>
+            Redirección a sección "Plans" al hacer click en la opción "plans" desde el navbar de la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    <tr>
+</table>
+
 #### 6.2.1.4. Development Evidence for Sprint Review
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
 #### 6.2.1.6. Execution Evidence for Sprint Review
