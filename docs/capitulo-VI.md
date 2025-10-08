@@ -1,9 +1,15 @@
 # Capítulo VI: Product Implementation, Validation & Deployment
+
 ## 6.1. Software Configuration Management
+
 ### 6.1.1. Software Development Environment Configuration
+
 ### 6.1.2. Source Code Management
+
 ### 6.1.3. Source Code Style Guide & Conventions
+
 ### 6.1.4. Software Deployment Configuration
+
 ## 6.2. Landing Page, Services & Applications Implementation
 
 ### 6.2.1. Sprint 1
@@ -75,6 +81,109 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
 </table>
 
 #### 6.2.1.2. Aspect Leaders and Collaborators
+
+<p align="justify">
+Durante el Sprint 1, el equipo organizó el trabajo en ocho aspectos principales que abarcan el desarrollo de la Landing Page y las funcionalidades core de la aplicación web. La matriz de liderazgo y colaboración (LACX) define claramente las responsabilidades de cada miembro, designando líderes (L) y colaboradores (C) para cada aspecto, facilitando la coordinación efectiva del trabajo durante el sprint.
+</p>
+
+<table width="100%">
+    <tr>
+        <th>Team Member (Last Name, First Name)</th>
+        <th>GitHub Username</th>
+        <th>A1 – Landing Navigation & CTA (L) / Collaborator (C)</th>
+        <th>A2 – Internationalization & Locale (L) / Collaborator (C)</th>
+        <th>A3 – Pricing Plans & Accessibility (L) / Collaborator (C)</th>
+        <th>A4 – Social Links & Footer (L) / Collaborator (C)</th>
+        <th>A5 – Responsive Design (L) / Collaborator (C)</th>
+        <th>A6 – Security & Identity Management (L) / Collaborator (C)</th>
+        <th>A7 – Service History Management (L) / Collaborator (C)</th>
+        <th>A8 – Service Request Management (L) / Collaborator (C)</th>
+    </tr>
+    <tr>
+        <td>Janover Gonzalo Saldaña Vela</td>
+        <td>JanoverSaldana</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A6 – Security & Identity Management (L)</td>
+        <td>A7 – Service History Management (L)</td>
+        <td>A8 – Service Request Management (L)</td>
+    </tr>
+    <tr>
+        <td>Hardie Alfonso Holguin Gamarra</td>
+        <td>HOLGUINUPC</td>
+        <td>A1 – Landing Navigation & CTA (C)</td>
+        <td>A2 – Internationalization & Locale (C)</td>
+        <td>A3 – Pricing Plans & Accessibility (C)</td>
+        <td>-</td>
+        <td>A5 – Responsive Design (C)</td>
+        <td>A6 – Security & Identity Management (C)</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Javier Kenyi Mendoza Solis</td>
+        <td>Kenyi-Mendoza-Solis</td>
+        <td>A1 – Landing Navigation & CTA (C)</td>
+        <td>A2 – Internationalization & Locale (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A5 – Responsive Design (C)</td>
+        <td>A6 – Security & Identity Management (C)</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Gustavo Jandroel Aguirre Rodríguez</td>
+        <td>Jandroel</td>
+        <td>A1 – Landing Navigation & CTA (C)</td>
+        <td>-</td>
+        <td>A3 – Pricing Plans & Accessibility (C)</td>
+        <td>A4 – Social Links & Footer (L)</td>
+        <td>A5 – Responsive Design (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Javier Sharvel Irigoyen Matos</td>
+        <td>sharvel-irigoyen</td>
+        <td>A1 – Landing Navigation & CTA (C)</td>
+        <td>A2 – Internationalization & Locale (C)</td>
+        <td>-</td>
+        <td>A4 – Social Links & Footer (C)</td>
+        <td>-</td>
+        <td>A6 – Security & Identity Management (C)</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Gonzalo Andre Zavala Quedena</td>
+        <td>GonzaloQu3dena</td>
+        <td>A1 – Landing Navigation & CTA (L)</td>
+        <td>A2 – Internationalization & Locale (L)</td>
+        <td>A3 – Pricing Plans & Accessibility (L)</td>
+        <td>-</td>
+        <td>A5 – Responsive Design (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Anaely Zarely Burga Loarte</td>
+        <td>userxx1000</td>
+        <td>A1 – Landing Navigation & CTA (C)</td>
+        <td>A2 – Internationalization & Locale (C)</td>
+        <td>A3 – Pricing Plans & Accessibility (C)</td>
+        <td>A4 – Social Links & Footer (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+</table>
 
 #### 6.2.1.3. Sprint Backlog 1
 
