@@ -339,7 +339,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td rowspan="6">US201</td>
         <td rowspan="6">Como usuario registrado deseo iniciar sesión con mis credenciales para acceder a mis datos y funcionalidades</td>
         <td>T25</td>
-        <td rowspan="6">Registro de usuario en la Aplicación Web</td>
+        <td rowspan="6">Inicio de sesión de usuario en la Aplicación Web</td>
         <td>
            UI para el SignIn del usuario con los campos (email + password)
         </td>
@@ -390,6 +390,90 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         </td>
         <td>2</td>
         <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td rowspan="9">US202</td>
+        <td rowspan="9">Como nuevo usuario deseo registrarme con mis datos básicos para crear una cuenta en SafeCar y comenzar a usar el sistema</td>
+        <td>T31</td>
+        <td rowspan="9">Registro de usuario en la Aplicación Web</td>
+        <td>
+           UI para el SignUp de usuario  (Nombres, Apellidos, Correo, Teléfono, Contraseña)
+        </td>
+        <td>3</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T31</td>
+        <td>
+           Mostrar mensajes de error de validación de los campos nombre, apellidos, teléfono
+        </td>
+        <td>2</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T32</td>
+        <td>
+           Mostrar mensajes de error (email existente / formato inválido) en UI para SignUp
+        </td>
+        <td>2</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T33</td>
+        <td>
+           Mostrar mensajes de error (Requerimientos de contraseña inválida) en UI de SignUp
+        </td>
+        <td>2</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T34</td>
+        <td>
+           Servidor valida campo nombre y apellido que solo sean caracteres y máximo 50 caracteres cada uno
+        </td>
+        <td>2</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T35</td>
+        <td>
+           Mostrar mensaje de éxito al registrarse (Se registró correctamente) y redirección a SignIn
+        </td>
+        <td>2</td>
+        <td>Janover Saldaño</td>
+        <td>Done</td>
+    </tr>
+     <tr>
+        <td>T36</td>
+        <td>
+           Servidor valida contraseña de usuario segura (+8 caracteres, >= 1 simbolo)
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T37</td>
+        <td>
+           Servidor verifica unicidad de email al momento de realizar SignUp
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T38</td>
+        <td>
+           Servidor valida teléfono de usuario (solo dígitos, máx. 9)
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
 </table>
