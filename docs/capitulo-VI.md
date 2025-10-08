@@ -197,6 +197,54 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         <td>Gonzalo Quedena</td>
         <td>Done</td>
     </tr>
+    <tr>
+        <td>US103</td>
+        <td>Como visitante deseo cambiar el idioma de la página para leer la información en el idioma que prefiera</td>
+        <td>T9</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+            Configurar archivo de internacionalización (i18n) para la Landing Page con texto en idioma Español
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T10</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+            Configurar archivo de internacionalización (i18n) para la Landing Page con texto en idioma Inglés
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T11</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+            Guardar la preferencia de idioma (en localStorage o cookies) para mantener persistencia en la Landing Page
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>T12</td>
+        <td>Soporte de internacionalización de la Landing Page</td>
+        <td>
+            Implementar selector de idioma para posterior (i18n)
+        </td>
+        <td>1</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
 </table>
 
 #### 6.2.1.4. Development Evidence for Sprint Review
