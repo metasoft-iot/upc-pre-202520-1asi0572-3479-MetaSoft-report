@@ -940,7 +940,262 @@ El **Sprint 1** del proyecto **SafeCar** se centró en establecer las bases de l
 Durante el Sprint 1, el equipo realizó avances significativos en la implementación de los productos de la solución SafeCar, abarcando tanto la Landing Page como las funcionalidades principales de la aplicación web. Los principales logros incluyen la implementación completa de la navegación y componentes de la Landing Page, el desarrollo de los sistemas de autenticación y registro de usuarios, y la creación de las interfaces para la gestión de perfiles. La tabla a continuación presenta el registro detallado de commits realizados en cada repositorio, documentando el progreso de desarrollo y las contribuciones de cada miembro del equipo durante este primer sprint.
 </p>
 
-<table width="100%"> <tr> <th>Repository</th> <th>Branch</th> <th>Commit Id</th> <th>Commit Message</th> <th>Commit Message Body</th> <th>Commit on (Date)</th> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>c1a7f3d</td> <td>Inicializa proyecto React</td> <td>Configuración inicial del frontend con create-react-app, estructura de carpetas y dependencias básicas.</td> <td>18/09/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>ab9e4c2</td> <td>Agrega layout y navegación</td> <td>Header, Footer y componente Layout; rutas principales añadidas con React Router.</td> <td>19/09/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>7f2d1b8</td> <td>Landing: estructura inicial</td> <td>Se crea la página principal, sección hero y componentes estáticos para la landing page.</td> <td>20/09/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>e3c5a99</td> <td>Responsive y estilos base</td> <td>Se añade CSS base y se adapta el hero y features a diseño responsive.</td> <td>21/09/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>4b8f2e1</td> <td>Autenticación: login y logout</td> <td>Implementa formulario de login, manejo de tokens y ruta protegida de ejemplo.</td> <td>22/09/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>9d0c6b4</td> <td>Dashboard: componentes básicos</td> <td>Tarjetas, lista de incidentes y layout del dashboard con datos mock para desarrollo.</td> <td>23/09/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>f6a1d3c</td> <td>Integración fake-api API</td> <td> servicios para llamadas a la fake API y manejo de errores centralizado.</td> <td>24/09/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>2b7e9f0</td> <td>Formularios: creación de reporte</td> <td>Formulario para crear reportes de incidentes con validación básica y envío al servicio.</td> <td>25/09/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>5c3d8a7</td> <td>Estilos: tema y paleta</td> <td>Definición de variables CSS, tema principal y ajustes visuales para consistencia.</td> <td>26/09/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>d8f4b2a</td> <td>Sección características</td> <td>Se agregan cards de features, iconografía y descripción de valor para usuarios.</td> <td>27/09/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>0a4b1e6</td> <td>Formulario de contacto</td> <td>Contacto con validación y envío a endpoint mock; incluye mensajes de éxito/error.</td> <td>28/09/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>c7e2f10</td> <td>SEO y meta tags</td> <td>Se añaden meta tags, title dinámico y mejoras para SEO básico de la landing.</td> <td>29/09/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>81b6c4d</td> <td>Animaciones y microinteracciones</td> <td>Animaciones suaves en hero y botones; mejora de la percepción UX.</td> <td>30/09/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>f2c9a55</td> <td>Corrección: validación robusta</td> <td>Arregla edge cases en formularios, mensajes claros y prevención de envíos dobles.</td> <td>01/10/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>3e7d4b9</td> <td>Accesibilidad: ARIA y tab order</td> <td>Se añaden atributos ARIA, roles y mejora del foco para cumplimiento básico de accesibilidad.</td> <td>02/10/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>a5b1e2f</td> <td>Performance: lazy load</td> <td>Implementa lazy loading en rutas y componentes pesados para mejorar tiempo de carga.</td> <td>03/10/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>6d4f0c3</td> <td>Tests: estructura inicial</td> <td>Agrega configuración de testing (Jest + React Testing Library) y tests básicos para componentes.</td> <td>04/10/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>9f8a2b1</td> <td>CI: pipeline GitHub Actions</td> <td>Archivo de workflow para build, test y lint en cada push a main.</td> <td>05/10/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>2e1c7f8</td> <td>Fix: bug en paginación</td> <td>Corrige cálculo de índice en la paginación de lista de incidentes.</td> <td>06/10/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>b3c6d9e</td> <td>Actualiza copy y CTA</td> <td>Mejora de textos en hero y cambio de CTA para aumentar conversión (A/B copy ver.).</td> <td>06/10/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>4f0b8a2</td> <td>Integración analítica</td> <td>Se añade Google Analytics / Tag Manager y eventos básicos para medir interacciones.</td> <td>07/10/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>18d3f5c</td> <td>Fix: formulario móvil</td> <td>Arregla layout y comportamiento del formulario de contacto en pantallas pequeñas.</td> <td>08/10/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>c9a2e47</td> <td>Deploy: configuración Netlify</td> <td>Archivo de configuración para despliegue continuo en Netlify y build optimizado.</td> <td>08/10/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>7b5f1d2</td> <td>Accesibilidad landing</td> <td>Correcciones ARIA, contraste y mejoras en navegación por teclado.</td> <td>08/10/2025</td> </tr> <tr> <td>SafeCar-landingPage</td> <td>main</td> <td>ef6b3a0</td> <td>Optimiza imágenes y assets</td> <td>Compresión de imágenes, uso de formatos webp y carga diferida de assets no críticos.</td> <td>08/10/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>5a2d9e4</td> <td>Upgrade dependencias</td> <td>Actualiza dependencias críticas y realiza ajustes menores para compatibilidad.</td> <td>08/10/2025</td> </tr> <tr> <td>SafeCar-frontend</td> <td>main</td> <td>0f7c3b9</td> <td>Últimos fixes antes del release</td> <td>Pequeños arreglos visuales, corrección de z-index y pruebas finales para release.</td> <td>08/10/2025</td> </tr> </table>
+<table width="100%">
+  <tr>
+    <th>Repository</th>
+    <th>Branch</th>
+    <th>Commit Id</th>
+    <th>Commit Message</th>
+    <th>Commit Message Body</th>
+    <th>Commit on (Date)</th>
+  </tr>
+
+  <!-- Commits by GonzaloQu3dena -->
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>a91c7de</td>
+    <td>Initial commit</td>
+    <td>Commit inicial del proyecto SafeCar Landing Page.</td>
+    <td>31/08/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>c4e18fa</td>
+    <td>chore: initial commit</td>
+    <td>Configuración inicial del repositorio, estructura base y dependencias iniciales.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>e72b1c9</td>
+    <td>chore(img): add safecar logo</td>
+    <td>Se agrega el logotipo de SafeCar como recurso de imagen.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>f29a63b</td>
+    <td>build(css): compile Tailwind v4 in GH Actions</td>
+    <td>Configura compilación automática de TailwindCSS v4 en GitHub Actions.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>bd81f5a</td>
+    <td>chore: update npm scripts for tailwind workflow</td>
+    <td>Actualiza scripts npm para integrar el flujo de trabajo con Tailwind.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>9ce4d22</td>
+    <td>refactor(nav-menu): move menu logic to clean up the HTML</td>
+    <td>Refactoriza la lógica del menú de navegación para mejorar la organización del código HTML.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>b6d9a4c</td>
+    <td>feat(index): add i18n implementation</td>
+    <td>Se implementa la internacionalización (i18n) en la página principal.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>d45a2b7</td>
+    <td>feat(i18n): add i18n resources</td>
+    <td>Se agregan los recursos de traducción para i18n (archivos de idioma).</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>e91c8fe</td>
+    <td>refactor(index): set default language to English</td>
+    <td>Define el inglés como idioma predeterminado del sitio.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>f71b6c4</td>
+    <td>feat(index): add footer and link sections</td>
+    <td>Agrega el footer y las secciones de enlaces al sitio principal.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>c28a1fd</td>
+    <td>feat(index): add section about the team</td>
+    <td>Implementa la sección “Sobre el equipo” en la landing page.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>d57e3b2</td>
+    <td>feat(index): add section about the app</td>
+    <td>Agrega la sección informativa sobre la aplicación SafeCar.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>e62d9f8</td>
+    <td>feat(index): add contact section</td>
+    <td>Implementa la sección de contacto con formulario y enlaces.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>f93a5dc</td>
+    <td>feat(index): add plans and testimonials section</td>
+    <td>Agrega las secciones de planes y testimonios a la landing page.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>a12e48b</td>
+    <td>feat(index): add benefits section</td>
+    <td>Agrega la sección de beneficios destacados de la aplicación.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>b71d2a9</td>
+    <td>feat(index): add header and hero sections</td>
+    <td>Implementa el encabezado y la sección hero principal del sitio.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>c84f1e3</td>
+    <td>style: add Nunito font and custom theme colors to tailwind config</td>
+    <td>Agrega la fuente Nunito y define colores personalizados en Tailwind.</td>
+    <td>01/09/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-landingPage</td>
+    <td>main</td>
+    <td>d19b3f5</td>
+    <td>chore: add burger and close svg resources</td>
+    <td>Se añaden los íconos SVG de menú hamburguesa y cierre.</td>
+    <td>01/09/2025</td>
+  </tr>
+
+  <!-- Commits by JanoverSaldana -->
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>e23f7c1</td>
+    <td>feat(favicon): remove old favicon and add new icon asset</td>
+    <td>Se elimina el favicon anterior y se agrega un nuevo ícono representativo de SafeCar.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>f91a3b7</td>
+    <td>feat(router): add route for vehicle detail management component</td>
+    <td>Se agrega una nueva ruta al router para el componente de gestión de detalles del vehículo.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>a56e2d4</td>
+    <td>feat(vehicle-api): add methods for create, update, delete, and telemetry retrieval</td>
+    <td>Implementa los métodos CRUD y de obtención de telemetría en VehicleApiService.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>b37f9a8</td>
+    <td>fix(iot-device): update signal strength and data frequency parameter descriptions</td>
+    <td>Actualiza las descripciones de los parámetros de intensidad de señal y frecuencia de datos.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>c44d8f6</td>
+    <td>feat(vehicle-management): add localization for vehicle management</td>
+    <td>Se añaden traducciones y localización completa del módulo de gestión de vehículos.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>d82c7a9</td>
+    <td>feat(main): add PrimeVue Message and TabView components</td>
+    <td>Agrega componentes Message y TabView, además del registro del Tooltip directive en PrimeVue.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>e99b5d3</td>
+    <td>feat(vehicle-detail): enhance vehicle detail component</td>
+    <td>Mejora la UI y el manejo de datos del componente de detalles del vehículo.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>f12e4a7</td>
+    <td>feat(vehicle-analytics-detail): refactor analytics detail component</td>
+    <td>Refactoriza el componente de detalle analítico para mejorar rendimiento y estructura visual.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>a64d3b5</td>
+    <td>feat(vehicle-telemetry-detail): refactor telemetry detail component</td>
+    <td>Mejora el componente de detalle de telemetría con UI optimizada y mejor gestión de datos.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>b19a6e8</td>
+    <td>feat(vehicle-detail-management): implement vehicle detail management with tabbed interface</td>
+    <td>Implementa el módulo de gestión de detalle de vehículos con interfaz tabulada y conexión API.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>c75e1d9</td>
+    <td>feat(vehicle-management): enhance vehicle management component</td>
+    <td>Agrega filtros avanzados y mejora la manipulación de datos del componente de gestión vehicular.</td>
+    <td>08/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>main</td>
+    <td>d13f9a4</td>
+    <td>feat(service-history): add initial service history component</td>
+    <td>Se agrega el componente y servicio inicial de historial de mantenimiento.</td>
+    <td>08/10/2025</td>
+  </tr>
+</table>
+
+
 
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
 #### 6.2.1.6. Execution Evidence for Sprint Review
