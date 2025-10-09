@@ -1198,9 +1198,33 @@ Durante el Sprint 1, el equipo realizó avances significativos en la implementac
 
 
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
+
+<p align="justify">
+Esta sección documenta las pruebas automatizadas del sprint, incluyendo Unit Tests para componentes individuales, Integration Tests para la comunicación entre módulos, y Acceptance Tests BDD con archivos .feature en Gherkin que validen las User Stories implementadas.
+</p>
+
+<p align="justify">
+Durante el Sprint 1, el desarrollo se concentró en establecer la arquitectura fundamental y las funcionalidades principales de SafeCar, por lo que <strong>no se implementaron pruebas automatizadas</strong>. Esta decisión permitió al equipo enfocar recursos en crear un producto base funcional que los stakeholders pudieran evaluar, dejando la suite de testing para iteraciones posteriores donde el sistema esté más consolidado.
+</p>
+
+<p align="justify">
+La implementación de pruebas automatizadas está planificada para el Sprint 2, cuando se establecerá una estrategia integral de testing que asegure la calidad del código y la validación continua de los requisitos del sistema.
+</p>
+
+
 #### 6.2.1.6. Execution Evidence for Sprint Review
+
+
+
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
+
+
+
+
 #### 6.2.1.8. Software Deployment Evidence for Sprint Review
+
+
+
 #### 6.2.1.9. Team Collaboration Insights during Sprint
 
 <p align="justify">
