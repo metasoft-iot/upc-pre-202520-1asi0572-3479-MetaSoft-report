@@ -224,33 +224,7 @@ Para el sistema de navegación hemos preferido mantener una navegación jerárqu
 ## 5.3. Landing Page UI Design
 ### 5.3.1. Landing Page Wireframe
 
-Los diagramas de Wireflow elaborados para SafeCar muestran de forma visual cómo se conectan las distintas pantallas de la aplicación, combinando el diseño de la interfaz con el recorrido de navegación del usuario. Estos flujos ilustran las principales acciones que realizan tanto los conductores como los talleres, permitiendo evaluar la usabilidad del sistema y garantizar una experiencia coherente e intuitiva en todo momento.
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico.jpg" alt="Wireframe taller mecanico" width="1000px">
-</div>
-
-El diagrama de wireflow para el segmento de talleres mecánicos en SafeCar representa de manera detallada el flujo de interacción del usuario desde el proceso de inicio de sesión o registro hasta la gestión de sus operaciones dentro del sistema. Este recorrido comienza cuando el mecánico accede a la plataforma, donde puede iniciar sesión con sus credenciales o, en caso de ser un nuevo usuario, crear una cuenta específica para talleres afiliados. Una vez registrado, el sistema lo redirige automáticamente al tablero principal (dashboard).
-
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20login.jpg" alt="Wireframe taller mecanico login" width="1000px">
-
-Desde este tablero, el usuario visualiza una interfaz central que agrupa las herramientas esenciales para la gestión diaria del taller, divididas en tres módulos principales: Solicitudes, Reportes y Verificadores.
-
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20funciones.jpg" alt="Wireframe taller mecanico funciones" width="1000px">
-
-En la sección Solicitudes, el mecánico accede a una lista organizada de las citas solicitadas por los conductores, incluyendo información clave como nombre del cliente, tipo de servicio, modelo y color del vehículo, fecha y hora de la cita, además del estado actual de la solicitud. Desde esta pantalla también puede aceptar, reprogramar o rechazar citas según la disponibilidad del taller.
-
-<div align="center" style="margin-top: 20px;"> <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20solicitudes.jpg"  alt="Wireframe taller mecanico solicitudes" width="1000px">
-</div>
-
-En el módulo de Reportes, el usuario puede revisar el historial de mantenimientos y diagnósticos realizados, generar nuevos reportes técnicos o actualizar los ya existentes. Este apartado está diseñado para optimizar el seguimiento de los trabajos efectuados y permitir la trazabilidad de los servicios ofrecidos, mejorando la transparencia con los clientes.
-
-<div align="center" style="margin-top: 20px;"> <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20reportes.jpg"  alt="Wireframe taller mecanico reportes" width="1000px">
-</div>
-
-Por último, la sección de Verificadores integra los datos enviados por los dispositivos IoT, mostrando métricas en tiempo real sobre el estado de los vehículos. Aquí, el mecánico puede validar las lecturas del sistema, registrar observaciones o crear alertas preventivas que se enviarán directamente al conductor.
-
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20verificadores.jpg" alt="Wireframe taller mecanico verificadores" width="1000px">
-</div>
 ### 5.3.2. Landing Page Mock-up
 
 ## 5.4. Applications UX/UI Design
@@ -350,10 +324,40 @@ Por último, la sección de Verificadores integra los datos enviados por los dis
 - Este wireframe de Reporte muestra una vista de detalle muy extensa y vertical. La información está segmentada en numerosos bloques y secciones que contienen texto, campos, y grandes espacios reservados para imágenes o gráficos (indicados con las "X"). Esta vista permite un análisis exhaustivo y minucioso de un reporte individual.
 
 ### 5.4.2. Applications Wireflow Diagrams
+
+Los diagramas de Wireflow elaborados para SafeCar muestran de forma visual cómo se conectan las distintas pantallas de la aplicación, combinando el diseño de la interfaz con el recorrido de navegación del usuario. Estos flujos ilustran las principales acciones que realizan tanto los conductores como los talleres, permitiendo evaluar la usabilidad del sistema y garantizar una experiencia coherente e intuitiva en todo momento.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico.jpg" alt="Wireframe taller mecanico" width="1000px">
+</div>
+
+El diagrama de wireflow para el segmento de talleres mecánicos en SafeCar representa de manera detallada el flujo de interacción del usuario desde el proceso de inicio de sesión o registro hasta la gestión de sus operaciones dentro del sistema. Este recorrido comienza cuando el mecánico accede a la plataforma, donde puede iniciar sesión con sus credenciales o, en caso de ser un nuevo usuario, crear una cuenta específica para talleres afiliados. Una vez registrado, el sistema lo redirige automáticamente al tablero principal (dashboard).
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20login.jpg" alt="Wireframe taller mecanico login" width="1000px">
+
+Desde este tablero, el usuario visualiza una interfaz central que agrupa las herramientas esenciales para la gestión diaria del taller, divididas en tres módulos principales: Solicitudes, Reportes y Verificadores.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20funciones.jpg" alt="Wireframe taller mecanico funciones" width="1000px">
+
+En la sección Solicitudes, el mecánico accede a una lista organizada de las citas solicitadas por los conductores, incluyendo información clave como nombre del cliente, tipo de servicio, modelo y color del vehículo, fecha y hora de la cita, además del estado actual de la solicitud. Desde esta pantalla también puede aceptar, reprogramar o rechazar citas según la disponibilidad del taller.
+
+<div align="center" style="margin-top: 20px;"> <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20solicitudes.jpg"  alt="Wireframe taller mecanico solicitudes" width="1000px">
+</div>
+
+En el módulo de Reportes, el usuario puede revisar el historial de mantenimientos y diagnósticos realizados, generar nuevos reportes técnicos o actualizar los ya existentes. Este apartado está diseñado para optimizar el seguimiento de los trabajos efectuados y permitir la trazabilidad de los servicios ofrecidos, mejorando la transparencia con los clientes.
+
+<div align="center" style="margin-top: 20px;"> <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20reportes.jpg"  alt="Wireframe taller mecanico reportes" width="1000px">
+</div>
+
+Por último, la sección de Verificadores integra los datos enviados por los dispositivos IoT, mostrando métricas en tiempo real sobre el estado de los vehículos. Aquí, el mecánico puede validar las lecturas del sistema, registrar observaciones o crear alertas preventivas que se enviarán directamente al conductor.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20verificadores.jpg" alt="Wireframe taller mecanico verificadores" width="1000px">
+</div>
+
 ### 5.4.3. Applications Mock-ups
 ### 5.4.4. Applications User Flow Diagrams
   
 ## **5.5. Applications Prototyping**
+
 
 
 
