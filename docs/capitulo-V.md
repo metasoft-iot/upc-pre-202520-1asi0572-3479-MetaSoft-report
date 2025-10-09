@@ -439,7 +439,37 @@ El diseño utiliza tarjetas organizadas y colores contrastantes para resaltar se
   
 ## **5.5. Applications Prototyping**
 
+####  Web Application Prototyping
 
+
+El prototipo web de SafeCar fue desarrollado en Figma con el propósito de validar la navegación, la organización de los elementos y la experiencia del usuario dentro del sistema.  
+La interfaz se diseñó con un enfoque funcional y minimalista, facilitando el acceso a las principales secciones: gestión de talleres, solicitudes de servicio, reportes y vehículos.
+
+El flujo de navegación permite al usuario desplazarse de forma fluida entre las distintas pantallas, manteniendo una estructura clara y coherente.  
+Se empleó una paleta de colores basada en tonos azules y blancos, que transmite profesionalismo y resalta las acciones principales.
+
+**Criterios de diseño e interacción:**
+- Navegación lateral fija con accesos directos a los módulos del sistema.  
+- Formularios bien estructurados y mensajes claros para las acciones del usuario.  
+- Consistencia visual en todos los componentes de la interfaz.  
+- Priorización de la legibilidad y simplicidad en cada pantalla.
+
+**Simulación de navegación:**  
+El prototipo muestra los principales flujos de la aplicación, incluyendo:  
+- Inicio de sesión y registro de talleres.  
+- Gestión de citas y solicitudes de servicio.  
+- Asignación de mecánicos y actualización de estados.  
+- Visualización del historial de servicios y vehículos.
+
+El uso de Figma permitió validar la estructura de navegación y el diseño visual antes de la implementación final del sistema web.
+
+
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+</p>
+
+Link: [Prototipo Web App](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202124162_upc_edu_pe/Ee1cZiLNP_dJjL1prSmIih4B1u6ixglswnGvMM2Vo6pt6g?e=NhgeQJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 
 
