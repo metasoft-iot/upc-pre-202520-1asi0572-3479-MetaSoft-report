@@ -2229,6 +2229,8 @@ Repositorios con Spring Data JPA. Índices únicos en `users.username` y `users.
 
 El diagrama debe incluir las relaciones entre los agregados y entidades principales:
 
+<img src="/assets/img/capitulo-IV/dbseguriti.png" alt="seguriti dc C4"/>
+
 - `User` (Aggregate Root) tiene una relación many-to-many con `Role` (Aggregate Root).
 - `Role` tiene una relación many-to-many con `Permission` (Value Object o Entidad).
 - `AuthenticationService` y `AuthorizationService` utilizan `UserRepository` y `RoleRepository`.
@@ -2240,6 +2242,11 @@ El diagrama debe incluir las relaciones entre los agregados y entidades principa
 ##### 4.2.8.6.2. Bounded Context Database Design Diagram
 
 El diseño de la base de datos refleja el modelo de dominio con tablas normalizadas:
+
+
+<img src="/assets/img/capitulo-IV/dcssergurity.png" alt="seguriti db C4"/>
+
+
 
 - **Tablas:** `users`, `roles`, `permissions`, `audit_logs`.
 - **Tablas de Unión (Join Tables):** `user_roles` (para la relación N-M entre `users` y `roles`) y `role_permissions` (para la relación N-M entre `roles` y `permissions`).
