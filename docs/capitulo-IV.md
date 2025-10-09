@@ -88,7 +88,7 @@ Notification Gateway
 
 Se describe las relaciones estructurales entre los **Bounded Contexts** de la plataforma, los **patrones DDD** aplicados y los **contratos** (eventos/APIs) que conectan los contextos.
 
-<img src="../assets/img/capitulo-IV/context-mapping.png" alt="Context mapping" width="1000"/>
+<img src="../assets/img/capitulo-IV/context-mapping.png?v=1.0" alt="Context mapping" width="1000"/>
 
 <table>
   <caption>Relaciones clave entre Bounded Contexts y patrones DDD</caption>
@@ -786,11 +786,11 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 
 ### B) Relaciones (Resumen)
 
-- **Listener → Orchestrator**: transmite telemetría cruda validada para su procesamiento.  
-- **Orchestrator → Validator / Enrichment / Evaluation Services**: ejecuta el flujo de negocio principal.  
-- **Enrichment → ExternalVehicleContextService**: obtiene metadatos de vehículo y dispositivo.  
-- **Evaluation → DomainEventPublisher**: emite eventos de alerta normalizados.  
-- **Orchestrator → Repository**: almacena telemetría procesada y trazabilidad de eventos.  
+- **Listener → Orchestrator**: transmite telemetría cruda validada para su procesamiento.
+- **Orchestrator → Validator / Enrichment / Evaluation Services**: ejecuta el flujo de negocio principal.
+- **Enrichment → ExternalVehicleContextService**: obtiene metadatos de vehículo y dispositivo.
+- **Evaluation → DomainEventPublisher**: emite eventos de alerta normalizados.
+- **Orchestrator → Repository**: almacena telemetría procesada y trazabilidad de eventos.
 
 ---
 
@@ -816,48 +816,48 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 
 ### Telemetry Processing BC
 
-El siguiente diagrama modela el **núcleo de negocio** del *Bounded Context Telemetry Processing*, responsable de la **ingestión, normalización y segmentación de datos de telemetría vehicular**.  
+El siguiente diagrama modela el **núcleo de negocio** del *Bounded Context Telemetry Processing*, responsable de la **ingestión, normalización y segmentación de datos de telemetría vehicular**.
 Representa **agregados**, **value objects**, **servicios de dominio**, **repositorios** y **eventos** que definen el comportamiento analítico central del dominio.
 
 ---
 
 #### Agregado y Entidades
 
-**TelemetryStream (Aggregate Root)**  
-- **Descripción:** Representa el flujo activo de telemetría asociado a un vehículo.  
-- **Atributos clave:** `streamId`, `vehicleId`, `currentTripId`, `lastReadingTimestamp`.  
-- **Comportamientos:** `appendReading(...)`, `updateStreamState(...)`.  
+**TelemetryStream (Aggregate Root)**
+- **Descripción:** Representa el flujo activo de telemetría asociado a un vehículo.
+- **Atributos clave:** `streamId`, `vehicleId`, `currentTripId`, `lastReadingTimestamp`.
+- **Comportamientos:** `appendReading(...)`, `updateStreamState(...)`.
 - **Relaciones:** Contiene múltiples instancias de `TelemetryReading` (composición).
 
-**TripSegment**  
-- **Descripción:** Define un tramo de conducción detectado automáticamente a partir del flujo de telemetría.  
-- **Atributos clave:** `tripId`, `startTime`, `endTime`, `distanceKm`, `avgSpeed`.  
+**TripSegment**
+- **Descripción:** Define un tramo de conducción detectado automáticamente a partir del flujo de telemetría.
+- **Atributos clave:** `tripId`, `startTime`, `endTime`, `distanceKm`, `avgSpeed`.
 - **Relaciones:** Asociado a `VehicleId` para vincular el segmento con su vehículo correspondiente.
 
 ---
 
 #### Value Objects
 
-Los objetos de valor encapsulan identificadores y lecturas con validaciones de formato y rango:  
-- `StreamId`  
-- `VehicleId`  
-- `TripId`  
+Los objetos de valor encapsulan identificadores y lecturas con validaciones de formato y rango:
+- `StreamId`
+- `VehicleId`
+- `TripId`
 - `TelemetryReading`
 
 ---
 
 #### Servicios de Dominio
 
-**TelemetryProcessor**  
-- **Responsabilidad:** Procesar lecturas entrantes (`processReading`) y actualizar el estado de los streams y segmentos.  
+**TelemetryProcessor**
+- **Responsabilidad:** Procesar lecturas entrantes (`processReading`) y actualizar el estado de los streams y segmentos.
 - **Resultado:** Emite eventos derivados del análisis de flujo, como detección de nuevos tramos o anomalías.
 
 ---
 
 #### Repositorios
 
-Interfaces que definen los puertos de persistencia del dominio:  
-- `TelemetryStreamRepository`  
+Interfaces que definen los puertos de persistencia del dominio:
+- `TelemetryStreamRepository`
 - `TripSegmentRepository`
 
 Ambos encapsulan la persistencia de los agregados principales (`TelemetryStream`, `TripSegment`) y ocultan detalles de infraestructura para mantener la pureza del dominio.
@@ -866,9 +866,9 @@ Ambos encapsulan la persistencia de los agregados principales (`TelemetryStream`
 
 #### 📡 Eventos de Dominio
 
-Los eventos comunican cambios significativos dentro del modelo de telemetría:  
-- `TelemetryNormalizedEvent`  
-- `TripSegmentStartedEvent`  
+Los eventos comunican cambios significativos dentro del modelo de telemetría:
+- `TelemetryNormalizedEvent`
+- `TripSegmentStartedEvent`
 - `TripSegmentClosedEvent`
 
 ![Telemetry Processing Domain Diagram](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-IV/assets/img/capitulo-IV/diagram%20class%20alerting.png)
@@ -877,7 +877,7 @@ Los eventos comunican cambios significativos dentro del modelo de telemetría:
 
 ##### 4.2.2.6.2. Bounded Context Database Design Diagram
 
-El modelo de base de datos del **Bounded Context Telemetry** representa la estructura de almacenamiento de datos de telemetría vehicular.  
+El modelo de base de datos del **Bounded Context Telemetry** representa la estructura de almacenamiento de datos de telemetría vehicular.
 Incluye las entidades principales:
 
 - **TelemetryStream**: flujo activo de telemetría de un vehículo, identificado por `stream_id`.
@@ -942,7 +942,7 @@ Estas entidades permiten la ingesta, normalización y segmentación de la inform
 | **Transactional Event Publisher**       | *Infrastructure* | Publica eventos de dominio mediante el patrón *Outbox*.                              |
 
 - B) Relaciones esenciales
-  
+
 Telemetry BC → Inbound Alert Listener → Rule Evaluation Handler
 
 Rule Evaluation Handler → Alert Rule Engine Impl → Alert Creation Service
@@ -975,44 +975,44 @@ Alert Management Controller → Alert Creation Service / Alert Repository Impl
 
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-El siguiente diagrama representa el **núcleo de negocio** del *Bounded Context Alerting & Management*, encargado de la **detección, deduplicación y gestión del ciclo de vida de alertas** generadas a partir de los datos de telemetría.  
+El siguiente diagrama representa el **núcleo de negocio** del *Bounded Context Alerting & Management*, encargado de la **detección, deduplicación y gestión del ciclo de vida de alertas** generadas a partir de los datos de telemetría.
 Muestra **agregados**, **entidades**, **objetos de valor**, **servicios de dominio**, **repositorios** y **eventos** que estructuran la lógica de negocio del contexto.
 
 #### Agregado y Entidades
 
-**Alert (Aggregate Root)**  
-- **Descripción:** Representa una alerta con su ciclo de vida completo (CREATED → ACKNOWLEDGED → RESOLVED).  
-- **Atributos clave:** `alertId`, `vehicleId`, `ruleId`, `status`, `severity`, `createdAt`, `updatedAt`.  
-- **Comportamientos:** Cambiar estado, registrar histórico, deduplicar instancias.  
-- **Relaciones:**  
-  - Composición con `AlertHistoryEntry` (registra cambios de estado).  
-  - Asociación con `AlertRule` (define la causa).  
+**Alert (Aggregate Root)**
+- **Descripción:** Representa una alerta con su ciclo de vida completo (CREATED → ACKNOWLEDGED → RESOLVED).
+- **Atributos clave:** `alertId`, `vehicleId`, `ruleId`, `status`, `severity`, `createdAt`, `updatedAt`.
+- **Comportamientos:** Cambiar estado, registrar histórico, deduplicar instancias.
+- **Relaciones:**
+  - Composición con `AlertHistoryEntry` (registra cambios de estado).
+  - Asociación con `AlertRule` (define la causa).
   - Usa `SuppressionKey` para deduplicación.
 
-**AlertRule**  
-- **Descripción:** Define las condiciones bajo las cuales se dispara una alerta.  
+**AlertRule**
+- **Descripción:** Define las condiciones bajo las cuales se dispara una alerta.
 - **Atributos clave:** `alertRuleId`, `name`, `conditionDefinition`, `severity`, `isActive`.
 
-**AlertHistoryEntry**  
-- **Descripción:** Registro inmutable del historial de cambios de estado y acciones sobre una alerta.  
+**AlertHistoryEntry**
+- **Descripción:** Registro inmutable del historial de cambios de estado y acciones sobre una alerta.
 - **Atributos clave:** `historyId`, `alertId`, `timestamp`, `oldStatus`, `newStatus`, `actionUserId`.
 
 
 #### Value Objects
 
-Encapsulan identificadores y valores inmutables del dominio:  
-- `AlertId`  
-- `AlertRuleId`  
-- `SuppressionKey` → combina `vehicleId`, `ruleId` y `severity` para prevenir duplicados.  
-- `AlertStatus` → enum: CREATED | ACKNOWLEDGED | RESOLVED.  
+Encapsulan identificadores y valores inmutables del dominio:
+- `AlertId`
+- `AlertRuleId`
+- `SuppressionKey` → combina `vehicleId`, `ruleId` y `severity` para prevenir duplicados.
+- `AlertStatus` → enum: CREATED | ACKNOWLEDGED | RESOLVED.
 - `Severity` → enum: LOW | MEDIUM | HIGH | CRITICAL.
 
 #### Repositorios
 
-Interfaces que definen los puertos de acceso y persistencia:  
-- `AlertRepository`  
-  - **Operaciones:** `save(Alert)`, `findById(AlertId)`, `findActiveBySuppressionKey(SuppressionKey)`.  
-- `AlertRuleRepository`  
+Interfaces que definen los puertos de acceso y persistencia:
+- `AlertRepository`
+  - **Operaciones:** `save(Alert)`, `findById(AlertId)`, `findActiveBySuppressionKey(SuppressionKey)`.
+- `AlertRuleRepository`
   - **Operaciones:** `findById(AlertRuleId)`, `findAllActive()`.
 
 
@@ -1021,7 +1021,7 @@ Interfaces que definen los puertos de acceso y persistencia:
 
 ##### 4.2.3.6.2. Bounded Context Database Design Diagram
 
-El modelo de base de datos del **Bounded Context Alerting** define las tablas responsables del ciclo de vida de las alertas generadas por las reglas de negocio.  
+El modelo de base de datos del **Bounded Context Alerting** define las tablas responsables del ciclo de vida de las alertas generadas por las reglas de negocio.
 Sus entidades principales son:
 
 - **Alert**: representa una alerta activa o resuelta, con estado, severidad y relación con un vehículo.
