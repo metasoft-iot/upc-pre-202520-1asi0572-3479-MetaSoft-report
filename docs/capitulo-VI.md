@@ -931,7 +931,7 @@ El **Sprint 1** del proyecto **SafeCar** se centró en establecer las bases de l
 
 ---
 
-![Sprint 1 - SafeCar](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-VI/assets/img/capitulo-VI/sprint%201.png)
+<img src="../assets/img/capitulo-VI/sprint 1.png" alt="Sprint 1 - SafeCar" style="width: 100%; max-width: 800px;">
 
 
 #### 6.2.1.4. Development Evidence for Sprint Review
