@@ -1333,7 +1333,14 @@ A continuación se presentan capturas de pantalla de las principales vistas desa
 <strong>Video demostrativo:</strong> Para una comprensión integral del trabajo realizado, se ha preparado un video que ilustra la navegación completa a través de las funcionalidades implementadas, mostrando los flujos de usuario desde la Landing Page hasta las principales operaciones dentro de la aplicación web.
 </p>
 
-**Enlace al video de demostración:** [*URL del video será agregada aquí*]
+<div align="center">
+  <img src="../assets/img/capitulo-VI/demo-execution-evidence-for-sprint-01.png" alt="Demo Execution Evidence - Sprint 1 SafeCar" width="800"/>
+  <p><em>Figura 18: Vista previa del video demostrativo del Sprint 1 mostrando las funcionalidades implementadas</em></p>
+</div>
+
+**Enlace al video de demostración:** [https://youtu.be/bzoLGLyBfWk](https://youtu.be/bzoLGLyBfWk)
+
+
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
