@@ -766,14 +766,46 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 
 #### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-| **Componente**                  | **Capa DDD**         | **Responsabilidad Clave**                                                                                                       | **Dependencias Críticas**                 |
-| ------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| **Telemetry Ingestion Gateway** | Interface (ACL)      | Consume mensajes crudos del broker (Kafka) y los convierte en `ProcessTelemetryDataCommand`. Gestiona la *DLQ*.                 | External Broker (Kafka / Event Hub)       |
-| **Telemetry Stream Processor**  | Application / Domain | Punto de control central. Orquesta la validación, el enriquecimiento, la gestión del estado y la publicación de eventos.        | `TelemetryStateStore`, `DeviceContextACL` |
-| **Data Validator / Enricher**   | Domain               | Implementa la lógica de negocio pura: chequeo de rangos (`DataValidator`) y adición de metadatos (`DataEnricher`).              | N/A (Pura lógica de dominio)              |
-| **Telemetry State Store**       | Infrastructure       | Persiste el estado del `TelemetryStream` (ej. viaje activo) con baja latencia para el procesador.                               | Redis / DynamoDB                          |
-| **Device Context ACL**          | Application (ACL)    | Implementa `ExternalDeviceContextFacade`. Traduce la consulta `DeviceId → VehicleId` y aplica políticas de caché / resiliencia. | External BC (Device Management)           |
-| **Domain Event Publisher**      | Infrastructure       | Garantiza la serialización Avro/JSON y la publicación fiable de eventos canónicos (`TelemetryNormalizedEvent`).                 | Internal Broker (Kafka / Topics)          |
+### A) Componentes y Responsabilidades
+
+| Componente | Capa | Responsabilidad Principal |
+|------------|------|-----------------------------|
+| **Telemetry Processing Facade** | Application | Coordina servicios de ingesta, validación, enriquecimiento y evaluación. Expone API simplificada al backend. |
+| **Telemetry Stream Listener (Ingestion Gateway)** | Infrastructure | Escucha tópicos de telemetría cruda (Kafka/EventHub), deserializa y valida formato básico. |
+| **Telemetry Processing Orchestrator** | Application | Orquesta el flujo de validación, enriquecimiento y generación de alertas. |
+| **Telemetry Validator Service** | Domain + Application | Aplica reglas de validación y consistencia sobre los datos crudos. |
+| **Telemetry Enrichment Service** | Application | Agrega contexto (vehículo, sensor, ubicación) desde otros BCs. |
+| **Alert Evaluation Engine** | Domain | Evalúa reglas configuradas para generar alertas. |
+| **Telemetry Repository** | Infrastructure | Persiste datos procesados y alertas. |
+| **External Vehicle Context Service (ACL)** | Application (Outbound) | Recupera información del BC de Flota de Vehículos para el enriquecimiento. |
+| **Domain Event Publisher** | Infrastructure | Publica eventos de dominio hacia otros BCs (ej. Alerting, Analytics). |
+
+---
+
+### B) Relaciones (Resumen)
+
+- **Listener → Orchestrator**: transmite telemetría cruda validada para su procesamiento.  
+- **Orchestrator → Validator / Enrichment / Evaluation Services**: ejecuta el flujo de negocio principal.  
+- **Enrichment → ExternalVehicleContextService**: obtiene metadatos de vehículo y dispositivo.  
+- **Evaluation → DomainEventPublisher**: emite eventos de alerta normalizados.  
+- **Orchestrator → Repository**: almacena telemetría procesada y trazabilidad de eventos.  
+
+---
+
+### C) Mapeo a Paquetes
+
+| Paquete | Clase / Servicio |
+|----------|----------------------|
+| `application/internal/facade` | `TelemetryProcessingFacade` |
+| `infrastructure/ingestion` | `TelemetryStreamListener` |
+| `application/internal/orchestrator` | `TelemetryProcessingOrchestrator` |
+| `application/internal/services` | `TelemetryValidatorService`, `TelemetryEnrichmentService`, `AlertEvaluationService` |
+| `application/outboundservices/acl` | `ExternalVehicleContextService` |
+| `infrastructure/persistence/jpa` | `TelemetryRepositoryImpl` |
+| `infrastructure/events` | `DomainEventPublisherImpl` |
+
+
+![Context Telemetry](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/chapter-IV/assets/img/capitulo-IV/context%20telemetry.png)
 
 
 #### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
