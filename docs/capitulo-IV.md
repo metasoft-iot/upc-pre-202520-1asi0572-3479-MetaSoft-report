@@ -623,7 +623,7 @@ Ubicación: `application/outboundservices/acl`
 El diagrama de clases ilustra el modelo de dominio del BC Device Management. Define el agregado `Device` como la pieza central, sus Value Objects asociados como `FirmwareVersion` y la enumeración `DeviceStatus`. También especifica los contratos (interfaces) que el dominio expone para la persistencia (`DeviceRepository`), servicios de dominio (`DeviceProvisioner`) y comunicación inter-BC (`ExternalVehicleContextFacade`), manteniendo el núcleo de negocio agnóstico a la implementación tecnológica.
 </p>
 
-<img src="/assets/img/capitulo-IV/db segurity.png" alt="BC Device Management Domain Class Diagram"/>
+<img src="/assets/img/capitulo-IV/DC device.png" alt="BC Device Management Domain Class Diagram"/>
 
 <b>2) Agregado y VOs</b>
 - **Device (Aggregate Root)**
@@ -649,7 +649,7 @@ El diagrama de clases ilustra el modelo de dominio del BC Device Management. Def
 El siguiente esquema de base de datos para MySQL soporta la persistencia del agregado `Device`. Está optimizado para consultas comunes, como buscar un dispositivo por su ID de serie o por el vehículo al que está asignado, y asegura la unicidad de los identificadores clave.
 </p>
 
-<img src="/assets/img/capitulo-IV/bc-device-management-database-diagram.png" alt="BC Device Management Database Design Diagram"/>
+<img src="/assets/img/capitulo-IV/db segurity.png" alt="BC Device Management Database Design Diagram"/>
 
 <b>2) Tablas principales</b>
 - **devices**
