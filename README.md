@@ -4,23 +4,16 @@
 
 # Universidad Peruana de Ciencias Aplicadas
 ### Ingeniería de Software
-### Curso: Desarrollo de Soluciones IOT (1ASI0572)
+### Curso: Desarrollo de Soluciones IOT (1ASI0572) - 3479
 
 ---
 
 ## "Informe de Trabajo Final"
 
-<<<<<<< HEAD
-**Startup:** MetaSoft  
-**Producto:** Por definir  
-**Docente:** Angel Augusto Velasquez Nuñez  
-**Ciclo:** 2025-02
-=======
 # "Informe de Trabajo Final"
 ## Docente: Angel Augusto Velasquez Nuñez
 ## Startup: MetaSoft
 ## Producto: SafeCar
->>>>>>> origin/docs/studio-outcome
 
 </div>
 
@@ -38,6 +31,7 @@
 | **Gonzalo Andre Zavala Quedena** | U202113656 |
 | **Anaely Zarely Burga Loarte** | U202118264 |
 
+UPC - 2520
 ---
 
 <br>
