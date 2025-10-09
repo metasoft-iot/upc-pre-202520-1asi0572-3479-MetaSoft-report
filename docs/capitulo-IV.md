@@ -6,13 +6,13 @@
 
 El <b>EventStorming</b> permite visualizar cómo diferentes usuarios interactúan con el sistema y qué eventos son generados, sirviendo como base para el diseño de módulos, definición de responsabilidades y validación de requerimientos funcionales.
 
-<img src="/assets/img/capitulo-IV/Level EventStorming.jpg" alt="Level EventStorming" width="1000"/>
+<img src="../assets/img/capitulo-IV/Level EventStorming.jpg" alt="Level EventStorming" width="1000"/>
 
 #### 4.1.1.1 Candidate Context Discovery
 
 En esta seccion se identifican los módulos o subdominios funcionales dentro de la solución SafeCar, agrupando los eventos, comandos y usuarios por áreas de responsabilidad.
 
-<img src="/assets/img/capitulo-IV/Candidate Context Discovery.jpg" alt="Candidate Context Discovery" width="1000"/>
+<img src="../assets/img/capitulo-IV/Candidate Context Discovery.jpg" alt="Candidate Context Discovery" width="1000"/>
 
 #### 4.1.1.2 Domain Message Flows Modeling
 
@@ -20,7 +20,7 @@ El Usuario utiliza la app/web de SafeCar para recibir datos de sensores IoT rela
 
 Si se confirma una condición crítica, se genera una alerta de mantenimiento (evento “Maintenance Alert Created”), la cual se envía al Notification System. Este sistema notifica al usuario en la app/web y, en caso necesario, también avisa al taller asignado para coordinar la atención preventiva.
 
-<img src="/assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
+<img src="../assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
 
 
 
@@ -29,66 +29,66 @@ Si se confirma una condición crítica, se genera una alerta de mantenimiento (e
 
 Maintenance Management
 
-<img src="/assets/img/capitulo-IV/Bounded Context Canvases.jpg" alt="Bounded Context Canvases" width="1000"/>
+<img src="../assets/img/capitulo-IV/Bounded Context Canvases.jpg" alt="Bounded Context Canvases" width="1000"/>
 
 Vehicle Management
 
-<img src="/assets/img/capitulo-IV/Bounded Context Vehicle.jpg" alt="Bounded Context Vehicle" width="1000"/>
+<img src="../assets/img/capitulo-IV/Bounded Context Vehicle.jpg" alt="Bounded Context Vehicle" width="1000"/>
 
 Service Catalog Management
 
-<img src="/assets/img/capitulo-IV/Bounded Context Menu.jpg" alt="Bounded Context Menu" width="1000"/>
+<img src="../assets/img/capitulo-IV/Bounded Context Menu.jpg" alt="Bounded Context Menu" width="1000"/>
 
 IoT Monitoring
 
-<img src="/assets/img/capitulo-IV/Iot monitoring.jpg" alt="Iot monitoring" width="1000"/>
+<img src="../assets/img/capitulo-IV/Iot monitoring.jpg" alt="Iot monitoring" width="1000"/>
 
 Headquarter Management
 
-<img src="/assets/img/capitulo-IV/Headquarter management.jpg" alt="Headquarter management" width="1000"/>
+<img src="../assets/img/capitulo-IV/Headquarter management.jpg" alt="Headquarter management" width="1000"/>
 
 Device Management
 
-<img src="/assets/img/capitulo-IV/device-management.png" alt="Device Management" width="1000"/>
+<img src="../assets/img/capitulo-IV/device-management.png" alt="Device Management" width="1000"/>
 
 Telemetry Processing
 
-<img src="/assets/img/capitulo-IV/telemetry-processing.png" alt="Telemetry Processing" width="1000"/>
+<img src="../assets/img/capitulo-IV/telemetry-processing.png" alt="Telemetry Processing" width="1000"/>
 
 Analytics & Recommendations
 
-<img src="/assets/img/capitulo-IV/analytics-recommendations.png" alt="Analytics & Recommendations" width="1000"/>
+<img src="../assets/img/capitulo-IV/analytics-recommendations.png" alt="Analytics & Recommendations" width="1000"/>
 
 Alerting
 
-<img src="/assets/img/capitulo-IV/alerting.png" alt="Alerting" width="1000"/>
+<img src="../assets/img/capitulo-IV/alerting.png" alt="Alerting" width="1000"/>
 
 Driver Engagement
 
-<img src="/assets/img/capitulo-IV/driver-engagement.png" alt="Driver Engagement" width="1000"/>
+<img src="../assets/img/capitulo-IV/driver-engagement.png" alt="Driver Engagement" width="1000"/>
 
 Workshop Operations
 
-<img src="/assets/img/capitulo-IV/workshop-operations.png" alt="Workshop Operations" width="1000"/>
+<img src="../assets/img/capitulo-IV/workshop-operations.png" alt="Workshop Operations" width="1000"/>
 
 Admin & Billing
 
-<img src="/assets/img/capitulo-IV/admin-billing.png" alt="Admin & Billing" width="1000"/>
+<img src="../assets/img/capitulo-IV/admin-billing.png" alt="Admin & Billing" width="1000"/>
 
 Security & Compliance
 
-<img src="/assets/img/capitulo-IV/security-compliance.png" alt="Security & Compliance" width="1000"/>
+<img src="../assets/img/capitulo-IV/security-compliance.png" alt="Security & Compliance" width="1000"/>
 
 Notification Gateway
 
-<img src="/assets/img/capitulo-IV/notification-gateway.png" alt="Notification Gateway" width="1000"/>
+<img src="../assets/img/capitulo-IV/notification-gateway.png" alt="Notification Gateway" width="1000"/>
 
 
 ### 4.1.2. Context Mapping
 
 Se describe las relaciones estructurales entre los **Bounded Contexts** de la plataforma, los **patrones DDD** aplicados y los **contratos** (eventos/APIs) que conectan los contextos.
 
-<img src="/assets/img/capitulo-IV/context-mapping.png" alt="Context mapping" width="1000"/>
+<img src="../assets/img/capitulo-IV/context-mapping.png" alt="Context mapping" width="1000"/>
 
 <table>
   <caption>Relaciones clave entre Bounded Contexts y patrones DDD</caption>
@@ -254,7 +254,7 @@ La arquitectura de software de <b>SafeCar</b> se ha diseñado aplicando el model
 Este diagrama ilustra el panorama general del ecosistema en el que se ubica SafeCar. Representa al sistema dentro de su contexto, mostrando los principales actores (conductores, mecánicos) y los sistemas externos con los que interactúa.
 </p>
 
-<img src="/assets/img/capitulo-IV/C4-Landscape-Diagram-SafeCar-Platform.png" alt="System Landscape Diagram"/>
+<img src="../assets/img/capitulo-IV/C4-Landscape-Diagram-SafeCar-Platform.png" alt="System Landscape Diagram"/>
 
 <br/>**Explicación:**
 <p align="justify">
@@ -266,7 +266,7 @@ SafeCar se posiciona como una plataforma IoT de mantenimiento vehicular intelige
 El <b>Context Diagram</b> representa la solución como una caja central y muestra a su alrededor a los usuarios y sistemas externos. De esta forma se comprende qué actores utilizan la plataforma y qué dependencias externas son necesarias.
 </p>
 
-<img src="/assets/img/capitulo-IV/system-context.svg" alt="Context Level Diagram" width="1000"/>
+<img src="../assets/img/capitulo-IV/context-diagram.png" alt="Context Level Diagram" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
@@ -276,6 +276,7 @@ El <b>Context Diagram</b> representa la solución como una caja central y muestr
 - **Visitor (Visitante):** Puede navegar por el sitio público y registrarse como conductor o mecánico.
 - **OpenAI Service:** Servicio externo utilizado para el análisis inteligente de datos, soporte en generación de reportes o procesamiento avanzado con IA.
 - **Twilio Service:** Servicio externo que permite el envío de correos electrónicos y notificaciones, asegurando la comunicación efectiva con los usuarios.
+- **Embedded Application:** Software embebido que se ejecuta en el microcontrolador instalado en el vehículo. Se encarga de comunicarse con la ECU a través del puerto OBD-II y con otros sensores, recopilar datos de diagnóstico y telemetría, procesarlos localmente y enviarlos de forma segura a la plataforma SafeCar. Además, puede recibir comandos remotos, actualizar su configuración.
 
 Con este nivel de representación, se obtiene una visión global de cómo SafeCar se conecta con sus usuarios y servicios complementarios, reforzando tanto el ecosistema de mantenimiento vehicular como la experiencia final.
 
@@ -284,7 +285,7 @@ Con este nivel de representación, se obtiene una visión global de cómo SafeCa
 El <b>Container Diagram</b> representa la arquitectura de alto nivel de la plataforma SafeCar, mostrando cómo se dividen las responsabilidades entre los diferentes contenedores de software, las tecnologías utilizadas y cómo se comunican entre sí y con los actores externos.
 </p>
 
-<img src="/assets/img/capitulo-IV/system-container.svg" alt="Container Diagram SafeCar" width="1000"/>
+<img src="../assets/img/capitulo-IV/container-diagram.png" alt="Container Diagram SafeCar" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
@@ -296,6 +297,7 @@ El <b>Container Diagram</b> representa la arquitectura de alto nivel de la plata
 - **SafeCar Database (MySQL):** Base de datos central que almacena usuarios, vehículos, reportes, citas y registros de mantenimiento.
 - **OpenAI Service (Servicio Externo):** Utilizado para análisis avanzado con IA, como generación de reportes inteligentes o recomendaciones personalizadas.
 - **Twilio Service (Servicio Externo):** Encargado de enviar notificaciones y correos electrónicos transaccionales a los usuarios.
+- **Device Ingestion Service:** Microservicio que actúa como puerta de enlace entre los dispositivos IoT y la nube.
 
 **Relaciones principales:**
 - Los **conductores** reciben alertas desde la app móvil y web.
@@ -314,7 +316,7 @@ Los <b>Deployment Diagrams</b> representan la arquitectura física de despliegue
 En SafeCar, el despliegue se ha diseñado considerando escalabilidad, disponibilidad y seguridad. La arquitectura aprovecha tanto infraestructura local como servicios en la nube para garantizar un rendimiento óptimo y la capacidad de manejar el crecimiento de usuarios y dispositivos IoT conectados.
 </p>
 
-<img src="/assets/img/capitulo-IV/Software-Architecture-Deployment-Diagrams.png" alt="Deployment Diagram SafeCar" width="1000"/>
+<img src="../assets/img/capitulo-IV/Software-Architecture-Deployment-Diagrams.png" alt="Deployment Diagram SafeCar" width="1000"/>
 
 
 ## 4.2. Tactical-Level Domain-Driven Design
@@ -611,7 +613,7 @@ Ubicación: `application/outboundservices/acl`
 
 <br/>
 
-<img src="/assets/img/capitulo-IV/bc-device managment.png" alt="BC Device Management Container C4"/>
+<img src="../assets/img/capitulo-IV/bc-device managment.png" alt="BC Device Management Container C4"/>
 
 ---
 #### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
@@ -695,32 +697,32 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 #### 4.2.2.2. Interface Layer
 
 > ### Ingestion Gateway (Listener)
-> **Componente:** `TelemetryStreamListener` (Ej. KafkaConsumer o EventHubsReceiver)  
+> **Componente:** `TelemetryStreamListener` (Ej. KafkaConsumer o EventHubsReceiver)
 >
 > ---
 >
-> **Propósito del BC**  
-> Este es el punto de entrada primario del *Bounded Context (BC)*.  
+> **Propósito del BC**
+> Este es el punto de entrada primario del *Bounded Context (BC)*.
 > **Responsabilidad clave:** Escuchar continuamente el topic de telemetría cruda, deserializar el mensaje (por ejemplo, de Avro, JSON o Protobuf) y validar el formato sintáctico básico.
 >
 > ---
 >
-> **Acción Central**  
-> El Listener NO realiza lógica de negocio compleja (como validación de rangos o deduplicación).  
-> Su única función es transformar el mensaje de entrada (`RawPayload`) en el Command del BC:  
+> **Acción Central**
+> El Listener NO realiza lógica de negocio compleja (como validación de rangos o deduplicación).
+> Su única función es transformar el mensaje de entrada (`RawPayload`) en el Command del BC:
 > `ProcessTelemetryDataCommand`.
 >
 > ---
 >
-> **Resources (DTOs)**  
-> - `RawDataPointResource`: Representa el payload deserializado del broker de mensajes.  
->   Incluye metadatos (como offset y partition) esenciales para la semántica "At-Least-Once".  
+> **Resources (DTOs)**
+> - `RawDataPointResource`: Representa el payload deserializado del broker de mensajes.
+>   Incluye metadatos (como offset y partition) esenciales para la semántica "At-Least-Once".
 > - `NormalizationErrorResource`: DTO específico para serializar errores de formato y enviarlos a la DLQ.
 >
 > ---
 >
-> **Controlador REST**  
-> No aplica. Este BC es event-driven y stream-based.  
+> **Controlador REST**
+> No aplica. Este BC es event-driven y stream-based.
 > Si se requiere una consulta síncrona de diagnóstico, podría exponerse:
 >
 > ```
@@ -730,19 +732,19 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 >
 > ---
 >
-> **Manejo de Errores**  
-> Estrategia: Dead Letter Queue (DLQ)  
-> - Los errores manejables (formato JSON inválido, datos ininteligibles) no deben detener el stream.  
-> - Se encapsulan en un `NormalizationErrorResource` y se envían de forma asíncrona a un DLQ Topic dedicado.  
+> **Manejo de Errores**
+> Estrategia: Dead Letter Queue (DLQ)
+> - Los errores manejables (formato JSON inválido, datos ininteligibles) no deben detener el stream.
+> - Se encapsulan en un `NormalizationErrorResource` y se envían de forma asíncrona a un DLQ Topic dedicado.
 > - Esto permite su revisión o reprocesamiento manual, garantizando la resiliencia del flujo principal.
 >
 > ---
 >
-> **Protocolo**  
-> Modelo: Asíncrono / Push Model  
-> Basado en message brokers como Kafka, Event Hubs o Kinesis, asegurando:  
-> - Escalabilidad horizontal  
-> - Capacidad de absorber picos de tráfico  
+> **Protocolo**
+> Modelo: Asíncrono / Push Model
+> Basado en message brokers como Kafka, Event Hubs o Kinesis, asegurando:
+> - Escalabilidad horizontal
+> - Capacidad de absorber picos de tráfico
 > - Sin backpressure directo hacia los dispositivos IoT
 
 
@@ -811,7 +813,7 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 ### 4.2.3. Bounded Context: Alerting
 - Motor de Reglas y Gestión de Incidentes Críticos.
 - Responsable de evaluar la criticidad de los datos entrantes (telemetría/insights), aplicar deduplicación y supresión (invariante: prevenir la “Tormenta de Alertas”), y gestionar el ciclo de vida de la alerta hasta su resolución.
-  
+
 #### 4.2.3.1. Domain Layer
 
 | Concepto                   | Detalles Robustos de DDD Táctico                                                                                                                                                    |
@@ -1339,7 +1341,7 @@ Ubicación: `application/outboundservices/acl`
 El diagrama modela el núcleo de negocio del BC Analytics & Recommendations dentro del monolito. Muestra entidades/agregado, value objects, interfaces (servicios de dominio, repositorios y façade inter-BC), la enumeración de riesgo y los eventos de dominio, con atributos/métodos y alcance (+ público, − privado), así como direcciones y multiplicidades en las relaciones.
 </p>
 
-<img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-domain-class-diagram.png" alt="BC Analytics and Recommendations Domain Class Diagram"/>
+<img src="../assets/img/capitulo-IV/bc-analytics-and-recommendations-domain-class-diagram.png" alt="BC Analytics and Recommendations Domain Class Diagram"/>
 
 <b>2) Agregado y entidades (Core Model)</b>
 - **DriverProfile (Aggregate Root)**
@@ -1413,7 +1415,7 @@ Interfaces **del dominio**:
 El esquema relacional define cómo se almacenan los objetos del dominio *Analytics & Recommendations* en **MySQL**. Se ha diseñado para mantener la integridad referencial, permitir consultas eficientes y soportar la evolución del modelo sin comprometer las reglas del dominio.
 </p>
 
-<img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-database-diagram.png" alt="BC Analytics and Recommendations Database Design Diagram"/>
+<img src="../assets/img/capitulo-IV/bc-analytics-and-recommendations-database-diagram.png" alt="BC Analytics and Recommendations Database Design Diagram"/>
 
 <b>2) Tablas principales</b>
 - **driver_profiles**
@@ -1637,7 +1639,7 @@ Flyway/Liquibase (DDL + índices); `PersistenceConfig`, `ClientsConfig`.
 
 #### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-<img src="/assets/img/capitulo-IV/Bounded Context Software Architecture Component Level Diagrams.png" alt="Bounded Context Software Architecture Component Level Diagrams" width="1000"/>
+<img src="../assets/img/capitulo-IV/Bounded Context Software Architecture Component Level Diagrams.png" alt="Bounded Context Software Architecture Component Level Diagrams" width="1000"/>
 
 Breve guía de lectura:
 - **Interface:** controllers → orquestan command/query services y ensamblan DTOs.
@@ -1650,7 +1652,7 @@ Breve guía de lectura:
 #### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
 #### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
 
-<img src="/assets/img/capitulo-IV/Bounded Context Domain Layer Class Diagrams.png" alt="Bounded Context Software Architecture Component Level Diagrams" width="1000"/>
+<img src="../assets/img/capitulo-IV/Bounded Context Domain Layer Class Diagrams.png" alt="Bounded Context Software Architecture Component Level Diagrams" width="1000"/>
 
 Notas: composición **1—N** de `EngagementProfile` con `Challenge`, `CoachingSession`, `Reward`; VOs con invariantes; interfaces de dominio separadas de implementaciones; eventos asociados a sus entidades.
 
@@ -1658,7 +1660,7 @@ Notas: composición **1—N** de `EngagementProfile` con `Challenge`, `CoachingS
 
 ##### 4.2.5.6.2. Bounded Context Database Design Diagram
 
-<img src="/assets/img/capitulo-IV/Bounded Context Database Design Diagram.png" alt=" Bounded Context Database Design Diagram" width="1000"/>
+<img src="../assets/img/capitulo-IV/Bounded Context Database Design Diagram.png" alt=" Bounded Context Database Design Diagram" width="1000"/>
 
 Descripción breve del diseño y constraints:
 - **Tablas:** `engagement_profiles` (único por `driver_id`), `challenges`, `coaching_sessions`, `rewards` con FK a perfil.
@@ -1792,7 +1794,7 @@ Migraciones con Flyway/Liquibase. Índices: `(workshop_id, status, slot_start)`.
 - **Persistence Adapter** (Infrastructure): JPA para Workshop/WorkOrder.
 - **Driver ACL / Billing ACL** (Application outbound): integración inter-BC.
 
-<img src="/assets/img/capitulo-IV/BC-Workshop.png" alt="BC Workshop Container C4"/>
+<img src="../assets/img/capitulo-IV/BC-Workshop.png" alt="BC Workshop Container C4"/>
 
 #### 4.2.6.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1943,7 +1945,7 @@ Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `p
 - **Payment Gateway Adapter** — Stripe/MercadoPago (ACL).
 - **Billing API** — controladores REST.
 
-<img src="/assets/img/capitulo-IV/BC-Billing.png" alt="BC Billing Container C4"/>
+<img src="../assets/img/capitulo-IV/BC-Billing.png" alt="BC Billing Container C4"/>
 
 #### 4.2.7.6. Bounded Context Software Architecture Code Level Diagrams
 
