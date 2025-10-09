@@ -306,6 +306,7 @@ Github Collaboration Insights proporciona un cronograma que muestra las principa
 </p>
 
 * Janover Gonzalo Saldaña Vela (JanoverSaldana)
+* Gonzalo Andre Zavala Quedena (GonzaloQu3dena)
 * Hardie Alfonso Holguin Gamarra (HOLGUINUPC)
 * Javier Kenyi Mendoza Solis (Kenyi-Mendoza-Solis)
 * Gustavo Jandroel Aguirre Rodríguez  (Jandroel)
@@ -327,37 +328,49 @@ Se dividieron las siguientes ramas para la colaboración en el proyecto:
 ### ENTREGABLE TB1
 
 <p align="justify">
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el repositorio de nuestro primer sprint. Estos gráficos ofrecen una representación visual de la cantidad de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado en cada uno de los commits.
+A continuación se presentan los gráficos de colaboración de los integrantes del equipo durante el desarrollo del primer entregable (TB1) del proyecto SafeCar. Estos gráficos de GitHub Insights proporcionan un análisis detallado y visual de la participación colaborativa de cada miembro del equipo, documentando la evolución cronológica de las contribuciones realizadas al repositorio. La información incluye métricas específicas como la frecuencia de commits, la cantidad de líneas de código agregadas y eliminadas, la distribución temporal de las contribuciones, y los patrones de trabajo colaborativo que evidencian el compromiso y la dedicación del equipo durante la fase inicial del proyecto. Estos datos permiten evaluar objetivamente la participación equitativa de todos los integrantes en el desarrollo de los Capítulos I, II, III y IV del informe, así como en la implementación de metodologías ágiles y Domain-Driven Design.
 </p>
 
 **Gráficos de colaboración de los integrantes del equipo**
 
-![tf-Network-graph.png](./assets/img/master/tb1-Network-graph.png)
+**Network Graph - TB1:**
+El gráfico de red muestra la estructura de ramas y merges del repositorio durante el desarrollo del TB1. Visualiza cómo se han integrado las contribuciones de diferentes ramas (chapter-I, chapter-II, chapter-III, chapter-IV, develop) siguiendo la metodología GitFlow, evidenciando la organización sistemática del trabajo colaborativo y la sincronización efectiva entre los diferentes capítulos desarrollados por el equipo.
 
-![tf-pulse.png](./assets/img/master/tb1-pulse.png)
+![tb1-Network-graph.png](./assets/img/master/tb1-Network-graph.png)
 
-<<<<<<< HEAD
-![tf-clone.png](./assets/img/master/tb1-contributors.png)
-=======
-![Imagen 3]()
+**Pulse Graph - TB1:**
+El gráfico de pulso presenta la actividad del repositorio a lo largo del tiempo durante el TB1, mostrando la frecuencia de commits, pull requests, y issues. Este gráfico permite identificar los períodos de mayor intensidad de trabajo, la consistencia en las contribuciones del equipo, y la distribución temporal de las actividades de desarrollo, reflejando el ritmo sostenido de trabajo durante la fase inicial del proyecto.
 
-### ENTREGABLE TRABAJO PARCIAL (TP)
+![tb1-pulse.png](./assets/img/master/tb1-pulse.png)
+
+**Contributors Graph - TB1:**
+El gráfico de contribuidores detalla las métricas individuales de cada miembro del equipo, incluyendo el número de commits realizados, líneas de código agregadas y eliminadas por cada integrante. Esta visualización permite evaluar objetivamente la participación equitativa de todos los miembros (Janover, Hardie, Javier K., Gustavo, Javier S., Gonzalo, Anaely) en el desarrollo de los capítulos fundamentales del proyecto SafeCar.
+
+![tb1-contributors.png](./assets/img/master/tb1-contributors.png)
+
+
+### ENTREGABLE TP
 
 <p align="justify">
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
-repositorio de nuestro segundo sprint. Estos gráficos ofrecen una representación visual de la cantidad
-de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
-cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
-en cada uno de los commits.
+Los siguientes gráficos de colaboración corresponden al desarrollo del Trabajo Parcial (TP), que representa la segunda fase de entrega del proyecto SafeCar. Durante este período, el equipo se enfocó en la implementación técnica y el diseño de interfaces de usuario, consolidando los fundamentos establecidos en el TB1. Los gráficos de GitHub Insights muestran un análisis comprehensivo de la evolución del trabajo colaborativo, incluyendo la distribución de responsabilidades en el desarrollo del Capítulo V (Solution UI/UX Design) y Capítulo VI (Product Implementation, Validation & Deployment). Las métricas presentadas reflejan la intensidad del trabajo realizado durante el Sprint 1, evidenciando la implementación de sistemas de autenticación, desarrollo de interfaces de usuario, configuración de entornos de desarrollo, y la creación de prototipos funcionales. Estos datos demuestran la madurez alcanzada por el equipo en la gestión de proyectos multidisciplinarios y la integración efectiva entre diseño y desarrollo técnico.
 </p>
 
-![Imagen 1]()
+**Gráficos de colaboración de los integrantes del equipo**
 
-![Imagen 2]()
+**Network Graph - TP:**
+El gráfico de red del Trabajo Parcial ilustra la evolución de la estructura de ramas durante la implementación del Sprint 1, mostrando la integración de las ramas chapter-V, chapter-VI y las ramas específicas de desarrollo técnico. Refleja la complejidad aumentada del proyecto con múltiples flujos de trabajo paralelos para el desarrollo de interfaces UI/UX, implementación técnica, y configuración de entornos de desarrollo.
 
-![Imagen 3]()
+![tp-Network-graph.png](./assets/img/master/tp-Network-graph.png)
 
->>>>>>> develop
+**Pulse Graph - TP:**
+El gráfico de pulso del TP demuestra un incremento significativo en la actividad del repositorio comparado con el TB1, evidenciando la intensidad del trabajo durante la implementación del Sprint 1. Muestra picos de actividad correspondientes a la entrega de wireframes, mockups, prototipos, configuración de entornos de desarrollo, y la implementación de funcionalidades core del sistema SafeCar.
+
+![tp-pulse.png](./assets/img/master/tp-pulse.png)
+
+**Contributors Graph - TP:**
+El gráfico de contribuidores del TP revela la evolución del equipo hacia roles más especializados, mostrando contribuciones diferenciadas según las responsabilidades asignadas: diseño UI/UX (Capítulo V), implementación técnica (Capítulo VI), y desarrollo de componentes específicos. Las métricas reflejan la madurez alcanzada por el equipo en la gestión de proyectos multidisciplinarios y la efectiva coordinación entre diseño y desarrollo.
+
+![tp-contributors.png](./assets/img/master/tp-contributors.png)
 
 ## Tabla de Contenido
 
