@@ -227,6 +227,7 @@ Para el sistema de navegación hemos preferido mantener una navegación jerárqu
 
 ### 5.3.2. Landing Page Mock-up
 
+
 ## 5.4. Applications UX/UI Design
 
 ### 5.4.1. Applications Wireframes
@@ -332,11 +333,12 @@ Los diagramas de Wireflow elaborados para SafeCar muestran de forma visual cómo
 
 El diagrama de wireflow para el segmento de talleres mecánicos en SafeCar representa de manera detallada el flujo de interacción del usuario desde el proceso de inicio de sesión o registro hasta la gestión de sus operaciones dentro del sistema. Este recorrido comienza cuando el mecánico accede a la plataforma, donde puede iniciar sesión con sus credenciales o, en caso de ser un nuevo usuario, crear una cuenta específica para talleres afiliados. Una vez registrado, el sistema lo redirige automáticamente al tablero principal (dashboard).
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20login.jpg" alt="Wireframe taller mecanico login" width="1000px">
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20login.jpg" alt="Wireframe taller mecanico login" width="1000px"></div>
 
 Desde este tablero, el usuario visualiza una interfaz central que agrupa las herramientas esenciales para la gestión diaria del taller, divididas en tres módulos principales: Solicitudes, Reportes y Verificadores.
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20funciones.jpg" alt="Wireframe taller mecanico funciones" width="1000px">
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20funciones.jpg" alt="Wireframe taller mecanico funciones" width="1000px"></div>
 
 En la sección Solicitudes, el mecánico accede a una lista organizada de las citas solicitadas por los conductores, incluyendo información clave como nombre del cliente, tipo de servicio, modelo y color del vehículo, fecha y hora de la cita, además del estado actual de la solicitud. Desde esta pantalla también puede aceptar, reprogramar o rechazar citas según la disponibilidad del taller.
 
@@ -354,6 +356,77 @@ Por último, la sección de Verificadores integra los datos enviados por los dis
 </div>
 
 ### 5.4.3. Applications Mock-ups
+
+#### Web Application Mock-ups
+Cada uno de los siguientes prototipos resalta los aspectos esenciales de la interacción con el usuario y los componentes del diseño de la interfaz, con especial atención al diseño inclusivo y a la organización de la información. El sistema de diseño se ha implementado de forma uniforme en todas las pantallas para garantizar una experiencia de usuario coherente.
+
+
+#### Pantalla de Login
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/mock-1-login.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+</p>
+
+Interfaz de acceso al sistema SafeCar, dividida en dos secciones:  
+- Panel izquierdo: muestra un mensaje motivacional e imagen alusiva al entorno automotriz, reforzando la identidad del sistema.  
+- Panel derecho: contiene el formulario de inicio de sesión con campos claros y botones destacados para Login y Sign up.  
+
+El diseño utiliza una paleta azul y blanca, enfocada en la claridad, accesibilidad y profesionalismo, ofreciendo una experiencia de usuario limpia y moderna.
+
+
+#### Pantalla de Registro de Taller
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/mock-2-register.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+</p>
+
+Formulario de registro para crear una cuenta de taller en SafeCar.  
+Incluye secciones diferenciadas para información comercial y de seguridad, con campos claros para datos como nombre del taller, RUC, dirección, correo y teléfono.  
+
+El diseño mantiene una estructura limpia y ordenada, utilizando tonos azules y grises suaves para guiar la vista y destacar el botón principal de acción "Create Workshop Account".
+
+
+#### Pantalla de Gestión de Solicitudes de Servicio
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/mock-3-service.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+</p>
+
+Interfaz que permite administrar citas y solicitudes de servicio automotriz de los clientes.  
+Presenta una tabla con información clave como nombre, teléfono, placa, marca, tipo de servicio y estado.  
+
+Incluye funciones de búsqueda, filtrado, eliminación y exportación de datos, además de un menú lateral con accesos rápidos.  
+El diseño prioriza la organización y legibilidad mediante el uso de tonos azules, botones contrastantes y jerarquía visual clara.
+
+
+#### Pantalla de Historial de Servicios
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/mock-4-history.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+</p>
+
+Muestra el registro completo de mantenimientos y reparaciones realizados a los vehículos.  
+Incluye una tabla con datos como placa, modelo, propietario, tipo de servicio, fecha, kilometraje y taller.  
+
+Cuenta con funciones de búsqueda, filtrado y exportación, permitiendo una gestión eficiente del historial.  
+El diseño mantiene coherencia visual con el resto del sistema mediante el uso de tonos azules, íconos y botones consistentes.
+
+
+#### Pantalla de Detalle de Cita
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/mock-5-appointment.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+</p>
+
+Permite visualizar y gestionar la información completa de una solicitud de servicio.  
+Muestra datos del cliente, vehículo y servicio solicitado, junto con el estado de la cita y el mecánico asignado.  
+
+Incluye campos para observaciones y opciones para cambiar el técnico responsable.  
+El diseño utiliza tarjetas organizadas y colores contrastantes para resaltar secciones clave, manteniendo la coherencia visual del sistema SafeCar.
+
+
+
+
 ### 5.4.4. Applications User Flow Diagrams
   
 ## **5.5. Applications Prototyping**
