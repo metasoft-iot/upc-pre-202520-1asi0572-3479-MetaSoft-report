@@ -865,17 +865,50 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 
 #### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
-| **Clase/Interface**              | **Tipo**                        | **Rol**                                                                            | **Relaciones y Multiplicidad**                                                    |
-| -------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| **Alert**                        | Aggregate Root                  | Implementa la Máquina de Estado Finito de la alerta (transición de `AlertStatus`). | `Composition (1) → (0..*) AlertHistoryEntry` <br> `Uses (1) → (1) SuppressionKey` |
-| **AlertHistoryEntry**            | Entidad                         | Registro inmutable de cada cambio o acción.                                        | `Belongs to (FK) → Alert`                                                         |
-| **SuppressionKey**               | Value Object                    | Clave compuesta para deduplicación (`Vehicle ID + Rule ID + Time Window`).         | `Enforced by AlertDeduplicator`                                                   |
-| **AlertDeduplicator**            | Servicio de Dominio (Interface) | Lógica para buscar un duplicado activo o reciente.                                 | `Uses → AlertRepository`                                                          |
-| **EscalationPolicyMatcher**      | Servicio de Dominio (Interface) | Determina el canal y objetivo de notificación.                                     | `Returns → NotificationPolicyVO`                                                  |
-| **AlertRepository**              | Puerto (Interface)              | Contrato para persistencia transaccional del agregado.                             | `Persists → Alert`                                                                |
-| **ExternalNotificationFacade**   | Puerto (Interface)              | Envío de comandos al BC de Notificación.                                           | `Accepts → NotificationCommand (DTO)`                                             |
-| **MaintenanceAlertCreatedEvent** | Evento de Dominio               | Señal accionable (post-deduplicación).                                             | `About → Alert`                                                                   |
+- A) Componentes clave y responsabilidades
 
+| **Componente**                          | **Capa**         | **Responsabilidad principal**                                                        |
+| --------------------------------------- | ---------------- | ------------------------------------------------------------------------------------ |
+| **Inbound Alert Listener**              | *Interface*      | Consume eventos de telemetría/insights y los transforma para evaluación de reglas.   |
+| **Alert Management Controller**         | *Interface*      | API REST para gestionar el ciclo de vida de alertas (*ACK*, *RESOLVE*).              |
+| **Rule Evaluation Handler**             | *Application*    | Ejecuta reglas y despacha el comando de creación de alerta.                          |
+| **Alert Creation Service**              | *Application*    | Gestiona deduplicación, persistencia del agregado alerta y publicación de eventos.   |
+| **Notification Trigger Handler**        | *Application*    | Responde a alertas creadas, aplica política de escalamiento y envía notificaciones.  |
+| **External Notification Service (ACL)** | *Outbound*       | Convierte el modelo **Alert** a comandos de notificación para el BC externo.         |
+| **Alert Deduplicator**                  | *Domain*         | Lógica para buscar alertas activas o recientes usando *suppression key*.             |
+| **Escalation Policy Matcher**           | *Domain*         | Decide canal/destino de notificación según la regla de alerta.                       |
+| **Alert Repository Impl**               | *Infrastructure* | Persiste alertas e historial. Implementa patrón *Outbox* para publicación confiable. |
+| **Alert Rule Engine Impl**              | *Infrastructure* | Motor de reglas dinámicas (por ejemplo, **Drools / MVEL**).                          |
+| **Transactional Event Publisher**       | *Infrastructure* | Publica eventos de dominio mediante el patrón *Outbox*.                              |
+
+- B) Relaciones esenciales
+  
+Telemetry BC → Inbound Alert Listener → Rule Evaluation Handler
+
+Rule Evaluation Handler → Alert Rule Engine Impl → Alert Creation Service
+
+Alert Creation Service → Alert Deduplicator, Alert Repository Impl, Transactional Event Publisher
+
+Notification Trigger Handler → Escalation Policy Matcher → External Notification Service → Notification Gateway BC
+
+Alert Management Controller → Alert Creation Service / Alert Repository Impl
+
+- C) Paquetes sugeridos
+
+| **Ruta del paquete**         | **Componentes incluidos**                         |
+| ---------------------------- | ------------------------------------------------- |
+| `interfaces/inbound`         | InboundAlertListener                              |
+| `interfaces/rest`            | AlertManagementController                         |
+| `application/handlers`       | RuleEvaluationHandler, NotificationTriggerHandler |
+| `application/services`       | AlertCreationService                              |
+| `application/outbound/acl`   | ExternalNotificationService                       |
+| `domain/services`            | AlertDeduplicator, EscalationPolicyMatcher        |
+| `infrastructure/persistence` | AlertRepositoryImpl                               |
+| `infrastructure/rules`       | AlertRuleEngineImpl                               |
+| `infrastructure/events`      | TransactionalEventPublisher                       |
+
+
+![Alerting Componente Vista Detallada](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/chapter-IV/assets/img/capitulo-IV/AlertingComponenteVistaDetallada.png)
 
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 
