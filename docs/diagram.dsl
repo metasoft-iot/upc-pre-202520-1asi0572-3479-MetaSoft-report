@@ -9,8 +9,7 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
         // --- External Services
         openAiService = softwareSystem "OpenAI Service" "External service for the use of Artificial Intelligence." "External"
         twilioService = softwareSystem "Twilio Service" "External service for sending emails." "External"
-        iotHubService = softwareSystem "Azure/AWS IoT Hub" "External service for IoT device provisioning and management." "External"
-
+        embeddedApp   = softwareSystem "Embedded application" "Embedded vehicle system (microcontroller + OBD/sensors)" "External"
 
         safeCarPlatform = softwareSystem "SafeCar Platform" "IoT platform for smart vehicle maintenance." {
             website = container "SafeCar Website" "Client-site safeCar application executed in the user's browser." "HTML, JavaScript and Tailwindcss v4"
@@ -42,10 +41,9 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
                     // --- Infrastructure (Device Management)
                 deviceRepo = component "Device Repository" "Infra adapter for DeviceRepository (JPA)." "Spring Data JPA" "Repository"
                     // --- External clients, ACL and Events (Device Management)
-                iotHubClient = component "IoT Hub Client" "Encapsulates calls to the external Azure/AWS IoT Hub." "Java HTTP Client"
                 externalVehicleContextService = component "External Vehicle Context Service (ACL)" "Implements ExternalVehicleContextFacade to query other BCs safely (e.g., vehicle existence)." "Java, Spring Boot" "Facade"
             }
-
+            iotHubClient = container "Device Ingestion Service" "Service that receives and persists data sent by the vehicle's IoT devices." "Python"
             mobileApp = container "SafeCar Mobile Application" "Mobile app with notifications for critical failures, efficient driving tips, and real-time status." "Flutter"
             mobileDB = container "Mobile SQLite Database" "Stores a subset of user data for performance on the mobile device (SQLite)." "SQLite" "Database"
         }
@@ -61,23 +59,25 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
         visitor -> safeCarPlatform "Browses public content (landing page, plans information)"
         safeCarPlatform -> openAiService "Processes and analyzes information"
         safeCarPlatform -> twilioService "Send emails by"
-        safeCarPlatform -> iotHubService "Provisions and manages IoT devices"
+        safeCarPlatform -> embeddedApp "exchanges data and diagnostic commands"
 
         // --- Container
         visitor -> website "Visits landing page and product information"
         website -> webApp "Redirects visitors to the SafeCar Web Application"
 
         mobileApp -> mobileDB "Caches and retrieves local data for offline use"
+        mobileApp -> backend "Sends user requests for recommendations, scheduling and alerting"
 
         driver -> mobileApp "Receives alerts, tips, and monitors vehicle status"
         mechanic -> webApp "Manages vehicles and maintenance appointments"
 
         webApp -> backend "Sends user requests for diagnostics, scheduling, and data management"
         backend -> database "Persists and retrieves SafeCar platform data"
+        iotHubClient -> database "Persists IoT data"
 
         backend -> openAiService "Requests AI-based analysis and recommendations"
         backend -> twilioService "Sends notifications and transactional emails"
-        backend -> iotHubService "Manages device lifecycle in the IoT platform"
+        iotHubClient -> embeddedApp "Manages device lifecycle in the IoT platform"
 
         // --- Components (Relations) : Analytics and Recommendations
         analyticsFacade -> driverProfileComponent "Delegates driver profile operations"
@@ -105,7 +105,6 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
             //--
         deviceComponent -> deviceRepo "Uses"
         deviceComponent -> iotHubClient "Provisions devices via"
-        iotHubClient -> iotHubService
         deviceComponent -> externalVehicleContextService "Validates vehicle existence"
             // --- publisher
         deviceComponent -> domainEventPublisher "Publishes domain events"
@@ -130,13 +129,14 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
         }
 
         component backend "BC-DeviceManagementComponents" {
-            include deviceManagementFacade deviceComponent deviceRepo iotHubClient externalVehicleContextService domainEventPublisher database iotHubService
+            include deviceManagementFacade deviceComponent deviceRepo iotHubClient externalVehicleContextService domainEventPublisher database
             autolayout tb
         }
 
         styles {
             element "Person" {
                 shape Person
+                color #000000
                 background #d1cc41
             }
 
@@ -178,7 +178,6 @@ workspace "SafeCar Platform" "Platform for smart vehicle maintenance" {
         scope softwaresystem
     }
 }
-
 
 
 
