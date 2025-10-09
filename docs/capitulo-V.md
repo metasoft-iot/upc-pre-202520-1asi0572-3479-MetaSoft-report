@@ -233,10 +233,15 @@ Los diagramas de Wireflow elaborados para SafeCar muestran de forma visual cómo
 
 El diagrama de wireflow para el segmento de talleres mecánicos en SafeCar representa de manera detallada el flujo de interacción del usuario desde el proceso de inicio de sesión o registro hasta la gestión de sus operaciones dentro del sistema. Este recorrido comienza cuando el mecánico accede a la plataforma, donde puede iniciar sesión con sus credenciales o, en caso de ser un nuevo usuario, crear una cuenta específica para talleres afiliados. Una vez registrado, el sistema lo redirige automáticamente al tablero principal (dashboard).
 
-
+<div align="center" style="margin-top: 20px;">
+  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20login.jpg" 
+       alt="Wireframe taller mecanico login" width="1000px">
 
 Desde este tablero, el usuario visualiza una interfaz central que agrupa las herramientas esenciales para la gestión diaria del taller, divididas en tres módulos principales: Solicitudes, Reportes y Verificadores.
 
+<div align="center" style="margin-top: 20px;">
+  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20funciones.jpg" 
+       alt="Wireframe taller mecanico funciones" width="1000px">
 
 En la sección Solicitudes, el mecánico accede a una lista organizada de las citas solicitadas por los conductores, incluyendo información clave como nombre del cliente, tipo de servicio, modelo y color del vehículo, fecha y hora de la cita, además del estado actual de la solicitud. Desde esta pantalla también puede aceptar, reprogramar o rechazar citas según la disponibilidad del taller.
 
@@ -362,6 +367,7 @@ Por último, la sección de Verificadores integra los datos enviados por los dis
 ### 5.4.4. Applications User Flow Diagrams
   
 ## **5.5. Applications Prototyping**
+
 
 
 
