@@ -2488,3 +2488,25 @@ El objetivo de negocio principal consiste en reducir en un 40 % los fallos mecá
 	</tbody>
 </table>
 <!-- FIN: Tabla de User Stories -->
+
+
+## Product Backlog de *SafeCar*
+
+El **Product Backlog de SafeCar** es una lista priorizada de funcionalidades clave, organizada en un tablero Agile con la **Visión** general y tres niveles de planificación: *Product Backlog*, *Sprint 1* y *Sprint 2*.  
+El foco principal está en el **conductor**, su **seguridad** y el **diagnóstico inteligente del vehículo**.
+
+---
+
+### Enfoques Principales
+
+- **Alertas y Diagnóstico (Product Backlog):**  
+  Funcionalidades críticas para recibir alertas en tiempo real, consultar historial, ajustar preferencias de notificación y acceder al diagnóstico del vehículo.
+
+- **Gestión de Cuenta (Sprint 1):**  
+  Incluye login, registro, actualización de credenciales y cierre de sesión seguro.
+
+- **Usabilidad (Sprint 2):**  
+  Mejora la experiencia de usuario con un dashboard de resumen y la opción de mantener sesión activa.
+
+---
+![Product Backlog SafeCar](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-III/assets/img/capitulo-III/product%20blacklog.png)
