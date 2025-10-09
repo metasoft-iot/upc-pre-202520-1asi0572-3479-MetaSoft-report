@@ -1214,15 +1214,221 @@ La implementación de pruebas automatizadas está planificada para el Sprint 2, 
 
 #### 6.2.1.6. Execution Evidence for Sprint Review
 
+<p align="justify">
+El Sprint 1 logró establecer la base funcional completa del proyecto SafeCar, implementando una Landing Page responsive con soporte bilingüe (español/inglés) y los módulos principales de la aplicación web. Se desarrollaron funcionalidades integrales desde la autenticación de usuarios hasta la gestión avanzada de vehículos con capacidades IoT.
+</p>
 
+<p align="justify">
+Las vistas implementadas abarcan login y registro de usuarios, gestión de citas de mantenimiento con detalles, seguimiento del historial de reparaciones vehiculares, y un sistema completo de gestión de vehículos que incluye telemetría en tiempo real, análisis de datos operacionales e información de dispositivos IoT integrados.
+</p>
+
+<p align="justify">
+A continuación se presentan capturas de pantalla de las principales vistas desarrolladas, demostrando la calidad visual y funcional lograda en cada componente del sistema.
+</p>
+
+**Principales vistas implementadas:**
+
+- **Landing Page:** Página principal with navegación, secciones informativas, planes y contacto
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/hero-landing-page.png" alt="Hero Section - Landing Page SafeCar" width="800"/>
+    <p><em>Figura 1: Sección Hero de la Landing Page con navegación principal y call-to-action</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/Benefits-landing-page.png" alt="Benefits Section - Landing Page SafeCar" width="800"/>
+    <p><em>Figura 2: Sección de beneficios destacando las características principales del sistema</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/about-the-app-landing-page.png" alt="About the App Section - Landing Page SafeCar" width="800"/>
+    <p><em>Figura 3: Sección informativa sobre la aplicación SafeCar</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/plans-landing-page.png" alt="Plans Section - Landing Page SafeCar" width="800"/>
+    <p><em>Figura 4: Sección de planes y precios con opciones de suscripción</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/testimonials-landing-page.png" alt="Testimonials Section - Landing Page SafeCar" width="800"/>
+    <p><em>Figura 5: Sección de testimonios de usuarios</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/contact-us-landing-page.png" alt="Contact Us Section - Landing Page SafeCar" width="800"/>
+    <p><em>Figura 6: Sección de contacto con formulario y información de contacto</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/about-the-team-landing-page.png" alt="About the Team Section - Landing Page SafeCar" width="800"/>
+    <p><em>Figura 7: Sección sobre el equipo de desarrollo MetaSoft</em></p>
+  </div>
+
+- **Autenticación:** Formularios de login y registro de usuarios
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/login-web-application.png" alt="Login Interface - SafeCar Web Application" width="800"/>
+    <p><em>Figura 8: Interfaz de inicio de sesión de la aplicación web SafeCar</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/sign-up-web-application.png" alt="Sign Up Interface - SafeCar Web Application" width="800"/>
+    <p><em>Figura 9: Interfaz de registro de usuarios de la aplicación web SafeCar</em></p>
+  </div>
+
+- **Gestión de Citas:** Interfaces para programación, visualización y detalles de citas de mantenimiento
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/appointments-web-application.png" alt="Appointments Management - SafeCar Web Application" width="800"/>
+    <p><em>Figura 10: Módulo de gestión de citas de mantenimiento</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/appointment-detail-web-application.png" alt="Appointment Detail - SafeCar Web Application" width="800"/>
+    <p><em>Figura 11: Vista detallada de cita de mantenimiento</em></p>
+  </div>
+
+- **Historial de Reparaciones:** Módulo de seguimiento y consulta del historial vehicular
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/vehicle-history-web-application.png" alt="Vehicle History - SafeCar Web Application" width="800"/>
+    <p><em>Figura 12: Módulo de historial de reparaciones vehiculares</em></p>
+  </div>
+
+- **Gestión de Vehículos:** Panel principal de administración de vehículos
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/vehicle-management-web-application.png" alt="Vehicle Management - SafeCar Web Application" width="800"/>
+    <p><em>Figura 13: Panel de gestión de vehículos</em></p>
+  </div>
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/vehicle-detail-web-application.png" alt="Vehicle Detail - SafeCar Web Application" width="800"/>
+    <p><em>Figura 14: Vista detallada de vehículo con información completa</em></p>
+  </div>
+
+- **Telemetría Vehicular:** Visualización en tiempo real de datos del vehículo
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/vehicle-telemetry-web-application.png" alt="Vehicle Telemetry - SafeCar Web Application" width="800"/>
+    <p><em>Figura 15: Dashboard de telemetría vehicular en tiempo real</em></p>
+  </div>
+
+- **Análisis de Datos:** Dashboard con métricas y análisis operacionales
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/vehicle-analytics-web-application.png" alt="Vehicle Analytics - SafeCar Web Application" width="800"/>
+    <p><em>Figura 16: Dashboard de análisis de datos operacionales</em></p>
+  </div>
+
+- **Dashboard en Desarrollo:** Panel principal de la aplicación web
+
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/dashboard-in-development-web-application..png" alt="Dashboard in Development - SafeCar Web Application" width="800"/>
+    <p><em>Figura 17: Dashboard principal en desarrollo de la aplicación web</em></p>
+  </div>
+
+<p align="justify">
+<strong>Video demostrativo:</strong> Para una comprensión integral del trabajo realizado, se ha preparado un video que ilustra la navegación completa a través de las funcionalidades implementadas, mostrando los flujos de usuario desde la Landing Page hasta las principales operaciones dentro de la aplicación web.
+</p>
+
+**Enlace al video de demostración:** [*URL del video será agregada aquí*]
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
+<p align="justify">
+Durante el Sprint 1, el desarrollo se enfocó en la implementación y despliegue de dos componentes principales: la Landing Page y la aplicación web. En términos de servicios web, se establecieron los endpoints básicos necesarios para soportar estas dos aplicaciones, priorizando la funcionalidad esencial para demostrar la viabilidad del sistema SafeCar.
+</p>
 
+<p align="justify">
+Los logros alcanzados incluyen la configuración de endpoints que permiten el acceso directo a la Landing Page y a la aplicación web, estableciendo la infraestructura base para la navegación entre ambos componentes del sistema. Esta aproximación permite a los usuarios acceder seamlessly desde la presentación del producto hasta las funcionalidades principales de la aplicación.
+</p>
+
+**Endpoints implementados durante el Sprint 1:**
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Componente</th>
+      <th>Verbo HTTP</th>
+      <th>Sintaxis de Llamada</th>
+      <th>Descripción</th>
+      <th>Ejemplo de Response</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Landing Page</td>
+      <td>GET</td>
+      <td>https://metasoft-iot.github.io/safecar-landing-page/</td>
+      <td>
+        Sitio Web principal (Landing Page)<br>
+      </td>
+      <td>
+        HTML completo de la Landing Page<br>
+        con soporte i18n y navegación<br>
+        responsiva
+      </td>
+      <td>Desplegado</td>
+    </tr>
+    <tr>
+      <td>Web Application</td>
+      <td>GET</td>
+      <td>https://safecar-v1.netlify.app/</td>
+      <td>
+        Aplicación web principal de SafeCar<br>
+        Redirige a login si no autenticado
+      </td>
+      <td>
+        SPA (Single Page Application)<br>
+        con rutas internas para:<br>
+        /login, /register, /dashboard,<br>
+        /vehicles, /appointments
+      </td>
+      <td>Desplegado</td>
+    </tr>
+  </tbody>
+</table>
+
+
+**Repositorios:**
+- **URL del repositorio Landing Page:** [https://github.com/MetaSoft-IOT/safecar-landing-page](https://github.com/MetaSoft-IOT/safecar-landing-page)
+- **URL del repositorio Web Application:** [https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-SafeCar-Frontend](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-SafeCar-Frontend)
 
 
 #### 6.2.1.8. Software Deployment Evidence for Sprint Review
 
+<p align="justify">
+El despliegue durante el Sprint 1 materializó el trabajo desarrollado en productos accesibles para usuarios reales. La estrategia se centró en utilizar plataformas reconocidas por su confiabilidad, permitiendo concentrar esfuerzos en la calidad del producto más que en la complejidad de infraestructura.
+</p>
+
+<p align="justify">
+Se desplegaron ambos componentes en plataformas específicas según sus características: GitHub Pages para la Landing Page (sitio estático) y Netlify para la aplicación web Vue.js (SPA con routing dinámico). GitHub Pages proporcionó integración directa con el repositorio, HTTPS automático y CDN global, mientras que Netlify ofreció capacidades avanzadas para aplicaciones JavaScript modernas, incluyendo manejo apropiado del Vue Router y preview deployments.
+</p>
+
+
+### Evidencias de Despliegue
+
+**Landing Page - GitHub Pages:**
+
+<div align="center">
+  <img src="../assets/img/capitulo-VI/deploy-landing-page.png" alt="Deploy Landing Page - GitHub Pages" width="800"/>
+  <p><em>Figura 18: Configuración y despliegue de la Landing Page en GitHub Pages</em></p>
+</div>
+
+**Aplicación Web - Netlify:**
+
+<div align="center">
+  <img src="../assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
+  <p><em>Figura 19: Configuración y despliegue de la aplicación web en Netlify</em></p>
+</div>
+
+
+<p align="justify">
+El despliegue exitoso establece una base sólida para el desarrollo continuo, con integración automatizada que permitirá futuras actualizaciones sin fricción, manteniendo el enfoque del equipo en el desarrollo de nuevas funcionalidades. Las evidencias visuales del proceso y las URLs de acceso se encuentran documentadas en la correspondiente sección de Services Documentation.
+</p>
 
 
 #### 6.2.1.9. Team Collaboration Insights during Sprint
