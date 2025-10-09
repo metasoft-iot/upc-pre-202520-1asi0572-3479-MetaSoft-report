@@ -1434,11 +1434,62 @@ El despliegue exitoso establece una base sólida para el desarrollo continuo, co
 #### 6.2.1.9. Team Collaboration Insights during Sprint
 
 <p align="justify">
-Durante el Sprint 1, el equipo MetaSoft demostró una colaboración efectiva en el desarrollo de los productos de SafeCar, evidenciada a través de los analíticos de GitHub que reflejan la participación activa de todos los miembros en la implementación de la Landing Page y la aplicación web. Los datos de colaboración muestran una distribución equilibrada del trabajo, con cada miembro contribuyendo según su rol asignado en la matriz LACX y cumpliendo con las tareas específicas del Sprint Backlog.
+Durante el Sprint 1, el equipo MetaSoft implementó una estrategia de colaboración distribuida, coordinando el desarrollo de tres productos principales: Landing Page (liderada por Gonzalo Zavala), aplicación web (liderada por Janover Saldaña), e infraestructura de despliegue (coordinación conjunta). Esta metodología garantizó la participación activa de todos los miembros en múltiples áreas, distribuyendo el conocimiento del proyecto y fortaleciendo la capacidad colectiva del equipo.
 </p>
 
-##### Analíticos de Colaboración en GitHub
+### Analíticos de Colaboración en GitHub
 
 <p align="justify">
-Los siguientes analíticos proporcionan una visión detallada de la actividad de colaboración del equipo durante el Sprint 1, incluyendo la frecuencia de commits, la distribución de contribuciones por miembro y los patrones de trabajo colaborativo en los repositorios del proyecto.
+Los datos extraídos de GitHub proporcionan una perspectiva cuantitativa de la colaboración del equipo, revelando patrones de contribución, frecuencia de commits, y distribución del trabajo a lo largo del sprint. Los analíticos de Pulse y Contributors de ambos repositorios confirman la participación equilibrada de todos los miembros y demuestran la efectividad de la metodología de trabajo colaborativo adoptada.
 </p>
+
+#### Repositorio Landing Page - Analíticos de Pulse y Contributors
+
+**GitHub Pulse - Actividad del Repositorio:**
+
+<figure align="center">
+  <img src="../assets/img/capitulo-VI/sprint-1-pulse-landing-page.png" alt="GitHub Pulse Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
+  <figcaption><strong>Figura 20.</strong> Analíticos de Pulse del repositorio Landing Page mostrando la actividad de commits, pull requests y colaboradores durante el Sprint 1.</figcaption>
+</figure>
+
+**Contributors - Participación del Equipo:**
+
+<figure align="center">
+  <img src="../assets/img/capitulo-VI/sprint-1-contribuitors-landing-page.png" alt="GitHub Contributors Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
+  <figcaption><strong>Figura 21.</strong> Analíticos de Contributors del repositorio Landing Page detallando las contribuciones individuales por miembro del equipo, incluyendo commits y líneas de código modificadas.</figcaption>
+</figure>
+
+#### Repositorio Web Application - Analíticos de Pulse y Contributors
+
+**GitHub Pulse - Actividad del Repositorio:**
+
+<figure align="center">
+  <img src="../assets/img/capitulo-VI/sprint-1-pulse-web-application.png" alt="GitHub Pulse Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
+  <figcaption><strong>Figura 22.</strong> Analíticos de Pulse del repositorio Web Application mostrando la frecuencia de actividad, distribución temporal de commits y participación activa del equipo durante el sprint.</figcaption>
+</figure>
+
+**Contributors - Participación del Equipo:**
+
+<figure align="center">
+  <img src="../assets/img/capitulo-VI/sprint-1-contributors-web-application.png" alt="GitHub Contributors Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
+  <figcaption><strong>Figura 23.</strong> Analíticos de Contributors del repositorio Web Application evidenciando las contribuciones específicas de cada miembro, incluyendo commits realizados y volumen de código desarrollado.</figcaption>
+</figure>
+
+**Insights Específicos por Repositorio:**
+
+- **Landing Page:** Los analíticos muestran liderazgo claro de Gonzalo Quedena con contribuciones sustanciales, respaldado por participación activa de todo el equipo en diferentes componentes de la interfaz y funcionalidades.
+
+- **Web Application:** La actividad de commits evidencia el liderazgo técnico de Janover Saldaña en la implementación de sistemas complejos, con colaboración significativa del equipo en componentes de autenticación y gestión de datos.</p>
+
+**Lecciones Aprendidas y Proyecciones:**
+
+Los analíticos también revelan oportunidades de mejora para futuros sprints, particularmente en términos de balancear mejor la carga de trabajo entre todos los miembros y establecer puntos de sincronización más frecuentes para componentes que requieren integración estrecha. La experiencia positiva del Sprint 1 establece una base sólida para escalar la colaboración en iteraciones futuras con mayor complejidad técnica.
+
+### Herramientas y Procesos de Colaboración
+
+**Plataformas Utilizadas:**
+- **GitHub:** Control de versiones, seguimiento de issues, y revisión de código
+- **Google Meet:** Reuniones de sincronización y planificación
+- **Trello:** Gestión del backlog y seguimiento de tareas
+- **Visual Studio Code:** Desarrollo colaborativo con extensiones de integración
+
