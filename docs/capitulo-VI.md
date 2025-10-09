@@ -320,6 +320,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
     </tr>
 </table>
 
+
 #### 6.2.1.2. Aspect Leaders and Collaborators
 
 <p align="justify">
@@ -922,6 +923,16 @@ Durante el Sprint 1, el equipo organizó el trabajo en ocho aspectos principales
         <td>Done</td>
     </tr>
 </table>
+
+
+### Sprint 1 — *SafeCar*
+
+El **Sprint 1** del proyecto **SafeCar** se centró en establecer las bases de la experiencia de usuario (UX) y las funcionalidades iniciales de acceso, priorizando la usabilidad y el flujo de autenticación del sistema.
+
+---
+
+![Sprint 1 - SafeCar](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-VI/assets/img/capitulo-VI/sprint%201.png)
+
 
 #### 6.2.1.4. Development Evidence for Sprint Review
 
