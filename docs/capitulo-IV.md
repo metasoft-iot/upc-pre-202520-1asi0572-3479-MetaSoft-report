@@ -810,26 +810,67 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 
 #### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
 
-| **Carpeta / Paquete** | **Contenido**                                                                                                     | **Rol**                                                                                   | **Ejemplos de Clases**                                                         |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| **domain**            | Modelos y contratos puros. Agregados, VOs, eventos, repositorios (interfaces), servicios de dominio (interfaces). | El corazón del negocio. Sin dependencias de frameworks externos (Spring, JPA).            | `TelemetryStream`, `RawDataPoint`, `TelemetryStateRepository`, `DataValidator` |
-| **application**       | Orquestación del caso de uso. *Command Services*, *Event Handlers*, *ACLs* (implementaciones), *Query Services*.  | Coordinación de flujos. Implementa lógica de persistencia y publicación.                  | `TelemetryProcessingServiceImpl`, `ExternalDeviceContextService (ACL)`         |
-| **interfaces**        | Puntos de entrada/salida. *Listeners*, *Resources (DTOs)*.                                                        | Adaptación de protocolo. Traduce tráfico de red o mensajería a comandos.                  | `TelemetryStreamListener`, `RawDataPointResource`                              |
-| **infrastructure**    | Adaptadores técnicos. Implementaciones de repositorios, conectores a Kafka/DB.                                    | Detalles técnicos y persistencia. Aloja la complejidad del middleware y la base de datos. | `TelemetryStateRepositoryImpl (Redis)`, `KafkaEventPublisherImpl`              |
-
-
 #### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
 
-| **Clase / Interface**           | **Tipo**                        | **Rol**                                                | **Relaciones y Multiplicidad**          |
-| ------------------------------- | ------------------------------- | ------------------------------------------------------ | --------------------------------------- |
-| **TelemetryStream**             | Aggregate Root                  | Estado de la sesión de procesamiento de un vehículo.   | Composition (1) → (1) `VehicleId (VO)`  |
-| **RawDataPoint**                | Entidad / Inmutable             | Dato de entrada antes del procesamiento.               | Uses (1) → (1) `DataSchemaVersion (VO)` |
-| **NormalizedDataPoint**         | Entidad / Inmutable             | Dato canónico, validado y enriquecido.                 | Uses (1) → (1) `VehicleLocation (VO)`   |
-| **TelemetryStateRepository**    | Puerto (Interface)              | Contrato para acceder al estado del `TelemetryStream`. | Persists (1) → (1) `TelemetryStream`    |
-| **DataValidator**               | Servicio de Dominio (Interface) | Regla de coherencia de datos.                          | Uses → `RawDataPoint`                   |
-| **ExternalDeviceContextFacade** | Puerto (Interface)              | Contrato para consultar la identidad del vehículo.     | Returns → `VehicleId (VO)`              |
-| **TelemetryNormalizedEvent**    | Evento de Dominio               | Señal de salida canónica.                              | About → `NormalizedDataPoint`           |
-| **TripSegmentClosedEvent**      | Evento de Dominio               | Señal transaccional de cierre de viaje.                | About → `TelemetryStream`               |
+### Telemetry Processing BC
+
+El siguiente diagrama modela el **núcleo de negocio** del *Bounded Context Telemetry Processing*, responsable de la **ingestión, normalización y segmentación de datos de telemetría vehicular**.  
+Representa **agregados**, **value objects**, **servicios de dominio**, **repositorios** y **eventos** que definen el comportamiento analítico central del dominio.
+
+---
+
+#### Agregado y Entidades
+
+**TelemetryStream (Aggregate Root)**  
+- **Descripción:** Representa el flujo activo de telemetría asociado a un vehículo.  
+- **Atributos clave:** `streamId`, `vehicleId`, `currentTripId`, `lastReadingTimestamp`.  
+- **Comportamientos:** `appendReading(...)`, `updateStreamState(...)`.  
+- **Relaciones:** Contiene múltiples instancias de `TelemetryReading` (composición).
+
+**TripSegment**  
+- **Descripción:** Define un tramo de conducción detectado automáticamente a partir del flujo de telemetría.  
+- **Atributos clave:** `tripId`, `startTime`, `endTime`, `distanceKm`, `avgSpeed`.  
+- **Relaciones:** Asociado a `VehicleId` para vincular el segmento con su vehículo correspondiente.
+
+---
+
+#### Value Objects
+
+Los objetos de valor encapsulan identificadores y lecturas con validaciones de formato y rango:  
+- `StreamId`  
+- `VehicleId`  
+- `TripId`  
+- `TelemetryReading`
+
+---
+
+#### Servicios de Dominio
+
+**TelemetryProcessor**  
+- **Responsabilidad:** Procesar lecturas entrantes (`processReading`) y actualizar el estado de los streams y segmentos.  
+- **Resultado:** Emite eventos derivados del análisis de flujo, como detección de nuevos tramos o anomalías.
+
+---
+
+#### Repositorios
+
+Interfaces que definen los puertos de persistencia del dominio:  
+- `TelemetryStreamRepository`  
+- `TripSegmentRepository`
+
+Ambos encapsulan la persistencia de los agregados principales (`TelemetryStream`, `TripSegment`) y ocultan detalles de infraestructura para mantener la pureza del dominio.
+
+---
+
+#### 📡 Eventos de Dominio
+
+Los eventos comunican cambios significativos dentro del modelo de telemetría:  
+- `TelemetryNormalizedEvent`  
+- `TripSegmentStartedEvent`  
+- `TripSegmentClosedEvent`
+
+![Telemetry Processing Domain Diagram](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-IV/assets/img/capitulo-IV/diagram%20class%20alerting.png)
+
 
 
 ##### 4.2.2.6.2. Bounded Context Database Design Diagram
@@ -879,24 +920,6 @@ Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimi
 
 #### 4.2.3.4. Infrastructure Layer
 
-| Componente                 | Detalles Robustos                                                                                                                                         |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Persistencia**           | **AlertRepositoryImpl:** usa PostgreSQL/MySQL con transacciones ACID. Implementa patrón *Outbox* para publicar eventos solo si la transacción es exitosa. |
-| **Motor de Reglas**        | **AlertRuleEngineImpl:** evalúa reglas mediante Drools o MVEL/SpEL, permitiendo actualización dinámica sin despliegue.                                    |
-| **Publicación de Eventos** | **TransactionalEventPublisherImpl:** usa patrón *Outbox* (tabla + polling) para publicación confiable.                                                    |
-
-#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
-
-| Tabla           | Propósito                                  | Claves y Optimización                                                |
-| --------------- | ------------------------------------------ | -------------------------------------------------------------------- |
-| `alerts`        | Raíz del agregado `Alert`.                 | **PK:** `alert_id (UUID)`. Índice: (`vehicle_id`, `status`).         |
-| `alert_history` | Historial inmutable (`AlertHistoryEntry`). | **PK:** `history_id`. FK estricta a `alerts` (`ON DELETE RESTRICT`). |
-| `alert_rules`   | Configuración de reglas.                   | **PK:** `rule_id`. Columna JSON: `condition_definition`.             |
-| `outbox`        | Patrón *Outbox* para publicación fiable.   | **PK:** `id`, `event_type`, `event_payload (JSON)`, `published_at`.  |
-
-
-#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
-
 - A) Componentes clave y responsabilidades
 
 | **Componente**                          | **Capa**         | **Responsabilidad principal**                                                        |
@@ -942,18 +965,53 @@ Alert Management Controller → Alert Creation Service / Alert Repository Impl
 
 ![Alerting Componente Vista Detallada](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/chapter-IV/assets/img/capitulo-IV/AlertingComponenteVistaDetallada.png)
 
+
+#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-| **Clase/Interface**              | **Tipo**                        | **Rol**                                                                            | **Relaciones y Multiplicidad**                                                    |
-| -------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| **Alert**                        | Aggregate Root                  | Implementa la Máquina de Estado Finito de la alerta (transición de `AlertStatus`). | `Composition (1) → (0..*) AlertHistoryEntry` <br> `Uses (1) → (1) SuppressionKey` |
-| **AlertHistoryEntry**            | Entidad                         | Registro inmutable de cada cambio o acción.                                        | `Belongs to (FK) → Alert`                                                         |
-| **SuppressionKey**               | Value Object                    | Clave compuesta para deduplicación (`Vehicle ID + Rule ID + Time Window`).         | `Enforced by AlertDeduplicator`                                                   |
-| **AlertDeduplicator**            | Servicio de Dominio (Interface) | Lógica para buscar un duplicado activo o reciente.                                 | `Uses → AlertRepository`                                                          |
-| **EscalationPolicyMatcher**      | Servicio de Dominio (Interface) | Determina el canal y objetivo de notificación.                                     | `Returns → NotificationPolicyVO`                                                  |
-| **AlertRepository**              | Puerto (Interface)              | Contrato para persistencia transaccional del agregado.                             | `Persists → Alert`                                                                |
-| **ExternalNotificationFacade**   | Puerto (Interface)              | Envío de comandos al BC de Notificación.                                           | `Accepts → NotificationCommand (DTO)`                                             |
-| **MaintenanceAlertCreatedEvent** | Evento de Dominio               | Señal accionable (post-deduplicación).                                             | `About → Alert`                                                                   |
+El siguiente diagrama representa el **núcleo de negocio** del *Bounded Context Alerting & Management*, encargado de la **detección, deduplicación y gestión del ciclo de vida de alertas** generadas a partir de los datos de telemetría.  
+Muestra **agregados**, **entidades**, **objetos de valor**, **servicios de dominio**, **repositorios** y **eventos** que estructuran la lógica de negocio del contexto.
+
+#### Agregado y Entidades
+
+**Alert (Aggregate Root)**  
+- **Descripción:** Representa una alerta con su ciclo de vida completo (CREATED → ACKNOWLEDGED → RESOLVED).  
+- **Atributos clave:** `alertId`, `vehicleId`, `ruleId`, `status`, `severity`, `createdAt`, `updatedAt`.  
+- **Comportamientos:** Cambiar estado, registrar histórico, deduplicar instancias.  
+- **Relaciones:**  
+  - Composición con `AlertHistoryEntry` (registra cambios de estado).  
+  - Asociación con `AlertRule` (define la causa).  
+  - Usa `SuppressionKey` para deduplicación.
+
+**AlertRule**  
+- **Descripción:** Define las condiciones bajo las cuales se dispara una alerta.  
+- **Atributos clave:** `alertRuleId`, `name`, `conditionDefinition`, `severity`, `isActive`.
+
+**AlertHistoryEntry**  
+- **Descripción:** Registro inmutable del historial de cambios de estado y acciones sobre una alerta.  
+- **Atributos clave:** `historyId`, `alertId`, `timestamp`, `oldStatus`, `newStatus`, `actionUserId`.
+
+
+#### Value Objects
+
+Encapsulan identificadores y valores inmutables del dominio:  
+- `AlertId`  
+- `AlertRuleId`  
+- `SuppressionKey` → combina `vehicleId`, `ruleId` y `severity` para prevenir duplicados.  
+- `AlertStatus` → enum: CREATED | ACKNOWLEDGED | RESOLVED.  
+- `Severity` → enum: LOW | MEDIUM | HIGH | CRITICAL.
+
+#### Repositorios
+
+Interfaces que definen los puertos de acceso y persistencia:  
+- `AlertRepository`  
+  - **Operaciones:** `save(Alert)`, `findById(AlertId)`, `findActiveBySuppressionKey(SuppressionKey)`.  
+- `AlertRuleRepository`  
+  - **Operaciones:** `findById(AlertRuleId)`, `findAllActive()`.
+
+
+![Alerting & Management Domain Diagram](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-IV/assets/img/capitulo-IV/diagram%20class%20alerting.png)
 
 
 ##### 4.2.3.6.2. Bounded Context Database Design Diagram
