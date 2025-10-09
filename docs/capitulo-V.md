@@ -12,7 +12,7 @@ Para la elección de los colores representativos para los productos, escogimos i
 
 <b>Typography</b></br>
 <p align="justify">
-Familia(s), jerarquía tipográfica (display, títulos, cuerpos), escala modular y line-height para lectura cómoda.Spacing & Grid: unidad base (4/8 px), columnas y gutters para desktop/tablet/móvil, y reglas de alineación. 
+Familia(s), jerarquía tipográfica (display, títulos, cuerpos), escala modular y line-height para lectura cómoda.Spacing & Grid: unidad base (4/8 px), columnas y gutters para desktop/tablet/móvil, y reglas de alineación.
 </p>
 <img alt="Matriz tipográfica: jerarquías y escala modular" src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/typography.png"/>
 
@@ -20,7 +20,7 @@ Familia(s), jerarquía tipográfica (display, títulos, cuerpos), escala modular
 
 ##### **Spacing**
 
-El spacing a utilizar se presentará en los siguientes puntos, estos variarán dependiendo del lenguaje o sistema operativo utilizado.  
+El spacing a utilizar se presentará en los siguientes puntos, estos variarán dependiendo del lenguaje o sistema operativo utilizado.
 De esta manera, permitimos que la información se vea ordenada.
 
 ##### **Para Landing Page**
@@ -75,34 +75,34 @@ Se prefirió usar un tono ligeramente formal, y amigable; pero, de igual manera,
 
 ##### **Organización Visual**
 
-En SafeCar, se aplicó una **jerarquía visual** que permite a los usuarios —principalmente **conductores particulares** y **mecánicos de taller**— navegar de forma intuitiva y comprender la información según su nivel de prioridad.  
+En SafeCar, se aplicó una **jerarquía visual** que permite a los usuarios —principalmente **conductores particulares** y **mecánicos de taller**— navegar de forma intuitiva y comprender la información según su nivel de prioridad.
 
-El diseño establece una clara distinción entre los elementos informativos y los interactivos, utilizando **tamaños y pesos tipográficos diferentes** para guiar la atención del usuario.  
-Por ejemplo, los títulos de las secciones principales como *“Panel de Control”*, *“Mis Vehículos”* o *“Órdenes de Servicio”* utilizan un tamaño de letra mayor y color de alto contraste, mientras que los subtítulos o descripciones presentan un estilo más liviano para mantener jerarquía y legibilidad.  
+El diseño establece una clara distinción entre los elementos informativos y los interactivos, utilizando **tamaños y pesos tipográficos diferentes** para guiar la atención del usuario.
+Por ejemplo, los títulos de las secciones principales como *“Panel de Control”*, *“Mis Vehículos”* o *“Órdenes de Servicio”* utilizan un tamaño de letra mayor y color de alto contraste, mientras que los subtítulos o descripciones presentan un estilo más liviano para mantener jerarquía y legibilidad.
 
-Este principio se refuerza con un diseño de **organización secuencial**, que orienta a los conductores a seguir un flujo paso a paso —desde el registro del vehículo hasta la solicitud y confirmación del mantenimiento—, y a los mecánicos a **gestionar eficientemente sus órdenes de trabajo**, desde la verificación inicial hasta el cierre del servicio.  
+Este principio se refuerza con un diseño de **organización secuencial**, que orienta a los conductores a seguir un flujo paso a paso —desde el registro del vehículo hasta la solicitud y confirmación del mantenimiento—, y a los mecánicos a **gestionar eficientemente sus órdenes de trabajo**, desde la verificación inicial hasta el cierre del servicio.
 Gracias a esta estructura, la plataforma asegura una **experiencia fluida y predecible** para ambos segmentos.
 
 ##### **Esquema de Categorización**
 
 SafeCar adopta un modelo híbrido de categorización que facilita el acceso rápido a la información según el tipo de tarea o perfil de usuario:
 
-- **Alfabético:**  
-  Utilizado principalmente en los listados de servicios y piezas del vehículo (p. ej., *Aceite*, *Batería*, *Frenos*, *Motor*).  
+- **Alfabético:**
+  Utilizado principalmente en los listados de servicios y piezas del vehículo (p. ej., *Aceite*, *Batería*, *Frenos*, *Motor*).
   Esto permite a los mecánicos encontrar rápidamente los componentes específicos que deben revisar o reemplazar, y a los conductores identificar el servicio que necesitan solicitar.
 
-- **Por tópico:**  
-  Empleado para agrupar información técnica según la categoría del mantenimiento (por ejemplo: *Preventivo*, *Correctivo*, *Diagnóstico*).  
+- **Por tópico:**
+  Empleado para agrupar información técnica según la categoría del mantenimiento (por ejemplo: *Preventivo*, *Correctivo*, *Diagnóstico*).
   Esta organización facilita al conductor entender la naturaleza del servicio y al mecánico ubicar los procedimientos asociados.
 
-- **Cronológico:**  
-  Aplicado en la sección *“Historial de Mantenimientos”*, donde las órdenes se presentan desde la más reciente hasta la más antigua.  
+- **Cronológico:**
+  Aplicado en la sección *“Historial de Mantenimientos”*, donde las órdenes se presentan desde la más reciente hasta la más antigua.
   Esto permite a los conductores visualizar la evolución del estado de su vehículo y a los mecánicos revisar intervenciones previas antes de ejecutar un nuevo servicio.
 
-- **Por audiencia:**  
+- **Por audiencia:**
   Dado que SafeCar atiende a **dos segmentos principales**, se ha personalizado la interfaz y la disposición de la información:
-  - **Conductores Particulares:** visualizan recordatorios, próximos servicios, recomendaciones y diagnósticos simplificados en un lenguaje claro y accesible.  
-  - **Mecánicos de Taller:** acceden a vistas detalladas de órdenes, listas de chequeo, reportes técnicos y métricas de desempeño del vehículo.  
+  - **Conductores Particulares:** visualizan recordatorios, próximos servicios, recomendaciones y diagnósticos simplificados en un lenguaje claro y accesible.
+  - **Mecánicos de Taller:** acceden a vistas detalladas de órdenes, listas de chequeo, reportes técnicos y métricas de desempeño del vehículo.
 
 
 ### 5.2.2. Labeling Systems
@@ -113,12 +113,12 @@ Para el sistema de etiquetas en SafeCar, se estableció una estrategia enfocada 
 
 En la página principal de SafeCar, se definieron etiquetas cortas y directas que reflejan las secciones clave de la navegación superior (header), alineadas a la arquitectura de información general del sitio:
 
-- "Home"  
-- "Features" *(Características)*  
-- "Plans" *(Planes)*  
-- "Testimonials" *(Testimonios)*  
-- "Contact" *(Contáctanos)*  
-- "Free Trial" *(Prueba Gratis)*  
+- "Home"
+- "Features" *(Características)*
+- "Plans" *(Planes)*
+- "Testimonials" *(Testimonios)*
+- "Contact" *(Contáctanos)*
+- "Free Trial" *(Prueba Gratis)*
 - 🌐 Selector de idioma *(ícono de globo terráqueo para alternar entre inglés y español)*
 
 Estas etiquetas buscan mantener una **estructura simple y accesible**, permitiendo que el visitante comprenda la oferta de la plataforma y acceda fácilmente a la aplicación web o móvil.
@@ -127,26 +127,26 @@ Estas etiquetas buscan mantener una **estructura simple y accesible**, permitien
 
 ##### **Etiquetas para la Aplicación Móvil**
 
-En la aplicación móvil de SafeCar, tanto en Android como en iOS, se utilizan etiquetas funcionales y consistentes que acompañan las principales acciones de los usuarios.  
+En la aplicación móvil de SafeCar, tanto en Android como en iOS, se utilizan etiquetas funcionales y consistentes que acompañan las principales acciones de los usuarios.
 El objetivo es mantener una comunicación **breve, directa y contextual**, evitando redundancias y maximizando la comprensión.
 
-- "Guardar" *(para registrar un nuevo mantenimiento o diagnóstico)*  
-- "Cancelar" *(para descartar o retroceder acciones)*  
-- "Agendar Servicio" *(creación de cita para mantenimiento o revisión técnica)*  
-- "Mis Vehículos" *(listado de autos registrados por el conductor)*  
-- "Historial" *(seguimiento de servicios anteriores)*  
-- "Revisar Caso" *(consulta de diagnósticos o reparaciones en curso)*  
-- "Confirmar Servicio" *(acción de aprobación del mecánico o conductor)*  
-- "Reportar Fallo" *(creación de un nuevo incidente técnico)*  
+- "Guardar" *(para registrar un nuevo mantenimiento o diagnóstico)*
+- "Cancelar" *(para descartar o retroceder acciones)*
+- "Agendar Servicio" *(creación de cita para mantenimiento o revisión técnica)*
+- "Mis Vehículos" *(listado de autos registrados por el conductor)*
+- "Historial" *(seguimiento de servicios anteriores)*
+- "Revisar Caso" *(consulta de diagnósticos o reparaciones en curso)*
+- "Confirmar Servicio" *(acción de aprobación del mecánico o conductor)*
+- "Reportar Fallo" *(creación de un nuevo incidente técnico)*
 
 Cada etiqueta fue seleccionada con base en su **frecuencia de uso y contexto funcional**, manteniendo un tono neutral y orientado a la acción, favoreciendo la **rapidez en la toma de decisiones dentro de la aplicación**.
 
 ##### **Lineamientos Generales**
 
-- Las etiquetas no deben superar las **dos palabras**.  
-- Se prioriza el **lenguaje funcional** sobre el técnico.  
-- Se evita el uso de abreviaturas o jerga especializada.  
-- El texto se mantiene en **Mayúscula Inicial** para una mejor legibilidad.  
+- Las etiquetas no deben superar las **dos palabras**.
+- Se prioriza el **lenguaje funcional** sobre el técnico.
+- Se evita el uso de abreviaturas o jerga especializada.
+- El texto se mantiene en **Mayúscula Inicial** para una mejor legibilidad.
 - Los íconos se acompañan de texto únicamente cuando la acción no sea evidente.
 
 Este sistema garantiza que las interfaces de SafeCar sean **claras, consistentes y accesibles** para ambos segmentos principales: **conductores** y **mecánicos**, optimizando la comunicación visual y la usabilidad general de la plataforma.
@@ -222,10 +222,142 @@ Para el sistema de navegación hemos preferido mantener una navegación jerárqu
 </ul>
 
 ## 5.3. Landing Page UI Design
-### 5.3.1. Landing Page Wireframe
+La Landing Page de SafeCar busca explicar la propuesta de valor (monitoreo inteligente del vehículo) y conducir a la conversión primaria: CTA en hero (Discover SafeCar) y acceso a contacto.
+- Jerarquía visual: encabezado claro, hero con título–subtítulo–CTA, bloques de valor (beneficios), planes con precios, testimonios, contacto, sobre la app y equipo; cierre con footer.
 
+- Trayecto de conversión: cada sección incorpora micro‑CTAs o continuidad hacia Discover SafeCar; el plan intermedio se destaca (principio de asymmetrical emphasis).
+
+- Diseño inclusivo: tipografía legible ≥ 16px en cuerpo, blancos generosos, objetivos táctiles ≥ 44×44 px, lenguaje claro y bilingüe.
+
+- Consistencia con el Design System: grilla base 8 px, espaciados documentados (12/16/24/64), componentes reutilizables (Button, Card, Input, Badge, Navbar), y estados interactivos.
+
+- Responsive first: los bloques se apilan en mobile manteniendo prioridad semántica.
+
+- SEO & semántica: títulos H1/H2 jerárquicos, descripciones claras y meta tags definidos
+
+### 5.3.1. Landing Page Wireframe
+## 5.3.1.1 Propósito del wireframe
+
+Estandarizar estructura, jerarquía y recorrido sin distraer con estilo visual. Se usó una paleta gris (fills/strokes) y figuras básicas para imágenes.
+
+## 5.3.1.2 Estructura Desktop
+
+- Header: logotipo, navegación (Home, Features, About the App, Plans, Testimonials, Contact, Team) y selector de idioma
+
+- Hero: contenedor visual 16:9 con overlay; título, subtítulo, CTA primario.
+
+- Benefits: 3 tarjetas simétricas
+
+- About the App: bloque informativo con texto a la izquierda y apoyo visual a la derecha (2 columnas).
+
+- Plans: 3 tarjetas; el plan Premium central se resalta (stroke + sombra) para favorecer la elección.
+
+- Testimonials: cuadrícula 2×2 de reseñas con avatar, nombre y fecha.
+
+- Contact: formulario de 3 campos y botón; identidad de marca a la izquierda.
+
+- Our Team: bloque visual inferior.
+
+- Footer: navegación secundaria, RRSS y T&C.
+
+Principios aplicados (wireframe)
+
+- Jerarquía por tamaño/peso y espaciado;
+
+- Consistencia: patrones de Card/Input/Button;
+
+- Espacio: márgenes de sección ~64 px y baseline 8 px;
+
+- Lectura escaneable: líneas de 60–75 caracteres aprox.;
+
+- Accesibilidad: objetivos mínimos 44×44, foco visible, etiquetas claras.
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/wireframe-lp.png" alt="wireframe desktop de la landing page">
+</p>
+
+## 5.3.1.3 Estructura Mobile
+
+- Navbar simplificada con menú hamburguesa; el CTA principal vive en el hero ("Discover SafeCar").
+
+- Hero apilado (título, copywriting, CTA) con imagen responsiva.
+
+- Benefits: tarjetas a 1 columna; espacios internos 16 px.
+
+- Plans: tarjetas apiladas; el plan sugerido conserva realce (borde/ombreado).
+
+- Testimonials: lista vertical; se prioriza legibilidad (tamaños ≥ 14–16 px).
+
+- Contact: inputs de 48–56 px de alto, separación 16 px; botón prominente.
+
+- Secciones finales apiladas; footer compacto con navegación mínima.
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/wireframe-lp-mobile.png" alt="wireframe mobile de la landing page">
+</p>
 
 ### 5.3.2. Landing Page Mock-up
+
+## 5.3.2.1 Mock‑up Desktop
+
+Estructura y estilo aplicados:
+
+- Header con logotipo, navegación (Home, Features, About the App, Plans, Testimonials, Contact, Team) y selector.
+
+- Hero con imagen de fondo y overlay; H1 “Drive Smart, Travel Safe”, párrafo descriptivo y botón “Discover SafeCar”.
+
+- Benefits en grilla 3×1 con tarjetas (icono, título, texto), superficies blancas con sombra sutil.
+
+- About the App en layout 2 columnas (texto a la izquierda, imagen a la derecha) para variar el ritmo visual.
+
+- SafeCar Plans con 3 tarjetas (Basic y dos Premium en la maqueta), la central resaltada con borde/acento rojo.
+
+- Customer Testimonials en grilla 2×2 con avatar, nombre, fecha y rating.
+
+- Contact en 2 columnas: identidad de marca a la izquierda; formulario (Name, Email, Message) a la derecha; botón ancho.
+
+- Our Team como bloque visual de cierre.
+
+- Footer con navegación secundaria, RRSS y T&C.
+
+Principios evidenciados:
+
+jerarquía tipográfica clara; consistencia de componentes (Card, Button, Input); espaciado estandarizado (64 px entre secciones); visibilidad; objetivos 44×44.
+
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/mockup-lp.png" alt="wireframe mobile de la landing page">
+</p>
+
+## 5.3.2.2 Mock‑up Mobile
+
+Estructura y estilo adaptados:
+
+- Navbar con logo + menú hamburguesa.
+
+- Hero apilado (título, texto,  CTA “Discover SafeCar”) con imagen responsiva.
+
+- Benefits en tarjetas verticales con padding 16 px y borde suave.
+
+- About the App: texto arriba, imagen abajo (orden semántico conservado).
+
+- Plans apilados; el plan central conserva el énfasis (borde/acento); checks legibles ≥14–16 px.
+
+- Testimonials como lista vertical; avatares e íconos reducidos de forma proporcional.
+
+- Contact: inputs de 48–56 px; separación entre campos 16 px; botón de ancho completo.
+
+- Our Team: imagen a una columna con margen superior.
+
+- Footer compacto con enlaces esenciales y RRSS.
+
+Principios evidenciados:
+
+Lectura escaneable, blancos generosos, contenido alineado al container; accesibilidad táctil; orden lógico de tabulación; tipografía con line‑height 1.5.
+
+<p align="center">
+  <img src="../assets/img/capitulo-V/mockup-lp-mobile.png" alt="wireframe mobile de la landing page">
+</p>
 
 
 ## 5.4. Applications UX/UI Design
@@ -275,7 +407,7 @@ Para el sistema de navegación hemos preferido mantener una navegación jerárqu
 
 ##### Detalle de orden
 - Este wireframe de Detalle de orden muestra una vista exhaustiva de una solicitud específica. La información se presenta en bloques o tarjetas que detallan desde la información general y la dirección de entrega hasta los documentos adjuntos. El diseño permite un análisis minucioso y la capacidad de editar la información, con campos para texto, fechas y menús desplegables. Este nivel de detalle es clave para la eficiencia operativa, una de las prioridades de la misión de la startup.
-  
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Detalle%20de%20orden.png" alt="Imagen de la pantalla de detalles de la orden de MetaSoft">
 </p>
@@ -353,14 +485,14 @@ En el módulo de Reportes, el usuario puede revisar el historial de mantenimient
 
 Por último, la sección de Verificadores integra los datos enviados por los dispositivos IoT, mostrando métricas en tiempo real sobre el estado de los vehículos. Aquí, el mecánico puede validar las lecturas del sistema, registrar observaciones o crear alertas preventivas que se enviarán directamente al conductor.
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20verificadores.jpg" alt="Wireframe taller mecanico verificadores" width="1000px"> 
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20verificadores.jpg" alt="Wireframe taller mecanico verificadores" width="1000px">
 </div>
 
  **Wireflow – Conductor (Web)**
 
 El diagrama de wireflow para el segmento de conductores en SafeCar, al igual que en el caso de los talleres mecánicos, incluye el flujo completo desde el inicio de sesión o registro hasta la gestión de las principales funciones del sistema. El recorrido comienza cuando el conductor accede a la plataforma, donde puede ingresar con sus credenciales o crear una cuenta personal si es un nuevo usuario. Una vez autenticado, el sistema lo dirige automáticamente a su panel principal (dashboard), donde se centralizan las herramientas clave para la gestión de su vehículo y el seguimiento de mantenimientos.
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20conductor.jpg" alt="Wireframe conductor" width="1000px"> 
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20conductor.jpg" alt="Wireframe conductor" width="1000px">
 </div>
 
 ### 5.4.3. Applications Mock-ups
@@ -375,9 +507,9 @@ Cada uno de los siguientes prototipos resalta los aspectos esenciales de la inte
   <img src="../assets/img/capitulo-V/mock-1-login.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
-Interfaz de acceso al sistema SafeCar, dividida en dos secciones:  
-- Panel izquierdo: muestra un mensaje motivacional e imagen alusiva al entorno automotriz, reforzando la identidad del sistema.  
-- Panel derecho: contiene el formulario de inicio de sesión con campos claros y botones destacados para Login y Sign up.  
+Interfaz de acceso al sistema SafeCar, dividida en dos secciones:
+- Panel izquierdo: muestra un mensaje motivacional e imagen alusiva al entorno automotriz, reforzando la identidad del sistema.
+- Panel derecho: contiene el formulario de inicio de sesión con campos claros y botones destacados para Login y Sign up.
 
 El diseño utiliza una paleta azul y blanca, enfocada en la claridad, accesibilidad y profesionalismo, ofreciendo una experiencia de usuario limpia y moderna.
 
@@ -388,8 +520,8 @@ El diseño utiliza una paleta azul y blanca, enfocada en la claridad, accesibili
   <img src="../assets/img/capitulo-V/mock-2-register.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
-Formulario de registro para crear una cuenta de taller en SafeCar.  
-Incluye secciones diferenciadas para información comercial y de seguridad, con campos claros para datos como nombre del taller, RUC, dirección, correo y teléfono.  
+Formulario de registro para crear una cuenta de taller en SafeCar.
+Incluye secciones diferenciadas para información comercial y de seguridad, con campos claros para datos como nombre del taller, RUC, dirección, correo y teléfono.
 
 El diseño mantiene una estructura limpia y ordenada, utilizando tonos azules y grises suaves para guiar la vista y destacar el botón principal de acción "Create Workshop Account".
 
@@ -400,10 +532,10 @@ El diseño mantiene una estructura limpia y ordenada, utilizando tonos azules y 
   <img src="../assets/img/capitulo-V/mock-3-service.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
-Interfaz que permite administrar citas y solicitudes de servicio automotriz de los clientes.  
-Presenta una tabla con información clave como nombre, teléfono, placa, marca, tipo de servicio y estado.  
+Interfaz que permite administrar citas y solicitudes de servicio automotriz de los clientes.
+Presenta una tabla con información clave como nombre, teléfono, placa, marca, tipo de servicio y estado.
 
-Incluye funciones de búsqueda, filtrado, eliminación y exportación de datos, además de un menú lateral con accesos rápidos.  
+Incluye funciones de búsqueda, filtrado, eliminación y exportación de datos, además de un menú lateral con accesos rápidos.
 El diseño prioriza la organización y legibilidad mediante el uso de tonos azules, botones contrastantes y jerarquía visual clara.
 
 
@@ -413,10 +545,10 @@ El diseño prioriza la organización y legibilidad mediante el uso de tonos azul
   <img src="../assets/img/capitulo-V/mock-4-history.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
-Muestra el registro completo de mantenimientos y reparaciones realizados a los vehículos.  
-Incluye una tabla con datos como placa, modelo, propietario, tipo de servicio, fecha, kilometraje y taller.  
+Muestra el registro completo de mantenimientos y reparaciones realizados a los vehículos.
+Incluye una tabla con datos como placa, modelo, propietario, tipo de servicio, fecha, kilometraje y taller.
 
-Cuenta con funciones de búsqueda, filtrado y exportación, permitiendo una gestión eficiente del historial.  
+Cuenta con funciones de búsqueda, filtrado y exportación, permitiendo una gestión eficiente del historial.
 El diseño mantiene coherencia visual con el resto del sistema mediante el uso de tonos azules, íconos y botones consistentes.
 
 
@@ -426,39 +558,39 @@ El diseño mantiene coherencia visual con el resto del sistema mediante el uso d
   <img src="../assets/img/capitulo-V/mock-5-appointment.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
-Permite visualizar y gestionar la información completa de una solicitud de servicio.  
-Muestra datos del cliente, vehículo y servicio solicitado, junto con el estado de la cita y el mecánico asignado.  
+Permite visualizar y gestionar la información completa de una solicitud de servicio.
+Muestra datos del cliente, vehículo y servicio solicitado, junto con el estado de la cita y el mecánico asignado.
 
-Incluye campos para observaciones y opciones para cambiar el técnico responsable.  
+Incluye campos para observaciones y opciones para cambiar el técnico responsable.
 El diseño utiliza tarjetas organizadas y colores contrastantes para resaltar secciones clave, manteniendo la coherencia visual del sistema SafeCar.
 
 
 
 
 ### 5.4.4. Applications User Flow Diagrams
-  
+
 ## **5.5. Applications Prototyping**
 
 ####  Web Application Prototyping
 
 
-El prototipo web de SafeCar fue desarrollado en Figma con el propósito de validar la navegación, la organización de los elementos y la experiencia del usuario dentro del sistema.  
+El prototipo web de SafeCar fue desarrollado en Figma con el propósito de validar la navegación, la organización de los elementos y la experiencia del usuario dentro del sistema.
 La interfaz se diseñó con un enfoque funcional y minimalista, facilitando el acceso a las principales secciones: gestión de talleres, solicitudes de servicio, reportes y vehículos.
 
-El flujo de navegación permite al usuario desplazarse de forma fluida entre las distintas pantallas, manteniendo una estructura clara y coherente.  
+El flujo de navegación permite al usuario desplazarse de forma fluida entre las distintas pantallas, manteniendo una estructura clara y coherente.
 Se empleó una paleta de colores basada en tonos azules y blancos, que transmite profesionalismo y resalta las acciones principales.
 
 **Criterios de diseño e interacción:**
-- Navegación lateral fija con accesos directos a los módulos del sistema.  
-- Formularios bien estructurados y mensajes claros para las acciones del usuario.  
-- Consistencia visual en todos los componentes de la interfaz.  
+- Navegación lateral fija con accesos directos a los módulos del sistema.
+- Formularios bien estructurados y mensajes claros para las acciones del usuario.
+- Consistencia visual en todos los componentes de la interfaz.
 - Priorización de la legibilidad y simplicidad en cada pantalla.
 
-**Simulación de navegación:**  
-El prototipo muestra los principales flujos de la aplicación, incluyendo:  
-- Inicio de sesión y registro de talleres.  
-- Gestión de citas y solicitudes de servicio.  
-- Asignación de mecánicos y actualización de estados.  
+**Simulación de navegación:**
+El prototipo muestra los principales flujos de la aplicación, incluyendo:
+- Inicio de sesión y registro de talleres.
+- Gestión de citas y solicitudes de servicio.
+- Asignación de mecánicos y actualización de estados.
 - Visualización del historial de servicios y vehículos.
 
 El uso de Figma permitió validar la estructura de navegación y el diseño visual antes de la implementación final del sistema web.
@@ -470,12 +602,3 @@ El uso de Figma permitió validar la estructura de navegación y el diseño visu
 </p>
 
 Link: [Prototipo Web App](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202124162_upc_edu_pe/Ee1cZiLNP_dJjL1prSmIih4B1u6ixglswnGvMM2Vo6pt6g?e=NhgeQJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
-
-
-
-
-
-
-
-
-
