@@ -20,7 +20,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="/assets/img/capitulo-II/drivana-logo.jpeg" alt="Logo de Drivana" width="600"/>
+			<img src="../assets/img/capitulo-II/drivana-logo.jpeg" alt="Logo de Drivana" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>2. Drivana (LatAm)</b><br/>
@@ -31,7 +31,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
 	</tr>
 	<tr>
 		<td style="width:120px; vertical-align:center; text-align:center;">
-			<img src="/assets/img/capitulo-II/obd-logo.png" alt="Logo de OBD-II" width="600"/>
+			<img src="../assets/img/capitulo-II/obd-logo.png" alt="Logo de OBD-II" width="600"/>
 		</td>
 		<td style="vertical-align:top;">
 			<b>3. Dispositivos OBD-II genéricos con apps móviles.</b><br/>
@@ -64,19 +64,19 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       SafeCar
       <div style="margin-top: 10px;" align="center">
-                <img src="/assets/img/safecar-logo.png" alt="SafeCar Logo" width="100px">
-            </div>
+        <img src="../assets/img/capitulo-II/safecar-logo.png" alt="SafeCar Logo" width="100px">
+      </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
     Drivana (LatAm)
     <div style="margin-top: 20px;" align="center">
-                <img src="/assets/img/capitulo-II/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
+        <img src="../assets/img/capitulo-II/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
         </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       OBD-II genéricos + apps
       <div style="margin-top: 10px;" align="center">
-                <img src="/assets/img/capitulo-II/obd-logo.png" alt="OBD-II genéricos + apps Logo" width="100px">
+                <img src="../assets/img/capitulo-II/obd-logo.png" alt="OBD-II genéricos + apps Logo" width="100px">
             </div>
       </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
@@ -283,6 +283,58 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   </tr>
 </table>
 
+# **Estrategias y Tácticas frente a Competidores – SafeCar**
+
+**Estrategia de diferenciación tecnológica**
+
+SafeCar busca posicionarse como una solución integral e inteligente de mantenimiento vehicular al incorporar dispositivos IoT accesibles incluso para autos sin puerto OBD-II, combinados con alertas predictivas y personalizadas.
+A diferencia de competidores como Drivana o los OBD-II genéricos, SafeCar ofrece una integración completa entre conductor, vehículo y taller, brindando diagnósticos automáticos y reportes en tiempo real que optimizan la atención mecánica.
+
+**Tácticas**
+
+Desarrollar algoritmos de mantenimiento predictivo basados en el uso del vehículo y su historial.
+
+Crear reportes automáticos que se compartan directamente con los talleres afiliados.
+
+Integrar la aplicación móvil y la web en un mismo ecosistema conductor–taller para mejorar la experiencia del usuario.
+
+**Estrategia de enfoque de nicho en mantenimiento preventivo**
+
+SafeCar se enfoca en el nicho de conductores urbanos y flotas pequeñas que buscan evitar fallas y reducir costos mediante mantenimiento preventivo.
+Mientras Drivana apunta a flotas corporativas grandes y los OBD-II genéricos solo ofrecen datos básicos, SafeCar adapta su propuesta a la realidad peruana, ofreciendo precios accesibles, simplicidad y soporte local.
+
+**Tácticas**
+
+Dirigir campañas hacia conductores de taxis, delivery y autos personales en Lima y principales provincias.
+
+Ofrecer paquetes especiales para talleres medianos que aún no están digitalizados.
+
+Crear una interfaz sencilla y educativa que explique los beneficios del mantenimiento preventivo.
+
+**Estrategia de escalabilidad y fácil adopción**
+
+SafeCar apuesta por una infraestructura fácil de instalar y escalar regionalmente sin necesidad de personal técnico especializado. El dispositivo puede configurarse en minutos, reduciendo las barreras de entrada para nuevos usuarios y talleres.
+
+**Tácticas**
+
+Diseñar guías visuales y videos breves sobre instalación y configuración del dispositivo IoT.
+
+Implementar soporte remoto y asistencia técnica automatizada desde la app.
+
+Aprovechar marketplaces y alianzas con talleres locales para distribución masiva a bajo costo.
+
+**Estrategia de posicionamiento y educación del mercado**
+
+Ante la baja cultura de mantenimiento preventivo en Perú, SafeCar prioriza una estrategia de educación y confianza. La marca busca ser reconocida como pionera en tecnología de diagnóstico inteligente accesible.
+
+**Tácticas**
+
+Crear contenido educativo en redes sociales, blogs y webinars sobre la importancia del mantenimiento predictivo.
+
+Publicar casos de éxito de talleres afiliados y usuarios satisfechos.
+
+Colaborar con aseguradoras y asociaciones automotrices para promover la prevención y seguridad vehicular.
+
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
@@ -366,15 +418,16 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Edad:</strong> 23 años</li>
   <li><strong>Ocupación:</strong> Usa carro particular </li>
   <li><strong>Distrito:</strong> Lince </li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://upcedupe-my.sharepoint.com/:v:/g/personal/u201824550_upc_edu_pe/EbWP7AHkagNIuoHROo6NtTgBQoBxwBqgRzKYoCUb9cJ52w?e=oCxlBU</a></li>
-  <li><strong>Duración:</strong> [04:19]</li>
+  <li><strong>URL del video:</strong> <a href="https://shorturl.at/D6sqC" target="_blank">https://shorturl.at/D6sqC</a></li>
+  <li><strong>Duración:</strong> 04:19</li>
+<li><strong>Inicio de la entrevista:</strong> 4:28 min - 8:47 min</li>
   <div style="margin-top: 20px;" align="center">
-                <img src="/assets/img/capitulo-II/Entrevista1IOT.png" alt="Entrevista1IOT" width="1000px">
+                <img src="../assets/img/capitulo-II/entrevista-4.png" alt="Entrevista1IOT" width="1000px">
         </div>
 
 </ul>
 <p align="justify">
-<strong>Resumen:</strong> Katy Gutierrez, quien ultiliza su auto par desplzarse a su centro de trabajo menciona que realiza el mantenimiento de su vehículo cada 8 a 9 meses, aunque a veces lo posterga por motivos de tiempo y costo. En el último año ha tenido dificultades principalmente con los gastos elevados en reparaciones y con la demora en los talleres. Se guía por ruidos del auto o luces en el tablero para identificar fallas y nunca ha utilizado aplicaciones o dispositivos digitales para monitorear su vehículo. Le interesa que SafeCar le brinde alertas preventivas, recomendaciones personalizadas y conexión directa con talleres de confianza. Estaría dispuesto a pagar una suscripción mensual si la ayuda con su problema agrega que prefiere recibir notificaciones a través de WhatsApp y la aplicación.
+<strong>Resumen:</strong> Kathy Gutiérrez es una ingeniera de 23 años residente de Lince, con un perfil pragmático y ocupado. Es una usuaria intensiva de smartphones y aplicaciones como WhatsApp, Facebook y servicios de taxi para optimizar su tiempo, pero mantiene un enfoque tradicional para el cuidado de su auto, dependiendo exclusivamente de su "mecánico de confianza" en lugar de herramientas digitales. Para futuras notificaciones, prefiere canales directos como WhatsApp o alertas de una aplicación nativa. Su comportamiento de mantenimiento es reactivo: lo realiza cada 8-9 meses solo cuando aparecen "ruidos extraños" o luces de advertencia. Sus frustraciones clave son el alto costo anual (4,000-5,000 soles), la falta de tiempo por su trabajo y una profunda desconfianza hacia los talleres. Por ello, busca una solución que le ofrezca control y predicción. Su funcionalidad ideal es una alerta que anticipe qué pieza específica está por fallar y su costo estimado, permitiéndole planificar sus finanzas y no perder días de trabajo. Está dispuesta a pagar una suscripción de 20 a 30 soles mensuales como una inversión para evitar gastos imprevistos y mayores.
 </p>
 
 <hr>
@@ -386,16 +439,17 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Edad:</strong> 23</l>
   <li><strong>Ocupación:</strong> Desarrollador de software/Conductor</li>
   <li><strong>Distrito:</strong> La molina</li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
-  <li><strong>Duración:</strong> 4:22 min</li>
+  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://shorturl.at/D6sqC</a></li>
+  <li><strong>Duración:</strong> 4:16 min</li>
+  <li><strong>Inicio de la entrevista:</strong> 0:06 min - 4:22 min</li>
   <li><strong>Screenshot:</strong></li>
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="https://media.discordapp.net/attachments/834550053590925412/1414777325970784316/image.png?ex=68c0cd8f&is=68bf7c0f&hm=431e0db6cc946fd4692194968b04f8ccaaa2cdcbfc821155639e772f02356b7f&=&format=webp&quality=lossless" alt="screenshot entrevista 2" width="600px">
+  <img src="../assets/img/capitulo-II/entrevista-1.png" alt="screenshot entrevista 2" width="600px">
 </div>
 <p align="justify">
-<strong>Resumen:</strong> Orlando Roca, 23 años, desarrollador de software y estudiante, con 5 años de experiencia conduciendo en Lima, comentó que realiza mantenimiento preventivo unas 3 veces al año y que sus principales problemas son pinchazos de llantas y desgaste por baches, además de frenos defectuosos. Detecta las fallas solo por señales físicas (llanta baja, ruidos), nunca ha usado soluciones digitales y gasta alrededor de 500 soles al año en reparaciones. Valora especialmente recibir alertas tempranas y un historial de precios de talleres para evitar sobrecostos, ya que su principal frustración es la desconfianza en los cobros. Prefiere WhatsApp como canal de notificación y afirmó estar dispuesto a pagar una suscripción mensual si la aplicación le ayuda a ahorrar en mantenimiento y a tener mayor transparencia.
+<strong>Resumen:</strong>Orlando Roca es un desarrollador de software y estudiante de 23 años que vive y trabaja en La Molina, con un perfil práctico y reservado. Con 5 años de experiencia conduciendo, es un usuario activo de WhatsApp e Instagram, y prefiere estos mismos canales (mensajería móvil y WhatsApp) para recibir notificaciones. A pesar de su afinidad con la tecnología, Orlando no tiene experiencia previa con aplicaciones dedicadas al monitoreo o mantenimiento de vehículos. Su enfoque actual para el mantenimiento es principalmente reactivo; aunque realiza revisiones preventivas tres veces al año, actúa ante señales evidentes como llantas bajas o frenos ruidosos. Su mayor frustración con los talleres es la desconfianza, específicamente el temor a que intenten "pasarse de vivos" y cobrarle de más. A raíz de problemas como pinchazos por baches que le han costado alrededor de 500 soles, Orlando valora una solución digital que le ofrezca alertas tempranas para mantenimientos preventivos y un historial de precios para asegurar costos justos. Declara estar muy dispuesto a pagar una suscripción mensual por un servicio con estas características.
 </p>
 
 <hr>
@@ -403,20 +457,21 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 <b>Entrevista 3</b>
 
 <ul>
-  <li><strong>Nombre:</strong> […]</li>
-  <li><strong>Edad:</strong> […]</li>
-  <li><strong>Ocupación:</strong> […]</li>
-  <li><strong>Distrito:</strong> […]</li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
-  <li><strong>Duración:</strong> […]</li>
+  <li><strong>Nombre:</strong> James Matta</li>
+  <li><strong>Edad:</strong> 26</li>
+  <li><strong>Ocupación:</strong> Taxista</li>
+  <li><strong>Distrito:</strong> Lima</li>
+  <li><strong>URL del video:</strong> <a href="https://shorturl.at/D6sqC" target="_blank">https://shorturl.at/D6sqC</a></li>
+  <li><strong>Duración:</strong> 6:25 min</li>
+  <li><strong>Inicio de la entrevista:</strong> 8:47 min - 14:59 min</li>
   <li><strong>Screenshot:</strong></li>
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="[URL-screenshot]" alt="screenshot entrevista 3" width="600px">
+  <img src="../assets/img/capitulo-II/entrevista-3.png" alt="screenshot entrevista 3" width="600px">
 </div>
 <p align="justify">
-<strong>Resumen:</strong> [Aquí un párrafo breve (6–8 líneas) con lo más relevante: hábitos de mantenimiento, problemas frecuentes, percepciones de talleres, uso de tecnología y expectativas frente a SafeCar].
+<strong>Resumen:</strong> James, 26 años, conductor que combina taxi y delivery, realiza mantenimiento preventivo cada 5,000 km o cada 3 meses, aunque a veces se retrasa por carga de trabajo; el último año afrontó una falla de bomba de agua que lo dejó parado, costos elevados y pérdida de tiempo para coordinar citas. Suele detectar necesidades por kilometraje, ruidos o luces del tablero, y probó un OBD2 con app tipo Torque, útil pero inestable y poco claro con los códigos. Estimó un gasto anual de S/3,200 a S/3,500. En una app como SafeCar valora primero alertas preventivas basadas en uso real, luego conexión con talleres de confianza, recomendaciones personalizadas e historial digital. Pagaría S/15 a S/25 mensuales si obtiene ahorros, descuentos y prioridad. Prefiere avisos urgentes por WhatsApp, notificaciones en la app y un correo mensual. Le frustra la poca transparencia en presupuestos, las demoras sin aviso y explicaciones técnicas confusas. Su “función ideal” sería lectura OBD2 con predicción de fallas, cotización inmediata en talleres cercanos, agenda y seguimiento en tiempo real, almacenamiento de facturas/garantías y recordatorios de SOAT y revisión técnica; usa Chrome en el móvil, a veces Firefox en laptop, y Android (Xiaomi) con doble SIM.
 </p>
 
 <hr>
@@ -430,16 +485,18 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Representante:</strong> Abel Holguín / Supervisor</li>
   <li><strong>Años de operación:</strong> 27 años</li>
   <li><strong>Distrito:</strong> La Victoria</li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">https://upcedupe-my.sharepoint.com/:v:/g/personal/u201824550_upc_edu_pe/EbWP7AHkagNIuoHROo6NtTgBQoBxwBqgRzKYoCUb9cJ52w?e=oCxlBU</a></li>
-  <li><strong>Duración:</strong> [03:09]</li>
+  <li><strong>URL del video:</strong> <a href="https://shorturl.at/D6sqC" target="_blank">https://shorturl.at/loU4y</a></li>
+  <li><strong>Duración:</strong> 03:09 min</li>
+  <li><strong>Inicio de la entrevista:</strong> 8:47 min - 14:59 min</li>
   <li><strong>Screenshot:</strong></li>
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="./../assets/img/capitulo-II/entrevista-taller-holguin.png" alt="screenshot entrevista 1" width="600px">
+  <img src="../assets/img/capitulo-II/entrevista-taller-holguin.png" alt="screenshot entrevista 1" width="600px">
 </div>
 <p align="justify">
-<strong>Resumen:</strong> Abel Holguín, compartió los desafíos que enfrenta en la gestión de su taller mecánico. Destacó que el principal reto es la creciente complejidad electrónica de los vehículos modernos, lo que exige que su personal reciba capacitación constante en electrónica avanzada y software. Actualmente, para el diagnóstico de fallas, utiliza principalmente escáneres y computadoras, y mantiene un registro digital del historial de mantenimiento de los vehículos de sus clientes. Aunque ya emplea estas herramientas, expresó que una queja común de los clientes son las demoras en el diagnóstico, ya que a veces surgen problemas inesperados. El señor Abel mostró interés en adoptar nuevas soluciones digitales, mencionando que estaría dispuesto a pagar una suscripción mensual por una plataforma que ofrezca "reportes automáticos" y ayude a reducir los tiempos de diagnóstico.
+<strong>Resumen:</strong> Abel Holguín, es un supervisor de taller  de 59 años con 27 años de experiencia en el sector, de perfil metodico. Está trabajando en la zona de Santa Catalina, La Victoria. Su taller ya integra tecnología en sus operaciones diarias: utiliza escáneres y computadoras para diagnosticar vehículos modernos (un proceso que toma en promedio 15-20 minutos) y mantiene un historial digital de cada vehículo accesible por número de placa. Para la gestión de clientes, su principal canal de comunicación y agendamiento de citas es WhatsApp.
+El principal reto que enfrenta Abel es la brecha de conocimiento de su personal frente a la modernización de los vehículos; insiste en que se necesita capacitación constante en electrónica y software para poder atenderlos eficientemente. Esta necesidad de agilidad se conecta con la queja más común de sus clientes: las demoras en el servicio. Al buscar modernizar su taller, Abel considera que el soporte tecnológico más importante es la capacitación electrónica para sus técnicos. Se mostró interesado en una plataforma que ofrezca "reportes automáticos" y confirmó que estaría dispuesto a pagar una suscripción mensual si esta ayuda a mejorar el taller, por ejemplo, reduciendo los tiempos de diagnóstico.
 </p>
 
 <hr>
@@ -451,16 +508,17 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Representante:</strong> Germán Figeroa</li>
   <li><strong>Años de operación:</strong> 15 años</li>
   <li><strong>Distrito:</strong> Los Olivos</li>
-  <li><strong>URL del video:</strong> <a href="https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing" target="_blank">[https://drive.google.com/file/d/1kyoAtXU90Ml7bK_7WturPDykz0BeB_qe/view?usp=sharing]</a></li>
-  <li><strong>Duración:</strong> [08:20]</li>
+  <li><strong>URL del video:</strong> <a href="https://shorturl.at/D6sqC" target="_blank">https://shorturl.at/D6sqC</a></li>
+  <li><strong>Duración:</strong> 08:19 min</li>
+  <li><strong>Inicio de la entrevista:</strong> 29:14 min - 37:30 min</li>
   <li><strong>Screenshot:</strong></li>
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="./../assets/img/capitulo-II/entrevista-2.png" alt="screenshot entrevista 2" width="600px">
+  <img src="../assets/img/capitulo-II/entrevista-2.png" alt="screenshot entrevista 2" width="600px">
 </div>
 <p align="justify">
-<strong>Resumen:</strong> Germán Figueroa, dueño de un taller mediano en Los Olivos, vive con el “día a día” del oficio: fallas intermitentes que quitan tiempo, clientes que no llegan a la cita y la eterna búsqueda del historial del auto. Se apoya sobre todo en WhatsApp Business, algo de Facebook/Instagram y planillas en Google Sheets, pero siente que todo está disperso. Lo que más valora de una solución como SafeCar es tener el historial por placa/VIN con fotos, repuestos y diagnósticos en un solo lugar, reportes que le avisen qué autos están por mantener y recordatorios por WhatsApp para reducir ausencias. Si realmente le ahorra 1–2 horas diarias, pagaría S/200–S/300 al mes; mejor aún si integra WhatsApp, facturación y catálogo de repuestos, y trae soporte inicial para su equipo. Sueña con alertas claras (“crítica”, “atención”, “preventiva”) que muestren evidencia simple —“batería baja”, “temperatura anormal” para confirmar la cita rápidamente y recibir el auto ya con el camino marcado: menos adivinanzas, más confianza y eficiencia.
+<strong>Resumen:</strong> Germán Figueroa, dueño de un taller mediano en Los Olivos, con perfil adaptable y paciente. Vive con el “día a día” del oficio: fallas intermitentes que quitan tiempo, clientes que no llegan a la cita y la eterna búsqueda del historial del auto. Se apoya sobre todo en WhatsApp Business, algo de Facebook/Instagram y planillas en Google Sheets, pero siente que todo está disperso. Lo que más valora de una solución como SafeCar es tener el historial por placa/VIN con fotos, repuestos y diagnósticos en un solo lugar, reportes que le avisen qué autos están por mantener y recordatorios por WhatsApp para reducir ausencias. Si realmente le ahorra 1–2 horas diarias, pagaría S/200–S/300 al mes; mejor aún si integra WhatsApp, facturación y catálogo de repuestos, y trae soporte inicial para su equipo. Sueña con alertas claras (“crítica”, “atención”, “preventiva”) que muestren evidencia simple —“batería baja”, “temperatura anormal” para confirmar la cita rápidamente y recibir el auto ya con el camino marcado: menos adivinanzas, más confianza y eficiencia.
 </p>
 
 <hr>
@@ -472,20 +530,49 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Representante:</strong> Jean Franco Quintana Carpo - Supervisor del taller</li>
   <li><strong>Años de operación:</strong> 7 años</li>
   <li><strong>Distrito:</strong> San Martin de Porres </li>
-  <li><strong>URL del video:</strong> <a href="[URL]" target="_blank">[Link]</a></li>
-  <li><strong>Duración:</strong> [mm:ss]</li>
+  <li><strong>URL del video:</strong> <a href="https://shorturl.at/D6sqC" target="_blank">
+    https://shorturl.at/D6sqC
+  </a></li>
+  <li><strong>Duración:</strong> 10:39 min</li>
+  <li><strong>Inicio de la entrevista:</strong> 18:34 min - 29:14 min</li>
   <li><strong>Screenshot:</strong></li>
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="/assets/img/capitulo-II/entrevista-taller-lizzo.png" alt="screenshot entrevista 3" width="600px">
+  <img src="../assets/img/capitulo-II/entrevista-taller-lizzo.png" alt="screenshot entrevista 3" width="600px">
 </div>
 
 <p align="justify">
-<strong>Resumen:</strong> La persona entrevistada es Jean Franco Quintana Carpo, de 26 años, mecánico con 6–7 años de experiencia que actualmente supervisa a ocho técnicos y se encarga de asignar trabajos, realizar diagnósticos complejos, pruebas de ruta y apoyar en la comunicación técnica con clientes. Trabaja en un taller especializado mayormente en Chevrolet, donde toda la comunicación interna se gestiona vía WhatsApp mediante fotos y videos como evidencias, sistema que él mismo propuso. Aunque cuentan con herramientas como escáner y osciloscopio, los diagnósticos varían entre 30 minutos y 2 días según la complejidad, y pronto implementarán el sistema Sigma para agilizar la consulta de historiales. Entre los principales retos destacan la falta de un especialista en electrónica, la carencia de diagramas eléctricos actualizados, la negativa a invertir en el programa oficial de Chevrolet, las dificultades para digitalizar procesos en taller y las quejas de clientes por demoras en la entrega de información. Pese a ello, ve con optimismo herramientas como Sigma, siempre que sean prácticas y fáciles de usar en el piso de trabajo.
+<strong>Resumen:</strong> La persona entrevistada es Jean Franco Quintana Carpo, de 26 años, mecánico practico y enérgico con 6–7 años de experiencia que actualmente supervisa a ocho técnicos y se encarga de asignar trabajos, realizar diagnósticos complejos, pruebas de ruta y apoyar en la comunicación técnica con clientes. Trabaja en un taller especializado mayormente en Chevrolet, donde toda la comunicación interna se gestiona vía WhatsApp mediante fotos y videos como evidencias, sistema que él mismo propuso. Aunque cuentan con herramientas como escáner y osciloscopio, los diagnósticos varían entre 30 minutos y 2 días según la complejidad, y pronto implementarán el sistema Sigma para agilizar la consulta de historiales.  Se apoya sobre todo en WhatsApp. Entre los principales retos destacan la falta de un especialista en electrónica, la carencia de diagramas eléctricos actualizados, la negativa a invertir en el programa oficial de Chevrolet, las dificultades para digitalizar procesos en taller y las quejas de clientes por demoras en la entrega de información. Pese a ello, ve con optimismo herramientas como Sigma, siempre que sean prácticas y fáciles de usar en el piso de trabajo.
 </p>
 
 ### 2.2.3. Análisis de entrevistas
+
+**Conductores**
+
+Los conductores entrevistados son también usuarios frecuentes de herramientas digitales y aplicaciones móviles, lo que les permite reconocer el valor de soluciones tecnológicas prácticas. Aunque no utilizan actualmente plataformas para el mantenimiento vehicular, valoran la posibilidad de recibir información en tiempo real sobre el estado del auto y notificaciones automáticas que les permitan anticiparse a las fallas.
+
+Identifican como principales problemáticas la falta de control sobre los diagnósticos mecánicos, la desconfianza hacia los talleres y la dificultad para planificar gastos imprevistos. Por ello, ven como una gran oportunidad integrar un sistema que brinde alertas predictivas y reportes claros, ayudándoles a tomar decisiones informadas sobre el cuidado de su vehículo.
+
+Coinciden en que una solución ideal debe ser fácil de usar, confiable y accesible, permitiendo gestionar mantenimientos sin depender de la intuición o del criterio de terceros. Además, destacan el valor de canales de comunicación directos como WhatsApp que simplifiquen el seguimiento y fortalezcan la transparencia en cada servicio.
+
+<div style="margin-top: 20px;" align="center">
+                <img src="../assets/img/capitulo-II/Prioridades del segmento Conductores.png" alt="Prioridades del segmento Conductores" width="1000px">
+        </div>
+
+**Talleres mecánicos**
+
+Los talleres entrevistados presentan distintos niveles de digitalización, pero comparten el interés por modernizar su gestión y reducir los tiempos de diagnóstico. Utilizan herramientas como escáneres, planillas digitales y canales como WhatsApp Business para coordinar con clientes, aunque reconocen que la información suele estar dispersa entre varios sistemas.
+
+Entre las principales problemáticas identificadas se encuentran la falta de capacitación en electrónica y software, la demora en los diagnósticos y la dificultad para mantener un historial completo de cada vehículo. Los tres coinciden en que la integración de tecnología puede mejorar la eficiencia operativa y la comunicación con los clientes, siempre que sea fácil de usar y adaptable al ritmo de trabajo del taller.
+
+Ven en SafeCar una herramienta de apoyo técnico y organizacional, capaz de centralizar datos, generar reportes automáticos y enviar recordatorios preventivos que reduzcan las ausencias o retrasos en las citas. También valoran la posibilidad de recibir alertas automáticas sobre fallas críticas o recurrentes, mejorando así la planificación del servicio y la confianza del cliente.
+
+En conjunto, los talleres consideran que una solución como SafeCar puede aumentar la productividad, optimizar recursos y profesionalizar la atención, siempre que incluya capacitación, soporte inicial y compatibilidad con los canales de comunicación que ya utilizan.
+
+<div style="margin-top: 20px;" align="center">
+                <img src="../assets/img/capitulo-II/Prioridades del segmento Talleres mecánicos.png" alt="Prioridades del segmento Talleres mecánicos" width="1000px">
+        </div>
 
 ## 2.3. Needfinding
 
@@ -499,15 +586,14 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 
 <p align="justify"> Este segmento representa a los conductores de vehículos particulares que pueden usar su auto tanto para fines personales como laborales. Incluye a quienes trabajan en taxi (por aplicativo o tradicional), en servicios de delivery o simplemente utilizan su automóvil como medio de transporte propio y familiar. En todos los casos, el vehículo es un recurso vital cuya disponibilidad impacta en su economía o bienestar. Sus principales preocupaciones giran en torno a la reducción de gastos inesperados, la seguridad en carretera y la facilidad de acceder a talleres confiables. Valoran especialmente soluciones digitales simples que les ayuden a anticipar fallas, recibir recordatorios de mantenimiento y prolongar la vida útil de su vehículo. </p>
 
-<img src="/assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
+<img src="../assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
 
-<img src="/assets/img/capitulo-II/UserPersona_entrevista1.jpeg" alt="UserPersona_entrevista1" width="700"/>
 
 <br/><b>Segmento: Talleres mecánicos</b>
 
 <p align="justify"> Este segmento corresponde a propietarios y trabajadores de talleres mecánicos independientes o de tamaño mediano. Son profesionales con experiencia práctica en diagnóstico y reparación de vehículos, pero que en muchos casos carecen de soluciones digitales para agilizar sus procesos. Su principal desafío es optimizar el tiempo de diagnóstico, fidelizar a los clientes y adaptarse a nuevas tecnologías que les permitan mejorar la eficiencia de su negocio. </p>
 
-<img src="/assets/img/capitulo-II/user-persona-mechanic.png" alt="User Persona - Mecánico" width="700"/>
+<img src="../assets/img/capitulo-II/user-persona-mechanic.png" alt="User Persona - Mecánico" width="700"/>
 
 ### 2.3.2. User Task Matrix
 
@@ -626,24 +712,24 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 <strong>User Journey Map - Conductor particular(personal, taxi y delivery)</strong>
 <p align="justify"> El journey del conductor comienza cuando detecta señales de problemas en su vehículo (luces en el tablero, ruidos extraños o fallas inesperadas). A partir de allí, pasa por etapas como la búsqueda de un taller, la coordinación de una cita, el tiempo de espera por diagnóstico y reparación, y finalmente la entrega del vehículo. Durante este proceso, las emociones del conductor oscilan entre la <em>ansiedad</em> por los costos imprevistos, la <em>frustración</em> por los tiempos de espera y la <em>incertidumbre</em> respecto a la confiabilidad del taller, con pocos momentos de satisfacción. Este recorrido muestra claras oportunidades de mejora en la anticipación de fallas, en la transparencia de los costos y en la confiabilidad del servicio. </p>
 
-<img src="/assets/img/capitulo-II/journey-map-driver.png" alt="User Journey Map - Conductor" width="700"/>
+<img src="../assets/img/capitulo-II/journey-map-driver.png" alt="User Journey Map - Conductor" width="700"/>
 
 
 <br/><strong>User Journey Map - Taller mecánico independiente/mediano</strong>
 <p align="justify"> En el caso de los talleres mecánicos, el journey se inicia cuando reciben un vehículo sin información previa o historial digital del mismo. Esto genera un proceso más largo y dependiente de inspecciones manuales, pruebas de manejo o escaneo básico. El mecánico debe diagnosticar la falla, comunicarla al cliente, esperar su aprobación y recién proceder a la reparación. Las emociones predominantes en el taller van desde la <em>presión</em> por entregar el vehículo en el menor tiempo posible, hasta la <em>frustración</em> por la falta de datos y la desconfianza de algunos clientes frente a los diagnósticos. Las oportunidades detectadas in◊cluyen la posibilidad de acceder a reportes digitales de fallas, contar con historiales de mantenimiento previos y reducir los tiempos de diagnóstico. </p>
 
-<img src="/assets/img/capitulo-II/journey-map-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
+<img src="../assets/img/capitulo-II/journey-map-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
 
 ### 2.3.4. Empathy Mapping
 <p align="justify"> Los <em>Empathy Maps</em> permiten profundizar en la comprensión de los <strong>User Personas</strong> definidos para SafeCar, capturando no solo sus acciones y necesidades, sino también sus percepciones, emociones, frustraciones y expectativas. En esta sección se presentan los mapas elaborados en la herramienta indicada, vinculados a cada uno de los segmentos objetivo (Conductores Particulares y Talleres Mecánicos). </p>
 
 <strong>Empathy Mapping - Conductor particular(personal, taxi y delivery)</strong>
 <p align="justify"> Este mapa refleja el día a día de los conductores que utilizan su vehículo como recurso principal, ya sea para uso personal, trabajo en taxi o delivery. Sus emociones y decisiones giran en torno a la necesidad de mantener el automóvil siempre operativo, ya que cualquier avería implica costos elevados y pérdida de ingresos. A través del empathy map se evidencian sus motivaciones, frustraciones y lo que dicen, ven, piensan y escuchan en relación al mantenimiento de sus vehículos. </p>
-<img src="/assets/img/capitulo-II/empathy-map-driver.png" alt="Empathy Map - Conductor" width="700"/>
+<img src="../assets/img/capitulo-II/empathy-map-driver.png" alt="Empathy Map - Conductor" width="700"/>
 
 <br/><strong>Empathy Mapping - Taller mecánico independiente/mediano</strong>
 <p align="justify"> Este mapa refleja el día a día de los conductores que utilizan su vehículo como recurso principal, ya sea para uso personal, trabajo en taxi o delivery. Sus emociones y decisiones giran en torno a la necesidad de mantener el automóvil siempre operativo, ya que cualquier avería implica costos elevados y pérdida de ingresos. A través del empathy map se evidencian sus motivaciones, frustraciones y lo que dicen, ven, piensan y escuchan en relación al mantenimiento de sus vehículos. </p>
-<img src="/assets/img/capitulo-II/empathy-map-mechanic.png" alt="Empathy Map - Mecánico" width="700"/>
+<img src="../assets/img/capitulo-II/empathy-map-mechanic.png" alt="Empathy Map - Mecánico" width="700"/>
 
 ## 2.4. Big Picture EventStorming
 
@@ -660,7 +746,7 @@ Enlace de acceso a Miro (EventStorming): <a href="https://miro.com/app/board/uXj
 Este paso consiste en identificar todos los eventos del dominio de manera libre y sin orden específico. Los participantes generan eventos en formato pasado ("algo pasó") para capturar toda la actividad relevante del ecosistema SafeCar.
 </p>
 
-<img src="/assets/img/capitulo-II/unstructured-exploration.png" alt="Step 1:Unstructured Exploration" width="700"/>
+<img src="../assets/img/capitulo-II/unstructured-exploration.png" alt="Step 1:Unstructured Exploration" width="700"/>
 
 #### Step 2: Timelines
 
@@ -668,7 +754,7 @@ Este paso consiste en identificar todos los eventos del dominio de manera libre 
 Se organizan los eventos identificados en orden cronológico para crear flujos de trabajo coherentes. Este paso establece la secuencia temporal de los procesos de mantenimiento vehicular.
 </p>
 
-<img src="/assets/img/capitulo-II/timelines-event-storming.png" alt="Step 2:Timelines" width="700"/>
+<img src="../assets/img/capitulo-II/timelines-event-storming.png" alt="Step 2:Timelines" width="700"/>
 
 #### Step 3: Paint Points
 
@@ -676,7 +762,7 @@ Se organizan los eventos identificados en orden cronológico para crear flujos d
 Se identifican los puntos problemáticos o fricciones en el proceso actual. Estos representan oportunidades de mejora que SafeCar puede abordar con su solución tecnológica.
 </p>
 
-<img src="/assets/img/capitulo-II/paint-points-event-storming.png" alt="Step 3:Paint Points" width="700"/>
+<img src="../assets/img/capitulo-II/paint-points-event-storming.png" alt="Step 3:Paint Points" width="700"/>
 
 #### Step 4: Pivotal Points
 
@@ -684,7 +770,7 @@ Se identifican los puntos problemáticos o fricciones en el proceso actual. Esto
 Se marcan los eventos críticos que determinan el éxito o fracaso del proceso. Son los momentos clave donde las decisiones tienen mayor impacto en el resultado.
 </p>
 
-<img src="/assets/img/capitulo-II/pivotal-points-event-storming.png" alt="Step 4:Pivotal Points" width="700"/>
+<img src="../assets/img/capitulo-II/pivotal-points-event-storming.png" alt="Step 4:Pivotal Points" width="700"/>
 
 #### Step 5: Commands
 
@@ -692,7 +778,7 @@ Se marcan los eventos críticos que determinan el éxito o fracaso del proceso. 
 Se definen las acciones o comandos que desencadenan los eventos del sistema. Representan las intenciones de usuarios y sistemas que inician procesos específicos.
 </p>
 
-<img src="/assets/img/capitulo-II/commands-event-storming.png" alt="Step 5:Commands" width="700"/>
+<img src="../assets/img/capitulo-II/commands-event-storming.png" alt="Step 5:Commands" width="700"/>
 
 #### Step 6: Policies
 
@@ -700,7 +786,7 @@ Se definen las acciones o comandos que desencadenan los eventos del sistema. Rep
 Se establecen las reglas de negocio que determinan cuándo y cómo se ejecutan procesos automáticos. Son las políticas que gobiernan el comportamiento del sistema.
 </p>
 
-<img src="/assets/img/capitulo-II/policies-event-storming.png" alt="Step 6:Policies" width="700"/>
+<img src="../assets/img/capitulo-II/policies-event-storming.png" alt="Step 6:Policies" width="700"/>
 
 #### Step 7: Read Models
 
@@ -714,7 +800,7 @@ Se identifican las vistas de información que los usuarios necesitan para tomar 
 Se mapean los sistemas externos con los que SafeCar debe integrarse. Incluye APIs, servicios de terceros y sistemas existentes necesarios para el funcionamiento completo.
 </p>
 
-<img src="/assets/img/capitulo-II/external-systems-event-storming.png" alt="Step 8:External Systems" width="700"/>
+<img src="../assets/img/capitulo-II/external-systems-event-storming.png" alt="Step 8:External Systems" width="700"/>
 
 #### Step 9: Aggregates
 
@@ -722,7 +808,7 @@ Se mapean los sistemas externos con los que SafeCar debe integrarse. Incluye API
 Se definen las entidades de dominio que encapsulan comportamientos y datos relacionados. Son los objetos principales del negocio que mantienen consistencia interna.
 </p>
 
-<img src="/assets/img/capitulo-II/aggregates-event-storming.png" alt="Step 9:Aggregates" width="700"/>
+<img src="../assets/img/capitulo-II/aggregates-event-storming.png" alt="Step 9:Aggregates" width="700"/>
 
 #### Step 10: Bounded Contexts
 
@@ -730,7 +816,7 @@ Se definen las entidades de dominio que encapsulan comportamientos y datos relac
 Se establecen los contextos delimitados que agrupan funcionalidades relacionadas. Define las fronteras claras entre diferentes áreas de responsabilidad del sistema.
 </p>
 
-<img src="/assets/img/capitulo-II/bounded-contexts-event-storming.png" alt="Step 10:Bounded Contexts" width="700"/>
+<img src="../assets/img/capitulo-II/bounded-contexts-event-storming.png" alt="Step 10:Bounded Contexts" width="700"/>
 
 ## 2.5. Ubiquitous Language
 
@@ -741,92 +827,91 @@ El <strong>Ubiquitous Language</strong> (Lenguaje Ubicuo) es un conjunto de tér
 ### Ubiquitous Language — SafeCar
 
 #### 1. Vehículo y componentes
-• **Vehicle (Vehículo)**: Unidad automotriz identificada por placa y características (marca, modelo, año) sobre la que se realizan diagnósticos, mantenimientos y reparaciones.  
-• **Odometer (Odómetro)**: Indicador acumulado de kilómetros recorridos por el vehículo.  
-• **Powertrain (Tren motriz)**: Conjunto de elementos que transmiten potencia (motor, transmisión y ejes).  
-• **Engine (Motor)**: Conjunto mecánico que genera potencia para el movimiento del vehículo.  
-• **Battery (Batería)**: Fuente de energía eléctrica para arranque y sistemas auxiliares.  
-• **Cooling System (Sistema de enfriamiento)**: Circuito (radiador, bomba, termostato) que mantiene la temperatura operativa del motor.  
-• **Brake System (Sistema de frenos)**: Conjunto (discos, pastillas, líquido) que permite desaceleración y detención segura.  
-• **Tire (Neumático/Llanta)**: Elemento de contacto con la calzada; su presión y desgaste impactan seguridad y consumo.  
-• **Suspension (Suspensión)**: Conjunto que absorbe irregularidades del camino y mantiene estabilidad.  
-• **Steering (Dirección)**: Sistema que permite orientar las ruedas y controlar la trayectoria.  
-• **Exhaust System (Sistema de escape)**: Conduce y trata gases producto de la combustión.  
-• **Fuel System (Sistema de combustible)**: Almacena y suministra combustible al motor.  
-• **OBD-II**: On-Board Diagnostics II para lectura de parámetros y códigos de falla (DTC: Diagnostic Trouble Codes).  
+• **Vehicle (Vehículo)**: Unidad automotriz identificada por placa y características (marca, modelo, año) sobre la que se realizan diagnósticos, mantenimientos y reparaciones.
+• **Odometer (Odómetro)**: Indicador acumulado de kilómetros recorridos por el vehículo.
+• **Powertrain (Tren motriz)**: Conjunto de elementos que transmiten potencia (motor, transmisión y ejes).
+• **Engine (Motor)**: Conjunto mecánico que genera potencia para el movimiento del vehículo.
+• **Battery (Batería)**: Fuente de energía eléctrica para arranque y sistemas auxiliares.
+• **Cooling System (Sistema de enfriamiento)**: Circuito (radiador, bomba, termostato) que mantiene la temperatura operativa del motor.
+• **Brake System (Sistema de frenos)**: Conjunto (discos, pastillas, líquido) que permite desaceleración y detención segura.
+• **Tire (Neumático/Llanta)**: Elemento de contacto con la calzada; su presión y desgaste impactan seguridad y consumo.
+• **Suspension (Suspensión)**: Conjunto que absorbe irregularidades del camino y mantiene estabilidad.
+• **Steering (Dirección)**: Sistema que permite orientar las ruedas y controlar la trayectoria.
+• **Exhaust System (Sistema de escape)**: Conduce y trata gases producto de la combustión.
+• **Fuel System (Sistema de combustible)**: Almacena y suministra combustible al motor.
+• **OBD-II**: On-Board Diagnostics II para lectura de parámetros y códigos de falla (DTC: Diagnostic Trouble Codes).
 • **Telematics Device (Dispositivo telemático/IoT)**: Equipo instalado en el vehículo que captura datos operativos y de uso.
 
 #### 2. Uso y condiciones de operación
-• **Trip (Viaje/Trayecto)**: Desplazamiento continuo del vehículo entre dos momentos de encendido y apagado.  
-• **Driving Habit (Hábito de conducción)**: Patrón de manejo observado (aceleraciones fuertes, frenadas bruscas, giros violentos).  
-• **Harsh Braking (Frenada brusca)**: Evento de desaceleración súbita que supera un umbral definido.  
-• **Harsh Acceleration (Aceleración fuerte)**: Evento de incremento rápido de velocidad que supera un umbral.  
+• **Trip (Viaje/Trayecto)**: Desplazamiento continuo del vehículo entre dos momentos de encendido y apagado.
+• **Driving Habit (Hábito de conducción)**: Patrón de manejo observado (aceleraciones fuertes, frenadas bruscas, giros violentos).
+• **Harsh Braking (Frenada brusca)**: Evento de desaceleración súbita que supera un umbral definido.
+• **Harsh Acceleration (Aceleración fuerte)**: Evento de incremento rápido de velocidad que supera un umbral.
 • **Harsh Cornering (Giro brusco)**: Cambio violento de dirección que excede un umbral de aceleración lateral.
 
 #### 3. Diagnóstico y códigos
-• **Diagnostic Trouble Code – DTC (Código de falla)**: Código estándar que indica una anomalía detectada por el vehículo.  
-• **Active DTC (DTC activo)**: Falla presente actualmente.  
-• **Stored DTC (DTC almacenado)**: Falla registrada históricamente, no presente al momento.  
-• **Health Check (Chequeo de salud)**: Evaluación general del estado del vehículo basada en lecturas y umbrales.  
-• **Inspection (Inspección)**: Revisión visual o instrumental de componentes según una pauta definida.  
+• **Diagnostic Trouble Code – DTC (Código de falla)**: Código estándar que indica una anomalía detectada por el vehículo.
+• **Active DTC (DTC activo)**: Falla presente actualmente.
+• **Stored DTC (DTC almacenado)**: Falla registrada históricamente, no presente al momento.
+• **Health Check (Chequeo de salud)**: Evaluación general del estado del vehículo basada en lecturas y umbrales.
+• **Inspection (Inspección)**: Revisión visual o instrumental de componentes según una pauta definida.
 • **Technical Report (Reporte técnico)**: Documento que resume hallazgos, diagnósticos y acciones recomendadas.
 
 #### 4. Mantenimiento y servicios
-• **Preventive Maintenance (Mantenimiento preventivo)**: Intervenciones programadas para evitar fallas (por tiempo o kilometraje).  
-• **Corrective Maintenance (Mantenimiento correctivo)**: Reparación una vez ocurrida una falla.  
-• **Service Interval (Intervalo de servicio)**: Frecuencia recomendada para realizar un mantenimiento (p.ej., cada 10 000 km o 6 meses).  
-• **Oil Change (Cambio de aceite)**: Sustitución de aceite y, normalmente, del filtro correspondiente.  
-• **Filter Replacement (Cambio de filtro)**: Sustitución de filtros (aceite, aire, combustible, cabina).  
-• **Brake Service (Servicio de frenos)**: Revisión/sustitución de pastillas, discos, líquido y purgado.  
-• **Tire Rotation (Rotación de neumáticos)**: Cambio de posición de neumáticos para distribuir desgaste.  
-• **Tire Replacement (Cambio de neumáticos)**: Sustitución cuando hay desgaste, daño o antigüedad.  
-• **Wheel Alignment (Alineación)**: Ajuste de ángulos de dirección para estabilidad y desgaste homogéneo.  
-• **Wheel Balancing (Balanceo)**: Corrección de desbalances para evitar vibraciones.  
-• **Coolant Flush (Cambio de refrigerante)**: Renovación del fluido del sistema de enfriamiento.  
+• **Preventive Maintenance (Mantenimiento preventivo)**: Intervenciones programadas para evitar fallas (por tiempo o kilometraje).
+• **Corrective Maintenance (Mantenimiento correctivo)**: Reparación una vez ocurrida una falla.
+• **Service Interval (Intervalo de servicio)**: Frecuencia recomendada para realizar un mantenimiento (p.ej., cada 10 000 km o 6 meses).
+• **Oil Change (Cambio de aceite)**: Sustitución de aceite y, normalmente, del filtro correspondiente.
+• **Filter Replacement (Cambio de filtro)**: Sustitución de filtros (aceite, aire, combustible, cabina).
+• **Brake Service (Servicio de frenos)**: Revisión/sustitución de pastillas, discos, líquido y purgado.
+• **Tire Rotation (Rotación de neumáticos)**: Cambio de posición de neumáticos para distribuir desgaste.
+• **Tire Replacement (Cambio de neumáticos)**: Sustitución cuando hay desgaste, daño o antigüedad.
+• **Wheel Alignment (Alineación)**: Ajuste de ángulos de dirección para estabilidad y desgaste homogéneo.
+• **Wheel Balancing (Balanceo)**: Corrección de desbalances para evitar vibraciones.
+• **Coolant Flush (Cambio de refrigerante)**: Renovación del fluido del sistema de enfriamiento.
 • **Battery Test (Prueba de batería)**: Verificación de capacidad de arranque y estado de carga.
 
 #### 5. Alertas y recomendaciones
-• **Condition (Condición)**: Situación detectada que requiere evaluación (p.ej., presión baja).  
-• **Alert (Alerta)**: Aviso al conductor o taller por condición de riesgo o atención requerida.  
-• **Severity (Severidad)**: Nivel de criticidad de una alerta (leve, moderada, crítica).  
-• **Priority (Prioridad)**: Orden de atención sugerido según severidad y contexto.  
-• **Recommendation (Recomendación)**: Sugerencia de mantenimiento o acción preventiva.  
-• **Reminder (Recordatorio)**: Aviso programado para un servicio futuro por fecha o kilometraje.  
-• **Risk Score (Puntaje de riesgo)**: Valor que sintetiza el nivel de riesgo operativo derivado de hábitos y estado del vehículo.  
+• **Condition (Condición)**: Situación detectada que requiere evaluación (p.ej., presión baja).
+• **Alert (Alerta)**: Aviso al conductor o taller por condición de riesgo o atención requerida.
+• **Severity (Severidad)**: Nivel de criticidad de una alerta (leve, moderada, crítica).
+• **Priority (Prioridad)**: Orden de atención sugerido según severidad y contexto.
+• **Recommendation (Recomendación)**: Sugerencia de mantenimiento o acción preventiva.
+• **Reminder (Recordatorio)**: Aviso programado para un servicio futuro por fecha o kilometraje.
+• **Risk Score (Puntaje de riesgo)**: Valor que sintetiza el nivel de riesgo operativo derivado de hábitos y estado del vehículo.
 • **Driving Profile (Perfil de conducción)**: Clasificación del estilo de manejo (seguro, económico, riesgoso) según hábitos.
 
 #### 6. Relación con el taller
-• **Workshop (Taller)**: Centro autorizado que presta servicios de mantenimiento y reparación.  
-• **Mechanic (Mecánico)**: Profesional que realiza diagnósticos, mantenimientos y reparaciones.  
-• **Service Advisor (Asesor de servicio)**: Persona que recibe al cliente, acuerda trabajos y comunica avances.  
-• **Appointment (Cita)**: Reserva de fecha y hora para atención del vehículo en el taller.  
-• **Check-in (Recepción)**: Registro de llegada del vehículo para iniciar el proceso en taller.  
-• **Work Order – WO (Orden de trabajo)**: Documento operativo que detalla los trabajos autorizados, insumos y tiempos.  
-• **Estimate (Presupuesto)**: Propuesta económica previa a la ejecución, con ítems y costos.  
-• **Customer Approval (Aprobación del cliente)**: Autorización expresa para ejecutar el trabajo y costos asociados.  
-• **Parts (Repuestos)**: Componentes o consumibles necesarios para la intervención.  
-• **Service Status (Estado del servicio)**: Etapas del proceso en taller (en recepción, en diagnóstico, en reparación, finalizado).  
+• **Workshop (Taller)**: Centro autorizado que presta servicios de mantenimiento y reparación.
+• **Mechanic (Mecánico)**: Profesional que realiza diagnósticos, mantenimientos y reparaciones.
+• **Service Advisor (Asesor de servicio)**: Persona que recibe al cliente, acuerda trabajos y comunica avances.
+• **Appointment (Cita)**: Reserva de fecha y hora para atención del vehículo en el taller.
+• **Check-in (Recepción)**: Registro de llegada del vehículo para iniciar el proceso en taller.
+• **Work Order – WO (Orden de trabajo)**: Documento operativo que detalla los trabajos autorizados, insumos y tiempos.
+• **Estimate (Presupuesto)**: Propuesta económica previa a la ejecución, con ítems y costos.
+• **Customer Approval (Aprobación del cliente)**: Autorización expresa para ejecutar el trabajo y costos asociados.
+• **Parts (Repuestos)**: Componentes o consumibles necesarios para la intervención.
+• **Service Status (Estado del servicio)**: Etapas del proceso en taller (en recepción, en diagnóstico, en reparación, finalizado).
 • **Delivery (Entrega)**: Devolución del vehículo al cliente tras finalizar el servicio.
 
 #### 7. Garantía, calidad y cumplimiento
-• **Quality Check (Control de calidad)**: Verificación final de trabajos antes de la entrega.  
-• **Service History (Historial de mantenimiento)**: Registro cronológico de servicios realizados a un vehículo.  
+• **Quality Check (Control de calidad)**: Verificación final de trabajos antes de la entrega.
+• **Service History (Historial de mantenimiento)**: Registro cronológico de servicios realizados a un vehículo.
 • **Inspection Report (Informe de inspección)**: Resultado documentado de una inspección oficial o interna.
 
 #### 8. Planes y relación comercial
-• **Membership Plan (Plan de membresía)**: Paquete de beneficios y condiciones que habilita el uso de servicios SafeCar.  
-• **Coverage (Cobertura)**: Alcance de servicios y límites incluidos en el plan o garantía.  
-• **Service Package (Paquete de servicio)**: Conjunto de servicios preventivos ofrecidos a precio preferente.  
-• **Customer (Cliente/Conductor)**: Persona titular del vehículo que solicita y paga servicios.  
-• **Consent (Consentimiento)**: Autorización del cliente para compartir datos de su vehículo con un taller.  
+• **Membership Plan (Plan de membresía)**: Paquete de beneficios y condiciones que habilita el uso de servicios SafeCar.
+• **Coverage (Cobertura)**: Alcance de servicios y límites incluidos en el plan o garantía.
+• **Service Package (Paquete de servicio)**: Conjunto de servicios preventivos ofrecidos a precio preferente.
+• **Customer (Cliente/Conductor)**: Persona titular del vehículo que solicita y paga servicios.
+• **Consent (Consentimiento)**: Autorización del cliente para compartir datos de su vehículo con un taller.
 • **Service Policy (Política de servicio)**: Reglas del taller sobre citas, cancelaciones, tiempos y garantías.
 
 #### 9. Medición y métricas de operación
-• **Mileage/Kilometrage (Kilometraje)**: Distancia total recorrida por el vehículo en odómetro.  
-• **Operating Hours (Horas de operación)**: Tiempo acumulado de motor encendido.  
-• **Fuel Economy (Consumo de combustible)**: Rendimiento de combustible por distancia (p.ej., km/L).  
-• **Wear Indicator (Indicador de desgaste)**: Señal que sugiere proximidad a recambio de pieza o servicio.  
-• **Service Due (Servicio pendiente)**: Mantenimiento que corresponde por fecha o kilometraje alcanzado.  
-• **Overheat (Sobrecalentamiento)**: Condición de temperatura del motor por encima de límites seguros.  
+• **Mileage/Kilometrage (Kilometraje)**: Distancia total recorrida por el vehículo en odómetro.
+• **Operating Hours (Horas de operación)**: Tiempo acumulado de motor encendido.
+• **Fuel Economy (Consumo de combustible)**: Rendimiento de combustible por distancia (p.ej., km/L).
+• **Wear Indicator (Indicador de desgaste)**: Señal que sugiere proximidad a recambio de pieza o servicio.
+• **Service Due (Servicio pendiente)**: Mantenimiento que corresponde por fecha o kilometraje alcanzado.
+• **Overheat (Sobrecalentamiento)**: Condición de temperatura del motor por encima de límites seguros.
 • **Low Pressure (Presión baja)**: Presión de neumáticos por debajo del umbral recomendado.
-
