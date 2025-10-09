@@ -327,7 +327,7 @@ Para el sistema de navegación hemos preferido mantener una navegación jerárqu
 
 Los diagramas de Wireflow elaborados para SafeCar muestran de forma visual cómo se conectan las distintas pantallas de la aplicación, combinando el diseño de la interfaz con el recorrido de navegación del usuario. Estos flujos ilustran las principales acciones que realizan tanto los conductores como los talleres, permitiendo evaluar la usabilidad del sistema y garantizar una experiencia coherente e intuitiva en todo momento.
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico.jpg" alt="Wireframe taller mecanico" width="1000px">
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20Safecar.jpg" alt="Wireframe Safecar" width="1000px">
 </div>
 
  **Wireflow – Taller mecanico (Web)**
@@ -364,6 +364,7 @@ El diagrama de wireflow para el segmento de conductores en SafeCar, al igual que
 ### 5.4.4. Applications User Flow Diagrams
   
 ## **5.5. Applications Prototyping**
+
 
 
 
