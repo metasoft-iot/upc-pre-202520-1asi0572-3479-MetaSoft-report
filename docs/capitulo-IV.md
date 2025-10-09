@@ -875,13 +875,16 @@ Los eventos comunican cambios significativos dentro del modelo de telemetría:
 
 ##### 4.2.2.6.2. Bounded Context Database Design Diagram
 
-| Tabla / Almacén          | Tipo                  | Propósito                                                               | Claves y Optimización                                                                               |
-| ------------------------ | --------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `telemetry_stream_state` | Redis Hash / DynamoDB | Estado de Flujo (TelemetryStream). Lectura/Escritura de alta velocidad. | **Partition Key:** `vehicleId`. Atributos: `lastHeartbeatTime`, `currentSegmentId`, `isTripActive`. |
-| `device_vehicle_cache`   | Redis Set / Hash      | Caché del ACL (`ExternalDeviceContextService`).                         | **Key:** `deviceId`. TTL: 1 hora.                                                                   |
-| `trip_segments`          | PostgreSQL / MySQL    | Read Model para viajes finalizados.                                     | **PK:** `segment_id`. Índice: (`vehicle_id`, `end_time`).                                           |
-| `raw_data_archive`       | S3 / GCS (Parquet)    | Archivo inmutable de datos crudos.                                      | Particionado por `tenantId` y `date`.                                                               |
+El modelo de base de datos del **Bounded Context Telemetry** representa la estructura de almacenamiento de datos de telemetría vehicular.  
+Incluye las entidades principales:
 
+- **TelemetryStream**: flujo activo de telemetría de un vehículo, identificado por `stream_id`.
+- **TelemetryReading**: lecturas individuales con métricas y valores asociados a un stream.
+- **TripSegment**: tramos de conducción detectados automáticamente con datos de tiempo, distancia y velocidad promedio.
+
+Estas entidades permiten la ingesta, normalización y segmentación de la información capturada desde los sensores de los vehículos.
+
+![Telemetry Processing Database Model](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/capitulo-IV/assets/img/capitulo-IV/data%20base%20telemetry.png)
 
 ### 4.2.3. Bounded Context: Alerting
 - Motor de Reglas y Gestión de Incidentes Críticos.
@@ -1016,12 +1019,17 @@ Interfaces que definen los puertos de acceso y persistencia:
 
 ##### 4.2.3.6.2. Bounded Context Database Design Diagram
 
-| **Tabla**         | **Propósito**                                                      | **Claves y Optimización**                                                                                                                                                            |
-| ----------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **alerts**        | Raíz del Agregado `Alert`. Almacena el estado transaccional.       | `alert_id (UUID, PK)`, `vehicle_id (Índice)`, `status`, `severity`, `suppression_key (Índice)`.<br> 🔹 **Índice compuesto:** `(vehicle_id, status)` para consultas rápidas en el UI. |
-| **alert_history** | Entidad `AlertHistoryEntry`. Mantiene la trazabilidad.             | `history_id (PK)`, `alert_id (FK a alerts)`, `timestamp`, `old_status`, `new_status`, `action_user_id`.<br> 🔸 **Restricción:** FK estricta `ON DELETE RESTRICT`.                    |
-| **alert_rules**   | Configuración de reglas.                                           | `rule_id (PK)`, `name`, `severity`, `is_active`, `condition_definition (JSON/TEXT)` con la lógica del Motor de Reglas (ej. MVEL, SpEL).                                              |
-| **outbox**        | Patrón **Outbox Implementation**. Garantiza fiabilidad de eventos. | `id (PK)`, `aggregate_id (alert_id)`, `type`, `payload_json`, `created_at`, `processed_at`.                                                                                          |
+El modelo de base de datos del **Bounded Context Alerting** define las tablas responsables del ciclo de vida de las alertas generadas por las reglas de negocio.  
+Sus entidades principales son:
+
+- **Alert**: representa una alerta activa o resuelta, con estado, severidad y relación con un vehículo.
+- **AlertRule**: define las condiciones y severidad de las reglas que disparan alertas.
+- **AlertHistoryEntry**: registra el historial de cambios de estado de cada alerta.
+- **SuppressionKey**: evita la duplicación de alertas similares mediante una clave de deduplicación.
+
+Este modelo soporta la trazabilidad y gestión completa de las alertas dentro del sistema.
+
+![Alerting Database Model](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/capitulo-IV/assets/img/capitulo-IV/data%20base%20alert.png)
 
 ### 4.2.4. Bounded Context: Analytics and Recommendations
 
