@@ -1536,7 +1536,7 @@ El Sprint 2 representa una evolución significativa del proyecto SafeCar, enfoc�
     </tr>
     <tr>
         <td>Location</td>
-        <td>
+        <td align="justify">
         La reunión de planificación del Sprint 2 fue realizada de manera presencial en las instalaciones de UPC, con participación híbrida mediante Google Meet para miembros remotos
         </td>
     </tr>
@@ -1590,7 +1590,199 @@ El Sprint 2 representa una evolución significativa del proyecto SafeCar, enfoc�
     </tr>
 </table>
 
-#### 6.2.2.2.Aspect Leaders and Collaborators
+#### 6.2.2.2. Aspect Leaders and Collaborators
+
+<p align="justify">
+Para el Sprint 2, el equipo organizó el trabajo bajo un enfoque de Domain-Driven Design, donde cada Bounded Context se implementa de manera independiente en cada plataforma específica. Cada equipo (Backend, Web Application, Mobile Application, Landing Page, y UX/UI) tiene sus propios líderes y colaboradores para cada Bounded Context. La matriz de liderazgo y colaboración (LACX) define las responsabilidades específicas por plataforma, asegurando autonomía y especialización en cada tecnología.
+</p>
+
+<table width="100%">
+    <tr>
+        <th>Team Member (Last Name, First Name)</th>
+        <th>GitHub Username</th>
+        <th>A1 – Device Management BC (Backend) (L/C)</th>
+        <th>A2 – Device Management BC (Web App) (L/C)</th>
+        <th>A3 – Device Management BC (Mobile) (L/C)</th>
+        <th>A4 – Driver Engagement BC (Backend) (L/C)</th>
+        <th>A5 – Driver Engagement BC (Web App) (L/C)</th>
+        <th>A6 – Driver Engagement BC (Mobile) (L/C)</th>
+        <th>A7 – Workshop Operations BC (Backend) (L/C)</th>
+        <th>A8 – Workshop Operations BC (Web App) (L/C)</th>
+        <th>A9 – Workshop Operations BC (Mobile) (L/C)</th>
+        <th>A10 – Security BC (Backend) (L/C)</th>
+        <th>A11 – Security BC (Web App) (L/C)</th>
+        <th>A12 – Security BC (Mobile) (L/C)</th>
+        <th>A13 – Analytics BC (Backend) (L/C)</th>
+        <th>A14 – Analytics BC (Web App) (L/C)</th>
+        <th>A15 – Analytics BC (Mobile) (L/C)</th>
+        <th>A16 – Landing Page Segmentation (L/C)</th>
+        <th>A17 – Landing Page External Links (L/C)</th>
+        <th>A18 – Landing Page Footer Enhancement (L/C)</th>
+        <th>A19 – UX/UI Wireframe & Prototyping (L/C)</th>
+    </tr>
+    <tr>
+        <td>Gonzalo Andre Zavala Quedena</td>
+        <td>GonzaloQu3dena</td>
+        <td>A1 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A4 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A7 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A10 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A13 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Hardie Alfonso Holguin Gamarra</td>
+        <td>HOLGUINUPC</td>
+        <td>A1 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A4 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A7 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A10 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A13 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A17 (L)</td>
+        <td>A18 (L)</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Janover Gonzalo Saldaña Vela</td>
+        <td>JanoverSaldana</td>
+        <td>-</td>
+        <td>A2 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A5 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A8 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A11 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A14 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Javier Sharvel Irigoyen Matos</td>
+        <td>sharvel-irigoyen</td>
+        <td>-</td>
+        <td>A2 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A5 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A8 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A11 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A14 (C)</td>
+        <td>-</td>
+        <td>A16 (L)</td>
+        <td>A17 (C)</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Javier Kenyi Mendoza Solis</td>
+        <td>Kenyi-Mendoza-Solis</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A3 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A6 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A9 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A12 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A15 (L)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A19 (L)</td>
+    </tr>
+    <tr>
+        <td>Anaely Zarely Burga Loarte</td>
+        <td>userxx1000</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A3 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A6 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A9 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A12 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A15 (C)</td>
+        <td>A16 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A19 (C)</td>
+    </tr>
+    <tr>
+        <td>Gustavo Jandroel Aguirre Rodríguez</td>
+        <td>Jandroel</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A3 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A6 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A9 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A12 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>A15 (C)</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+</table>
+
 #### 6.2.2.3. Sprint Backlog 2
 #### 6.2.2.4. Development Evidence for Sprint Review
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
