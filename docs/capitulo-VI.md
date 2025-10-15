@@ -289,10 +289,22 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
         </td>
     </tr>
     <tr>
-     <td>Sprint n - 1 Review Summary</td>
+        <td>Attendees (to planning meeting)</td>
         <td>
-        Este es el primer Sprint del proyecto, por lo que no existe un Sprint anterior para revisar. El equipo se encuentra en la fase inicial de desarrollo, estableciendo las bases del producto y definiendo los procesos de trabajo colaborativo.
+        Saldaña Vela, Janover Gonzalo / Holguin Gamarra, Hardie Alfonso / Mendoza Solis, Javier Kenyi / Aguirre Rodríguez, Gustavo Jandroel / Irigoyen Matos, Javier Sharvel / Zavala Quedena, Gonzalo Andre / Burga Loarte, Anaely Zarely
         </td>
+    </tr>
+    <tr>
+      <td>Sprint - Review Summary</td>
+      <td align="justify">
+          Este es el primer Sprint del proyecto, por lo que no existe un Sprint anterior para revisar. El equipo se encuentra en la fase inicial de desarrollo, estableciendo las bases del producto y definiendo los procesos de trabajo colaborativo.
+      </td>
+    </tr>
+    <tr>
+      <td>Sprint - Retrospective Summary</td>
+      <td align="justify">
+        Al ser el primer Sprint del proyecto, no existe una retrospectiva previa para analizar. Sin embargo, el equipo estableció los fundamentos para futuras retrospectivas: se acordó implementar reuniones de retrospectiva al final de cada sprint, se definieron los canales de comunicación para feedback continuo, y se establecieron las métricas básicas de seguimiento. El equipo también acordó las herramientas de colaboración (GitHub, Google Meet, Trello) y las prácticas de desarrollo que servirán como baseline para evaluar mejoras en sprints posteriores.
+      </td>
     </tr>
     <tr>
         <td colspan="2">Sprint Goal & User Stories</td>
@@ -300,7 +312,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
     </tr>
     <tr>
         <td>Sprint 1 Goal</td>
-        <td>
+        <td align="justify">
         Nuestro enfoque está en ofrecer una primera versión completamente funcional del entorno visual e interactivo de SafeCar, que incluye la landing page y los principales módulos de la aplicación web: historial de servicio, solicitud de servicio mecánico, e interfaces de inicio de sesión y registro. 
         <br><br>
         Creemos que esto permite validar la experiencia integral del usuario (conductores y mecánicos de taller) y la coherencia de los flujos principales del sistema, incluso utilizando datos simulados mientras se desarrolla la integración con el backend.
@@ -310,7 +322,7 @@ El Sprint 1 marca el inicio del proceso de desarrollo del proyecto, estableciend
     </tr>
     <tr>
        <td>Sprint 1 Velocity</td>
-        <td>
+        <td align="justify">
         Se establece una velocidad inicial de 23 Story Points, correspondiente a la capacidad total comprometida por el equipo durante la planificación del Sprint 1. Esta métrica servirá como referencia base para medir el rendimiento y ajustar la capacidad del equipo en los siguientes Sprints.
         </td>
     </tr>
@@ -1340,8 +1352,6 @@ A continuación se presentan capturas de pantalla de las principales vistas desa
 
 **Enlace al video de demostración:** [https://youtu.be/bzoLGLyBfWk](https://youtu.be/bzoLGLyBfWk)
 
-
-
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
 <p align="justify">
@@ -1416,7 +1426,7 @@ Se desplegaron ambos componentes en plataformas específicas según sus caracter
 </p>
 
 
-### Evidencias de Despliegue
+**Evidencias de Despliegue**
 
 **Landing Page - GitHub Pages:**
 
@@ -1444,13 +1454,13 @@ El despliegue exitoso establece una base sólida para el desarrollo continuo, co
 Durante el Sprint 1, el equipo MetaSoft implementó una estrategia de colaboración distribuida, coordinando el desarrollo de tres productos principales: Landing Page (liderada por Gonzalo Zavala), aplicación web (liderada por Janover Saldaña), e infraestructura de despliegue (coordinación conjunta). Esta metodología garantizó la participación activa de todos los miembros en múltiples áreas, distribuyendo el conocimiento del proyecto y fortaleciendo la capacidad colectiva del equipo.
 </p>
 
-### Analíticos de Colaboración en GitHub
+**Analíticos de Colaboración en GitHub**
 
 <p align="justify">
 Los datos extraídos de GitHub proporcionan una perspectiva cuantitativa de la colaboración del equipo, revelando patrones de contribución, frecuencia de commits, y distribución del trabajo a lo largo del sprint. Los analíticos de Pulse y Contributors de ambos repositorios confirman la participación equilibrada de todos los miembros y demuestran la efectividad de la metodología de trabajo colaborativo adoptada.
 </p>
 
-#### Repositorio Landing Page - Analíticos de Pulse y Contributors
+**Repositorio Landing Page - Analíticos de Pulse y Contributors**
 
 **GitHub Pulse - Actividad del Repositorio:**
 
@@ -1466,7 +1476,7 @@ Los datos extraídos de GitHub proporcionan una perspectiva cuantitativa de la c
   <figcaption><strong>Figura 21.</strong> Analíticos de Contributors del repositorio Landing Page detallando las contribuciones individuales por miembro del equipo, incluyendo commits y líneas de código modificadas.</figcaption>
 </figure>
 
-#### Repositorio Web Application - Analíticos de Pulse y Contributors
+**Repositorio Web Application - Analíticos de Pulse y Contributors**
 
 **GitHub Pulse - Actividad del Repositorio:**
 
