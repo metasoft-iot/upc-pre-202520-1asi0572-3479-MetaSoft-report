@@ -1510,3 +1510,91 @@ Los analíticos también revelan oportunidades de mejora para futuros sprints, p
 - **Trello:** Gestión del backlog y seguimiento de tareas
 - **Visual Studio Code:** Desarrollo colaborativo con extensiones de integración
 
+### 6.2.2. Sprint 2
+#### 6.2.2.1. Sprint Planning 2
+
+<p align="justify">
+El Sprint 2 representa una evolución significativa del proyecto SafeCar, enfocándose en el refinamiento y expansión de las funcionalidades establecidas durante el Sprint 1. Este ciclo se centra en implementar correcciones críticas basadas en el feedback del Sprint Review, expandir la cobertura de segmentos objetivo, y avanzar hacia un ecosistema completo que incluye backend y aplicación móvil. La iteración busca consolidar la experiencia de usuario y establecer la infraestructura necesaria para escalar el sistema hacia una solución integral de gestión vehicular.
+</p>
+
+<table width="100%">
+    <tr>
+        <th>Sprint #</th>
+        <th>Sprint 2</th>
+    </tr>
+    <tr>
+        <td colspan="2">Sprint Planning Background</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>2025-10-14</td>
+    </tr>
+    <tr>
+        <td>Time</td>
+        <td>09:15 AM</td>
+    </tr>
+    <tr>
+        <td>Location</td>
+        <td>
+        La reunión de planificación del Sprint 2 fue realizada de manera presencial en las instalaciones de UPC, con participación híbrida mediante Google Meet para miembros remotos
+        </td>
+    </tr>
+    <tr>
+        <td>Prepared By</td>
+        <td>
+        Saldaña Vela, Janover Gonzalo
+        </td>
+    </tr>
+    <tr>
+        <td>Attendees (to planning meeting)</td>
+        <td>
+        Saldaña Vela, Janover Gonzalo / Holguin Gamarra, Hardie Alfonso / Mendoza Solis, Javier Kenyi / Aguirre Rodríguez, Gustavo Jandroel / Irigoyen Matos, Javier Sharvel / Zavala Quedena, Gonzalo Andre / Burga Loarte, Anaely Zarely
+        </td>
+    </tr>
+    <tr>
+        <td>Sprint 1 - Review Summary</td>
+        <td align="justify">
+        El Sprint 1 fue exitoso en establecer la base funcional del proyecto SafeCar, logrando el despliegue de la Landing Page y la aplicación web con funcionalidades core gestión vehicular. Sin embargo, el Sprint Review identificó oportunidades de mejora significativas: la Landing Page requiere mejor segmentación para mecánicos y mayor responsividad, la aplicación web necesita correcciones de localización y nomenclatura (History → Service Orders), y el proyecto requiere expandir hacia backend y móvil para completar el ecosistema. El feedback de stakeholders fue positivo respecto a la calidad visual pero enfatizó la necesidad de mayor integración entre componentes.
+        </td>
+    </tr>
+    <tr>
+        <td>Sprint 1 - Retrospective Summary</td>
+        <td align="justify">
+        El equipo identificó fortalezas en la colaboración técnica y la calidad del diseño visual, pero reconoció áreas de mejora en la planificación de la integración continua. Se destacó la efectividad del trabajo distribuido pero se identificó la necesidad de mayor sincronización entre frontend y backend. Las lecciones aprendidas incluyen la importancia de validar tempranamente con usuarios reales y establecer criterios de aceptación más específicos para elementos de UX/UI. El equipo acordó implementar revisiones de código más frecuentes y establecer checkpoints intermedios para el Sprint 2.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">Sprint Goal & User Stories</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Sprint 2 Goal</td>
+        <td align="justify">
+        Nuestro enfoque está en entregar una experiencia mejorada y expandida de SafeCar que incluye correcciones críticas de usabilidad, contenido segmentado para mecánicos, integración backend funcional, y el inicio de la aplicación móvil.
+        <br><br>
+        Creemos que esto entrega mayor valor y cobertura de mercado a conductores y mecánicos, mejor experiencia de usuario a través de correcciones específicas, y capacidades técnicas expandidas a través del ecosistema completo (web, móvil, backend).
+        <br><br>
+        Esto se confirmará cuando los mecánicos puedan identificar contenido relevante en la Landing Page, los usuarios experimenten navegación fluida sin problemas de localización en la aplicación web, el backend soporte operaciones CRUD completas, y la aplicación móvil permita funcionalidades básicas de gestión vehicular.
+        </td>
+    </tr>
+    <tr>
+       <td>Sprint 2 Velocity</td>
+        <td align="justify">
+        Basándose en el rendimiento del Sprint 1 (23 Story Points completados), el equipo establece una velocidad objetivo de 86 Story Points para el Sprint 2. Este incremento del 274% refleja la expansión significativa del alcance del proyecto hacia múltiples plataformas (web, móvil, backend), la mayor experiencia del equipo, y la infraestructura establecida durante el primer sprint. Esta métrica permitirá evaluar la capacidad real del equipo en un contexto de desarrollo más complejo y multidimensional.
+        </td>
+    </tr>
+    <tr>
+        <td>Sum of Story Points</td>
+        <td>86</td>
+    </tr>
+</table>
+
+#### 6.2.2.2.Aspect Leaders and Collaborators
+#### 6.2.2.3. Sprint Backlog 2
+#### 6.2.2.4. Development Evidence for Sprint Review
+#### 6.2.2.5. Testing Suite Evidence for Sprint Review
+#### 6.2.2.6. Execution Evidence for Sprint Review
+#### 6.2.2.7. Services Documentation Evidence for Sprint Review
+#### 6.2.2.8. Software Deployment Evidence for Sprint Review
+#### 6.2.2.9. Team Collaboration Insights during Sprint
