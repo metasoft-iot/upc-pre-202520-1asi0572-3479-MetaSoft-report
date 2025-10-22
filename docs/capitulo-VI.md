@@ -1571,11 +1571,11 @@ El Sprint 2 representa una evolución significativa del proyecto SafeCar, enfoc�
     <tr>
         <td>Sprint 2 Goal</td>
         <td align="justify">
-        Nuestro enfoque está en entregar una experiencia mejorada y expandida de SafeCar que incluye correcciones críticas de usabilidad, contenido segmentado para mecánicos, integración backend funcional, y el inicio de la aplicación móvil.
+        Nuestro enfoque está en ofrecer información detallada y atractiva sobre los diferentes planes y servicios de SafeCar a nuevos visitantes mediante nuestra página web de negocio con contenido especializado para mecánicos y conductores, proporcionar herramientas completas e intuitivas de gestión de citas, diagnóstico vehicular y administración de órdenes de trabajo para mecánicos de taller a través de nuestra aplicación web, brindar monitoreo vehicular continuo en tiempo real, alertas preventivas personalizadas y recomendaciones inteligentes de mantenimiento para conductores mediante nuestra aplicación móvil fácil de usar, implementar sistemas de autenticación seguros y perfiles personalizados para cada tipo de usuario, y desarrollar el prototipo simulado completo del dispositivo de monitoreo vehicular embebido que demuestra todas las capacidades avanzadas de seguimiento y comunicación del sistema SafeCar.
         <br><br>
-        Creemos que esto entrega mayor valor y cobertura de mercado a conductores y mecánicos, mejor experiencia de usuario a través de correcciones específicas, y capacidades técnicas expandidas a través del ecosistema completo (web, móvil, backend).
+        Creemos que esto entrega una experiencia de selección y suscripción fluida y transparente de planes de servicio con información clara de precios y beneficios para visitantes interesados, herramientas profesionales de gestión completa de la agenda del taller con seguimiento automático del estado de vehículos y optimización de recursos para mecánicos, sistema inteligente de alertas preventivas de mantenimiento y monitoreo predictivo de fallas para conductores, experiencia de usuario segura y personalizada con acceso controlado a funcionalidades específicas según el tipo de usuario para todos los miembros del ecosistema, y demostración técnica completa y validación conceptual de las capacidades avanzadas de monitoreo vehicular, procesamiento de datos en tiempo real y comunicación bidireccional a través del prototipo simulado del dispositivo embebido para validar la viabilidad técnica del ecosistema completo SafeCar.
         <br><br>
-        Esto se confirmará cuando los mecánicos puedan identificar contenido relevante en la Landing Page, los usuarios experimenten navegación fluida sin problemas de localización en la aplicación web, el backend soporte operaciones CRUD completas, y la aplicación móvil permita funcionalidades básicas de gestión vehicular.
+        Esto se confirmará cuando los visitantes puedan navegar por la información de planes, comparar beneficios, elegir el plan que mejor se adapte a sus necesidades y completar el proceso de pago desde la página web en no más de tres pasos intuitivos sin necesidad de contacto telefónico, los mecánicos puedan registrar nuevos vehículos en el sistema con información completa del propietario, visualizar el historial de mantenimiento, programar citas de servicio automáticamente basándose en alertas y recomendaciones del sistema, y gestionar órdenes de trabajo con asignación de recursos sin papeleo manual ni llamadas telefónicas de confirmación, los conductores reciban notificaciones push inteligentes y personalizadas sobre el estado de su vehículo, cuándo programar el próximo mantenimiento y consejos específicos para mejorar sus hábitos de conducción, alertas de seguridad en tiempo real, todos los usuarios puedan acceder de forma segura a sus cuentas con autenticación robusta y ver únicamente la información y funcionalidades relevantes para su rol sin confusión de interfaz, y el prototipo simulado del dispositivo embebido demuestre de manera convincente el envío automático y continuo de información vehicular simulada realista que las aplicaciones web y móvil puedan recibir, procesar, analizar y mostrar a los usuarios en dashboards comprensibles y accionables.
         </td>
     </tr>
     <tr>
@@ -1593,193 +1593,105 @@ El Sprint 2 representa una evolución significativa del proyecto SafeCar, enfoc�
 #### 6.2.2.2. Aspect Leaders and Collaborators
 
 <p align="justify">
-Para el Sprint 2, el equipo organizó el trabajo bajo un enfoque de Domain-Driven Design, donde cada Bounded Context se implementa de manera independiente en cada plataforma específica. Cada equipo (Backend, Web Application, Mobile Application, Landing Page, y UX/UI) tiene sus propios líderes y colaboradores para cada Bounded Context. La matriz de liderazgo y colaboración (LACX) define las responsabilidades específicas por plataforma, asegurando autonomía y especialización en cada tecnología.
+Para el Sprint 2, el equipo organizó el trabajo bajo un enfoque de Domain-Driven Design, donde cada Bounded Context se implementa siguiendo los principios de autonomía de dominio y especialización técnica. La matriz de liderazgo y colaboración (LACX) define claramente las responsabilidades por Bounded Context, asegurando que cada contexto acotado mantenga su integridad conceptual mientras permite la colaboración efectiva entre miembros del equipo.
 </p>
 
 <table width="100%">
     <tr>
         <th>Team Member (Last Name, First Name)</th>
         <th>GitHub Username</th>
-        <th>A1 – Device Management BC (Backend) (L/C)</th>
-        <th>A2 – Device Management BC (Web App) (L/C)</th>
-        <th>A3 – Device Management BC (Mobile) (L/C)</th>
-        <th>A4 – Driver Engagement BC (Backend) (L/C)</th>
-        <th>A5 – Driver Engagement BC (Web App) (L/C)</th>
-        <th>A6 – Driver Engagement BC (Mobile) (L/C)</th>
-        <th>A7 – Workshop Operations BC (Backend) (L/C)</th>
-        <th>A8 – Workshop Operations BC (Web App) (L/C)</th>
-        <th>A9 – Workshop Operations BC (Mobile) (L/C)</th>
-        <th>A10 – Security BC (Backend) (L/C)</th>
-        <th>A11 – Security BC (Web App) (L/C)</th>
-        <th>A12 – Security BC (Mobile) (L/C)</th>
-        <th>A13 – Analytics BC (Backend) (L/C)</th>
-        <th>A14 – Analytics BC (Web App) (L/C)</th>
-        <th>A15 – Analytics BC (Mobile) (L/C)</th>
-        <th>A16 – Landing Page Segmentation (L/C)</th>
-        <th>A17 – Landing Page External Links (L/C)</th>
-        <th>A18 – Landing Page Footer Enhancement (L/C)</th>
-        <th>A19 – UX/UI Wireframe & Prototyping (L/C)</th>
-    </tr>
-    <tr>
-        <td>Gonzalo Andre Zavala Quedena</td>
-        <td>GonzaloQu3dena</td>
-        <td>A1 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A4 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A7 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A10 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A13 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td>Hardie Alfonso Holguin Gamarra</td>
-        <td>HOLGUINUPC</td>
-        <td>A1 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A4 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A7 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A10 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A13 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A17 (L)</td>
-        <td>A18 (L)</td>
-        <td>-</td>
+        <th>Device Management BC (L/C)</th>
+        <th>Workshop Operations and Telemetry Processing BC (L/C)</th>
+        <th>Communication BC (L/C)</th>
+        <th>Analytics and Recommendations BC (L/C)</th>
+        <th>Subscription and Payments BC (L/C)</th>
+        <th>IAM BC (L/C)</th>
+        <th>Landing Page Improvements (L/C)</th>
+        <th>UX/UI Design (L/C)</th>
     </tr>
     <tr>
         <td>Janover Gonzalo Saldaña Vela</td>
         <td>JanoverSaldana</td>
-        <td>-</td>
-        <td>A2 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A5 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A8 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A11 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A14 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
+        <td align="center">L</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
     </tr>
     <tr>
-        <td>Javier Sharvel Irigoyen Matos</td>
-        <td>sharvel-irigoyen</td>
-        <td>-</td>
-        <td>A2 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A5 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A8 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A11 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A14 (C)</td>
-        <td>-</td>
-        <td>A16 (L)</td>
-        <td>A17 (C)</td>
-        <td>-</td>
-        <td>-</td>
+        <td>Hardie Alfonso Holguin Gamarra</td>
+        <td>HOLGUINUPC</td>
+        <td align="center">C</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
     </tr>
     <tr>
         <td>Javier Kenyi Mendoza Solis</td>
         <td>Kenyi-Mendoza-Solis</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A3 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A6 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A9 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A12 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A15 (L)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A19 (L)</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">L</td>
     </tr>
     <tr>
-        <td>Anaely Zarely Burga Loarte</td>
-        <td>userxx1000</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A3 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A6 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A9 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A12 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A15 (C)</td>
-        <td>A16 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A19 (C)</td>
+        <td>Javier Sharvel Irigoyen Matos</td>
+        <td>sharvel-irigoyen</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
     </tr>
     <tr>
         <td>Gustavo Jandroel Aguirre Rodríguez</td>
         <td>Jandroel</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A3 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A6 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A9 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A12 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>A15 (C)</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+    </tr>
+    <tr>
+        <td>Anaely Zarely Burga Loarte</td>
+        <td>userxx1000</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+    </tr>
+    <tr>
+        <td>Gonzalo Andre Zavala Quedena</td>
+        <td>GonzaloQu3dena</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
     </tr>
 </table>
 
