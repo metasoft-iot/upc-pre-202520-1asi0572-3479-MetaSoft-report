@@ -262,50 +262,294 @@ SafeCar se posiciona como una plataforma IoT de mantenimiento vehicular intelige
 </p>
 
 #### 4.1.3.2. Software Architecture Context Level Diagrams
-<p align="justify">
-El <b>Context Diagram</b> representa la solución como una caja central y muestra a su alrededor a los usuarios y sistemas externos. De esta forma se comprende qué actores utilizan la plataforma y qué dependencias externas son necesarias.
+<p align="justify"> 
+El <b>Context Diagram</b> 
+representa la solución de software como una caja central que encapsula sus límites funcionales, mostrando a su alrededor a los diferentes actores y sistemas externos con los que interactúa. Este nivel del modelo C4 permite visualizar de forma global cómo la plataforma se integra en su entorno, identificando quiénes son los usuarios principales, qué tipo de información intercambian y qué servicios externos son necesarios para su funcionamiento. Asimismo, este diagrama facilita la comprensión del propósito del sistema dentro del ecosistema tecnológico, ayudando a los interesados (stakeholders) a entender el alcance, las dependencias y los flujos de comunicación sin necesidad de entrar en detalles técnicos de implementación. 
 </p>
 
 <img src="../assets/img/capitulo-IV/c4-context-level.png" alt="Context Level Diagram" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
-- **SafeCar Platform:** Gestiona la información recibida de los dispositivos IoT de los vehículos y coordina las interacciones con los usuarios y servicios externos.
-- **Driver (Conductor):** Consulta alertas personalizadas, programa mantenimientos y recibe recomendaciones.
-- **Mechanic (Mecánico):** Accede a reportes automáticos del estado de los vehículos y organiza reparaciones.
-- **Visitor (Visitante):** Puede navegar por el sitio público y registrarse como conductor o mecánico.
-- **OpenAI Service:** Servicio externo utilizado para el análisis inteligente de datos, soporte en generación de reportes o procesamiento avanzado con IA.
-- **Twilio Service:** Servicio externo que permite el envío de correos electrónicos y notificaciones, asegurando la comunicación efectiva con los usuarios.
-- **Embedded Application:** Software embebido que se ejecuta en el microcontrolador instalado en el vehículo. Se encarga de comunicarse con la ECU a través del puerto OBD-II y con otros sensores, recopilar datos de diagnóstico y telemetría, procesarlos localmente y enviarlos de forma segura a la plataforma SafeCar. Además, puede recibir comandos remotos, actualizar su configuración.
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr style="background-color:#808080;">
+      <th>Element</th>
+      <th>Type</th>
+      <th>Description / Purpose</th>
+      <th>Interactions (Relations)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Visitor</strong></td>
+      <td>Person</td>
+      <td>Anonymous user who browses public website content (landing pages, plan info) and can sign up as a Driver or Mechanic.</td>
+      <td>
+        - Signs up via IAM to become a <strong>Driver</strong> or <strong>Mechanic</strong>.<br>
+        - Browses public content through the SafeCar Platform.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Driver</strong></td>
+      <td>Person</td>
+      <td>Private driver (including taxis and delivery drivers). Uses SafeCar to monitor vehicle status and performance.</td>
+      <td>
+        - Visualizes potential mechanical failures and receives alerts and insights from the platform.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Mechanic</strong></td>
+      <td>Person</td>
+      <td>Independent or medium-sized workshop user. Uses SafeCar to manage maintenance and vehicle diagnostics.</td>
+      <td>
+        - Views vehicle status, identifies potential issues, and schedules maintenance appointments through the platform.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Platform</strong></td>
+      <td>Software System</td>
+      <td>Core IoT platform for smart vehicle maintenance. Central hub that connects users, devices, and external services.</td>
+      <td>
+        - Receives telemetry data from <strong>Vehicle IoT Devices</strong>.<br>
+        - Integrates with <strong>OpenAI</strong>, <strong>Twilio</strong>, and <strong>Stripe</strong> services.<br>
+        - Provides web and mobile access to Drivers and Mechanics.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>OpenAI Service</strong></td>
+      <td>External Software System</td>
+      <td>AI-based external service used for data processing and insight generation.</td>
+      <td>
+        - SafeCar Platform uses AI models to analyze data and generate predictive insights and recommendations.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Twilio Service</strong></td>
+      <td>External Software System</td>
+      <td>Communication platform for sending transactional emails and notifications.</td>
+      <td>
+        - SafeCar Platform sends transactional emails and notifications through the <strong>Twilio API</strong> (e.g., alerts, confirmations).
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Stripe Service</strong></td>
+      <td>External Software System</td>
+      <td>Secure online payment service for handling subscriptions and billing.</td>
+      <td>
+        - SafeCar Platform processes payments, manages subscriptions, and handles billing transactions through <strong>Stripe APIs</strong>.<br>
+        - Receives webhooks for payment and subscription events.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Vehicle IoT Device</strong></td>
+      <td>External Hardware System</td>
+      <td>Embedded hardware installed in vehicles that captures sensor data (OBD-II, GPS, IMU) and receives OTA updates.</td>
+      <td>
+        - SafeCar Platform manages provisioning, configuration, and firmware updates.<br>
+        - Collects telemetry and diagnostic data through the <strong>Edge Gateway</strong>.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-Con este nivel de representación, se obtiene una visión global de cómo SafeCar se conecta con sus usuarios y servicios complementarios, reforzando tanto el ecosistema de mantenimiento vehicular como la experiencia final.
+<br/>**Resumen del flujo de información:**
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr style="background-color:#808080;">
+      <th>From → To</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Visitor → SafeCar Platform</td>
+      <td>Browses public information and signs up as Driver or Mechanic.</td>
+    </tr>
+    <tr>
+      <td>Driver → SafeCar Platform</td>
+      <td>Views telemetry, alerts, and AI-generated insights.</td>
+    </tr>
+    <tr>
+      <td>Mechanic → SafeCar Platform</td>
+      <td>Monitors vehicles and schedules maintenance tasks.</td>
+    </tr>
+    <tr>
+      <td>SafeCar Platform → OpenAI Service</td>
+      <td>Sends operational data for AI processing and insight generation.</td>
+    </tr>
+    <tr>
+      <td>SafeCar Platform → Twilio Service</td>
+      <td>Sends transactional and notification emails to users.</td>
+    </tr>
+    <tr>
+      <td>SafeCar Platform → Stripe Service</td>
+      <td>Handles secure payments, subscriptions, and billing transactions.</td>
+    </tr>
+    <tr>
+      <td>SafeCar Platform ↔ Vehicle IoT Device</td>
+      <td>Manages configuration, commands, and OTA updates; receives telemetry data via the Edge gateway.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 4.1.3.2. Software Architecture Container Level Diagrams
-<p align="justify">
-El <b>Container Diagram</b> representa la arquitectura de alto nivel de la plataforma SafeCar, mostrando cómo se dividen las responsabilidades entre los diferentes contenedores de software, las tecnologías utilizadas y cómo se comunican entre sí y con los actores externos.
+<p align="justify"> 
+El <b>Container Diagram</b> detalla la estructura interna de la solución mostrada en el diagrama de contexto, descomponiendo el sistema principal en los distintos contenedores de software que lo conforman. Cada contenedor representa una aplicación o componente ejecutable independiente —como aplicaciones web, móviles, bases de datos o servicios— que, en conjunto, colaboran para ofrecer las funcionalidades de la plataforma <b>SafeCar</b>. <br><br> Este nivel permite comprender cómo se distribuyen las responsabilidades dentro del sistema, qué tecnologías se emplean en cada parte, y cómo se comunican los contenedores entre sí o con sistemas externos. Además, facilita la identificación de puntos de integración, dependencias tecnológicas y canales de comunicación entre la interfaz de usuario, la lógica de negocio y las capas de persistencia o servicios de terceros. <br><br> En este diagrama se pueden observar los principales contenedores que conforman la plataforma —como el <b>SafeCar Website</b>, la <b>Web Application</b>, la <b>Single Page Application (SPA)</b>, el <b>Backend</b>, el <b>Mobile App</b>, el <b>Edge Gateway</b> y las respectivas bases de datos— junto con sus interacciones con los actores del sistema y con los servicios externos de inteligencia artificial, notificaciones, pagos y dispositivos IoT. De esta manera, se ofrece una visión integral de la arquitectura lógica y tecnológica que sustenta la operación de SafeCar. 
 </p>
 
 <img src="../assets/img/capitulo-IV/c4-container-level.png" alt="Container Diagram SafeCar" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
-- **SafeCar Mobile Application:** Aplicación móvil con notificaciones sobre alertas críticas, consejos de conducción eficiente y estado del vehículo en tiempo real. Utiliza una base de datos local para acceso offline.
-- **Mobile SQLite Database:** Almacena datos del vehículo en el dispositivo móvil para asegurar funcionamiento sin conexión.
-- **SafeCar Website:** Sitio web público donde los visitantes consultan información y acceden a la aplicación principal.
-- **SafeCar Web Application (Angular v20):** Interfaz principal para los mecánicos y conductores, desde donde gestionan vehículos, programan mantenimientos y visualizan reportes.
-- **SafeCar Backend Platform (Spring Boot, Java 17):** Núcleo de la lógica de negocio que recibe datos desde los dispositivos IoT y las aplicaciones, procesa solicitudes y coordina respuestas.
-- **SafeCar Database (MySQL):** Base de datos central que almacena usuarios, vehículos, reportes, citas y registros de mantenimiento.
-- **OpenAI Service (Servicio Externo):** Utilizado para análisis avanzado con IA, como generación de reportes inteligentes o recomendaciones personalizadas.
-- **Twilio Service (Servicio Externo):** Encargado de enviar notificaciones y correos electrónicos transaccionales a los usuarios.
-- **Device Ingestion Service:** Microservicio que actúa como puerta de enlace entre los dispositivos IoT y la nube.
-
-**Relaciones principales:**
-- Los **conductores** reciben alertas desde la app móvil y web.
-- Los **mecánicos** utilizan la aplicación web para anticipar fallas y gestionar citas.
-- El **backend** se comunica con los servicios externos (OpenAI, Twilio) para reforzar funcionalidades de inteligencia y comunicación.
-- Toda la información se centraliza en la **base de datos de SafeCar**, garantizando integridad y persistencia.
-
-Este nivel permite visualizar claramente cómo se distribuyen las responsabilidades entre los distintos componentes y cómo cada contenedor cumple un rol específico dentro de la solución.
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr style="background-color:#808080;">
+      <th>Element</th>
+      <th>Type</th>
+      <th>Description / Purpose</th>
+      <th>Interactions (Relations)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- People -->
+    <tr>
+      <td><strong>Visitor</strong></td>
+      <td>Person</td>
+      <td>Anonymous user who browses public content on the SafeCar Website and can register to become a Driver or Mechanic.</td>
+      <td>
+        - Visits the <strong>SafeCar Website</strong> to explore plans and product information.<br>
+        - Registers through the IAM module to access the platform.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Driver</strong></td>
+      <td>Person</td>
+      <td>Private driver (including taxis and delivery). Uses the mobile app or SPA to monitor vehicle telemetry and receive alerts.</td>
+      <td>
+        - Interacts with the <strong>SafeCar Mobile App</strong> and <strong>SPA</strong>.<br>
+        - Receives alerts, driving tips, and real-time vehicle data.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Mechanic</strong></td>
+      <td>Person</td>
+      <td>Independent or medium-sized workshop user who manages vehicle diagnostics and maintenance through the SafeCar Web Application.</td>
+      <td>
+        - Accesses the <strong>Web Application</strong> to view telemetry, create work orders, and schedule maintenance appointments.
+      </td>
+    </tr>
+    <!-- Containers -->
+    <tr>
+      <td><strong>SafeCar Website</strong></td>
+      <td>Container</td>
+      <td>Public-facing site that presents information about SafeCar’s services, plans, and features to attract new users.</td>
+      <td>
+        - Visited by the <strong>Visitor</strong>.<br>
+        - Redirects registered users to the <strong>SPA</strong> for authentication and platform access.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Web Application</strong></td>
+      <td>Container</td>
+      <td>Web application used by mechanics to visualize vehicle telemetry, manage appointments, and monitor diagnostic data.</td>
+      <td>
+        - Communicates with the <strong>SPA</strong> to display data.<br>
+        - Uses APIs exposed by the <strong>Backend Platform</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Single Page Application (SPA)</strong></td>
+      <td>Container</td>
+      <td>Client-side web interface for both Drivers and Mechanics. Provides a responsive and dynamic user experience.</td>
+      <td>
+        - Served by the <strong>Web Application</strong> or <strong>Website</strong>.<br>
+        - Communicates with the <strong>Backend Platform</strong> via REST APIs.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Mobile Application</strong></td>
+      <td>Container</td>
+      <td>Cross-platform mobile application for Drivers to monitor vehicle health, receive alerts, and view driving performance.</td>
+      <td>
+        - Reads and stores local data in the <strong>Mobile SQLite Database</strong>.<br>
+        - Communicates with the <strong>Backend Platform</strong> via APIs.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Mobile SQLite Database</strong></td>
+      <td>Container</td>
+      <td>Local database within the mobile device used to cache essential data for offline use and improve performance.</td>
+      <td>
+        - Used by the <strong>Mobile Application</strong> for local persistence.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Backend Platform</strong></td>
+      <td>Container</td>
+      <td>Core service layer that manages business logic, API endpoints, and integration with bounded contexts (IAM, Payments, Devices, etc.).</td>
+      <td>
+        - Communicates with the <strong>SPA</strong> and <strong>Mobile App</strong>.<br>
+        - Persists data in the <strong>SafeCar Database</strong>.<br>
+        - Integrates with <strong>OpenAI</strong>, <strong>Twilio</strong>, <strong>Stripe</strong>, and the <strong>Edge</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Database</strong></td>
+      <td>Container</td>
+      <td>Central data persistence system for user data, subscriptions, vehicle telemetry, and other operational records.</td>
+      <td>
+        - Used by the <strong>Backend Platform</strong> for CRUD operations and long-term storage.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Edge</strong></td>
+      <td>Container</td>
+      <td>Edge gateway that receives telemetry from embedded vehicle devices, buffers and normalizes data, and forwards it securely to the backend. Also handles provisioning, commands, and OTA updates.</td>
+      <td>
+        - Exchanges data with the <strong>Vehicle IoT Device</strong>.<br>
+        - Sends normalized telemetry to the <strong>Backend Platform</strong>.<br>
+        - Receives OTA and provisioning commands from the <strong>Backend Platform</strong>.
+      </td>
+    </tr>
+    <!-- External Systems -->
+    <tr>
+      <td><strong>Vehicle IoT Device</strong></td>
+      <td>External Hardware System</td>
+      <td>Embedded hardware installed in vehicles that captures real-time sensor data and receives OTA commands.</td>
+      <td>
+        - Sends telemetry to the <strong>SafeCar Edge</strong>.<br>
+        - Receives configuration, commands, and firmware updates (OTA) from the Edge.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>OpenAI Service</strong></td>
+      <td>External Software System</td>
+      <td>AI-powered service used to analyze vehicle data and generate intelligent insights and recommendations.</td>
+      <td>
+        - The <strong>Backend Platform</strong> sends data for processing and receives predictive analytics and recommendations.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Twilio Service</strong></td>
+      <td>External Software System</td>
+      <td>Communication service that handles the delivery of emails and notifications.</td>
+      <td>
+        - The <strong>Backend Platform</strong> sends transactional emails and notifications via the <strong>Twilio API</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Stripe Service</strong></td>
+      <td>External Software System</td>
+      <td>Payment gateway that manages subscriptions, billing, and online transactions for SafeCar users.</td>
+      <td>
+        - The <strong>Backend Platform</strong> processes payments through <strong>Stripe APIs</strong>.<br>
+        - <strong>Stripe</strong> sends webhooks for billing and subscription events.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
 <p align="justify">
