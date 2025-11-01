@@ -266,7 +266,7 @@ SafeCar se posiciona como una plataforma IoT de mantenimiento vehicular intelige
 El <b>Context Diagram</b> representa la solución como una caja central y muestra a su alrededor a los usuarios y sistemas externos. De esta forma se comprende qué actores utilizan la plataforma y qué dependencias externas son necesarias.
 </p>
 
-<img src="../assets/img/capitulo-IV/context-diagram.png" alt="Context Level Diagram" width="1000"/>
+<img src="../assets/img/capitulo-IV/c4-context-level.png" alt="Context Level Diagram" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
@@ -285,7 +285,7 @@ Con este nivel de representación, se obtiene una visión global de cómo SafeCa
 El <b>Container Diagram</b> representa la arquitectura de alto nivel de la plataforma SafeCar, mostrando cómo se dividen las responsabilidades entre los diferentes contenedores de software, las tecnologías utilizadas y cómo se comunican entre sí y con los actores externos.
 </p>
 
-<img src="../assets/img/capitulo-IV/container-diagram.png" alt="Container Diagram SafeCar" width="1000"/>
+<img src="../assets/img/capitulo-IV/c4-container-level.png" alt="Container Diagram SafeCar" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
