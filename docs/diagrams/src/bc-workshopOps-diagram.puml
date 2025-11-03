@@ -1,0 +1,743 @@
+@startuml bc-workshopOps-diagram
+
+skinparam ClassAttributeIconSize 0
+
+legend right
+== Legend: How to read relationships
+- A *-- B: Composition. A owns B and controls its lifecycle (e.g., "root", "records 0..*").
+- A --> B: Association/Reference (directed). A keeps a reference to B (read as: "A uses/knows B").
+- A ..> B: Dependency. A depends on B (creates/calls/converts B; common in controllers → services/assemblers).
+- A ..|> B: Realization/Implementation. A implements interface/contract B (impl → Service/Repository).
+- Text on the line: semantic label for the relation (e.g., "bays", "timestamp").
+- Multiplicity: 0..1 (optional), 1 (one), 0..* (many). Usually appears at the end of the label (e.g., "0..*").
+endlegend
+
+left to right direction
+package com.safecar.platform.workshopOps {
+
+    package "domain" {
+        package "model" {
+            package "aggregates" {
+                class WorkshopOrder <<AggregateRoot>> {
+                    +id: Long
+                    +version: Long
+                    +openedAt: Instant
+                    +status: String
+                    +totalAppointments: int
+                    +isClosable(): boolean
+                    +close(): void
+                    +addAppointment(slot: ServiceSlot): void
+                }
+                class WorkshopAppointment <<AggregateRoot>> {
+                    +id: Long
+                    +version: Long
+                    +status: String
+                    +scheduledAt: ServiceSlot
+                    +linkToWorkOrder(code: WorkOrderCode): void
+                    +reschedule(slot: ServiceSlot): void
+                    +cancel(): void
+                }
+                class WorkshopOperation <<AggregateRoot>> {
+                    +id: Long
+                    +version: Long
+                    +mechanicsCount: int
+                    +baysCount: int
+                    +assignMechanic(userId: Long): void
+                    +allocateBay(label: String): void
+                }
+                class VehicleTelemetry <<AggregateRoot>> {
+                    +id: Long
+                    +version: Long
+                    +lastIngestedAt: Instant
+                    +recordCount: Long
+                    +ingest(sample: TelemetrySample): void
+                    +flush(): void
+                }
+            }
+
+            package "entities" {
+                class WorkOrder <<Entity>> {
+                    +id: Long
+                    +code: WorkOrderCode
+                    +workshopId: WorkshopId
+                    +vehicleId: VehicleId
+                    +driverId: DriverId
+                    +openedAt: Instant
+                    +closedAt: Instant [0..1]
+                    +status: String
+                }
+                class Appointment <<Entity>> {
+                    +id: Long
+                    +slot: ServiceSlot
+                    +workshopId: WorkshopId
+                    +vehicleId: VehicleId
+                    +driverId: DriverId
+                    +workOrderId: Long [0..1]
+                    +status: String
+                }
+                class ServiceBay <<Entity>> {
+                    +id: Long
+                    +label: String
+                    +workshopId: WorkshopId
+                }
+                class TelemetryRecord <<Entity>> {
+                    +id: Long
+                    +sample: TelemetrySample
+                    +ingestedAt: Instant
+                }
+
+            }
+            ' Aggregate–Entity relationships
+            WorkshopOrder *-- com.safecar.platform.workshopOps.domain.model.entities.WorkOrder : root
+            WorkshopAppointment *-- com.safecar.platform.workshopOps.domain.model.entities.Appointment : root
+            WorkshopOperation *-- com.safecar.platform.workshopOps.domain.model.entities.ServiceBay : bays 0..*
+            VehicleTelemetry *-- com.safecar.platform.workshopOps.domain.model.entities.TelemetryRecord : records 0..*
+
+            package "valueobjects" {
+                class VehicleId <<ValueObject>> {
+                    +vehicleId: Long
+                    +plateNumber: String
+                }
+                class DriverId <<ValueObject>> {
+                    +driverId: Long
+                    +fullName: String
+                }
+                class WorkshopId <<ValueObject>> {
+                    +workshopId: Long
+                    +displayName: String
+                }
+                class WorkOrderCode <<ValueObject>> {
+                    +value: String
+                }
+                class ServiceSlot <<ValueObject>> {
+                    +startAt: Instant
+                    +endAt: Instant
+                }
+                class GeoPoint <<ValueObject>> {
+                    +latitude: Decimal
+                    +longitude: Decimal
+                }
+                class SpeedKmh <<ValueObject>> {
+                    +value: Decimal
+                }
+                class OdometerKm <<ValueObject>> {
+                    +value: Decimal
+                }
+                enum TelemetryType <<ValueObject>> {
+                    SPEED
+                    LOCATION
+                    DTC
+                    ALERT
+                }
+                enum AlertSeverity <<ValueObject>> {
+                    INFO
+                    WARN
+                    CRITICAL
+                    }
+                    class FaultCode <<ValueObject>> {
+                        +code: String
+                        +standard: String
+                    }
+                    class TelemetryTimestamp <<ValueObject>> {
+                        +occurredAt: Instant
+                    }
+                    class TelemetrySample <<ValueObject>> {
+                        +type: TelemetryType
+                        +severity: AlertSeverity
+                        +timestamp: TelemetryTimestamp
+                        +vehicleId: VehicleId
+                        +driverId: DriverId
+                        +speed: SpeedKmh [0..1]
+                        +location: GeoPoint [0..1]
+                        +odometer: OdometerKm [0..1]
+                        +dtc: FaultCode [0..1]
+                    }
+                    class UserId <<ValueObject>> {
+                        +userId: Long
+                    }
+                    ' Relationships among Value Objects (composition/association)
+                    TelemetrySample *-- TelemetryTimestamp : timestamp
+                    TelemetrySample *-- SpeedKmh : speed (opt)
+                    TelemetrySample *-- GeoPoint : location (opt)
+                    TelemetrySample *-- OdometerKm : odometer (opt)
+                    TelemetrySample *-- FaultCode : dtc (opt)
+                    TelemetrySample --> VehicleId : vehicle
+                    TelemetrySample --> DriverId : driver
+                    WorkOrderCode --> WorkshopId : issuedBy
+                }
+
+                ' Entity–VO relationships
+                WorkOrder *-- WorkOrderCode : code
+                WorkOrder --> WorkshopId : workshop
+                WorkOrder --> VehicleId : vehicle
+                WorkOrder --> DriverId : driver
+                Appointment *-- ServiceSlot : slot
+                Appointment --> WorkshopId : workshop
+                Appointment --> VehicleId : vehicle
+                Appointment --> DriverId : driver
+                ServiceBay --> WorkshopId : locatedAt
+                TelemetryRecord *-- TelemetrySample : sample
+
+                ' Aggregate–VO relationships
+                WorkshopOrder --> WorkOrderCode : code
+                WorkshopOrder --> WorkshopId : workshop
+                WorkshopOrder --> VehicleId : vehicle
+                WorkshopOrder --> DriverId : driver
+                WorkshopAppointment --> ServiceSlot : slot
+                WorkshopAppointment --> WorkshopId : workshop
+                WorkshopAppointment --> VehicleId : vehicle
+                WorkshopAppointment --> DriverId : driver
+                WorkshopOperation --> WorkshopId : workshop
+                VehicleTelemetry --> TelemetrySample : uses
+
+                package "commands" {
+                    class OpenWorkOrderCommand <<Command>> {
+                        +workshopId: WorkshopId
+                        +vehicleId: VehicleId
+                        +driverId: DriverId
+                        +code: WorkOrderCode
+                        +openedAt: Instant
+                    }
+                    class CloseWorkOrderCommand <<Command>> {
+                        +workOrderId: Long
+                    }
+                    class AddAppointmentToWorkOrderCommand <<Command>> {
+                        +workOrderId: Long
+                        +slot: ServiceSlot
+                    }
+                    class CreateAppointmentCommand <<Command>> {
+                        +workshopId: WorkshopId
+                        +vehicleId: VehicleId
+                        +driverId: DriverId
+                        +slot: ServiceSlot
+                    }
+                    class LinkAppointmentToWorkOrderCommand <<Command>> {
+                        +appointmentId: Long
+                        +workOrderCode: WorkOrderCode
+                    }
+                    class RescheduleAppointmentCommand <<Command>> {
+                        +appointmentId: Long
+                        +slot: ServiceSlot
+                    }
+                    class CancelAppointmentCommand <<Command>> {
+                        +appointmentId: Long
+                    }
+                    class AllocateServiceBayCommand <<Command>> {
+                        +workshopId: WorkshopId
+                        +label: String
+                    }
+                    class IngestTelemetrySampleCommand <<Command>> {
+                        +sample: TelemetrySample
+                    }
+                    class FlushTelemetryCommand <<Command>> {
+                        +telemetryAggregateId: Long
+                    }
+                }
+
+                package "queries" {
+                    class GetWorkOrderByIdQuery <<Query>> {
+                        +workOrderId: Long
+                    }
+                    class GetWorkOrdersByWorkshopQuery <<Query>> {
+                        +workshopId: WorkshopId
+                        +status: String [0..1]
+                    }
+                    class GetAppointmentByIdQuery <<Query>> {
+                        +appointmentId: Long
+                    }
+                    class GetAppointmentsByWorkshopAndRangeQuery <<Query>> {
+                        +workshopId: WorkshopId
+                        +from: Instant
+                        +to: Instant
+                    }
+                    class GetAppointmentsByWorkOrderQuery <<Query>> {
+                        +workOrderId: Long
+                    }
+                    class GetWorkshopByIdQuery <<Query>> {
+                        +workshopId: WorkshopId
+                    }
+                    class GetServiceBaysByWorkshopQuery <<Query>> {
+                        +workshopId: WorkshopId
+                    }
+                    class GetTelemetryRecordByIdQuery <<Query>> {
+                        +recordId: Long
+                    }
+                    class GetTelemetryByVehicleAndRangeQuery <<Query>> {
+                        +vehicleId: VehicleId
+                        +from: Instant
+                        +to: Instant
+                    }
+                    class GetTelemetryAlertsBySeverityQuery <<Query>> {
+                        +workshopId: WorkshopId [0..1]
+                        +severity: AlertSeverity
+                        +from: Instant [0..1]
+                        +to: Instant [0..1]
+                    }
+                }
+
+                package "events" {
+                    class WorkOrderOpenedEvent <<Event>> {
+                        +workOrderId: Long
+                        +workshopId: WorkshopId
+                        +vehicleId: VehicleId
+                        +driverId: DriverId
+                        +code: WorkOrderCode
+                        +openedAt: Instant
+                    }
+                    class WorkOrderClosedEvent <<Event>> {
+                        +workOrderId: Long
+                        +closedAt: Instant
+                    }
+                    class AppointmentCreatedEvent <<Event>> {
+                        +appointmentId: Long
+                        +workshopId: WorkshopId
+                        +vehicleId: VehicleId
+                        +driverId: DriverId
+                        +slot: ServiceSlot
+                        +workOrderId: Long [0..1]
+                    }
+                    class AppointmentRescheduledEvent <<Event>> {
+                        +appointmentId: Long
+                        +oldSlot: ServiceSlot
+                        +newSlot: ServiceSlot
+                    }
+                    class AppointmentCanceledEvent <<Event>> {
+                        +appointmentId: Long
+                        +canceledAt: Instant
+                    }
+                    class ServiceBayAllocatedEvent <<Event>> {
+                        +serviceBayId: Long
+                        +workshopId: WorkshopId
+                        +label: String
+                    }
+                    class TelemetrySampleIngestedEvent <<Event>> {
+                        +recordId: Long
+                        +sample: TelemetrySample
+                        +ingestedAt: Instant
+                    }
+                    class TelemetryFlushedEvent <<Event>> {
+                        +telemetryAggregateId: Long
+                        +flushedAt: Instant
+                        +count: Long
+                    }
+                    class TelemetryAlertRaisedEvent <<Event>> {
+                        +recordId: Long
+                        +workshopId: WorkshopId [0..1]
+                        +vehicleId: VehicleId
+                        +severity: AlertSeverity
+                        +type: TelemetryType
+                        +occurredAt: TelemetryTimestamp
+                        +message: String [0..1]
+                    }
+                }
+            }
+
+            package "services" {
+                interface WorkOrderCommandService <<Service>> {
+                    +handle(command: OpenWorkOrderCommand): void
+                    +handle(command: CloseWorkOrderCommand): void
+                    +handle(command: AddAppointmentToWorkOrderCommand): void
+                }
+                interface WorkOrderQueryService <<Service>> {
+                    +handle(query: GetWorkOrderByIdQuery): Optional<WorkshopOrder>
+                    +handle(query: GetWorkOrdersByWorkshopQuery): List<WorkshopOrder>
+                }
+                interface AppointmentCommandService <<Service>> {
+                    +handle(command: CreateAppointmentCommand): void
+                    +handle(command: LinkAppointmentToWorkOrderCommand): void
+                    +handle(command: RescheduleAppointmentCommand): void
+                    +handle(command: CancelAppointmentCommand): void
+                }
+                interface AppointmentQueryService <<Service>> {
+                    +handle(query: GetAppointmentByIdQuery): Optional<WorkshopAppointment>
+                    +handle(query: GetAppointmentsByWorkshopAndRangeQuery): List<WorkshopAppointment>
+                    +handle(query: GetAppointmentsByWorkOrderQuery): List<WorkshopAppointment>
+                }
+                interface WorkshopCommandService <<Service>> {
+                    +handle(command: AllocateServiceBayCommand): void
+                }
+                interface WorkshopQueryService <<Service>> {
+                    +handle(query: GetWorkshopByIdQuery): Optional<WorkshopOperation>
+                    +handle(query: GetServiceBaysByWorkshopQuery): List<ServiceBay>
+                }
+                interface TelemetryCommandService <<Service>> {
+                    +handle(command: IngestTelemetrySampleCommand): void
+                    +handle(command: FlushTelemetryCommand): void
+                }
+                interface TelemetryQueryService <<Service>> {
+                    +handle(query: GetTelemetryRecordByIdQuery): Optional<TelemetryRecord>
+                    +handle(query: GetTelemetryByVehicleAndRangeQuery): List<TelemetryRecord>
+                    +handle(query: GetTelemetryAlertsBySeverityQuery): List<TelemetryRecord>
+                }
+            }
+
+            package "repositories" {
+                interface WorkOrderRepository <<Repository>> {
+                    +save(aggregate: WorkshopOrder): void
+                    +findById(id: Long): Optional<WorkshopOrder>
+                    +findByWorkshop(workshopId: WorkshopId, status: String [0..1]): List<WorkshopOrder>
+                    +existsByCodeAndWorkshop(code: WorkOrderCode, workshopId: WorkshopId): boolean
+                }
+                interface AppointmentRepository <<Repository>> {
+                    +save(aggregate: WorkshopAppointment): void
+                    +findById(id: Long): Optional<WorkshopAppointment>
+                    +findByWorkshopAndRange(workshopId: WorkshopId, from: Instant, to: Instant): List<WorkshopAppointment>
+                    +findByWorkOrder(workOrderId: Long): List<WorkshopAppointment>
+                    +overlapsInWorkshop(workshopId: WorkshopId, slot: ServiceSlot): boolean
+                }
+                interface WorkshopRepository <<Repository>> {
+                    +save(aggregate: WorkshopOperation): void
+                    +findById(id: Long): Optional<WorkshopOperation>
+                    +findServiceBaysByWorkshop(workshopId: WorkshopId): List<ServiceBay>
+                }
+                interface TelemetryRepository <<Repository>> {
+                    +saveRecord(record: TelemetryRecord): void
+                    +findRecordById(id: Long): Optional<TelemetryRecord>
+                    +findByVehicleAndRange(vehicleId: VehicleId, from: Instant, to: Instant): List<TelemetryRecord>
+                    +findAlertsBySeverity(workshopId: WorkshopId [0..1], severity: AlertSeverity, from: Instant [0..1], to: Instant [0..1]): List<TelemetryRecord>
+                    +existsRecordByVehicleAndOccurredAt(vehicleId: VehicleId, occurredAt: TelemetryTimestamp): boolean
+                    +flushAggregate(telemetryAggregateId: Long): long
+                }
+            }
+        }
+
+        package "infrastructure" {
+            package "persistence" {
+                package "jpa" {
+                    package "repositories" {
+                        class WorkshopOrderRepositoryImpl <<RepositoryImpl>> {
+                            +save(aggregate: WorkshopOrder): void
+                            +findById(id: Long): Optional<WorkshopOrder>
+                            +findByWorkshop(workshopId: WorkshopId, status: String [0..1]): List<WorkshopOrder>
+                            +existsByCodeAndWorkshop(code: WorkOrderCode, workshopId: WorkshopId): boolean
+                        }
+                        class WorkshopAppointmentRepositoryImpl <<RepositoryImpl>> {
+                            +save(aggregate: WorkshopAppointment): void
+                            +findById(id: Long): Optional<WorkshopAppointment>
+                            +findByWorkshopAndRange(workshopId: WorkshopId, from: Instant, to: Instant): List<WorkshopAppointment>
+                            +findByWorkOrder(workOrderId: Long): List<WorkshopAppointment>
+                            +overlapsInWorkshop(workshopId: WorkshopId, slot: ServiceSlot): boolean
+                        }
+                        class WorkshopOperationRepositoryImpl <<RepositoryImpl>> {
+                            +save(aggregate: WorkshopOperation): void
+                            +findById(id: Long): Optional<WorkshopOperation>
+                            +findServiceBaysByWorkshop(workshopId: WorkshopId): List<ServiceBay>
+                        }
+                        class VehicleTelemetryRepositoryImpl <<RepositoryImpl>> {
+                            +saveRecord(record: TelemetryRecord): void
+                            +findRecordById(id: Long): Optional<TelemetryRecord>
+                            +findByVehicleAndRange(vehicleId: VehicleId, from: Instant, to: Instant): List<TelemetryRecord>
+                            +findAlertsBySeverity(workshopId: WorkshopId [0..1], severity: AlertSeverity, from: Instant [0..1], to: Instant [0..1]): List<TelemetryRecord>
+                            +existsRecordByVehicleAndOccurredAt(vehicleId: VehicleId, occurredAt: TelemetryTimestamp): boolean
+                            +flushAggregate(telemetryAggregateId: Long): long
+                        }
+                        WorkshopOrderRepositoryImpl ..|> WorkOrderRepository
+                        WorkshopAppointmentRepositoryImpl ..|> AppointmentRepository
+                        WorkshopOperationRepositoryImpl ..|> WorkshopRepository
+                        VehicleTelemetryRepositoryImpl ..|> TelemetryRepository
+                    }
+                }
+            }
+        }
+
+        package "application" {
+            package "internal" {
+                package "commandservices" {
+                    class WorkOrderCommandServiceImpl <<ServiceImpl>> {
+                        +handle(command: OpenWorkOrderCommand): void
+                        +handle(command: CloseWorkOrderCommand): void
+                        +handle(command: AddAppointmentToWorkOrderCommand): void
+                    }
+                    class AppointmentCommandServiceImpl <<ServiceImpl>> {
+                        +handle(command: CreateAppointmentCommand): void
+                        +handle(command: LinkAppointmentToWorkOrderCommand): void
+                        +handle(command: RescheduleAppointmentCommand): void
+                        +handle(command: CancelAppointmentCommand): void
+                    }
+                    class WorkshopCommandServiceImpl <<ServiceImpl>> {
+                        +handle(command: AllocateServiceBayCommand): void
+                    }
+                    class TelemetryCommandServiceImpl <<ServiceImpl>> {
+                        +handle(command: IngestTelemetrySampleCommand): void
+                        +handle(command: FlushTelemetryCommand): void
+                    }
+
+                    WorkOrderCommandServiceImpl ..|> WorkOrderCommandService
+                    AppointmentCommandServiceImpl ..|> AppointmentCommandService
+                    WorkshopCommandServiceImpl ..|> WorkshopCommandService
+                    TelemetryCommandServiceImpl ..|> TelemetryCommandService
+                }
+
+                package "queryservices" {
+                    class WorkOrderQueryServiceImpl <<ServiceImpl>> {
+                        +handle(query: GetWorkOrderByIdQuery): Optional<WorkshopOrder>
+                        +handle(query: GetWorkOrdersByWorkshopQuery): List<WorkshopOrder>
+                    }
+                    class AppointmentQueryServiceImpl <<ServiceImpl>> {
+                        +handle(query: GetAppointmentByIdQuery): Optional<WorkshopAppointment>
+                        +handle(query: GetAppointmentsByWorkshopAndRangeQuery): List<WorkshopAppointment>
+                        +handle(query: GetAppointmentsByWorkOrderQuery): List<WorkshopAppointment>
+                    }
+                    class WorkshopQueryServiceImpl <<ServiceImpl>> {
+                        +handle(query: GetWorkshopByIdQuery): Optional<WorkshopOperation>
+                        +handle(query: GetServiceBaysByWorkshopQuery): List<ServiceBay>
+                    }
+                    class TelemetryQueryServiceImpl <<ServiceImpl>> {
+                        +handle(query: GetTelemetryRecordByIdQuery): Optional<TelemetryRecord>
+                        +handle(query: GetTelemetryByVehicleAndRangeQuery): List<TelemetryRecord>
+                        +handle(query: GetTelemetryAlertsBySeverityQuery): List<TelemetryRecord>
+                    }
+
+                    ' Realizations (impl of domain query services)
+                    WorkOrderQueryServiceImpl ..|> WorkOrderQueryService
+                    AppointmentQueryServiceImpl ..|> AppointmentQueryService
+                    WorkshopQueryServiceImpl ..|> WorkshopQueryService
+                    TelemetryQueryServiceImpl ..|> TelemetryQueryService
+                }
+            }
+        }
+
+        package "interfaces" {
+            package "rest" {
+                package "resources" {
+                    class WorkOrderResource <<Resource>> {
+                        +id: Long
+                        +code: String
+                        +workshopId: Long
+                        +vehicleId: Long
+                        +driverId: Long
+                        +openedAt: Instant
+                        +closedAt: Instant [0..1]
+                        +status: String
+                    }
+                    class CreateWorkOrderResource <<Resource>> {
+                        +workshopId: Long
+                        +vehicleId: Long
+                        +driverId: Long
+                        +code: String
+                        +openedAt: Instant
+                    }
+                    class AppointmentResource <<Resource>> {
+                        +id: Long
+                        +workshopId: Long
+                        +vehicleId: Long
+                        +driverId: Long
+                        +workOrderId: Long [0..1]
+                        +startAt: Instant
+                        +endAt: Instant
+                        +status: String
+                    }
+                    class CreateAppointmentResource <<Resource>> {
+                        +workshopId: Long
+                        +vehicleId: Long
+                        +driverId: Long
+                        +startAt: Instant
+                        +endAt: Instant
+                    }
+                    class RescheduleAppointmentResource <<Resource>> {
+                        +startAt: Instant
+                        +endAt: Instant
+                    }
+                    class CancelAppointmentResource <<Resource>> {
+                        +reason: String [0..1]
+                    }
+                    class LinkAppointmentToWorkOrderResource <<Resource>> {
+                        +workOrderCode: String
+                    }
+
+                    class WorkshopResource <<Resource>> {
+                        +id: Long
+                        +mechanicsCount: int
+                        +baysCount: int
+                    }
+                    class ServiceBayResource <<Resource>> {
+                        +id: Long
+                        +label: String
+                        +workshopId: Long
+                    }
+                    class AllocateServiceBayResource <<Resource>> {
+                        +workshopId: Long
+                        +label: String
+                    }
+                    class TelemetryRecordResource <<Resource>> {
+                        +id: Long
+                        +type: String
+                        +severity: String
+                        +occurredAt: Instant
+                        +vehicleId: Long
+                        +driverId: Long [0..1]
+                        +speed: Decimal [0..1]
+                        +latitude: Decimal [0..1]
+                        +longitude: Decimal [0..1]
+                        +odometer: Decimal [0..1]
+                        +dtcCode: String [0..1]
+                        +dtcStandard: String [0..1]
+                        +ingestedAt: Instant
+                    }
+                    class IngestTelemetrySampleResource <<Resource>> {
+                        +type: String
+                        +severity: String
+                        +occurredAt: Instant
+                        +vehicleId: Long
+                        +driverId: Long [0..1]
+                        +speed: Decimal [0..1]
+                        +latitude: Decimal [0..1]
+                        +longitude: Decimal [0..1]
+                        +odometer: Decimal [0..1]
+                        +dtcCode: String [0..1]
+                        +dtcStandard: String [0..1]
+                    }
+                    class FlushTelemetryResource <<Resource>> {
+                        +telemetryAggregateId: Long
+                    }
+                }
+                package "transform" {
+                    class WorkOrderResourceFromEntityAssembler <<Assembler>> {
+                        +toResourceFromEntity(entity: com.safecar.platform.workshopOps.domain.model.entities.WorkOrder): WorkOrderResource
+                    }
+                    class CreateWorkOrderCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(resource: CreateWorkOrderResource): OpenWorkOrderCommand
+                    }
+                    class CloseWorkOrderCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromId(workOrderId: Long): CloseWorkOrderCommand
+                    }
+                    class AddAppointmentToWorkOrderCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(workOrderId: Long, resource: CreateAppointmentResource): AddAppointmentToWorkOrderCommand
+                    }
+
+                    class AppointmentResourceFromEntityAssembler <<Assembler>> {
+                        +toResourceFromEntity(entity: com.safecar.platform.workshopOps.domain.model.entities.Appointment): AppointmentResource
+                    }
+                    class CreateAppointmentCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(resource: CreateAppointmentResource): CreateAppointmentCommand
+                    }
+                    class LinkAppointmentToWorkOrderCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(appointmentId: Long, resource: LinkAppointmentToWorkOrderResource): LinkAppointmentToWorkOrderCommand
+                    }
+                    class RescheduleAppointmentCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(appointmentId: Long, resource: RescheduleAppointmentResource): RescheduleAppointmentCommand
+                    }
+                    class CancelAppointmentCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(appointmentId: Long, resource: CancelAppointmentResource): CancelAppointmentCommand
+                    }
+
+                    class WorkshopResourceFromAggregateAssembler <<Assembler>> {
+                        +toResourceFromAggregate(aggregate: com.safecar.platform.workshopOps.domain.model.aggregates.WorkshopOperation): WorkshopResource
+                    }
+                    class AllocateServiceBayCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(resource: AllocateServiceBayResource): AllocateServiceBayCommand
+                    }
+                    class ServiceBayResourceFromEntityAssembler <<Assembler>> {
+                        +toResourceFromEntity(entity: com.safecar.platform.workshopOps.domain.model.entities.ServiceBay): ServiceBayResource
+                    }
+
+                    class TelemetryRecordResourceFromEntityAssembler <<Assembler>> {
+                        +toResourceFromEntity(entity: com.safecar.platform.workshopOps.domain.model.entities.TelemetryRecord): TelemetryRecordResource
+                    }
+                    class IngestTelemetrySampleCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(resource: IngestTelemetrySampleResource): IngestTelemetrySampleCommand
+                    }
+                    class FlushTelemetryCommandFromResourceAssembler <<Assembler>> {
+                        +toCommandFromResource(resource: FlushTelemetryResource): FlushTelemetryCommand
+                    }
+
+                    WorkOrderResourceFromEntityAssembler ..> WorkOrder
+                    WorkOrderResourceFromEntityAssembler ..> WorkOrderResource
+                    CreateWorkOrderCommandFromResourceAssembler ..> CreateWorkOrderResource
+                    CreateWorkOrderCommandFromResourceAssembler ..> OpenWorkOrderCommand
+                    CloseWorkOrderCommandFromResourceAssembler ..> CloseWorkOrderCommand
+                    AddAppointmentToWorkOrderCommandFromResourceAssembler ..> AddAppointmentToWorkOrderCommand
+
+                    AppointmentResourceFromEntityAssembler ..> Appointment
+                    AppointmentResourceFromEntityAssembler ..> AppointmentResource
+                    CreateAppointmentCommandFromResourceAssembler ..> CreateAppointmentResource
+                    CreateAppointmentCommandFromResourceAssembler ..> CreateAppointmentCommand
+                    LinkAppointmentToWorkOrderCommandFromResourceAssembler ..> LinkAppointmentToWorkOrderCommand
+                    RescheduleAppointmentCommandFromResourceAssembler ..> RescheduleAppointmentCommand
+                    CancelAppointmentCommandFromResourceAssembler ..> CancelAppointmentCommand
+
+                    WorkshopResourceFromAggregateAssembler ..> WorkshopOperation
+                    WorkshopResourceFromAggregateAssembler ..> WorkshopResource
+                    AllocateServiceBayCommandFromResourceAssembler ..> AllocateServiceBayCommand
+                    ServiceBayResourceFromEntityAssembler ..> ServiceBay
+                    ServiceBayResourceFromEntityAssembler ..> ServiceBayResource
+
+                    TelemetryRecordResourceFromEntityAssembler ..> TelemetryRecord
+                    TelemetryRecordResourceFromEntityAssembler ..> TelemetryRecordResource
+                    IngestTelemetrySampleCommandFromResourceAssembler ..> IngestTelemetrySampleCommand
+                    FlushTelemetryCommandFromResourceAssembler ..> FlushTelemetryCommand
+
+                    LinkAppointmentToWorkOrderCommandFromResourceAssembler ..> LinkAppointmentToWorkOrderResource
+                    RescheduleAppointmentCommandFromResourceAssembler ..> RescheduleAppointmentResource
+                    CancelAppointmentCommandFromResourceAssembler ..> CancelAppointmentResource
+                    AllocateServiceBayCommandFromResourceAssembler ..> AllocateServiceBayResource
+                    IngestTelemetrySampleCommandFromResourceAssembler ..> IngestTelemetrySampleResource
+                    FlushTelemetryCommandFromResourceAssembler ..> FlushTelemetryResource
+                }
+
+                ' Controllers (HTTP)
+                class WorkshopOpsWorkshopOrdersController <<Controller>> {
+                    +postCreate(workshopId: Long, body: CreateWorkOrderResource): WorkOrderResource
+                    +getById(id: Long): WorkOrderResource
+                    +getByWorkshop(workshopId: Long, status: String [0..1]): List<WorkOrderResource>
+                    +patchClose(id: Long): WorkOrderResource
+                    +postAddAppointment(id: Long, body: CreateAppointmentResource): AppointmentResource
+                }
+
+                class WorkshopOpsAppointmentsController <<Controller>> {
+                    +postCreate(body: CreateAppointmentResource): AppointmentResource
+                    +getById(id: Long): AppointmentResource
+                    +getByWorkshopAndRange(workshopId: Long, from: Instant, to: Instant): List<AppointmentResource>
+                    +patchReschedule(id: Long, body: RescheduleAppointmentResource): AppointmentResource
+                    +patchCancel(id: Long, body: CancelAppointmentResource): AppointmentResource
+                    +patchLinkToWorkOrder(id: Long, body: LinkAppointmentToWorkOrderResource): AppointmentResource
+                }
+
+                class WorkshopOpsWorkshopsController <<Controller>> {
+                    +getById(id: Long): WorkshopResource
+                    +postAllocateServiceBay(body: AllocateServiceBayResource): ServiceBayResource
+                    +getServiceBaysByWorkshop(workshopId: Long): List<ServiceBayResource>
+                }
+
+                class WorkshopOpsTelemetriesController <<Controller>> {
+                    +postIngest(body: IngestTelemetrySampleResource): TelemetryRecordResource
+                    +getById(id: Long): TelemetryRecordResource
+                    +getByVehicleAndRange(vehicleId: Long, from: Instant, to: Instant): List<TelemetryRecordResource>
+                    +getAlertsBySeverity(workshopId: Long [0..1], severity: String, from: Instant [0..1], to: Instant [0..1]): List<TelemetryRecordResource>
+                    +patchFlush(body: FlushTelemetryResource): long
+                }
+
+                ' Controller dependencies to services
+                WorkshopOpsWorkshopOrdersController ..> WorkOrderCommandServiceImpl
+                WorkshopOpsWorkshopOrdersController ..> WorkOrderQueryServiceImpl
+                WorkshopOpsWorkshopOrdersController ..> AppointmentCommandServiceImpl
+                WorkshopOpsAppointmentsController ..> AppointmentCommandServiceImpl
+                WorkshopOpsAppointmentsController ..> AppointmentQueryServiceImpl
+                WorkshopOpsWorkshopsController ..> WorkshopCommandServiceImpl
+                WorkshopOpsWorkshopsController ..> WorkshopQueryServiceImpl
+                WorkshopOpsTelemetriesController ..> TelemetryCommandServiceImpl
+                WorkshopOpsTelemetriesController ..> TelemetryQueryServiceImpl
+
+                ' Controller dependencies to assemblers (transform layer)
+                WorkshopOpsWorkshopOrdersController ..> CreateWorkOrderCommandFromResourceAssembler
+                WorkshopOpsWorkshopOrdersController ..> CloseWorkOrderCommandFromResourceAssembler
+                WorkshopOpsWorkshopOrdersController ..> AddAppointmentToWorkOrderCommandFromResourceAssembler
+                WorkshopOpsWorkshopOrdersController ..> WorkOrderResourceFromEntityAssembler
+                WorkshopOpsWorkshopOrdersController ..> AppointmentResourceFromEntityAssembler
+                WorkshopOpsAppointmentsController ..> CreateAppointmentCommandFromResourceAssembler
+                WorkshopOpsAppointmentsController ..> LinkAppointmentToWorkOrderCommandFromResourceAssembler
+                WorkshopOpsAppointmentsController ..> RescheduleAppointmentCommandFromResourceAssembler
+                WorkshopOpsAppointmentsController ..> CancelAppointmentCommandFromResourceAssembler
+                WorkshopOpsAppointmentsController ..> AppointmentResourceFromEntityAssembler
+                WorkshopOpsWorkshopsController ..> AllocateServiceBayCommandFromResourceAssembler
+                WorkshopOpsWorkshopsController ..> WorkshopResourceFromAggregateAssembler
+                WorkshopOpsWorkshopsController ..> ServiceBayResourceFromEntityAssembler
+                WorkshopOpsTelemetriesController ..> IngestTelemetrySampleCommandFromResourceAssembler
+                WorkshopOpsTelemetriesController ..> FlushTelemetryCommandFromResourceAssembler
+                WorkshopOpsTelemetriesController ..> TelemetryRecordResourceFromEntityAssembler
+            }
+        }
+    }
+
+
+    @enduml
