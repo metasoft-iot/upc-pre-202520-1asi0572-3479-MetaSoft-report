@@ -304,38 +304,38 @@ package com.safecar.platform.workshopOps {
             }
 
             package "services" {
-                interface WorkOrderCommandService <<Service>> {
+                interface WorkshopOrderCommandService <<Service>> {
                     +handle(command: OpenWorkOrderCommand): void
                     +handle(command: CloseWorkOrderCommand): void
                     +handle(command: AddAppointmentToWorkOrderCommand): void
                 }
-                interface WorkOrderQueryService <<Service>> {
+                interface WorkshopOrderQueryService <<Service>> {
                     +handle(query: GetWorkOrderByIdQuery): Optional<WorkshopOrder>
                     +handle(query: GetWorkOrdersByWorkshopQuery): List<WorkshopOrder>
                 }
-                interface AppointmentCommandService <<Service>> {
+                interface WorkshopAppointmentCommandService <<Service>> {
                     +handle(command: CreateAppointmentCommand): void
                     +handle(command: LinkAppointmentToWorkOrderCommand): void
                     +handle(command: RescheduleAppointmentCommand): void
                     +handle(command: CancelAppointmentCommand): void
                 }
-                interface AppointmentQueryService <<Service>> {
+                interface WorkshopAppointmentQueryService <<Service>> {
                     +handle(query: GetAppointmentByIdQuery): Optional<WorkshopAppointment>
                     +handle(query: GetAppointmentsByWorkshopAndRangeQuery): List<WorkshopAppointment>
                     +handle(query: GetAppointmentsByWorkOrderQuery): List<WorkshopAppointment>
                 }
-                interface WorkshopCommandService <<Service>> {
+                interface WorkshopOperationCommandService <<Service>> {
                     +handle(command: AllocateServiceBayCommand): void
                 }
-                interface WorkshopQueryService <<Service>> {
+                interface WorkshopOperationQueryService <<Service>> {
                     +handle(query: GetWorkshopByIdQuery): Optional<WorkshopOperation>
                     +handle(query: GetServiceBaysByWorkshopQuery): List<ServiceBay>
                 }
-                interface TelemetryCommandService <<Service>> {
+                interface VehicleTelemetryCommandService <<Service>> {
                     +handle(command: IngestTelemetrySampleCommand): void
                     +handle(command: FlushTelemetryCommand): void
                 }
-                interface TelemetryQueryService <<Service>> {
+                interface VehicleTelemetryQueryService <<Service>> {
                     +handle(query: GetTelemetryRecordByIdQuery): Optional<TelemetryRecord>
                     +handle(query: GetTelemetryByVehicleAndRangeQuery): List<TelemetryRecord>
                     +handle(query: GetTelemetryAlertsBySeverityQuery): List<TelemetryRecord>
@@ -343,25 +343,25 @@ package com.safecar.platform.workshopOps {
             }
 
             package "repositories" {
-                interface WorkOrderRepository <<Repository>> {
+                interface WorkshopOrderRepository <<Repository>> {
                     +save(aggregate: WorkshopOrder): void
                     +findById(id: Long): Optional<WorkshopOrder>
                     +findByWorkshop(workshopId: WorkshopId, status: String [0..1]): List<WorkshopOrder>
                     +existsByCodeAndWorkshop(code: WorkOrderCode, workshopId: WorkshopId): boolean
                 }
-                interface AppointmentRepository <<Repository>> {
+                interface WorkshopAppointmentRepository <<Repository>> {
                     +save(aggregate: WorkshopAppointment): void
                     +findById(id: Long): Optional<WorkshopAppointment>
                     +findByWorkshopAndRange(workshopId: WorkshopId, from: Instant, to: Instant): List<WorkshopAppointment>
                     +findByWorkOrder(workOrderId: Long): List<WorkshopAppointment>
                     +overlapsInWorkshop(workshopId: WorkshopId, slot: ServiceSlot): boolean
                 }
-                interface WorkshopRepository <<Repository>> {
+                interface WorkshopOperationRepository <<Repository>> {
                     +save(aggregate: WorkshopOperation): void
                     +findById(id: Long): Optional<WorkshopOperation>
                     +findServiceBaysByWorkshop(workshopId: WorkshopId): List<ServiceBay>
                 }
-                interface TelemetryRepository <<Repository>> {
+                interface VehicleTelemetryRepository <<Repository>> {
                     +saveRecord(record: TelemetryRecord): void
                     +findRecordById(id: Long): Optional<TelemetryRecord>
                     +findByVehicleAndRange(vehicleId: VehicleId, from: Instant, to: Instant): List<TelemetryRecord>
@@ -402,10 +402,10 @@ package com.safecar.platform.workshopOps {
                             +existsRecordByVehicleAndOccurredAt(vehicleId: VehicleId, occurredAt: TelemetryTimestamp): boolean
                             +flushAggregate(telemetryAggregateId: Long): long
                         }
-                        WorkshopOrderRepositoryImpl ..|> WorkOrderRepository
-                        WorkshopAppointmentRepositoryImpl ..|> AppointmentRepository
-                        WorkshopOperationRepositoryImpl ..|> WorkshopRepository
-                        VehicleTelemetryRepositoryImpl ..|> TelemetryRepository
+                        WorkshopOrderRepositoryImpl ..|> WorkshopOrderRepository
+                        WorkshopAppointmentRepositoryImpl ..|> WorkshopAppointmentRepository
+                        WorkshopOperationRepositoryImpl ..|> WorkshopOperationRepository
+                        VehicleTelemetryRepositoryImpl ..|> VehicleTelemetryRepository
                     }
                 }
             }
@@ -414,56 +414,56 @@ package com.safecar.platform.workshopOps {
         package "application" {
             package "internal" {
                 package "commandservices" {
-                    class WorkOrderCommandServiceImpl <<ServiceImpl>> {
+                    class WorkshopOrderCommandServiceImpl <<ServiceImpl>> {
                         +handle(command: OpenWorkOrderCommand): void
                         +handle(command: CloseWorkOrderCommand): void
                         +handle(command: AddAppointmentToWorkOrderCommand): void
                     }
-                    class AppointmentCommandServiceImpl <<ServiceImpl>> {
+                    class WorkshopAppointmentCommandServiceImpl <<ServiceImpl>> {
                         +handle(command: CreateAppointmentCommand): void
                         +handle(command: LinkAppointmentToWorkOrderCommand): void
                         +handle(command: RescheduleAppointmentCommand): void
                         +handle(command: CancelAppointmentCommand): void
                     }
-                    class WorkshopCommandServiceImpl <<ServiceImpl>> {
+                    class WorkshopOperationCommandServiceImpl <<ServiceImpl>> {
                         +handle(command: AllocateServiceBayCommand): void
                     }
-                    class TelemetryCommandServiceImpl <<ServiceImpl>> {
+                    class VehicleTelemetryCommandServiceImpl <<ServiceImpl>> {
                         +handle(command: IngestTelemetrySampleCommand): void
                         +handle(command: FlushTelemetryCommand): void
                     }
 
-                    WorkOrderCommandServiceImpl ..|> WorkOrderCommandService
-                    AppointmentCommandServiceImpl ..|> AppointmentCommandService
-                    WorkshopCommandServiceImpl ..|> WorkshopCommandService
-                    TelemetryCommandServiceImpl ..|> TelemetryCommandService
+                    WorkshopOrderCommandServiceImpl ..|> WorkshopOrderCommandService
+                    WorkshopAppointmentCommandServiceImpl ..|> WorkshopAppointmentCommandService
+                    WorkshopOperationCommandServiceImpl ..|> WorkshopOperationCommandService
+                    VehicleTelemetryCommandServiceImpl ..|> VehicleTelemetryCommandService
                 }
 
                 package "queryservices" {
-                    class WorkOrderQueryServiceImpl <<ServiceImpl>> {
+                    class WorkshopOrderQueryServiceImpl <<ServiceImpl>> {
                         +handle(query: GetWorkOrderByIdQuery): Optional<WorkshopOrder>
                         +handle(query: GetWorkOrdersByWorkshopQuery): List<WorkshopOrder>
                     }
-                    class AppointmentQueryServiceImpl <<ServiceImpl>> {
+                    class WorkshopAppointmentQueryServiceImpl <<ServiceImpl>> {
                         +handle(query: GetAppointmentByIdQuery): Optional<WorkshopAppointment>
                         +handle(query: GetAppointmentsByWorkshopAndRangeQuery): List<WorkshopAppointment>
                         +handle(query: GetAppointmentsByWorkOrderQuery): List<WorkshopAppointment>
                     }
-                    class WorkshopQueryServiceImpl <<ServiceImpl>> {
+                    class WorkshopOperationQueryServiceImpl <<ServiceImpl>> {
                         +handle(query: GetWorkshopByIdQuery): Optional<WorkshopOperation>
                         +handle(query: GetServiceBaysByWorkshopQuery): List<ServiceBay>
                     }
-                    class TelemetryQueryServiceImpl <<ServiceImpl>> {
+                    class VehicleTelemetryQueryServiceImpl <<ServiceImpl>> {
                         +handle(query: GetTelemetryRecordByIdQuery): Optional<TelemetryRecord>
                         +handle(query: GetTelemetryByVehicleAndRangeQuery): List<TelemetryRecord>
                         +handle(query: GetTelemetryAlertsBySeverityQuery): List<TelemetryRecord>
                     }
 
                     ' Realizations (impl of domain query services)
-                    WorkOrderQueryServiceImpl ..|> WorkOrderQueryService
-                    AppointmentQueryServiceImpl ..|> AppointmentQueryService
-                    WorkshopQueryServiceImpl ..|> WorkshopQueryService
-                    TelemetryQueryServiceImpl ..|> TelemetryQueryService
+                    WorkshopOrderQueryServiceImpl ..|> WorkshopOrderQueryService
+                    WorkshopAppointmentQueryServiceImpl ..|> WorkshopAppointmentQueryService
+                    WorkshopOperationQueryServiceImpl ..|> WorkshopOperationQueryService
+                    VehicleTelemetryQueryServiceImpl ..|> VehicleTelemetryQueryService
                 }
             }
         }
@@ -679,15 +679,15 @@ package com.safecar.platform.workshopOps {
                 }
 
                 ' Controller dependencies to services
-                WorkshopOpsWorkshopOrdersController ..> WorkOrderCommandServiceImpl
-                WorkshopOpsWorkshopOrdersController ..> WorkOrderQueryServiceImpl
-                WorkshopOpsWorkshopOrdersController ..> AppointmentCommandServiceImpl
-                WorkshopOpsAppointmentsController ..> AppointmentCommandServiceImpl
-                WorkshopOpsAppointmentsController ..> AppointmentQueryServiceImpl
-                WorkshopOpsWorkshopsController ..> WorkshopCommandServiceImpl
-                WorkshopOpsWorkshopsController ..> WorkshopQueryServiceImpl
-                WorkshopOpsTelemetriesController ..> TelemetryCommandServiceImpl
-                WorkshopOpsTelemetriesController ..> TelemetryQueryServiceImpl
+                WorkshopOpsWorkshopOrdersController ..> WorkshopOrderCommandServiceImpl
+                WorkshopOpsWorkshopOrdersController ..> WorkshopOrderQueryServiceImpl
+                WorkshopOpsWorkshopOrdersController ..> WorkshopAppointmentCommandServiceImpl
+                WorkshopOpsAppointmentsController ..> WorkshopAppointmentCommandServiceImpl
+                WorkshopOpsAppointmentsController ..> WorkshopAppointmentQueryServiceImpl
+                WorkshopOpsWorkshopsController ..> WorkshopOperationCommandServiceImpl
+                WorkshopOpsWorkshopsController ..> WorkshopOperationQueryServiceImpl
+                WorkshopOpsTelemetriesController ..> VehicleTelemetryCommandServiceImpl
+                WorkshopOpsTelemetriesController ..> VehicleTelemetryQueryServiceImpl
 
                 ' Controller dependencies to assemblers (transform layer)
                 WorkshopOpsWorkshopOrdersController ..> CreateWorkOrderCommandFromResourceAssembler
