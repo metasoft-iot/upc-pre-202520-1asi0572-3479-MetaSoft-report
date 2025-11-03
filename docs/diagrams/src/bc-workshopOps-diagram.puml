@@ -56,25 +56,6 @@ package com.safecar.platform.workshopOps {
             }
 
             package "entities" {
-                class WorkOrder <<Entity>> {
-                    +id: Long
-                    +code: WorkOrderCode
-                    +workshopId: WorkshopId
-                    +vehicleId: VehicleId
-                    +driverId: DriverId
-                    +openedAt: Instant
-                    +closedAt: Instant [0..1]
-                    +status: String
-                }
-                class Appointment <<Entity>> {
-                    +id: Long
-                    +slot: ServiceSlot
-                    +workshopId: WorkshopId
-                    +vehicleId: VehicleId
-                    +driverId: DriverId
-                    +workOrderId: Long [0..1]
-                    +status: String
-                }
                 class ServiceBay <<Entity>> {
                     +id: Long
                     +label: String
@@ -88,8 +69,6 @@ package com.safecar.platform.workshopOps {
 
             }
             ' Aggregate–Entity relationships
-            WorkshopOrder *-- com.safecar.platform.workshopOps.domain.model.entities.WorkOrder : root
-            WorkshopAppointment *-- com.safecar.platform.workshopOps.domain.model.entities.Appointment : root
             WorkshopOperation *-- com.safecar.platform.workshopOps.domain.model.entities.ServiceBay : bays 0..*
             VehicleTelemetry *-- com.safecar.platform.workshopOps.domain.model.entities.TelemetryRecord : records 0..*
 
@@ -167,14 +146,6 @@ package com.safecar.platform.workshopOps {
                 }
 
                 ' Entity–VO relationships
-                WorkOrder *-- WorkOrderCode : code
-                WorkOrder --> WorkshopId : workshop
-                WorkOrder --> VehicleId : vehicle
-                WorkOrder --> DriverId : driver
-                Appointment *-- ServiceSlot : slot
-                Appointment --> WorkshopId : workshop
-                Appointment --> VehicleId : vehicle
-                Appointment --> DriverId : driver
                 ServiceBay --> WorkshopId : locatedAt
                 TelemetryRecord *-- TelemetrySample : sample
 
@@ -592,8 +563,8 @@ package com.safecar.platform.workshopOps {
                     }
                 }
                 package "transform" {
-                    class WorkOrderResourceFromEntityAssembler <<Assembler>> {
-                        +toResourceFromEntity(entity: com.safecar.platform.workshopOps.domain.model.entities.WorkOrder): WorkOrderResource
+                    class WorkOrderResourceFromAggregateAssembler <<Assembler>> {
+                        +toResourceFromAggregate(aggregate: com.safecar.platform.workshopOps.domain.model.aggregates.WorkshopOrder): WorkOrderResource
                     }
                     class CreateWorkOrderCommandFromResourceAssembler <<Assembler>> {
                         +toCommandFromResource(resource: CreateWorkOrderResource): OpenWorkOrderCommand
@@ -605,8 +576,8 @@ package com.safecar.platform.workshopOps {
                         +toCommandFromResource(workOrderId: Long, resource: CreateAppointmentResource): AddAppointmentToWorkOrderCommand
                     }
 
-                    class AppointmentResourceFromEntityAssembler <<Assembler>> {
-                        +toResourceFromEntity(entity: com.safecar.platform.workshopOps.domain.model.entities.Appointment): AppointmentResource
+                    class AppointmentResourceFromAggregateAssembler <<Assembler>> {
+                        +toResourceFromAggregate(aggregate: com.safecar.platform.workshopOps.domain.model.aggregates.WorkshopAppointment): AppointmentResource
                     }
                     class CreateAppointmentCommandFromResourceAssembler <<Assembler>> {
                         +toCommandFromResource(resource: CreateAppointmentResource): CreateAppointmentCommand
@@ -641,15 +612,15 @@ package com.safecar.platform.workshopOps {
                         +toCommandFromResource(resource: FlushTelemetryResource): FlushTelemetryCommand
                     }
 
-                    WorkOrderResourceFromEntityAssembler ..> WorkOrder
-                    WorkOrderResourceFromEntityAssembler ..> WorkOrderResource
+                    WorkOrderResourceFromAggregateAssembler ..> WorkshopOrder
+                    WorkOrderResourceFromAggregateAssembler ..> WorkOrderResource
                     CreateWorkOrderCommandFromResourceAssembler ..> CreateWorkOrderResource
                     CreateWorkOrderCommandFromResourceAssembler ..> OpenWorkOrderCommand
                     CloseWorkOrderCommandFromResourceAssembler ..> CloseWorkOrderCommand
                     AddAppointmentToWorkOrderCommandFromResourceAssembler ..> AddAppointmentToWorkOrderCommand
 
-                    AppointmentResourceFromEntityAssembler ..> Appointment
-                    AppointmentResourceFromEntityAssembler ..> AppointmentResource
+                    AppointmentResourceFromAggregateAssembler ..> WorkshopAppointment
+                    AppointmentResourceFromAggregateAssembler ..> AppointmentResource
                     CreateAppointmentCommandFromResourceAssembler ..> CreateAppointmentResource
                     CreateAppointmentCommandFromResourceAssembler ..> CreateAppointmentCommand
                     LinkAppointmentToWorkOrderCommandFromResourceAssembler ..> LinkAppointmentToWorkOrderCommand
@@ -722,13 +693,13 @@ package com.safecar.platform.workshopOps {
                 WorkshopOpsWorkshopOrdersController ..> CreateWorkOrderCommandFromResourceAssembler
                 WorkshopOpsWorkshopOrdersController ..> CloseWorkOrderCommandFromResourceAssembler
                 WorkshopOpsWorkshopOrdersController ..> AddAppointmentToWorkOrderCommandFromResourceAssembler
-                WorkshopOpsWorkshopOrdersController ..> WorkOrderResourceFromEntityAssembler
-                WorkshopOpsWorkshopOrdersController ..> AppointmentResourceFromEntityAssembler
+                WorkshopOpsWorkshopOrdersController ..> WorkOrderResourceFromAggregateAssembler
+                WorkshopOpsWorkshopOrdersController ..> AppointmentResourceFromAggregateAssembler
                 WorkshopOpsAppointmentsController ..> CreateAppointmentCommandFromResourceAssembler
                 WorkshopOpsAppointmentsController ..> LinkAppointmentToWorkOrderCommandFromResourceAssembler
                 WorkshopOpsAppointmentsController ..> RescheduleAppointmentCommandFromResourceAssembler
                 WorkshopOpsAppointmentsController ..> CancelAppointmentCommandFromResourceAssembler
-                WorkshopOpsAppointmentsController ..> AppointmentResourceFromEntityAssembler
+                WorkshopOpsAppointmentsController ..> AppointmentResourceFromAggregateAssembler
                 WorkshopOpsWorkshopsController ..> AllocateServiceBayCommandFromResourceAssembler
                 WorkshopOpsWorkshopsController ..> WorkshopResourceFromAggregateAssembler
                 WorkshopOpsWorkshopsController ..> ServiceBayResourceFromEntityAssembler
