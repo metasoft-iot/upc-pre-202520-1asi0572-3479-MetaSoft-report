@@ -1695,6 +1695,1226 @@ Para el Sprint 2, el equipo organizó el trabajo bajo un enfoque de Domain-Drive
 </table>
 
 #### 6.2.2.3. Sprint Backlog 2
+<p align="justify">
+
+</p>
+
+<table width="100%">
+    <tr>
+        <th colspan="2">Sprint #</th>
+        <th colspan="6">Sprint 2</th>
+    </tr>
+    <tr>
+        <td colspan="2">User Story</td>
+        <td colspan="6">Work-Item / Task</td>
+    </tr>
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Estimation (Hours)</td>
+        <td>Assigned To</td>
+        <td>Status (To-do / In-Process / To-Review / Done)</td>
+    </tr>
+    <tr>
+        <td rowspan="9">TS101</td>
+        <td rowspan="9">Como desarrollador, deseo registrar un conductor a través de la API, para que el sistema pueda gestionar dinámicamente las cuentas de los conductores y los registros de autenticación.</td>
+        <td>T1</td>
+        <td>Implementar interfaz UserCommandService.</td>
+        <td>Implementar interfaz UserCommandService que encapsule los handlers donde cada uno como argumento reciba el command creado.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T2</td>
+        <td>Implementar UserCommandServiceImpl.</td>
+        <td>Implementar UserCommandServiceImpl quien implementa los handlers de la interfaz UserCommandService.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T3</td>
+        <td>Implementar endpoint POST /api/v1/signup.</td>
+        <td>Implementar endpoint POST /api/v1/signup para registro de conductor.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T4</td>
+        <td>Validar unicidad de email.</td>
+        <td>Validar unicidad de email en el registro de conductor.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T5</td>
+        <td>Crear Aggregate "User".</td>
+        <td>Crear Aggregate "User" con los campos email, password y rol de conductor.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T6</td>
+        <td>Crear valueobject para Email.</td>
+        <td>Crear valueobject para la propiedad Email.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T7</td>
+        <td>Implementar valueobject Role.</td>
+        <td>Implementar valueobject Role como enum expresando los roles del negocio.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T8</td>
+        <td>Implementar entidad Roles.</td>
+        <td>Implementar entidad Roles para tabla de evaluación.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T9</td>
+        <td>Implementar comando SignUpUserCommand.</td>
+        <td>Implementar comando SignUpUserCommand para registro de usuario.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US105</td>
+        <td rowspan="4">Como visitante deseo leer opiniones de usuarios sobre SafeCar para confiar en la plataforma antes de registrarme.</td>
+        <td>T10</td>
+        <td>Crear el mockup de la sección o página donde se mostrarán las opiniones.</td>
+        <td>Crear el mockup de la sección o página donde se mostrarán las opiniones. Debe incluir elementos como la foto/iniciales del usuario, su nombre, la calificación y el texto de la opinión.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T11</td>
+        <td>Implementar forma sencilla de navegar entre opiniones.</td>
+        <td>Si hay muchas opiniones, implementar una forma sencilla de navegar entre ellas o un mecanismo que muestre una selección aleatoria o las mejor valoradas.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T12</td>
+        <td>Implementar visualización de calificación global promedio.</td>
+        <td>Implementar una visualización destacada que muestre la calificación global promedio basada en todas las opiniones.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T13</td>
+        <td>Configurar permisos de la página para usuarios sin registrar.</td>
+        <td>Configurar los permisos de la página para que el contenido sea accesible a usuarios sin registrar, cumpliendo con el objetivo de la historia de usuario.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US108</td>
+        <td rowspan="4">Como visitante deseo enviar mis datos de contacto y un mensaje desde la Web de Negocio para recibir más información o resolver dudas.</td>
+        <td>T14</td>
+        <td>Diseñar mockup del formulario de contacto.</td>
+        <td>Diseñar mockup del formulario de contacto de la Web de Negocio incluyendo campos obligatorios para: Nombre, Correo Electrónico, Teléfono y un área para el Mensaje.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T15</td>
+        <td>Implementar la sección de contacto en Web de Negocio.</td>
+        <td>Implementar la sección de contacto en Web de Negocio basado en mockup.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T16</td>
+        <td>Implementar reglas de validación para campos.</td>
+        <td>Implementar reglas de validación para asegurar que los campos: nombre, email y mensaje, tengan un formato correcto y no estén vacíos.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T17</td>
+        <td>Mostrar mensaje de envío exitoso.</td>
+        <td>Mostrar mensaje envío de datos de Contacto exitoso en la Web de Negocio.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+     <tr>
+        <td>US112</td>
+        <td>Como visitante deseo que la Aplicación Web se vea bien en cualquier dispositivo para acceder comodamente</td>
+        <td>T18</td>
+        <td>Implementación responsive de la aplicación web</td>
+        <td>Implementación responsive de la aplicación web</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="6">US201</td>
+        <td rowspan="6">Como conductor, deseo iniciar sesión con mis credenciales registradas en la aplicación móvil, para empezar con el monitoreo de mis vehículos.</td>
+        <td>T19</td>
+        <td>Implementar navegación post-login (móvil).</td>
+        <td>Implementar la navegación de éxito post-login en la aplicación móvil. Al recibir los tokens, guardarlos y navegar a la pantalla de monitoreo de vehículos.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T20</td>
+        <td>Implementar lógica "mantener sesión activa" (móvil).</td>
+        <td>Implementar la lógica de "mantener sesión activa" en la aplicación móvil, incluyendo el almacenamiento seguro del refresh token si la opción es seleccionada.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T21</td>
+        <td>Diseñar mockup de pantalla "Iniciar sesión" (móvil).</td>
+        <td>Diseñar mockup de la pantalla "Iniciar sesión (SignIn)" de la aplicación móvil. Debe incluir los campos: correo electrónico, contraseña y la opción de "mantener sesión activa".</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T22</td>
+        <td>Implementar pantalla "Iniciar sesión" (móvil).</td>
+        <td>Implementar la pantalla "Iniciar sesión (SignIn)" en la aplicación móvil (componente visual). Crear el componente con los campos de entrada y el botón, basándose en el diseño.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T23</td>
+        <td>Implementar manejo visual de errores (móvil).</td>
+        <td>Implementar el manejo visual de errores por credenciales inválidas en la aplicación móvil. Mostrar el mensaje de error de forma clara al recibir la respuesta de credenciales incorrectas del backend.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T24</td>
+        <td>Implementar manejo visual de errores (móvil).</td>
+        <td>Implementar el manejo visual de errores por credenciales inválidas. Mostrar el mensaje de error de forma clara al recibir la respuesta de credenciales inválidas del backend.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="5">US202</td>
+        <td rowspan="5">Como conductor, deseo registrarme en la aplicación móvil, para que pueda comenzar con el inicio de sesión.</td>
+        <td>T25</td>
+        <td>Diseñar mockup "Registro (SignUp)" (móvil).</td>
+        <td>Diseñar mockup de la pantalla "Registro (SignUp)" de la aplicación móvil. Debe incluir los campos: nombre, correo electrónico y contraseña.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T26</td>
+        <td>Implementar pantalla "Registro (SignUp)" (móvil).</td>
+        <td>Implementar la pantalla "Registro (SignUp)" en la aplicación móvil (componente visual). Crear el componente móvil con los campos de entrada y el botón de regi...</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T27</td>
+        <td>Implementar lógica de registro (SignUp) (móvil).</td>
+        <td>Implementar la lógica de registro (SignUp) en la aplicación móvil, incluyendo validación de formato local de los campos y la llamada a la API de registro, y manejo de los estados de carga y error.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T28</td>
+        <td>Implementar navegación post-registro (móvil).</td>
+        <td>Implementar la navegación de éxito post-registro en la aplicación móvil. Al recibir una confirmación de registro exitoso del backend, navegar automáticamente a la pantalla de Login (o al inicio de sesión automático).</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T29</td>
+        <td>Implementar manejo de errores de API de registro (móvil).</td>
+        <td>Implementar el manejo de errores de la API de registro en la aplicación móvil. Mostrar un mensaje al usuario si el correo electrónico ya está registrado u otro error de negocio devuelto por el backend.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US203</td>
+        <td rowspan="4">Como conductor, deseo restablecer mi contraseña desde la aplicación móvil, para que pueda recuperar el acceso a mi cuenta cuando haya olvidado mis credenciales.</td>
+        <td>T30</td>
+        <td>Diseñar mockup "Olvidé mi contraseña" (móvil).</td>
+        <td>Diseñar mockup de la pantalla "Olvidé mi contraseña" (solicitud de correo) de la aplicación móvil. Debe incluir el formulario con el campo de entrada del correo electrónico y el botón de envío.</td>
+        <td></td>
+        <td>P</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T31</td>
+        <td>Implementar pantalla "Olvidé mi contraseña" (móvil).</td>
+        <td>Implementar la pantalla "Olvidé mi contraseña" (solicitud de correo) en la aplicación móvil. Crear el componente móvil con el campo de entrada y el botón de envío.</td>
+        <td></td>
+        <td>P</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T32</td>
+        <td>Implementar lógica de solicitud de enlace (móvil).</td>
+        <td>Implementar la lógica de solicitud de enlace de recuperación en la aplicación móvil, incluyendo la validación de formato del email y la llamada a la API para solicitar el enlace, manejando los estados de carga y error.</td>
+        <td></td>
+        <td>P</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T33</td>
+        <td>Implementar lógica de deep link (móvil).</td>
+        <td>Implementar la lógica de deep link en la aplicación móvil. Al abrir la app con el deep link, validar el token recibido en el backend y, si es válido, navegar al formulario de nueva contraseña.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="5">US204</td>
+        <td rowspan="5">Como conductor, deseo cerrar sesión en la aplicación móvil para proteger mi cuenta cuando termino de usar la aplicación.</td>
+        <td>T34</td>
+        <td>Implementar botón "Cerrar Sesión" (móvil).</td>
+        <td>Implementar el botón "Cerrar Sesión" en la aplicación móvil (dentro de pantalla de Perfil).</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T35</td>
+        <td>Implementar modal de confirmación (móvil).</td>
+        <td>Implementar el modal de confirmación "¿Estás seguro que deseas cerrar sesión?" antes de finalizar la sesión.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T36</td>
+        <td>Implementar lógica de cierre de sesión (móvil).</td>
+        <td>Implementar la lógica completa de cierre de sesión seguro en la aplicación móvil.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T37</td>
+        <td>Añadir eliminación de tokens (móvil).</td>
+        <td>Añadir la eliminación de tokens de sesión del almacenamiento local del dispositivo móvil (al completar el cierre).</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T38</td>
+        <td>Navegar a pantalla de Login (móvil).</td>
+        <td>Navegar a la pantalla de Login al completar exitosamente el proceso de cierre de sesión.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US205</td>
+        <td rowspan="4">Como mecánico de taller, deseo mantener mi sesión activa en la aplicación web luego de estar inactivo, para evitar constantes inicios de sesión.</td>
+        <td>T39</td>
+        <td>Implementar opción "Mantener sesión activa" (web).</td>
+        <td>Implementar la opción "Mantener sesión activa" (checkbox) en la página de login de la aplicación web.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T40</td>
+        <td>Implementar lógica de verificación de sesión (web).</td>
+        <td>Implementar la lógica de verificación de sesión al cargar la aplicación web (verificar la existencia y validez de la sesión/token).</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T41</td>
+        <td>Implementar renovación de sesión (web).</td>
+        <td>Implementar la renovación de sesión en la aplicación web. Usar el refresh token almacenado para obtener un nuevo access token de forma transparente al cargar la aplicación.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T42</td>
+        <td>Implementar almacenamiento seguro de refresh token (web).</td>
+        <td>Implementar el almacenamiento seguro del refresh token en el navegador al iniciar sesión con la opción "mantener activa".</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US206</td>
+        <td rowspan="4">Como conductor, deseo modificar mi perfil (nombre, apellido, contraseña) en la aplicación móvil para mantener mi información al día.</td>
+        <td>T43</td>
+        <td>Implementar la lógica de carga de datos del perfil.</td>
+        <td>Implementar la lógica de carga de datos del perfil en la aplicación móvil. Al cargar la página, recuperar y mostrar los datos del perfil del conductor desde la API.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T44</td>
+        <td>Diseñar mockup "Editar Perfil" (móvil).</td>
+        <td>Diseñar mockup de la pantalla "Editar Perfil" de la aplicación móvil. Debe mostrar los campos actuales y el formulario de edición.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T45</td>
+        <td>Implementar pantalla "Editar Perfil" (móvil).</td>
+        <td>Implementar la pantalla "Editar Perfil" (Componente Visual). Crear el componente móvil con los campos de perfil y los botones de guardar/cancelar.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T46</td>
+        <td>Implementar validaciones de formato (móvil).</td>
+        <td>Implementar las validaciones de formato de campos de perfil del conductor (ej., campos obligatorios) antes del envío a la API.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US207</td>
+        <td rowspan="3">Como mecánico de taller, deseo registrarme en la aplicación web, para que pueda con el inicio de sesión.</td>
+        <td>T47</td>
+        <td>Diseñar mockup "Registro (SignUp)" (web).</td>
+        <td>Diseñar mockup de la página "Registro (SignUp)" de la aplicación web. Debe incluir los campos: nombre, correo electrónico y contraseña.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T48</td>
+        <td>Implementar página "Registro (SignUp)" (web).</td>
+        <td>Implementar la página "Registro (SignUp)" en la aplicación web (componente visual). Crear el componente web con los campos de entrada y el botón de registro.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T49</td>
+        <td>Implementar lógica de registro (SignUp) (web).</td>
+        <td>Implementar la lógica de registro (SignUp) en la aplicación web, incluyendo validación de formato local de los campos y la llamada a la API de registro, y manejo de los estados de carga y error.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="5">US208</td>
+        <td rowspan="5">Como mecánico de taller, deseo iniciar sesión con mis credenciales registradas en la aplicación web, para empezar con la gestión de mis clientes y sus vehículos.</td>
+        <td>T50</td>
+        <td>Implementar mensaje de error (web).</td>
+        <td>Implementar mensaje de error durante SignIn por credenciales inválidas en la aplicación web. Mostrar el mensaje de error de forma clara al recibir la respuesta del backend.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T51</td>
+        <td>Implementar lógica "mantener sesión activa" (web).</td>
+        <td>Implementar la lógica de "mantener sesión activa" en la aplicación web. Incluye el almacenamiento seguro del refresh token si la opción es seleccionada.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T52</td>
+        <td>Diseñar mockup "Iniciar sesión (SignIn)" (web).</td>
+        <td>Diseñar mockup de la página "Iniciar sesión (SignIn)" de la aplicación web. Debe incluir los campos: correo electrónico, contraseña y la opción de "mantener sesión activa".</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T53</td>
+        <td>Implementar página "Iniciar sesión (SignIn)" (web).</td>
+        <td>Implementar la página "Iniciar sesión (SignIn)" en la aplicación web (componente visual). Crear el componente web con los campos de entrada y el botón, basándose en el diseño.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T54</td>
+        <td>Implementar lógica de inicio de sesión (web).</td>
+        <td>Implementar la lógica de inicio de sesión (SignIn) en la aplicación web, incluyendo validación de formato local de los campos y la llamada a la API de autenticación.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="6">US209</td>
+        <td rowspan="6">Como conductor, deseo restablecer mi contraseña desde la aplicación móvil, para que pueda mantener la seguridad de mi cuenta de forma proactiva.</td>
+        <td>T55</td>
+        <td>Diseñar mockup "Cambio de contraseña" (móvil).</td>
+        <td>Diseñar mockup de la pantalla "Cambio de contraseña" de la aplicación móvil. Debe incluir los tres campos de entrada: contraseña actual, nueva contraseña y confirmar nueva contraseña.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T56</td>
+        <td>Implementar pantalla "Cambio de contraseña" (móvil).</td>
+        <td>Implementar la pantalla "Cambio de contraseña" en la aplicación móvil. Crear el componente móvil con sus tres campos y validaciones de formato locales.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T57</td>
+        <td>Implementar lógica de envío (móvil).</td>
+        <td>Implementar la lógica de envío para el cambio de contraseña en la aplicación móvil, incluyendo validación de coincidencia de la nueva contraseña y envío de la solicitud al endpoint del backend.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T58</td>
+        <td>Implementar manejo visual de errores (móvil).</td>
+        <td>Implementar el manejo visual de errores en la aplicación móvil. Mostrar un mensaje de error si el backend informa que la "contraseña actual" es incorrecta o que la nueva contraseña no cumple con los requisitos.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T59</td>
+        <td>Implementar confirmación de éxito (móvil).</td>
+        <td>Implementar la confirmación de éxito en la aplicación móvil. Al recibir la confirmación de éxito del backend, mostrar un mensaje de éxito y redirigir a la pantalla de perfil o configuración.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T60</td>
+        <td>Implementar invalidación de token (móvil).</td>
+        <td>Implementar la invalidación y eliminación del token de sesión móvil después de un cambio de contraseña exitoso, forzando al conductor a iniciar sesión con la nueva contraseña.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US210</td>
+        <td rowspan="4">Como mecánico de taller, deseo cerrar sesión en la aplicación web para proteger mi cuenta cuando termino de usar la aplicación.</td>
+        <td>T61</td>
+        <td>Implementar botón "Cerrar Sesión" (web).</td>
+        <td>Implementar el botón "Cerrar Sesión" en la aplicación web (dentro de pantalla de Perfil).</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T62</td>
+        <td>Implementar lógica de cierre de sesión (web).</td>
+        <td>Implementar la lógica completa de cierre de sesión seguro en la aplicación web.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T63</td>
+        <td>Añadir eliminación de tokens (web).</td>
+        <td>Añadir la eliminación de tokens de sesión (JWT y refresh) del almacenamiento local del navegador.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T64</td>
+        <td>Navegar a página de Login (web).</td>
+        <td>Navegar a la página de Login al completar exitosamente el proceso de cierre de sesión.</td>
+        <td></td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US211</td>
+        <td rowspan="4">Como mecánico de taller, deseo modificar mi perfil (nombre, apellido, contraseña) en la aplicación web para mantener mi información al día.</td>
+        <td>T65</td>
+        <td>Implementar pantalla "Editar Perfil" (web).</td>
+        <td>Implementar la pantalla "Editar Perfil" (Componente Visual). Crear el componente web con los campos de perfil y los botones de guardar/cancelar.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T66</td>
+        <td>Implementar lógica de carga de datos (web).</td>
+        <td>Implementar la lógica de carga de datos del perfil en la aplicación web. Al cargar la página, recuperar y mostrar los datos del perfil del mecánico desde la API.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T67</td>
+        <td>Implementar validaciones de formato (web).</td>
+        <td>Implementar las validaciones de formato de campos de perfil del mecánico (ej., campos obligatorios) antes del envío a la API.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T68</td>
+        <td>Diseñar mockup "Editar Perfil" (web).</td>
+        <td>Diseñar mockup de la página "Editar Perfil" de la aplicación web. Debe mostrar el formulario con los campos actuales del mecánico y el formulario de edición.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US301</td>
+        <td rowspan="3">Como conductor, deseo recibir alertas en el móvil cuando el sistema detecta problemas, para actuar de inmediato y evitar daños mayores.</td>
+        <td>T69</td>
+        <td>Diseñar el mockup de las notificaciones emergentes.</td>
+        <td>Diseñar el mockup de las notificaciones emergentes y visuales de alertas en la aplicación móvil, diferenciando tipos de alerta (crítica, preventiva, informativa).</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T70</td>
+        <td>Implementar la lógica de recepción y manejo de alertas.</td>
+        <td>Implementar la lógica de recepción y manejo de alertas en la aplicación móvil mediante Firebase Cloud Messaging (FCM).</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T71</td>
+        <td>Implementar la visualización en tiempo real.</td>
+        <td>Implementar la visualización en tiempo real de alertas recibidas, actualizando el estado en la interfaz móvil.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="5">US302</td>
+        <td rowspan="5">Como conductor, deseo revisar el reporte de alertas recibidas, para entender patrones de fallas y planificar mantenimientos.</td>
+        <td>T72</td>
+        <td>Mostrar mensaje "No hay alertas registradas".</td>
+        <td>Mostrar mensaje "No hay alertas registradas" cuando la lista esté vacía en la UI de la Aplicación Móvil.</td>
+        <td></td>
+        <td>GA</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T73</td>
+        <td>Mostrar detalle de la alerta seleccionada.</td>
+        <td>Mostrar detalle de la alerta seleccionada en la UI de la Aplicación Móvil.</td>
+        <td></td>
+        <td>GA</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T74</td>
+        <td>Diseñar el mockup de la pantalla "Historial de alertas".</td>
+        <td>Diseñar el mockup de la pantalla "Historial de alertas" en la aplicación móvil, mostrando tipo de alerta, fecha, severidad e icono asociado.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T75</td>
+        <td>Implementar la pantalla "Historial de alertas".</td>
+        <td>Implementar la pantalla "Historial de alertas" en la aplicación móvil, utilizando scroll dinámico para listar alertas registradas.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T76</td>
+        <td>Implementar la lógica de carga y visualización.</td>
+        <td>Implementar la lógica de carga y visualización de alertas almacenadas localmente, asegurando persistencia temporal mediante SQLite en la aplicacióm móvil.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US303</td>
+        <td rowspan="3">Como conductor, deseo definir mis preferencias de notificaciones, para recibir solo las alertas relevantes en la aplicación móvil.</td>
+        <td>T77</td>
+        <td>Diseñar el mockup de la pantalla "Configuración de notificaciones".</td>
+        <td>Diseñar el mockup de la pantalla "Configuración de notificaciones", incluyendo interruptores o switches por tipo de alerta (crítica, preventiva, general).</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T78</td>
+        <td>Implementar la interfaz de configuración.</td>
+        <td>Implementar la interfaz de configuración en la aplicación móvil (componente visual), con switches y guardado automático del estado.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T79</td>
+        <td>Implementar la funcionalidad para guardar las preferencias.</td>
+        <td>Implementar la funcionalidad para guardar las preferencias de notificaciones del usuario en la aplicación móvil.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="2">US304</td>
+        <td rowspan="2">Como conductor, deseo ver en la aplicación móvil el diagnóstico de mi vehículo, para conocer su estado actual y tomar decisiones rápidas.</td>
+        <td>T80</td>
+        <td>Diseñar mockup "Diagnóstico del Vehículo" (móvil).</td>
+        <td>Diseñar el mockup de la pantalla "Diagnóstico del Vehículo" de la aplicación móvil. Debe mostrar indicadores visuales (tarjetas o iconos) con el estado de batería, motor, frenos, neumáticos y otros sensores relevantes.</td>
+        <td></td>
+        <td>P</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T81</td>
+        <td>Implementar interfaz de diagnóstico (móvil).</td>
+        <td>Implementar la interfaz de diagnóstico en la aplicación móvil (componente visual). Incluir gráficos, colores e iconos diferenciados por estado (normal, advertencia, crítico).</td>
+        <td></td>
+        <td>P</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US401</td>
+        <td rowspan="3">Como conductor, deseo ver el historial de mantenimientos en la aplicación, para analizar la frecuencia y costos de mis reparaciones.</td>
+        <td>T82</td>
+        <td>Diseñar pantalla "Historial de Mantenimientos" (móvil).</td>
+        <td>Diseñar en la aplicación móvil la pantalla de "Historial de Mantenimientos" que presente los registros con fecha, servicio realizado y costo, utilizando la información del bounded context Workshop Operations.</td>
+        <td></td>
+        <td>P</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T83</td>
+        <td>Implementar botón "Filtrar" (móvil).</td>
+        <td>Implementar el botón "Filtrar" en el listado de mantenimientos con las opciones para ordenar por fecha y tipo de servicio.</td>
+        <td></td>
+        <td>P</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T84</td>
+        <td>Desarrollar pantalla "Sin registros" (móvil).</td>
+        <td>Desarrollar la pantalla de "Sin registros" con su respectivo mensaje en el caso de que no exista registro alguno.</td>
+        <td></td>
+        <td>P</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US402</td>
+        <td rowspan="3">Como conductor, deseo recibir recordatorios de próximos mantenimientos, para no olvidar servicios importantes de mi vehículo.</td>
+        <td>T85</td>
+        <td>Diseñar el mockup de la sección "Recordatorios".</td>
+        <td>Diseñar el mockup de la sección "Recordatorios" en la aplicación móvil. Debe incluir fechas de mantenimiento estimadas, kilometraje y opciones para activar o desactivar alertas.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T86</td>
+        <td>Implementar la lógica de notificaciones locales y push.</td>
+        <td>Implementar la lógica de notificaciones locales y push (Firebase Cloud Messaging) en la aplicación móvil para el envío de recordatorios.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T87</td>
+        <td>Implementar la funcionalidad para registrar, listar y eliminar.</td>
+        <td>Implementar la funcionalidad para registrar, listar y eliminar recordatorios de mantenimiento en la aplicación móvil, asegurando que el usuario pueda gestionarlos desde la interfaz.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US601</td>
+        <td rowspan="3">Como mecánico de taller, deseo visualizar la agenda en vista diaria y semanal, para organizar el trabajo del equipo.</td>
+        <td>T88</td>
+        <td>Crear la interfaz de calendario (vista diaria).</td>
+        <td>Crear la interfaz de calendario que muestre las citas/órdenes de servicio en un formato de línea de tiempo por horas (8:00 a 18:00) para el día seleccionado.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T89</td>
+        <td>Crear la interfaz de calendario (vista semanal).</td>
+        <td>Crear la interfaz de calendario que muestre los 7 días de la semana en columnas, visualizando la carga de trabajo y disponibilidad de un vistazo general.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T90</td>
+        <td>Desarrollar los botones para cambiar entre vistas.</td>
+        <td>Desarrollar los botones para cambiar entre las vistas Diaria y Semanal, además de flechas para navegar al día/semana anterior y siguiente.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US609</td>
+        <td rowspan="3">Como mecánico de taller, deseo ver cantidad total de citas por estado, para tener una vista rápida de la carga de trabajo.</td>
+        <td>T91</td>
+        <td>Identificar y listar estados relevantes.</td>
+        <td>Identificar y listar solo los estados relevantes para la carga de trabajo activa del mecánico.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T92</td>
+        <td>Confirmar acceso por rol.</td>
+        <td>Confirmar que solo los usuarios con el rol de "Mecánico de Taller" puedan acceder a esta vista de carga de trabajo.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T93</td>
+        <td>Configurar actualización dinámica.</td>
+        <td>Configurar el componente para que los conteos se actualicen dinámicamente o con una frecuencia alta para reflejar los cambios de estado.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="6">US701</td>
+        <td rowspan="6">Como conductor, deseo registrar uno de mis vehículos, para asociarlos a diagnósticos y mantenimientos.</td>
+        <td>T94</td>
+        <td>Diseñar la vista de registro de vehículo.</td>
+        <td>Diseñar en la aplicación móvil la vista de registro de vehículo con campos como placa, marca, modelo y año, siguiendo las reglas de validación definidas por el bounded context Device Management.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T95</td>
+        <td>Implementar el formulario de registro.</td>
+        <td>Implementar el formulario de registro en la app móvil para capturar los datos del vehículo y validarlos antes de enviarlos, mostrando mensajes claros ante errores o campos vacíos.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T96</td>
+        <td>Implementar validación de placa duplicada.</td>
+        <td>Implementar en la aplicación móvil la validación de placa duplicada, mostrando un mensaje flotante que indique "La placa XXXXXX ya está registrada" cuando el usuario intente volver a registrarla.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T97</td>
+        <td>Mostrar mensaje de éxito al registrar.</td>
+        <td>Mostrar mensaje de éxito al registrar el vehículo correctamente en la Aplicación Móvil.</td>
+        <td></td>
+        <td>GA</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T98</td>
+        <td>Mostrar mensaje de error si la placa ya está registrada.</td>
+        <td>Mostrar mensaje de error si la placa ya está registrada en la UI de la Aplicación Móvil.</td>
+        <td></td>
+        <td>GA</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T99</td>
+        <td>Redirigir UI a la lista de vehículos.</td>
+        <td>Redirigir UI a la lista de vehículos tras registro exitoso en la Aplicación Móvil.</td>
+        <td></td>
+        <td>GA</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US702</td>
+        <td rowspan="3">Como conductor, deseo editar la información de mis vehículos o eliminarlos, para mantener mi registro actualizado.</td>
+        <td>T100</td>
+        <td>Diseñar vista para editar vehículo (móvil).</td>
+        <td>Diseñar en la aplicación móvil la vista para editar la información de un vehículo, permitiendo modificar campos como placa, marca, modelo y año, siguiendo las reglas de validación definidas por el BC Device Management.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T101</td>
+        <td>Diseñar acción de eliminar vehículo (móvil).</td>
+        <td>Diseñar en la aplicación móvil la acción de eliminar un vehículo, incluyendo un mensaje de confirmación antes de realizar la acción y la desvinculación automática de citas futuras.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T102</td>
+        <td>Implementar mensajes flotantes (móvil).</td>
+        <td>Implementar en la aplicación móvil los mensajes flotantes que confirmen al usuario que las acciones de editar o eliminar un vehículo se han realizado correctamente.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US703</td>
+        <td rowspan="4">Como conductor, deseo ver una lista de mis vehículos registrados, para seleccionar con cuál trabajar.</td>
+        <td>T103</td>
+        <td>Implementar la actualización automática de la lista.</td>
+        <td>Implementar la actualización automática de la lista en la aplicación móvil después de registrar, editar o eliminar un vehículo.</td>
+        <td></td>
+        <td>GA</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T104</td>
+        <td>Diseñar la vista principal "Mis vehículos".</td>
+        <td>Diseñar en la aplicación móvil la vista principal "Mis vehículos" que muestre una lista de los vehículos registrados con su placa, marca y modelo.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T105</td>
+        <td>Implementar mensaje "Sin vehículos".</td>
+        <td>Implementar en la vista "Mis vehículos" el mensaje "Sin vehículos" indicando que no tiene vehículos registrados en caso de que no exista registro alguno.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T106</td>
+        <td>Implementar opción de invitar a registrar.</td>
+        <td>Implementar en el mensaje de "Sin vehículos" la opción que invite al usuario a realizar su primer registro redirigiendo a la vista correspondiente del bounded context Device Management.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US704</td>
+        <td rowspan="3">Como conductor, deseo vincular el dispositivo IoT a un vehículo específico para que los diagnósticos y alertas correspondan al auto correcto.</td>
+        <td>T107</td>
+        <td>Diseñar vista para vincular IoT.</td>
+        <td>Diseñar en la aplicación móvil la vista para vincular un dispositivo IoT a un vehículo, incluyendo el campo para ingresar el código del dispositivo según las reglas del bounded context Device Management.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T108</td>
+        <td>Implementar mensaje de confirmación.</td>
+        <td>Implementar en la aplicación móvil el mensaje de confirmación que se muestra cuando el dispositivo IoT se asocia correctamente al vehículo.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T109</td>
+        <td>Implementar mensaje de error.</td>
+        <td>Implementar en la aplicación móvil el mensaje de error que se muestra cuando el dispositivo IoT ya está vinculado a otro vehículo.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US801</td>
+        <td rowspan="3">Como conductor, deseo ver mi taller asignado y sus horarios compatibles, para elegir una fecha y hora.</td>
+        <td>T110</td>
+        <td>Diseñar vista "Mi Taller".</td>
+        <td>Diseñar en la aplicación móvil la vista "Mi Taller" mostrando nombre, dirección, teléfono y datos básicos del taller asignado.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T111</td>
+        <td>Implementar visualización de horarios.</td>
+        <td>Implementar en la aplicación móvil la visualización de horarios compatibles del taller según la fecha seleccionada obtenidos desde el bounded context Workshop Operations and Telemetry Processing.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T112</td>
+        <td>Implementar mensaje "Sin horarios compatibles".</td>
+        <td>Implementar en la app móvil el mensaje "Sin horarios disponibles" con la opción de elegir otra fecha cuando no existan cupos activos.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US802</td>
+        <td rowspan="3">Como conductor, deseo solicitar una cita, para agendar la atención en mi taller asignado.</td>
+        <td>T113</td>
+        <td>Diseñar vista "Nueva Cita".</td>
+        <td>Diseñar en la aplicación móvil la vista "Nueva Cita" con campos de fecha, hora y tipo de servicio.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T114</td>
+        <td>Implementar formulario móvil.</td>
+        <td>Implementar el formulario móvil con validación de campos obligatorios (fecha, hora y servicio) dentro del bounded context Workshop Operations and Telemetry Processing.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T115</td>
+        <td>Habilitar creación de cita.</td>
+        <td>Habilitar en la app móvil la creación de una cita y mostrar confirmación visual al usuario una vez registrada exitosamente.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US803</td>
+        <td rowspan="3">Como conductor, deseo consultar el estado y detalles de mi cita, para mantenerme informado.</td>
+        <td>T116</td>
+        <td>Diseñar vista "Mis Citas".</td>
+        <td>Diseñar la vista "Mis Citas" con listado de citas y sus estados (Solicitada, Aprobada, Cancelada) de la Aplicación Móvil.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T117</td>
+        <td>Implementar navegación.</td>
+        <td>Implementar la navegación en la app móvil para visualizar la información completa de una cita seleccionada (fecha, hora, servicio, notas).</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T118</td>
+        <td>Desarrollar función pull-to-refresh.</td>
+        <td>Desarrollar la función de actualización manual (pull-to-refresh) en la vista de citas dentro del bounded context Workshop Operations and Telemetry Processing.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US804</td>
+        <td rowspan="3">Como conductor, deseo proponer un nuevo horario para mi cita aprobada, para organizarme y optimizar mi tiempo mejor.</td>
+        <td>T119</td>
+        <td>Diseñar vista "Reprogramar Cita".</td>
+        <td>Diseñar en la aplicación móvil la vista "Reprogramar Cita" con un calendario interactivo para seleccionar nueva fecha y hora desde el bounded context Workshop Operations and Telemetry Processing.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T120</td>
+        <td>Implementar cambio de estado visual.</td>
+        <td>Implementar la vista en la cual al enviar la solicitud de cambio, la cita previamente "Aprobada" cambie su estado visual a color amarillo con el mensaje "En revisión" hasta recibir respuesta del taller.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T121</td>
+        <td>Implementar nueva vista de estado.</td>
+        <td>Implementar la nueva vista indicando el cambio de la cita si el taller aprueba la reprogramación, mostrar color verde con el mensaje "Aprobada" o si la rechaza, mostrar color rojo con el mensaje "Rechazada".</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US805</td>
+        <td rowspan="3">Como conductor, deseo poder cancelar una cita, para liberar el horario si no podré asistir.</td>
+        <td>T122</td>
+        <td>Diseñar opción "Cancelar cita".</td>
+        <td>Diseñar en la aplicación móvil la opción "Cancelar cita" visible junto al estado actual de cada cita dentro del bounded context Workshop Operations and Telemetry Processing.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T123</td>
+        <td>Implementar acción de cancelación.</td>
+        <td>Implementar en la app móvil la acción de cancelación que, tras la confirmación del usuario, cambie el estado visual de la cita a rojo con el texto "Cancelada" y permita registrar un motivo opcional.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T124</td>
+        <td>Mostrar alerta informativa.</td>
+        <td>Mostrar en la aplicación una alerta informativa que advierta al conductor sobre posibles penalidades cuando intente cancelar una cita con menos de 15 minutos de anticipación.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US806</td>
+        <td rowspan="3">Como conductor, deseo recibir recordatorios antes de mi cita, para no olvidarla.</td>
+        <td>T125</td>
+        <td>Diseñar el mockup de la notificación emergente.</td>
+        <td>Diseñar el mockup de la notificación emergente tipo alarma en la aplicación móvil, que avise al conductor con antelación antes de la cita programada.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T126</td>
+        <td>Implementar la lógica de recordatorios automáticos.</td>
+        <td>Implementar en la aplicación móvil la lógica de recordatorios automáticos, configurando notificaciones locales y push que se activen 24 horas y 1 hora antes de la cita aprobada.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T127</td>
+        <td>Agregar opción en ajustes para activar/desactivar recordatorios.</td>
+        <td>Agregar en la app móvil una opción en ajustes para que el conductor pueda activar o desactivar los recordatorios automáticos, gestionado desde el bounded context Workshop Operations and Telemetry Processing.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US807</td>
+        <td rowspan="4">Como conductor, deseo adjuntar fotos y una nota al solicitar o editar la cita, para describir el problema del vehículo.</td>
+        <td>T128</td>
+        <td>Implementar etiqueta de contador de caracteres.</td>
+        <td>Implementar una pequeña etiqueta debajo del campo de texto de la nota que muestre al conductor cuántos caracteres ha escrito y cuántos le quedan. Esto mejora la experiencia de usuario y gestiona las expectativas de longitud.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T129</td>
+        <td>Diseñar vista para adjuntar/escribir.</td>
+        <td>Diseñar en la aplicación móvil la vista donde el conductor pueda adjuntar hasta tres fotos y escribir una nota al crear o editar una cita.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T130</td>
+        <td>Implementar botón "Adjuntar multimedia".</td>
+        <td>Implementar en la app móvil un botón o texto interactivo con la etiqueta "Adjuntar multimedia" que permita seleccionar imágenes desde la galería o cámara, dentro del bounded context Workshop Operations and Telemetry Processing.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T131</td>
+        <td>Habilitar vista de fotos y notas guardadas.</td>
+        <td>Habilitar la vista de las fotos y notas guardadas en la pantalla de información de una cita, permitiendo al conductor revisar los archivos adjuntos desde el bounded context Workshop Operations and Telemetry Processing.</td>
+        <td></td>
+        <td>&ndash;</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="2">US904</td>
+        <td rowspan="2">Como mecánico de taller, deseo finalizar la orden de servicio y generar un reporte técnico, para documentar el trabajo realizado y notificar que el vehículo está listo.</td>
+        <td>T132</td>
+        <td>Cambiar estado de orden y registrar hora.</td>
+        <td>Al guardar los datos del reporte, cambiar automáticamente el estado de la Orden "En Taller" a "Listo para Entrega" y registrar la fecha y hora de finalización.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T133</td>
+        <td>Mostrar enlace para descargar reporte.</td>
+        <td>Mostrar un enlace en el detalle de la orden finalizada que permita descargar el Reporte generado, asegurando su fácil acceso para el personal y el cliente.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US1001</td>
+        <td rowspan="4">Como conductor, deseo ver un dashboard principal con los indicadores clave de mi vehículo, para tener un resumen rápido de su estado.</td>
+        <td>T134</td>
+        <td>Diseñar vista del dashboard.</td>
+        <td>Diseñar la vista del dashboard en la aplicación móvil dentro del bounded context Analytics and Recommendations.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T135</td>
+        <td>Implementar visualización de datos.</td>
+        <td>Implementar la visualización móvil de datos de salud del vehículo obtenidos desde el bounded context Analytics and Recommendations.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T136</td>
+        <td>Añadir opción de actualización.</td>
+        <td>Añadir opción de actualización del dashboard móvil para obtener la información más reciente del vehículo desde el bounded context Analytics and Recommendations.</td>
+        <td></td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T137</td>
+        <td>Mostrar mensaje de error.</td>
+        <td>Mostrar mensaje de error si no hay datos disponibles en la Aplicación Móvil.</td>
+        <td></td>
+        <td>GA</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US1003</td>
+        <td rowspan="3">Como conductor, deseo ver un reporte sobre mis hábitos de conducción para identificar áreas de mejora y conducir de forma más segura y eficiente.</td>
+        <td>T138</td>
+        <td>Diseñar vista móvil de hábitos de conducción.</td>
+        <td>Diseñar la vista móvil para mostrar los hábitos de conducción con visualización del puntaje y métricas clave (aceleraciones, frenadas, giros, velocidad) basados en los datos del BC Analytics and Recommendations.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T139</td>
+        <td>Implementar gráficos de barras.</td>
+        <td>Implementar en la vista móvil mediante gráficos de barras los resultados que reflejen el comportamiento del conductor.</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T140</td>
+        <td>Incorporar opción de filtrar y actualizar.</td>
+        <td>Incorporar en la aplicación móvil la opción para filtrar y actualizar los gráficos según el periodo seleccionado (Últimos 7 días, mes, trimestre).</td>
+        <td></td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+</table>
+
+
 #### 6.2.2.4. Development Evidence for Sprint Review
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
 #### 6.2.2.6. Execution Evidence for Sprint Review
