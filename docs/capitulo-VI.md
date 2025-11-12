@@ -2916,7 +2916,2226 @@ Para el Sprint 2, el equipo organizó el trabajo bajo un enfoque de Domain-Drive
 
 
 #### 6.2.2.4. Development Evidence for Sprint Review
+<p align="justify">
+Durante el Sprint 1, el equipo realizó avances significativos en la implementación de los productos de la solución SafeCar, abarcando tanto la Landing Page como las funcionalidades principales de la aplicación web. Los principales logros incluyen la implementación completa de la navegación y componentes de la Landing Page, el desarrollo de los sistemas de autenticación y registro de usuarios, y la creación de las interfaces para la gestión de perfiles. La tabla a continuación presenta el registro detallado de commits realizados en cada repositorio, documentando el progreso de desarrollo y las contribuciones de cada miembro del equipo durante este primer sprint.
+</p>
+
+<table width="100%">
+  <tr>
+    <th>Repository</th>
+    <th>Branch</th>
+    <th>Commit Id</th>
+    <th>Commit Message</th>
+    <th>Commit Message Body</th>
+    <th>Commit on (Date)</th>
+  </tr>
+
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/devices</td>
+    <td>95f4eb8</td>
+    <td>feat(vehicle-management): implementation of the Vehicles view</td>
+    <td>Adds the main UI for the vehicle management screen, including the list view and basic components.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>e03f19d</td>
+    <td>refactor(shared): remove MainLayout widget</td>
+    <td>Removes the old MainLayout widget, which is being replaced by a more modular approach in presentation/pages.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>6439ebd</td>
+    <td>refactor(shared): move main_layout to presentation/pages</td>
+    <td>Relocates the main layout files to the new presentation/pages directory to align with the new DDD folder structure.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>20d3640</td>
+    <td>refactor(router): extract workshop routes to dedicated module</td>
+    <td>Creates a separate routing module for workshop-related features to improve modularity and lazy loading.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/payments</td>
+    <td>29bdfa5</td>
+    <td>docs: update readme width payments info.</td>
+    <td>Updates the project README file to include information about the new payments module and API endpoints.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/payments</td>
+    <td>b1e443f</td>
+    <td>refactor(payments): update impl to adhere to domain-driven design.</td>
+    <td>Refactors the payments service implementation to better align with Domain-Driven Design principles.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/payments</td>
+    <td>6211bee</td>
+    <td>docs: add swagger documentation to payments controllers and update readme.</td>
+    <td>Adds detailed Swagger/OpenAPI documentation to all endpoints in the Payments controller.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/payments</td>
+    <td>e6ee704</td>
+    <td>merge: feature/payments into develop.</td>
+    <td>Merges the payments feature branch into the main develop branch after successful review.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>1e1d0c0</td>
+    <td>docs: update readme documentation.</td>
+    <td>General updates to the README documentation for the workshop module.</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>b3d0156</td>
+    <td>feat: improve the overall implementation of appointment management.</td>
+    <td>Improves the appointment management implementation, including logic for creation and status updates.</td>
+    <td>12/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>147b3f6</td>
+    <td>refactor(workshop): update path endpoint to mechanics.</td>
+    <td>Changes the API endpoint from /workshop to /mechanics for better clarity and REST conventions.</td>
+    <td>11/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>1f6c021</td>
+    <td>refactor: update profiles, workshop and devices bcs.</td>
+    <td>Performs a general refactor across Profiles, Workshop, and Devices bounded contexts to align interfaces.</td>
+    <td>11/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>9ec1265</td>
+    <td>chore: update imports to new structure</td>
+    <td>Updates all file imports across the mobile application to match the new Clean Architecture and DDD directory structure.</td>
+    <td>10/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>1c51432</td>
+    <td>feat(workshop): add Workshop bounded context</td>
+    <td>Initializes the new Workshop bounded context in the mobile app, including data, domain, and presentation layers.</td>
+    <td>10/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>0533a9d</td>
+    <td>feat(shared): add reusable UI components</td>
+    <td>Adds a set of common, reusable widgets like buttons and text fields to the shared UI library.</td>
+    <td>10/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>3c6b39d</td>
+    <td>feat(theme): add comprehensive design system</td>
+    <td>Implements the full Material 3 design system, including color palettes, typography, and component styles.</td>
+    <td>10/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>e04c664</td>
+    <td>feat(router): add DDD-based routing system</td>
+    <td>Establishes the main GoRouter configuration, organizing routes by feature and bounded context.</td>
+    <td>10/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>972a470</td>
+    <td>refactor: remove old Clean Architecture structure</td>
+    <td>Deletes the previous folder structure to fully adopt the new DDD-based layout.</td>
+    <td>10/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>d78af0c</td>
+    <td>feat: remove unused screens and router, add .gitkeep files for directory structure</td>
+    <td>Cleans up the project by deleting deprecated screens and router files. Adds .gitkeep files to empty directories.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>925671d</td>
+    <td>feat(appointment): add reschedule appointment page</td>
+    <td>Creates the UI and logic for the "Reschedule Appointment" screen.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>4057948</td>
+    <td>feat(appointment): add details and create pages</td>
+    <td>Adds the "Appointment Details" and "Create Appointment" pages to the workshop module.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>12bd309</td>
+    <td>feat(appointment): add main appointment page with FAB</td>
+    <td>Implements the main "My Appointments" list view and adds a Floating Action Button for creation.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>e6f27a7</td>
+    <td>feat(appointment): add reusable form field widgets</td>
+    <td>Creates reusable form widgets (e.g., date picker) for the appointment creation process.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>2d745d6</td>
+    <td>feat(appointment): add empty state widget</td>
+    <td>Adds a reusable widget to display when the user has no appointments.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>c60f1ad</td>
+    <td>feat(appointment): add appointment list widget</td>
+    <td>Creates the main list widget responsible for rendering appointment cards.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>766f16c</td>
+    <td>feat(appointment): add appointment filter bar widget</td>
+    <td>Implements a filter bar (e.g., All, Pending, Confirmed) for the appointments list.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>caf539a</td>
+    <td>feat(appointment): add mock appointment data with filters</td>
+    <td>Adds mock data and implements filter logic in the appointment service.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/workshopOps</td>
+    <td>7d6a495</td>
+    <td>feat(appointment): add AppointmentModel and status enum</td>
+    <td>Defines the core data model for an Appointment and an enum for its status.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>2d1f06d</td>
+    <td>feat(pages): add 404 not found page</td>
+    <td>Adds a "404 Not Found" page to handle unknown routes gracefully.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>20d3788</td>
+    <td>feat(widgets): add bottom navigation and main layout</td>
+    <td>Implements the main application layout with a persistent bottom navigation bar.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/alerts</td>
+    <td>b04426f</td>
+    <td>feat(widgets): add generic ConfirmationDialog with 5 types</td>
+    <td>Creates a reusable confirmation dialog widget with different types (e.g., success, error, warning).</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>8c42f16</td>
+    <td>feat(widgets): add reusable CustomAppBar component</td>
+    <td>Creates a standardized CustomAppBar widget to be used across all screens.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>e06b325</td>
+    <td>feat(router): configure GoRouter with nested routes</td>
+    <td>Sets up the initial GoRouter configuration using nested routes (ShellRoutes) for the main layout.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>7c16739</td>
+    <td>feat(router): add navigation and params helpers</td>
+    <td>Adds helper classes for type-safe navigation and parameter passing.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>23854ef</td>
+    <td>feat(router): add route constants and navigation model</td>
+    <td>Defines string constants for all route paths and a navigation model.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>530f6f3</td>
+    <td>feat(theme): configure Material Design 3 theme</td>
+    <td>Configures the Flutter app to use the Material Design 3 (M3) theme.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>1d996a6</td>
+    <td>feat(theme): add Material Design 3 typography system</td>
+    <td>Defines the app-wide typography based on the Material 3 type scale.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>a9e7df1</td>
+    <td>feat(theme): add SafeCar brand color palette</td>
+    <td>Adds the custom SafeCar brand colors to the application's theme.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/payments</td>
+    <td>cf2d7f1</td>
+    <td>update form</td>
+    <td>General updates to the styling and layout of the main user form.</td>
+    <td>09/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/payments</td>
+    <td>f54ce2a</td>
+    <td>fix: payment form</td>
+    <td>Corrects validation issues and improves user feedback on the credit card payment form.</td>
+    <td>09/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>3164af4</td>
+    <td>docs(workshop): improve appointments controller documentation.</td>
+    <td>Adds detailed Swagger/OpenAPI documentation to all endpoints in the Appointments controller.</td>
+    <td>08/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>a1ed495</td>
+    <td>feat(devices): improve vehicles controller implementation.</td>
+    <td>Refactors the Vehicles controller for better readability and adds error handling for vehicle creation.</td>
+    <td>08/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>f124683</td>
+    <td>feat(vehicles): add event to update the number of vehicles upon creation.</td>
+    <td>Implements a domain event publisher that fires when a new vehicle is created, allowing other services to react.</td>
+    <td>08/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>b1ccb43</td>
+    <td>refactor(devices): rename command to update total driver vehicles and search by driver-id.</td>
+    <td>Renames the UpdateVehicleTotal command for clarity and adjusts the query to search by driver ID.</td>
+    <td>08/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>143686a</td>
+    <td>fix: add profile record by role.</td>
+    <td>Fixes a bug where a new profile record was not being created automatically when a user was assigned a new role.</td>
+    <td>08/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/payments</td>
+    <td>283a36b</td>
+    <td>vue stripe</td>
+    <td>Initial integration of Vue Stripe elements for payment processing.</td>
+    <td>08/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>9ca2bd5</td>
+    <td>chore: remove comments</td>
+    <td>Removes unnecessary commented-out code and explanatory comments.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>bcb2bee</td>
+    <td>chore(iam): add generated files for iam models</td>
+    <td>Adds auto-generated files (e.g., .g.dart) for Freezed/JsonSerializable models in the IAM module.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/devices</td>
+    <td>5708510</td>
+    <td>refactor(vehicles): move add vehicle screen</td>
+    <td>Relocates the "Add Vehicle" screen to its own feature folder within the devices module.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>6dd4446</td>
+    <td>refactor(router): implement auth-aware routing</td>
+    <td>Updates GoRouter to check authentication state, redirecting unauthenticated users to the login screen.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>fddd908</td>
+    <td>feat(iam): add AuthBloc for handling authentication state</td>
+    <td>Implements the main BLoC for managing user authentication state (authenticated, unauthenticated, loading).</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>20061ee</td>
+    <td>feat(iam): add AuthCredentials entity</td>
+    <td>Defines the domain entity for AuthCredentials, holding username and password.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>f724074</td>
+    <td>feat(iam): add AuthEvents for login, registration, and logout</td>
+    <td>Defines the BLoC events for the authentication process (e.g., LoginRequested, LogoutRequested).</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>0ad191e</td>
+    <td>feat(iam): add AuthRemoteDataSource for authentication</td>
+    <td>Implements the data source responsible for making HTTP calls to the backend for auth endpoints.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>4de7a0d</td>
+    <td>feat(iam): add AuthRepository abstract class</td>
+    <td>Defines the abstract interface (contract) for the authentication repository.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>e002585</td>
+    <td>feat(iam): add AuthRepository implementation</td>
+    <td>Implements the AuthRepository, connecting the remote data source to the domain logic.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>3b6037f</td>
+    <td>feat(iam): add AuthState for authentication bloc</td>
+    <td>Defines the BLoC states for the authentication process (e.g., Authenticated, Unauthenticated, Loading).</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/insights</td>
+    <td>92f73f2</td>
+    <td>refactor(dashboard): move dashboard screen and integrate auth</td>
+    <td>Moves the dashboard screen to its new folder and connects it to the AuthBloc to show/hide content based on auth state.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>9e73fc6</td>
+    <td>feat(iam): add DioClient for HTTP requests</td>
+    <td>Sets up a singleton DioClient for managing all HTTP network requests and interceptors.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>31f1f0b</td>
+    <td>feat(iam): add LoginRequestModel</td>
+    <td>Defines the data transfer object (DTO) for sending login requests to the API.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>caf6f66</td>
+    <td>feat(iam): add LoginResponseModel</td>
+    <td>Defines the data transfer object (DTO) for receiving login responses (e.g., tokens) from the API.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>cd9fdbb</td>
+    <td>refactor(iam): move login screen and connect to AuthBloc</td>
+    <td>Relocates the login screen to its new feature folder and integrates it with the AuthBloc for state management.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>bfa01fc</td>
+    <td>feat(iam): add LoginUseCase</td>
+    <td>Implements the domain-level UseCase for handling the business logic of user login.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>bde61c6</td>
+    <td>feat(iam): add LogoutUseCase</td>
+    <td>Implements the domain-level UseCase for handling the business logic of user logout.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>44755fa</td>
+    <td>feat(iam): set up BLoC and Repository providers</td>
+    <td>Configures the BLoC and Repository providers at the top of the widget tree for dependency injection.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/devices</td>
+    <td>c2126bd</td>
+    <td>refactor(vehicles): move my vehicles screen</td>
+    <td>Relocates the "My Vehicles" screen to its new feature folder to align with the DDD structure.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>37e9721</td>
+    <td>feat(deps): add core dependencies for networking, state, and serialization</td>
+    <td>Adds essential dependencies like dio, flutter_bloc, and json_serializable to pubspec.yaml.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>a07f045</td>
+    <td>feat(iam): add RegisterRequestModel</td>
+    <td>Defines the data transfer object (DTO) for sending registration requests to the API.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>e0a4fed</td>
+    <td>feat(iam): add RegisterResponseModel</td>
+    <td>Defines the data transfer object (DTO) for receiving registration responses from the API.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>2ad01f0</td>
+    <td>feat(iam): add navigation to login screen upon successful registration,</td>
+    <td>Implements navigation to the login screen after a user successfully registers.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>be37b03</td>
+    <td>feat(iam): add RegisterUseCase</td>
+    <td>Implements the domain-level UseCase for handling the business logic of user registration.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>e07c184</td>
+    <td>feat(iam): add SessionService to manage authentication tokens</td>
+    <td>Creates a service to securely store and retrieve user authentication tokens from device storage.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/devices</td>
+    <td>a8c8279</td>
+    <td>refactor(vehicles): move vehicle details screen</td>
+    <td>Relocates the "Vehicle Details" screen to its new feature folder.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/payments</td>
+    <td>6399cdc</td>
+    <td>feat(payments): Stripe integration (squashed clean history)</td>
+    <td>Adds all necessary services, controllers, and configuration for integrating the Stripe payment gateway.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>6779797</td>
+    <td>refactor(profiles): partial impl of endpoints correction.</td>
+    <td>Corrects HTTP methods and request/response DTOs for several endpoints in the Profiles bounded context.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>99663d9</td>
+    <td>fix(iam): resolve authentication error by loading token via email instead of username.</td>
+    <td>Fixes a critical authentication bug where the token was loaded by username instead of the unique email address.</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>5bebac5</td>
+    <td>refactor: restructure rest endpoints and update based on suggestions.</td>
+    <td>General refactoring of REST API endpoints based on team review feedback to improve consistency.</td>
+    <td>06/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>f35af3b</td>
+    <td>feat: added initial pages</td>
+    <td>Adds the initial placeholder pages for the main sections of the mobile app (Home, Profile, etc.).</td>
+    <td>05/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>1483816</td>
+    <td>chore: remove unused acl workshop-ops impl.</td>
+    <td>Deletes deprecated code related to the old ACL implementation for the workshop operations module.</td>
+    <td>05/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>bdcea4b</td>
+    <td>feat(workshopOps): add repository for vehicle telemetry.</td>
+    <td>Implements the JPA repository interface for persisting and querying vehicle telemetry data.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>fbaeaad</td>
+    <td>feat(workshopOps): add command and query domain contracts for vehicle telemetry.</td>
+    <td>Defines the domain-level interfaces for vehicle telemetry commands (CQS).</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>c4c2968</td>
+    <td>feat(workshopOps): add domain commands, queries and events from vehicle telemetry.</td>
+    <td>Implements the specific command/query objects and domain events for vehicle telemetry.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>49d197a</td>
+    <td>feat(workshopOps): add telemetry record entity.</td>
+    <td>Defines the TelemetryRecord JPA entity for storing individual data points.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>5cd7e66</td>
+    <td>feat(workshopOps): add vehicle telemetry aggregate.</td>
+    <td>Creates the VehicleTelemetry aggregate root to manage the telemetry data lifecycle.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>831d1af</td>
+    <td>feat(workshopOps): add controller for workshop operation.</td>
+    <td>Adds the main REST controller for handling workshop operation requests.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>37c2e83</td>
+    <td>feat(workshopOps): add resources (dtos) and transforms for workshop operation.</td>
+    <td>Adds DTOs and Assemblers for workshop operations API requests and responses.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>9bc7768</td>
+    <td>feat(workshopOps): add commandservice and queryservice impl for workshop operation.</td>
+    <td>Implements the CQS services for workshop operations.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>569f195</td>
+    <td>feat(workshopOps): add service bay and workshop operation repositories.</td>
+    <td>Adds JPA repositories for ServiceBay and WorkshopOperation entities.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>da543a5</td>
+    <td>feat(workshopOps): add command and query domain contracts for workshop operation.</td>
+    <td>Defines the domain-level interfaces for workshop operation CQS.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>a7a068c</td>
+    <td>feat(workshopOps): add domain commands, queries and events from workshop operation.</td>
+    <td>Implements the specific command/query objects and domain events for workshop operations.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>822090c</td>
+    <td>feat(workshopOps): add service bay entity.</td>
+    <td>Defines the ServiceBay JPA entity.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>c104e57</td>
+    <td>feat(workshopOps): add workshop operation aggregate.</td>
+    <td>Creates the WorkshopOperation aggregate root.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>23f8a69</td>
+    <td>chore: change the name of bc from workshopOps to workshop.</td>
+    <td>Renames the bounded context from 'workshopOps' to 'workshop' for brevity.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>2332dc6</td>
+    <td>docs: update readme documentation.</td>
+    <td>Updates the main README file with new information about project setup and architecture.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>123d8fd</td>
+    <td>refactor(devices): add full impl of external profile service.</td>
+    <td>Implements the external profile service used by the devices context to fetch driver data.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>8202852</td>
+    <td>feat: integrate functionalities between bcs devices and workshopOps.</td>
+    <td>Integrates the Devices and WorkshopOps bounded contexts.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>bb94140</td>
+    <td>merge: integrate workshopOps bounded context with conflict resolution.</td>
+    <td>Merges the workshopOps integration branch and resolves conflicts.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>2355f5a</td>
+    <td>fix: increase role name column length to prevent truncation errors.</td>
+    <td>Increases the 'name' column length in the 'roles' table to 100 characters.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e58a2b4</td>
+    <td>merge: integrate devices and profiles bounded contexts while preserving IAM</td>
+    <td>Merges the devices and profiles integration, ensuring the IAM context remains consistent.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>d0839a0</td>
+    <td>refactor: complete impl of bcs for profiles and devices.</td>
+    <td>Completes the implementation of the bounded contexts for profiles and devices.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>d6ef9d0</td>
+    <td>refactor: update the root aggregate id to long data type.</td>
+    <td>Changes the data type of all aggregate root IDs from UUID to Long for better database performance.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>0bc709e</td>
+    <td>docs: update readme documentation.</td>
+    <td>Updates the README file with new API endpoint documentation.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>0d62424</td>
+    <td>feat(workshopOps): implement workhopops context facade.</td>
+    <td>Implements the main facade for the WorkshopOps bounded context.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>8a240f5</td>
+    <td>feat(workshopOps): implement domain event handlers for aggregate lifecycle.</td>
+    <td>Adds domain event handlers for workshop aggregate lifecycle events (e.g., created, updated).</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>fcf720a</td>
+    <td>feat(workshopOps): implement external iam service and integrate acl pattern.</td>
+    <td>Implements the external IAM service and ACL pattern for cross-context communication.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>045db7e</td>
+    <td>feat(iam): implement context facade for acl pattern.</td>
+    <td>Implements the facade for the IAM context, providing a simplified ACL interface for other bounded contexts.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>3a01e6d</td>
+    <td>feat(workshopOps): add telemetry controller.</td>
+    <td>Adds the REST controller for handling vehicle telemetry data ingestion.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>f3f6280</td>
+    <td>feat(workshopOps): add resources (dtos) and transforms for vehicle telemetry.</td>
+    <td>Adds DTOs and Assemblers for the vehicle telemetry API.</td>
+    <td>04/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>1df94e1</td>
+    <td>feat(workshopOps): add commandservice and queryservice impl for vehicle telemetry.</td>
+    <td>Implements the CQS services for managing vehicle telemetry.</td>
+    <td>04/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>e5658fe</td>
+    <td>feat(workshopOps): link appointments to work orders; forward workshop id in controller.</td>
+    <td>Updates the controller to link appointments to work orders and forward the workshop ID.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>df873cb</td>
+    <td>feat(workshopOps): add controller for workshop appointment.</td>
+    <td>Adds the REST controller for managing workshop appointments.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>625a7c7</td>
+    <td>feat(workshopOps): add resources (dtos) and transforms for workshop order.</td>
+    <td>Adds DTOs and Assemblers for the workshop order API.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>553ac6c</td>
+    <td>feat(workshopOps): add commandservice and queryservice impl for workshop order.</td>
+    <td>Implements the CQS services for managing workshop orders.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>8e0a397</td>
+    <td>feat(workshopOps): add repository for workshop order.</td>
+    <td>Adds the JPA repository for the WorkshopOrder entity.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>c665357</td>
+    <td>feat(workshopOps): add command and query domain contracts for workshop order.</td>
+    <td>Defines the domain-level interfaces for workshop order CQS.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>6ca5917</td>
+    <td>feat(workshopOps): add domain commands, queries and events from workshop order.</td>
+    <td>Implements the specific command/query objects and domain events for workshop orders.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>61a99be</td>
+    <td>feat(workshopOps): add workshop order aggregate.</td>
+    <td>Creates the WorkshopOrder aggregate root to manage the work order lifecycle.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>36c35b1</td>
+    <td>feat(workshopOps): add work order status value object.</td>
+    <td>Creates a WorkOrderStatus value object (e.g., PENDING, IN_PROGRESS, COMPLETED).</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>4de69df</td>
+    <td>chore(workshopOps): remove unused files.</td>
+    <td>Deletes unused files from the workshopOps module.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>4853e07</td>
+    <td>refactor(workshopOps): improve controller for workshop appointment.</td>
+    <td>Refactors the workshop appointment controller for better readability and error handling.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>b56f2be</td>
+    <td>feat(workshopOps): improve transforms (dtos) for workshop appointment.</td>
+    <td>Improves the DTOs and Assemblers for workshop appointments.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>3aaf144</td>
+    <td>refactor(workshopOps): improve resources (dtos) for workshop appointment.</td>
+    <td>Refactors the DTOs for workshop appointments based on team feedback.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>3d9a800</td>
+    <td>refactor(workshopOps): improve commandservice and queryservice impl for workshop appointment.</td>
+    <td>Improves the CQS implementation for workshop appointments.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>56395e4</td>
+    <td>refactor(workshopOps): improve repository for workshop appointment.</td>
+    <td>Optimizes the JPA repository for workshop appointments with custom queries.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>9ddc0af</td>
+    <td>refactor(workshopOps): add command and query domain contracts for workshop appointment and rename it.</td>
+    <td>Renames and refactors the domain contracts for workshop appointments.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>64d8a21</td>
+    <td>feat(workshopOps): add domain events for workshop appointments.</td>
+    <td>Adds domain events for workshop appointment lifecycle (e.g., AppointmentCreated).</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>ba9c2c1</td>
+    <td>feat(workshopOps): add domain commands and queries for workshop appointments.</td>
+    <td>Implements the CQS commands and queries for workshop appointments.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>62e0591</td>
+    <td>feat(workshopOps): add domain appointment-note entity.</td>
+    <td>Adds the AppointmentNote entity, part of the Appointment aggregate.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>65c0843</td>
+    <td>feat(workshopOps): add domain value objects.</td>
+    <td>Adds various value objects for the workshop domain (e.g., AppointmentTime).</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>e451337</td>
+    <td>refactor(workshopOps): replace appointment aggregate with workshopAppointment.</td>
+    <td>Renames the Appointment aggregate to WorkshopAppointment for clarity.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>6f558fc</td>
+    <td>refactor: change shared aggregate root id type from uuid to long.</td>
+    <td>Changes the base aggregate root ID type from UUID to Long across all contexts.</td>
+    <td>03/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>9e93d01</td>
+    <td>feat(workshopOps): integrate appointments into the bc workshopsOps.</td>
+    <td>Integrates the appointments feature into the main WorkshopOps bounded context.</td>
+    <td>03/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>e6de136</td>
+    <td>docs(appointments): add centralized module documentation</td>
+    <td>Adds a README file to the appointments module explaining its purpose, domain model, and API endpoints.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>bc69aae</td>
+    <td>feat(appointments): add Anti-Corruption Layer (ACL) with facade and DTOs for cross-context integration</td>
+    <td>Implements an ACL to protect the appointments domain from external context changes, using DTOs and a facade.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>b72a780</td>
+    <td>feat(appointments): add REST controller with 14 endpoints</td>
+    <td>Implements the main REST controller for appointments, exposing 14 endpoints for CRUD and state management.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>9159990</td>
+    <td>feat(appointments): add assemblers for domain-REST transformation</td>
+    <td>Adds resource assemblers (transformers) to convert between domain entities and REST DTOs.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>6f3d310</td>
+    <td>feat(appointments): add REST resources (DTOs) for API request/response</td>
+    <td>Defines all DTOs (Data Transfer Objects) used for API requests and responses in the appointments module.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>54391e7</td>
+    <td>feat(appointments): add JPA repository with custom query methods</td>
+    <td>Implements the JPA repository for the Appointment aggregate, including custom query methods.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>6960899</td>
+    <td>feat(appointments): implement command and query service handlers in application layer</td>
+    <td>Implements the application service handlers for all appointment-related commands and queries (CQS).</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/alerts</td>
+    <td>6fa7790</td>
+    <td>feat(appointments): add custom domain exceptions for error handling</td>
+    <td>Introduces custom exception classes (e.g., AppointmentConflictException) to provide clearer domain-specific error feedback.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>816f0fe</td>
+    <td>feat(appointments): add domain services interfaces for command and query handling</td>
+    <td>Defines the domain service interfaces (contracts) for the command and query sides (CQS).</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>d055516</td>
+    <td>feat(appointments): add 5 queries for CQRS pattern</td>
+    <td>Defines 5 query objects for the appointments module (e.g., GetAppointmentByIdQuery).</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>17359d6</td>
+    <td>feat(appointments): add 9 commands for CQRS pattern</td>
+    <td>Defines 9 command objects for the appointments module (e.g., CreateAppointmentCommand, CancelAppointmentCommand).</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/workshopOps</td>
+    <td>1deb228</td>
+    <td>feat(appointments): add domain model with Appointment aggregate and AppointmentNote entity</td>
+    <td>Implements the core domain model for the Appointment aggregate root and its child AppointmentNote entity.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>c86021a</td>
+    <td>fix(config): change Java version from 25 to 21 (LTS)</td>
+    <td>Downgrades the project's Java version to 21 (LTS) for compatibility with deployment environments.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/payments</td>
+    <td>cd9e280</td>
+    <td>feat(subscriptions): add subscription overview page and improve i18n integration</td>
+    <td>Creates the new subscription management page and integrates i18n localization for all text.</td>
+    <td>02/11/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/payments</td>
+    <td>32c4e6d</td>
+    <td>feat: payments</td>
+    <td>Initial feature commit for the payments module, setting up services and basic components.</td>
+    <td>02/11/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>62a6e9e</td>
+    <td>feat: added ExternalProfileService</td>
+    <td>Adds a service interface for fetching profile data from external systems.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>0fc8dae</td>
+    <td>feat: updated file's names</td>
+    <td>Renames several files in the IAM context to better reflect their purpose (e.g., User to IamUser).</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>88d7de9</td>
+    <td>feat: files deleted</td>
+    <td>Deletes obsolete files as part of the IAM context refactoring.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>df5c6c5</td>
+    <td>feat: added UserResourceFromEntityAssembler</td>
+    <td>Adds an assembler to convert the User entity to a UserResource DTO.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>368d04d</td>
+    <td>feat: added UserResourceFromEntityAssembler</td>
+    <td>(Duplicate commit) Adds an assembler to convert the User entity to a UserResource DTO.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>9f00a33</td>
+    <td>feat: added UserResource</td>
+    <td>Defines the UserResource DTO for API responses.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>4f4658d</td>
+    <td>feat: added UserRepository</td>
+    <td>Implements the JPA repository for the User entity.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>586466c</td>
+    <td>feat: added UserQueryServiceImpl</td>
+    <td>Implements the UserQueryService for handling user-related queries (CQS).</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>4888604</td>
+    <td>feat: added UserQueryService</td>
+    <td>Defines the UserQueryService interface.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>2a616af</td>
+    <td>feat: added UsernamePasswordAuthenticationTokenBuilder</td>
+    <td>Adds a builder class for creating Spring Security authentication tokens.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>f08c9ab</td>
+    <td>feat: added UserDetailsServiceImpl</td>
+    <td>Implements Spring Security's UserDetailsService to load user data for authentication.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>2f8aeb</td>
+    <td>feat: added UserDetailsImpl</td>
+    <td>Implements Spring Security's UserDetails interface, wrapping the User entity.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e0d20cd</td>
+    <td>feat: added UserContextFacadeImpl</td>
+    <td>Implements the facade for the User context.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>48b6f38</td>
+    <td>feat: added UserCommandServiceImpl</td>
+    <td>Implements the UserCommandService for handling user-related commands (CQS).</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>cef4e58</td>
+    <td>feat: added UserCommandService</td>
+    <td>Defines the UserCommandService interface.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>b9e5283</td>
+    <td>feat: added User</td>
+    <td>Adds the core User entity for the IAM context.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>fdc9875</td>
+    <td>feat: added UnauthorizedRequestHandleEntryPoint</td>
+    <td>Implements the Spring Security AuthenticationEntryPoint to handle 401 Unauthorized errors.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>50c6870</td>
+    <td>feat: added TokenServiceImpl</td>
+    <td>Implements the TokenService for generating and validating JWTs.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>d6102a8</td>
+    <td>feat: added TokenService</td>
+    <td>Defines the TokenService interface for JWT operations.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>66030ce</td>
+    <td>feat: added SignUpWorkshopResource</td>
+    <td>Adds the DTO resource for workshop sign-up requests.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>cc3df8b</td>
+    <td>feat: added SignUpWorkshopCommandFromResourceAssembler</td>
+    <td>Adds an assembler to convert the SignUpWorkshopResource DTO to a SignUpWorkshopCommand.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>80b224c</td>
+    <td>feat: added SignUpWorkshopCommand</td>
+    <td>Introduces the command object to handle workshop sign-up requests within the IAM bounded context.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>43b5ce0</td>
+    <td>feat: added SignUpDriverResource</td>
+    <td>Adds the DTO resource for driver sign-up requests.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>b9fc70d</td>
+    <td>feat: added SignUpDriverCommandFromResourceAssembler</td>
+    <td>Adds an assembler to convert the SignUpDriverResource DTO to a SignUpDriverCommand.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>9960d13</td>
+    <td>feat: added SignUpDriverCommand</td>
+    <td>Introduces the command object to handle driver sign-up requests within the IAM bounded context.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>a373bed</td>
+    <td>feat: added SignUpCommand</td>
+    <td>Adds the base SignUpCommand object.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>1d1f065</td>
+    <td>feat: added SignInCommandFromResourceAssembler</td>
+    <td>Adds an assembler to convert the SignInResource DTO to a SignInCommand.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>d28dea2</td>
+    <td>feat: added SignInCommand</td>
+    <td>Adds the command object for handling user sign-in requests.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>3fe223d</td>
+    <td>feat: added RolesController</td>
+    <td>Adds the REST controller for managing user roles.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e13c86d</td>
+    <td>feat: added Roles</td>
+    <td>Adds the Role entity and Erole enum (e.g., ROLE_DRIVER, ROLE_WORKSHOP).</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>5217edb</td>
+    <td>feat: added RoleResourceFromEntityAssembler</td>
+    <td>Adds an assembler to convert the Role entity to a RoleResource DTO.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>3332fa4</td>
+    <td>feat: added RoleRepository</td>
+    <td>Implements the JPA repository for the Role entity.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>450762e</td>
+    <td>feat: added RoleQueryServiceImpl</td>
+    <td>Implements the RoleQueryService for fetching role data.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>b4a6abf</td>
+    <td>feat: added RoleQueryService</td>
+    <td>Defines the RoleQueryService interface.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>486288a</td>
+    <td>feat: added RoleCommandServiceImpl</td>
+    <td>Implements the RoleCommandService (e.g., for creating roles).</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>178f04</td>
+    <td>feat: added Role</td>
+    <td>(Duplicate) Adds the Role entity.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>2fa9f9d</td>
+    <td>feat: added ProfilesContextFacade</td>
+    <td>Adds the main facade for the Profiles bounded context.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e41ed00</td>
+    <td>feat: added ProfileController</td>
+    <td>Adds the REST controller for managing user profiles.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>b264204</td>
+    <td>feat: added ProfileContextFacadeImpl</td>
+    <td>Implements the facade for the Profiles bounded context.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>aadf5e</td>
+    <td>feat: added UsersController</td>
+    <td>Adds the main REST controller for user-related actions (e.g., sign-in, sign-up).</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>34c0331</td>
+    <td>feat: added WebSecurityConfiguration</td>
+    <td>Implements the main Spring Security configuration, defining filter chains, JWT handling, and public/private routes.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e097d14</td>
+    <td>feat: added MechanicCommandService</td>
+    <td>Defines the command service interface for the Mechanic profile.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>00e22a0</td>
+    <td>feat: added HashingService</td>
+    <td>Adds a service for password hashing (e.g., BCrypt).</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>a9d6da4</td>
+    <td>feat: added GetUserByUsernameQuery</td>
+    <td>Adds a CQRS query object to fetch a user by their username.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>f14da23</td>
+    <td>feat: added GetUserByIdQuery</td>
+    <td>Adds a CQRS query object to fetch a user by their ID.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>543e497</td>
+    <td>feat: added GetRoleByNameQuery</td>
+    <td>Adds a CQRS query object to fetch a role by its name.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>0a4d622</td>
+    <td>feat: added GetMechanicByUserIdAsyncQuery</td>
+    <td>Adds an asynchronous query to fetch a mechanic profile by its associated user ID.</td>
+    <td>30/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>bd3144d</td>
+    <td>feat: added GetDriverByUserIdAsyncQuery</td>
+    <td>Adds an asynchronous query to fetch a driver profile by its associated user ID.</td>
+    <td>30/10/2025</td>
+  </tr>
+
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>d90a543</td>
+    <td>chore(deps): update dependencies.</td>
+    <td>Updates all Flutter and Dart dependencies in pubspec.yaml to their latest compatible versions.</td>
+    <td>28/10/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>feature/profiles</td>
+    <td>f1db60c</td>
+    <td>chore: initial commit.</td>
+    <td>Initial commit of the SafeCar mobile application, based on the Flutter project template.</td>
+    <td>28/10/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>a68ec18</td>
+    <td>feat: added UserContextFacade</td>
+    <td>Creates a facade for the User context to simplify interactions for other parts of the system.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>2f3b844</td>
+    <td>feat: added UserRepository</td>
+    <td>(Duplicate) Implements the JPA repository for the User entity.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>3fc1bd8</td>
+    <td>feat: added UserQueryServiceImpl</td>
+    <td>(Duplicate) Implements the UserQueryService.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>67a5f87</td>
+    <td>feat: added UserQueryService</td>
+    <td>(Duplicate) Defines the UserQueryService interface.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>3d0b941</td>
+    <td>feat: added ProfileContextFacadeImpl</td>
+    <td>(Duplicate) Implements the facade for the Profiles bounded context.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>a103824</td>
+    <td>feat: added ExternalProfileService</td>
+    <td>(Duplicate) Adds a service interface for fetching external profile data.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>cf0f7cd</td>
+    <td>feat: added GetUserByIdQuery</td>
+    <td>(Duplicate) Adds a CQRS query object to fetch a user by their ID.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>033982e</td>
+    <td>feat: added CheckUserByIdQuery</td>
+    <td>Adds a query to check for the existence of a user by their ID.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>7c97899</td>
+    <td>feat: added UserContextFacadeImpl</td>
+    <td>(Duplicate) Implements the facade for the User context.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>6f6e6a8</td>
+    <td>feat: added ProfileController</td>
+    <td>(Duplicate) Adds the REST controller for managing user profiles.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>84867eb</td>
+    <td>feat: added ProfileContextFacadeImpl</td>
+    <td>(Duplicate) Implements the facade for the Profiles bounded context.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>50171bb</td>
+    <td>feat: added MechanicResourceFromEntityAssembler</td>
+    <td>Adds an assembler to convert the Mechanic entity to a MechanicResource DTO.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>2f4d0d8</td>
+    <td>feat: added MechanicResource</td>
+    <td>Defines the MechanicResource DTO for API responses.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>29dd023</td>
+    <td>feat: added MechanicRepository</td>
+    <td>Implements the JPA repository for the Mechanic entity.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e1ef83a</td>
+    <td>feat: added MechanicQueryServiceImpl</td>
+    <td>Implements the query service for the Mechanic profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>b20240f</td>
+    <td>feat: added MechanicQueryService</td>
+    <td>Defines the query service interface for the Mechanic profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e4fe2a2</td>
+    <td>feat: added MechanicCommandServiceImpl</td>
+    <td>Implements the command service for the Mechanic profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>a0da4e2</td>
+    <td>feat: added MechanicCommandService</td>
+    <td>(Duplicate) Defines the command service interface for the Mechanic profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>6eaf159</td>
+    <td>feat: added GetMechanicByUserIdAsyncQuery</td>
+    <td>(Duplicate) Adds an async query to fetch a mechanic by user ID.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>1d6cc0f</td>
+    <td>feat: added GetDriverByUserIdAsyncQuery</td>
+    <td>(Duplicate) Adds an async query to fetch a driver by user ID.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>0e3b59b</td>
+    <td>feat: added ExternalUserService</td>
+    <td>Defines a service interface for interacting with an external user service.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>81a123e</td>
+    <td>feat: added DriverResourceFromEntityAssembler</td>
+    <td>Adds an assembler to convert the Driver entity to a DriverResource DTO.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>ee1677b</td>
+    <td>feat: added DriverResource</td>
+    <td>Defines the DriverResource DTO for API responses.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>1378a7e</td>
+    <td>feat: added DriverRepository</td>
+    <td>Implements the JPA repository for the Driver entity.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e60b5f2</td>
+    <td>feat: added DriverQueryServiceImpl</td>
+    <td>Implements the query service for the Driver profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>1dd3682</td>
+    <td>feat: added DriverQueryService</td>
+    <td>Defines the query service interface for the Driver profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>1e5134a</td>
+    <td>feat: added DriverCommandServiceImpl</td>
+    <td>Implements the command service for the Driver profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>d2a0ae0</td>
+    <td>feat: added DriverCommandService</td>
+    <td>Defines the command service interface for the Driver profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>fa38f23</td>
+    <td>feat: added CreateMechanicCommand</td>
+    <td>Adds the command object for creating a new mechanic profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>a864f85</td>
+    <td>feat: added CreateDriverCommand</td>
+    <td>Adds the command object for creating a new driver profile.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e0aa7e4</td>
+    <td>feat: added ProfilesContextFacade</td>
+    <td>(Duplicate) Adds the main facade for the Profiles bounded context.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>22b58c8</td>
+    <td>feat: added phone value object</td>
+    <td>Creates a Phone value object for type safety and validation of phone numbers.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>df329e2</td>
+    <td>feat: added ruc value object</td>
+    <td>Creates a RUC value object for type safety and validation of RUC numbers.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>da02695</td>
+    <td>feat: added dni value object</td>
+    <td>Creates a DNI value object for type safety and validation of DNI numbers.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>6b63aac</td>
+    <td>feat: added driver profile</td>
+    <td>Adds the core Driver entity (profile).</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>e65b5be</td>
+    <td>feat: added mechanic profile</td>
+    <td>Adds the core Mechanic entity (profile).</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>2b5c547</td>
+    <td>feat: update VehiclesController</td>
+    <td>Updates the Vehicles REST controller with new endpoints for vehicle management.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>6de4bbf</td>
+    <td>feat: update VehicleResourceFromEntityAssembler</td>
+    <td>Updates the assembler to include new fields from the Vehicle entity.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>2d0f85d</td>
+    <td>feat: update VehicleResource</td>
+    <td>Updates the VehicleResource DTO with new fields.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>43e7e9e</td>
+    <td>feat: update VehicleRepository</td>
+    <td>Updates the VehicleRepository with new custom queries.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>414d38c</td>
+    <td>feat: update VehicleQueryServiceImpl</td>
+    <td>Updates the vehicle query service with new query handlers.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>9f9b33b</td>
+    <td>feat: update VehicleQueryService</td>
+    <td>Updates the vehicle query service interface.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>1fb2b34</td>
+    <td>feat: update VehicleCommandServiceImpl</td>
+    <td>Updates the vehicle command service with new command handlers.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>48767eb</td>
+    <td>feat: update VehicleCommandService</td>
+    <td>Updates the vehicle command service interface.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>a7c09d2</td>
+    <td>feat: update vehicle aggregate</td>
+    <td>Refactors the Vehicle aggregate root to include new business logic and properties.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>1761637</td>
+    <td>feat: added UpdateVehicleResource</td>
+    <td>Adds the DTO resource for vehicle update requests.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>fb3c033</td>
+    <td>feat: added UpdateVehicleCommandFromResourceAssembler</td>
+    <td>Adds an assembler to convert the UpdateVehicleResource DTO to an UpdateVehicleCommand.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>24692da</td>
+    <td>feat: added UpdateVehicleCommand</td>
+    <td>Adds the command object for handling vehicle update requests.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>2864d19</td>
+    <td>feat: added GetVehicleByIdQuery</td>
+    <td>Adds a CQRS query object to fetch a vehicle by its ID.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>d4e788e</td>
+    <td>feat: added DeleteVehicleResource</td>
+    <td>Adds the DTO resource for vehicle delete requests.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>9aed7fa</td>
+    <td>feat: added DeleteVehicleCommandFromResourceAssembler</td>
+    <td>Adds an assembler to convert the DeleteVehicleResource DTO to a DeleteVehicleCommand.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>97d1b24</td>
+    <td>feat: added DeleteVehicleCommand</td>
+    <td>Adds the command object for handling vehicle delete requests.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>a5d1b4b</td>
+    <td>feat: added CreateVehicleResource</td>
+    <td>Adds the DTO resource for vehicle creation requests.</td>
+    <td>26/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>f93f7b5</td>
+    <td>feat: added vehicle command assembler</td>
+    <td>Adds the base command assembler for vehicle-related commands.</td>
+    <td>26/10/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>88b4b8c</td>
+    <td>feat: added vehicles queries</td>
+    <td>Implements CQRS queries for fetching vehicle data, such as GetVehicleByIdQuery.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>1a38f43</td>
+    <td>feat: added delete method to command</td>
+    <td>Adds the DeleteVehicle command and handler to the vehicle command service.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>f8afb9d</td>
+    <td>feat: added method update to command</td>
+    <td>Adds the UpdateVehicle command and handler to the vehicle command service.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>8586748</td>
+    <td>feat: added implementation of vehicle command service</td>
+    <td>Implements the VehicleCommandService for handling CQS commands.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>d37eb42</td>
+    <td>feat: added vehicle command service</td>
+    <td>Defines the VehicleCommandService interface.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>cfaa46d</td>
+    <td>feat: updated vehicle aggregate</td>
+    <td>Updates the Vehicle aggregate root with new properties.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>7ab52c7</td>
+    <td>feat: added Vehicle Repository</td>
+    <td>Implements the JPA repository for the Vehicle entity.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>2a2d290</td>
+    <td>feat: added CreateVehicleCommand</td>
+    <td>Adds the command object for handling vehicle creation requests.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>f1403c2</td>
+    <td>feat: added aggregate vehicle</td>
+    <td>Initial commit for the Vehicle aggregate root.</td>
+    <td>25/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/devices</td>
+    <td>c129492</td>
+    <td>feat(): added driverid valueobject</td>
+    <td>Creates a new DriverId value object to ensure type safety and validation for driver identifiers.</td>
+    <td>25/10/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>6ebfabd</td>
+    <td>fix: enable jpa auditing to avoid null audit fields.</td>
+    <td>Configures JPA auditing (@EnableJpaAuditing) to automatically populate 'createdAt' and 'updatedAt' fields, fixing null value errors.</td>
+    <td>23/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>515de8f</td>
+    <td>feat(iam): add full implementation of bounded context.</td>
+    <td>Implements all core services, repositories, and controllers for the Identity and Access Management (IAM) bounded context.</td>
+    <td>23/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>5a42364</td>
+    <td>feat(shared): add shared resources.</td>
+    <td>Creates a shared module for common resources like base DTOs, exception handlers, and configuration properties.</td>
+    <td>23/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-backend</td>
+    <td>feature/profiles</td>
+    <td>34a7f61</td>
+    <td>feat(props): add properties for jwt support.</td>
+    <td>Adds configuration properties (e.g., secret, expiration) to application.properties for JWT generation and validation.</td>
+    <td>23/10/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/devices</td>
+    <td>fc6d234</td>
+    <td>refactor(vehicle-detail): clean up code formatting and streamline vehicle detail loading logic</td>
+    <td>Formats the code in the vehicle-detail component and optimizes the data loading logic for better performance.</td>
+    <td>10/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/devices</td>
+    <td>56c57c0</td>
+    <td>refactor(vehicle): streamline vehicle detail loading and remove unused API methods</td>
+    <td>Simplifies the vehicle detail loading process and removes several unused API methods from the service.</td>
+    <td>10/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/profiles</td>
+    <td>eca98ab</td>
+    <td>fix(i18n): switch to non-legacy mode and update email placeholders in localization files</td>
+    <td>Updates the Vue i18n configuration to disable legacy mode and updates email-related keys in localization files.</td>
+    <td>10/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/profiles</td>
+    <td>89bc3fb</td>
+    <td>fix(i18n): revert to legacy mode for Vue i18n configuration</td>
+    <td>Reverts the i18n configuration back to legacy mode to resolve compatibility issues with certain Vue components.</td>
+    <td>10/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/profiles</td>
+    <td>346310b</td>
+    <td>fix: Update build scripts for production and enhance Vite configuration</td>
+    <td>Updates the package.json build scripts for production and enhances the Vite configuration for better optimization.</td>
+    <td>10/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/profiles</td>
+    <td>d889ae8</td>
+    <td>docs: Update README.md to reflect project name and enhance project description and features</td>
+    <td>Updates the README file with the correct project name and adds more details about project features.</td>
+    <td>10/10/2025</td>
+  </tr>
+
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/profiles</td>
+    <td>68c76de</td>
+    <td>fix: Fixed user registration path.</td>
+    <td>Corrects the API endpoint path used for the user registration form submission.</td>
+    <td>09/10/2025</td>
+  </tr>
+  <tr>
+    <td>SafeCar-frontend</td>
+    <td>feature/profiles</td>
+    <td>0318b5e</td>
+    <td>fix: Fixed user registration path.</td>
+    <td>(Duplicate commit message) Corrects the API endpoint path used for the user registration form submission.</td>
+    <td>09/10/2025</td>
+  </tr>
+</table>
+
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
+
+
+
 #### 6.2.2.6. Execution Evidence for Sprint Review
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
 #### 6.2.2.8. Software Deployment Evidence for Sprint Review
