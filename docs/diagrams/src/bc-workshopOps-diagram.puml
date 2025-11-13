@@ -341,60 +341,31 @@ package com.safecar.platform.workshopOps {
                     +handle(query: GetTelemetryAlertsBySeverityQuery): List<TelemetryRecord>
                 }
             }
-
-            package "repositories" {
-                interface WorkshopOrderRepository <<Repository>> {
-                    +save(aggregate: WorkshopOrder): void
-                    +findById(id: Long): Optional<WorkshopOrder>
-                    +findByWorkshop(workshopId: WorkshopId, status: String [0..1]): List<WorkshopOrder>
-                    +existsByCodeAndWorkshop(code: WorkOrderCode, workshopId: WorkshopId): boolean
-                }
-                interface WorkshopAppointmentRepository <<Repository>> {
-                    +save(aggregate: WorkshopAppointment): void
-                    +findById(id: Long): Optional<WorkshopAppointment>
-                    +findByWorkshopAndRange(workshopId: WorkshopId, from: Instant, to: Instant): List<WorkshopAppointment>
-                    +findByWorkOrder(workOrderId: Long): List<WorkshopAppointment>
-                    +overlapsInWorkshop(workshopId: WorkshopId, slot: ServiceSlot): boolean
-                }
-                interface WorkshopOperationRepository <<Repository>> {
-                    +save(aggregate: WorkshopOperation): void
-                    +findById(id: Long): Optional<WorkshopOperation>
-                    +findServiceBaysByWorkshop(workshopId: WorkshopId): List<ServiceBay>
-                }
-                interface VehicleTelemetryRepository <<Repository>> {
-                    +saveRecord(record: TelemetryRecord): void
-                    +findRecordById(id: Long): Optional<TelemetryRecord>
-                    +findByVehicleAndRange(vehicleId: VehicleId, from: Instant, to: Instant): List<TelemetryRecord>
-                    +findAlertsBySeverity(workshopId: WorkshopId [0..1], severity: AlertSeverity, from: Instant [0..1], to: Instant [0..1]): List<TelemetryRecord>
-                    +existsRecordByVehicleAndOccurredAt(vehicleId: VehicleId, occurredAt: TelemetryTimestamp): boolean
-                    +flushAggregate(telemetryAggregateId: Long): long
-                }
-            }
         }
 
         package "infrastructure" {
             package "persistence" {
                 package "jpa" {
                     package "repositories" {
-                        class WorkshopOrderRepositoryImpl <<RepositoryImpl>> {
+                        interface WorkshopOrderRepository <<Repository>> {
                             +save(aggregate: WorkshopOrder): void
                             +findById(id: Long): Optional<WorkshopOrder>
                             +findByWorkshop(workshopId: WorkshopId, status: String [0..1]): List<WorkshopOrder>
                             +existsByCodeAndWorkshop(code: WorkOrderCode, workshopId: WorkshopId): boolean
                         }
-                        class WorkshopAppointmentRepositoryImpl <<RepositoryImpl>> {
+                        interface WorkshopAppointmentRepository <<Repository>> {
                             +save(aggregate: WorkshopAppointment): void
                             +findById(id: Long): Optional<WorkshopAppointment>
                             +findByWorkshopAndRange(workshopId: WorkshopId, from: Instant, to: Instant): List<WorkshopAppointment>
                             +findByWorkOrder(workOrderId: Long): List<WorkshopAppointment>
                             +overlapsInWorkshop(workshopId: WorkshopId, slot: ServiceSlot): boolean
                         }
-                        class WorkshopOperationRepositoryImpl <<RepositoryImpl>> {
+                        interface WorkshopOperationRepository <<Repository>> {
                             +save(aggregate: WorkshopOperation): void
                             +findById(id: Long): Optional<WorkshopOperation>
                             +findServiceBaysByWorkshop(workshopId: WorkshopId): List<ServiceBay>
                         }
-                        class VehicleTelemetryRepositoryImpl <<RepositoryImpl>> {
+                        interface VehicleTelemetryRepository <<Repository>> {
                             +saveRecord(record: TelemetryRecord): void
                             +findRecordById(id: Long): Optional<TelemetryRecord>
                             +findByVehicleAndRange(vehicleId: VehicleId, from: Instant, to: Instant): List<TelemetryRecord>
@@ -402,10 +373,6 @@ package com.safecar.platform.workshopOps {
                             +existsRecordByVehicleAndOccurredAt(vehicleId: VehicleId, occurredAt: TelemetryTimestamp): boolean
                             +flushAggregate(telemetryAggregateId: Long): long
                         }
-                        WorkshopOrderRepositoryImpl ..|> WorkshopOrderRepository
-                        WorkshopAppointmentRepositoryImpl ..|> WorkshopAppointmentRepository
-                        WorkshopOperationRepositoryImpl ..|> WorkshopOperationRepository
-                        VehicleTelemetryRepositoryImpl ..|> VehicleTelemetryRepository
                     }
                 }
             }
