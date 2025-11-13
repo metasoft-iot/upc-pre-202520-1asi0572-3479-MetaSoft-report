@@ -1812,7 +1812,41 @@ Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `p
 - **Payment Gateway Adapter** — Stripe/MercadoPago (ACL).
 - **Billing API** — controladores REST.
 
+##### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
+- Este diagrama presenta la arquitectura de alto nivel del backend de la plataforma SafeCar, organizada en tres Contextos Delimitados (BC), un patrón común en la arquitectura de Microservicios y Domain-Driven Design (DDD). Los tres componentes están implementados utilizando Spring Boot y están agrupados en un único "Contenedor" llamado "SafeCar backend platform".
+
+- IAM BC (Identity, Authentication, Authorization): Su responsabilidad principal es la gestión de la identidad del usuario, la autenticación, la autorización mediante RBAC (Control de Acceso Basado en Roles) y la auditoría de acceso. Recibe peticiones de autorización del WorkshopOps BC.
+
+- Payments BC: Este componente se encarga de la gestión integral de Planes, Suscripciones y Facturación. Está diseñado para integrarse con Stripe para procesar los pagos. Su flujo requiere consultar al IAM BC para verificar el estado actual de la suscripción de un usuario.
+
+- WorkshopOps BC: Gestiona las operaciones del taller (Workshop operations) y la ingesta y normalización de datos de telemetría. Para funcionar, este servicio consulta al Payments BC para determinar el plan y los límites aplicables al usuario, y también consulta al IAM BC para verificar la autorización (RBAC) necesaria para sus operaciones.
+
 <img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/c4-bc-payments-component-level.png" alt="BC Payments Container C4" width=800/>
+
+#### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
+- Este diagrama ilustra el esquema de la base de datos relacional para manejar la información de usuarios, roles y el estado de las suscripciones. El diseño sigue un patrón modular que separa la gestión de la autenticación de la lógica de negocio de las suscripciones.
+
+- Tablas de Autenticación y Autorización: La tabla users almacena la información de autenticación del usuario (id, email, password). La tabla roles define los roles del sistema (name). La relación de muchos a muchos (N:M) entre usuarios y roles se implementa mediante la tabla pivote user_roles, que gestiona el Control de Acceso Basado en Roles (RBAC).
+
+- Tabla de Suscripciones: La tabla subscriptions contiene los detalles de la suscripción de cada usuario. Incluye campos esenciales como user_id (clave foránea), plan_type y status. El campo stripe_subscription_id es crítico, ya que proporciona la referencia externa necesaria para la integración y comunicación con el procesador de pagos Stripe. Las relaciones son: un usuario puede tener muchas suscripciones (1:N), aunque se espera una activa por sistema.
+
+<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/diagrama-clases-payments.jpg" alt="BC Payments class diagram" width=800/>
+
+
+#### 4.2.1.6.2. Bounded Context Database Design Diagram
+
+- Este diagrama UML detalla la estructura interna del componente Payments BC, centrándose en el dominio de las Suscripciones y la interacción con Stripe.
+
+- Dominio y Persistencia: La clase central es Subscription (el Agregado de Dominio), que representa el estado de la suscripción del usuario, incluyendo el plan y la referencia externa a Stripe. El SubscriptionRepository define la interfaz para acceder y almacenar estas entidades, cuya implementación concreta es SubscriptionRepositoryImpl (la capa de persistencia).
+
+- Integración Externa: El componente StripePaymentGateway (un Gateway Externo) encapsula toda la comunicación con la API de Stripe, abstrayendo la lógica externa del resto del sistema.
+
+- Lógica de Negocio y Coordinación: El PaymentApplicationService actúa como el coordinador principal de la lógica de negocio. Utiliza el StripePaymentGateway para iniciar sesiones de pago y el SubscriptionRepository para persistir los cambios.
+
+- Puntos de Entrada (APIs): El PaymentController expone el endpoint REST para que los clientes inicien el proceso de suscripción creando una checkout session. El StripeWebhookController es el punto de entrada asíncrono, manejando las llamadas entrantes (webhooks) de Stripe para actualizar el estado de la suscripción después de que un pago se haya completado o haya fallado. El flujo de pago principal inicia en el PaymentController y termina de forma asíncrona en el StripeWebhookController.
+
+<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/diagrama-base-de-dato.jpg" alt="BC Payments data base diagram" width=800/>
+
 
 #### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
 
