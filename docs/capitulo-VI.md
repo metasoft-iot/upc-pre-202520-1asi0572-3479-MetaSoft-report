@@ -1425,7 +1425,6 @@ El despliegue durante el Sprint 1 materializó el trabajo desarrollado en produc
 Se desplegaron ambos componentes en plataformas específicas según sus características: GitHub Pages para la Landing Page (sitio estático) y Netlify para la aplicación web Vue.js (SPA con routing dinámico). GitHub Pages proporcionó integración directa con el repositorio, HTTPS automático y CDN global, mientras que Netlify ofreció capacidades avanzadas para aplicaciones JavaScript modernas, incluyendo manejo apropiado del Vue Router y preview deployments.
 </p>
 
-
 **Evidencias de Despliegue**
 
 **Landing Page - GitHub Pages:**
@@ -5904,14 +5903,19 @@ Durante el Sprint 2 se concentró el esfuerzo de desarrollo en la consolidación
 <p align="justify">
 La imagen presenta a continuación el servicio desplegado en la plataforma Railway, mostrando el estado activo de la instancia, los logs de ejecución y la URL pública generada por el entorno cloud. Esta evidencia confirma que el backend fue correctamente construido, empaquetado y publicado en Railway, quedando operativo para las pruebas integradas realizadas durante el Sprint.
 </p>
-<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-VI/assets/img/capitulo-VI/safecar-api-deploy-evidence2.jpeg" alt="Safecar API Deployment Evidence 2"/>
+<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-VI/assets/img/capitulo-VI/safecar-api-deploy-evidence2.jpeg" alt="Safecar API Deployment Evidence 2" width="800"/>
 
 <p align="justify">
 La imagen muestra a continuación la SafeCar API ejecutándose correctamente en el entorno de despliegue, evidenciando que los endpoints expuestos mediante Swagger/OpenAPI han sido publicados de forma exitosa. Se observan las rutas correspondientes a los bounded contexts de IAM, Devices, Workshop, Payments e Insights, lo cual confirma que el servicio inició sin errores, que las operaciones REST están registradas adecuadamente y que la API está disponible para ser consumida por los clientes web y móvil.
 </p>
-<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-VI/assets/img/capitulo-VI/safecar-api-deploy-evidence1.png" alt="Safecar API Deployment Evidence 1"/>
+<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-VI/assets/img/capitulo-VI/safecar-api-deploy-evidence1.png" alt="Safecar API Deployment Evidence 1" width="800"/>
 
-<b>Frontend Web Application</b>
+<b>Aplicación Web - Netlify</b>
+
+<p align="justify">
+La imagen que se muestra a continuación presenta la Aplicación Web desplegada en Netlify: se observa la URL pública, el estado del deploy y los registros del build (logs). Esta evidencia confirma que la Web App fue construida y publicada correctamente, está accesible públicamente y consume las APIs del Backend para mostrar datos operativos (órdenes, telemetría y alertas) a usuarios de talleres y administradores.
+</p>
+<img src="../assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
 
 <b>Mobile Web Application</b>
 
