@@ -1570,11 +1570,11 @@ El Sprint 2 representa una evolución significativa del proyecto SafeCar, enfoc�
     <tr>
         <td>Sprint 2 Goal</td>
         <td align="justify">
-        Nuestro enfoque está en habilitar que conductores y mecánicos gestionen sus cuentas, vehículos y mantenimientos desde la plataforma SafeCar. En este sprint implementamos funciones de registro, inicio de sesión, actualización de perfil, vinculación de vehículos, alertas en tiempo real y programación de citas entre conductor y taller.
-        <br><br>
-        Creemos que esto permite que los conductores mantengan actualizada la información de sus autos, reciban avisos de fallas o mantenimientos a tiempo y soliciten atención sin depender de llamadas o intermediarios; y que los mecánicos organicen mejor su carga de trabajo, confirmen citas y actualicen diagnósticos con datos reales del vehículo.
-        <br><br>
-        Esto se confirmará cuando los usuarios puedan completar el registro y autenticación en menos de tres clics, vincular su vehículo al sistema en menos de dos minutos, y gestionar o modificar una cita con un máximo de cinco interacciones dentro de la aplicación. Además, la plataforma deberá mantener una disponibilidad mínima del 95 %, los flujos principales (registro, inicio de sesión, vinculación de vehículo y agendamiento) deberán alcanzar una tasa de éxito superior al 90 %, y las encuestas internas de experiencia de usuario deberán reflejar al menos un 85 % de satisfacción en criterios de rapidez, facilidad de uso y utilidad de las alertas recibidas.
+          <strong>Nuestro enfoque está en</strong> habilitar que conductores y mecánicos gestionen sus cuentas, vehículos y mantenimientos dentro del ecosistema SafeCar, incorporando el registro, inicio de sesión, actualización de perfil, vinculación de vehículos, recepción de alertas en tiempo real y programación de citas, además de ampliar las capacidades para que el equipo de desarrollo pueda integrar estas funcionalidades en las aplicaciones web y móvil mediante los servicios implementados.
+          <br><br>
+          <strong>Creemos que esto permite</strong> ofrecer a los conductores una experiencia más fluida para mantener actualizada la información de sus vehículos, recibir notificaciones oportunas y solicitar mantenimiento sin depender de intermediarios, mientras que los mecánicos obtienen una mejor organización de su carga de trabajo, confirmación de citas y acceso a datos operacionales reales. Asimismo, brinda al equipo de desarrollo oportunidades para implementar más funcionalidades relacionadas con cuentas, vehículos y citas sobre una base consistente.
+          <br><br>
+          <strong>Esto se confirmará cuando</strong> los usuarios puedan registrarse e iniciar sesión en no más de tres pasos, vincular su vehículo al sistema en menos de dos minutos y gestionar o modificar citas en no más de cinco interacciones; y cuando el equipo de desarrollo pueda implementar nuevas funcionalidades utilizando los servicios desarrollados sin requerir intervención adicional del backend, logrando flujos principales con una tasa de éxito superior al 90% y una disponibilidad mínima del 95% durante el sprint.
         </td>
     </tr>
     <tr>
