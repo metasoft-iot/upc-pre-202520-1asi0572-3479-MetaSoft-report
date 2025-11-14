@@ -5134,9 +5134,779 @@ Durante el Sprint 1, el equipo realizó avances significativos en la implementac
 
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
-
-
 #### 6.2.2.6. Execution Evidence for Sprint Review
+
+<p align="justify">
+Durante el Sprint 2 se concentró el esfuerzo de desarrollo en la consolidación del backend de SafeCar, implementando y refinando los Bounded Contexts de IAM, Devices, Workshop, Payments e Insights. Los commits realizados en el repositorio del backend abarcan integración entre contextos, correcciones de autenticación, refactorización hacia un modelo alineado con Domain-Driven Design, documentación de servicios REST (Swagger) e integración con la pasarela de pagos Stripe. La siguiente tabla resume la evidencia de desarrollo del backend, tomando como referencia los commits más relevantes del sprint.
+</p>
+
+<b>Backend Services (SafeCar API)</b>
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>e4463cf</td>
+      <td>chore(conflicts): resolve merge conflicts</td>
+      <td>Resolución de conflictos de merge entre ramas de trabajo para consolidar los cambios del sprint en la rama <code>develop</code>.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>1b6c083</td>
+      <td>feat(payments): extract authenticated userid and fix JWT principal resolution for payments</td>
+      <td>Ajuste de la resolución del principal JWT y extracción del userId autenticado para que el BC Payments opere siempre con el usuario correcto.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>7986b15</td>
+      <td>docs: update readme documentation.</td>
+      <td>Actualización del README del backend con instrucciones de uso y despliegue alineadas a los cambios del BC Payments.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>29dfda5</td>
+      <td>docs: update readme width payments info.</td>
+      <td>Ampliación de la documentación con información específica de los endpoints de pagos y su configuración.</td>
+      <td>11/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>b1e443f</td>
+      <td>refactor(payments): update impl to adhere to domain-driven design.</td>
+      <td>Refactorización del módulo de pagos para respetar agregados, entidades y value objects según los lineamientos de Domain-Driven Design.</td>
+      <td>11/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>6211bae</td>
+      <td>docs: add swagger documentation to payments controllers and update readme.</td>
+      <td>Incorporación de anotaciones Swagger en los controladores de Payments y actualización de la documentación técnica.</td>
+      <td>11/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>e6ea704</td>
+      <td>merge: feature/payments into develop.</td>
+      <td>Merge de la rama <code>feature/payments</code> hacia <code>develop</code> consolidando la primera versión funcional del BC Payments.</td>
+      <td>11/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>1a1d0c0</td>
+      <td>docs: update readme documentation.</td>
+      <td>Nuevas instrucciones en README relativas a la ejecución de los microservicios de SafeCar y su integración con Payments.</td>
+      <td>11/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>b3dc156</td>
+      <td>feat: improve the overall implementation of appointment management.</td>
+      <td>Mejoras en el manejo de órdenes y citas de servicio dentro del BC Workshop para soportar flujos más completos de agendamiento.</td>
+      <td>11/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>01519e2</td>
+      <td>feat(insights): introduce vehicle insights</td>
+      <td>Creación del BC Insights para exponer indicadores y métricas relacionadas a vehículos a partir de la telemetría procesada.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>31d4af4</td>
+      <td>docs(workshop): improve appointments controller documentation.</td>
+      <td>Mejora de la documentación del controlador de citas del BC Workshop, detallando parámetros y respuestas de los endpoints.</td>
+      <td>08/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>a1ed495</td>
+      <td>feat(devices): improve vehicles controller implementation.</td>
+      <td>Extensión del controlador de vehículos en el BC Devices para soportar nuevas operaciones de gestión.</td>
+      <td>08/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>f124663</td>
+      <td>feat(vehicles): add event to update the number of vehicles upon creation.</td>
+      <td>Emisión de un evento de dominio al crear un vehículo para mantener actualizado el conteo total asociado al conductor.</td>
+      <td>08/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>b1ccb43</td>
+      <td>refactor(devices): rename command to update total driver vehicles and search by driver-id.</td>
+      <td>Refactor de comandos en Devices para aclarar su intención y habilitar consultas por identificador de conductor.</td>
+      <td>08/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>143688a</td>
+      <td>fix: add profile record by role.</td>
+      <td>Corrección en la creación de perfiles para garantizar el registro adecuado según el rol del usuario.</td>
+      <td>08/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>6399cdc</td>
+      <td>feat(payments): Stripe integration (squashed clean history)</td>
+      <td>Integración del BC Payments con la pasarela de pagos Stripe, consolidando el historial en un único commit limpio.</td>
+      <td>06/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>6779797</td>
+      <td>refactor(profiles): partial impl of endpoints correction.</td>
+      <td>Refactor parcial de los endpoints de Profiles para corregir contratos y alinear respuestas a lo esperado por los clientes.</td>
+      <td>06/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>99663d9</td>
+      <td>fix(iam): resolve authentication error by loading token via email instead of username.</td>
+      <td>Solución de errores de autenticación en el BC IAM cargando el token con base en el correo electrónico del usuario.</td>
+      <td>06/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>5bebec5</td>
+      <td>refactor: restructure rest endpoints and update based on suggestions.</td>
+      <td>Reestructuración general de endpoints REST para mejorar consistencia, nombres y rutas según feedback recibido.</td>
+      <td>06/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>23f8a69</td>
+      <td>chore: change the name of bc from workshopOps to workshop.</td>
+      <td>Actualización del nombre del bounded context de <code>WorkshopOps</code> a <code>Workshop</code> en código y configuración.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>2332dc6</td>
+      <td>docs: update readme documentation.</td>
+      <td>Actualización del README del backend para reflejar el nuevo nombre del BC Workshop y sus responsabilidades.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>123d5fd</td>
+      <td>refactor(devices): add full impl of external profile service.</td>
+      <td>Implementación completa del servicio externo de perfiles en el BC Devices para enriquecer la información de vehículos.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>8202852</td>
+      <td>feat: integrate functionalities between bcs devices and workshopOps.</td>
+      <td>Integración de funcionalidades entre los BCs Devices y Workshop para compartir datos de vehículos en citas y órdenes.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>b894140</td>
+      <td>merge: integrate workshopOps bounded context with conflict resolution.</td>
+      <td>Merge de la rama de Workshop con resolución de conflictos para consolidar la nueva lógica de operaciones de taller.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>2355f5a</td>
+      <td>fix: increase role name column length to prevent truncation errors.</td>
+      <td>Ajuste del tamaño de la columna de nombre de rol en base de datos para evitar recortes de información.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>e58a2b4</td>
+      <td>merge: integrate devices and profiles bounded contexts while preserving IAM</td>
+      <td>Integración de los BCs Devices y Profiles, garantizando que las reglas de IAM se mantengan consistentes.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>d0839a0</td>
+      <td>refactor: complete impl of bcs for profiles and devices.</td>
+      <td>Refactor y finalización de la implementación de los BCs Profiles y Devices para alinearlos con el modelo de dominio.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>d6ef9d0</td>
+      <td>refactor: update the root aggregate id to long data type.</td>
+      <td>Actualización del tipo de dato del identificador de agregado raíz a <code>Long</code> para soportar un mayor número de registros.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>0bc709e</td>
+      <td>docs: update readme documentation.</td>
+      <td>Revisión general del README del backend con los nuevos BCs y sus endpoints principales.</td>
+      <td>05/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-backend</td>
+      <td>develop</td>
+      <td>0d62424</td>
+      <td>feat(workshopOps): implement workshopOps context facade.</td>
+      <td>Implementación de la fachada del contexto Workshop para exponer operaciones de taller de forma cohesionada a otros BCs.</td>
+      <td>05/11/2025</td>
+    </tr>
+  </tbody>
+</table>
+
+<b>Frontend Web Application</b>
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>fc6d234</td>
+      <td>refactor(vehicle-detail): clean up code formatting and streamline vehicle detail loading logic</td>
+      <td>Se optimiza la carga de datos del detalle vehicular, eliminando código innecesario y mejorando la legibilidad del componente.</td>
+      <td>10/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>56cd7cb</td>
+      <td>refactor(vehicle): streamline vehicle detail loading and remove unused API methods</td>
+      <td>Se eliminan métodos obsoletos del API service y se simplifica la obtención de detalles vehiculares.</td>
+      <td>10/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>ece98eb</td>
+      <td>fix(i18n): switch to non-legacy mode and update email placeholders in localization files</td>
+      <td>Cambio a modo no-legacy de Vue I18n y actualización de placeholders en archivos de localización.</td>
+      <td>10/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>89bc3fb</td>
+      <td>fix(i18n): revert to legacy mode for Vue I18n configuration</td>
+      <td>Reversión necesaria para mantener compatibilidad con componentes dependientes del modo legacy.</td>
+      <td>10/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>344310b</td>
+      <td>fix: update build scripts for production and enhance Vite configuration</td>
+      <td>Mejoras al build productivo, agregando configuraciones avanzadas para Vite y optimización de recursos.</td>
+      <td>10/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>db89ae8</td>
+      <td>docs: update README.md to reflect project name and enhance project description and features</td>
+      <td>Actualización del README incluyendo descripción mejorada y alineación al nombre oficial del proyecto.</td>
+      <td>10/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>68d76de</td>
+      <td>fix: Fixed user registration path.</td>
+      <td>Se corrige la ruta de registro de usuarios para evitar errores de navegación y estados inconsistente.</td>
+      <td>09/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>03f8b5e</td>
+      <td>fix: Fixed user registration path.</td>
+      <td>Corrección adicional a la ruta de registro para asegurar el funcionamiento continuo del flujo de alta de usuarios.</td>
+      <td>09/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>ba228d7</td>
+      <td>feat(favicon): remove old favicon and add new icon asset</td>
+      <td>Reemplazo del favicon antiguo por un nuevo recurso visual acorde a la identidad de SafeCar.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>5d38dd6</td>
+      <td>feat(router): add route for vehicle detail management component</td>
+      <td>Agrega la ruta necesaria para acceder a la gestión detallada de vehículos en la aplicación.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>174e62c</td>
+      <td>feat(vehicle-api): add methods for create, update, delete, and telemetry retrieval in VehicleApiService</td>
+      <td>Implementación del servicio API completo para CRUD vehicular y obtención de telemetría.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>ddcf392</td>
+      <td>fix(iot-device): update signal strength and data frequency parameter descriptions for clarity</td>
+      <td>Se aclara la descripción de parámetros de intensidad de señal y frecuencia de datos de los dispositivos IoT.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>68e1d45</td>
+      <td>feat(vehicle-management): add localization for vehicle management</td>
+      <td>Traducciones completas en inglés y español para componentes de gestión vehicular.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>54ded1a</td>
+      <td>feat(main): add PrimeVue Message and TabView components, and register Tooltip directive</td>
+      <td>Integración de nuevos componentes UI esenciales para la navegación y mensajes informativos.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>7e451ef</td>
+      <td>feat(vehicle-detail): enhance vehicle detail component</td>
+      <td>Mejoras al componente de detalle vehicular incluyendo error states y estructura UI optimizada.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>fe9ebb0</td>
+      <td>feat(vehicle-analytics-detail): refactor analytics detail component</td>
+      <td>Refactor del componente de analítica vehicular para mejorar estructura, rendimiento y claridad visual.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>2d8bbfd</td>
+      <td>feat(vehicle-telemetry-detail): refactor telemetry detail component</td>
+      <td>Optimización del componente de telemetría vehicular con manejo de datos mejorado.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>81b2d63</td>
+      <td>feat(vehicle-detail-management): implement vehicle detail management with tabbed interface</td>
+      <td>Implementación del módulo completo de gestión de detalles con UI por pestañas.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>07d99c5</td>
+      <td>feat(vehicle-management): enhance vehicle management component</td>
+      <td>Mejoras en filtros, manejo de datos y experiencia del módulo de gestión vehicular.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>91bfec8</td>
+      <td>feat(service-history): add initial service history component and service files</td>
+      <td>Primer versión del historial de servicios con estructura base y llamadas API necesarias.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>a33d5dc</td>
+      <td>feat(vehicle-entity): add Vehicle entity model</td>
+      <td>Modelo de entidad vehicular añadido para estructurar la información y facilitar integraciones.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>f20a771</td>
+      <td>feat(vehicle-api): implement VehicleApiService</td>
+      <td>Implementación inicial del servicio de datos vehiculares para consultas desde la UI.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>f9ada6d</td>
+      <td>feat(vehicle-detail-management): create initial structure</td>
+      <td>Estructura base del módulo de detalle vehicular en la aplicación web.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>6d5f1b8</td>
+      <td>feat(vehicle-management): add vehicle detail and telemetry components</td>
+      <td>Agrega componentes esenciales de telemetría y detalle vehicular.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>af9c4ad</td>
+      <td>feat(sidebar): add vehicle management link</td>
+      <td>Enlace de gestión vehicular añadido al menú lateral de navegación.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>e0b1afc</td>
+      <td>feat(vehicle-management): implement component with filtering options</td>
+      <td>Implementación completa del módulo con filtros avanzados.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>5fd1927</td>
+      <td>feat(router): add vehicle management route</td>
+      <td>Ruta registrada para permitir acceso directo al módulo de vehículos.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>afb0f7e</td>
+      <td>feat(toolbar): implement language switcher</td>
+      <td>Selector de idioma para alternar entre inglés y español.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>32076cf</td>
+      <td>feat(toolbar): add language switch</td>
+      <td>Refinamiento del componente de cambio de idioma en la barra superior.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>f951cb5</td>
+      <td>feat(sidebar): implement i18n for menu items</td>
+      <td>Traducciones para los elementos del menú lateral.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>7faccea</td>
+      <td>feat(sidebar): add menu items for appointments and history</td>
+      <td>Se agregan accesos directos para citas e historial desde el menú lateral.</td>
+      <td>08/10/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-frontend</td>
+      <td>main</td>
+      <td>26fa504</td>
+      <td>feat(appointment-detail): implement i18n for status options</td>
+      <td>Soporte multilenguaje para estados, mensajes y pasos del proceso de citas.</td>
+      <td>08/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
+<b>Frontend Mobile Application</b>
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>323dbad</td>
+      <td>refactor(workshop/presentation): reorganize appointment views into pages and move router/helpers; add infrastructure READMEs</td>
+      <td>Se reorganizan las vistas de citas en páginas independientes, se extraen helpers de routing y se añaden READMEs de infraestructura para la aplicación móvil.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>5c8f55d</td>
+      <td>refactor(workshop): move Appointment model to entities and update imports</td>
+      <td>El modelo <code>Appointment</code> se mueve al paquete de entidades y se actualizan los imports para alinearlo con la estructura DDD.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>a8bb405</td>
+      <td>refactor: update shared widget imports</td>
+      <td>Actualización de imports de widgets compartidos para reflejar la nueva organización de módulos.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>4c16863</td>
+      <td>refactor: move widgets to shared/presentation</td>
+      <td>Se trasladan widgets reutilizables a los paquetes <code>shared</code> y <code>presentation</code> para mejorar la modularidad.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>3cfd3bb</td>
+      <td>refactor: clean router exports</td>
+      <td>Limpieza de exports del router, exponiendo únicamente las rutas y helpers necesarios.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>bc1dda1</td>
+      <td>chore: remove unused router helpers</td>
+      <td>Eliminación de helpers de navegación no utilizados para reducir código muerto.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>e52f19d</td>
+      <td>refactor(shared): remove MainLayout widget</td>
+      <td>Se retira el widget <code>MainLayout</code> en favor de una estructura de layouts más flexible.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>6425ebd</td>
+      <td>refactor(shared): move main_layout to presentation/pages</td>
+      <td>Reubicación del layout principal al módulo de páginas de presentación para mejorar la separación de responsabilidades.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>2cd3e40</td>
+      <td>refactor(router): extract workshop routes to dedicated module</td>
+      <td>Se extraen las rutas del módulo Workshop a un archivo dedicado, facilitando el mantenimiento del sistema de navegación.</td>
+      <td>12/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>9ec1265</td>
+      <td>chore: update imports to new structure</td>
+      <td>Actualización general de imports en la app móvil para alinearlos con la nueva estructura de carpetas.</td>
+      <td>10/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>1c51432</td>
+      <td>feat(workshop): add Workshop bounded context</td>
+      <td>Se añade el bounded context Workshop en la aplicación móvil para gestionar vistas y lógica asociada a citas.</td>
+      <td>10/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>0533e9d</td>
+      <td>feat(shared): add reusable UI components</td>
+      <td>Creación de componentes de UI reutilizables en el módulo <code>shared</code> para un diseño consistente.</td>
+      <td>10/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>3cdb38d</td>
+      <td>feat(theme): add comprehensive design system</td>
+      <td>Definición de un sistema de diseño completo que estandariza colores, tipografías y componentes base.</td>
+      <td>10/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>c04c664</td>
+      <td>feat(router): add DDD-based routing system</td>
+      <td>Implementación de un sistema de rutas basado en bounded contexts para reflejar la estructura DDD de la solución.</td>
+      <td>10/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>972a470</td>
+      <td>refactor: remove old Clean Architecture structure</td>
+      <td>Se elimina la estructura anterior de Clean Architecture para migrar a la organización basada en DDD.</td>
+      <td>10/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>d78af0c</td>
+      <td>feat: remove unused screens and router, add .gitkeep files for directory structure</td>
+      <td>Se eliminan pantallas y routers obsoletos y se añaden archivos <code>.gitkeep</code> para preservar la estructura de directorios.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>925671d</td>
+      <td>feat(appointment): add reschedule appointment page</td>
+      <td>Implementación de la pantalla para reprogramar citas de mantenimiento desde la app móvil.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>4097948</td>
+      <td>feat(appointment): add details and create pages</td>
+      <td>Se agregan las vistas de detalle y creación de citas, incluyendo su navegación básica.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>12bd309</td>
+      <td>feat(appointment): add main appointment page with FAB</td>
+      <td>Creación de la pantalla principal de citas con un botón flotante de acción (FAB) para nuevas solicitudes.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>e6f27a7</td>
+      <td>feat(appointment): add reusable form field widgets</td>
+      <td>Se añaden widgets de formulario reutilizables para capturar datos de citas.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>2d74506</td>
+      <td>feat(appointment): add empty state widget</td>
+      <td>Implementación de un widget de estado vacío para cuando el usuario no tiene citas registradas.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>766f15c</td>
+      <td>feat(appointment): add appointment filter bar widget</td>
+      <td>Se agrega un widget de barra de filtros para segmentar las citas según estado o fecha.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>c4f539a</td>
+      <td>feat(appointment): add mock appointment data with filters</td>
+      <td>Configuración de datos mock de citas con soporte para filtros, facilitando pruebas en desarrollo.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>7e6a495</td>
+      <td>feat(appointment): add AppointmentModel and status enum</td>
+      <td>Creación del modelo <code>AppointmentModel</code> y del enum de estados para tipar adecuadamente las citas.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>2d1108d</td>
+      <td>feat(pages): add 404 not found page</td>
+      <td>Se añade una pantalla 404 para manejar rutas no encontradas dentro de la navegación móvil.</td>
+      <td>09/11/2025</td>
+    </tr>
+    <tr>
+      <td>SafeCar-mobile-app</td>
+      <td>develop</td>
+      <td>20d3788</td>
+      <td>feat(widgets): add bottom navigation and main layout</td>
+      <td>Implementación de la navegación inferior y layout principal que estructura las pantallas clave de la app.</td>
+      <td>09/11/2025</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
+
 #### 6.2.2.8. Software Deployment Evidence for Sprint Review
+
 #### 6.2.2.9. Team Collaboration Insights during Sprint
+
+## 6.3. Validation Interviews
+
+### 6.3.1. Diseño de Entrevistas
+
+### 6.3.2. Registro de Entrevistas
+
+### 6.3.3. Evaluaciones según heurísticas
+
+## 6.4. Video About-the-Product
