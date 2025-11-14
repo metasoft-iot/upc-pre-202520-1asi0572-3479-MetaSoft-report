@@ -5899,6 +5899,22 @@ Durante el Sprint 2 se concentró el esfuerzo de desarrollo en la consolidación
 
 #### 6.2.2.8. Software Deployment Evidence for Sprint Review
 
+<b>Backend Services (SafeCar API)</b>
+
+<p align="justify">
+La imagen presenta a continuación el servicio desplegado en la plataforma Railway, mostrando el estado activo de la instancia, los logs de ejecución y la URL pública generada por el entorno cloud. Esta evidencia confirma que el backend fue correctamente construido, empaquetado y publicado en Railway, quedando operativo para las pruebas integradas realizadas durante el Sprint.
+</p>
+<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-VI/assets/img/capitulo-VI/safecar-api-deploy-evidence2.jpeg" alt="Safecar API Deployment Evidence 2"/>
+
+<p align="justify">
+La imagen muestra a continuación la SafeCar API ejecutándose correctamente en el entorno de despliegue, evidenciando que los endpoints expuestos mediante Swagger/OpenAPI han sido publicados de forma exitosa. Se observan las rutas correspondientes a los bounded contexts de IAM, Devices, Workshop, Payments e Insights, lo cual confirma que el servicio inició sin errores, que las operaciones REST están registradas adecuadamente y que la API está disponible para ser consumida por los clientes web y móvil.
+</p>
+<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-VI/assets/img/capitulo-VI/safecar-api-deploy-evidence1.png" alt="Safecar API Deployment Evidence 1"/>
+
+<b>Frontend Web Application</b>
+
+<b>Mobile Web Application</b>
+
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
 ## 6.3. Validation Interviews
