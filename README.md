@@ -326,21 +326,9 @@ Se dividieron las siguientes ramas para la colaboración en el proyecto:
 * annexes
 * release-v1.0
 
-### ENTREGABLE TB1
-
-<p align="justify">
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el repositorio de nuestro primer sprint. Estos gráficos ofrecen una representación visual de la cantidad de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado en cada uno de los commits.
-</p>
+### ENTREGABLE TRABAJO PARCIAL (TB2)
 
 **Gráficos de colaboración de los integrantes del equipo**
-
-![Imagen 1]()
-
-![Imagen 2]()
-
-![Imagen 3]()
-
-### ENTREGABLE TRABAJO PARCIAL (TP)
 
 <p align="justify">
 A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
@@ -350,11 +338,11 @@ cabo. Además, se presenta información sobre la cantidad de líneas de código 
 en cada uno de los commits.
 </p>
 
-![Imagen 1]()
+![Imagen 1](/assets/img/insights/insights-backend.png)
 
-![Imagen 2]()
+![Imagen 2](/assets/img/insights/insights-frontend.png)
 
-![Imagen 3]()
+![Imagen 3](/assets/img/insights/insights-web-business.png)
 
 
 ## Tabla de Contenido
@@ -13092,23 +13080,33 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
     </tr>
     <tr>
         <td>SafeCar-report</td>
-        <td>https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report</td>
+        <td>https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report</td>
         <td>Reporte final y documentación completa del proyecto SafeCar.</td>
     </tr>
     <tr>
         <td>SafeCar-backend</td>
-        <td>https://github.com/MetaSoft-IOT/safecar-backend</td>
+        <td>https://github.com/metasoft-iot/safecar-backend</td>
         <td>Repositorio del backend y de la infraestructura para el desarrollo de SafeCar.</td>
     </tr>
     <tr>
         <td>SafeCar-web-app</td>
-        <td>https://github.com/MetaSoft-IOT/upc-1asi0572-2520-3479-iot-safecar-web-application-frontend</td>
+        <td>https://github.com/metasoft-iot/upc-1asi0572-2520-3479-iot-safecar-web-application-frontend</td>
         <td>Repositorio principal con el código fuente de la aplicación SafeCar.</td>
     </tr>
     <tr>
         <td>SafeCar-landing-page</td>
-        <td>https://github.com/MetaSoft-IOT/safecar-landing-page</td>
+        <td>https://github.com/metasoft-iot/safecar-landing-page</td>
         <td>Landing Page de SafeCar.</td>
+    </tr>
+    <tr>
+        <td>SafeCar-mobile-app</td>
+        <td>https://github.com/metasoft-iot/safecar-mobile-app</td>
+        <td>Repositorio principal con el código fuente de la aplicación móvil SafeCar.</td>
+    </tr>
+    <tr>
+        <td>SafeCar-edge-service</td>
+        <td>https://github.com/metasoft-iot/safecar-edge-service</td>
+        <td>Repositorio del servicio edge para la recolección de datos telemétricos.</td>
     </tr>
 </table>
 
