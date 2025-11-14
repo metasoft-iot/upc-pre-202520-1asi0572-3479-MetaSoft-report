@@ -13134,6 +13134,11 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
         <td></td>
         <td>Video explicativo del proyecto SafeCar para la segunda entrega del proyecto</td>
     </tr>
+    <tr>
+        <td>TB2</td>
+        <td></td>
+        <td>Video explicativo del proyecto SafeCar para la tercera entrega del proyecto</td>
+    </tr>
 </table>
 
 # Bibliografía
