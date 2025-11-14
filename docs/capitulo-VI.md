@@ -5902,11 +5902,65 @@ Durante el Sprint 2 se concentró el esfuerzo de desarrollo en la consolidación
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
 ## 6.3. Validation Interviews
-
 ### 6.3.1. Diseño de Entrevistas
 
-### 6.3.2. Registro de Entrevistas
+<p align="justify">
+En esta sección se detalla el diseño metodológico empleado para la realización de entrevistas y pruebas de validación de la solución SafeCar. El objetivo principal de estas actividades fue evaluar la usabilidad, claridad funcional y pertinencia de los módulos desarrollados tanto para el segmento de conductores (aplicación móvil) como para talleres mecánicos (interfaz web). Las entrevistas se estructuraron siguiendo buenas prácticas de investigación UX, permitiendo recopilar percepciones, dificultades, expectativas y sugerencias de los perfiles simulados que representan a los usuarios finales del sistema.
+</p>
 
-### 6.3.3. Evaluaciones según heurísticas
+<p align="justify">
+La validación se realizó en función de las funcionalidades desarrolladas, poniendo especial énfasis en los procesos críticos del flujo de interacción: registro de usuarios y vehículos, visualización de alertas, creación y gestión de citas, revisión de historial de servicios y administración de solicitudes en talleres. Las preguntas se diseñaron para comprender los comportamientos del usuario, identificar puntos de fricción y asegurar que la interfaz responda adecuadamente a las necesidades específicas de cada segmento.
+</p>
+
+---
+
+#### Guion de Entrevistas (General)
+
+<p align="justify">
+El siguiente guion fue aplicado como marco base para todas las sesiones de validación, permitiendo mantener consistencia en la recopilación de datos. Incluye preguntas de apertura orientadas a entender el perfil digital del usuario y su familiaridad con herramientas tecnológicas.
+</p>
+
+**Preguntas de apertura:**
+
+- ¿Cuál es tu nombre?  
+- ¿En qué trabajas actualmente?  
+- ¿Qué tipo de herramientas digitales usas en tu día a día?  
+- ¿Te consideras usuario básico, intermedio o avanzado de apps móviles?
+
+---
+
+#### Preguntas Específicas – Conductores (App Móvil)
+
+<p align="justify">
+Para los conductores, el objetivo fue evaluar la claridad del flujo de la aplicación.
+</p>
+
+- ¿Qué te pareció el proceso de registrar un vehículo?  
+- ¿La interfaz  es fácil de interpretar?  
+- ¿El flujo para crear, reprogramar o cancelar citas fue claro?  
+- ¿Hubo algo que no entendiste o que cambiarías del flujo?  
+- ¿Qué es lo que más te gustó de la aplicación móvil?  
+- ¿Qué crees que podemos mejorar?
+
+---
+
+#### Preguntas Específicas – Talleres Mecánicos (Web)
+
+<p align="justify">
+Para los talleres mecánicos, las preguntas se orientaron a validar la claridad del proceso de registro del taller, la utilidad del módulo de gestión de solicitudes, la comprensión de la información operativa, la eficiencia para asignar mecánicos y la facilidad para actualizar el estado de las citas o registrar notas adicionales.
+</p>
+
+- ¿El proceso de registro del taller fue claro?  
+- ¿Cómo percibes las vistas?  
+- ¿La información clave de una cita (cliente, vehículo, servicio, estado) es fácil de encontrar?  
+- ¿Qué tan intuitivo es asignar un mecánico a una cita?  
+- ¿El historial de servicios te parece útil para diagnosticar?  
+- ¿Qué tan claro es el flujo para actualizar estados o agregar notas?  
+- ¿Qué parte del sistema te resultó más útil?  
+- ¿Qué mejorarías de la interfaz o los textos?
+
+### 6.3.2. Registro de Entrevistas
+### 6.3.3. Evaluación según heurísticas
 
 ## 6.4. Video About-the-Product
+
