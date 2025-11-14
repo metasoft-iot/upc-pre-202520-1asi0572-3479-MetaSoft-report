@@ -8515,14 +8515,12 @@ Se desplegaron ambos componentes en plataformas específicas según sus caracter
 
 <div align="center">
   <img src="../assets/img/capitulo-VI/deploy-landing-page.png" alt="Deploy Landing Page - GitHub Pages" width="800"/>
-  <p><em>Figura 18: Configuración y despliegue de la Landing Page en GitHub Pages</em></p>
 </div>
 
 **Aplicación Web - Netlify:**
 
 <div align="center">
   <img src="../assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
-  <p><em>Figura 19: Configuración y despliegue de la aplicación web en Netlify</em></p>
 </div>
 
 
@@ -13002,6 +13000,14 @@ La imagen que se muestra a continuación presenta la Aplicación Web desplegada 
 <img src="../assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
 
 <b>Mobile Web Application</b>
+
+<p align="justify">
+Las imagenes que se muestra a continuación presenta la Aplicación Móvil desplegada en Firebase Hosting: se observa la URL pública, el estado del deploy y los registros del build (logs). Esta evidencia confirma que la Mobile App fue construida y publicada correctamente, está accesible públicamente y consume las APIs del Backend para mostrar datos operativos.
+</p>
+
+<img src="./assets/img/capitulo-VI/safecar-mobile-deploy-evidence1.png" alt="Deploy Mobile Evidence 1 - Firebase" width="800"/>
+<img src="./assets/img/capitulo-VI/safecar-mobile-deploy-evidence2.png" alt="Deploy Mobile Evidence 2 - Firebase" width="800"/>
+<img src="./assets/img/capitulo-VI/safecar-mobile-deploy-evidence3.png" alt="Deploy Mobile Evidence 3 - Firebase" width="800"/>
 
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
