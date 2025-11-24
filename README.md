@@ -1,4 +1,4 @@
-<div align="center">
+2<div align="center">
 
 # Universidad Peruana De Ciencias Aplicadas
 ## Ingeniería de Software  
@@ -300,6 +300,7 @@ Github Collaboration Insights proporciona un cronograma que muestra las principa
 * Javier Kenyi Mendoza Solis (Kenyi-Mendoza-Solis)
 * Gustavo Jandroel Aguirre Rodríguez  (Jandroel)
 * Javier Sharvel Irigoyen Matos (sharvel-irigoyen)
+* Anaely Burga (userxx1000)
 
 Se dividieron las siguientes ramas para la colaboración en el proyecto:
 
@@ -818,11 +819,12 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
                  width="600px"
                  style="border-radius: 12px;"/>
           </td>
-          <td><strong>Soy una persona con experiencia en el manejo de metodologías ágiles como SCRUM y conocimientos en la gestión de bases de datos SQL. Cuento con habilidades de comunicación, atención al detalle y busco aportar soluciones lógicas para el proyecto.
-</strong></td>
+          <td>
+			  <strong>Anaely Burga Loarte</strong>
+		  </td>
           <td>Ingeniería de Software</td>
           <td align="justify">
-          ---
+          Soy una persona con experiencia en el manejo de metodologías ágiles como SCRUM y conocimientos en la gestión de bases de datos SQL. Cuento con habilidades de comunicación, atención al detalle y busco aportar soluciones lógicas para el proyecto.
           </td>
           <td style="text-align: center;">
             <!-- Languages -->
@@ -946,7 +948,7 @@ El proyecto se enmarca en el <b>mantenimiento vehicular inteligente con IoT</b>,
     <b style="color: #8c8c8cff;">Estrategia</b>
     <ul>
       <li>Implementar un dispositivo IoT accesible para cualquier tipo de vehículo.</li>
-      <li>Ofrecer una aplicación móvil que notifique a conductores sobre mantenimientos preventivos.</li>
+      <li>Ofrecer una aplicación móvil que notifique a conductores sobre mantenimientos preventivos.</li>r
       <li>Desarrollar un panel web especializado para talleres con reportes automáticos de diagnóstico.</li>
       <li>Adoptar un modelo de suscripción mensual con planes diferenciados para conductores y talleres.</li>
     </ul>
