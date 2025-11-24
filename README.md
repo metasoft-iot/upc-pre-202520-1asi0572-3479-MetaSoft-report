@@ -1191,7 +1191,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
     </tr>
     <tr>
         <td style="width:120px; vertical-align:center; text-align:center;">
-            <img src="../assets/img/capitulo-II/drivana-logo.jpeg" alt="Logo de Drivana" width="600"/>
+            <img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/chapter-II/assets/img/capitulo-II/drivana-logo.jpeg" width="600"/>
         </td>
         <td style="vertical-align:top;">
             <b>2. Drivana (LatAm)</b><br/>
@@ -1202,7 +1202,7 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
     </tr>
     <tr>
         <td style="width:120px; vertical-align:center; text-align:center;">
-            <img src="../assets/img/capitulo-II/obd-logo.png" alt="Logo de OBD-II" width="600"/>
+	<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/chapter-II/assets/img/capitulo-II/obd-logo.png" width="600"/>
         </td>
         <td style="vertical-align:top;">
             <b>3. Dispositivos OBD-II genéricos con apps móviles.</b><br/>
