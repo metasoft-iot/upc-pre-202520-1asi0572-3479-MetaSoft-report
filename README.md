@@ -1,43 +1,30 @@
-<center>
+<div align="center">
 
-# Universidad Peruana De Ciencas Aplicadas
-## 1ASI0572 Desarrollo de Soluciones IOT - Ingeniería de Software
+# Universidad Peruana De Ciencias Aplicadas
+## Ingeniería de Software  
+## NRC: 3479
+## 1ASI0572 - Desarrollo de Soluciones IOT
 
-</center>
-
-<p style="text-align: center;" > <img src = "https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png"></img> </p>
-
-<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" width="220"/>
 
 # "Informe de Trabajo Final"
-## Docente: Angel Augusto Velasquez Nuñez
-## Startup: MetaSoft
+## Docente: Angel Augusto Velasquez Nuñez  
+## Startup: MetaSoft  
 ## Producto: SafeCar
-
-</center>
 
 ## Relación de integrantes:
 
+**Janover Gonzalo Saldaña Vela — U20201B510**  
+**Hardie Alfonso Holguin Gamarra — U202220250**  
+**Javier Kenyi Mendoza Solis — U201824550**  
+**Gustavo Jandroel Aguirre Rodríguez — U202124162**  
+**Javier Sharvel Irigoyen Matos — U20221D156**  
+**Gonzalo Andre Zavala Quedena — U202113656**  
+**Anaely Zarely Burga Loarte — U202118264**
 
-* **Janover Gonzalo Saldaña Vela        U20201B510**
-* **Hardie Alfonso Holguin Gamarra      U202220250**
-* **Javier Kenyi Mendoza Solis          U201824550**
-* **Gustavo Jandroel Aguirre Rodríguez  U202124162**
-* **Javier Sharvel Irigoyen Matos       U20221D156**
-* **Gonzalo Andre Zavala Quedena        U202113656**
-* **Anaely Zarely Burga Loarte          U202118264**
+</div>
 
-
-
-<center>
-
-### 2025 - 02
-
-</center>
-
----
-
-<br>
+<hr>
 
 ## Registro de Versiones del Informe
 
