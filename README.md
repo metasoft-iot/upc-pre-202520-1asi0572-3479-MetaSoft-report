@@ -1,4 +1,4 @@
-2<div align="center">
+<div align="center">
 
 # Universidad Peruana De Ciencias Aplicadas
 ## Ingeniería de Software  
