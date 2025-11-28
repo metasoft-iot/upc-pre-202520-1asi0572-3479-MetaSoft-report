@@ -13093,7 +13093,80 @@ El Sprint 3 marca el inicio del proceso de desarrollo del servicio Edge para el 
 </table>
 
 
-6.3.2.2.Aspect Leaders and Collaborators
+#### 6.3.2.2. Aspect Leaders and Collaborators
+
+<p align="justify">
+Para el Sprint 3, la matriz de asignación de responsabilidades se ha reconfigurado para abordar los desafíos de la integración IoT y el desarrollo Edge. Los roles de liderazgo y colaboración (LACX) se distribuyen ahora entre los componentes críticos de telemetría y seguridad en el borde, así como en el desarrollo de firmware para los sistemas embebidos, garantizando una cobertura técnica especializada para cada capa de la solución.
+</p>
+
+<table width="100%">
+    <tr>
+        <th>Team Member (Last Name, First Name)</th>
+        <th>GitHub Username</th>
+        <th>Edge IAM</th>
+        <th>Edge Telemetry</th>
+        <th>Edge Embedded App</th>
+        <th>Cabine Embedded App</th>
+    </tr>
+    <tr>
+        <td>Janover Gonzalo Saldaña Vela</td>
+        <td>JanoverSaldana</td>
+        <td align="center">L</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+    </tr>
+    <tr>
+        <td>Hardie Alfonso Holguin Gamarra</td>
+        <td>HOLGUINUPC</td>
+        <td align="center">C</td>
+        <td align="center">L</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+    </tr>
+    <tr>
+        <td>Javier Kenyi Mendoza Solis</td>
+        <td>Kenyi-Mendoza-Solis</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
+    </tr>
+    <tr>
+        <td>Javier Sharvel Irigoyen Matos</td>
+        <td>sharvel-irigoyen</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">L</td>
+    </tr>
+    <tr>
+        <td>Gustavo Jandroel Aguirre Rodríguez</td>
+        <td>Jandroel</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
+    </tr>
+    <tr>
+        <td>Anaely Zarely Burga Loarte</td>
+        <td>userxx1000</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+    </tr>
+    <tr>
+        <td>Gonzalo Andre Zavala Quedena</td>
+        <td>GonzaloQu3dena</td>
+        <td align="center">L</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+    </tr>
+</table>
+
+
 
 6.3.2.3. Sprint Backlog 3
 
