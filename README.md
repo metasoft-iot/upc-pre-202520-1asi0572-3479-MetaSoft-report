@@ -4607,13 +4607,13 @@ El foco principal está en el **conductor**, su **seguridad** y el **diagnóstic
 
 El <b>EventStorming</b> permite visualizar cómo diferentes usuarios interactúan con el sistema y qué eventos son generados, sirviendo como base para el diseño de módulos, definición de responsabilidades y validación de requerimientos funcionales.
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Level EventStorming.jpg" alt="Level EventStorming" width="1000"/>
+<img src="/assets/img/capitulo-IV/Level EventStorming.jpg" alt="Level EventStorming" width="1000"/>
 
 #### 4.1.1.1 Candidate Context Discovery
 
 En esta seccion se identifican los módulos o subdominios funcionales dentro de la solución SafeCar, agrupando los eventos, comandos y usuarios por áreas de responsabilidad.
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Candidate Context Discovery.jpg" alt="Candidate Context Discovery" width="1000"/>
+<img src="/assets/img/capitulo-IV/Candidate Context Discovery.jpg" alt="Candidate Context Discovery" width="1000"/>
 
 #### 4.1.1.2 Domain Message Flows Modeling
 
@@ -4621,7 +4621,7 @@ El Usuario utiliza la app/web de SafeCar para recibir datos de sensores IoT rela
 
 Si se confirma una condición crítica, se genera una alerta de mantenimiento (evento “Maintenance Alert Created”), la cual se envía al Notification System. Este sistema notifica al usuario en la app/web y, en caso necesario, también avisa al taller asignado para coordinar la atención preventiva.
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
+<img src="/assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
 
 
 
@@ -4630,59 +4630,59 @@ Si se confirma una condición crítica, se genera una alerta de mantenimiento (e
 
 Maintenance Management
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Bounded Context Canvases.jpg" alt="Bounded Context Canvases" width="1000"/>
+<img src="/assets/img/capitulo-IV/Bounded Context Canvases.jpg" alt="Bounded Context Canvases" width="1000"/>
 
 Vehicle Management
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Bounded Context Vehicle.jpg" alt="Bounded Context Vehicle" width="1000"/>
+<img src="/assets/img/capitulo-IV/Bounded Context Vehicle.jpg" alt="Bounded Context Vehicle" width="1000"/>
 
 Service Catalog Management
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Bounded Context Menu.jpg" alt="Bounded Context Menu" width="1000"/>
+<img src="/assets/img/capitulo-IV/Bounded Context Menu.jpg" alt="Bounded Context Menu" width="1000"/>
 
 IoT Monitoring
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Iot monitoring.jpg" alt="Iot monitoring" width="1000"/>
+<img src="/assets/img/capitulo-IV/Iot monitoring.jpg" alt="Iot monitoring" width="1000"/>
 
 Headquarter Management
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Headquarter management.jpg" alt="Headquarter management" width="1000"/>
+<img src="/assets/img/capitulo-IV/Headquarter management.jpg" alt="Headquarter management" width="1000"/>
 
 Device Management
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/device-management.png" alt="Device Management" width="1000"/>
+<img src="/assets/img/capitulo-IV/device-management.png" alt="Device Management" width="1000"/>
 
 Telemetry Processing
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/telemetry-processing.png" alt="Telemetry Processing" width="1000"/>
+<img src="/assets/img/capitulo-IV/telemetry-processing.png" alt="Telemetry Processing" width="1000"/>
 
 Analytics & Recommendations
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/analytics-recommendations.png" alt="Analytics & Recommendations" width="1000"/>
+<img src="/assets/img/capitulo-IV/analytics-recommendations.png" alt="Analytics & Recommendations" width="1000"/>
 
 Alerting
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/alerting.png" alt="Alerting" width="1000"/>
+<img src="/assets/img/capitulo-IV/alerting.png" alt="Alerting" width="1000"/>
 
 Driver Engagement
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/driver-engagement.png" alt="Driver Engagement" width="1000"/>
+<img src="/assets/img/capitulo-IV/driver-engagement.png" alt="Driver Engagement" width="1000"/>
 
 Workshop Operations
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/workshop-operations.png" alt="Workshop Operations" width="1000"/>
+<img src="/assets/img/capitulo-IV/workshop-operations.png" alt="Workshop Operations" width="1000"/>
 
 Admin & Billing
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/admin-billing.png" alt="Admin & Billing" width="1000"/>
+<img src="/assets/img/capitulo-IV/admin-billing.png" alt="Admin & Billing" width="1000"/>
 
 Security & Compliance
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/security-compliance.png" alt="Security & Compliance" width="1000"/>
+<img src="/assets/img/capitulo-IV/security-compliance.png" alt="Security & Compliance" width="1000"/>
 
 Notification Gateway
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/notification-gateway.png" alt="Notification Gateway" width="1000"/>
+<img src="/assets/img/capitulo-IV/notification-gateway.png" alt="Notification Gateway" width="1000"/>
 
 
 ### 4.1.2. Context Mapping
