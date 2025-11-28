@@ -8395,21 +8395,21 @@ A continuación se presentan capturas de pantalla de las principales vistas desa
 - **Telemetría Vehicular:** Visualización en tiempo real de datos del vehículo
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-telemetry-web-application.png" alt="Vehicle Telemetry - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/vehicle-telemetry-web-application.png" alt="Vehicle Telemetry - SafeCar Web Application" width="800"/>
     <p><em>Figura 15: Dashboard de telemetría vehicular en tiempo real</em></p>
   </div>
 
 - **Análisis de Datos:** Dashboard con métricas y análisis operacionales
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-analytics-web-application.png" alt="Vehicle Analytics - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/vehicle-analytics-web-application.png" alt="Vehicle Analytics - SafeCar Web Application" width="800"/>
     <p><em>Figura 16: Dashboard de análisis de datos operacionales</em></p>
   </div>
 
 - **Dashboard en Desarrollo:** Panel principal de la aplicación web
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/dashboard-in-development-web-application..png" alt="Dashboard in Development - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/dashboard-in-development-web-application..png" alt="Dashboard in Development - SafeCar Web Application" width="800"/>
     <p><em>Figura 17: Dashboard principal en desarrollo de la aplicación web</em></p>
   </div>
 
@@ -8418,7 +8418,7 @@ A continuación se presentan capturas de pantalla de las principales vistas desa
 </p>
 
 <div align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/demo-execution-evidence-for-sprint-01.png" alt="Demo Execution Evidence - Sprint 1 SafeCar" width="800"/>
+  <img src="/assets/img/capitulo-VI/demo-execution-evidence-for-sprint-01.png" alt="Demo Execution Evidence - Sprint 1 SafeCar" width="800"/>
   <p><em>Figura 18: Vista previa del video demostrativo del Sprint 1 mostrando las funcionalidades implementadas</em></p>
 </div>
 
