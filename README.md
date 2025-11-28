@@ -1616,7 +1616,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="../assets/img/capitulo-II/entrevista-1.png" alt="screenshot entrevista 2" width="600px">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/entrevista-1.png" alt="screenshot entrevista 2" width="600px">
 </div>
 <p align="justify">
 <strong>Resumen:</strong>Orlando Roca es un desarrollador de software y estudiante de 23 años que vive y trabaja en La Molina, con un perfil práctico y reservado. Con 5 años de experiencia conduciendo, es un usuario activo de WhatsApp e Instagram, y prefiere estos mismos canales (mensajería móvil y WhatsApp) para recibir notificaciones. A pesar de su afinidad con la tecnología, Orlando no tiene experiencia previa con aplicaciones dedicadas al monitoreo o mantenimiento de vehículos. Su enfoque actual para el mantenimiento es principalmente reactivo; aunque realiza revisiones preventivas tres veces al año, actúa ante señales evidentes como llantas bajas o frenos ruidosos. Su mayor frustración con los talleres es la desconfianza, específicamente el temor a que intenten "pasarse de vivos" y cobrarle de más. A raíz de problemas como pinchazos por baches que le han costado alrededor de 500 soles, Orlando valora una solución digital que le ofrezca alertas tempranas para mantenimientos preventivos y un historial de precios para asegurar costos justos. Declara estar muy dispuesto a pagar una suscripción mensual por un servicio con estas características.
@@ -4607,13 +4607,13 @@ El foco principal está en el **conductor**, su **seguridad** y el **diagnóstic
 
 El <b>EventStorming</b> permite visualizar cómo diferentes usuarios interactúan con el sistema y qué eventos son generados, sirviendo como base para el diseño de módulos, definición de responsabilidades y validación de requerimientos funcionales.
 
-<img src="../assets/img/capitulo-IV/Level EventStorming.jpg" alt="Level EventStorming" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Level EventStorming.jpg" alt="Level EventStorming" width="1000"/>
 
 #### 4.1.1.1 Candidate Context Discovery
 
 En esta seccion se identifican los módulos o subdominios funcionales dentro de la solución SafeCar, agrupando los eventos, comandos y usuarios por áreas de responsabilidad.
 
-<img src="../assets/img/capitulo-IV/Candidate Context Discovery.jpg" alt="Candidate Context Discovery" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Candidate Context Discovery.jpg" alt="Candidate Context Discovery" width="1000"/>
 
 #### 4.1.1.2 Domain Message Flows Modeling
 
@@ -4621,7 +4621,7 @@ El Usuario utiliza la app/web de SafeCar para recibir datos de sensores IoT rela
 
 Si se confirma una condición crítica, se genera una alerta de mantenimiento (evento “Maintenance Alert Created”), la cual se envía al Notification System. Este sistema notifica al usuario en la app/web y, en caso necesario, también avisa al taller asignado para coordinar la atención preventiva.
 
-<img src="../assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Domain Message Flows Modeling.jpg" alt="Domain Message Flows Modeling" width="1000"/>
 
 
 
@@ -4630,66 +4630,66 @@ Si se confirma una condición crítica, se genera una alerta de mantenimiento (e
 
 Maintenance Management
 
-<img src="../assets/img/capitulo-IV/Bounded Context Canvases.jpg" alt="Bounded Context Canvases" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Bounded Context Canvases.jpg" alt="Bounded Context Canvases" width="1000"/>
 
 Vehicle Management
 
-<img src="../assets/img/capitulo-IV/Bounded Context Vehicle.jpg" alt="Bounded Context Vehicle" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Bounded Context Vehicle.jpg" alt="Bounded Context Vehicle" width="1000"/>
 
 Service Catalog Management
 
-<img src="../assets/img/capitulo-IV/Bounded Context Menu.jpg" alt="Bounded Context Menu" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Bounded Context Menu.jpg" alt="Bounded Context Menu" width="1000"/>
 
 IoT Monitoring
 
-<img src="../assets/img/capitulo-IV/Iot monitoring.jpg" alt="Iot monitoring" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Iot monitoring.jpg" alt="Iot monitoring" width="1000"/>
 
 Headquarter Management
 
-<img src="../assets/img/capitulo-IV/Headquarter management.jpg" alt="Headquarter management" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Headquarter management.jpg" alt="Headquarter management" width="1000"/>
 
 Device Management
 
-<img src="../assets/img/capitulo-IV/device-management.png" alt="Device Management" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/device-management.png" alt="Device Management" width="1000"/>
 
 Telemetry Processing
 
-<img src="../assets/img/capitulo-IV/telemetry-processing.png" alt="Telemetry Processing" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/telemetry-processing.png" alt="Telemetry Processing" width="1000"/>
 
 Analytics & Recommendations
 
-<img src="../assets/img/capitulo-IV/analytics-recommendations.png" alt="Analytics & Recommendations" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/analytics-recommendations.png" alt="Analytics & Recommendations" width="1000"/>
 
 Alerting
 
-<img src="../assets/img/capitulo-IV/alerting.png" alt="Alerting" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/alerting.png" alt="Alerting" width="1000"/>
 
 Driver Engagement
 
-<img src="../assets/img/capitulo-IV/driver-engagement.png" alt="Driver Engagement" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/driver-engagement.png" alt="Driver Engagement" width="1000"/>
 
 Workshop Operations
 
-<img src="../assets/img/capitulo-IV/workshop-operations.png" alt="Workshop Operations" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/workshop-operations.png" alt="Workshop Operations" width="1000"/>
 
 Admin & Billing
 
-<img src="../assets/img/capitulo-IV/admin-billing.png" alt="Admin & Billing" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/admin-billing.png" alt="Admin & Billing" width="1000"/>
 
 Security & Compliance
 
-<img src="../assets/img/capitulo-IV/security-compliance.png" alt="Security & Compliance" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/security-compliance.png" alt="Security & Compliance" width="1000"/>
 
 Notification Gateway
 
-<img src="../assets/img/capitulo-IV/notification-gateway.png" alt="Notification Gateway" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/notification-gateway.png" alt="Notification Gateway" width="1000"/>
 
 
 ### 4.1.2. Context Mapping
 
 Se describe las relaciones estructurales entre los **Bounded Contexts** de la plataforma, los **patrones DDD** aplicados y los **contratos** (eventos/APIs) que conectan los contextos.
 
-<img src="../assets/img/capitulo-IV/context-mapping.png?v=1.0" alt="Context mapping" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/context-mapping.png?v=1.0" alt="Context mapping" width="1000"/>
 
 <table>
   <caption>Relaciones clave entre Bounded Contexts y patrones DDD</caption>
@@ -4855,7 +4855,7 @@ La arquitectura de software de <b>SafeCar</b> se ha diseñado aplicando el model
 Este diagrama ilustra el panorama general del ecosistema en el que se ubica SafeCar. Representa al sistema dentro de su contexto, mostrando los principales actores (conductores, mecánicos) y los sistemas externos con los que interactúa.
 </p>
 
-<img src="../assets/img/capitulo-IV/C4-Landscape-Diagram-SafeCar-Platform.png" alt="System Landscape Diagram"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/C4-Landscape-Diagram-SafeCar-Platform.png" alt="System Landscape Diagram"/>
 
 <br/>**Explicación:**
 <p align="justify">
@@ -4868,7 +4868,7 @@ El <b>Context Diagram</b>
 representa la solución de software como una caja central que encapsula sus límites funcionales, mostrando a su alrededor a los diferentes actores y sistemas externos con los que interactúa. Este nivel del modelo C4 permite visualizar de forma global cómo la plataforma se integra en su entorno, identificando quiénes son los usuarios principales, qué tipo de información intercambian y qué servicios externos son necesarios para su funcionamiento. Asimismo, este diagrama facilita la comprensión del propósito del sistema dentro del ecosistema tecnológico, ayudando a los interesados (stakeholders) a entender el alcance, las dependencias y los flujos de comunicación sin necesidad de entrar en detalles técnicos de implementación. 
 </p>
 
-<img src="../assets/img/capitulo-IV/c4-context-level.png" alt="Context Level Diagram" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/c4-context-level.png" alt="Context Level Diagram" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
@@ -5000,7 +5000,7 @@ representa la solución de software como una caja central que encapsula sus lím
 El <b>Container Diagram</b> detalla la estructura interna de la solución mostrada en el diagrama de contexto, descomponiendo el sistema principal en los distintos contenedores de software que lo conforman. Cada contenedor representa una aplicación o componente ejecutable independiente —como aplicaciones web, móviles, bases de datos o servicios— que, en conjunto, colaboran para ofrecer las funcionalidades de la plataforma <b>SafeCar</b>. <br><br> Este nivel permite comprender cómo se distribuyen las responsabilidades dentro del sistema, qué tecnologías se emplean en cada parte, y cómo se comunican los contenedores entre sí o con sistemas externos. Además, facilita la identificación de puntos de integración, dependencias tecnológicas y canales de comunicación entre la interfaz de usuario, la lógica de negocio y las capas de persistencia o servicios de terceros. <br><br> En este diagrama se pueden observar los principales contenedores que conforman la plataforma —como el <b>SafeCar Website</b>, la <b>Web Application</b>, la <b>Single Page Application (SPA)</b>, el <b>Backend</b>, el <b>Mobile App</b>, el <b>Edge Gateway</b> y las respectivas bases de datos— junto con sus interacciones con los actores del sistema y con los servicios externos de inteligencia artificial, notificaciones, pagos y dispositivos IoT. De esta manera, se ofrece una visión integral de la arquitectura lógica y tecnológica que sustenta la operación de SafeCar. 
 </p>
 
-<img src="../assets/img/capitulo-IV/c4-container-level.png" alt="Container Diagram SafeCar" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/c4-container-level.png" alt="Container Diagram SafeCar" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
@@ -5163,7 +5163,7 @@ Los <b>Deployment Diagrams</b> representan la arquitectura física de despliegue
 En SafeCar, el despliegue se ha diseñado considerando escalabilidad, disponibilidad y seguridad. La arquitectura aprovecha tanto infraestructura local como servicios en la nube para garantizar un rendimiento óptimo y la capacidad de manejar el crecimiento de usuarios y dispositivos IoT conectados.
 </p>
 
-<img src="../assets/img/capitulo-IV/Software-Architecture-Deployment-Diagrams.png" alt="Deployment Diagram SafeCar" width="1000"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/Software-Architecture-Deployment-Diagrams.png" alt="Deployment Diagram SafeCar" width="1000"/>
 
 
 ## 4.2. Tactical-Level Domain-Driven Design
@@ -5508,7 +5508,7 @@ Ubicación: `application/outboundservices/acl`
 El diagrama de clases ilustra el modelo de dominio del BC Device Management. Define el agregado `Device` como la pieza central, sus Value Objects asociados como `FirmwareVersion` y la enumeración `DeviceStatus`. También especifica los contratos (interfaces) que el dominio expone para la persistencia (`DeviceRepository`), servicios de dominio (`DeviceProvisioner`) y comunicación inter-BC (`ExternalVehicleContextFacade`), manteniendo el núcleo de negocio agnóstico a la implementación tecnológica.
 </p>
 
-<img src="/assets/img/capitulo-IV/DC device.png" alt="BC Device Management Domain Class Diagram"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/DC device.png" alt="BC Device Management Domain Class Diagram"/>
 
 <b>2) Agregado y VOs</b>
 - **Device (Aggregate Root)**
@@ -5534,7 +5534,7 @@ El diagrama de clases ilustra el modelo de dominio del BC Device Management. Def
 El siguiente esquema de base de datos para MySQL soporta la persistencia del agregado `Device`. Está optimizado para consultas comunes, como buscar un dispositivo por su ID de serie o por el vehículo al que está asignado, y asegura la unicidad de los identificadores clave.
 </p>
 
-<img src="/assets/img/capitulo-IV/db segurity.png" alt="BC Device Management Database Design Diagram"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/db segurity.png" alt="BC Device Management Database Design Diagram"/>
 
 <b>2) Tablas principales</b>
 - **devices**
@@ -6153,7 +6153,7 @@ Ubicación: `application/outboundservices/acl`
 El diagrama modela el núcleo de negocio del BC Analytics & Recommendations dentro del monolito. Muestra entidades/agregado, value objects, interfaces (servicios de dominio, repositorios y façade inter-BC), la enumeración de riesgo y los eventos de dominio, con atributos/métodos y alcance (+ público, − privado), así como direcciones y multiplicidades en las relaciones.
 </p>
 
-<img src="../assets/img/capitulo-IV/bc-analytics-and-recommendations-domain-class-diagram.png" alt="BC Analytics and Recommendations Domain Class Diagram"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/bc-analytics-and-recommendations-domain-class-diagram.png" alt="BC Analytics and Recommendations Domain Class Diagram"/>
 
 <b>2) Agregado y entidades (Core Model)</b>
 - **DriverProfile (Aggregate Root)**
@@ -6227,7 +6227,7 @@ Interfaces **del dominio**:
 El esquema relacional define cómo se almacenan los objetos del dominio *Analytics & Recommendations* en **MySQL**. Se ha diseñado para mantener la integridad referencial, permitir consultas eficientes y soportar la evolución del modelo sin comprometer las reglas del dominio.
 </p>
 
-<img src="../assets/img/capitulo-IV/bc-analytics-and-recommendations-database-diagram.png" alt="BC Analytics and Recommendations Database Design Diagram"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/bc-analytics-and-recommendations-database-diagram.png" alt="BC Analytics and Recommendations Database Design Diagram"/>
 
 <b>2) Tablas principales</b>
 - **driver_profiles**
@@ -6739,7 +6739,7 @@ Principios aplicados (wireframe)
 - Accesibilidad: objetivos mínimos 44×44, foco visible, etiquetas claras.
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/wireframe-lp.png" alt="wireframe desktop de la landing page">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/wireframe-lp.png" alt="wireframe desktop de la landing page">
 </p>
 
 ## 5.3.1.3 Estructura Mobile
@@ -6759,7 +6759,7 @@ Principios aplicados (wireframe)
 - Secciones finales apiladas; footer compacto con navegación mínima.
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/wireframe-lp-mobile.png" alt="wireframe mobile de la landing page">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/wireframe-lp-mobile.png" alt="wireframe mobile de la landing page">
 </p>
 
 ### 5.3.2. Landing Page Mock-up
@@ -6792,7 +6792,7 @@ jerarquía tipográfica clara; consistencia de componentes (Card, Button, Input)
 
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/mockup-lp.png" alt="wireframe mobile de la landing page">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mockup-lp.png" alt="wireframe mobile de la landing page">
 </p>
 
 ## 5.3.2.2 Mock‑up Mobile
@@ -6822,7 +6822,7 @@ Principios evidenciados:
 Lectura escaneable, blancos generosos, contenido alineado al container; accesibilidad táctil; orden lógico de tabulación; tipografía con line‑height 1.5.
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/mockup-lp-mobile.png" alt="wireframe mobile de la landing page">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mockup-lp-mobile.png" alt="wireframe mobile de la landing page">
 </p>
 
 
@@ -6970,7 +6970,7 @@ Cada uno de los siguientes prototipos resalta los aspectos esenciales de la inte
 #### Pantalla de Login
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/mock-1-login.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-1-login.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Interfaz de acceso al sistema SafeCar, dividida en dos secciones:
@@ -6983,7 +6983,7 @@ El diseño utiliza una paleta azul y blanca, enfocada en la claridad, accesibili
 #### Pantalla de Registro de Taller
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/mock-2-register.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-2-register.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Formulario de registro para crear una cuenta de taller en SafeCar.
@@ -6995,7 +6995,7 @@ El diseño mantiene una estructura limpia y ordenada, utilizando tonos azules y 
 #### Pantalla de Gestión de Solicitudes de Servicio
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/mock-3-service.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-3-service.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Interfaz que permite administrar citas y solicitudes de servicio automotriz de los clientes.
@@ -7008,7 +7008,7 @@ El diseño prioriza la organización y legibilidad mediante el uso de tonos azul
 #### Pantalla de Historial de Servicios
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/mock-4-history.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-4-history.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Muestra el registro completo de mantenimientos y reparaciones realizados a los vehículos.
@@ -7021,7 +7021,7 @@ El diseño mantiene coherencia visual con el resto del sistema mediante el uso d
 #### Pantalla de Detalle de Cita
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/mock-5-appointment.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-5-appointment.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Permite visualizar y gestionar la información completa de una solicitud de servicio.
@@ -7064,7 +7064,7 @@ El uso de Figma permitió validar la estructura de navegación y el diseño visu
 
 
 <p align="center">
-  <img src="../assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Link: [Prototipo Web App](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202124162_upc_edu_pe/Ee1cZiLNP_dJjL1prSmIih4B1u6ixglswnGvMM2Vo6pt6g?e=NhgeQJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
@@ -8015,7 +8015,7 @@ El **Sprint 1** del proyecto **SafeCar** se centró en establecer las bases de l
 
 ---
 
-<img src="../assets/img/capitulo-VI/sprint 1.png" alt="Sprint 1 - SafeCar" style="width: 100%; max-width: 800px;">
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint 1.png" alt="Sprint 1 - SafeCar" style="width: 100%; max-width: 800px;">
 
 
 #### 6.2.1.4. Development Evidence for Sprint Review
@@ -8315,101 +8315,101 @@ A continuación se presentan capturas de pantalla de las principales vistas desa
 - **Landing Page:** Página principal with navegación, secciones informativas, planes y contacto
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/hero-landing-page.png" alt="Hero Section - Landing Page SafeCar" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/hero-landing-page.png" alt="Hero Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 1: Sección Hero de la Landing Page con navegación principal y call-to-action</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/Benefits-landing-page.png" alt="Benefits Section - Landing Page SafeCar" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/Benefits-landing-page.png" alt="Benefits Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 2: Sección de beneficios destacando las características principales del sistema</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/about-the-app-landing-page.png" alt="About the App Section - Landing Page SafeCar" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/about-the-app-landing-page.png" alt="About the App Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 3: Sección informativa sobre la aplicación SafeCar</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/plans-landing-page.png" alt="Plans Section - Landing Page SafeCar" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/plans-landing-page.png" alt="Plans Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 4: Sección de planes y precios con opciones de suscripción</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/testimonials-landing-page.png" alt="Testimonials Section - Landing Page SafeCar" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/testimonials-landing-page.png" alt="Testimonials Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 5: Sección de testimonios de usuarios</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/contact-us-landing-page.png" alt="Contact Us Section - Landing Page SafeCar" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/contact-us-landing-page.png" alt="Contact Us Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 6: Sección de contacto con formulario y información de contacto</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/about-the-team-landing-page.png" alt="About the Team Section - Landing Page SafeCar" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/about-the-team-landing-page.png" alt="About the Team Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 7: Sección sobre el equipo de desarrollo MetaSoft</em></p>
   </div>
 
 - **Autenticación:** Formularios de login y registro de usuarios
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/login-web-application.png" alt="Login Interface - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/login-web-application.png" alt="Login Interface - SafeCar Web Application" width="800"/>
     <p><em>Figura 8: Interfaz de inicio de sesión de la aplicación web SafeCar</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/sign-up-web-application.png" alt="Sign Up Interface - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sign-up-web-application.png" alt="Sign Up Interface - SafeCar Web Application" width="800"/>
     <p><em>Figura 9: Interfaz de registro de usuarios de la aplicación web SafeCar</em></p>
   </div>
 
 - **Gestión de Citas:** Interfaces para programación, visualización y detalles de citas de mantenimiento
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/appointments-web-application.png" alt="Appointments Management - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/appointments-web-application.png" alt="Appointments Management - SafeCar Web Application" width="800"/>
     <p><em>Figura 10: Módulo de gestión de citas de mantenimiento</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/appointment-detail-web-application.png" alt="Appointment Detail - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/appointment-detail-web-application.png" alt="Appointment Detail - SafeCar Web Application" width="800"/>
     <p><em>Figura 11: Vista detallada de cita de mantenimiento</em></p>
   </div>
 
 - **Historial de Reparaciones:** Módulo de seguimiento y consulta del historial vehicular
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/vehicle-history-web-application.png" alt="Vehicle History - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-history-web-application.png" alt="Vehicle History - SafeCar Web Application" width="800"/>
     <p><em>Figura 12: Módulo de historial de reparaciones vehiculares</em></p>
   </div>
 
 - **Gestión de Vehículos:** Panel principal de administración de vehículos
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/vehicle-management-web-application.png" alt="Vehicle Management - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-management-web-application.png" alt="Vehicle Management - SafeCar Web Application" width="800"/>
     <p><em>Figura 13: Panel de gestión de vehículos</em></p>
   </div>
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/vehicle-detail-web-application.png" alt="Vehicle Detail - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-detail-web-application.png" alt="Vehicle Detail - SafeCar Web Application" width="800"/>
     <p><em>Figura 14: Vista detallada de vehículo con información completa</em></p>
   </div>
 
 - **Telemetría Vehicular:** Visualización en tiempo real de datos del vehículo
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/vehicle-telemetry-web-application.png" alt="Vehicle Telemetry - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-telemetry-web-application.png" alt="Vehicle Telemetry - SafeCar Web Application" width="800"/>
     <p><em>Figura 15: Dashboard de telemetría vehicular en tiempo real</em></p>
   </div>
 
 - **Análisis de Datos:** Dashboard con métricas y análisis operacionales
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/vehicle-analytics-web-application.png" alt="Vehicle Analytics - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-analytics-web-application.png" alt="Vehicle Analytics - SafeCar Web Application" width="800"/>
     <p><em>Figura 16: Dashboard de análisis de datos operacionales</em></p>
   </div>
 
 - **Dashboard en Desarrollo:** Panel principal de la aplicación web
 
   <div align="center">
-    <img src="../assets/img/capitulo-VI/dashboard-in-development-web-application..png" alt="Dashboard in Development - SafeCar Web Application" width="800"/>
+    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/dashboard-in-development-web-application..png" alt="Dashboard in Development - SafeCar Web Application" width="800"/>
     <p><em>Figura 17: Dashboard principal en desarrollo de la aplicación web</em></p>
   </div>
 
@@ -8418,7 +8418,7 @@ A continuación se presentan capturas de pantalla de las principales vistas desa
 </p>
 
 <div align="center">
-  <img src="../assets/img/capitulo-VI/demo-execution-evidence-for-sprint-01.png" alt="Demo Execution Evidence - Sprint 1 SafeCar" width="800"/>
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/demo-execution-evidence-for-sprint-01.png" alt="Demo Execution Evidence - Sprint 1 SafeCar" width="800"/>
   <p><em>Figura 18: Vista previa del video demostrativo del Sprint 1 mostrando las funcionalidades implementadas</em></p>
 </div>
 
@@ -8502,13 +8502,13 @@ Se desplegaron ambos componentes en plataformas específicas según sus caracter
 **Landing Page - GitHub Pages:**
 
 <div align="center">
-  <img src="../assets/img/capitulo-VI/deploy-landing-page.png" alt="Deploy Landing Page - GitHub Pages" width="800"/>
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/deploy-landing-page.png" alt="Deploy Landing Page - GitHub Pages" width="800"/>
 </div>
 
 **Aplicación Web - Netlify:**
 
 <div align="center">
-  <img src="../assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
 </div>
 
 
@@ -8534,14 +8534,14 @@ Los datos extraídos de GitHub proporcionan una perspectiva cuantitativa de la c
 **GitHub Pulse - Actividad del Repositorio:**
 
 <figure align="center">
-  <img src="../assets/img/capitulo-VI/sprint-1-pulse-landing-page.png" alt="GitHub Pulse Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint-1-pulse-landing-page.png" alt="GitHub Pulse Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 20.</strong> Analíticos de Pulse del repositorio Landing Page mostrando la actividad de commits, pull requests y colaboradores durante el Sprint 1.</figcaption>
 </figure>
 
 **Contributors - Participación del Equipo:**
 
 <figure align="center">
-  <img src="../assets/img/capitulo-VI/sprint-1-contribuitors-landing-page.png" alt="GitHub Contributors Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint-1-contribuitors-landing-page.png" alt="GitHub Contributors Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 21.</strong> Analíticos de Contributors del repositorio Landing Page detallando las contribuciones individuales por miembro del equipo, incluyendo commits y líneas de código modificadas.</figcaption>
 </figure>
 
@@ -8550,14 +8550,14 @@ Los datos extraídos de GitHub proporcionan una perspectiva cuantitativa de la c
 **GitHub Pulse - Actividad del Repositorio:**
 
 <figure align="center">
-  <img src="../assets/img/capitulo-VI/sprint-1-pulse-web-application.png" alt="GitHub Pulse Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
+  <img src"https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint-1-pulse-web-application.png" alt="GitHub Pulse Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 22.</strong> Analíticos de Pulse del repositorio Web Application mostrando la frecuencia de actividad, distribución temporal de commits y participación activa del equipo durante el sprint.</figcaption>
 </figure>
 
 **Contributors - Participación del Equipo:**
 
 <figure align="center">
-  <img src="../assets/img/capitulo-VI/sprint-1-contributors-web-application.png" alt="GitHub Contributors Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint-1-contributors-web-application.png" alt="GitHub Contributors Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 23.</strong> Analíticos de Contributors del repositorio Web Application evidenciando las contribuciones específicas de cada miembro, incluyendo commits realizados y volumen de código desarrollado.</figcaption>
 </figure>
 
@@ -12993,9 +12993,9 @@ La imagen que se muestra a continuación presenta la Aplicación Web desplegada 
 Las imagenes que se muestra a continuación presenta la Aplicación Móvil desplegada en Firebase Hosting: se observa la URL pública, el estado del deploy y los registros del build (logs). Esta evidencia confirma que la Mobile App fue construida y publicada correctamente, está accesible públicamente y consume las APIs del Backend para mostrar datos operativos.
 </p>
 
-<img src="./assets/img/capitulo-VI/safecar-mobile-deploy-evidence1.png" alt="Deploy Mobile Evidence 1 - Firebase" width="800"/>
-<img src="./assets/img/capitulo-VI/safecar-mobile-deploy-evidence2.png" alt="Deploy Mobile Evidence 2 - Firebase" width="800"/>
-<img src="./assets/img/capitulo-VI/safecar-mobile-deploy-evidence3.png" alt="Deploy Mobile Evidence 3 - Firebase" width="800"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/safecar-mobile-deploy-evidence1.png" alt="Deploy Mobile Evidence 1 - Firebase" width="800"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/safecar-mobile-deploy-evidence2.png" alt="Deploy Mobile Evidence 2 - Firebase" width="800"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/safecar-mobile-deploy-evidence3.png" alt="Deploy Mobile Evidence 3 - Firebase" width="800"/>
 
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
