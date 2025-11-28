@@ -2094,7 +2094,7 @@ Este diagrama permite visualizar cómo los impactos esperados se materializan en
 En este caso, el mapa se centra en los conductores particulares como usuarios principales de la aplicación, quienes buscan mantener un control preventivo sobre el estado de su vehículo, reducir gastos imprevistos y recibir alertas oportunas que les permitan actuar con anticipación teniendo como objetivo de negocio principal reducir en un 40 % las fallas vehiculares imprevistas y aumentar en un 35 % la planificación preventiva de mantenimientos durante el primer año, mediante la integración de tecnología IoT, diagnósticos predictivos, historial digital y conexión directa con talleres afiliados.
 
 <div align="center" style="margin-top: 20px;">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-III/assets/img/capitulo-III/Impact%20map%20Conductores.png" 
+  <img src="../assets/img/capitulo-III/Impact%20map%20Conductores.png" 
        alt="Impact map Conductores" width="1000px">
 </div>
 		
@@ -2105,7 +2105,7 @@ Para este caso, el mapa se centra en los talleres afiliados como principales usu
 El objetivo de negocio principal consiste en reducir en un 40 % los fallos mecánicos inesperados y aumentar en un 30 % la eficiencia operativa de los talleres afiliados durante el primer año, a través de la implementación de tecnología IoT, diagnósticos predictivos y una conexión digital continua entre conductores y talleres.
 
 <div align="center" style="margin-top: 20px;">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-III/assets/img/capitulo-III/Impact%20map%20Talleres%20mecanico.png" 
+  <img src="../assets/img/capitulo-III/Impact%20map%20Talleres%20mecanico.png" 
        alt="Impact map Talleres mecanico" width="1000px">
 </div>
 
@@ -2509,4 +2509,4 @@ El foco principal está en el **conductor**, su **seguridad** y el **diagnóstic
   Mejora la experiencia de usuario con un dashboard de resumen y la opción de mantener sesión activa.
 
 ---
-![Product Backlog SafeCar](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-III/assets/img/capitulo-III/product%20blacklog.png)
+![Product Backlog SafeCar](../assets/img/capitulo-III/product%20blacklog.png)

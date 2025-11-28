@@ -30,7 +30,7 @@
       <tbody>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/gonzalo-quedena.jpeg"
+            <img src="../assets/img/capitulo-I/miembros/gonzalo-quedena.jpeg"
                  alt="Gonzalo Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
@@ -69,7 +69,7 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/hardie-holguin.jpeg"
+            <img src="../assets/img/capitulo-I/miembros/hardie-holguin.jpeg"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
@@ -104,7 +104,7 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/kenyi-mendoza.jpeg"
+            <img src="../assets/img/capitulo-I/miembros/kenyi-mendoza.jpeg"
                  alt="Kenyi Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
@@ -139,7 +139,7 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/janover-saldana.jpg"
+            <img src="../assets/img/capitulo-I/miembros/janover-saldana.jpg"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
@@ -174,7 +174,7 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/javier-irigoyen.jpeg"
+            <img src="../assets/img/capitulo-I/miembros/javier-irigoyen.jpeg"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
@@ -212,7 +212,7 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/gustavo-aguirre.jpeg"
+            <img src="../assets/img/capitulo-I/miembros/gustavo-aguirre.jpeg"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>
@@ -247,7 +247,7 @@
         </tr>
         <tr>
           <td>
-            <img src="/assets/img/capitulo-I/miembros/Anaely-photo.jpeg"
+            <img src="../assets/img/capitulo-I/miembros/Anaely-photo.jpeg"
                  alt="Miembro Foto Perfil"
                  width="600px"
                  style="border-radius: 12px;"/>

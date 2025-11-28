@@ -897,7 +897,7 @@ Ubicación: `application/outboundservices/acl`
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/c4-bc-workshopOps-component-level.png" alt="BC Workshop Operations & Telemetry Processing Component C4" width=800/>
+<img src="../assets/img/capitulo-IV/c4-bc-workshopOps-component-level.png" alt="BC Workshop Operations & Telemetry Processing Component C4" width=800/>
 
 ---
 #### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
@@ -907,7 +907,7 @@ Ubicación: `application/outboundservices/acl`
 El diagrama de clases ilustra el modelo de dominio del BC Device Management. Define el agregado `Device` como la pieza central, sus Value Objects asociados como `FirmwareVersion` y la enumeración `DeviceStatus`. También especifica los contratos (interfaces) que el dominio expone para la persistencia (`DeviceRepository`), servicios de dominio (`DeviceProvisioner`) y comunicación inter-BC (`ExternalVehicleContextFacade`), manteniendo el núcleo de negocio agnóstico a la implementación tecnológica.
 </p>
 
-<img src="/assets/img/capitulo-IV/DC device.png" alt="BC Device Management Domain Class Diagram"/>
+<img src="../assets/img/capitulo-IV/DC device.png" alt="BC Device Management Domain Class Diagram"/>
 
 <b>2) Agregado y VOs</b>
 - **Device (Aggregate Root)**
@@ -933,7 +933,7 @@ El diagrama de clases ilustra el modelo de dominio del BC Device Management. Def
 El siguiente esquema de base de datos para MySQL soporta la persistencia del agregado `Device`. Está optimizado para consultas comunes, como buscar un dispositivo por su ID de serie o por el vehículo al que está asignado, y asegura la unicidad de los identificadores clave.
 </p>
 
-<img src="/assets/img/capitulo-IV/db segurity.png" alt="BC Device Management Database Design Diagram"/>
+<img src="../assets/img/capitulo-IV/db segurity.png" alt="BC Device Management Database Design Diagram"/>
 
 <b>2) Tablas principales</b>
 - **devices**
@@ -1047,7 +1047,7 @@ Alert Management Controller → Alert Creation Service / Alert Repository Impl
 
 #### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/c4-bc-alerts-component-level.png" alt="BC Communication Component C4" width=800/>
+<img src="../assets/img/capitulo-IV/c4-bc-alerts-component-level.png" alt="BC Communication Component C4" width=800/>
 
 #### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1094,7 +1094,7 @@ Interfaces que definen los puertos de acceso y persistencia:
   - **Operaciones:** `findById(AlertRuleId)`, `findAllActive()`.
 
 
-![Alerting & Management Domain Diagram](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-IV/assets/img/capitulo-IV/diagram%20class%20alerting.png)
+![Alerting & Management Domain Diagram](../assets/img/capitulo-IV/diagram%20class%20alerting.png)
 
 
 ##### 4.2.2.6.2. Bounded Context Database Design Diagram
@@ -1109,7 +1109,7 @@ Sus entidades principales son:
 
 Este modelo soporta la trazabilidad y gestión completa de las alertas dentro del sistema.
 
-![Alerting Database Model](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/capitulo-IV/assets/img/capitulo-IV/data%20base%20alert.png)
+![Alerting Database Model](../assets/img/capitulo-IV/Bounded%20Context%20Database%20Design%20Diagram.png)
 
 ### 4.2.3. Bounded Context: Analytics and Recommendations
 
@@ -1543,7 +1543,7 @@ Ubicación: `application/outboundservices/acl`
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/c4-bc-insights-component-level.png" alt="BC Analytics & Recommendations Container C4" width=800/>
+<img src="../assets/img/capitulo-IV/c4-bc-insights-component-level.png" alt="BC Analytics & Recommendations Container C4" width=800/>
 
 #### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1821,7 +1821,7 @@ Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `p
 
 - WorkshopOps BC: Gestiona las operaciones del taller (Workshop operations) y la ingesta y normalización de datos de telemetría. Para funcionar, este servicio consulta al Payments BC para determinar el plan y los límites aplicables al usuario, y también consulta al IAM BC para verificar la autorización (RBAC) necesaria para sus operaciones.
 
-<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/c4-bc-payments-component-level.png" alt="BC Payments Container C4" width=800/>
+<img src="../assets/img/capitulo-IV/c4-bc-payments-component-level.png" alt="BC Payments Container C4" width=800/>
 
 #### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
 - Este diagrama ilustra el esquema de la base de datos relacional para manejar la información de usuarios, roles y el estado de las suscripciones. El diseño sigue un patrón modular que separa la gestión de la autenticación de la lógica de negocio de las suscripciones.
@@ -1830,7 +1830,7 @@ Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `p
 
 - Tabla de Suscripciones: La tabla subscriptions contiene los detalles de la suscripción de cada usuario. Incluye campos esenciales como user_id (clave foránea), plan_type y status. El campo stripe_subscription_id es crítico, ya que proporciona la referencia externa necesaria para la integración y comunicación con el procesador de pagos Stripe. Las relaciones son: un usuario puede tener muchas suscripciones (1:N), aunque se espera una activa por sistema.
 
-<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/diagrama-clases-payments.jpg" alt="BC Payments class diagram" width=800/>
+<img src="../assets/img/capitulo-IV/diagrama-clases-payments.jpg" alt="BC Payments class diagram" width=800/>
 
 
 #### 4.2.1.6.2. Bounded Context Database Design Diagram
@@ -1845,7 +1845,7 @@ Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `p
 
 - Puntos de Entrada (APIs): El PaymentController expone el endpoint REST para que los clientes inicien el proceso de suscripción creando una checkout session. El StripeWebhookController es el punto de entrada asíncrono, manejando las llamadas entrantes (webhooks) de Stripe para actualizar el estado de la suscripción después de que un pago se haya completado o haya fallado. El flujo de pago principal inicia en el PaymentController y termina de forma asíncrona en el StripeWebhookController.
 
-<img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-IV/assets/img/capitulo-IV/diagrama-base-de-dato.jpg" alt="BC Payments data base diagram" width=800/>
+<img src="../assets/img/capitulo-IV/diagrama-base-de-dato.jpg" alt="BC Payments data base diagram" width=800/>
 
 
 #### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
