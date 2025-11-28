@@ -1592,7 +1592,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
   <li><strong>Duración:</strong> 04:19</li>
 <li><strong>Inicio de la entrevista:</strong> 4:28 min - 8:47 min</li>
   <div style="margin-top: 20px;" align="center">
-                <img src="../assets/img/capitulo-II/entrevista-4.png" alt="Entrevista1IOT" width="1000px">
+                <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/entrevista-4.png" alt="Entrevista1IOT" width="1000px">
         </div>
 
 </ul>
