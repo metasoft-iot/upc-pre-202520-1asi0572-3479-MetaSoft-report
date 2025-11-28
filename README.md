@@ -1234,19 +1234,19 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       SafeCar
       <div style="margin-top: 10px;" align="center">
-        <img src="../assets/img/capitulo-II/safecar-logo.png" alt="SafeCar Logo" width="100px">
+        <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/safecar-logo.png" alt="SafeCar Logo" width="100px">
       </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
     Drivana (LatAm)
     <div style="margin-top: 20px;" align="center">
-        <img src="../assets/img/capitulo-II/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
+        <img src="[https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/drivana-logo.jpeg" alt="Drivana (LatAm) Logo" width="80px">
         </div>
     </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
       OBD-II genéricos + apps
       <div style="margin-top: 10px;" align="center">
-                <img src="../assets/img/capitulo-II/obd-logo.png" alt="OBD-II genéricos + apps Logo" width="100px">
+        <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/obd-logo.png](https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/drivana-logo.jpeg" alt="OBD-II genéricos + apps Logo" width="100px">
             </div>
       </td>
   <td colspan="1" valign="top" style="font-weight: bold;" align="justify">
