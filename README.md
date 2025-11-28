@@ -6153,7 +6153,7 @@ Ubicación: `application/outboundservices/acl`
 El diagrama modela el núcleo de negocio del BC Analytics & Recommendations dentro del monolito. Muestra entidades/agregado, value objects, interfaces (servicios de dominio, repositorios y façade inter-BC), la enumeración de riesgo y los eventos de dominio, con atributos/métodos y alcance (+ público, − privado), así como direcciones y multiplicidades en las relaciones.
 </p>
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/bc-analytics-and-recommendations-domain-class-diagram.png" alt="BC Analytics and Recommendations Domain Class Diagram"/>
+<img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-domain-class-diagram.png" alt="BC Analytics and Recommendations Domain Class Diagram"/>
 
 <b>2) Agregado y entidades (Core Model)</b>
 - **DriverProfile (Aggregate Root)**
@@ -6227,7 +6227,7 @@ Interfaces **del dominio**:
 El esquema relacional define cómo se almacenan los objetos del dominio *Analytics & Recommendations* en **MySQL**. Se ha diseñado para mantener la integridad referencial, permitir consultas eficientes y soportar la evolución del modelo sin comprometer las reglas del dominio.
 </p>
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-IV/bc-analytics-and-recommendations-database-diagram.png" alt="BC Analytics and Recommendations Database Design Diagram"/>
+<img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-database-diagram.png" alt="BC Analytics and Recommendations Database Design Diagram"/>
 
 <b>2) Tablas principales</b>
 - **driver_profiles**
@@ -6739,7 +6739,7 @@ Principios aplicados (wireframe)
 - Accesibilidad: objetivos mínimos 44×44, foco visible, etiquetas claras.
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/wireframe-lp.png" alt="wireframe desktop de la landing page">
+  <img src="/assets/img/capitulo-V/wireframe-lp.png" alt="wireframe desktop de la landing page">
 </p>
 
 ## 5.3.1.3 Estructura Mobile
@@ -6759,7 +6759,7 @@ Principios aplicados (wireframe)
 - Secciones finales apiladas; footer compacto con navegación mínima.
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/wireframe-lp-mobile.png" alt="wireframe mobile de la landing page">
+  <img src="/assets/img/capitulo-V/wireframe-lp-mobile.png" alt="wireframe mobile de la landing page">
 </p>
 
 ### 5.3.2. Landing Page Mock-up
@@ -6792,7 +6792,7 @@ jerarquía tipográfica clara; consistencia de componentes (Card, Button, Input)
 
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mockup-lp.png" alt="wireframe mobile de la landing page">
+  <img src="/assets/img/capitulo-V/mockup-lp.png" alt="wireframe mobile de la landing page">
 </p>
 
 ## 5.3.2.2 Mock‑up Mobile
@@ -6822,7 +6822,7 @@ Principios evidenciados:
 Lectura escaneable, blancos generosos, contenido alineado al container; accesibilidad táctil; orden lógico de tabulación; tipografía con line‑height 1.5.
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mockup-lp-mobile.png" alt="wireframe mobile de la landing page">
+  <img src="/assets/img/capitulo-V/mockup-lp-mobile.png" alt="wireframe mobile de la landing page">
 </p>
 
 
@@ -6846,7 +6846,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - La pantalla de registro para SafeCar muestra un formulario dividido en secciones para una inscripción organizada y eficiente. Los campos están agrupados lógicamente en "Información personal" y "Información del vehículo", lo que facilita que el usuario complete la información necesaria de manera secuencial. Este enfoque por bloques reduce la carga cognitiva y hace que el proceso de registro, que puede ser tedioso, se sienta más manejable y directo. El botón de "Completar Registro" al final cierra el proceso.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Register.png" alt="Imagen de la pantalla de registro de MetaSoft">
+  <img src="/assets/img/capitulo-V/Register.png" alt="Imagen de la pantalla de registro de MetaSoft">
 </p>
 
 - Muestra un formulario de registro extenso que está organizado en bloques temáticos (e.g., Información Personal, Información del Vehículo) para ser secuencial y fácil de completar. Termina con el botón "Completar Registro".
@@ -6855,7 +6855,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - Este wireframe muestra el diseño del panel de control o dashboard. Representa el centro de comando de la plataforma, donde los usuarios pueden obtener una visión general y estratégica de sus datos. Aunque la pantalla está vacía en el wireframe, su propósito es ser un espacio dinámico que presentará resúmenes, gráficos y métricas clave. La estructura de navegación lateral (con íconos para "Reportes", "Verificadores", etc.) es constante, lo que garantiza una transición fluida entre las diferentes secciones y reafirma la coherencia de la plataforma.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Dashboard.png" alt="Imagen del panel de control o dashboard de MetaSoft">
+  <img src="/assets/img/capitulo-V/Dashboard.png" alt="Imagen del panel de control o dashboard de MetaSoft">
 </p>
 
 - Se compone de una barra de navegación lateral con iconos y un gran espacio central vacío reservado para mostrar gráficos, resúmenes y métricas estratégicas. Su objetivo es dar una visión general coherente de los datos.
@@ -6864,7 +6864,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - La vista de Solicitudes es una interfaz para la gestión y supervisión de peticiones. Presenta una tabla con diversas columnas que permiten a los usuarios ver y gestionar las solicitudes de manera organizada. La funcionalidad de búsqueda, los filtros por fecha y los botones para "Eliminar" y "Exportar" demuestran la capacidad de la plataforma para procesar grandes cantidades de datos de forma eficiente, cumpliendo con la misión de transformar datos en conocimiento útil.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Solicitudes.png" alt="Imagen de la pantalla de solicitudes de MetaSoft">
+  <img src="/assets/img/capitulo-V/Solicitudes.png" alt="Imagen de la pantalla de solicitudes de MetaSoft">
 </p>
 
 - El wireframe "Solicitudes - Tracker Mobility" es una interfaz de gestión de peticiones.
@@ -6875,7 +6875,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - Este wireframe de Detalle de orden muestra una vista exhaustiva de una solicitud específica. La información se presenta en bloques o tarjetas que detallan desde la información general y la dirección de entrega hasta los documentos adjuntos. El diseño permite un análisis minucioso y la capacidad de editar la información, con campos para texto, fechas y menús desplegables. Este nivel de detalle es clave para la eficiencia operativa, una de las prioridades de la misión de la startup.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Detalle%20de%20orden.png" alt="Imagen de la pantalla de detalles de la orden de MetaSoft">
+  <img src="/assets/img/capitulo-V/Detalle%20de%20orden.png" alt="Imagen de la pantalla de detalles de la orden de MetaSoft">
 </p>
 
 - El wireframe "Detalle de orden - Tracker Mobility" ofrece una vista exhaustiva de una solicitud o pedido específico.
@@ -6890,14 +6890,14 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - Vista detallada: Al seleccionar un verificador, se accede a su perfil, que incluye opciones para editar la información y secciones colapsables para datos adicionales. Este diseño se enfoca en la gestión individualizada del personal, lo que potencia la eficiencia de los procesos.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Verificadores.png" alt="Imagen de la pantalla de verificadores de MetaSoft">
+  <img src="/assets/img/capitulo-V/Verificadores.png" alt="Imagen de la pantalla de verificadores de MetaSoft">
 </p>
 
 - El wireframe "Verificadores - Tracker Mobility" presenta la Vista de Tabla, optimizada para la gestión masiva de personal. Incluye una gran tabla con capacidad de búsqueda, filtrado y acciones (añadir, eliminar) para administrar un listado claro de todos los verificadores.
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Verificadores2.png" alt="Imagen de la segunda pantalla de verificadores de MetaSoft">
+  <img src="/assets/img/capitulo-V/Verificadores2.png" alt="Imagen de la segunda pantalla de verificadores de MetaSoft">
 </p>
 
 - Este wireframe muestra la Vista Detallada de un verificador específico. Al seleccionar a alguien de la lista, se accede a su perfil individual. Presenta la información en bloques editables en la parte superior y secciones colapsables con datos adicionales en la parte inferior, enfocándose en la gestión individualizada del personal.
