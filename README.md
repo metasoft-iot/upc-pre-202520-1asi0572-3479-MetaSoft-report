@@ -6970,7 +6970,7 @@ Cada uno de los siguientes prototipos resalta los aspectos esenciales de la inte
 #### Pantalla de Login
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-1-login.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="/assets/img/capitulo-V/mock-1-login.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Interfaz de acceso al sistema SafeCar, dividida en dos secciones:
@@ -6983,7 +6983,7 @@ El diseño utiliza una paleta azul y blanca, enfocada en la claridad, accesibili
 #### Pantalla de Registro de Taller
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-2-register.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="/assets/img/capitulo-V/mock-2-register.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Formulario de registro para crear una cuenta de taller en SafeCar.
@@ -6995,7 +6995,7 @@ El diseño mantiene una estructura limpia y ordenada, utilizando tonos azules y 
 #### Pantalla de Gestión de Solicitudes de Servicio
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-3-service.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="/assets/img/capitulo-V/mock-3-service.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Interfaz que permite administrar citas y solicitudes de servicio automotriz de los clientes.
@@ -7008,7 +7008,7 @@ El diseño prioriza la organización y legibilidad mediante el uso de tonos azul
 #### Pantalla de Historial de Servicios
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-4-history.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="/assets/img/capitulo-V/mock-4-history.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Muestra el registro completo de mantenimientos y reparaciones realizados a los vehículos.
@@ -7021,7 +7021,7 @@ El diseño mantiene coherencia visual con el resto del sistema mediante el uso d
 #### Pantalla de Detalle de Cita
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/mock-5-appointment.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="/assets/img/capitulo-V/mock-5-appointment.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Permite visualizar y gestionar la información completa de una solicitud de servicio.
@@ -7064,7 +7064,7 @@ El uso de Figma permitió validar la estructura de navegación y el diseño visu
 
 
 <p align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="/assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 Link: [Prototipo Web App](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202124162_upc_edu_pe/Ee1cZiLNP_dJjL1prSmIih4B1u6ixglswnGvMM2Vo6pt6g?e=NhgeQJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
@@ -8315,80 +8315,80 @@ A continuación se presentan capturas de pantalla de las principales vistas desa
 - **Landing Page:** Página principal with navegación, secciones informativas, planes y contacto
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/hero-landing-page.png" alt="Hero Section - Landing Page SafeCar" width="800"/>
+    <img src="/assets/img/capitulo-VI/hero-landing-page.png" alt="Hero Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 1: Sección Hero de la Landing Page con navegación principal y call-to-action</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/Benefits-landing-page.png" alt="Benefits Section - Landing Page SafeCar" width="800"/>
+    <img src="/assets/img/capitulo-VI/Benefits-landing-page.png" alt="Benefits Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 2: Sección de beneficios destacando las características principales del sistema</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/about-the-app-landing-page.png" alt="About the App Section - Landing Page SafeCar" width="800"/>
+    <img src="/assets/img/capitulo-VI/about-the-app-landing-page.png" alt="About the App Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 3: Sección informativa sobre la aplicación SafeCar</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/plans-landing-page.png" alt="Plans Section - Landing Page SafeCar" width="800"/>
+    <img src="/assets/img/capitulo-VI/plans-landing-page.png" alt="Plans Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 4: Sección de planes y precios con opciones de suscripción</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/testimonials-landing-page.png" alt="Testimonials Section - Landing Page SafeCar" width="800"/>
+    <img src="/assets/img/capitulo-VI/testimonials-landing-page.png" alt="Testimonials Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 5: Sección de testimonios de usuarios</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/contact-us-landing-page.png" alt="Contact Us Section - Landing Page SafeCar" width="800"/>
+    <img src="/assets/img/capitulo-VI/contact-us-landing-page.png" alt="Contact Us Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 6: Sección de contacto con formulario y información de contacto</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/about-the-team-landing-page.png" alt="About the Team Section - Landing Page SafeCar" width="800"/>
+    <img src="/assets/img/capitulo-VI/about-the-team-landing-page.png" alt="About the Team Section - Landing Page SafeCar" width="800"/>
     <p><em>Figura 7: Sección sobre el equipo de desarrollo MetaSoft</em></p>
   </div>
 
 - **Autenticación:** Formularios de login y registro de usuarios
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/login-web-application.png" alt="Login Interface - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/login-web-application.png" alt="Login Interface - SafeCar Web Application" width="800"/>
     <p><em>Figura 8: Interfaz de inicio de sesión de la aplicación web SafeCar</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sign-up-web-application.png" alt="Sign Up Interface - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/sign-up-web-application.png" alt="Sign Up Interface - SafeCar Web Application" width="800"/>
     <p><em>Figura 9: Interfaz de registro de usuarios de la aplicación web SafeCar</em></p>
   </div>
 
 - **Gestión de Citas:** Interfaces para programación, visualización y detalles de citas de mantenimiento
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/appointments-web-application.png" alt="Appointments Management - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/appointments-web-application.png" alt="Appointments Management - SafeCar Web Application" width="800"/>
     <p><em>Figura 10: Módulo de gestión de citas de mantenimiento</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/appointment-detail-web-application.png" alt="Appointment Detail - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/appointment-detail-web-application.png" alt="Appointment Detail - SafeCar Web Application" width="800"/>
     <p><em>Figura 11: Vista detallada de cita de mantenimiento</em></p>
   </div>
 
 - **Historial de Reparaciones:** Módulo de seguimiento y consulta del historial vehicular
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-history-web-application.png" alt="Vehicle History - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/vehicle-history-web-application.png" alt="Vehicle History - SafeCar Web Application" width="800"/>
     <p><em>Figura 12: Módulo de historial de reparaciones vehiculares</em></p>
   </div>
 
 - **Gestión de Vehículos:** Panel principal de administración de vehículos
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-management-web-application.png" alt="Vehicle Management - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/vehicle-management-web-application.png" alt="Vehicle Management - SafeCar Web Application" width="800"/>
     <p><em>Figura 13: Panel de gestión de vehículos</em></p>
   </div>
 
   <div align="center">
-    <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/vehicle-detail-web-application.png" alt="Vehicle Detail - SafeCar Web Application" width="800"/>
+    <img src="/assets/img/capitulo-VI/vehicle-detail-web-application.png" alt="Vehicle Detail - SafeCar Web Application" width="800"/>
     <p><em>Figura 14: Vista detallada de vehículo con información completa</em></p>
   </div>
 
@@ -8502,13 +8502,13 @@ Se desplegaron ambos componentes en plataformas específicas según sus caracter
 **Landing Page - GitHub Pages:**
 
 <div align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/deploy-landing-page.png" alt="Deploy Landing Page - GitHub Pages" width="800"/>
+  <img src="/assets/img/capitulo-VI/deploy-landing-page.png" alt="Deploy Landing Page - GitHub Pages" width="800"/>
 </div>
 
 **Aplicación Web - Netlify:**
 
 <div align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
+  <img src="/assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
 </div>
 
 
@@ -8534,14 +8534,14 @@ Los datos extraídos de GitHub proporcionan una perspectiva cuantitativa de la c
 **GitHub Pulse - Actividad del Repositorio:**
 
 <figure align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint-1-pulse-landing-page.png" alt="GitHub Pulse Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
+  <img src="/assets/img/capitulo-VI/sprint-1-pulse-landing-page.png" alt="GitHub Pulse Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 20.</strong> Analíticos de Pulse del repositorio Landing Page mostrando la actividad de commits, pull requests y colaboradores durante el Sprint 1.</figcaption>
 </figure>
 
 **Contributors - Participación del Equipo:**
 
 <figure align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint-1-contribuitors-landing-page.png" alt="GitHub Contributors Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
+  <img src="/assets/img/capitulo-VI/sprint-1-contribuitors-landing-page.png" alt="GitHub Contributors Analytics - Landing Page Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 21.</strong> Analíticos de Contributors del repositorio Landing Page detallando las contribuciones individuales por miembro del equipo, incluyendo commits y líneas de código modificadas.</figcaption>
 </figure>
 
@@ -8550,14 +8550,14 @@ Los datos extraídos de GitHub proporcionan una perspectiva cuantitativa de la c
 **GitHub Pulse - Actividad del Repositorio:**
 
 <figure align="center">
-  <img src"https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint-1-pulse-web-application.png" alt="GitHub Pulse Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
+  <img src"/assets/img/capitulo-VI/sprint-1-pulse-web-application.png" alt="GitHub Pulse Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 22.</strong> Analíticos de Pulse del repositorio Web Application mostrando la frecuencia de actividad, distribución temporal de commits y participación activa del equipo durante el sprint.</figcaption>
 </figure>
 
 **Contributors - Participación del Equipo:**
 
 <figure align="center">
-  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/sprint-1-contributors-web-application.png" alt="GitHub Contributors Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
+  <img src="/assets/img/capitulo-VI/sprint-1-contributors-web-application.png" alt="GitHub Contributors Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 23.</strong> Analíticos de Contributors del repositorio Web Application evidenciando las contribuciones específicas de cada miembro, incluyendo commits realizados y volumen de código desarrollado.</figcaption>
 </figure>
 
@@ -12993,9 +12993,9 @@ La imagen que se muestra a continuación presenta la Aplicación Web desplegada 
 Las imagenes que se muestra a continuación presenta la Aplicación Móvil desplegada en Firebase Hosting: se observa la URL pública, el estado del deploy y los registros del build (logs). Esta evidencia confirma que la Mobile App fue construida y publicada correctamente, está accesible públicamente y consume las APIs del Backend para mostrar datos operativos.
 </p>
 
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/safecar-mobile-deploy-evidence1.png" alt="Deploy Mobile Evidence 1 - Firebase" width="800"/>
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/safecar-mobile-deploy-evidence2.png" alt="Deploy Mobile Evidence 2 - Firebase" width="800"/>
-<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-VI/safecar-mobile-deploy-evidence3.png" alt="Deploy Mobile Evidence 3 - Firebase" width="800"/>
+<img src="/assets/img/capitulo-VI/safecar-mobile-deploy-evidence1.png" alt="Deploy Mobile Evidence 1 - Firebase" width="800"/>
+<img src="/assets/img/capitulo-VI/safecar-mobile-deploy-evidence2.png" alt="Deploy Mobile Evidence 2 - Firebase" width="800"/>
+<img src="/assets/img/capitulo-VI/safecar-mobile-deploy-evidence3.png" alt="Deploy Mobile Evidence 3 - Firebase" width="800"/>
 
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
