@@ -7513,7 +7513,7 @@ Durante el Sprint 1, el equipo organizó el trabajo en ocho aspectos principales
 #### 6.2.1.3. Sprint Backlog 1
 
 <p align="justify">
-
+En esta sección se presenta el Sprint Backlog definido para el primer sprint, detallando las historias de usuario seleccionadas y el desglose de tareas técnicas necesarias para su implementación, junto con las asignaciones y estimaciones correspondientes.
 </p>
 
 <table width="100%">
@@ -8765,7 +8765,7 @@ Para el Sprint 2, el equipo organizó el trabajo bajo un enfoque de Domain-Drive
 
 #### 6.2.2.3. Sprint Backlog 2
 <p align="justify">
-
+A continuación se detalla el Sprint Backlog del segundo sprint, el cual incluye las nuevas historias de usuario priorizadas y las tareas de refactorización y mejora identificadas, asignando responsables y tiempos estimados para asegurar el cumplimiento de los objetivos de la iteración.
 </p>
 
 <table width="100%">
@@ -12203,6 +12203,10 @@ Durante el Sprint 1, el equipo realizó avances significativos en la implementac
 
 #### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
+<p align="justify">
+Esta sección deja constancia de que, durante el Sprint 2, no se desarrollaron ni ejecutaron pruebas unitarias ni automatizadas debido a restricciones de tiempo. La implementación de la Testing Suite y la generación de evidencia de calidad quedan planificadas como actividad prioritaria para el Sprint 3.
+</p>
+
 #### 6.2.2.6. Execution Evidence for Sprint Review
 
 <p align="justify">
@@ -12966,7 +12970,15 @@ Durante el Sprint 2 se concentró el esfuerzo de desarrollo en la consolidación
 
 #### 6.2.2.7. Services Documentation Evidence for Sprint Review
 
+<p align="justify">
+A continuación se presenta la evidencia de la documentación de servicios actualizada para el Sprint 2, reflejando los nuevos endpoints implementados y las modificaciones en los contratos de API existentes para soportar las nuevas funcionalidades de los Bounded Contexts.
+</p>
+
 #### 6.2.2.8. Software Deployment Evidence for Sprint Review
+
+<p align="justify">
+En esta sección se muestran las evidencias del despliegue de los componentes de software correspondientes al Sprint 2. Se incluyen capturas de los entornos de producción y staging para el backend, la aplicación web y la aplicación móvil, verificando su disponibilidad y correcta configuración en las plataformas de hosting seleccionadas.
+</p>
 
 <b>Backend Services (SafeCar API)</b>
 
@@ -12999,6 +13011,10 @@ Las imagenes que se muestra a continuación presenta la Aplicación Móvil despl
 
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
+<p align="justify">
+Finalmente, se presentan los insights de colaboración del equipo durante el Sprint 2, basados en las métricas de contribución y actividad de los repositorios. Este análisis permite evaluar la distribución del esfuerzo y la efectividad de la comunicación técnica entre los miembros del equipo en la implementación de la arquitectura distribuida.
+</p>
+
 6.3.2. Sprint 3
 
 6.3.2.1. Sprint Planning 3
@@ -13010,6 +13026,57 @@ Las imagenes que se muestra a continuación presenta la Aplicación Móvil despl
 6.3.2.4. Development Evidence for Sprint Review
 
 6.3.2.5. Testing Suite Evidence for Sprint Review
+<p align="justify">
+Esta sección documenta la evidencia de las actividades de aseguramiento de calidad realizadas durante el Sprint 3. Se incluyen los resultados de las pruebas unitarias ejecutadas para validar los nuevos componentes del backend asegurando la robustez de los servicios críticos como autenticación y gestión de vehículos.
+</p>
+
+**Pruebas Unitarias**
+
+<table width="100%">
+  <tr>
+    <td width="70%">
+      Se realizaron a continuacion las pruebas unitarias respetando la arquitectura de carpetas Domain Driven Design (DDD) y los nombres de los archivos finalizando con el postfijo <code>Test</code>.
+    </td>
+    <td width="30%" align="right">
+      <img src="assets/img/capitulo-VI/sprint-3/unit-test.png" alt="Unit Tests Evidence" width="300"/>
+    </td>
+  </tr>
+</table>
+
+<table width="100%">
+  <tr>
+    <th width="50%">Resultado de las Pruebas Unitarias</th>
+    <th width="30%">Descripción</th>
+    <th width="20%">Resultado</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/unit-test-evidence1.png" alt="Unit Tests Evidence 1" width="100%"/>
+    </td>
+    <td align="justify">
+      Evidencia de las pruebas unitarias del controlador de Drivers, verificando la creación, actualización, listado y eliminación de conductores. Se valida que las respuestas HTTP sean correctas, que la lógica de negocio se ejecute según lo esperado y que no se produzcan errores durante la ejecución de los endpoints.
+    </td>
+    <td align="center">Todo los test pasaron correctamente.</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/unit-test-evidence2.png" alt="Unit Tests Evidence 2" width="100%"/>
+    </td>
+    <td align="justify">
+      Evidencia de las pruebas unitarias del controlador de Vehicles, donde se comprueba el registro, consulta y actualización de vehículos asociados a los conductores y talleres. Las pruebas aseguran que los servicios de gestión de vehículos respondan con el formato y los códigos de estado HTTP esperados.
+    </td>
+    <td align="center">Todo los test pasaron correctamente.</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/unit-test-evidence3.png" alt="Unit Tests Evidence 3" width="100%"/>
+    </td>
+    <td align="justify">
+      Evidencia de las pruebas unitarias del controlador de Workshops, enfocadas en la creación, edición y consulta de talleres registrados en la plataforma. Se valida que las operaciones sobre talleres se procesen correctamente y que el backend mantenga la integridad de la información expuesta por los endpoints.
+    </td>
+    <td align="center">Todo los test pasaron correctamente.</td>
+  </tr>
+</table>
 
 6.3.2.6. Execution Evidence for Sprint Review
 
