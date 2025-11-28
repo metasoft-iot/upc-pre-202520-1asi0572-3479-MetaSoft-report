@@ -14,7 +14,6 @@
 
 ## Relación de integrantes:
 
-**Janover Gonzalo Saldaña Vela — U20201B510**  
 **Hardie Alfonso Holguin Gamarra — U202220250**  
 **Javier Kenyi Mendoza Solis — U201824550**  
 **Gustavo Jandroel Aguirre Rodríguez — U202124162**  
