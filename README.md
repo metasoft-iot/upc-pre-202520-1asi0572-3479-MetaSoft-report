@@ -1638,7 +1638,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="../assets/img/capitulo-II/entrevista-3.png" alt="screenshot entrevista 3" width="600px">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/entrevista-3.png" alt="screenshot entrevista 3" width="600px">
 </div>
 <p align="justify">
 <strong>Resumen:</strong> James, 26 años, conductor que combina taxi y delivery, realiza mantenimiento preventivo cada 5,000 km o cada 3 meses, aunque a veces se retrasa por carga de trabajo; el último año afrontó una falla de bomba de agua que lo dejó parado, costos elevados y pérdida de tiempo para coordinar citas. Suele detectar necesidades por kilometraje, ruidos o luces del tablero, y probó un OBD2 con app tipo Torque, útil pero inestable y poco claro con los códigos. Estimó un gasto anual de S/3,200 a S/3,500. En una app como SafeCar valora primero alertas preventivas basadas en uso real, luego conexión con talleres de confianza, recomendaciones personalizadas e historial digital. Pagaría S/15 a S/25 mensuales si obtiene ahorros, descuentos y prioridad. Prefiere avisos urgentes por WhatsApp, notificaciones en la app y un correo mensual. Le frustra la poca transparencia en presupuestos, las demoras sin aviso y explicaciones técnicas confusas. Su “función ideal” sería lectura OBD2 con predicción de fallas, cotización inmediata en talleres cercanos, agenda y seguimiento en tiempo real, almacenamiento de facturas/garantías y recordatorios de SOAT y revisión técnica; usa Chrome en el móvil, a veces Firefox en laptop, y Android (Xiaomi) con doble SIM.
@@ -1662,7 +1662,7 @@ Este diseño sigue buenas prácticas, buscando recopilar datos demográficos (ed
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="../assets/img/capitulo-II/entrevista-taller-holguin.png" alt="screenshot entrevista 1" width="600px">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/entrevista-taller-holguin.png" alt="screenshot entrevista 1" width="600px">
 </div>
 <p align="justify">
 <strong>Resumen:</strong> Abel Holguín, es un supervisor de taller  de 59 años con 27 años de experiencia en el sector, de perfil metodico. Está trabajando en la zona de Santa Catalina, La Victoria. Su taller ya integra tecnología en sus operaciones diarias: utiliza escáneres y computadoras para diagnosticar vehículos modernos (un proceso que toma en promedio 15-20 minutos) y mantiene un historial digital de cada vehículo accesible por número de placa. Para la gestión de clientes, su principal canal de comunicación y agendamiento de citas es WhatsApp.
@@ -1685,7 +1685,7 @@ El principal reto que enfrenta Abel es la brecha de conocimiento de su personal 
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="../assets/img/capitulo-II/entrevista-2.png" alt="screenshot entrevista 2" width="600px">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/entrevista-2.png" alt="screenshot entrevista 2" width="600px">
 </div>
 <p align="justify">
 <strong>Resumen:</strong> Germán Figueroa, dueño de un taller mediano en Los Olivos, con perfil adaptable y paciente. Vive con el “día a día” del oficio: fallas intermitentes que quitan tiempo, clientes que no llegan a la cita y la eterna búsqueda del historial del auto. Se apoya sobre todo en WhatsApp Business, algo de Facebook/Instagram y planillas en Google Sheets, pero siente que todo está disperso. Lo que más valora de una solución como SafeCar es tener el historial por placa/VIN con fotos, repuestos y diagnósticos en un solo lugar, reportes que le avisen qué autos están por mantener y recordatorios por WhatsApp para reducir ausencias. Si realmente le ahorra 1–2 horas diarias, pagaría S/200–S/300 al mes; mejor aún si integra WhatsApp, facturación y catálogo de repuestos, y trae soporte inicial para su equipo. Sueña con alertas claras (“crítica”, “atención”, “preventiva”) que muestren evidencia simple —“batería baja”, “temperatura anormal” para confirmar la cita rápidamente y recibir el auto ya con el camino marcado: menos adivinanzas, más confianza y eficiencia.
@@ -1709,7 +1709,7 @@ El principal reto que enfrenta Abel es la brecha de conocimiento de su personal 
 </ul>
 
 <div style="margin-top: 10px;" align="center">
-  <img src="../assets/img/capitulo-II/entrevista-taller-lizzo.png" alt="screenshot entrevista 3" width="600px">
+  <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/entrevista-taller-lizzo.png" alt="screenshot entrevista 3" width="600px">
 </div>
 
 <p align="justify">
@@ -1727,7 +1727,7 @@ Identifican como principales problemáticas la falta de control sobre los diagn�
 Coinciden en que una solución ideal debe ser fácil de usar, confiable y accesible, permitiendo gestionar mantenimientos sin depender de la intuición o del criterio de terceros. Además, destacan el valor de canales de comunicación directos como WhatsApp que simplifiquen el seguimiento y fortalezcan la transparencia en cada servicio.
 
 <div style="margin-top: 20px;" align="center">
-                <img src="../assets/img/capitulo-II/Prioridades del segmento Conductores.png" alt="Prioridades del segmento Conductores" width="1000px">
+                <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/Prioridades del segmento Conductores.png" alt="Prioridades del segmento Conductores" width="1000px">
         </div>
 
 **Talleres mecánicos**
@@ -1741,7 +1741,7 @@ Ven en SafeCar una herramienta de apoyo técnico y organizacional, capaz de cent
 En conjunto, los talleres consideran que una solución como SafeCar puede aumentar la productividad, optimizar recursos y profesionalizar la atención, siempre que incluya capacitación, soporte inicial y compatibilidad con los canales de comunicación que ya utilizan.
 
 <div style="margin-top: 20px;" align="center">
-                <img src="../assets/img/capitulo-II/Prioridades del segmento Talleres mecánicos.png" alt="Prioridades del segmento Talleres mecánicos" width="1000px">
+                <img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/Prioridades del segmento Talleres mecánicos.png" alt="Prioridades del segmento Talleres mecánicos" width="1000px">
         </div>
 
 ## 2.3. Needfinding
@@ -1756,14 +1756,14 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 
 <p align="justify"> Este segmento representa a los conductores de vehículos particulares que pueden usar su auto tanto para fines personales como laborales. Incluye a quienes trabajan en taxi (por aplicativo o tradicional), en servicios de delivery o simplemente utilizan su automóvil como medio de transporte propio y familiar. En todos los casos, el vehículo es un recurso vital cuya disponibilidad impacta en su economía o bienestar. Sus principales preocupaciones giran en torno a la reducción de gastos inesperados, la seguridad en carretera y la facilidad de acceder a talleres confiables. Valoran especialmente soluciones digitales simples que les ayuden a anticipar fallas, recibir recordatorios de mantenimiento y prolongar la vida útil de su vehículo. </p>
 
-<img src="../assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/user-persona-driver.png" alt="User Persona - Conductor" width="700"/>
 
 
 <br/><b>Segmento: Talleres mecánicos</b>
 
 <p align="justify"> Este segmento corresponde a propietarios y trabajadores de talleres mecánicos independientes o de tamaño mediano. Son profesionales con experiencia práctica en diagnóstico y reparación de vehículos, pero que en muchos casos carecen de soluciones digitales para agilizar sus procesos. Su principal desafío es optimizar el tiempo de diagnóstico, fidelizar a los clientes y adaptarse a nuevas tecnologías que les permitan mejorar la eficiencia de su negocio. </p>
 
-<img src="../assets/img/capitulo-II/user-persona-mechanic.png" alt="User Persona - Mecánico" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/user-persona-mechanic.png" alt="User Persona - Mecánico" width="700"/>
 
 ### 2.3.2. User Task Matrix
 
@@ -1882,24 +1882,24 @@ Las User Personas permiten representar arquetipos basados en los segmentos objet
 <strong>User Journey Map - Conductor particular(personal, taxi y delivery)</strong>
 <p align="justify"> El journey del conductor comienza cuando detecta señales de problemas en su vehículo (luces en el tablero, ruidos extraños o fallas inesperadas). A partir de allí, pasa por etapas como la búsqueda de un taller, la coordinación de una cita, el tiempo de espera por diagnóstico y reparación, y finalmente la entrega del vehículo. Durante este proceso, las emociones del conductor oscilan entre la <em>ansiedad</em> por los costos imprevistos, la <em>frustración</em> por los tiempos de espera y la <em>incertidumbre</em> respecto a la confiabilidad del taller, con pocos momentos de satisfacción. Este recorrido muestra claras oportunidades de mejora en la anticipación de fallas, en la transparencia de los costos y en la confiabilidad del servicio. </p>
 
-<img src="../assets/img/capitulo-II/journey-map-driver.png" alt="User Journey Map - Conductor" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/journey-map-driver.png" alt="User Journey Map - Conductor" width="700"/>
 
 
 <br/><strong>User Journey Map - Taller mecánico independiente/mediano</strong>
 <p align="justify"> En el caso de los talleres mecánicos, el journey se inicia cuando reciben un vehículo sin información previa o historial digital del mismo. Esto genera un proceso más largo y dependiente de inspecciones manuales, pruebas de manejo o escaneo básico. El mecánico debe diagnosticar la falla, comunicarla al cliente, esperar su aprobación y recién proceder a la reparación. Las emociones predominantes en el taller van desde la <em>presión</em> por entregar el vehículo en el menor tiempo posible, hasta la <em>frustración</em> por la falta de datos y la desconfianza de algunos clientes frente a los diagnósticos. Las oportunidades detectadas in◊cluyen la posibilidad de acceder a reportes digitales de fallas, contar con historiales de mantenimiento previos y reducir los tiempos de diagnóstico. </p>
 
-<img src="../assets/img/capitulo-II/journey-map-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/journey-map-mechanic.png" alt="User Journey Map - Mecánico" width="700"/>
 
 ### 2.3.4. Empathy Mapping
 <p align="justify"> Los <em>Empathy Maps</em> permiten profundizar en la comprensión de los <strong>User Personas</strong> definidos para SafeCar, capturando no solo sus acciones y necesidades, sino también sus percepciones, emociones, frustraciones y expectativas. En esta sección se presentan los mapas elaborados en la herramienta indicada, vinculados a cada uno de los segmentos objetivo (Conductores Particulares y Talleres Mecánicos). </p>
 
 <strong>Empathy Mapping - Conductor particular(personal, taxi y delivery)</strong>
 <p align="justify"> Este mapa refleja el día a día de los conductores que utilizan su vehículo como recurso principal, ya sea para uso personal, trabajo en taxi o delivery. Sus emociones y decisiones giran en torno a la necesidad de mantener el automóvil siempre operativo, ya que cualquier avería implica costos elevados y pérdida de ingresos. A través del empathy map se evidencian sus motivaciones, frustraciones y lo que dicen, ven, piensan y escuchan en relación al mantenimiento de sus vehículos. </p>
-<img src="../assets/img/capitulo-II/empathy-map-driver.png" alt="Empathy Map - Conductor" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/empathy-map-driver.png" alt="Empathy Map - Conductor" width="700"/>
 
 <br/><strong>Empathy Mapping - Taller mecánico independiente/mediano</strong>
 <p align="justify"> Este mapa refleja el día a día de los conductores que utilizan su vehículo como recurso principal, ya sea para uso personal, trabajo en taxi o delivery. Sus emociones y decisiones giran en torno a la necesidad de mantener el automóvil siempre operativo, ya que cualquier avería implica costos elevados y pérdida de ingresos. A través del empathy map se evidencian sus motivaciones, frustraciones y lo que dicen, ven, piensan y escuchan en relación al mantenimiento de sus vehículos. </p>
-<img src="../assets/img/capitulo-II/empathy-map-mechanic.png" alt="Empathy Map - Mecánico" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/empathy-map-mechanic.png" alt="Empathy Map - Mecánico" width="700"/>
 
 ## 2.4. Big Picture EventStorming
 
@@ -1916,7 +1916,7 @@ Enlace de acceso a Miro (EventStorming): <a href="https://miro.com/app/board/uXj
 Este paso consiste en identificar todos los eventos del dominio de manera libre y sin orden específico. Los participantes generan eventos en formato pasado ("algo pasó") para capturar toda la actividad relevante del ecosistema SafeCar.
 </p>
 
-<img src="../assets/img/capitulo-II/unstructured-exploration.png" alt="Step 1:Unstructured Exploration" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/unstructured-exploration.png" alt="Step 1:Unstructured Exploration" width="700"/>
 
 #### Step 2: Timelines
 
@@ -1924,7 +1924,7 @@ Este paso consiste en identificar todos los eventos del dominio de manera libre 
 Se organizan los eventos identificados en orden cronológico para crear flujos de trabajo coherentes. Este paso establece la secuencia temporal de los procesos de mantenimiento vehicular.
 </p>
 
-<img src="../assets/img/capitulo-II/timelines-event-storming.png" alt="Step 2:Timelines" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/timelines-event-storming.png" alt="Step 2:Timelines" width="700"/>
 
 #### Step 3: Paint Points
 
@@ -1932,7 +1932,7 @@ Se organizan los eventos identificados en orden cronológico para crear flujos d
 Se identifican los puntos problemáticos o fricciones en el proceso actual. Estos representan oportunidades de mejora que SafeCar puede abordar con su solución tecnológica.
 </p>
 
-<img src="../assets/img/capitulo-II/paint-points-event-storming.png" alt="Step 3:Paint Points" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/paint-points-event-storming.png" alt="Step 3:Paint Points" width="700"/>
 
 #### Step 4: Pivotal Points
 
@@ -1940,7 +1940,7 @@ Se identifican los puntos problemáticos o fricciones en el proceso actual. Esto
 Se marcan los eventos críticos que determinan el éxito o fracaso del proceso. Son los momentos clave donde las decisiones tienen mayor impacto en el resultado.
 </p>
 
-<img src="../assets/img/capitulo-II/pivotal-points-event-storming.png" alt="Step 4:Pivotal Points" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/pivotal-points-event-storming.png" alt="Step 4:Pivotal Points" width="700"/>
 
 #### Step 5: Commands
 
@@ -1948,7 +1948,7 @@ Se marcan los eventos críticos que determinan el éxito o fracaso del proceso. 
 Se definen las acciones o comandos que desencadenan los eventos del sistema. Representan las intenciones de usuarios y sistemas que inician procesos específicos.
 </p>
 
-<img src="../assets/img/capitulo-II/commands-event-storming.png" alt="Step 5:Commands" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/commands-event-storming.png" alt="Step 5:Commands" width="700"/>
 
 #### Step 6: Policies
 
@@ -1956,7 +1956,7 @@ Se definen las acciones o comandos que desencadenan los eventos del sistema. Rep
 Se establecen las reglas de negocio que determinan cuándo y cómo se ejecutan procesos automáticos. Son las políticas que gobiernan el comportamiento del sistema.
 </p>
 
-<img src="../assets/img/capitulo-II/policies-event-storming.png" alt="Step 6:Policies" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/policies-event-storming.png" alt="Step 6:Policies" width="700"/>
 
 #### Step 7: Read Models
 
@@ -1970,7 +1970,7 @@ Se identifican las vistas de información que los usuarios necesitan para tomar 
 Se mapean los sistemas externos con los que SafeCar debe integrarse. Incluye APIs, servicios de terceros y sistemas existentes necesarios para el funcionamiento completo.
 </p>
 
-<img src="../assets/img/capitulo-II/external-systems-event-storming.png" alt="Step 8:External Systems" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/external-systems-event-storming.png" alt="Step 8:External Systems" width="700"/>
 
 #### Step 9: Aggregates
 
@@ -1978,7 +1978,7 @@ Se mapean los sistemas externos con los que SafeCar debe integrarse. Incluye API
 Se definen las entidades de dominio que encapsulan comportamientos y datos relacionados. Son los objetos principales del negocio que mantienen consistencia interna.
 </p>
 
-<img src="../assets/img/capitulo-II/aggregates-event-storming.png" alt="Step 9:Aggregates" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/aggregates-event-storming.png" alt="Step 9:Aggregates" width="700"/>
 
 #### Step 10: Bounded Contexts
 
@@ -1986,7 +1986,7 @@ Se definen las entidades de dominio que encapsulan comportamientos y datos relac
 Se establecen los contextos delimitados que agrupan funcionalidades relacionadas. Define las fronteras claras entre diferentes áreas de responsabilidad del sistema.
 </p>
 
-<img src="../assets/img/capitulo-II/bounded-contexts-event-storming.png" alt="Step 10:Bounded Contexts" width="700"/>
+<img src="https://github.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-II/assets/img/capitulo-II/bounded-contexts-event-storming.png" alt="Step 10:Bounded Contexts" width="700"/>
 
 ## 2.5. Ubiquitous Language
 
