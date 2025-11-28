@@ -12985,7 +12985,7 @@ La imagen muestra a continuación la SafeCar API ejecutándose correctamente en 
 <p align="justify">
 La imagen que se muestra a continuación presenta la Aplicación Web desplegada en Netlify: se observa la URL pública, el estado del deploy y los registros del build (logs). Esta evidencia confirma que la Web App fue construida y publicada correctamente, está accesible públicamente y consume las APIs del Backend para mostrar datos operativos (órdenes, telemetría y alertas) a usuarios de talleres y administradores.
 </p>
-<img src="../assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
+<img src="/assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
 
 <b>Mobile Web Application</b>
 
