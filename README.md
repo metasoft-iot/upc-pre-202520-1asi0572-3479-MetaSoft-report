@@ -7031,8 +7031,6 @@ Incluye campos para observaciones y opciones para cambiar el técnico responsabl
 El diseño utiliza tarjetas organizadas y colores contrastantes para resaltar secciones clave, manteniendo la coherencia visual del sistema SafeCar.
 
 
-
-
 ### 5.4.4. Applications User Flow Diagrams
 
 ## **5.5. Applications Prototyping**
@@ -7060,8 +7058,6 @@ El prototipo muestra los principales flujos de la aplicación, incluyendo:
 - Visualización del historial de servicios y vehículos.
 
 El uso de Figma permitió validar la estructura de navegación y el diseño visual antes de la implementación final del sistema web.
-
-
 
 <p align="center">
   <img src="assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
@@ -13015,9 +13011,87 @@ Las imagenes que se muestra a continuación presenta la Aplicación Móvil despl
 Finalmente, se presentan los insights de colaboración del equipo durante el Sprint 2, basados en las métricas de contribución y actividad de los repositorios. Este análisis permite evaluar la distribución del esfuerzo y la efectividad de la comunicación técnica entre los miembros del equipo en la implementación de la arquitectura distribuida.
 </p>
 
-6.3.2. Sprint 3
+### 6.3.2. Sprint 3
 
-6.3.2.1. Sprint Planning 3
+#### 6.3.2.1. Sprint Planning 3
+
+<p align="justify">
+El Sprint 3 marca el inicio del proceso de desarrollo del servicio Edge para el proyecto SafeCar, al mismo tiempo el desarrollo de los prototipos del sistema embebido y su transmisión de datos a la plataforma.
+</p>
+
+<table width="100%">
+    <tr>
+        <th>Sprint #</th>
+        <th>Sprint 3</th>
+    </tr>
+    <tr>
+        <td colspan="2">Sprint Planning Background</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>2025-11-10</td>
+    </tr>
+    <tr>
+        <td>Time</td>
+        <td>10:20 AM</td>
+    </tr>
+    <tr>
+        <td>Location</td>
+        <td align="justify">
+        La reunión fue llevada a cabo de manera virtual mediante la plataforma de Google Meet.
+        </td>
+    </tr>
+    <tr>
+        <td>Prepared By</td>
+        <td>
+        Zavala Quedena, Gonzalo Andre
+        </td>
+    </tr>
+    <tr>
+        <td>Attendees (to planning meeting)</td>
+        <td>
+        Zavala Quedena, Gonzalo Andre / Holguin Gamarra, Hardie Alfonso / Mendoza Solis, Javier Kenyi / Aguirre Rodríguez, Gustavo Jandroel / Irigoyen Matos, Javier Sharvel / Burga Loarte, Anaely Zarely
+        </td>
+    </tr>
+    <tr>
+      <td>Sprint - Review Summary</td>
+      <td align="justify">
+        El Sprint 2 consiguió desplegar la primera versión funcional del backend conectando las capacidades de gestión de cuentas y vehículos con la Web App, permitiendo que los usuarios se registren, inicien sesión y administren información básica de sus vehículos sobre una API unificada. Se avanzó en la definición de endpoints para citas y asociación de vehículos a talleres, y se establecieron pipelines iniciales de despliegue para el backend y la aplicación web. La aplicación móvil incorporó pantallas de autenticación y listado de vehículos, aunque aún operando en su mayoría con datos simulados. Se mantuvieron como pendientes la integración de la capa Edge para telemetría en tiempo real, la exposición de recomendaciones basadas en datos del vehículo, el ajuste de la landing a los segmentos “talleres” y “conductores” y la ausencia de pruebas automatizadas, que por capacidad y tiempos no pudieron ser abordadas en esta iteración.
+      </td>
+    </tr>
+    <tr>
+      <td>Sprint - Retrospective Summary</td>
+      <td align="justify">
+        En la retrospectiva del Sprint 2 el equipo reconoció mejoras respecto al primer sprint, especialmente en la adopción de GitFlow, el uso de ramas de feature y la introducción de revisiones por Pull Request, lo que redujo conflictos en <code>main</code> y facilitó el seguimiento de cambios. No obstante, se identificaron como puntos débiles la sobreestimación de la capacidad (al comprometer 86 Story Points y completar menos de lo planificado), la concentración de trabajo complejo en pocos integrantes de backend, historias excesivamente grandes que dificultaron el flujo y la imposibilidad de implementar la batería de pruebas planificada. Como mejoras accionables se acordó acotar el alcance del Sprint 3 a un flujo vertical end-to-end centrado en telemetría y recomendaciones, dividir las historias técnicas en incrementos más pequeños, proteger bloques de tiempo para la integración Edge–backend–Web/Mobile y priorizar la documentación mínima y las pruebas básicas de integración sobre nuevas funcionalidades accesorias.
+      </td>
+    </tr>
+    <tr>
+        <td colspan="2">Sprint Goal & User Stories</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Sprint 3 Goal</td>
+        <td align="justify">
+          <strong>Nuestro enfoque está en</strong> habilitar el flujo end-to-end de datos telemétricos desde el sistema embebido (ESP32 y sensores) hacia el backend de SafeCar mediante el servicio Edge, para que dichos datos puedan ser consumidos por la aplicación web, la aplicación móvil y los talleres, al mismo tiempo que refinamos la web de negocio para comunicar claramente la propuesta de valor tanto a talleres mecánicos como a conductores.
+          <br><br>
+          <strong>Creemos que esto permite</strong> que los conductores reciban recomendaciones concretas sobre el estado de su vehículo y próximos mantenimientos basadas en datos reales, y que los talleres visualicen las lecturas telemétricas y recomendaciones asociadas a cada vehículo para acelerar el diagnóstico y la planificación de servicios. Además, brinda al equipo de desarrollo una base estable para incorporar nuevas capacidades de análisis y comunicación (por ejemplo, futuros módulos de Alerts) sin re-trabajar la integración con el hardware.
+          <br><br>
+          <strong>Esto se confirmará cuando</strong> al menos un dispositivo ESP32 pueda enviar lecturas de telemetría que sean recibidas por el servicio Edge, almacenadas y expuestas por el backend, y luego visibles en las interfaces de conductor y taller en no más de cinco interacciones; cuando se pueda generar al menos una recomendación de mantenimiento basada en dichos datos para un vehículo de prueba; cuando la web de negocio cuente con secciones diferenciadas para talleres y conductores (beneficios, planes y llamados a la acción); y cuando el flujo principal de telemetría y recomendaciones se ejecute con una tasa de éxito superior al 90% en pruebas manuales y de integración.
+        </td>
+    </tr>
+    <tr>
+       <td>Sprint 3 Velocity</td>
+        <td align="justify">
+        Basándose en el rendimiento real del Sprint 2, en el que se completaron aproximadamente 64 Story Points de los 86 comprometidos, el equipo establece una velocidad objetivo de 64 Story Points para el Sprint 3. Este ajuste refleja una planificación más realista frente a la complejidad adicional que implica integrar hardware, servicio Edge y backend, así como realizar ajustes en la Web de Negocio. Esta métrica se utilizará para validar la capacidad del equipo en un contexto donde la prioridad es completar un flujo vertical de telemetría y recomendaciones funcional, en lugar de maximizar la cantidad de historias en paralelo.
+        </td>
+    </tr>
+    <tr>
+        <td>Sum of Story Points</td>
+        <td>64</td>
+    </tr>
+</table>
+
 
 6.3.2.2.Aspect Leaders and Collaborators
 
