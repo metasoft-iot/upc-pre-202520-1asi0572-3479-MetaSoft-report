@@ -646,6 +646,6 @@ El uso de Figma permitió validar la estructura de navegación y el diseño visu
   <img src="../assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
-Link: [Prototipo Web App](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202124162_upc_edu_pe/Ee1cZiLNP_dJjL1prSmIih4B1u6ixglswnGvMM2Vo6pt6g?e=NhgeQJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+Link: https://shorturl.at/V9EuD 
 
 
