@@ -5983,19 +5983,19 @@ Para los talleres mecánicos, las preguntas se orientaron a validar la claridad 
 
 Segmento: Conductores
 
-Entrevista 1
+## Entrevista 1
 
-Nombre: Katherin Gutierrez Rodriguez
-Edad: 23 años
-Distrito: Lince
-URL del video: https://shorturl.at/oWSkN
-Duración: 08:42
-Inicio de la entrevista: 1:38 min - 8:42 min
+**Nombre:** Katherin Gutierrez Rodriguez  
+**Edad:** 23 años  
+**Distrito:** Lince  
+**URL del video:** https://shorturl.at/oWSkN  
+**Duración:** 08:42  
+**Inicio de la entrevista:** 1:38 min - 8:42 min  
 
 <div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-VI/assets/img/capitulo-VI/EntrevistaValidacionUsuario1.png" alt="EntrevistaValidacionUsuario1" width="1000px">
 </div>
 
-*Resumen*  
+**Resumen:**  
 La entrevistada, Katherin Gutierrez Rodriguez, comenta que la aplicación SafeCar le parece una propuesta útil y bien diseñada para conductores que desean mantener un control claro de su vehículo. Señala que la interfaz es intuitiva, fácil de usar y que no tuvo dificultades al navegar por las pantallas principales. Menciona que el proceso para registrar un vehículo le resultó simple y comprensible, ya que los campos están bien organizados y la aplicación guía adecuadamente al usuario.
 
 Asimismo, indica que los flujos para crear, reprogramar o cancelar citas le parecieron claros y directos, y que no encontró pasos confusos durante estas acciones. Considera acertado que la app muestre información detallada del vehículo, incluyendo alertas cuando corresponde, pues esto ayuda al usuario a mantener su auto en buen estado y evitar problemas mayores.
