@@ -380,28 +380,63 @@ en cada uno de los commits.
 **[3.3. Product Backlog](docs/capitulo-III.md#33-product-backlog)**
 
 
-### **Capítulo IV: Solution Software Design**
-**4.1. Strategic-Level Domain-Driven Design**  
-4.1.1. Design-Level EventStorming  
- 4.1.1.1. Candidate Context Discovery  
- 4.1.1.2. Domain Message Flows Modeling  
- 4.1.1.3. Bounded Context Canvases  
-4.1.2. Context Mapping  
-4.1.3. Software Architecture  
- 4.1.3.1. Software Architecture System Landscape Diagram  
- 4.1.3.2. Software Architecture Context Level Diagrams  
- 4.1.3.3. Software Architecture Container Level Diagrams  
- 4.1.3.4. Software Architecture Deployment Diagrams  
-**4.2. Tactical-Level Domain-Driven Design**  
-4.2.X. Bounded Context: \<Bounded Context Name\>  
- 4.2.X.1. Domain Layer  
- 4.2.X.2. Interface Layer  
- 4.2.X.3. Application Layer  
- 4.2.X.4. Infrastructure Layer  
- 4.2.X.5. Bounded Context Software Architecture Component Level Diagrams  
- 4.2.X.6. Bounded Context Software Architecture Code Level Diagrams  
-  4.2.X.6.1. Bounded Context Domain Layer Class Diagrams  
-  4.2.X.6.2. Bounded Context Database Design Diagram  
+### [Capítulo IV: Solution Software Design](docs/capitulo-IV.md)
+
+**[4.1. Strategic-Level Domain-Driven Design](docs/capitulo-IV.md#41-strategic-level-domain-driven-design)**  
+[4.1.1. Design-Level EventStorming](docs/capitulo-IV.md#411-design-level-eventstorming)  
+ [4.1.1.1. Candidate Context Discovery](docs/capitulo-IV.md#4111-candidate-context-discovery)  
+ [4.1.1.2. Domain Message Flows Modeling](docs/capitulo-IV.md#4112-domain-message-flows-modeling)  
+ [4.1.1.3. Bounded Context Canvases](docs/capitulo-IV.md#4113-bounded-context-canvases)
+
+[4.1.2. Context Mapping](docs/capitulo-IV.md#412-context-mapping)  
+[4.1.3. Software Architecture](docs/capitulo-IV.md#413-software-architecture)  
+ [4.1.3.1. Software Architecture System Landscape Diagram](docs/capitulo-IV.md#4131-software-architecture-system-landscape-diagram)  
+ [4.1.3.2. Software Architecture Context Level Diagrams](docs/capitulo-IV.md#4132-software-architecture-context-level-diagrams)  
+ [4.1.3.3. Software Architecture Container Level Diagrams](docs/capitulo-IV.md#4133-software-architecture-container-level-diagrams)  
+ [4.1.3.4. Software Architecture Deployment Diagrams](docs/capitulo-IV.md#4134-software-architecture-deployment-diagrams)
+
+**[4.2. Tactical-Level Domain-Driven Design](docs/capitulo-IV.md#42-tactical-level-domain-driven-design)**  
+
+[4.2.1. Bounded Context: Workshop Operations & Telemetry Processing](docs/capitulo-IV.md#421-bounded-context-workshop-operations--telemetry-processing)  
+ [4.2.1.1. Domain Layer](docs/capitulo-IV.md#4211-domain-layer)  
+ [4.2.1.2. Interface Layer](docs/capitulo-IV.md#4212-interface-layer)  
+ [4.2.1.3. Application Layer](docs/capitulo-IV.md#4213-application-layer)  
+ [4.2.1.4. Infrastructure Layer](docs/capitulo-IV.md#4214-infrastructure-layer)  
+ [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](docs/capitulo-IV.md#4215-bounded-context-software-architecture-component-level-diagrams)  
+ [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](docs/capitulo-IV.md#4216-bounded-context-software-architecture-code-level-diagrams)  
+  [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](docs/capitulo-IV.md#42161-bounded-context-domain-layer-class-diagrams)  
+  [4.2.1.6.2. Bounded Context Database Design Diagram](docs/capitulo-IV.md#42162-bounded-context-database-design-diagram)
+
+[4.2.2. Bounded Context: Communication](docs/capitulo-IV.md#422-bounded-context-communication)  
+ [4.2.2.1. Domain Layer](docs/capitulo-IV.md#4221-domain-layer)  
+ [4.2.2.2. Interface Layer](docs/capitulo-IV.md#4222-interface-layer)  
+ [4.2.2.3. Application Layer](docs/capitulo-IV.md#4223-application-layer)  
+ [4.2.2.4. Infrastructure Layer](docs/capitulo-IV.md#4224-infrastructure-layer)  
+ [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](docs/capitulo-IV.md#4225-bounded-context-software-architecture-component-level-diagrams)  
+ [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](docs/capitulo-IV.md#4226-bounded-context-software-architecture-code-level-diagrams)  
+  [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](docs/capitulo-IV.md#42261-bounded-context-domain-layer-class-diagrams)  
+  [4.2.2.6.2. Bounded Context Database Design Diagram](docs/capitulo-IV.md#42262-bounded-context-database-design-diagram)
+
+[4.2.3. Bounded Context: Analytics and Recommendations](docs/capitulo-IV.md#423-bounded-context-analytics-and-recommendations)  
+ [4.2.3.1. Domain Layer](docs/capitulo-IV.md#4231-domain-layer)  
+ [4.2.3.2. Interface Layer](docs/capitulo-IV.md#4232-interface-layer)  
+ [4.2.3.3. Application Layer](docs/capitulo-IV.md#4233-application-layer)  
+ [4.2.3.4. Infrastructure Layer](docs/capitulo-IV.md#4234-infrastructure-layer)  
+ [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](docs/capitulo-IV.md#4235-bounded-context-software-architecture-component-level-diagrams)  
+ [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](docs/capitulo-IV.md#4236-bounded-context-software-architecture-code-level-diagrams)  
+  [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](docs/capitulo-IV.md#42361-bounded-context-domain-layer-class-diagrams)  
+  [4.2.3.6.2. Bounded Context Database Design Diagram](docs/capitulo-IV.md#42362-bounded-context-database-design-diagram)
+
+[4.2.4. Bounded Context: Subscription & Payments](docs/capitulo-IV.md#424-bounded-context-subscription--payments)  
+ [4.2.4.1. Domain Layer](docs/capitulo-IV.md#4241-domain-layer)  
+ [4.2.4.2. Interface Layer](docs/capitulo-IV.md#4242-interface-layer)  
+ [4.2.4.3. Application Layer](docs/capitulo-IV.md#4243-application-layer)  
+ [4.2.4.4. Infrastructure Layer](docs/capitulo-IV.md#4244-infrastructure-layer)  
+ [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](docs/capitulo-IV.md#4245-bounded-context-software-architecture-component-level-diagrams)  
+ [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](docs/capitulo-IV.md#4246-bounded-context-software-architecture-code-level-diagrams)  
+  [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](docs/capitulo-IV.md#42461-bounded-context-domain-layer-class-diagrams)  
+  [4.2.4.6.2. Bounded Context Database Design Diagram](docs/capitulo-IV.md#42462-bounded-context-database-design-diagram)
+
 
 ### [Capítulo V: Solution UI/UX Design](docs/capitulo-V.md)
 
@@ -429,28 +464,44 @@ en cada uno de los commits.
 **[5.5. Applications Prototyping](docs/capitulo-V.md#55-applications-prototyping)**
 
 
-### **Capítulo VI: Product Implementation, Validation & Deployment**
-**6.1. Software Configuration Management**  
-6.1.1. Software Development Environment Configuration  
-6.1.2. Source Code Management  
-6.1.3. Source Code Style Guide & Conventions  
-6.1.4. Software Deployment Configuration  
-**6.2. Landing Page, Services & Applications Implementation**  
-6.2.X. Sprint n  
- 6.2.X.1. Sprint Planning n  
- 6.2.X.2. Aspect Leaders and Collaborators  
- 6.2.X.3. Sprint Backlog n  
- 6.2.X.4. Development Evidence for Sprint Review  
- 6.2.X.5. Testing Suite Evidence for Sprint Review  
- 6.2.X.6. Execution Evidence for Sprint Review  
- 6.2.X.7. Services Documentation Evidence for Sprint Review  
- 6.2.X.8. Software Deployment Evidence for Sprint Review  
- 6.2.X.9. Team Collaboration Insights during Sprint  
-**6.3. Validation Interviews**  
-6.3.1. Diseño de Entrevistas  
-6.3.2. Registro de Entrevistas  
-6.3.3. Evaluaciones según heurísticas  
-**6.4. Video About-the-Product**
+### [Capítulo VI: Product Implementation, Validation & Deployment](docs/capitulo-VI.md)
+
+**[6.1. Software Configuration Management](docs/capitulo-VI.md#61-software-configuration-management)**  
+[6.1.1. Software Development Environment Configuration](docs/capitulo-VI.md#611-software-development-environment-configuration)  
+[6.1.2. Source Code Management](docs/capitulo-VI.md#612-source-code-management)  
+[6.1.3. Source Code Style Guide & Conventions](docs/capitulo-VI.md#613-source-code-style-guide--conventions)  
+[6.1.4. Software Deployment Configuration](docs/capitulo-VI.md#614-software-deployment-configuration)
+
+**[6.2. Landing Page, Services & Applications Implementation](docs/capitulo-VI.md#62-landing-page-services--applications-implementation)**  
+[6.2.1. Sprint 1](docs/capitulo-VI.md#621-sprint-1)  
+ [6.2.1.1. Sprint Planning 1](docs/capitulo-VI.md#6211-sprint-planning-1)  
+ [6.2.1.2. Aspect Leaders and Collaborators](docs/capitulo-VI.md#6212-aspect-leaders-and-collaborators)  
+ [6.2.1.3. Sprint Backlog 1](docs/capitulo-VI.md#6213-sprint-backlog-1)  
+ [6.2.1.4. Development Evidence for Sprint Review](docs/capitulo-VI.md#6214-development-evidence-for-sprint-review)  
+ [6.2.1.5. Testing Suite Evidence for Sprint Review](docs/capitulo-VI.md#6215-testing-suite-evidence-for-sprint-review)  
+ [6.2.1.6. Execution Evidence for Sprint Review](docs/capitulo-VI.md#6216-execution-evidence-for-sprint-review)  
+ [6.2.1.7. Services Documentation Evidence for Sprint Review](docs/capitulo-VI.md#6217-services-documentation-evidence-for-sprint-review)  
+ [6.2.1.8. Software Deployment Evidence for Sprint Review](docs/capitulo-VI.md#6218-software-deployment-evidence-for-sprint-review)  
+ [6.2.1.9. Team Collaboration Insights during Sprint](docs/capitulo-VI.md#6219-team-collaboration-insights-during-sprint)
+
+[6.2.2. Sprint 2](docs/capitulo-VI.md#622-sprint-2)  
+ [6.2.2.1. Sprint Planning 2](docs/capitulo-VI.md#6221-sprint-planning-2)  
+ [6.2.2.2. Aspect Leaders and Collaborators](docs/capitulo-VI.md#6222-aspect-leaders-and-collaborators)  
+ [6.2.2.3. Sprint Backlog 2](docs/capitulo-VI.md#6223-sprint-backlog-2)  
+ [6.2.2.4. Development Evidence for Sprint Review](docs/capitulo-VI.md#6224-development-evidence-for-sprint-review)  
+ [6.2.2.5. Testing Suite Evidence for Sprint Review](docs/capitulo-VI.md#6225-testing-suite-evidence-for-sprint-review)  
+ [6.2.2.6. Execution Evidence for Sprint Review](docs/capitulo-VI.md#6226-execution-evidence-for-sprint-review)  
+ [6.2.2.7. Services Documentation Evidence for Sprint Review](docs/capitulo-VI.md#6227-services-documentation-evidence-for-sprint-review)  
+ [6.2.2.8. Software Deployment Evidence for Sprint Review](docs/capitulo-VI.md#6228-software-deployment-evidence-for-sprint-review)  
+ [6.2.2.9. Team Collaboration Insights during Sprint](docs/capitulo-VI.md#6229-team-collaboration-insights-during-sprint)
+
+**[6.3. Validation Interviews](docs/capitulo-VI.md#63-validation-interviews)**  
+[6.3.1. Diseño de Entrevistas](docs/capitulo-VI.md#631-diseno-de-entrevistas)  
+[6.3.2. Registro de Entrevistas](docs/capitulo-VI.md#632-registro-de-entrevistas)  
+[6.3.3. Evaluaciones según heurísticas](docs/capitulo-VI.md#633-evaluaciones-segun-heuristicas)
+
+**[6.4. Video About-the-Product](docs/capitulo-VI.md#64-video-about-the-product)**
+
 
 ### **Secciones Finales**
 **Conclusiones**  
