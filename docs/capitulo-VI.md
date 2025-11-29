@@ -6000,6 +6000,21 @@ La entrevistada, Katherin Gutierrez Rodriguez, comenta que la aplicación SafeCa
 
 Asimismo, indica que los flujos para crear, reprogramar o cancelar citas le parecieron claros y directos, y que no encontró pasos confusos durante estas acciones. Considera acertado que la app muestre información detallada del vehículo, incluyendo alertas cuando corresponde, pues esto ayuda al usuario a mantener su auto en buen estado y evitar problemas mayores.
 
+## Entrevista 2
+
+**Nombre:** Juan  
+**Edad:**  
+**Distrito:** 
+**URL del video:** 
+**Duración:**  
+**Inicio de la entrevista:** 
+
+<div align="center" style="margin-top: 20px;"><img src="" alt="EntrevistaValidacionUsuario2" width="1000px">
+</div>
+
+**Resumen:**  
+Juan, el entrevistado, es un conductor particular que también ofrece servicios de movilidad y se considera un usuario intermedio de apps móviles porque emplea a diario herramientas como Google Maps, WhatsApp, aplicaciones bancarias y de movilidad. Dijo que le resultó fácil y claro registrar el vehículo y que la interfaz en general es intuitiva y fácil de navegar. Si bien sugirió que los botones fueran más prominentes y que se mostraran mensajes de confirmación más visibles, encontró claro el procedimiento para hacer, reprogramar y cancelar citas. Señaló que las alertas del vehículo son el rasgo más útil, ya que le asisten en recordar los mantenimientos. Además, manifestó que mejoraría la información sobre los talleres al añadir fotos o detalles. Por último, señaló que sí utilizaría la aplicación y sugirió que se incorporaran recordatorios o promociones.
+
 ### 6.3.3. Evaluación según heurísticas
 
 ## 6.4. Video About-the-Product
