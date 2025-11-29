@@ -335,8 +335,8 @@ en cada uno de los commits.
 ## Tabla de Contenido
 
 ### [Capítulo I: Introducción](docs/capitulo-I.md)
-**1.1. Startup Profile**  
-1.1.1. Descripción de la Startup  
+**[1.1. Startup Profile](docs/capitulo-I.md#11-startup-profile)**  
+**[1.1.1. Descripción de la Startup](docs/capitulo-I.md#111-descripción-de-la-startup)**
 1.1.2. Perfiles de integrantes del equipo  
 **1.2. Solution Profile**  
 1.2.1. Antecedentes y problemática  
