@@ -569,6 +569,46 @@ El diseño utiliza tarjetas organizadas y colores contrastantes para resaltar se
 
 ### 5.4.4. Applications User Flow Diagrams
 
+**User Goal 1: Ver reporte del vehículo**
+
+Happy Path: Visualización del estado general del vehículo con todos los indicadores dentro de parámetros normales. El usuario revisa sin recibir alertas.
+Unhappy Path: El sistema detecta valores anormales (temperatura, aceite, batería, etc.) y muestra alertas que requieren acción inmediata del usuario.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal.png" alt="UserGoal1" width="1000px">
+</div>
+
+**User Goal 2: Ver alertas del vehículo**
+
+Happy Path: No existen alertas activas y el usuario confirma que el vehículo está en condiciones normales.
+Unhappy Path: El sistema muestra alertas críticas o moderadas del vehículo, indicando fallas o riesgos que requieren revisión o mantenimiento inmediato.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal2.png" alt="UserGoal2" width="1000px">
+</div>
+
+**User Goal 3: Gestionar y consultar vehículos registrados**
+
+Happy Path: El usuario visualiza la lista de vehículos, puede registrar uno nuevo y consultar la información detallada de cualquier vehículo existente.
+Unhappy Path: El vehículo no puede registrarse por falta de datos o existe un error de validación
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal3.png" width="1000px">
+</div>
+
+**User Goal 4: Crear y Consultar Citas del Vehículo**
+
+Happy Path: El usuario crea una nueva cita desde un tablero inicialmente vacío, ingresando los datos requeridos. Luego visualiza la cita registrada en el tablero y puede consultar sus detalles sin problemas.
+Unhappy Path: El usuario intenta crear una cita pero falta información obligatoria o la fecha/hora no es válida. El sistema muestra un mensaje de error e impide el registro hasta corregir los datos.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal4.png" width="1000px">
+</div>
+
+**User Goal 5: Gestionar citas del vehículo**
+
+Happy Path: El usuario crea una nueva cita desde un tablero inicialmente vacío, ingresando los datos requeridos. Después visualiza la cita registrada en el tablero, puede abrir sus detalles y tiene la opción de cancelarla o reprogramarla. Si reprograma, ingresa la nueva fecha y horario, confirma la acción y el sistema actualiza correctamente la información.
+Unhappy Path: El usuario intenta crear o reprogramar una cita pero falta información obligatoria o la fecha/hora no es válida. El sistema muestra un mensaje de error e impide continuar hasta corregir los datos.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal5.png" width="1000px">
+</div>
+
 ## **5.5. Applications Prototyping**
 
 ####  Web Application Prototyping
@@ -602,3 +642,4 @@ El uso de Figma permitió validar la estructura de navegación y el diseño visu
 </p>
 
 Link: [Prototipo Web App](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202124162_upc_edu_pe/Ee1cZiLNP_dJjL1prSmIih4B1u6ixglswnGvMM2Vo6pt6g?e=NhgeQJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
