@@ -6020,7 +6020,7 @@ Juan, el entrevistado, es un conductor particular que también ofrece servicios 
 **Nombre:** Shirley Alva Perez  
 **Edad:** 20 años  
 **Distrito:** San Isidro  
-**URL del video:** https://shorturl.at/LKV5A
+**URL del video:** https://shorturl.at/LKV5A  
 **Duración:** 08:35  
 **Inicio de la entrevista:** 1:15 min - 8:35 min  
 
