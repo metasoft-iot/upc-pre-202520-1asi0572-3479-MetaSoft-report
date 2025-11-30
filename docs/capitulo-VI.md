@@ -6015,6 +6015,24 @@ Asimismo, indica que los flujos para crear, reprogramar o cancelar citas le pare
 **Resumen:**  
 Juan, el entrevistado, es un conductor particular que también ofrece servicios de movilidad y se considera un usuario intermedio de apps móviles porque emplea a diario herramientas como Google Maps, WhatsApp, aplicaciones bancarias y de movilidad. Dijo que le resultó fácil y claro registrar el vehículo y que la interfaz en general es intuitiva y fácil de navegar. Si bien sugirió que los botones fueran más prominentes y que se mostraran mensajes de confirmación más visibles, encontró claro el procedimiento para hacer, reprogramar y cancelar citas. Señaló que las alertas del vehículo son el rasgo más útil, ya que le asisten en recordar los mantenimientos. Además, manifestó que mejoraría la información sobre los talleres al añadir fotos o detalles. Por último, señaló que sí utilizaría la aplicación y sugirió que se incorporaran recordatorios o promociones.
 
+## Entrevista 3
+
+**Nombre:** Shirley Alva Perez  
+**Edad:** 20 años  
+**Distrito:** San Isidro  
+**URL del video:** https://shorturl.at/LKV5A
+**Duración:** 08:35  
+**Inicio de la entrevista:** 1:15 min - 8:35 min  
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-VI/Entrevista4.png" width="1000px">
+</div>
+
+**Resumen:**  
+La entrevistada expresa que la aplicación SafeCar le parece una herramienta útil y bien enfocada en las necesidades reales de los conductores. Destaca que la interfaz es intuitiva y fácil de interpretar, permitiéndole entender rápidamente cada sección sin necesidad de explicaciones adicionales. Señala que el proceso para registrar un vehículo fue claro y sencillo, ya que los campos obligatorios están bien distribuidos y la app ofrece una guía natural durante el flujo.
+
+Del mismo modo, comenta que las funcionalidades relacionadas con la creación, reprogramación y cancelación de citas funcionan de manera fluida. Percibe estos flujos como directos y organizados, y menciona que no encontró pasos confusos ni redundantes. Además, considera especialmente valioso que la aplicación muestre información detallada del vehículo y que cuente con alertas visibles, ya que esto le permite anticiparse a posibles problemas y mantener su auto en mejores condiciones.
+
+
 ### 6.3.3. Evaluación según heurísticas
 
 ## 6.4. Video About-the-Product
