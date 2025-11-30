@@ -532,7 +532,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <!-- TB1 Section -->
         <div style="margin-bottom: 20px;">
             <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB1</h4>
-            <p align="justify"><strong>Janover Gonzalo Saldaña Vela:</strong> Me encargué de la facilitación y documentación inicial del taller de Event Storming, identificando los principales eventos y contextos del sistema SafeCar. Posteriormente, dirigí el modelado de flujos de mensajes entre dominios y la elaboración de los primeros Bounded Context Canvases, asegurando la coherencia conceptual del proyecto. Además, coordiné el taller de Big Picture EventStorming y desarrollé el glosario de lenguaje ubicuo, estableciendo una terminología común para el equipo. Finalmente, consolidé el Product Backlog integrando los aportes de todos los miembros, garantizando la alineación entre los requisitos del usuario y la arquitectura del sistema.</p>
             <p align="justify"><strong>Hardie Alfonso Holguin Gamarra:</strong> Realicé y ejecuté la entrevista del segmento talleres, documentando las respuestas del entrevistado y a partir de esta información elaboré la User Persona correspondiente y definí sus User Stories, asegurando la representación precisa de sus necesidades. Asimismo, participé en la construcción del Capítulo IV, III y II, y la sección Bounded Context Device Management, donde adapté y consolidé los contextos delimitados en base a SafeCar. Con estas actividades aseguré la coherencia entre los hallazgos de usuario y el diseño estratégico del sistema, contribuyendo al entendimiento del dominio como en la arquitectura planteada.</p>
             <p align="justify"><strong>Javier Kenyi Mendoza Solis:</strong> Realicé y ejecuté la entrevista del segmento conductor con vehículo propio, documentando las respuestas del entrevistado y a partir de esta información elaboré la User Persona correspondiente y definí sus User Stories, asegurando la representación precisa de sus necesidades. Asimismo, participé en la construcción del Capítulo IV, desarrollando la sección Domain Message Flows Modeling, donde diseñé los flujos de mensajes de dominio para reflejar los procesos centrales de solicitud y gestión de mantenimientos, y la sección Bounded Context Canvases, donde adapté y consolidé los contextos delimitados de SafeCar. Con estas actividades aseguré la coherencia entre los hallazgos de usuario y el diseño estratégico del sistema, contribuyendo al entendimiento del dominio como en la arquitectura planteada.</p>
             <p align="justify"><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Realicé y ejecuté la entrevista a un conductor con vehículo propio, sistematizando sus respuestas para identificar patrones de uso y necesidades relevantes. También participé activamente en el Big Picture Event Storming, donde contribuí a la identificación de eventos clave y a la definición colaborativa de los procesos centrales. Posteriormente, desarrollé el Ubiquitous Language, asegurando una terminología común entre el equipo y los dominios modelados. Además, elaboré los Bounded Context Canvases correspondientes a Workshop Operations y Admin and Billing, garantizando la correcta delimitación de responsabilidades y flujos en dichos contextos. Con estas actividades, aporté al liderazgo compartido del equipo, asegurando la coherencia entre la información recopilada, la visión estratégica y la arquitectura planteada.</p>
@@ -542,7 +541,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <!-- TP Section -->
         <div style="margin-bottom: 20px;">
             <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TP</h4>
-            <p align="justify"><strong>Janover Gonzalo Saldaña Vela:</strong> Me encargué del desarrollo del Capítulo VI "Product Implementation, Validation & Deployment", coordinando la implementación del Software Configuration Management y la documentación completa del Sprint 1. Dirigí la planificación del primer sprint, establecí la matriz de responsabilidades (LACX) para los aspectos del proyecto, y coordiné el Sprint Backlog con 49 tareas distribuidas entre los miembros del equipo. Además, me encargué de la implementación de los sistemas de autenticación y gestión de usuarios en la aplicación web durante el Sprint 1, asegurando la integración coherente entre los módulos de seguridad, historial de servicios y solicitudes de mantenimiento, estableciendo las bases técnicas para el desarrollo colaborativo del sistema SafeCar.</p>
             <p align="justify"><strong>Hardie Alfonso Holguin Gamarra:</strong> Colaboré significativamente en el desarrollo del Capítulo V "Solution UI/UX Design", apoyando en la definición de elementos de seguridad y autenticación dentro de los wireframes y mockups del sistema SafeCar. Trabajé en conjunto con otros miembros del equipo en la creación de flujos de usuario relacionados con el login, registro y gestión de perfiles, asegurando que los aspectos de seguridad estuvieran bien integrados en la experiencia de usuario. Además, contribuí en la revisión y validación de los style guidelines y patrones de diseño propuestos por el equipo, aportando perspectivas sobre usabilidad y accesibilidad que complementaron el trabajo de diseño durante el Sprint 1.</p>
             <p align="justify"><strong>Javier Kenyi Mendoza Solis:</strong> Me encargué del desarrollo de componentes clave del Capítulo V "Solution UI/UX Design", contribuyendo al diseño de la arquitectura de información y los sistemas de navegación de SafeCar. Participé activamente en la definición de wireframes y mockups para las aplicaciones, asegurando la coherencia visual y funcional entre los diferentes módulos del sistema. Además, aporté al refinamiento de las guidelines de estilo y la documentación de patrones de diseño, estableciendo estándares claros para la experiencia de usuario que facilitaron la implementación posterior en el Sprint 1, garantizando la alineación entre el diseño propuesto y las funcionalidades desarrolladas.</p>
             <p align="justify"><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Me encargué del desarrollo de elementos fundamentales del Capítulo V "Solution UI/UX Design", enfocándome en la creación de wireframes, mockups y prototipos para la Landing Page y aplicaciones del sistema SafeCar. Dirigí la definición de los style guidelines generales y específicos para web, estableciendo la paleta de colores, tipografía y componentes reutilizables que aseguran consistencia visual. Además, coordiné las correcciones del Capítulo III, refinando el registro y análisis de entrevistas para mejorar la calidad de los insights de usuario, lo que permitió validar y ajustar las decisiones de diseño tomadas, garantizando que la experiencia de usuario propuesta responda efectivamente a las necesidades identificadas en la investigación.</p>
@@ -553,7 +551,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <!-- TB2 Section -->
         <div style="margin-bottom: 20px;">
             <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
-            <p align="justify"><strong>Janover Gonzalo Saldaña Vela:</strong> Coordiné y lideré la planificación del Sprint 2, definiendo el alcance principal centrado en el Bounded Context <em>Workshop Operations & Telemetry Processing (WorkshopOps)</em>. Diseñé el flujo de ingesta y normalización de telemetría, establecí los eventos canónicos que deben publicarse (p. ej. <em>TelemetryReceived</em>, <em>WorkOrderCreated</em>, <em>AlertRaised</em>) y coordiné la integración entre WorkshopOps y los BCs consumidores (Insights y Alerts). Supervisé la priorización del backlog y validé las historias que habilitan la asignación automática de órdenes y la trazabilidad entre lectura de telemetría y orden de trabajo.</p>
             <p align="justify"><strong>Hardie Alfonso Holguin Gamarra:</strong> Implementé pruebas de integración para la ingestión de dispositivos IoT y la validación de mensajes de telemetría. Definí y probé reglas de normalización y enriquecimiento (geocodificación básica, conversión de unidades, detección de alertas por umbrales) y aseguré que cada lectura se asocie correctamente con el vehículo y conductor. Además, documenté las contract tests para el canal de mensajería y participé en la definición de los endpoints de telemetría del backend de WorkshopOps.</p>
             <p align="justify"><strong>Javier Kenyi Mendoza Solis:</strong> Desarrollé y refiné los componentes de interfaz relacionados con la gestión del taller: panel de programación de citas, vista de órdenes de trabajo y dashboard de telemetría en tiempo real. Implementé formularios y validaciones para la creación y reasignación de órdenes, y trabajé en la visualización inicial de señales de telemetría (eventos críticos, última ubicación, estado del vehículo) para facilitar la toma de decisiones operativas en el taller.</p>
             <p align="justify"><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Implementé las entidades del dominio y el esquema de persistencia necesarios para WorkshopOps: modelos de <em>WorkOrder</em>, <em>BayAssignment</em>, <em>TelemetryRecord</em> y relaciones con <em>Vehicle</em> y <em>Driver</em>. Diseñé las migraciones y queries para búsquedas eficientes por VIN y por ventana temporal, y desarrollé los servicios que correlacionan telemetría con órdenes de trabajo y generan eventos para los consumidores downstream.</p>
@@ -584,7 +581,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <!-- TB1 Section -->
         <div style="margin-bottom: 20px;">
             <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB1</h4>
-            <p align="justify"><strong>Janover Gonzalo Saldaña Vela:</strong> Promoví un entorno colaborativo e inclusivo mediante la facilitación de talleres de Event Storming, donde aseguré la participación activa de todos los miembros del equipo. Establecí metas claras para cada fase del proyecto, planifiqué las tareas de modelado de dominios y flujos de mensajes, y cumplí los objetivos de documentación y consolidación del Product Backlog. Mi liderazgo en la coordinación del Big Picture EventStorming y el desarrollo del lenguaje ubicuo facilitó la comunicación efectiva entre los miembros, creando un marco común de entendimiento que fortaleció la cohesión del equipo.</p>
             <p align="justify"><strong>Hardie Alfonso Holguin Gamarra:</strong> Colaboré activamente en el desarrollo del Bounded Context Security del Capítulo IV, trabajando en conjunto con el equipo para definir los aspectos de seguridad y autenticación del sistema SafeCar. Participé en la elaboración de los Domain Message Flows relacionados con la gestión de identidad y control de acceso, asegurando la integración coherente con otros contextos delimitados. Además, apoyé en la validación y revisión de los Bounded Context Canvases de otros miembros del equipo, contribuyendo con perspectivas adicionales sobre la arquitectura del sistema y facilitando la alineación conceptual entre todos los contextos definidos.</p>
             <p align="justify"><strong>Javier Kenyi Mendoza Solis:</strong> Asumí un rol central en la recopilación, análisis y transformación de información clave, garantizando la alineación entre las necesidades de los usuarios y el diseño del sistema. Contribuí activamente a la construcción de entregables estratégicos, promoviendo la claridad conceptual, la coherencia metodológica y la calidad en la documentación generada, fortaleciendo así la visión y el avance del proyecto SafeCar.</p>
             <p align="justify"><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Promoví un entorno colaborativo mediante la conducción de entrevistas y la integración de los hallazgos al trabajo grupal. Mi participación en el Big Picture Event Storming impulsó la discusión y alineación del equipo, lo que permitió una comprensión conjunta de los eventos que estructuran el dominio. Asimismo, al desarrollar el Ubiquitous Language, facilité un marco terminológico claro que fortaleció la comunicación y evitó ambigüedades entre los miembros. Finalmente, al elaborar los Bounded Contexts de Workshop Operations y Admin and Billing, contribuí a la planificación ordenada de tareas y a la definición precisa de objetivos en dichos módulos, asegurando la calidad y consistencia del avance del proyecto SafeCar.</p>
@@ -594,7 +590,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <!-- TP Section -->
         <div style="margin-bottom: 20px;">
             <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TP</h4>
-            <p align="justify"><strong>Janover Gonzalo Saldaña Vela:</strong> Creé un entorno colaborativo e inclusivo durante el desarrollo del Capítulo VI, estableciendo métodos de trabajo claros y facilitando la comunicación efectiva entre todos los miembros del equipo. Planifiqué las tareas del Sprint 1 de manera detallada, distribuyendo 49 tareas específicas entre los colaboradores según sus fortalezas y estableciendo la matriz LACX para garantizar responsabilidades claras. Cumplí objetivos ambiciosos al coordinar la implementación completa de los sistemas de autenticación, registro y gestión de perfiles de usuario, asegurando que cada módulo funcionara de manera integrada y que el equipo mantuviera un ritmo de desarrollo consistente y de alta calidad.</p>
             <p align="justify"><strong>Hardie Alfonso Holguin Gamarra:</strong> Contribuí a crear un entorno colaborativo durante el desarrollo del Capítulo V, participando activamente en sesiones de trabajo grupales y facilitando la comunicación entre los miembros del equipo de diseño. Apoyé en la planificación sistemática de tareas relacionadas con la seguridad y autenticación del sistema, estableciendo metas claras para la integración de elementos de seguridad en la experiencia de usuario. Cumplí objetivos específicos al colaborar en la validación de wireframes y mockups, asegurando que los flujos de autenticación y registro fueran intuitivos y seguros, contribuyendo así al establecimiento de bases sólidas para la implementación del Sprint 1 y facilitando el trabajo colaborativo efectivo entre las áreas de diseño y desarrollo.</p>
             <p align="justify"><strong>Javier Kenyi Mendoza Solis:</strong> Creé un ambiente de trabajo inclusivo durante el desarrollo del Capítulo V, promoviendo la participación activa de todos los miembros en las decisiones de diseño y estableciendo procesos colaborativos para la revisión de wireframes y mockups. Planifiqué las tareas de arquitectura de información de manera sistemática, definiendo entregables específicos para sistemas de navegación, organización y búsqueda que faciliten la usabilidad del sistema SafeCar. Cumplí objetivos de diseño establecidos al entregar documentación completa de patrones de interacción y guidelines que sirvieron como base sólida para la implementación técnica del Sprint 1, asegurando coherencia entre la experiencia de usuario diseñada y la funcionalidad implementada.</p>
             <p align="justify"><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Promoví un entorno colaborativo e inclusivo durante el desarrollo del Capítulo V, facilitando sesiones de trabajo donde todos los miembros pudieron contribuir con ideas y feedback sobre los diseños propuestos. Establecí metas claras para la creación de wireframes, mockups y style guidelines, planificando iteraciones de diseño que permitieron refinar progresivamente la propuesta visual de SafeCar. Además, al coordinar las correcciones del Capítulo III, creé un marco de trabajo sistemático para mejorar la calidad de las entrevistas y análisis de usuario. Cumplí objetivos ambiciosos al entregar un sistema de diseño coherente y funcional, junto con insights de usuario refinados que validaron las decisiones tomadas, asegurando que el producto final responda efectivamente a las necesidades identificadas.</p>
@@ -748,41 +743,6 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
           <td>Ingeniería de Software</td>
           <td align="justify">
             Soy estudiante de Ingeniería de Software en la UPC, con práctica en la construcción de aplicaciones modernas que priorizan la seguridad, la adaptabilidad y la experiencia de usuario. Mi conocimiento en frameworks actuales y metodologías ágiles me permite abordar proyectos de manera estructurada y eficiente. Me caracterizo por una mentalidad analítica y rigurosa, enfocada en entregar software de calidad que responda a las necesidades reales de empresas y usuarios.
-          </td>
-          <td style="text-align: center;">
-            <!-- Languages -->
-            <p><strong>Lenguajes</strong></p>
-            <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
-            <img src="https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white" />
-            <img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white" />
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
-            <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" />
-            <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" />
-            <img src="https://img.shields.io/badge/SQL-003B57?logo=database&logoColor=white" />
-            <!-- Frameworks -->
-            <p><strong>Frameworks</strong></p>
-            <img src="https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white" />
-            <img src="https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white" />
-            <img src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white" />
-            <!-- Tools -->
-            <p><strong>Otros</strong></p>
-            <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white" />
-            <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" />
-            <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" />
-            <img src="https://img.shields.io/badge/Notion-000000?logo=notion&logoColor=white" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img src="assets/img/capitulo-I/miembros/janover-saldana.jpg"
-                 alt="Miembro Foto Perfil"
-                 width="600px"
-                 style="border-radius: 12px;"/>
-          </td>
-          <td><strong>Janover Gonzalo Saldaña Vela</strong></td>
-          <td>Ingeniería de Software</td>
-          <td align="justify">
-            Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), con enfoque en el desarrollo de aplicaciones confiables, adaptables y centradas en el usuario. Cuento con experiencia práctica en frameworks modernos y herramientas que potencian la productividad, así como en el uso de metodologías ágiles para la gestión de proyectos. Me defino por mi disciplina, mentalidad analítica y deseo de aportar soluciones tecnológicas que respondan a las necesidades de las personas y organizaciones.
           </td>
           <td style="text-align: center;">
             <!-- Languages -->
@@ -7132,7 +7092,7 @@ El uso de Figma permitió validar la estructura de navegación y el diseño visu
   <img src="assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
-Link: [Prototipo Web App](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202124162_upc_edu_pe/Ee1cZiLNP_dJjL1prSmIih4B1u6ixglswnGvMM2Vo6pt6g?e=NhgeQJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+Link: Prototipo Web App: https://tinyurl.com/mpa27uw9
 
 
 # Capítulo VI: Product Implementation, Validation & Deployment
@@ -8487,7 +8447,7 @@ A continuación se presentan capturas de pantalla de las principales vistas desa
   <p><em>Figura 18: Vista previa del video demostrativo del Sprint 1 mostrando las funcionalidades implementadas</em></p>
 </div>
 
-**Enlace al video de demostración:** [https://youtu.be/bzoLGLyBfWk](https://youtu.be/bzoLGLyBfWk)
+**Enlace al video de demostración:** https://youtu.be/bzoLGLyBfWk
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
@@ -8615,7 +8575,7 @@ Los datos extraídos de GitHub proporcionan una perspectiva cuantitativa de la c
 **GitHub Pulse - Actividad del Repositorio:**
 
 <figure align="center">
-  <img src"/assets/img/capitulo-VI/sprint-1-pulse-web-application.png" alt="GitHub Pulse Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
+  <img src="assets/img/capitulo-VI/sprint-1-pulse-web-application.png" alt="GitHub Pulse Analytics - Web Application Repository" style="width: 100%; max-width: 800px;">
   <figcaption><strong>Figura 22.</strong> Analíticos de Pulse del repositorio Web Application mostrando la frecuencia de actividad, distribución temporal de commits y participación activa del equipo durante el sprint.</figcaption>
 </figure>
 
@@ -13296,11 +13256,42 @@ Esta sección documenta la evidencia de las actividades de aseguramiento de cali
 
 6.3.2.6. Execution Evidence for Sprint Review
 
+<p align="justify">
+En esta sección se documenta las ejecuciones correspondientes al Sprint 3. Se presentan capturas de pantalla asegurando que las funcionalidades críticas del sistema operan según lo esperado.
+</p>
+
 6.3.2.7. Services Documentation Evidence for Sprint Review
+
+<p align="justify">
+A continuación, se detalla la documentación técnica de los servicios desarrollados o actualizados durante este Sprint. Se incluye información relevante sobre los endpoints expuestos, las estructuras de solicitud y respuesta, así como los contratos de datos establecidos para garantizar la correcta integración entre los componentes del sistema.
+</p>
+
+<table>
+  <tr>
+    <td>Evidencia</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/edge-execution-evidence.png"/>
+    </td>
+    <td align="justify">
+      Se muestra la consola de ejecución del servicio Edge, confirmando que se encuentra operativo y procesando correctamente los datos emitidos por los sistemas embebidos (físicos). Este servicio actúa como primer punto de contacto para la telemetría vehicular, asegurando la recepción e ingesta de la información antes de su transmisión a la nube.
+    </td>
+  </tr>
+</table>
 
 6.3.2.8. Software Deployment Evidence for Sprint Review
 
+<p align="justify">
+Esta sección presenta la evidencia del despliegue exitoso de los incrementos del producto en los entornos de prueba y producción. Se incluyen registros del proceso de despliegue, configuraciones de infraestructura y verificaciones de disponibilidad, demostrando que los entregables están operativos y accesibles para su validación y uso.
+</p>
+
 6.3.2.9. Team Collaboration Insights during Sprint
+
+<p align="justify">
+Finalmente, se describen los aspectos clave de la colaboración del equipo durante el desarrollo del Sprint 3. Se analizan las dinámicas de trabajo, la comunicación interna, el uso de herramientas de gestión ágil y las lecciones aprendidas, con el objetivo de identificar oportunidades de mejora para optimizar el rendimiento en futuras iteraciones.
+</p>
 
 ## 6.3. Validation Interviews
 ### 6.3.1. Diseño de Entrevistas
@@ -13417,7 +13408,7 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
     </tr>
     <tr>
         <td>TB1</td>
-        <td>https://upcedupe-my.sharepoint.com/:v:/g/personal/u202113656_upc_edu_pe/EX_2Lc6LkChFo1czg6Gtx84B4EMW3EkCYI47C5Ld27FTiQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=QZmwoR</td>
+        <td>https://tinyurl.com/3zv74zj7</td>
         <td>Video explicativo del proyecto SafeCar para la primera entrega del proyecto</td>
     </tr>
     <tr>
