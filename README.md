@@ -300,10 +300,129 @@
         </tr>
         <!-- Fila 35-->
         <tr>
+            <td>1.34</td>
+            <td>15/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Inclusión de diagramas C4 a nivel de contexto y contenedores.</td>
+        </tr>
+        <!-- Fila 36-->
+        <tr>
+            <td>1.35</td>
+            <td>17/09/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Estructuración del Capítulo IV por Bounded Contexts y diagramas de base de datos.</td>
+        </tr>
+        <!-- Fila 37-->
+        <tr>
+            <td>1.36</td>
+            <td>18/09/2025</td>
+            <td>Hardie Alfonso Holguin Gamarra</td>
+            <td>Documentación del Bounded Context Device Management y actualización de Student Outcome.</td>
+        </tr>
+        <!-- Fila 38-->
+        <tr>
+            <td>1.37</td>
+            <td>18/09/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Agregado de Bounded Context Canvas y Context Mapping.</td>
+        </tr>
+        <!-- Fila 39-->
+        <tr>
+            <td>1.38</td>
+            <td>04/10/2025</td>
+            <td>Janover Gonzalo Saldaña Vela</td>
+            <td>Refactorización de escenarios y adición de Epics 12, 13, 14 y 16.</td>
+        </tr>
+        <!-- Fila 40-->
+        <tr>
+            <td>1.39</td>
+            <td>07/10/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Inclusión de la planificación del Sprint 1 y guías de estilo.</td>
+        </tr>
+        <!-- Fila 41-->
+        <tr>
+            <td>1.40</td>
+            <td>08/10/2025</td>
+            <td>Gustavo Jandroel Aguirre Rodríguez</td>
+            <td>Agregado de sección de Mockups y prototipado.</td>
+        </tr>
+        <!-- Fila 42-->
+        <tr>
+            <td>1.41</td>
+            <td>08/10/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Actualización de wireframes y diagramas del Capítulo V.</td>
+        </tr>
+        <!-- Fila 43-->
+        <tr>
+            <td>1.42</td>
+            <td>09/10/2025</td>
+            <td>Janover Gonzalo Saldaña Vela</td>
+            <td>Inclusión de evidencia de pruebas y ejecución de demo para el Sprint 1.</td>
+        </tr>
+        <!-- Fila 44-->
+        <tr>
+            <td>1.43</td>
+            <td>14/10/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Agregado de planificación del Sprint 2 y líderes de aspecto.</td>
+        </tr>
+        <!-- Fila 45-->
+        <tr>
             <td>2.0</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>28/11/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Planificación del Sprint 3 y actualización del README con descripciones detalladas y evidencia de pruebas.</td>
+        </tr>
+        <!-- Fila 36-->
+        <tr>
+            <td>2.1</td>
+            <td>29/11/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Actualización de tabla de contenidos, enlaces y documentación de flujos y mockups en Capítulos V y VI.</td>
+        </tr>
+        <!-- Fila 37-->
+        <tr>
+            <td>2.2</td>
+            <td>29/11/2025</td>
+            <td>Gustavo Jandroel Aguirre Rodríguez</td>
+            <td>Agregado de enlaces de prototipado y entrevistas en Capítulos V y VI.</td>
+        </tr>
+        <!-- Fila 38-->
+        <tr>
+            <td>2.3</td>
+            <td>29/11/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Limpieza de contribuciones desactualizadas y corrección de enlaces.</td>
+        </tr>
+        <!-- Fila 39-->
+        <tr>
+            <td>2.4</td>
+            <td>30/11/2025</td>
+            <td>Javier Kenyi Mendoza Solis</td>
+            <td>Agregado de resúmenes de entrevistas y capturas en Capítulo VI.</td>
+        </tr>
+        <!-- Fila 40-->
+        <tr>
+            <td>2.5</td>
+            <td>30/11/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Inclusión de insights del Sprint 3, video del producto, student outcome y registros de entrevistas de validación.</td>
+        </tr>
+        <!-- Fila 41-->
+        <tr>
+            <td>2.6</td>
+            <td>30/11/2025</td>
+            <td>Hardie Alfonso Holguin Gamarra</td>
+            <td>Actualización de detalles del Sprint 3.</td>
+        </tr>
+        <!-- Fila 42-->
+        <tr>
+            <td>2.7</td>
+            <td>01/12/2025</td>
+            <td>Gonzalo Andre Zavala Quedena</td>
+            <td>Agregado de heurísticas, índices, Sprint Backlog 3, y actualización de carátula, anexos y lista de miembros.</td>
         </tr>
     </tbody>
 </table>
