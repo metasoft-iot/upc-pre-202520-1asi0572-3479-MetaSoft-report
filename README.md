@@ -2,47 +2,43 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" width="220"/>
 
-# Universidad Peruana De Ciencias Aplicadas
-## Ingeniería de Software
-## 202520
-## 1ASI0572 - Desarrollo de Soluciones IOT
-## NRC: 3479
-## Docente: Angel Augusto Velasquez Nuñez  
-# "Informe de Trabajo Final"
-## Startup: MetaSoft  
-## Producto: SafeCar
+<h3>Universidad Peruana De Ciencias Aplicadas</h1>
+<h3>Facultad de Ingeniería</h2>
+<h3>Ingeniería de Software</h3>
+<h3>202520</h3>
+<h3>1ASI0572 - Desarrollo de Soluciones IOT</h3>
+<h3>NRC: 3479</h3>
+<h3>Docente: Angel Augusto Velasquez Nuñez </h3> 
+<h3>"Informe de Trabajo Final"</h3>
+<h3>Startup: MetaSoft </h3> 
+<h3>Producto: SafeCar</h3>
 
 ## Relación de integrantes:
 
 <table>
   <tr>
-    <th>Nombre</th>
     <th>Código</th>
+    <th>Nombre</th>
   <tr>
-
   <tr>
-    <td>Hardie Alfonso Holguin Gamarra</td>
     <td>U202220250</td>
+    <td>Hardie Alfonso Holguin Gamarra</td>
   </tr>
-
   <tr>
-    <td>Javier Kenyi Mendoza Solis</td>
     <td>U201824550</td>
+    <td>Javier Kenyi Mendoza Solis</td>
   </tr>
-
   <tr>
-    <td>Gustavo Jandroel Aguirre Rodríguez</td>
     <td>U202124162</td>
+    <td>Gustavo Jandroel Aguirre Rodríguez</td>
   </tr>
-
   <tr>
-    <td>Javier Sharvel Irigoyen Matos</td>
     <td>U20221D156</td>
+    <td>Javier Sharvel Irigoyen Matos</td>
   </tr>
-
   <tr>
-    <td>Gonzalo Andre Zavala Quedena</td>
     <td>U202113656</td>
+    <td>Gonzalo Andre Zavala Quedena</td>
   </tr>
 </table>
 
