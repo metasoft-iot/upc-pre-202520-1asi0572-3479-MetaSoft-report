@@ -23,7 +23,7 @@
 
 </div>
 
-<hr>
+<div style="page-break-after: always;"></div>
 
 ## Registro de Versiones del Informe
 
@@ -285,6 +285,8 @@
     </tbody>
 </table>
 
+<div style="page-break-after: always;"></div>
+
 ## Project Report Collaboration Insights
 
 **URL del repositorio para el reporte del proyecto:** Enlace al repositorio: </br>
@@ -313,7 +315,7 @@ Se dividieron las siguientes ramas para la colaboración en el proyecto:
 * annexes
 * release-v1.0
 
-### ENTREGABLE TRABAJO PARCIAL (TB2)
+### ENTREGABLE DEL TB2 (Sprint 2)
 
 **Gráficos de colaboración de los integrantes del equipo**
 
@@ -325,12 +327,71 @@ cabo. Además, se presenta información sobre la cantidad de líneas de código 
 en cada uno de los commits.
 </p>
 
-![Imagen 1](assets/img/insights/insights-backend.png)
+<p align="justify">
+La primera imagen muestra el gráfico de colaboración asociado al repositorio de backend, donde se registran los commits, contribuyentes y la evolución de los cambios realizados durante el Sprint 2.
+</p>
+<img src="assets/img/insights/insights-backend.png" alt="Gráfico de colaboración backend Sprint 2" width="100%"/>
 
-![Imagen 2](assets/img/insights/insights-frontend.png)
+<p align="justify">
+La segunda imagen presenta el gráfico de colaboración del repositorio de frontend, reflejando la participación de los integrantes del equipo en las interfaces web desarrolladas en este sprint.
+</p>
+<img src="assets/img/insights/insights-frontend.png" alt="Gráfico de colaboración frontend Sprint 2" width="100%"/>
 
-![Imagen 3](assets/img/insights/insights-web-business.png)
+<p align="justify">
+La tercera imagen corresponde al repositorio del sitio web de negocio, mostrando las contribuciones vinculadas a la comunicación y presentación del producto SafeCar.
+</p>
+<img src="assets/img/insights/insights-web-business.png" alt="Gráfico de colaboración web business Sprint 2" width="100%"/>
 
+---
+
+### ENTREGABLE DEL TRABAJO FINAL (Sprint 3)
+
+**Gráficos de colaboración de los integrantes del equipo**
+
+<p align="justify">
+A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
+repositorio de nuestro tercer sprint. Estos gráficos ofrecen una representación visual de la cantidad
+de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
+cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
+en cada uno de los commits para los distintos repositorios involucrados.
+</p>
+
+<p align="justify">
+La primera imagen muestra el gráfico de colaboración del repositorio de backend en el Sprint 3, evidenciando el trabajo realizado sobre los servicios centrales de la plataforma.
+</p>
+<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-backend.png" alt="Gráfico de colaboración backend Sprint 3" width="100%"/>
+
+<p align="justify">
+La segunda imagen corresponde al repositorio de la aplicación web principal, donde se visualiza la actividad de desarrollo orientada a las funcionalidades para los usuarios finales.
+</p>
+<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-web.png" alt="Gráfico de colaboración web app Sprint 3" width="100%"/>
+
+<p align="justify">
+La tercera imagen presenta el gráfico de colaboración del sitio web de negocio (landing page), asociado a la comunicación y posicionamiento del producto SafeCar.
+</p>
+<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-landing.png" alt="Gráfico de colaboración web business Sprint 3" width="100%"/>
+
+<p align="justify">
+La cuarta imagen muestra el repositorio de la aplicación móvil, reflejando las contribuciones enfocadas en la experiencia del conductor desde dispositivos móviles.
+</p>
+<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-mobile.png" alt="Gráfico de colaboración mobile Sprint 3" width="100%"/>
+
+<p align="justify">
+La quinta imagen corresponde al repositorio del servicio Edge, responsable del procesamiento intermedio de los datos telemétricos.
+</p>
+<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-edge.png" alt="Gráfico de colaboración edge service Sprint 3" width="100%"/>
+
+<p align="justify">
+La sexta imagen presenta el gráfico de colaboración de la aplicación embebida en cabina, relacionada con la interacción directa con el conductor y la lectura de sensores dentro del vehículo.
+</p>
+<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-cabine-embedded.png" alt="Gráfico de colaboración embedded cabine Sprint 3" width="100%"/>
+
+<p align="justify">
+La séptima imagen muestra el repositorio de la aplicación embebida en el nodo Edge, donde se concentran las contribuciones orientadas al procesamiento local y envío de datos a la plataforma SafeCar.
+</p>
+<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-edge-embedded.png" alt="Gráfico de colaboración embedded edge Sprint 3" width="100%"/>
+
+<div style="page-break-after: always;"></div>
 
 ## Tabla de Contenido
 
@@ -510,6 +571,7 @@ en cada uno de los commits.
 **Bibliografía**  
 **Anexos**
 
+<div style="page-break-after: always;"></div>
 
 ## Student Outcome
 <p align="justify">
@@ -558,6 +620,11 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
             <p align="justify"><strong>Gonzalo Andre Zavala Quedena:</strong> Me encargué de la integración técnica entre servicios: diseñé y desplegué la instancia del microservicio de WorkshopOps en contenedores, configuré la canalización mínima para ingestión (broker + topic) y coordiné las pruebas end-to-end con el pipeline de CI. Además, documenté el contrato API y los esquemas de mensajes que permitan a Insights y Alerts consumir el flujo canónico de telemetría procesada.</p>
             <p align="justify"><strong>Anaely Zarely Burga Loarte:</strong> Contribuí al diseño UX del dashboard operativo del taller, definiendo la presentación de indicadores clave (órdenes abiertas, alertas críticas, tiempo promedio de servicio) y las visualizaciones de telemetría (líneas de tiempo, mapa de ubicación). Preparé mockups y rutas de usuario que facilitaron las validaciones con usuarios finales del taller durante la revisión del Sprint 2.</p>
         </div>
+        <!-- TF Section -->
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
+            <p align="justify"><strong>Gonzalo Andre Zavala Quedena:</strong> Asumí un rol de liderazgo técnico compartido al diseñar e implementar el servicio Edge, así como las aplicaciones embebidas de Cabine y Edge, coordinando su integración con el backend y la Web Application. Lideré decisiones sobre contratos de datos, flujo de mensajes y despliegue de estos componentes, alineando al equipo de desarrollo para garantizar que la telemetría viajara de forma consistente desde los dispositivos IoT hasta las interfaces de usuario. Además, impulsé mejoras en la aplicación web, asegurando que los nuevos datos expuestos por el Edge Service y las aplicaciones embebidas se visualizaran de forma clara y usable, contribuyendo así al liderazgo conjunto en la arquitectura y en la entrega de valor del sistema SafeCar.</p>
+        </div>
     </td>
     <td style="text-align: left; vertical-align: top; padding: 15px;">
         <div style="margin-bottom: 15px;">
@@ -571,6 +638,10 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         <div style="margin-bottom: 15px;">
             <h5 style="color: #e74c3c; margin-bottom: 8px;">TB2:</h5>
             <p align="justify">En Sprint 2 el equipo demostró capacidad de integrar componentes IoT, backend y aplicaciones cliente (Web y Mobile) para entregar un flujo operativo completo en WorkshopOps. Se validaron pipelines de ingestión de telemetría, contratos de mensajería y la integración entre Backend → Web/Mobile → Insights/Alerts, cumpliendo los objetivos planeados y preparando la plataforma para iteraciones de análisis y automatización.</p>
+        </div>
+         <div style="margin-bottom: 15px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TF:</h5>
+            <p align="justify">En el Sprint 3, a través del diseño e implementación del servicio Edge, las aplicaciones embebidas (Cabine y Edge) y las mejoras en la aplicación web, asumí un liderazgo técnico compartido que permitió integrar de forma coherente los distintos componentes del ecosistema SafeCar. La coordinación con mis compañeros para definir contratos de datos, flujos de telemetría y puntos de integración reforzó el trabajo en equipo y la toma de decisiones conjunta sobre la arquitectura del sistema.</p>
         </div>
     </td>
 </tr>
@@ -609,6 +680,11 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
             <p align="justify"><strong>Gonzalo Andre Zavala Quedena:</strong> Gestioné las tareas de despliegue y la integración continua mínima requerida para las pruebas end-to-end del Sprint 2. Desplegué artefactos del Backend y configuré entornos de staging para la Web y Mobile backends, garantizando la trazabilidad y reproducibilidad de las pruebas.</p>
             <p align="justify"><strong>Anaely Zarely Burga Loarte:</strong> Coordiné la validación de usabilidad del dashboard con usuarios finales, recopilé feedback y prioricé correcciones de UX para la siguiente iteración. Colaboré en la adaptación de pantallas a la Mobile Application y en guías de uso para la demostración del sprint.</p>
         </div>
+        <!-- TF Section -->
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
+            <p align="justify"><strong>Gonzalo Andre Zavala Quedena:</strong> Contribuí a crear un entorno colaborativo e inclusivo estableciendo metas concretas para la integración del servicio Edge, las aplicaciones embebidas (Cabine y Edge) y la mejora de la Web Application. Planifiqué y coordiné tareas de integración, pruebas end-to-end y ajustes de UX junto con mis compañeros, facilitando la comunicación entre los frentes de backend, embebidos y frontend web. Cumplí los objetivos definidos para el sprint al dejar operativa la cadena completa de telemetría —desde el dispositivo hasta la interfaz web— y al documentar los flujos y configuraciones necesarios para que el resto del equipo pudiera continuar iterando sobre una base estable y alineada con los objetivos del proyecto.</p>
+        </div>
     </td>
     <td style="text-align: left; vertical-align: top; padding: 15px;">
         <div style="margin-bottom: 15px;">
@@ -623,10 +699,16 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
             <h5 style="color: #e74c3c; margin-bottom: 8px;">TB2:</h5>
             <p align="justify">Durante el desarrollo del TB2, equipo alcanzó los objetivos propuestos para WorkshopOps y la integración con Web/Mobile/Backend: se validaron pipelines de ingesta y normalización de telemetría, contratos de mensajería y despliegues en staging, y se presentó una demo funcional que evidenció la trazabilidad entre lecturas IoT y órdenes de trabajo. La coordinación entre disciplinas mejoró la calidad de la integración y dejó la plataforma lista para avanzar hacia Insights y automatización avanzada.</p>
         </div>
+        <div style="margin-bottom: 15px;">
+            <h5 style="color: #e74c3c; margin-bottom: 8px;">TF:</h5>
+            <p align="justify">Durante el desarrollo del TF, la planificación de tareas para el servicio Edge, las aplicaciones embebidas y la Web Application, junto con la coordinación de pruebas end-to-end y ajustes de UX, contribuyó a un entorno de trabajo colaborativo donde backend, embebidos y frontend avanzaron de manera alineada. El cumplimiento de los objetivos del sprint —dejando operativa la cadena completa de telemetría desde el dispositivo hasta la interfaz web— evidencia una gestión ordenada de metas, coordinación efectiva y compromiso con los resultados del equipo.</p>
+        </div>
     </td>
 </tr>
 </tbody>
 </table>
+
+<div style="page-break-after: always;"></div>
 
 # Capítulo I: Introducción
 
@@ -13293,6 +13375,64 @@ Esta sección presenta la evidencia del despliegue exitoso de los incrementos de
 Finalmente, se describen los aspectos clave de la colaboración del equipo durante el desarrollo del Sprint 3. Se analizan las dinámicas de trabajo, la comunicación interna, el uso de herramientas de gestión ágil y las lecciones aprendidas, con el objetivo de identificar oportunidades de mejora para optimizar el rendimiento en futuras iteraciones.
 </p>
 
+<table>
+  <tr>
+    <th width="20%">Product</th>
+    <th width="60%">Collaboration Insights</th>
+    <th width="20%">Description</th>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-backend.png" alt="Collaboration Insights Backend" width="100%"/>
+    </td>
+    <td align="justify">La figura presenta el resumen de actividad colaborativa del equipo de backend en el repositorio correspondiente durante el Sprint 3, incluyendo métricas de commits, contribuyentes activos y evolución del trabajo en el tiempo.</td>
+  </tr>
+  <tr>
+    <td>Web Application</td>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-web.png" alt="Collaboration Insights Frontend" width="100%"/>
+    </td>
+    <td align="justify">En esta imagen se muestran los Insights del repositorio de la aplicación web de SafeCar para el Sprint 3, donde se visualiza la participación del equipo de desarrollo, la frecuencia de los commits y la distribución del trabajo colaborativo.
+    </td>
+  </tr>
+  <tr>
+    <td>Web Business</td>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-landing.png" alt="Collaboration Insights Web Business" width="100%"/>
+    </td>
+    <td align="justify">La captura corresponde al repositorio del sitio web de negocio, evidenciando la actividad del equipo en términos de contribuciones, ritmo de trabajo y colaboración sobre el código fuente durante el Sprint 3.</td>
+  </tr>
+  <tr>
+    <td>Mobile Application</td>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-mobile.png" alt="Collaboration Insights Mobile Application" width="100%"/>
+    </td>
+    <td align="justify">La figura muestra los Insights del repositorio de la aplicación móvil, donde se registran los commits realizados, los desarrolladores involucrados y el comportamiento de la colaboración a lo largo del Sprint 3.</td>
+  </tr>
+  <tr>
+    <td>Edge Service</td>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-edge.png" alt="Collaboration Insights Edge Service" width="100%"/>
+    </td>
+    <td align="justify">En esta imagen se presenta el resumen de actividad del repositorio del servicio Edge, reflejando la contribución del equipo, el volumen de cambios y la evolución del trabajo colaborativo durante el Sprint 3.</td>
+  </tr>
+  <tr>
+    <td>Embedded Application (Cabine)</td>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-cabine-embedded.png" alt="Collaboration Insights Embedded Application (Cabine)" width="100%"/>
+    </td>
+    <td align="justify">La captura ilustra los Insights del repositorio de la aplicación embebida en cabina, mostrando la participación de los miembros del equipo, la cantidad de commits y la dinámica de colaboración registrada en el Sprint 3.</td>
+  </tr>
+  <tr>
+    <td>Embedded Application (Edge)</td>
+    <td>
+      <img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-edge-embedded.png" alt="Collaboration Insights Embedded Application (Edge)" width="100%"/>
+    </td>
+    <td align="justify">La figura expone los Insights del repositorio de la aplicación embebida en el nodo Edge, donde se sintetizan las métricas de contribución, cambios sobre el código y actividad colaborativa del equipo durante el Sprint 3.</td>
+  </tr>
+</table>
+
 ## 6.3. Validation Interviews
 ### 6.3.1. Diseño de Entrevistas
 
@@ -13354,7 +13494,12 @@ Para los talleres mecánicos, las preguntas se orientaron a validar la claridad 
 ### 6.3.2. Registro de Entrevistas
 ### 6.3.3. Evaluación según heurísticas
 
-## 6.4. Video About-the-Product
+<p align="justify"> En la siguiente sección se presenta el video explicativo del proyecto <b>SafeCar</b>, cuyo objetivo es introducir el producto a los usuarios finales de manera clara y accesible, destacando cómo la solución integra dispositivos IoT instalados en el vehículo con la aplicación móvil y el backend para optimizar la gestión del mantenimiento. 
+</p>
+
+<img src="assets/img/capitulo-VI/sprint-3/video-about-the-product.png" alt="Video About the Product" width="100%"/>
+
+<b>Link del video:</b> https://tinyurl.com/5n7t2kwf
 
 ## Anexos 
 ### Anexo A. GitHub Repositories
