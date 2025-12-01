@@ -13492,6 +13492,32 @@ Para los talleres mecánicos, las preguntas se orientaron a validar la claridad 
 - ¿Qué mejorarías de la interfaz o los textos?
 
 ### 6.3.2. Registro de Entrevistas
+<p align="justify">
+En esta sección se presentan las entrevistas realizadas a los usuarios finales del sistema SafeCar para validar la solución desarrollada, esto con el objetivo de obtener feedback y mejorar la usabilidad y funcionalidad de la solución desarrollada.
+</p>
+
+<b>Segmento: Conductores</b>
+
+<b>Entrevista 1</b>
+
+<ul>
+  <li><strong>Nombre:</strong> Katy Gutierrez</li>
+  <li><strong>Edad:</strong> 23 años</li>
+  <li><strong>Ocupación:</strong> Usa carro particular </li>
+  <li><strong>Distrito:</strong> Lince </li>
+  <li><strong>URL del video:</strong> <a href="https://tinyurl.com/3fkkjc52" target="_blank">https://tinyurl.com/3fkkjc52</a></li>
+  <li><strong>Duración:</strong> 04:19</li>
+<li><strong>Inicio de la entrevista:</strong> 4:28 min - 8:47 min</li>
+  <div style="margin-top: 20px;" align="center">
+                <img src="assets/img/capitulo-VI/sprint-3/validation-interviews/entrevista-validacion2.png" alt="Entrevista de validación 2" width="1000px">
+        </div>
+
+<p>
+<strong>Resumen:</strong> 
+
+</p>
+
+
 ### 6.3.3. Evaluación según heurísticas
 
 <p align="justify"> En la siguiente sección se presenta el video explicativo del proyecto <b>SafeCar</b>, cuyo objetivo es introducir el producto a los usuarios finales de manera clara y accesible, destacando cómo la solución integra dispositivos IoT instalados en el vehículo con la aplicación móvil y el backend para optimizar la gestión del mantenimiento. 
