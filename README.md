@@ -13122,9 +13122,9 @@ Las imagenes que se muestra a continuación presenta la Aplicación Móvil despl
 Finalmente, se presentan los insights de colaboración del equipo durante el Sprint 2, basados en las métricas de contribución y actividad de los repositorios. Este análisis permite evaluar la distribución del esfuerzo y la efectividad de la comunicación técnica entre los miembros del equipo en la implementación de la arquitectura distribuida.
 </p>
 
-### 6.3.2. Sprint 3
+### 6.2.3. Sprint 3
 
-#### 6.3.2.1. Sprint Planning 3
+#### 6.2.3.1. Sprint Planning 3
 
 <p align="justify">
 El Sprint 3 marca el inicio del proceso de desarrollo del servicio Edge para el proyecto SafeCar, al mismo tiempo el desarrollo de los prototipos del sistema embebido y su transmisión de datos a la plataforma.
@@ -13204,7 +13204,7 @@ El Sprint 3 marca el inicio del proceso de desarrollo del servicio Edge para el 
 </table>
 
 
-#### 6.3.2.2. Aspect Leaders and Collaborators
+#### 6.2.3.2. Aspect Leaders and Collaborators
 
 <p align="justify">
 Para el Sprint 3, la matriz de asignación de responsabilidades se ha reconfigurado para abordar los desafíos de la integración IoT y el desarrollo Edge. Los roles de liderazgo y colaboración (LACX) se distribuyen ahora entre los componentes críticos de telemetría y seguridad en el borde, así como en el desarrollo de firmware para los sistemas embebidos, garantizando una cobertura técnica especializada para cada capa de la solución.
@@ -13279,11 +13279,11 @@ Para el Sprint 3, la matriz de asignación de responsabilidades se ha reconfigur
 
 
 
-6.3.2.3. Sprint Backlog 3
+6.2.3.3. Sprint Backlog 3
 
-6.3.2.4. Development Evidence for Sprint Review
+6.2.3.4. Development Evidence for Sprint Review
 
-6.3.2.5. Testing Suite Evidence for Sprint Review
+6.2.3.5. Testing Suite Evidence for Sprint Review
 <p align="justify">
 Esta sección documenta la evidencia de las actividades de aseguramiento de calidad realizadas durante el Sprint 3. Se incluyen los resultados de las pruebas unitarias ejecutadas para validar los nuevos componentes del backend asegurando la robustez de los servicios críticos como autenticación y gestión de vehículos.
 </p>
@@ -13336,13 +13336,13 @@ Esta sección documenta la evidencia de las actividades de aseguramiento de cali
   </tr>
 </table>
 
-6.3.2.6. Execution Evidence for Sprint Review
+6.2.3.6. Execution Evidence for Sprint Review
 
 <p align="justify">
 En esta sección se documenta las ejecuciones correspondientes al Sprint 3. Se presentan capturas de pantalla asegurando que las funcionalidades críticas del sistema operan según lo esperado.
 </p>
 
-6.3.2.7. Services Documentation Evidence for Sprint Review
+6.2.3.7. Services Documentation Evidence for Sprint Review
 
 <p align="justify">
 A continuación, se detalla la documentación técnica de los servicios desarrollados o actualizados durante este Sprint. Se incluye información relevante sobre los endpoints expuestos, las estructuras de solicitud y respuesta, así como los contratos de datos establecidos para garantizar la correcta integración entre los componentes del sistema.
@@ -13363,13 +13363,13 @@ A continuación, se detalla la documentación técnica de los servicios desarrol
   </tr>
 </table>
 
-6.3.2.8. Software Deployment Evidence for Sprint Review
+6.2.3.8. Software Deployment Evidence for Sprint Review
 
 <p align="justify">
 Esta sección presenta la evidencia del despliegue exitoso de los incrementos del producto en los entornos de prueba y producción. Se incluyen registros del proceso de despliegue, configuraciones de infraestructura y verificaciones de disponibilidad, demostrando que los entregables están operativos y accesibles para su validación y uso.
 </p>
 
-6.3.2.9. Team Collaboration Insights during Sprint
+6.2.3.9. Team Collaboration Insights during Sprint
 
 <p align="justify">
 Finalmente, se describen los aspectos clave de la colaboración del equipo durante el desarrollo del Sprint 3. Se analizan las dinámicas de trabajo, la comunicación interna, el uso de herramientas de gestión ágil y las lecciones aprendidas, con el objetivo de identificar oportunidades de mejora para optimizar el rendimiento en futuras iteraciones.
@@ -13613,8 +13613,58 @@ En esta sección se presentan las entrevistas realizadas a los usuarios finales 
 
 ### 6.3.3. Evaluación según heurísticas
 
-<p align="justify"> En la siguiente sección se presenta el video explicativo del proyecto <b>SafeCar</b>, cuyo objetivo es introducir el producto a los usuarios finales de manera clara y accesible, destacando cómo la solución integra dispositivos IoT instalados en el vehículo con la aplicación móvil y el backend para optimizar la gestión del mantenimiento. 
+<p align="justify">
+Esta sección presenta el análisis de la experiencia de usuario de SafeCar basado en las 10 Heurísticas de Usabilidad de Nielsen. La evaluación toma como insumo principal el feedback recopilado en las entrevistas de validación con conductores y personal de talleres, identificando tanto las fortalezas de la interfaz como las áreas de fricción que requieren optimización para garantizar una navegación intuitiva y eficiente.
 </p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Heurística</th>
+      <th>Hallazgo durante Validación (Problema/Oportunidad)</th>
+      <th>Severidad</th>
+      <th>Acción de Mejora / Solución</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Visibilidad del estado del sistema</strong></td>
+      <td>Los conductores (Entrevistas 1 y 2) manifestaron ansiedad por no conocer el "estado real" de su vehículo y depender del mecánico.</td>
+      <td>Alta</td>
+      <td>Se implementó un "semáforo" visual en el dashboard principal de la App Móvil que indica el estado de salud del vehículo (Verde/Amarillo/Rojo) en tiempo real, basado en la telemetría IoT.</td>
+    </tr>
+    <tr>
+      <td><strong>2. Coincidencia entre el sistema y el mundo real</strong></td>
+      <td>Algunos usuarios mencionaron la necesidad de entender los diagnósticos en "lenguaje sencillo" (Entrevista 2). Los términos técnicos mecánicos pueden ser confusos para conductores particulares.</td>
+      <td>Media</td>
+      <td>Se tradujeron los códigos de falla (DTC) a descripciones amigables en la interfaz del conductor, manteniendo el código técnico visible solo para el perfil de mecánico.</td>
+    </tr>
+    <tr>
+      <td><strong>5. Prevención de errores</strong></td>
+      <td>En los talleres, la gestión manual previa generaba confusiones en horarios y cruces de citas (Entrevista 5).</td>
+      <td>Alta</td>
+      <td>Se añadieron validaciones en el formulario de reserva de citas para impedir la selección de horarios no disponibles y alertas de confirmación antes de modificar el estado de una orden de trabajo.</td>
+    </tr>
+    <tr>
+      <td><strong>6. Reconocer antes que recordar</strong></td>
+      <td>Los conductores suelen olvidar las fechas de mantenimiento pasado (Entrevista 1) y los mecánicos pierden tiempo consultando al cliente sobre servicios previos (Entrevista 4).</td>
+      <td>Media</td>
+      <td>Se habilitó una sección de "Historial de Mantenimiento" visible tanto para el conductor como para el taller (previa autorización), eliminando la carga cognitiva de recordar fechas y detalles.</td>
+    </tr>
+    <tr>
+      <td><strong>7. Flexibilidad y eficiencia de uso</strong></td>
+      <td>Los mecánicos requieren agilidad para ver qué vehículos están en el taller y en qué estado, sin navegar por múltiples menús (Entrevista 6).</td>
+      <td>Media</td>
+      <td>Se diseñó un "Tablero Operativo" (Dashboard) para el taller que consolida las órdenes del día y permite filtros rápidos por estado (Diagnóstico, Reparación, Listo), optimizando el flujo de trabajo diario.</td>
+    </tr>
+    <tr>
+      <td><strong>8. Estética y diseño minimalista</strong></td>
+      <td>La saturación de información técnica puede abrumar al conductor particular.</td>
+      <td>Baja</td>
+      <td>Se priorizó una interfaz limpia en la App Móvil, mostrando solo la información crítica en la pantalla de inicio y relegando los detalles técnicos a niveles de navegación más profundos (Divulgación Progresiva).</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 6.4. Video About the Product
 
