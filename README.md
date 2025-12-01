@@ -13506,8 +13506,8 @@ En esta sección se presentan las entrevistas realizadas a los usuarios finales 
   <li><strong>Ocupación:</strong> Usa carro particular </li>
   <li><strong>Distrito:</strong> Lince </li>
   <li><strong>URL del video:</strong> <a href="https://tinyurl.com/3fkkjc52" target="_blank">https://tinyurl.com/3fkkjc52</a></li>
-  <li><strong>Duración:</strong> 04:19</li>
-<li><strong>Inicio de la entrevista:</strong> 4:28 min - 8:47 min</li>
+  <li><strong>Duración:</strong> 8:30 minutos</li>
+<li><strong>Inicio de la entrevista:</strong> 7:00 min - 15:30 min</li>
   <div style="margin-top: 20px;" align="center">
                 <img src="assets/img/capitulo-VI/sprint-3/validation-interviews/entrevista-validacion2.png" alt="Entrevista de validación 2" width="1000px">
         </div>
