@@ -13281,6 +13281,153 @@ Para el Sprint 3, la matriz de asignación de responsabilidades se ha reconfigur
 
 6.2.3.3. Sprint Backlog 3
 
+#### 6.2.3.3. Sprint Backlog 3 (IoT & Edge Computing)
+<p align="justify">
+En este tercer sprint, el equipo se enfocará en el desarrollo del firmware para el dispositivo IoT (ESP32). Se prioriza la arquitectura de software orientado a objetos (POO), la lectura de sensores simulados en Wokwi y la lógica "Edge" para el procesamiento de alertas locales.
+</p>
+
+<table width="100%">
+    <tr>
+        <th colspan="2">Sprint #</th>
+        <th colspan="6">Sprint 3</th>
+    </tr>
+    <tr>
+        <td colspan="2">User Story</td>
+        <td colspan="6">Work-Item / Task</td>
+    </tr>
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Estimation (Hours)</td>
+        <td>Assigned To</td>
+        <td>Status (To-do / In-Process / To-Review / Done)</td>
+    </tr>
+    <tr>
+        <td rowspan="4">TS301</td>
+        <td rowspan="4">Como desarrollador IoT, deseo establecer la arquitectura base del firmware en Wokwi usando POO, para asegurar un código escalable y modular.</td>
+        <td>T50</td>
+        <td>Configurar entorno Wokwi (ESP32).</td>
+        <td>Crear el diagrama esquemático en Wokwi integrando el ESP32, sensores básicos (DHT22, Potenciómetros) y actuadores (LEDs).</td>
+        <td>2</td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T51</td>
+        <td>Implementar interfaz abstracta ISensor.</td>
+        <td>Definir la interfaz `ISensor.h` con métodos virtuales puros `init()` y `read()` para aplicar polimorfismo en los sensores.</td>
+        <td>2</td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T52</td>
+        <td>Implementar clase WiFiConnection.</td>
+        <td>Desarrollar la clase `WiFiConnection` (Singleton) encargada de gestionar las credenciales y la reconexión automática en el setup.</td>
+        <td>3</td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T53</td>
+        <td>Configurar Scheduler/Timer.</td>
+        <td>Implementar un control de tiempo no bloqueante (usando `millis()`) para gestionar la frecuencia de lectura de los sensores sin usar `delay()`.</td>
+        <td>2</td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US302</td>
+        <td rowspan="4">Como sistema embebido, deseo leer datos de los sensores del vehículo para monitorear el estado del motor en tiempo real.</td>
+        <td>T54</td>
+        <td>Implementar clase TemperatureSensor.</td>
+        <td>Crear la clase concreta que hereda de `ISensor` para leer datos del sensor DHT22 (Temp. Motor) y validar rangos lógicos.</td>
+        <td>3</td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T55</td>
+        <td>Implementar clase FuelLevelSensor.</td>
+        <td>Crear la clase concreta para simular el nivel de combustible usando un potenciómetro y mapear la entrada analógica a porcentaje (0-100%).</td>
+        <td>3</td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T56</td>
+        <td>Implementar clase RPMSensor (Simulado).</td>
+        <td>Desarrollar lógica para simular las RPM del motor mediante un generador de señal o potenciómetro secundario.</td>
+        <td>3</td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T57</td>
+        <td>Instanciar sensores en MainController.</td>
+        <td>Inyectar las dependencias de los sensores en el controlador principal y ejecutar el bucle de lectura.</td>
+        <td>2</td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US303</td>
+        <td rowspan="3">Como dispositivo IoT, deseo procesar los datos localmente (Edge) para detectar fallas críticas antes de enviarlas a la nube.</td>
+        <td>T58</td>
+        <td>Implementar clase DiagnosticsService.</td>
+        <td>Crear servicio de dominio que reciba los DTOs de sensores y evalúe reglas de negocio (ej. Temp > 95°C).</td>
+        <td>4</td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T59</td>
+        <td>Programar Alertas Visuales (LEDs).</td>
+        <td>Codificar la lógica para que el LED RGB cambie de estado (Verde/Rojo) inmediatamente al detectar una anomalía crítica local.</td>
+        <td>2</td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T60</td>
+        <td>Filtrado de señal (Promedio Móvil).</td>
+        <td>Implementar algoritmo de promedio móvil en las lecturas analógicas para estabilizar los datos y evitar falsos positivos por ruido.</td>
+        <td>3</td>
+        <td>AB</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td rowspan="3">TS304</td>
+        <td rowspan="3">Como dispositivo IoT, deseo serializar los datos en formato JSON para prepararlos para su envío al backend.</td>
+        <td>T61</td>
+        <td>Integrar librería ArduinoJson.</td>
+        <td>Importar y configurar la librería `ArduinoJson` en el proyecto Wokwi para manejo eficiente de memoria.</td>
+        <td>1</td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T62</td>
+        <td>Implementar método `toJson()`.</td>
+        <td>Crear métodos en las clases de datos para convertir el estado actual del vehículo a un objeto JSON string.</td>
+        <td>3</td>
+        <td>GQ</td>
+        <td>To-do</td>
+    </tr>
+    <tr>
+        <td>T63</td>
+        <td>Validar estructura de Payload.</td>
+        <td>Realizar pruebas de impresión por Serial para verificar que el JSON generado cumple con el contrato de la API.</td>
+        <td>2</td>
+        <td>JS</td>
+        <td>To-do</td>
+    </tr>
+</table>
+
+
 6.2.3.4. Development Evidence for Sprint Review
 
 6.2.3.5. Testing Suite Evidence for Sprint Review
