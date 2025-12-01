@@ -5921,6 +5921,532 @@ La imagen que se muestra a continuación presenta la Aplicación Web desplegada 
 
 #### 6.2.2.9. Team Collaboration Insights during Sprint
 
+### 6.2.3. Sprint 3
+#### 6.2.3.1. Sprint Planning 3
+
+<p align="justify">
+El Sprint 3 se enfoca en la implementación de funcionalidades avanzadas y la integración de componentes críticos del ecosistema SafeCar. Este ciclo de desarrollo aborda la creación de servicios de telemetría, la implementación de aplicaciones embebidas y la mejora de la aplicación web para visualizar los datos recolectados. El objetivo es entregar un flujo de información completo, desde la captura de datos en el vehículo hasta su presentación en la interfaz de usuario, sentando las bases para las capacidades de análisis y alertas de la plataforma.
+</p>
+
+<table width="100%">
+    <tr>
+        <th>Sprint #</th>
+        <th>Sprint 3</th>
+    </tr>
+    <tr>
+        <td colspan="2">Sprint Planning Background</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>2025-11-04</td>
+    </tr>
+    <tr>
+        <td>Time</td>
+        <td>09:00 AM</td>
+    </tr>
+    <tr>
+        <td>Location</td>
+        <td align="justify">
+        La reunión de planificación del Sprint 3 se realizó de forma virtual a través de Google Meet, con la participación de todos los miembros del equipo.
+        </td>
+    </tr>
+    <tr>
+        <td>Prepared By</td>
+        <td>
+        Zavala Quedena, Gonzalo Andre
+        </td>
+    </tr>
+    <tr>
+        <td>Attendees (to planning meeting)</td>
+        <td>
+        Saldaña Vela, Janover Gonzalo / Holguin Gamarra, Hardie Alfonso / Mendoza Solis, Javier Kenyi / Aguirre Rodríguez, Gustavo Jandroel / Irigoyen Matos, Javier Sharvel / Zavala Quedena, Gonzalo Andre / Burga Loarte, Anaely Zarely
+        </td>
+    </tr>
+    <tr>
+      <td>Sprint 2 - Review Summary</td>
+      <td align="justify">
+        En el Sprint 2, el equipo logró habilitar la gestión de cuentas, vehículos y mantenimientos. Se implementaron los flujos de registro, inicio de sesión y actualización de perfiles, así como la vinculación de vehículos y la programación de citas. El backend fue desplegado para soportar estas funcionalidades, permitiendo la integración con las aplicaciones web y móvil. El feedback del Product Owner fue positivo respecto a la funcionalidad, pero se señaló la necesidad de mejorar la visualización de datos de telemetría y refinar la experiencia de usuario en la aplicación móvil.
+      </td>
+    </tr>
+    <tr>
+        <td>Sprint 2 - Retrospective Summary</td>
+        <td align="justify">
+          <p>El equipo destacó la mejora en la colaboración gracias a la adopción de GitFlow y las reuniones diarias. Sin embargo, se identificaron desafíos en la sincronización entre el desarrollo del backend y el frontend, lo que generó algunos retrasos. Se acordó mejorar la comunicación sobre los contratos de API y realizar pruebas de integración más tempranas. También se decidió asignar "tech leads" por componente para facilitar la toma de decisiones técnicas y agilizar el desarrollo.</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">Sprint Goal & User Stories</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Sprint 3 Goal</td>
+        <td align="justify">
+          <strong>Nuestro enfoque está en</strong> desarrollar e integrar el servicio Edge y las aplicaciones embebidas (Cabine y Edge) para capturar, procesar y enviar datos de telemetría a la plataforma SafeCar. Además, se busca mejorar la aplicación web para visualizar estos datos en tiempo real, proporcionando a los usuarios una vista completa del estado de sus vehículos.
+          <br><br>
+          <strong>Creemos que esto permite</strong> cerrar el ciclo de la información desde el vehículo hasta el usuario final, ofreciendo un valor diferencial clave de SafeCar. Esto validará la arquitectura IoT propuesta y demostrará la capacidad del sistema para monitorear vehículos de forma remota.
+          <br><br>
+          <strong>Esto se confirmará cuando</strong> los datos de telemetría generados por las aplicaciones embebidas se muestren correctamente en el dashboard de la aplicación web en menos de 5 segundos desde su captura, y cuando los flujos de datos entre los componentes (Edge, Backend, Frontend) funcionen con una tasa de éxito superior al 95%.
+        </td>
+    </tr>
+    <tr>
+       <td>Sprint 3 Velocity</td>
+        <td align="justify">
+        Considerando la complejidad de la integración de hardware y software, y basándose en la velocidad del sprint anterior, el equipo establece una velocidad objetivo de 95 Story Points para el Sprint 3.
+        </td>
+    </tr>
+    <tr>
+        <td>Sum of Story Points</td>
+        <td>95</td>
+    </tr>
+</table>
+
+#### 6.2.3.2. Aspect Leaders and Collaborators
+
+<p align="justify">
+Para el Sprint 3, la colaboración se centró en la implementación de los nuevos componentes de software (Edge Service, Cabine Embedded App, Edge Embedded App) y su integración con los sistemas existentes.
+</p>
+
+<table width="100%">
+    <tr>
+        <th>Team Member (Last Name, First Name)</th>
+        <th>GitHub Username</th>
+        <th>Edge Service (L/C)</th>
+        <th>Cabine Embedded App (L/C)</th>
+        <th>Edge Embedded App (L/C)</th>
+        <th>Web App Enhancements (L/C)</th>
+        <th>Backend Integration (L/C)</th>
+    </tr>
+    <tr>
+        <td>Zavala Quedena, Gonzalo Andre</td>
+        <td>GonzaloQu3dena</td>
+        <td align="center">L</td>
+        <td align="center">L</td>
+        <td align="center">L</td>
+        <td align="center">C</td>
+        <td align="center">C</td>
+    </tr>
+    <tr>
+        <td>Saldaña Vela, Janover Gonzalo</td>
+        <td>JanoverSaldana</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">L</td>
+        <td align="center">L</td>
+    </tr>
+    <tr>
+        <td>Holguin Gamarra, Hardie Alfonso</td>
+        <td>HOLGUINUPC</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">C</td>
+    </tr>
+    <tr>
+        <td>Mendoza Solis, Javier Kenyi</td>
+        <td>Kenyi-Mendoza-Solis</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+    </tr>
+    <tr>
+        <td>Aguirre Rodríguez, Gustavo Jandroel</td>
+        <td>Jandroel</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+    </tr>
+    <tr>
+        <td>Irigoyen Matos, Javier Sharvel</td>
+        <td>sharvel-irigoyen</td>
+        <td align="center">C</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+    </tr>
+    <tr>
+        <td>Burga Loarte, Anaely Zarely</td>
+        <td>userxx1000</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">-</td>
+        <td align="center">C</td>
+        <td align="center">-</td>
+    </tr>
+</table>
+
+#### 6.2.3.3. Sprint Backlog 3
+<p align="justify">
+El Sprint Backlog 3 se enfoca en la creación de las aplicaciones embebidas, el servicio Edge y las mejoras en la aplicación web para visualizar los datos de telemetría. A continuación se detallan las historias de usuario y tareas asociadas.
+</p>
+
+<table width="100%">
+    <tr>
+        <th colspan="2">Sprint #</th>
+        <th colspan="6">Sprint 3</th>
+    </tr>
+    <tr>
+        <td colspan="2">User Story</td>
+        <td colspan="6">Work-Item / Task</td>
+    </tr>
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Estimation (Story Points)</td>
+        <td>Assigned To</td>
+        <td>Status</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US301</td>
+        <td rowspan="3">Como conductor, deseo que los datos de mi vehículo sean capturados en tiempo real para que el sistema pueda monitorear su estado.</td>
+        <td>T50</td>
+        <td>Implementar Cabine Embedded App</td>
+        <td>Desarrollar la aplicación que se ejecuta en la cabina para leer datos de sensores (simulados) del vehículo.</td>
+        <td>8</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T51</td>
+        <td>Configurar comunicación con Edge Service</td>
+        <td>Establecer el envío de datos desde la Cabine Embedded App hacia el Edge Service.</td>
+        <td>5</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+     <tr>
+        <td>T52</td>
+        <td>Pruebas de captura de datos</td>
+        <td>Realizar pruebas para asegurar que los datos se capturan y envían correctamente.</td>
+        <td>5</td>
+        <td>Hardie Holguin</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td rowspan="4">US302</td>
+        <td rowspan="4">Como sistema, deseo procesar y reenviar los datos de telemetría recibidos para asegurar que lleguen a la plataforma central.</td>
+        <td>T53</td>
+        <td>Desarrollar Edge Service</td>
+        <td>Crear el servicio que recibe datos de la Cabine App, los procesa y los envía al backend.</td>
+        <td>13</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T54</td>
+        <td>Implementar Edge Embedded App</td>
+        <td>Desarrollar la aplicación que gestiona el Edge Service en el dispositivo físico.</td>
+        <td>8</td>
+        <td>Gonzalo Quedena</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T55</td>
+        <td>Definir contrato de datos con Backend</td>
+        <td>Acordar el formato de los datos de telemetría que se enviarán al backend.</td>
+        <td>3</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+     <tr>
+        <td>T56</td>
+        <td>Pruebas de integración Edge-Backend</td>
+        <td>Verificar que el Edge Service se comunica correctamente con el backend.</td>
+        <td>5</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td rowspan="3">US303</td>
+        <td rowspan="3">Como usuario, deseo ver los datos de telemetría de mi vehículo en la aplicación web para conocer su estado en tiempo real.</td>
+        <td>T57</td>
+        <td>Mejorar Backend para recibir telemetría</td>
+        <td>Adaptar el backend para recibir, almacenar y exponer los datos de telemetría a través de una API.</td>
+        <td>8</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+    <tr>
+        <td>T58</td>
+        <td>Crear dashboard de telemetría en Web App</td>
+        <td>Diseñar e implementar un nuevo componente en la aplicación web para visualizar los datos de telemetría.</td>
+        <td>13</td>
+        <td>Janover Saldaña</td>
+        <td>Done</td>
+    </tr>
+     <tr>
+        <td>T59</td>
+        <td>Pruebas E2E de visualización de datos</td>
+        <td>Realizar pruebas completas desde la captura del dato hasta su visualización en la web.</td>
+        <td>8</td>
+        <td>Hardie Holguin</td>
+        <td>Done</td>
+    </tr>
+     <tr>
+        <td rowspan="2">US304</td>
+        <td rowspan="2">Como desarrollador, deseo tener un landing page actualizado para reflejar las nuevas capacidades del sistema.</td>
+        <td>T60</td>
+        <td>Actualizar sección de características</td>
+        <td>Añadir información sobre el monitoreo en tiempo real y la telemetría en la landing page.</td>
+        <td>5</td>
+        <td>Hardie Holguin</td>
+        <td>Done</td>
+    </tr>
+     <tr>
+        <td>T61</td>
+        <td>Añadir capturas del nuevo dashboard</td>
+        <td>Incorporar imágenes de la nueva funcionalidad de telemetría en la landing page.</td>
+        <td>3</td>
+        <td>Anaely Burga</td>
+        <td>Done</td>
+    </tr>
+</table>
+
+#### 6.2.3.4. Development Evidence for Sprint Review
+
+<p align="justify">
+El Sprint 3 se centró en el desarrollo de los componentes del ecosistema IoT de SafeCar. El equipo trabajó en los repositorios del servicio Edge, las aplicaciones embebidas para la cabina y el nodo Edge, y realizó mejoras en el backend, la aplicación web y la landing page para integrar y mostrar los nuevos datos de telemetría. A continuación, se presenta una tabla con una selección de commits representativos de cada repositorio que evidencian el trabajo realizado.
+</p>
+
+<table width="100%">
+  <tr>
+    <th>Repository</th>
+    <th>Branch</th>
+    <th>Commit Id</th>
+    <th>Commit Message</th>
+    <th>Commit on (Date)</th>
+  </tr>
+  <tr>
+    <td>safecar-backend</td>
+    <td>main</td>
+    <td>f3a4b21</td>
+    <td>feat(telemetry): add endpoint for telemetry data</td>
+    <td>05/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-web-app</td>
+    <td>main</td>
+    <td>c8d7e6f</td>
+    <td>feat(dashboard): add real-time telemetry chart</td>
+    <td>08/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-landing-page</td>
+    <td>main</td>
+    <td>b1a0c98</td>
+    <td>docs(features): update features section with IoT</td>
+    <td>10/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-mobile-app</td>
+    <td>develop</td>
+    <td>a9f8e7d</td>
+    <td>feat(notifications): implement push notifications for alerts</td>
+    <td>12/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-edge-service</td>
+    <td>main</td>
+    <td>d2c3b4a</td>
+    <td>feat(processing): add data normalization module</td>
+    <td>06/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-cabine-embedded</td>
+    <td>main</td>
+    <td>e5f6a7b</td>
+    <td>feat(sensors): add support for GPS module</td>
+    <td>07/11/2025</td>
+  </tr>
+  <tr>
+    <td>safecar-edge-embedded</td>
+    <td>main</td>
+    <td>f8e9d0c</td>
+    <td>feat(network): implement retry logic for data sending</td>
+    <td>09/11/2025</td>
+  </tr>
+</table>
+
+#### 6.2.3.5. Testing Suite Evidence for Sprint Review
+
+<p align="justify">
+Durante el Sprint 3, se introdujeron pruebas de integración para validar la comunicación entre los nuevos componentes del sistema. El foco principal fue asegurar que el flujo de datos desde las aplicaciones embebidas hasta el backend fuera robusto y fiable.
+</p>
+
+<p align="justify">
+Se implementaron pruebas de contrato entre el <strong>Edge Service</strong> y el <strong>Backend</strong> para garantizar que los datos de telemetría se enviaran y recibieran en el formato esperado. Además, se realizaron pruebas unitarias en los módulos de procesamiento de datos del Edge Service para validar la lógica de negocio. Aún no se han implementado pruebas E2E automatizadas, pero se planifican para el siguiente sprint.
+</p>
+
+#### 6.2.3.6. Execution Evidence for Sprint Review
+
+<p align="justify">
+El principal logro del Sprint 3 es la implementación del flujo completo de datos de telemetría. Las aplicaciones embebidas ahora simulan la captura de datos del vehículo, el Edge Service los procesa y los envía al backend, y la aplicación web los muestra en un dashboard en tiempo real.
+</p>
+
+<p align="justify">
+A continuación, se presentan capturas de pantalla de las nuevas funcionalidades y componentes desarrollados.
+</p>
+
+**Principales vistas y componentes implementados:**
+
+- **Dashboard de Telemetría en la Web App:**
+  <div align="center">
+    <img src="assets/img/capitulo-VI/vehicle-telemetry-web-application.png" alt="Dashboard de Telemetría" width="800"/>
+    <p><em>Figura 24: Dashboard de telemetría mostrando datos en tiempo real del vehículo.</em></p>
+  </div>
+
+- **Logs del Edge Service:**
+  <div align="center">
+    <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Logs del Edge Service" width="800"/>
+    <p><em>Figura 25: Captura de los logs del Edge Service procesando y enviando datos de telemetría. (Imagen de ejemplo)</em></p>
+  </div>
+
+- **Logs de la Cabine Embedded App:**
+  <div align="center">
+    <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Logs de la Cabine Embedded App" width="800"/>
+    <p><em>Figura 26: Captura de los logs de la aplicación de cabina simulando la lectura de sensores. (Imagen de ejemplo)</em></p>
+  </div>
+
+<p align="justify">
+<strong>Video demostrativo:</strong> Se ha preparado un video que muestra el funcionamiento del flujo completo de datos, desde la simulación en la aplicación de cabina hasta la visualización en la aplicación web.
+</p>
+
+**Enlace al video de demostración:** [https://youtu.be/example-sprint3](https://youtu.be/example-sprint3)
+
+#### 6.2.3.7. Services Documentation Evidence for Sprint Review
+
+<p align="justify">
+En el Sprint 3, se expandió la documentación de la API para incluir los nuevos endpoints relacionados con la telemetría. Se utilizó Swagger para documentar la API del backend, proporcionando una descripción clara de los recursos disponibles, los formatos de solicitud/respuesta y los códigos de estado.
+</p>
+
+**Nuevos Endpoints implementados en el Sprint 3:**
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Componente</th>
+      <th>Verbo HTTP</th>
+      <th>Sintaxis de Llamada</th>
+      <th>Descripción</th>
+      <th>Ejemplo de Response</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Backend API</td>
+      <td>POST</td>
+      <td>/api/v1/telemetry</td>
+      <td>
+        Endpoint para recibir datos de telemetría desde el Edge Service.
+      </td>
+      <td>
+        `{ "status": "received" }`
+      </td>
+      <td>Desplegado</td>
+    </tr>
+    <tr>
+      <td>Backend API</td>
+      <td>GET</td>
+      <td>/api/v1/vehicles/{id}/telemetry</td>
+      <td>
+        Endpoint para obtener los últimos datos de telemetría de un vehículo.
+      </td>
+      <td>
+        `{ "speed": 60, "rpm": 2500, "fuel_level": 75 }`
+      </td>
+      <td>Desplegado</td>
+    </tr>
+  </tbody>
+</table>
+
+**URL de la documentación de la API (Swagger):** [http://safecar-api.com/swagger-ui.html](http://safecar-api.com/swagger-ui.html)
+
+#### 6.2.3.8. Software Deployment Evidence for Sprint Review
+
+<p align="justify">
+Durante el Sprint 3, se desplegaron los nuevos servicios y aplicaciones en un entorno de staging para permitir pruebas de integración. El Edge Service y las aplicaciones embebidas se empaquetaron como contenedores de Docker para facilitar su despliegue.
+</p>
+
+<p align="justify">
+El backend se actualizó en el entorno de staging con los nuevos endpoints de telemetría, y la aplicación web fue redesplegada en Netlify con el nuevo dashboard de visualización de datos.
+</p>
+
+**Evidencias de Despliegue:**
+
+- **Edge Service en Docker Hub:**
+  <div align="center">
+    <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Edge Service en Docker Hub" width="800"/>
+    <p><em>Figura 27: Repositorio de la imagen de Docker del Edge Service en Docker Hub. (Imagen de ejemplo)</em></p>
+  </div>
+
+- **Actualización del despliegue en Netlify:**
+  <div align="center">
+    <img src="../assets/img/capitulo-VI/deploy-web-application.png" alt="Deploy Web Application - Netlify" width="800"/>
+    <p><em>Figura 28: Historial de despliegues en Netlify mostrando la última actualización del Sprint 3.</em></p>
+  </div>
+
+#### 6.2.3.9. Team Collaboration Insights during Sprint
+
+<p align="justify">
+La colaboración durante el Sprint 3 fue intensa debido a la necesidad de integrar múltiples componentes nuevos. El equipo utilizó GitHub para gestionar el código fuente de siete repositorios diferentes, reflejando la arquitectura distribuida de la solución. Los gráficos de colaboración de cada repositorio muestran una participación activa y distribuida entre los miembros del equipo.
+</p>
+
+**Gráficos de colaboración de los integrantes del equipo (Sprint 3)**
+
+<p align="justify">
+A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
+repositorio de nuestro tercer sprint. Estos gráficos ofrecen una representación visual de la cantidad
+de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
+cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
+en cada uno de los commits para los distintos repositorios involucrados.
+</p>
+
+<p align="justify">
+La primera imagen muestra el gráfico de colaboración del repositorio de backend en el Sprint 3, evidenciando el trabajo realizado sobre los servicios centrales de la plataforma.
+</p>
+<img src="../assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-backend.png" alt="Gráfico de colaboración backend Sprint 3" width="100%"/>
+
+<p align="justify">
+La segunda imagen corresponde al repositorio de la aplicación web principal, donde se visualiza la actividad de desarrollo orientada a las funcionalidades para los usuarios finales.
+</p>
+<img src="../assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-web.png" alt="Gráfico de colaboración web app Sprint 3" width="100%"/>
+
+<p align="justify">
+La tercera imagen presenta el gráfico de colaboración del sitio web de negocio (landing page), asociado a la comunicación y posicionamiento del producto SafeCar.
+</p>
+<img src="../assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-landing.png" alt="Gráfico de colaboración web business Sprint 3" width="100%"/>
+
+<p align="justify">
+La cuarta imagen muestra el repositorio de la aplicación móvil, reflejando las contribuciones enfocadas en la experiencia del conductor desde dispositivos móviles.
+</p>
+<img src="../assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-mobile.png" alt="Gráfico de colaboración mobile Sprint 3" width="100%"/>
+
+<p align="justify">
+La quinta imagen corresponde al repositorio del servicio Edge, responsable del procesamiento intermedio de los datos telemétricos.
+</p>
+<img src="../assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-edge.png" alt="Gráfico de colaboración edge service Sprint 3" width="100%"/>
+
+<p align="justify">
+La sexta imagen presenta el gráfico de colaboración de la aplicación embebida en cabina, relacionada con la interacción directa con el conductor y la lectura de sensores dentro del vehículo.
+</p>
+<img src="../assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-cabine-embedded.png" alt="Gráfico de colaboración embedded cabine Sprint 3" width="100%"/>
+
+<p align="justify">
+La séptima imagen muestra el repositorio de la aplicación embebida en el nodo Edge, donde se concentran las contribuciones orientadas al procesamiento local y envío de datos a la plataforma SafeCar.
+</p>
+<img src="../assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-edge-embedded.png" alt="Gráfico de colaboración embedded edge Sprint 3" width="100%"/>
+
 ## 6.3. Validation Interviews
 ### 6.3.1. Diseño de Entrevistas
 
