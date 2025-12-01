@@ -3,7 +3,8 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" width="220"/>
 
 # Universidad Peruana De Ciencias Aplicadas
-## Ingeniería de Software  - 8vo ciclo
+## Ingeniería de Software
+## 202520
 ## 1ASI0572 - Desarrollo de Soluciones IOT
 ## NRC: 3479
 ## Docente: Angel Augusto Velasquez Nuñez  
@@ -44,6 +45,8 @@
     <td>U202113656</td>
   </tr>
 </table>
+
+<h3>Diciembre 2025</h3>
 
 </div>
 
@@ -13960,6 +13963,16 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
         <td>https://github.com/metasoft-iot/safecar-edge-service</td>
         <td>Repositorio del servicio edge para la recolección de datos telemétricos.</td>
     </tr>
+    <tr>
+        <td>Embedded Application (Cabine)</td>
+        <td>https://github.com/metasoft-iot/iot-safecar-cabine-dht11-mq2-display-on-esp32-app</td>
+        <td>Repositorio del código del hardware que irá en cabina del vehiculo.</td>
+    </tr>
+    <tr>
+        <td>Embedded Application (Edge)</td>
+        <td>https://github.com/metasoft-iot/iot-safecar-edge-dht11-acs712-on-esp32-app</td>
+        <td>Repositorio del código del hardware que irá en motor del vehiculo.</td>
+    </tr>
 </table>
 
 ### Anexo B. Videos de Exposiciones
@@ -13977,12 +13990,12 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
     </tr>
     <tr>
         <td>TP</td>
-        <td></td>
+        <td>https://tinyurl.com/msb4rb35</td>
         <td>Video explicativo del proyecto SafeCar para la segunda entrega del proyecto</td>
     </tr>
     <tr>
         <td>TB2</td>
-        <td></td>
+        <td>https://tinyurl.com/msb4rb35</td>
         <td>Video explicativo del proyecto SafeCar para la tercera entrega del proyecto</td>
     </tr>
     <tr>
