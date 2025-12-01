@@ -1,14 +1,13 @@
 <div align="center">
 
-# Universidad Peruana De Ciencias Aplicadas
-## Ingeniería de Software  
-## NRC: 3479
-## 1ASI0572 - Desarrollo de Soluciones IOT
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" width="220"/>
 
-# "Informe de Trabajo Final"
+# Universidad Peruana De Ciencias Aplicadas
+## Ingeniería de Software  - 8vo ciclo
+## 1ASI0572 - Desarrollo de Soluciones IOT
+## NRC: 3479
 ## Docente: Angel Augusto Velasquez Nuñez  
+# "Informe de Trabajo Final"
 ## Startup: MetaSoft  
 ## Producto: SafeCar
 
