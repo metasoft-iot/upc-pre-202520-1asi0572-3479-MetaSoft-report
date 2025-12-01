@@ -13,12 +13,37 @@
 
 ## Relación de integrantes:
 
-**Hardie Alfonso Holguin Gamarra — U202220250**  
-**Javier Kenyi Mendoza Solis — U201824550**  
-**Gustavo Jandroel Aguirre Rodríguez — U202124162**  
-**Javier Sharvel Irigoyen Matos — U20221D156**  
-**Gonzalo Andre Zavala Quedena — U202113656**  
-**Anaely Zarely Burga Loarte — U202118264**
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Código</th>
+  <tr>
+
+  <tr>
+    <td>Hardie Alfonso Holguin Gamarra</td>
+    <td>U202220250</td>
+  </tr>
+
+  <tr>
+    <td>Javier Kenyi Mendoza Solis</td>
+    <td>U201824550</td>
+  </tr>
+
+  <tr>
+    <td>Gustavo Jandroel Aguirre Rodríguez</td>
+    <td>U202124162</td>
+  </tr>
+
+  <tr>
+    <td>Javier Sharvel Irigoyen Matos</td>
+    <td>U20221D156</td>
+  </tr>
+
+  <tr>
+    <td>Gonzalo Andre Zavala Quedena</td>
+    <td>U202113656</td>
+  </tr>
+</table>
 
 </div>
 
