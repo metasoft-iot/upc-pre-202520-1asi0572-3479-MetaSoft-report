@@ -639,7 +639,7 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         </div>
         <!-- TB2 Section -->
         <div style="margin-bottom: 20px;">
-            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
+            <h5 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h5>
             <p align="justify"><strong>Hardie Alfonso Holguin Gamarra:</strong> Implementé pruebas de integración para la ingestión de dispositivos IoT y la validación de mensajes de telemetría. Definí y probé reglas de normalización y enriquecimiento (geocodificación básica, conversión de unidades, detección de alertas por umbrales) y aseguré que cada lectura se asocie correctamente con el vehículo y conductor. Además, documenté las contract tests para el canal de mensajería y participé en la definición de los endpoints de telemetría del backend de WorkshopOps.</p>
             <p align="justify"><strong>Javier Kenyi Mendoza Solis:</strong> Desarrollé y refiné los componentes de interfaz relacionados con la gestión del taller: panel de programación de citas, vista de órdenes de trabajo y dashboard de telemetría en tiempo real. Implementé formularios y validaciones para la creación y reasignación de órdenes, y trabajé en la visualización inicial de señales de telemetría (eventos críticos, última ubicación, estado del vehículo) para facilitar la toma de decisiones operativas en el taller.</p>
             <p align="justify"><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Implementé las entidades del dominio y el esquema de persistencia necesarios para WorkshopOps: modelos de <em>WorkOrder</em>, <em>BayAssignment</em>, <em>TelemetryRecord</em> y relaciones con <em>Vehicle</em> y <em>Driver</em>. Diseñé las migraciones y queries para búsquedas eficientes por VIN y por ventana temporal, y desarrollé los servicios que correlacionan telemetría con órdenes de trabajo y generan eventos para los consumidores downstream.</p>
@@ -649,8 +649,12 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         </div>
         <!-- TF Section -->
         <div style="margin-bottom: 20px;">
-            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
+            <h5 style="color: #2c3e50; margin-bottom: 10px;">Entregable TF</h5>
             <p align="justify"><strong>Gonzalo Andre Zavala Quedena:</strong> Asumí un rol de liderazgo técnico compartido al diseñar e implementar el servicio Edge, así como las aplicaciones embebidas de Cabine y Edge, coordinando su integración con el backend y la Web Application. Lideré decisiones sobre contratos de datos, flujo de mensajes y despliegue de estos componentes, alineando al equipo de desarrollo para garantizar que la telemetría viajara de forma consistente desde los dispositivos IoT hasta las interfaces de usuario. Además, impulsé mejoras en la aplicación web, asegurando que los nuevos datos expuestos por el Edge Service y las aplicaciones embebidas se visualizaran de forma clara y usable, contribuyendo así al liderazgo conjunto en la arquitectura y en la entrega de valor del sistema SafeCar.</p>
+            <p align="justify"><strong>Hardie Alfonso Holguin Gamarra:</strong> Lideré la visión del producto y la arquitectura técnica del sistema mediante el desarrollo integral del backend y frontend. Dirigí la producción del video promocional del producto y la implementación de mejoras críticas en el servicio Edge, tomando decisiones técnicas clave para la estabilidad de la plataforma. Cumplí con los objetivos de liderazgo al entregar una solución de software funcional y una comunicación efectiva de la propuesta de valor.</p>
+            <p align="justify"><strong>Javier Sharvel Irigoyen Matos:</strong> Lideré la estrategia de despliegue a producción y la validación funcional del sistema. Dirigí la creación de la infraestructura de backend para dispositivos, la optimización del servicio Edge y la ejecución de pruebas con usuarios reales, guiando al equipo hacia un lanzamiento exitoso. Cumplí con mi responsabilidad al asegurar un entorno de producción estable y al validar la usabilidad del sistema con conductores.</p>
+            <p align="justify"><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Lideré la ingeniería de hardware del proyecto, asumiendo la responsabilidad del diseño y programación de los dispositivos físicos. Dirigí la implementación de los circuitos y el código para los módulos de cabina y motor, resolviendo desafíos técnicos de integración IoT. Cumplí con los objetivos al entregar componentes de hardware operativos y al contribuir significativamente a la documentación técnica y visual del equipo.</p>
+            <p align="justify"><strong>Javier Kenyi Mendoza Solis:</strong> Lideré la documentación técnica y el aseguramiento de la calidad de la información del Sprint 3. Dirigí la redacción de las secciones clave del reporte y proporcioné soporte técnico especializado en el servicio Edge, garantizando la consistencia entre el desarrollo y la documentación. Cumplí con mi rol al entregar registros precisos del avance del proyecto y al reforzar la estabilidad de los servicios de borde.</p>
         </div>
     </td>
     <td style="text-align: left; vertical-align: top; padding: 15px;">
@@ -709,8 +713,13 @@ La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos propo
         </div>
         <!-- TF Section -->
         <div style="margin-bottom: 20px;">
-            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TB2</h4>
+            <h4 style="color: #2c3e50; margin-bottom: 10px;">Entregable TF</h4>
             <p align="justify"><strong>Gonzalo Andre Zavala Quedena:</strong> Contribuí a crear un entorno colaborativo e inclusivo estableciendo metas concretas para la integración del servicio Edge, las aplicaciones embebidas (Cabine y Edge) y la mejora de la Web Application. Planifiqué y coordiné tareas de integración, pruebas end-to-end y ajustes de UX junto con mis compañeros, facilitando la comunicación entre los frentes de backend, embebidos y frontend web. Cumplí los objetivos definidos para el sprint al dejar operativa la cadena completa de telemetría —desde el dispositivo hasta la interfaz web— y al documentar los flujos y configuraciones necesarios para que el resto del equipo pudiera continuar iterando sobre una base estable y alineada con los objetivos del proyecto.</p>
+            <p align="justify"><strong>Hardie Alfonso Holguin Gamarra:</strong> Contribuí a crear un entorno colaborativo e inclusivo definiendo los estándares visuales y funcionales para la presentación del producto y la arquitectura del sistema. Planifiqué y coordiné el desarrollo integral del backend y frontend, así como la optimización del servicio Edge, asegurando una integración fluida entre las capas de la aplicación. Cumplí los objetivos del entregable al producir el video promocional que comunica el valor de SafeCar y al entregar una implementación técnica robusta documentada en el reporte final[cite: 42].</p>
+            <p align="justify"><strong>Javier Sharvel Irigoyen Matos:</strong> Contribuí a crear un entorno colaborativo e inclusivo estableciendo una estrategia clara para el despliegue en producción y la gestión de la infraestructura. Planifiqué y coordiné la creación de endpoints críticos, la mejora del servicio Edge y el desarrollo de interfaces CRUD, facilitando las pruebas y la validación con usuarios reales. Cumplí los objetivos definidos al lograr un despliegue exitoso, ejecutar entrevistas de validación con conductores y asegurar la calidad visual y técnica del reporte final.</p>
+            <p align="justify"><strong>Gustavo Jandroel Aguirre Rodríguez:</strong> Contribuí a crear un entorno colaborativo e inclusivo liderando la materialización de los componentes de hardware IoT y fomentando la identidad del equipo. Planifiqué y coordiné el diseño de circuitos y la implementación del código para los dispositivos ESP32 de cabina y motor, asegurando su correcta interacción con el sistema. Cumplí los objetivos al entregar prototipos funcionales de los dispositivos y al apoyar en la producción de material audiovisual y documental clave para el proyecto.</p>
+            <p align="justify"><strong>Javier Kenyi Mendoza Solis:</strong> Contribuí a crear un entorno colaborativo e inclusivo brindando soporte esencial en la capa de servicios y la documentación del proceso de desarrollo. Planifiqué y coordiné la redacción y estructuración de las secciones del Sprint 3, asegurando la coherencia y trazabilidad de la información técnica. Cumplí los objetivos establecidos al reforzar la estabilidad del servicio Edge y garantizar que la documentación del reporte reflejara con precisión los avances y resultados del equipo.</p>
+        </div>
         </div>
     </td>
     <td style="text-align: left; vertical-align: top; padding: 15px;">
@@ -1455,6 +1464,8 @@ Después de realizar una investigación de mercado, hemos identificado tres comp
     <td colspan="1" valign="top" align="justify">Disponible en plataformas Web y móvil</td>
   </tr>
 </table>
+
+<div style="page-break-after: always;"></div>
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
