@@ -13504,28 +13504,200 @@ En esta sección se presentan las entrevistas realizadas a los usuarios finales 
   <li><strong>Nombre:</strong> Katy Gutierrez</li>
   <li><strong>Edad:</strong> 23 años</li>
   <li><strong>Ocupación:</strong> Usa carro particular </li>
-  <li><strong>Distrito:</strong> Lince </li>
   <li><strong>URL del video:</strong> <a href="https://tinyurl.com/3fkkjc52" target="_blank">https://tinyurl.com/3fkkjc52</a></li>
   <li><strong>Duración:</strong> 8:30 minutos</li>
-<li><strong>Inicio de la entrevista:</strong> 7:00 min - 15:30 min</li>
+  <li><strong>Inicio de la entrevista:</strong> 7:00 min - 15:30 min</li>
+</ul>
   <div style="margin-top: 20px;" align="center">
                 <img src="assets/img/capitulo-VI/sprint-3/validation-interviews/entrevista-validacion2.png" alt="Entrevista de validación 2" width="1000px">
         </div>
 
-<p>
-<strong>Resumen:</strong> 
-
+<p align="justify">
+  <strong>Resumen:</strong> La entrevistada indicó que suele olvidar las fechas de sus mantenimientos y que normalmente reacciona recién cuando aparece una falla o un ruido inusual en el vehículo. Valoró contar con una solución que le permita visualizar en una sola aplicación el estado general de su auto y el historial de servicios realizados. Además, le resultó útil la idea de poder revisar, de forma sencilla, información básica del vehículo antes de decidir acudir a un taller, así como tener mayor orden y registro sobre los trabajos ejecutados.
 </p>
 
+<b>Entrevista 2</b>
+
+<ul>
+  <li><strong>Nombre:</strong> Shirley Alva </li>
+  <li><strong>Edad:</strong> 20 años</li>
+  <li><strong>Ocupación:</strong> Proyectos de audiovisual </li>
+  <li><strong>URL del video:</strong> <a href="https://tinyurl.com/3fkkjc52" target="_blank">https://tinyurl.com/3fkkjc52</a></li>
+  <li><strong>Duración:</strong> 8:22 minutos</li>
+  <li><strong>Inicio de la entrevista:</strong> 15:31 min - 23:52 min</li>
+</ul>
+  <div style="margin-top: 20px;" align="center">
+                <img src="assets/img/capitulo-VI/sprint-3/validation-interviews/entrevista-validacion3.png" alt="Entrevista de validación 3" width="1000px">
+        </div>
+
+<p align="justify">
+  <strong>Resumen:</strong> La entrevistada comentó que, por la naturaleza de sus proyectos, necesita moverse constantemente y depende del auto para cumplir con sus entregas. Señaló que le preocupa no tener visibilidad del “estado real” de su vehículo y que suele confiar únicamente en lo que le indica el mecánico. Consideró valioso que una solución como SafeCar le permita ver, en un panel claro y en lenguaje sencillo, indicadores básicos del vehículo y un resumen de intervenciones previas. También mencionó que le sería de ayuda poder identificar talleres cercanos y acceder rápidamente a la información relevante de cada uno.
+</p>
+
+<b>Entrevista 3</b>
+
+<ul>
+  <li><strong>Nombre:</strong> Juan Zapata </li>
+  <li><strong>Edad:</strong> 26 años </li>
+  <li><strong>Ocupación:</strong> Conductor particular </li>
+  <li><strong>Distrito:</strong> Lince</li>
+  <li><strong>URL del video:</strong> <a href="https://tinyurl.com/3fkkjc52" target="_blank">https://tinyurl.com/3fkkjc52</a></li>
+  <li><strong>Duración:</strong> 6:33 minutos</li>
+  <li><strong>Inicio de la entrevista:</strong> 0:26 min - 6:59 min</li>
+</ul>
+  <div style="margin-top: 20px;" align="center">
+                <img src="assets/img/capitulo-VI/sprint-3/validation-interviews/entrevista-validacion1.png" alt="Entrevista de validación 3" width="1000px">
+        </div>
+
+<p align="justify">
+  <strong>Resumen:</strong> El entrevistado explicó que usa el auto a diario para desplazarse por la ciudad y que suele postergar mantenimientos por temas de tiempo y tráfico. Mostró interés en una solución que le permita gestionar sus vehículos desde una aplicación web o móvil, revisar su información básica y tener a la mano el detalle de servicios anteriores. También indicó que le gustaría poder registrar y consultar, de forma ordenada, los trabajos realizados en cada visita al taller para comparar costos, tiempos y decisiones tomadas a lo largo del tiempo.
+</p>
+
+<b>Segmento: Mecánicos de Taller</b>
+
+<b>Entrevista 4</b>
+
+<ul>
+  <li><strong>Nombre:</strong> Keyner Hancco</li>
+  <li><strong>Edad:</strong> 20 años </li>
+  <li><strong>Ocupación:</strong> Trabajador de taller (Mecánico)</li>
+  <li><strong>URL del video:</strong> <a href="https://tinyurl.com/3fkkjc52" target="_blank">https://tinyurl.com/3fkkjc52</a></li>
+  <li><strong>Duración:</strong> 12:30 minutos</li>
+  <li><strong>Inicio de la entrevista:</strong> 23:53 min - 30:33 min</li>
+</ul>
+  <div style="margin-top: 20px;" align="center">
+                <img src="assets/img/capitulo-VI/sprint-3/validation-interviews/entrevista-validacion4.png" alt="Entrevista de validación 4" width="1000px">
+        </div>
+
+<p align="justify">
+  <strong>Resumen:</strong> El entrevistado señaló que uno de los principales problemas del taller es que muchos vehículos llegan sin mucha información previa sobre su estado, lo que alarga el diagnóstico inicial. Consideró muy útil disponer de un sistema donde pueda consultar datos relevantes del vehículo (kilometraje, condiciones generales, trabajos anteriores) al momento de iniciar la atención. Valoró la idea de un panel operativo que consolide las órdenes de trabajo del día y la información asociada a cada vehículo, ya que esto le permitiría organizar mejor su carga laboral y dar un servicio más rápido y ordenado.
+</p>
+
+<b>Entrevista 5</b>
+
+<ul>
+  <li><strong>Nombre:</strong> Luciana Zavala</li>
+  <li><strong>Edad:</strong> 20 años</li>
+  <li><strong>Ocupación:</strong> Asistente de taller</li>
+  <li><strong>Distrito:</strong> Jesus Maria</li>
+  <li><strong>URL del video:</strong> <a href="https://tinyurl.com/3fkkjc52" target="_blank">https://tinyurl.com/3fkkjc52</a></li>
+  <li><strong>Duración:</strong> 8:30 minutos</li>
+  <li><strong>Inicio de la entrevista:</strong> 30:34 min - 35:15 min</li>
+</ul>
+  <div style="margin-top: 20px;" align="center">
+                <img src="assets/img/capitulo-VI/sprint-3/validation-interviews/entrevista-validacion5.png" alt="Entrevista de validación 5" width="1000px">
+        </div>
+
+<p align="justify">
+  <strong>Resumen:</strong> La entrevistada comentó que actualmente la gestión de citas y órdenes de trabajo se realiza de forma manual o con herramientas muy básicas, lo que genera confusiones en horarios y seguimiento de servicios. Consideró que una plataforma como SafeCar facilitaría registrar y actualizar el estado de las órdenes, así como visualizar la información principal de cada cliente y vehículo en un solo lugar. También resaltó que un sistema de este tipo ayudaría a reducir errores en la coordinación con los mecánicos y a tener un control más claro de lo que entra y sale del taller cada día.
+</p>
+
+<b>Entrevista 6</b>
+
+<ul>
+  <li><strong>Nombre:</strong> Rodrigo Perez</li>
+  <li><strong>Edad:</strong> 24 años</li>
+  <li><strong>Ocupación:</strong> Mecánico</li>
+  <li><strong>Distrito:</strong> Miraflores </li>
+  <li><strong>URL del video:</strong> <a href="https://tinyurl.com/3fkkjc52" target="_blank">https://tinyurl.com/3fkkjc52</a></li>
+  <li><strong>Duración:</strong> 8:30 minutos</li>
+  <li><strong>Inicio de la entrevista:</strong> 35:16 min - 44:20 min</li>
+</ul>
+  <div style="margin-top: 20px;" align="center">
+                <img src="assets/img/capitulo-VI/sprint-3/validation-interviews/entrevista-validacion6.png" alt="Entrevista de validación 6" width="1000px">
+        </div>
+
+<p align="justify">
+  <strong>Resumen:</strong> En esta entrevista, la persona representante del taller destacó la importancia de tener una vista consolidada de los vehículos atendidos en el día y del estado en que se encuentran dentro del flujo de trabajo (en diagnóstico, en reparación, listo para entrega, etc.). Señaló que un sistema que centralice la información de cada orden de trabajo —incluyendo datos del conductor, detalles del vehículo y trabajos realizados— facilitaría la coordinación interna y la comunicación con los clientes. Además, mencionó que disponer de reportes generados por la plataforma ayudaría a dar seguimiento a los servicios ofrecidos y a proyectar mejor la carga de trabajo futura del taller.
+</p>
 
 ### 6.3.3. Evaluación según heurísticas
 
 <p align="justify"> En la siguiente sección se presenta el video explicativo del proyecto <b>SafeCar</b>, cuyo objetivo es introducir el producto a los usuarios finales de manera clara y accesible, destacando cómo la solución integra dispositivos IoT instalados en el vehículo con la aplicación móvil y el backend para optimizar la gestión del mantenimiento. 
 </p>
 
+## 6.4. Video About the Product
+
+<p align="justify">
+A continuación, se presenta un video promocional que resume la propuesta de valor de SafeCar, destacando sus principales funcionalidades y beneficios para los usuarios. Este material audiovisual busca ilustrar de manera clara y atractiva cómo nuestra solución transforma la gestión del mantenimiento vehicular mediante el uso de tecnología IoT y una plataforma intuitiva.
+</p>
+
 <img src="assets/img/capitulo-VI/sprint-3/video-about-the-product.png" alt="Video About the Product" width="100%"/>
 
 <b>Link del video:</b> https://tinyurl.com/5n7t2kwf
+
+# Conclusiones
+
+<p align="justify">
+El desarrollo del proyecto SafeCar ha permitido validar la viabilidad de una solución integral basada en IoT para la gestión del mantenimiento vehicular, abordando eficazmente la problemática de la falta de información preventiva y la ineficiencia en los diagnósticos tradicionales. La integración exitosa entre los dispositivos de telemetría, la plataforma en la nube y las aplicaciones para usuarios finales demuestra que es posible democratizar el acceso a tecnología automotriz avanzada, ofreciendo a conductores y talleres una herramienta accesible que transforma datos técnicos en decisiones operativas claras y accionables.
+</p>
+
+<p align="justify">
+Desde la perspectiva del usuario, las validaciones han confirmado que la propuesta de valor centrada en la prevención y la transparencia resuena fuertemente tanto en conductores particulares como en talleres mecánicos. La capacidad de recibir alertas en tiempo real y visualizar el historial de servicios ha demostrado ser un factor clave para cambiar el comportamiento de mantenimiento reactivo a uno preventivo, generando confianza y seguridad en los conductores, mientras que para los talleres representa una oportunidad tangible de modernización y fidelización de clientes mediante un servicio más profesional y fundamentado en datos.
+</p>
+
+<p align="justify">
+En el ámbito técnico y metodológico, la aplicación del enfoque Lean UX y el desarrollo iterativo han sido fundamentales para refinar las funcionalidades del sistema y asegurar que cada incremento aporte valor real. La arquitectura de software implementada, basada en microservicios y comunicación asíncrona, ha probado ser robusta y escalable, capaz de soportar el flujo de datos proveniente de los dispositivos IoT y garantizar la disponibilidad de los servicios críticos, cumpliendo así con los atributos de calidad de rendimiento y seguridad establecidos inicialmente.
+</p>
+
+<p align="justify">
+Finalmente, el proyecto sienta las bases para una evolución continua hacia un ecosistema de movilidad inteligente más amplio. Los resultados obtenidos no solo validan el modelo de negocio actual, sino que abren la puerta a futuras expansiones como la integración de inteligencia artificial para diagnósticos predictivos más precisos y la conexión con otros actores del sector automotriz. SafeCar se posiciona así no solo como una herramienta de gestión, sino como un habilitador clave para la transformación digital del mantenimiento vehicular en el mercado objetivo.
+</p>
+
+## Conclusiones y recomendaciones
+
+Tras finalizar las iteraciones del desarrollo de SafeCar, se han alcanzado conclusiones significativas respecto a la viabilidad, deseabilidad y factibilidad de la solución propuesta. A continuación, se detallan los hallazgos en relación con los componentes estratégicos definidos al inicio del proyecto:
+
+**En relación a los Problem Statements**
+*   **Falta de información clara para conductores:** Se ha logrado mitigar este problema mediante la implementación de una aplicación móvil que traduce datos complejos de telemetría en alertas comprensibles y visualizaciones sencillas. Las entrevistas de validación confirmaron que los conductores valoran tener un "semáforo" del estado de su vehículo en tiempo real.
+*   **Diagnósticos lentos y manuales en talleres:** La plataforma web para talleres ha demostrado ser una herramienta eficaz para centralizar la información del vehículo antes de su ingreso físico. La disponibilidad de un historial de servicios digitalizado aborda directamente la ineficiencia operativa detectada inicialmente.
+*   **Mantenimiento reactivo vs. preventivo:** La solución ha validado técnicamente la capacidad de capturar y procesar datos IoT para fomentar una cultura de prevención. Los usuarios finales reconocieron que las notificaciones automatizadas ayudan a evitar olvidos y reducen la probabilidad de fallas mayores.
+
+**En relación a las Assumptions y el Comportamiento Real**
+*   **Disposición al uso de tecnología:** Se validó la suposición de que tanto conductores como mecánicos están dispuestos a adoptar herramientas digitales si estas ofrecen un beneficio tangible inmediato (ahorro de tiempo o dinero). La barrera de entrada tecnológica resultó ser menor a la esperada, especialmente en el segmento de conductores jóvenes y talleres en proceso de modernización.
+*   **Valor de la analítica:** Si bien la analítica predictiva avanzada está en hoja de ruta, la analítica descriptiva (estado actual e historial) implementada en el MVP fue suficiente para generar interés y validar la propuesta de valor. Los usuarios mostraron preferencia por la transparencia de la información sobre la complejidad técnica.
+
+**En relación a los Hypotheses Statements**
+*   **Hipótesis 1 (Adopción por alertas preventivas):** Validada. Los conductores entrevistados indicaron que las alertas son la funcionalidad más crítica para cambiar su comportamiento de mantenimiento.
+*   **Hipótesis 2 (Eficiencia en talleres):** Validada. Los mecánicos confirmaron que acceder a datos previos del vehículo reduce el tiempo de interrogatorio inicial y diagnóstico preliminar.
+*   **Hipótesis 3 (Usabilidad de la interfaz):** Validada parcialmente y en mejora continua. Aunque la recepción fue positiva, se identificaron oportunidades para simplificar aún más la navegación en el panel de talleres, lo cual se ha incorporado al backlog de mejoras.
+
+**Criterios de Éxito Lean UX vs. Resultados**
+El proceso de validación ha demostrado que SafeCar cumple con los criterios de éxito cualitativos establecidos para la etapa de MVP. Se ha logrado una solución funcional que conecta el dispositivo IoT (Edge), la nube y las interfaces de usuario de manera estable. Las pruebas de aceptación y las sesiones de feedback con usuarios indican que el producto base es sólido para un lanzamiento a mercado piloto.
+
+### Recomendaciones
+
+Basado en los hallazgos y el estado actual del proyecto, se proponen las siguientes recomendaciones para las próximas etapas del Roadmap de Producto:
+
+1.  **Implementación de Modelos Predictivos Avanzados:** Evolucionar el módulo de análisis de datos para integrar algoritmos de Machine Learning que no solo reporten fallas actuales, sino que predigan la probabilidad de avería de componentes específicos basándose en patrones de conducción y kilometraje.
+2.  **Expansión de la Compatibilidad IoT:** Ampliar la capa de integración de hardware para soportar una mayor variedad de protocolos OBD-II y dispositivos de telemetría de terceros, asegurando que SafeCar sea agnóstico al hardware y pueda escalar masivamente.
+3.  **Gamificación para Conductores:** Incorporar elementos de gamificación en la aplicación móvil (puntos por conducción segura o mantenimiento puntual) para incentivar el uso recurrente y la retención de usuarios a largo plazo.
+4.  **Integración con Pasarelas de Pago:** Desarrollar completamente el flujo de pagos dentro de la plataforma para permitir la transacción directa entre conductores y talleres, cerrando el ciclo comercial y habilitando modelos de monetización por comisión.
+5.  **Programa de Certificación de Talleres:** Crear un sello de "Taller Verificado SafeCar" para generar mayor confianza en los conductores y estandarizar la calidad del servicio dentro de la red de afiliados.
+
+## Video About the Team
+
+<p align="justify">
+En esta sección presentamos al equipo de desarrollo detrás de SafeCar. A través de este video, los integrantes de MetaSoft comparten sus experiencias, roles y aportes individuales que hicieron posible la construcción de esta solución tecnológica. Es un espacio para reconocer el esfuerzo conjunto y la sinergia que permitieron alcanzar los objetivos del proyecto.
+</p>
+
+<img src="assets/img/capitulo-VI/video-about-the-team.png" alt="Video About the Team" width="100%"/>
+
+<b>Link del video:</b> https://tinyurl.com/vw4u3ve7
+
+# Bibliografía
+
+1. ResearchGate. (2023). A comprehensive cost-benefit analysis of preventive maintenance versus corrective maintenance: Assessing the financial impact and operational benefits in engineering. Recuperado de https://www.researchgate.net/publication/389501396_A_Comprehensive_Cost-Benefit_Analysis_of_Preventive_Maintenance_Versus_Corrective_Maintenance_Assessing_the_Financial_Impact_and_Operational_Benefits_in_Engineering
+2. UpKeep Technologies. (2022). Maintenance statistics you need to know. Recuperado de https://upkeep.com/learning/maintenance-statistics/
+3. National Center for Biotechnology Information (PMC). (2022). Predictive maintenance: A comprehensive review. Recuperado de https://pmc.ncbi.nlm.nih.gov/articles/PMC9890517/
+4. ClickMaintain Fleet. (2024). Preventive maintenance vs reactive maintenance analysis. Recuperado de https://www.clickmaint.com/blog/preventive-maintenance-vs-reactive-maintenance-analysis
+5. SimplyFleet. (2025). The truth about vehicle mileage & repair costs. Recuperado de https://www.simplyfleet.app/blog/vehicle-mileage-vs-repair-costs
+6. Banco Interamericano de Desarrollo (BID). (2022). Estudios sobre movilidad urbana y parque vehicular en Latinoamérica. Recuperado de https://www.iadb.org/es
+7. Deloitte. (2023). Global Automotive Consumer Study. Recuperado de https://www2.deloitte.com/global/en/pages/consumer-industrial-products/articles/automotive-consumer-study.html
+8. Statista. (2023). Latin America: ride-hailing and delivery market growth. Recuperado de https://www.statista.com
+9. Asociación Automotriz del Perú (AAP) & INEI. (2023, marzo 3). El 11.64% de hogares en el Perú poseen un vehículo. <span>Andina .pe.</span> Recuperado de https://andina.pe/agencia/noticia-el-1164-hogares-todo-peru-poseen-un-auto-o-camioneta-987911.aspx
+10. Asociación Automotriz del Perú (AAP). (2021). Más de 70,000 talleres mecánicos necesitan capacitación en nuevas tecnologías. Recuperado de https://aap.org.pe/aap-mas-de-70000-talleres-mecanicos-necesitan-capacitacion-en-nuevas-tecnologias
+11. TechSenati. (2022). Talleres automotrices en el Perú: condiciones actuales y necesidad de capacitación tecnológica. Recuperado de https://techsenati.edu.pe/talleres-automotrices-en-el-peru-cuales-son-sus-condiciones-actuales-y-por-que-necesitan-mayor-capacitacion-tecnologica
 
 ## Anexos 
 ### Anexo A. GitHub Repositories
@@ -13592,18 +13764,9 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
         <td></td>
         <td>Video explicativo del proyecto SafeCar para la tercera entrega del proyecto</td>
     </tr>
+    <tr>
+        <td>TF</td>
+        <td></td>
+        <td>Video explicativo del proyecto SafeCar para la cuarta entrega del proyecto</td>
+    </tr>
 </table>
-
-# Bibliografía
-
-1. ResearchGate. (2023). A comprehensive cost-benefit analysis of preventive maintenance versus corrective maintenance: Assessing the financial impact and operational benefits in engineering. Recuperado de https://www.researchgate.net/publication/389501396_A_Comprehensive_Cost-Benefit_Analysis_of_Preventive_Maintenance_Versus_Corrective_Maintenance_Assessing_the_Financial_Impact_and_Operational_Benefits_in_Engineering
-2. UpKeep Technologies. (2022). Maintenance statistics you need to know. Recuperado de https://upkeep.com/learning/maintenance-statistics/
-3. National Center for Biotechnology Information (PMC). (2022). Predictive maintenance: A comprehensive review. Recuperado de https://pmc.ncbi.nlm.nih.gov/articles/PMC9890517/
-4. ClickMaintain Fleet. (2024). Preventive maintenance vs reactive maintenance analysis. Recuperado de https://www.clickmaint.com/blog/preventive-maintenance-vs-reactive-maintenance-analysis
-5. SimplyFleet. (2025). The truth about vehicle mileage & repair costs. Recuperado de https://www.simplyfleet.app/blog/vehicle-mileage-vs-repair-costs
-6. Banco Interamericano de Desarrollo (BID). (2022). Estudios sobre movilidad urbana y parque vehicular en Latinoamérica. Recuperado de https://www.iadb.org/es
-7. Deloitte. (2023). Global Automotive Consumer Study. Recuperado de https://www2.deloitte.com/global/en/pages/consumer-industrial-products/articles/automotive-consumer-study.html
-8. Statista. (2023). Latin America: ride-hailing and delivery market growth. Recuperado de https://www.statista.com
-9. Asociación Automotriz del Perú (AAP) & INEI. (2023, marzo 3). El 11.64% de hogares en el Perú poseen un vehículo. <span>Andina .pe.</span> Recuperado de https://andina.pe/agencia/noticia-el-1164-hogares-todo-peru-poseen-un-auto-o-camioneta-987911.aspx
-10. Asociación Automotriz del Perú (AAP). (2021). Más de 70,000 talleres mecánicos necesitan capacitación en nuevas tecnologías. Recuperado de https://aap.org.pe/aap-mas-de-70000-talleres-mecanicos-necesitan-capacitacion-en-nuevas-tecnologias
-11. TechSenati. (2022). Talleres automotrices en el Perú: condiciones actuales y necesidad de capacitación tecnológica. Recuperado de https://techsenati.edu.pe/talleres-automotrices-en-el-peru-cuales-son-sus-condiciones-actuales-y-por-que-necesitan-mayor-capacitacion-tecnologica
