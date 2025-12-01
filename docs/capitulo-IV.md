@@ -88,7 +88,7 @@ Notification Gateway
 
 Se describe las relaciones estructurales entre los **Bounded Contexts** de la plataforma, los **patrones DDD** aplicados y los **contratos** (eventos/APIs) que conectan los contextos.
 
-<img src="../assets/img/capitulo-IV/context-mapping.png" alt="Context mapping" width="1000"/>
+<img src="../assets/img/capitulo-IV/context-mapping.png?v=1.0" alt="Context mapping" width="1000"/>
 
 <table>
   <caption>Relaciones clave entre Bounded Contexts y patrones DDD</caption>
@@ -262,50 +262,294 @@ SafeCar se posiciona como una plataforma IoT de mantenimiento vehicular intelige
 </p>
 
 #### 4.1.3.2. Software Architecture Context Level Diagrams
-<p align="justify">
-El <b>Context Diagram</b> representa la solución como una caja central y muestra a su alrededor a los usuarios y sistemas externos. De esta forma se comprende qué actores utilizan la plataforma y qué dependencias externas son necesarias.
+<p align="justify"> 
+El <b>Context Diagram</b> 
+representa la solución de software como una caja central que encapsula sus límites funcionales, mostrando a su alrededor a los diferentes actores y sistemas externos con los que interactúa. Este nivel del modelo C4 permite visualizar de forma global cómo la plataforma se integra en su entorno, identificando quiénes son los usuarios principales, qué tipo de información intercambian y qué servicios externos son necesarios para su funcionamiento. Asimismo, este diagrama facilita la comprensión del propósito del sistema dentro del ecosistema tecnológico, ayudando a los interesados (stakeholders) a entender el alcance, las dependencias y los flujos de comunicación sin necesidad de entrar en detalles técnicos de implementación. 
 </p>
 
-<img src="../assets/img/capitulo-IV/context-diagram.png" alt="Context Level Diagram" width="1000"/>
+<img src="../assets/img/capitulo-IV/c4-context-level.png" alt="Context Level Diagram" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
-- **SafeCar Platform:** Gestiona la información recibida de los dispositivos IoT de los vehículos y coordina las interacciones con los usuarios y servicios externos.
-- **Driver (Conductor):** Consulta alertas personalizadas, programa mantenimientos y recibe recomendaciones.
-- **Mechanic (Mecánico):** Accede a reportes automáticos del estado de los vehículos y organiza reparaciones.
-- **Visitor (Visitante):** Puede navegar por el sitio público y registrarse como conductor o mecánico.
-- **OpenAI Service:** Servicio externo utilizado para el análisis inteligente de datos, soporte en generación de reportes o procesamiento avanzado con IA.
-- **Twilio Service:** Servicio externo que permite el envío de correos electrónicos y notificaciones, asegurando la comunicación efectiva con los usuarios.
-- **Embedded Application:** Software embebido que se ejecuta en el microcontrolador instalado en el vehículo. Se encarga de comunicarse con la ECU a través del puerto OBD-II y con otros sensores, recopilar datos de diagnóstico y telemetría, procesarlos localmente y enviarlos de forma segura a la plataforma SafeCar. Además, puede recibir comandos remotos, actualizar su configuración.
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr style="background-color:#808080;">
+      <th>Element</th>
+      <th>Type</th>
+      <th>Description / Purpose</th>
+      <th>Interactions (Relations)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Visitor</strong></td>
+      <td>Person</td>
+      <td>Anonymous user who browses public website content (landing pages, plan info) and can sign up as a Driver or Mechanic.</td>
+      <td>
+        - Signs up via IAM to become a <strong>Driver</strong> or <strong>Mechanic</strong>.<br>
+        - Browses public content through the SafeCar Platform.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Driver</strong></td>
+      <td>Person</td>
+      <td>Private driver (including taxis and delivery drivers). Uses SafeCar to monitor vehicle status and performance.</td>
+      <td>
+        - Visualizes potential mechanical failures and receives alerts and insights from the platform.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Mechanic</strong></td>
+      <td>Person</td>
+      <td>Independent or medium-sized workshop user. Uses SafeCar to manage maintenance and vehicle diagnostics.</td>
+      <td>
+        - Views vehicle status, identifies potential issues, and schedules maintenance appointments through the platform.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Platform</strong></td>
+      <td>Software System</td>
+      <td>Core IoT platform for smart vehicle maintenance. Central hub that connects users, devices, and external services.</td>
+      <td>
+        - Receives telemetry data from <strong>Vehicle IoT Devices</strong>.<br>
+        - Integrates with <strong>OpenAI</strong>, <strong>Twilio</strong>, and <strong>Stripe</strong> services.<br>
+        - Provides web and mobile access to Drivers and Mechanics.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>OpenAI Service</strong></td>
+      <td>External Software System</td>
+      <td>AI-based external service used for data processing and insight generation.</td>
+      <td>
+        - SafeCar Platform uses AI models to analyze data and generate predictive insights and recommendations.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Twilio Service</strong></td>
+      <td>External Software System</td>
+      <td>Communication platform for sending transactional emails and notifications.</td>
+      <td>
+        - SafeCar Platform sends transactional emails and notifications through the <strong>Twilio API</strong> (e.g., alerts, confirmations).
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Stripe Service</strong></td>
+      <td>External Software System</td>
+      <td>Secure online payment service for handling subscriptions and billing.</td>
+      <td>
+        - SafeCar Platform processes payments, manages subscriptions, and handles billing transactions through <strong>Stripe APIs</strong>.<br>
+        - Receives webhooks for payment and subscription events.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Vehicle IoT Device</strong></td>
+      <td>External Hardware System</td>
+      <td>Embedded hardware installed in vehicles that captures sensor data (OBD-II, GPS, IMU) and receives OTA updates.</td>
+      <td>
+        - SafeCar Platform manages provisioning, configuration, and firmware updates.<br>
+        - Collects telemetry and diagnostic data through the <strong>Edge Gateway</strong>.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-Con este nivel de representación, se obtiene una visión global de cómo SafeCar se conecta con sus usuarios y servicios complementarios, reforzando tanto el ecosistema de mantenimiento vehicular como la experiencia final.
+<br/>**Resumen del flujo de información:**
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr style="background-color:#808080;">
+      <th>From → To</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Visitor → SafeCar Platform</td>
+      <td>Browses public information and signs up as Driver or Mechanic.</td>
+    </tr>
+    <tr>
+      <td>Driver → SafeCar Platform</td>
+      <td>Views telemetry, alerts, and AI-generated insights.</td>
+    </tr>
+    <tr>
+      <td>Mechanic → SafeCar Platform</td>
+      <td>Monitors vehicles and schedules maintenance tasks.</td>
+    </tr>
+    <tr>
+      <td>SafeCar Platform → OpenAI Service</td>
+      <td>Sends operational data for AI processing and insight generation.</td>
+    </tr>
+    <tr>
+      <td>SafeCar Platform → Twilio Service</td>
+      <td>Sends transactional and notification emails to users.</td>
+    </tr>
+    <tr>
+      <td>SafeCar Platform → Stripe Service</td>
+      <td>Handles secure payments, subscriptions, and billing transactions.</td>
+    </tr>
+    <tr>
+      <td>SafeCar Platform ↔ Vehicle IoT Device</td>
+      <td>Manages configuration, commands, and OTA updates; receives telemetry data via the Edge gateway.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 4.1.3.2. Software Architecture Container Level Diagrams
-<p align="justify">
-El <b>Container Diagram</b> representa la arquitectura de alto nivel de la plataforma SafeCar, mostrando cómo se dividen las responsabilidades entre los diferentes contenedores de software, las tecnologías utilizadas y cómo se comunican entre sí y con los actores externos.
+<p align="justify"> 
+El <b>Container Diagram</b> detalla la estructura interna de la solución mostrada en el diagrama de contexto, descomponiendo el sistema principal en los distintos contenedores de software que lo conforman. Cada contenedor representa una aplicación o componente ejecutable independiente —como aplicaciones web, móviles, bases de datos o servicios— que, en conjunto, colaboran para ofrecer las funcionalidades de la plataforma <b>SafeCar</b>. <br><br> Este nivel permite comprender cómo se distribuyen las responsabilidades dentro del sistema, qué tecnologías se emplean en cada parte, y cómo se comunican los contenedores entre sí o con sistemas externos. Además, facilita la identificación de puntos de integración, dependencias tecnológicas y canales de comunicación entre la interfaz de usuario, la lógica de negocio y las capas de persistencia o servicios de terceros. <br><br> En este diagrama se pueden observar los principales contenedores que conforman la plataforma —como el <b>SafeCar Website</b>, la <b>Web Application</b>, la <b>Single Page Application (SPA)</b>, el <b>Backend</b>, el <b>Mobile App</b>, el <b>Edge Gateway</b> y las respectivas bases de datos— junto con sus interacciones con los actores del sistema y con los servicios externos de inteligencia artificial, notificaciones, pagos y dispositivos IoT. De esta manera, se ofrece una visión integral de la arquitectura lógica y tecnológica que sustenta la operación de SafeCar. 
 </p>
 
-<img src="../assets/img/capitulo-IV/container-diagram.png" alt="Container Diagram SafeCar" width="1000"/>
+<img src="../assets/img/capitulo-IV/c4-container-level.png" alt="Container Diagram SafeCar" width="1000"/>
 
 <br/>**Explicación del diagrama:**
 
-- **SafeCar Mobile Application:** Aplicación móvil con notificaciones sobre alertas críticas, consejos de conducción eficiente y estado del vehículo en tiempo real. Utiliza una base de datos local para acceso offline.
-- **Mobile SQLite Database:** Almacena datos del vehículo en el dispositivo móvil para asegurar funcionamiento sin conexión.
-- **SafeCar Website:** Sitio web público donde los visitantes consultan información y acceden a la aplicación principal.
-- **SafeCar Web Application (Angular v20):** Interfaz principal para los mecánicos y conductores, desde donde gestionan vehículos, programan mantenimientos y visualizan reportes.
-- **SafeCar Backend Platform (Spring Boot, Java 17):** Núcleo de la lógica de negocio que recibe datos desde los dispositivos IoT y las aplicaciones, procesa solicitudes y coordina respuestas.
-- **SafeCar Database (MySQL):** Base de datos central que almacena usuarios, vehículos, reportes, citas y registros de mantenimiento.
-- **OpenAI Service (Servicio Externo):** Utilizado para análisis avanzado con IA, como generación de reportes inteligentes o recomendaciones personalizadas.
-- **Twilio Service (Servicio Externo):** Encargado de enviar notificaciones y correos electrónicos transaccionales a los usuarios.
-- **Device Ingestion Service:** Microservicio que actúa como puerta de enlace entre los dispositivos IoT y la nube.
-
-**Relaciones principales:**
-- Los **conductores** reciben alertas desde la app móvil y web.
-- Los **mecánicos** utilizan la aplicación web para anticipar fallas y gestionar citas.
-- El **backend** se comunica con los servicios externos (OpenAI, Twilio) para reforzar funcionalidades de inteligencia y comunicación.
-- Toda la información se centraliza en la **base de datos de SafeCar**, garantizando integridad y persistencia.
-
-Este nivel permite visualizar claramente cómo se distribuyen las responsabilidades entre los distintos componentes y cómo cada contenedor cumple un rol específico dentro de la solución.
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr style="background-color:#808080;">
+      <th>Element</th>
+      <th>Type</th>
+      <th>Description / Purpose</th>
+      <th>Interactions (Relations)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- People -->
+    <tr>
+      <td><strong>Visitor</strong></td>
+      <td>Person</td>
+      <td>Anonymous user who browses public content on the SafeCar Website and can register to become a Driver or Mechanic.</td>
+      <td>
+        - Visits the <strong>SafeCar Website</strong> to explore plans and product information.<br>
+        - Registers through the IAM module to access the platform.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Driver</strong></td>
+      <td>Person</td>
+      <td>Private driver (including taxis and delivery). Uses the mobile app or SPA to monitor vehicle telemetry and receive alerts.</td>
+      <td>
+        - Interacts with the <strong>SafeCar Mobile App</strong> and <strong>SPA</strong>.<br>
+        - Receives alerts, driving tips, and real-time vehicle data.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Mechanic</strong></td>
+      <td>Person</td>
+      <td>Independent or medium-sized workshop user who manages vehicle diagnostics and maintenance through the SafeCar Web Application.</td>
+      <td>
+        - Accesses the <strong>Web Application</strong> to view telemetry, create work orders, and schedule maintenance appointments.
+      </td>
+    </tr>
+    <!-- Containers -->
+    <tr>
+      <td><strong>SafeCar Website</strong></td>
+      <td>Container</td>
+      <td>Public-facing site that presents information about SafeCar’s services, plans, and features to attract new users.</td>
+      <td>
+        - Visited by the <strong>Visitor</strong>.<br>
+        - Redirects registered users to the <strong>SPA</strong> for authentication and platform access.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Web Application</strong></td>
+      <td>Container</td>
+      <td>Web application used by mechanics to visualize vehicle telemetry, manage appointments, and monitor diagnostic data.</td>
+      <td>
+        - Communicates with the <strong>SPA</strong> to display data.<br>
+        - Uses APIs exposed by the <strong>Backend Platform</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Single Page Application (SPA)</strong></td>
+      <td>Container</td>
+      <td>Client-side web interface for both Drivers and Mechanics. Provides a responsive and dynamic user experience.</td>
+      <td>
+        - Served by the <strong>Web Application</strong> or <strong>Website</strong>.<br>
+        - Communicates with the <strong>Backend Platform</strong> via REST APIs.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Mobile Application</strong></td>
+      <td>Container</td>
+      <td>Cross-platform mobile application for Drivers to monitor vehicle health, receive alerts, and view driving performance.</td>
+      <td>
+        - Reads and stores local data in the <strong>Mobile SQLite Database</strong>.<br>
+        - Communicates with the <strong>Backend Platform</strong> via APIs.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Mobile SQLite Database</strong></td>
+      <td>Container</td>
+      <td>Local database within the mobile device used to cache essential data for offline use and improve performance.</td>
+      <td>
+        - Used by the <strong>Mobile Application</strong> for local persistence.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Backend Platform</strong></td>
+      <td>Container</td>
+      <td>Core service layer that manages business logic, API endpoints, and integration with bounded contexts (IAM, Payments, Devices, etc.).</td>
+      <td>
+        - Communicates with the <strong>SPA</strong> and <strong>Mobile App</strong>.<br>
+        - Persists data in the <strong>SafeCar Database</strong>.<br>
+        - Integrates with <strong>OpenAI</strong>, <strong>Twilio</strong>, <strong>Stripe</strong>, and the <strong>Edge</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Database</strong></td>
+      <td>Container</td>
+      <td>Central data persistence system for user data, subscriptions, vehicle telemetry, and other operational records.</td>
+      <td>
+        - Used by the <strong>Backend Platform</strong> for CRUD operations and long-term storage.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>SafeCar Edge</strong></td>
+      <td>Container</td>
+      <td>Edge gateway that receives telemetry from embedded vehicle devices, buffers and normalizes data, and forwards it securely to the backend. Also handles provisioning, commands, and OTA updates.</td>
+      <td>
+        - Exchanges data with the <strong>Vehicle IoT Device</strong>.<br>
+        - Sends normalized telemetry to the <strong>Backend Platform</strong>.<br>
+        - Receives OTA and provisioning commands from the <strong>Backend Platform</strong>.
+      </td>
+    </tr>
+    <!-- External Systems -->
+    <tr>
+      <td><strong>Vehicle IoT Device</strong></td>
+      <td>External Hardware System</td>
+      <td>Embedded hardware installed in vehicles that captures real-time sensor data and receives OTA commands.</td>
+      <td>
+        - Sends telemetry to the <strong>SafeCar Edge</strong>.<br>
+        - Receives configuration, commands, and firmware updates (OTA) from the Edge.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>OpenAI Service</strong></td>
+      <td>External Software System</td>
+      <td>AI-powered service used to analyze vehicle data and generate intelligent insights and recommendations.</td>
+      <td>
+        - The <strong>Backend Platform</strong> sends data for processing and receives predictive analytics and recommendations.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Twilio Service</strong></td>
+      <td>External Software System</td>
+      <td>Communication service that handles the delivery of emails and notifications.</td>
+      <td>
+        - The <strong>Backend Platform</strong> sends transactional emails and notifications via the <strong>Twilio API</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Stripe Service</strong></td>
+      <td>External Software System</td>
+      <td>Payment gateway that manages subscriptions, billing, and online transactions for SafeCar users.</td>
+      <td>
+        - The <strong>Backend Platform</strong> processes payments through <strong>Stripe APIs</strong>.<br>
+        - <strong>Stripe</strong> sends webhooks for billing and subscription events.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
 <p align="justify">
@@ -323,7 +567,45 @@ En SafeCar, el despliegue se ha diseñado considerando escalabilidad, disponibil
 
 ## 4.2. Tactical-Level Domain-Driven Design
 
-### 4.2.1. Bounded Context: Device Management
+### 4.2.1. Bounded Context: Workshop Operations & Telemetry Processing
+
+<b>Propósito del BC</b>
+<p align="justify">
+El <b>Workshop Operations & Telemetry Processing BC</b> tiene como propósito integrar la gestión operativa de los talleres mecánicos con el procesamiento continuo de la telemetría vehicular proveniente de los dispositivos IoT instalados en los vehículos.
+Este contexto actúa como el núcleo operativo del ecosistema SafeCar, ya que conecta directamente los datos generados por los conductores con las actividades internas del taller, permitiendo una administración dinámica y basada en información en tiempo real.
+</p>
+
+<b>Objetivos Clave</b>
+<p align="justify">
+El <b>Workshop Operations & Telemetry Processing (WorkshopOps)</b> persigue como objetivo principal la integración entre la operación interna del taller y el procesamiento inteligente de la telemetría proveniente de los vehículos conectados. 
+Este contexto busca garantizar una trazabilidad completa entre los datos capturados por los dispositivos IoT y las actividades de mantenimiento o diagnóstico realizadas en el taller.
+</p>
+
+<p align="justify">
+Entre sus objetivos fundamentales se encuentra la capacidad de asociar con precisión cada lectura de telemetría al vehículo y conductor correspondientes, 
+lo que permite un análisis contextualizado y confiable de la información. 
+Asimismo, busca unificar la gestión de agendas de servicio, órdenes de trabajo y asignación de recursos humanos con los datos operativos del vehículo en tiempo real. 
+El BC también habilita la ingesta, procesamiento y normalización de flujos de datos —como velocidad, ubicación, alertas o fallas mecánicas— a través de mecanismos de <i>stream processing</i>, 
+asegurando que la información sea consistente y útil para el resto de la plataforma. 
+Finalmente, WorkshopOps publica un flujo de datos enriquecido y canónico que alimenta directamente a otros Bounded Contexts, 
+principalmente <b>Analytics & Recommendations (Insights)</b> y <b>Communication (Alerts)</b>, 
+permitiendo la automatización de las operaciones de taller y la detección temprana de fallas vehiculares basadas en información procesada en tiempo real.
+</p>
+
+<b>Rol Estratégico en la Plataforma</b>
+<p align="justify">
+El rol estratégico de <b>WorkshopOps</b> dentro del ecosistema <b>SafeCar</b> radica en ser el punto de convergencia entre el mundo físico —representado por los vehículos y talleres— 
+y el entorno digital de la plataforma. 
+Este Bounded Context actúa como el eje central que conecta la telemetría con las operaciones, garantizando que cada dato proveniente del vehículo tenga un impacto directo en la planificación, diagnóstico y ejecución de los servicios del taller.
+</p>
+
+<p align="justify">
+Gracias a su integración con los demás BCs, WorkshopOps asegura una sincronización constante entre la actividad del vehículo y la operación del taller, 
+ofreciendo un flujo de datos confiable, limpio y estandarizado que impulsa la analítica predictiva y los mecanismos de comunicación proactiva. 
+Además, representa un pilar fundamental en la transformación digital del sector automotriz, 
+convirtiendo los talleres tradicionales en verdaderos <b>Smart Workshops</b>, 
+donde las decisiones se toman a partir de datos precisos y procesos automatizados.
+</p>
 
 #### 4.2.1.1. Domain Layer
 
@@ -615,7 +897,7 @@ Ubicación: `application/outboundservices/acl`
 
 <br/>
 
-<img src="../assets/img/capitulo-IV/bc-device managment.png" alt="BC Device Management Container C4"/>
+<img src="../assets/img/capitulo-IV/c4-bc-workshopOps-component-level.png" alt="BC Workshop Operations & Telemetry Processing Component C4" width=800/>
 
 ---
 #### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
@@ -625,7 +907,7 @@ Ubicación: `application/outboundservices/acl`
 El diagrama de clases ilustra el modelo de dominio del BC Device Management. Define el agregado `Device` como la pieza central, sus Value Objects asociados como `FirmwareVersion` y la enumeración `DeviceStatus`. También especifica los contratos (interfaces) que el dominio expone para la persistencia (`DeviceRepository`), servicios de dominio (`DeviceProvisioner`) y comunicación inter-BC (`ExternalVehicleContextFacade`), manteniendo el núcleo de negocio agnóstico a la implementación tecnológica.
 </p>
 
-<img src="/assets/img/capitulo-IV/DC device.png" alt="BC Device Management Domain Class Diagram"/>
+<img src="../assets/img/capitulo-IV/DC device.png" alt="BC Device Management Domain Class Diagram"/>
 
 <b>2) Agregado y VOs</b>
 - **Device (Aggregate Root)**
@@ -651,7 +933,7 @@ El diagrama de clases ilustra el modelo de dominio del BC Device Management. Def
 El siguiente esquema de base de datos para MySQL soporta la persistencia del agregado `Device`. Está optimizado para consultas comunes, como buscar un dispositivo por su ID de serie o por el vehículo al que está asignado, y asegura la unicidad de los identificadores clave.
 </p>
 
-<img src="/assets/img/capitulo-IV/db segurity.png" alt="BC Device Management Database Design Diagram"/>
+<img src="../assets/img/capitulo-IV/db segurity.png" alt="BC Device Management Database Design Diagram"/>
 
 <b>2) Tablas principales</b>
 - **devices**
@@ -681,218 +963,12 @@ El siguiente esquema de base de datos para MySQL soporta la persistencia del agr
 - **UUID como `BINARY(16)`:** Se utiliza el tipo de dato binario para almacenar UUIDs, lo cual es más eficiente en espacio y rendimiento de indexación que un `VARCHAR(36)`.
 - **Estado como `VARCHAR`**: En lugar de un `ENUM` nativo de MySQL, se usa `VARCHAR` para facilitar la adición de nuevos estados en el futuro sin necesidad de una migración de esquema (`ALTER TABLE`).
 
-### 4.2.2. Bounded Context: Telemetry Processing
 
-- Adquisición de Datos y Normalización del Flujo (Stream Processing).
-Responsable de la ingesta de alta velocidad, validación de esquema, enriquecimiento (asociación de vehículo), gestión de la sesión de viaje y la publicación de un flujo de datos limpio y canónico (TelemetryNormalizedEvent) para todos los consumidores downstream.
-
-#### 4.2.2.1. Domain Layer
-| Concepto                   | Detalles Robustos de DDD Táctico                                                                                                                                                                                                                                                                  |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Aggregate Root**         | `TelemetryStream (ID: VehicleId)`.<br>El estado agregado no es la telemetría histórica, sino el estado de la sesión activa (ej. `tripActive: boolean`, `lastHeartbeat: timestamp`, `segmentStartLocation`).<br>**Invariante:** un vehículo solo puede tener un `TelemetryStream` activo a la vez. |
-| **Value Objects**          | - `RawPayload (String/Byte Array)`: dato crudo e inmutable.<br>- `ProcessingStatus (Enum: PENDING, NORMALIZED, DROPPED_INVALID)`.<br>- `TripMetrics (distance_km, max_speed)`: VOs de solo lectura generados durante un segmento.                                                                 |
-| **Servicios de Dominio**   | - **DataCoherencyValidator:** algoritmo para detectar glitches de GPS o datos fuera de rango.<br>`isCoherent(current: RawDataPoint, previous: NormalizedDataPoint): boolean`.<br>- **TripSegmentCloser:** lógica para determinar el cierre de un viaje (ej. 10 min de inactividad).               |
-| **Repositorios (Puertos)** | **TelemetryStateRepository:** interfaz para el almacén de estado transitorio (Redis/DynamoDB). Crucial para persistencia de baja latencia entre mensajes.                                                                                                                                         |
-| **Domain Events**          | - `TelemetryNormalizedEvent`: evento canónico con `VehicleId`, `NormalizedDataPoint` y metadatos (sin incluir `RawPayload`).<br>- `TripSegmentClosedEvent`: señal transaccional con métricas finales enviada a Billing/Analytics.                                                                 |
-| **Facade (ACL)**           | **ExternalDeviceContextFacade:** `getVehicleAssignment(deviceId: String): VehicleAssignmentVO`. Retorna un VO ligero con `VehicleId` y `TenantId`. Debe ser tolerante a fallos y rápido.                                                                                                          |
-
-#### 4.2.2.2. Interface Layer
-
-> ### Ingestion Gateway (Listener)
-> **Componente:** `TelemetryStreamListener` (Ej. KafkaConsumer o EventHubsReceiver)
->
-> ---
->
-> **Propósito del BC**
-> Este es el punto de entrada primario del *Bounded Context (BC)*.
-> **Responsabilidad clave:** Escuchar continuamente el topic de telemetría cruda, deserializar el mensaje (por ejemplo, de Avro, JSON o Protobuf) y validar el formato sintáctico básico.
->
-> ---
->
-> **Acción Central**
-> El Listener NO realiza lógica de negocio compleja (como validación de rangos o deduplicación).
-> Su única función es transformar el mensaje de entrada (`RawPayload`) en el Command del BC:
-> `ProcessTelemetryDataCommand`.
->
-> ---
->
-> **Resources (DTOs)**
-> - `RawDataPointResource`: Representa el payload deserializado del broker de mensajes.
->   Incluye metadatos (como offset y partition) esenciales para la semántica "At-Least-Once".
-> - `NormalizationErrorResource`: DTO específico para serializar errores de formato y enviarlos a la DLQ.
->
-> ---
->
-> **Controlador REST**
-> No aplica. Este BC es event-driven y stream-based.
-> Si se requiere una consulta síncrona de diagnóstico, podría exponerse:
->
-> ```
-> GET /api/v1/ingestion/status
-> ```
-> Permite verificar la salud del listener, pero no se utiliza para la ingesta de datos.
->
-> ---
->
-> **Manejo de Errores**
-> Estrategia: Dead Letter Queue (DLQ)
-> - Los errores manejables (formato JSON inválido, datos ininteligibles) no deben detener el stream.
-> - Se encapsulan en un `NormalizationErrorResource` y se envían de forma asíncrona a un DLQ Topic dedicado.
-> - Esto permite su revisión o reprocesamiento manual, garantizando la resiliencia del flujo principal.
->
-> ---
->
-> **Protocolo**
-> Modelo: Asíncrono / Push Model
-> Basado en message brokers como Kafka, Event Hubs o Kinesis, asegurando:
-> - Escalabilidad horizontal
-> - Capacidad de absorber picos de tráfico
-> - Sin backpressure directo hacia los dispositivos IoT
-
-
-#### 4.2.2.3. Application Layer
-
-| Componente          | Detalles Robustos                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Command Service** | `TelemetryProcessingServiceImpl`:<br>1. Carga/Crea `TelemetryStream` desde `TelemetryStateRepository`.<br>2. Valida (`DataCoherencyValidator`).<br>3. Enriquece (`ExternalDeviceContextService`).<br>4. Aplica mutación (marcar como `DROPPED` si aplica).<br>5. Persiste nuevo estado.<br>6. Publica `TelemetryNormalizedEvent` y `TripSegmentClosedEvent` si aplica. |
-| **Event Handler**   | `ProcessDeviceProvisionedHandler`: escucha `DeviceProvisionedEvent` del BC *Device Management* para preinicializar un estado vacío.                                                                                                                                                                                                                                    |
-| **ACL (Outbound)**  | **ExternalDeviceContextService:** implementa `ExternalDeviceContextFacade`. Usa patrón *Cache-Aside* (Redis) sobre llamada REST síncrona al BC *Device Management*.                                                                                                                                                                                                    |
-
-#### 4.2.2.4. Infrastructure Layer
-
-| Componente                 | Detalles Robustos                                                                                                                                                                                                                          |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Persistencia**           | - `TelemetryStateRepositoryImpl`: usa Redis Cluster o AWS DynamoDB Global Tables para escalabilidad y baja latencia.<br>- `RawDataArchiveRepositoryImpl`: usa S3 o GCS con esquema Parquet/Avro para almacenamiento económico y analítico. |
-| **Integración IoT**        | **KafkaStreamAdapter:** usa Kafka Streams o Spring Cloud Stream para alto rendimiento. Gestiona offsets y semántica *At Least Once* con DLQ.                                                                                               |
-| **Publicación de Eventos** | **KafkaDomainEventPublisherImpl:** serializa eventos (TelemetryNormalizedEvent) en formato Avro con Schema Registry.                                                                                                                       |
-
-#### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
-
-### A) Componentes y Responsabilidades
-
-| Componente | Capa | Responsabilidad Principal |
-|------------|------|-----------------------------|
-| **Telemetry Processing Facade** | Application | Coordina servicios de ingesta, validación, enriquecimiento y evaluación. Expone API simplificada al backend. |
-| **Telemetry Stream Listener (Ingestion Gateway)** | Infrastructure | Escucha tópicos de telemetría cruda (Kafka/EventHub), deserializa y valida formato básico. |
-| **Telemetry Processing Orchestrator** | Application | Orquesta el flujo de validación, enriquecimiento y generación de alertas. |
-| **Telemetry Validator Service** | Domain + Application | Aplica reglas de validación y consistencia sobre los datos crudos. |
-| **Telemetry Enrichment Service** | Application | Agrega contexto (vehículo, sensor, ubicación) desde otros BCs. |
-| **Alert Evaluation Engine** | Domain | Evalúa reglas configuradas para generar alertas. |
-| **Telemetry Repository** | Infrastructure | Persiste datos procesados y alertas. |
-| **External Vehicle Context Service (ACL)** | Application (Outbound) | Recupera información del BC de Flota de Vehículos para el enriquecimiento. |
-| **Domain Event Publisher** | Infrastructure | Publica eventos de dominio hacia otros BCs (ej. Alerting, Analytics). |
-
----
-
-### B) Relaciones (Resumen)
-
-- **Listener → Orchestrator**: transmite telemetría cruda validada para su procesamiento.  
-- **Orchestrator → Validator / Enrichment / Evaluation Services**: ejecuta el flujo de negocio principal.  
-- **Enrichment → ExternalVehicleContextService**: obtiene metadatos de vehículo y dispositivo.  
-- **Evaluation → DomainEventPublisher**: emite eventos de alerta normalizados.  
-- **Orchestrator → Repository**: almacena telemetría procesada y trazabilidad de eventos.  
-
----
-
-### C) Mapeo a Paquetes
-
-| Paquete | Clase / Servicio |
-|----------|----------------------|
-| `application/internal/facade` | `TelemetryProcessingFacade` |
-| `infrastructure/ingestion` | `TelemetryStreamListener` |
-| `application/internal/orchestrator` | `TelemetryProcessingOrchestrator` |
-| `application/internal/services` | `TelemetryValidatorService`, `TelemetryEnrichmentService`, `AlertEvaluationService` |
-| `application/outboundservices/acl` | `ExternalVehicleContextService` |
-| `infrastructure/persistence/jpa` | `TelemetryRepositoryImpl` |
-| `infrastructure/events` | `DomainEventPublisherImpl` |
-
-
-![Context Telemetry](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/chapter-IV/assets/img/capitulo-IV/context%20telemetry.png)
-
-
-#### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
-
-#### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
-
-### Telemetry Processing BC
-
-El siguiente diagrama modela el **núcleo de negocio** del *Bounded Context Telemetry Processing*, responsable de la **ingestión, normalización y segmentación de datos de telemetría vehicular**.  
-Representa **agregados**, **value objects**, **servicios de dominio**, **repositorios** y **eventos** que definen el comportamiento analítico central del dominio.
-
----
-
-#### Agregado y Entidades
-
-**TelemetryStream (Aggregate Root)**  
-- **Descripción:** Representa el flujo activo de telemetría asociado a un vehículo.  
-- **Atributos clave:** `streamId`, `vehicleId`, `currentTripId`, `lastReadingTimestamp`.  
-- **Comportamientos:** `appendReading(...)`, `updateStreamState(...)`.  
-- **Relaciones:** Contiene múltiples instancias de `TelemetryReading` (composición).
-
-**TripSegment**  
-- **Descripción:** Define un tramo de conducción detectado automáticamente a partir del flujo de telemetría.  
-- **Atributos clave:** `tripId`, `startTime`, `endTime`, `distanceKm`, `avgSpeed`.  
-- **Relaciones:** Asociado a `VehicleId` para vincular el segmento con su vehículo correspondiente.
-
----
-
-#### Value Objects
-
-Los objetos de valor encapsulan identificadores y lecturas con validaciones de formato y rango:  
-- `StreamId`  
-- `VehicleId`  
-- `TripId`  
-- `TelemetryReading`
-
----
-
-#### Servicios de Dominio
-
-**TelemetryProcessor**  
-- **Responsabilidad:** Procesar lecturas entrantes (`processReading`) y actualizar el estado de los streams y segmentos.  
-- **Resultado:** Emite eventos derivados del análisis de flujo, como detección de nuevos tramos o anomalías.
-
----
-
-#### Repositorios
-
-Interfaces que definen los puertos de persistencia del dominio:  
-- `TelemetryStreamRepository`  
-- `TripSegmentRepository`
-
-Ambos encapsulan la persistencia de los agregados principales (`TelemetryStream`, `TripSegment`) y ocultan detalles de infraestructura para mantener la pureza del dominio.
-
----
-
-#### 📡 Eventos de Dominio
-
-Los eventos comunican cambios significativos dentro del modelo de telemetría:  
-- `TelemetryNormalizedEvent`  
-- `TripSegmentStartedEvent`  
-- `TripSegmentClosedEvent`
-
-![Telemetry Processing Domain Diagram](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-IV/assets/img/capitulo-IV/diagram%20class%20alerting.png)
-
-
-
-##### 4.2.2.6.2. Bounded Context Database Design Diagram
-
-El modelo de base de datos del **Bounded Context Telemetry** representa la estructura de almacenamiento de datos de telemetría vehicular.  
-Incluye las entidades principales:
-
-- **TelemetryStream**: flujo activo de telemetría de un vehículo, identificado por `stream_id`.
-- **TelemetryReading**: lecturas individuales con métricas y valores asociados a un stream.
-- **TripSegment**: tramos de conducción detectados automáticamente con datos de tiempo, distancia y velocidad promedio.
-
-Estas entidades permiten la ingesta, normalización y segmentación de la información capturada desde los sensores de los vehículos.
-
-![Telemetry Processing Database Model](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/capitulo-IV/assets/img/capitulo-IV/data%20base%20telemetry.png)
-
-### 4.2.3. Bounded Context: Alerting
+### 4.2.2. Bounded Context: Communication
 - Motor de Reglas y Gestión de Incidentes Críticos.
 - Responsable de evaluar la criticidad de los datos entrantes (telemetría/insights), aplicar deduplicación y supresión (invariante: prevenir la “Tormenta de Alertas”), y gestionar el ciclo de vida de la alerta hasta su resolución.
 
-#### 4.2.3.1. Domain Layer
+#### 4.2.2.1. Domain Layer
 
 | Concepto                   | Detalles Robustos de DDD Táctico                                                                                                                                                    |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -904,7 +980,7 @@ Estas entidades permiten la ingesta, normalización y segmentación de la inform
 | **Domain Events**          | - `MaintenanceAlertCreatedEvent`: indica que una alerta es real, única y accionable.<br>- `AlertEscalatedEvent`: notifica si no se reconoce a tiempo.                               |
 | **Facade (ACL)**           | **ExternalNotificationFacade:** API del BC *Notification Gateway* (`sendMessage(NotificationCommand)`).                                                                             |
 
-#### 4.2.3.2. Interface Layer
+#### 4.2.2.2. Interface Layer
 
 | **Componente**                  | **Rol y Detalles Robustos**                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -915,7 +991,7 @@ Estas entidades permiten la ingesta, normalización y segmentación de la inform
 | **Contrato y Errores**          | Basado en **Problem Details for HTTP APIs (RFC 7807)**. <br> 🔸 **Códigos de estado:** <br> `409 Conflict` → `InvalidStatusTransitionException` (intentar resolver una alerta ya resuelta). <br> `404 Not Found` → `AlertNotFoundException`. <br> `503 Service Unavailable` → Motor de reglas inoperativo.                                                        |
 
 
-#### 4.2.3.3. Application Layer
+#### 4.2.2.3. Application Layer
 
 | Componente          | Detalles Robustos                                                                                                                                                                                                                                          |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -923,7 +999,7 @@ Estas entidades permiten la ingesta, normalización y segmentación de la inform
 | **Event Handler**   | - `RuleEvaluationHandler`: escucha eventos entrantes, evalúa reglas y despacha `CreateAlertCommand`.<br>- `NotificationTriggerHandler`: escucha `MaintenanceAlertCreatedEvent`, llama a `EscalationPolicyMatcher` y luego a `ExternalNotificationService`. |
 | **ACL (Outbound)**  | **ExternalNotificationService:** implementa `ExternalNotificationFacade`. Traduce modelo `Alert` → `SendMessageCommand`.                                                                                                                                   |
 
-#### 4.2.3.4. Infrastructure Layer
+#### 4.2.2.4. Infrastructure Layer
 
 - A) Componentes clave y responsabilidades
 
@@ -942,7 +1018,7 @@ Estas entidades permiten la ingesta, normalización y segmentación de la inform
 | **Transactional Event Publisher**       | *Infrastructure* | Publica eventos de dominio mediante el patrón *Outbox*.                              |
 
 - B) Relaciones esenciales
-  
+
 Telemetry BC → Inbound Alert Listener → Rule Evaluation Handler
 
 Rule Evaluation Handler → Alert Rule Engine Impl → Alert Creation Service
@@ -967,61 +1043,63 @@ Alert Management Controller → Alert Creation Service / Alert Repository Impl
 | `infrastructure/rules`       | AlertRuleEngineImpl                               |
 | `infrastructure/events`      | TransactionalEventPublisher                       |
 
+3
 
-![Alerting Componente Vista Detallada](https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/chapter-IV/assets/img/capitulo-IV/AlertingComponenteVistaDetallada.png)
+#### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
+<img src="../assets/img/capitulo-IV/c4-bc-alerts-component-level.png" alt="BC Communication Component C4" width=800/>
 
-#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
 
-#### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
+#### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
 
-El siguiente diagrama representa el **núcleo de negocio** del *Bounded Context Alerting & Management*, encargado de la **detección, deduplicación y gestión del ciclo de vida de alertas** generadas a partir de los datos de telemetría.  
+El siguiente diagrama representa el **núcleo de negocio** del *Bounded Context Alerting & Management*, encargado de la **detección, deduplicación y gestión del ciclo de vida de alertas** generadas a partir de los datos de telemetría.
 Muestra **agregados**, **entidades**, **objetos de valor**, **servicios de dominio**, **repositorios** y **eventos** que estructuran la lógica de negocio del contexto.
 
 #### Agregado y Entidades
 
-**Alert (Aggregate Root)**  
-- **Descripción:** Representa una alerta con su ciclo de vida completo (CREATED → ACKNOWLEDGED → RESOLVED).  
-- **Atributos clave:** `alertId`, `vehicleId`, `ruleId`, `status`, `severity`, `createdAt`, `updatedAt`.  
-- **Comportamientos:** Cambiar estado, registrar histórico, deduplicar instancias.  
-- **Relaciones:**  
-  - Composición con `AlertHistoryEntry` (registra cambios de estado).  
-  - Asociación con `AlertRule` (define la causa).  
+**Alert (Aggregate Root)**
+- **Descripción:** Representa una alerta con su ciclo de vida completo (CREATED → ACKNOWLEDGED → RESOLVED).
+- **Atributos clave:** `alertId`, `vehicleId`, `ruleId`, `status`, `severity`, `createdAt`, `updatedAt`.
+- **Comportamientos:** Cambiar estado, registrar histórico, deduplicar instancias.
+- **Relaciones:**
+  - Composición con `AlertHistoryEntry` (registra cambios de estado).
+  - Asociación con `AlertRule` (define la causa).
   - Usa `SuppressionKey` para deduplicación.
 
-**AlertRule**  
-- **Descripción:** Define las condiciones bajo las cuales se dispara una alerta.  
+**AlertRule**
+- **Descripción:** Define las condiciones bajo las cuales se dispara una alerta.
 - **Atributos clave:** `alertRuleId`, `name`, `conditionDefinition`, `severity`, `isActive`.
 
-**AlertHistoryEntry**  
-- **Descripción:** Registro inmutable del historial de cambios de estado y acciones sobre una alerta.  
+**AlertHistoryEntry**
+- **Descripción:** Registro inmutable del historial de cambios de estado y acciones sobre una alerta.
 - **Atributos clave:** `historyId`, `alertId`, `timestamp`, `oldStatus`, `newStatus`, `actionUserId`.
 
 
 #### Value Objects
 
-Encapsulan identificadores y valores inmutables del dominio:  
-- `AlertId`  
-- `AlertRuleId`  
-- `SuppressionKey` → combina `vehicleId`, `ruleId` y `severity` para prevenir duplicados.  
-- `AlertStatus` → enum: CREATED | ACKNOWLEDGED | RESOLVED.  
+Encapsulan identificadores y valores inmutables del dominio:
+- `AlertId`
+- `AlertRuleId`
+- `SuppressionKey` → combina `vehicleId`, `ruleId` y `severity` para prevenir duplicados.
+- `AlertStatus` → enum: CREATED | ACKNOWLEDGED | RESOLVED.
 - `Severity` → enum: LOW | MEDIUM | HIGH | CRITICAL.
 
 #### Repositorios
 
-Interfaces que definen los puertos de acceso y persistencia:  
-- `AlertRepository`  
-  - **Operaciones:** `save(Alert)`, `findById(AlertId)`, `findActiveBySuppressionKey(SuppressionKey)`.  
-- `AlertRuleRepository`  
+Interfaces que definen los puertos de acceso y persistencia:
+- `AlertRepository`
+  - **Operaciones:** `save(Alert)`, `findById(AlertId)`, `findActiveBySuppressionKey(SuppressionKey)`.
+- `AlertRuleRepository`
   - **Operaciones:** `findById(AlertRuleId)`, `findAllActive()`.
 
 
-![Alerting & Management Domain Diagram](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/chapter-IV/assets/img/capitulo-IV/diagram%20class%20alerting.png)
+![Alerting & Management Domain Diagram](../assets/img/capitulo-IV/diagram%20class%20alerting.png)
 
 
-##### 4.2.3.6.2. Bounded Context Database Design Diagram
+##### 4.2.2.6.2. Bounded Context Database Design Diagram
 
-El modelo de base de datos del **Bounded Context Alerting** define las tablas responsables del ciclo de vida de las alertas generadas por las reglas de negocio.  
+El modelo de base de datos del **Bounded Context Alerting** define las tablas responsables del ciclo de vida de las alertas generadas por las reglas de negocio.
 Sus entidades principales son:
 
 - **Alert**: representa una alerta activa o resuelta, con estado, severidad y relación con un vehículo.
@@ -1031,11 +1109,11 @@ Sus entidades principales son:
 
 Este modelo soporta la trazabilidad y gestión completa de las alertas dentro del sistema.
 
-![Alerting Database Model](https://github.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/blob/docs/capitulo-IV/assets/img/capitulo-IV/data%20base%20alert.png)
+![Alerting Database Model](../assets/img/capitulo-IV/Bounded%20Context%20Database%20Design%20Diagram.png)
 
-### 4.2.4. Bounded Context: Analytics and Recommendations
+### 4.2.3. Bounded Context: Analytics and Recommendations
 
-#### 4.2.4.1. Domain Layer
+#### 4.2.3.1. Domain Layer
 
 **Propósito del BC**
 Calcular riesgo del conductor, predecir fallas probables y generar recomendaciones de mantenimiento, garantizando invariantes y evitando invasión de dominio entre BCs.
@@ -1137,7 +1215,7 @@ Calcular riesgo del conductor, predecir fallas probables y generar recomendacion
 - `InvalidRiskScoreException`
 - `PredictionNotFoundException`
 
-#### 4.2.4.2. Interface Layer
+#### 4.2.3.2. Interface Layer
 <b>A) Controladores (REST Controllers)</b>
 
 1) **`DriverProfileController`**
@@ -1245,7 +1323,7 @@ Ubicación: `interfaces/transform`
 - Versionado de API: prefijo `/api/v1` y *content negotiation* (`application/json`).
 
 
-#### 4.2.4.3. Application Layer
+#### 4.2.3.3. Application Layer
 
 <b>A) Command Services (implementaciones)</b>
 
@@ -1322,7 +1400,7 @@ Ubicación: `application/outboundservices/acl`
 
 > Esta capa evita invasión de dominio traduciendo contratos externos a **Value Objects** del dominio.
 
-#### 4.2.4.4. Infrastructure Layer
+#### 4.2.3.4. Infrastructure Layer
 
 <b>A) Persistencia (JPA / MySQL)</b>
 
@@ -1383,7 +1461,7 @@ Ubicación: `application/outboundservices/acl`
 - **Observabilidad:** *logging* con `X-Request-Id`, métricas para `OpenAiClientImpl` (latencia, errores).
 
 
-#### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
+#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 
 <b>A) Componentes y responsabilidades</b>
 
@@ -1465,11 +1543,11 @@ Ubicación: `application/outboundservices/acl`
 
 <br/>
 
-<img src="/assets/img/capitulo-IV/bc-analytics-and-recommendations-container-c4.svg" alt="BC Analytics and Recommendations Container C4"/>
+<img src="../assets/img/capitulo-IV/c4-bc-insights-component-level.png" alt="BC Analytics & Recommendations Container C4" width=800/>
 
-#### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
-#### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
+#### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 <p align="justify">
 El diagrama modela el núcleo de negocio del BC Analytics & Recommendations dentro del monolito. Muestra entidades/agregado, value objects, interfaces (servicios de dominio, repositorios y façade inter-BC), la enumeración de riesgo y los eventos de dominio, con atributos/métodos y alcance (+ público, − privado), así como direcciones y multiplicidades en las relaciones.
 </p>
@@ -1541,7 +1619,7 @@ Interfaces **del dominio**:
 - **Dependencias hacia adentro** (UI → Application → Domain) y puertos para infra (repos/façade), manteniendo bajo acoplamiento.
 - **Expansión futura**: el monolito puede extraer este BC a un microservicio manteniendo estos **puertos** intactos.
 
-##### 4.2.4.6.2. Bounded Context Database Design Diagram
+##### 4.2.3.6.2. Bounded Context Database Design Diagram
 
 <b>1) Visión general</b>
 <p align="justify">
@@ -1601,353 +1679,9 @@ El esquema relacional define cómo se almacenan los objetos del dominio *Analyti
 - Los eventos de dominio no se materializan en tablas propias, pero pueden ser persistidos en una tabla de **event store** aparte si se requiere.
 
 
-### 4.2.5. Bounded Context: Driver Engagement
+### 4.2.4. Bounded Context: Subscription & Payments
 
-Impulsar hábitos de conducción **seguros y eficientes** mediante *coaching*, **retos** y **recompensas**, aprovechando señales de negocio (p. ej., *Safety Score*, *Harsh Events*) publicadas por otros BCs (sin invadir sus modelos).
-
----
-
-#### 4.2.5.1. Domain Layer
-
-**Propósito del BC**
-Aumentar la participación del conductor y mejorar su desempeño, orquestando objetivos medibles, sesiones de coaching y beneficios, de acuerdo con preferencias de comunicación y políticas del cliente.
-
-**A) Agregado y Entidades (diccionario)**
-
-- **Aggregate Root: `EngagementProfile`**
-  - **Propósito:** estado de participación del conductor y reglas de elegibilidad.
-  - **Invariantes:** un perfil por conductor; preferencias de comunicación no vacías; retos activos pertenecen al mismo `driverId`.
-  - **Atributos (clave):** `driverId: UUID`, `preferences: CommunicationPreferences`, `engagementLevel: EngagementLevel`, `activeChallenges: List<ChallengeId>`, `joinedAt: LocalDateTime`.
-  - **Comportamientos:** `enroll(...)`, `updatePreferences(...)`, `acceptChallenge(...)`, `completeChallenge(...)`, `scheduleCoaching(...)`.
-
-- **`Challenge`**
-  - **Propósito:** objetivo con periodo y criterio de éxito.
-  - **Atributos:** `id`, `driverId`, `name`, `period: DateRange`, `target: MetricTarget`, `status: ChallengeStatus`, `createdAt`.
-  - **Comportamientos:** `canBeAccepted(...)`, `registerProgress(...)`, `evaluateCompletion(assessor)`, `markCompleted()`.
-
-- **`CoachingSession`**
-  - **Propósito:** sesión de retroalimentación planificada o realizada.
-  - **Atributos:** `id`, `driverId`, `scheduledAt`, `notes: CoachingNotes`, `status: CoachingStatus`, `completedAt?`.
-  - **Comportamiento:** `complete(outcome: CoachingOutcome)`.
-
-- **`Reward`** *(inmutable)*
-  - **Propósito:** beneficio por logro.
-  - **Atributos:** `id`, `driverId`, `reason: RewardReason`, `value: RewardValue`, `issuedAt`, `expiresAt?`.
-
-**B) Value Objects & Enums**
-
-- `CommunicationPreferences { primaryChannel: Channel, allowPush: boolean, quietHours: QuietHours }`
-- `DateRange { start: LocalDate, end: LocalDate }` *(valida `start ≤ end`)*
-- `MetricTarget { metric: BusinessMetric, direction: Direction, baseline: BigDecimal, target: BigDecimal }`
-- `ProgressSnapshot { metric: BusinessMetric, value: BigDecimal, takenAt: LocalDateTime }`
-- `RewardValue { points: int | currency+amount }` *(una opción u otra)*
-- **Enums:**
-  - `EngagementLevel = LOW | MEDIUM | HIGH`
-  - `BusinessMetric = SAFETY_SCORE | HARSH_EVENTS | IDLE_TIME | FUEL_EFFICIENCY`
-  - `Direction = INCREASE | DECREASE`
-  - `ChallengeStatus = DRAFT | ACTIVE | COMPLETED | EXPIRED`
-  - `CoachingStatus = SCHEDULED | COMPLETED | CANCELLED`
-  - `RewardReason = CHALLENGE_COMPLETED | SUSTAINED_IMPROVEMENT | SAFETY_MILESTONE`
-  - `Channel = APP | EMAIL | SMS`
-
-**C) Servicios de Dominio (interfaces)**
-
-- `ChallengeAssessor.isCompleted(challenge, progress[]) : boolean`
-- `RewardPolicyEngine.deriveRewards(challenge) : List<Reward>`
-- `CoachingPlanner.planNextSession(profile, latestScore) : CoachingSession`
-
-**D) Repositorios (puertos del dominio)**
-
-- `EngagementProfileRepository { save, findByDriverId, existsByDriverId }`
-- `ChallengeRepository { save, findActiveByDriverId, findById }`
-- `CoachingSessionRepository { save, findScheduledByDriverId, findHistoryByDriverId }`
-- `RewardRepository { save, findAllByDriverId }`
-
-**E) Commands & Queries**
-
-- **Commands:**
-  `EnrollDriverCommand`, `UpdatePreferencesCommand`, `DefineChallengeCommand`,
-  `AcceptChallengeCommand`, `RegisterProgressCommand`, `CompleteChallengeCommand`,
-  `ScheduleCoachingCommand`, `CompleteCoachingCommand`
-- **Queries:**
-  `GetEngagementProfileQuery`, `GetActiveChallengesQuery`, `GetCoachingScheduleQuery`, `GetRewardsHistoryQuery`
-
-**F) Domain Events**
-
-`DriverEnrolledEvent`, `PreferencesUpdatedEvent`, `ChallengeDefinedEvent`, `ChallengeAcceptedEvent`,
-`ChallengeCompletedEvent`, `RewardGrantedEvent`, `CoachingSessionScheduledEvent`, `CoachingSessionCompletedEvent`
-
-**G) Facade (contratos con otros BCs)**
-
-- `ExternalAnalyticsFacade.latestScore(driverId)` / `recentMetric(driverId, metric, range)`
-- `ExternalNotificationPort.notify(driverId, template, payload)` *(solo interfaz; implementación fuera del dominio)*
-
-**H) Excepciones de Dominio**
-`EngagementProfileAlreadyExistsException`, `ChallengeNotFoundException`, `ChallengeNotActiveException`, `InvalidMetricTargetException`
-
----
-
-#### 4.2.5.2. Interface Layer
-
-**A) Controladores (REST)**
-
-- `EngagementProfileController`
-  - `POST /api/v1/engagement/profiles` → `EnrollDriverCommand`
-  - `PUT /api/v1/engagement/profiles/{driverId}/preferences` → `UpdatePreferencesCommand`
-  - `GET /api/v1/engagement/profiles/{driverId}` → `GetEngagementProfileQuery`
-
-- `ChallengeController`
-  - `POST /api/v1/engagement/challenges` → `DefineChallengeCommand`
-  - `POST /api/v1/engagement/challenges/{challengeId}/accept` → `AcceptChallengeCommand`
-  - `POST /api/v1/engagement/challenges/{challengeId}/complete` → `CompleteChallengeCommand`
-  - `GET /api/v1/engagement/challenges?driverId=...` → `GetActiveChallengesQuery`
-
-- `CoachingController`
-  - `POST /api/v1/engagement/coaching` → `ScheduleCoachingCommand`
-  - `POST /api/v1/engagement/coaching/{sessionId}/complete` → `CompleteCoachingCommand`
-  - `GET /api/v1/engagement/coaching?driverId=...` → `GetCoachingScheduleQuery`
-
-- `RewardController`
-  - `GET /api/v1/engagement/rewards?driverId=...` → `GetRewardsHistoryQuery`
-
-**B) Resources (DTOs)**
-
-- **Requests:** `EnrollDriverResource`, `UpdatePreferencesResource`, `DefineChallengeResource`, `AcceptChallengeResource`, `ScheduleCoachingResource`, `CompleteCoachingResource`
-- **Responses:** `EngagementProfileResource`, `ChallengeResource`, `CoachingSessionResource`, `RewardResource`
-
-**C) Assemblers (mapeadores)**
-`EngagementProfileResourceAssembler`, `ChallengeResourceAssembler`, `CoachingResourceAssembler`, `RewardResourceAssembler`
-
-**D) Contrato & Errores**
-- `Problem+JSON` para errores (`400`, `404`, `422`, `500`)
-- `X-Request-Id` para trazabilidad; versionado `/api/v1`
-- Validaciones: rangos de fechas, targets, preferencias no vacías.
-
----
-
-#### 4.2.5.3. Application Layer
-
-**A) Command Services**
-
-- `EngagementProfileCommandServiceImpl` → alta/actualización del perfil; emite `DriverEnrolledEvent`, `PreferencesUpdatedEvent`.
-- `ChallengeCommandServiceImpl` → define/acepta/completa retos, evalúa con `ChallengeAssessor`, otorga recompensas con `RewardPolicyEngine`; emite `Challenge*` y `RewardGrantedEvent`.
-- `CoachingCommandServiceImpl` → agenda/completa sesiones con `CoachingPlanner`; emite `CoachingSession*Event`.
-
-**B) Query Services**
-`EngagementProfileQueryServiceImpl`, `ChallengeQueryServiceImpl`, `CoachingQueryServiceImpl`, `RewardQueryServiceImpl`.
-
-**C) Event Handlers (integración)**
-
-- `OnSafetyScoreUpdatedHandler` *(escucha `SafetyScoreUpdated` de Analytics)*: registra `ProgressSnapshot`, re-evalúa retos, dispara `CompleteChallengeCommand` si corresponde.
-- `OnInsightDetectedHandler` *(escucha `InsightDetected`)*: agenda `CoachingSession` según políticas.
-
-**D) Outbound Services / ACL**
-`ExternalAnalyticsService` (impl de `ExternalAnalyticsFacade`) y `NotificationAdapter` (impl de `ExternalNotificationPort`).
-
-**E) Publicación de eventos**
-`DomainEventPublisher` (outbox + DLQ recomendado), transacciones iniciadas en Application.
-
----
-
-#### 4.2.5.4. Infrastructure Layer
-
-**A) Persistencia (JPA/MySQL)**
-Entidades: `EngagementProfileEntity`, `ChallengeEntity`, `CoachingSessionEntity`, `RewardEntity`
-Repositorios: `EngagementProfileJpaRepository`, `ChallengeJpaRepository`, `CoachingSessionJpaRepository`, `RewardJpaRepository`
-Adaptadores (puertos dominio): `EngagementProfileRepositoryImpl`, `ChallengeRepositoryImpl`, `CoachingSessionRepositoryImpl`, `RewardRepositoryImpl`
-Mappers: `EngagementProfileMapper`, `ChallengeMapper`, `CoachingMapper`, `RewardMapper`
-Bloqueo optimista con `@Version`; índices por `driver_id`, `status`, fechas.
-
-**B) Integraciones**
-- `ExternalAnalyticsService` (HTTP/Feign) con *timeouts*, *retry*, *circuit breaker*.
-- `NotificationAdapter` (HTTP) hacia *Notification Gateway* (plantillas/canales).
-
-**C) Eventos & Observabilidad**
-`DomainEventPublisherImpl` (Spring Events o broker), *outbox*, *DLQ*; métricas y logs con `X-Request-Id`.
-
-**D) Migraciones & Config**
-Flyway/Liquibase (DDL + índices); `PersistenceConfig`, `ClientsConfig`.
-
----
-
-#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
-
-<img src="../assets/img/capitulo-IV/Bounded Context Software Architecture Component Level Diagrams.png" alt="Bounded Context Software Architecture Component Level Diagrams" width="1000"/>
-
-Breve guía de lectura:
-- **Interface:** controllers → orquestan command/query services y ensamblan DTOs.
-- **Application:** command/query services + event handlers + ACL (Analytics/Notification).
-- **Domain:** aggregates (`EngagementProfile`, `Challenge`, `CoachingSession`, `Reward`), domain services, repos (puertos).
-- **Infrastructure:** repos JPA, mappers, clients externos, event publisher → DB / Notification / Analytics.
-
----
-
-#### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
-#### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
-
-<img src="../assets/img/capitulo-IV/Bounded Context Domain Layer Class Diagrams.png" alt="Bounded Context Software Architecture Component Level Diagrams" width="1000"/>
-
-Notas: composición **1—N** de `EngagementProfile` con `Challenge`, `CoachingSession`, `Reward`; VOs con invariantes; interfaces de dominio separadas de implementaciones; eventos asociados a sus entidades.
-
----
-
-##### 4.2.5.6.2. Bounded Context Database Design Diagram
-
-<img src="../assets/img/capitulo-IV/Bounded Context Database Design Diagram.png" alt=" Bounded Context Database Design Diagram" width="1000"/>
-
-Descripción breve del diseño y constraints:
-- **Tablas:** `engagement_profiles` (único por `driver_id`), `challenges`, `coaching_sessions`, `rewards` con FK a perfil.
-- **Cardinalidades:** `engagement_profiles 1—N challenges | coaching_sessions | rewards`.
-- **Integridad:** `ON DELETE RESTRICT`; locking optimista en `engagement_profiles`.
-- **Desnormalización:** duplicar `driver_id` en tablas hijas para consultas rápidas por conductor.
-- **Reglas:** `RewardValue` exige puntos **o** monto (constraint/validación).
-- **Rendimiento:** índices compuestos por conductor/fecha/estado y columnas de periodo para filtros eficientes.
-
-
-### 4.2.6. Bounded Context: Workshop Operations
-#### 4.2.6.1. Domain Layer
-**Propósito del BC**
-Gestionar la **operación del taller**: agenda de servicios, órdenes de trabajo y asignación de recursos (mecánicos/bahías), garantizando disponibilidad y trazabilidad del servicio.
-
-**A) Agregados y Entidades (diccionario)**
-
-- **Aggregate Root: `Workshop`**
-  **Propósito:** representar un taller con su oferta y capacidades.
-  **Invariantes:** (i) horarios válidos (`open < close`), (ii) `ServiceCatalogItem.code` único por taller.
-  **Atributos (clave):** `workshopId: UUID`, `name`, `address`, `openingHours: WeeklyHours`, `serviceCatalog: List<ServiceCatalogItem>`, `resources: List<WorkshopResource>`.
-
-- **Aggregate Root: `WorkOrder`**
-  **Propósito:** ciclo de vida de una **orden de servicio**.
-  **Estados:** `REQUESTED → SCHEDULED → IN_PROGRESS → COMPLETED` (o `CANCELLED`).
-  **Invariantes:** no se puede iniciar si no está `SCHEDULED`; una orden `COMPLETED` es inmutable.
-  **Atributos:** `workOrderId: UUID`, `workshopId: UUID`, `vehicleId: UUID`, `driverId: UUID`, `requestedServices: List<ServiceItem>`, `scheduledSlot: TimeSlot?`, `assigned: Assignment?`, `status: WorkOrderStatus`, `estimatedCost: Money`, `notes: String?`.
-
-- **Entidad: `Appointment`** (si se usa reserva separada)
-  `appointmentId`, `workshopId`, `vehicleId`, `driverId`, `slot: TimeSlot`, `status: AppointmentStatus`.
-
-- **Entidad: `WorkshopResource`**
-  `resourceId: UUID`, `type: ResourceType (MECHANIC|BAY)`, `name`, `skills: Set<ServiceCode>`.
-
-**B) Value Objects**
-`WeeklyHours`, `TimeSlot(start, end)`, `ServiceCode`, `Money(amount, currency)`, `Assignment(mechanicId, bayId)`, `ServiceItem(code, laborMinutes)`.
-
-**C) Servicios de Dominio (interfaces)**
-- `SchedulingPolicy` → `findFirstAvailableSlot(workshopId, services, after: Instant): TimeSlot`
-- `AssignmentPolicy` → `selectResources(workshopId, services, slot): Assignment`
-- `CostEstimator` → `estimate(services, laborRates, parts): Money`
-
-**D) Repositorios (puertos de dominio)**
-`WorkshopRepository`, `WorkOrderRepository`, (opc.) `AppointmentRepository`.
-
-**E) Commands & Queries (records)**
-**Commands:** `CreateWorkshop`, `AddServiceToCatalog`, `CreateAppointment`, `ScheduleWorkOrder`, `StartWorkOrder`, `CompleteWorkOrder`, `CancelWorkOrder`, `RescheduleAppointment`.
-**Queries:** `GetWorkshopSchedule`, `GetNextAvailableSlot`, `GetWorkOrdersByWorkshop`, `GetWorkOrderDetails`.
-
-**F) Domain Events**
-`AppointmentRequested`, `AppointmentScheduled`, `WorkOrderCreated`, `WorkOrderStarted`, `WorkOrderCompleted`, `WorkOrderCancelled`, `WorkOrderRescheduled`.
-
-**G) Facades entre BCs (puertos)**
-- `ExternalDriverFacade` → `existsDriver(driverId)`, `getVehicleBasic(vehicleId)` (*Driver Engagement*).
-- `ExternalBillingFacade` → `openInvoiceFor(workOrderId, amount)` (*Admin & Billing*).
-- (Opc.) `ExternalAlertingFacade` para cerrar alertas asociadas.
-
-**H) Excepciones de Dominio**
-`InvalidTimeSlotException`, `NoResourcesAvailableException`, `WorkOrderStateException`, `WorkshopNotFoundException`.
-
-#### 4.2.6.2. Interface Layer
-**A) REST Controllers**
-
-1) **`WorkshopsController`**
-- `POST /api/v1/workshops` → `CreateWorkshop`
-- `POST /api/v1/workshops/{id}/catalog` → `AddServiceToCatalog`
-- `GET  /api/v1/workshops/{id}/schedule?from=&to=` → `GetWorkshopSchedule`
-
-2) **`AppointmentsController`**
-- `POST /api/v1/workshops/{id}/appointments` → `CreateAppointment`
-- `PUT  /api/v1/appointments/{appointmentId}/reschedule` → `RescheduleAppointment`
-- `DELETE /api/v1/appointments/{appointmentId}` → `CancelWorkOrder`
-
-3) **`WorkOrdersController`**
-- `POST /api/v1/workshops/{id}/work-orders` → `ScheduleWorkOrder`
-- `PUT  /api/v1/work-orders/{id}/start` → `StartWorkOrder`
-- `PUT  /api/v1/work-orders/{id}/complete` → `CompleteWorkOrder`
-- `GET  /api/v1/workshops/{id}/work-orders?status=` → `GetWorkOrdersByWorkshop`
-- `GET  /api/v1/work-orders/{id}` → `GetWorkOrderDetails`
-
-**B) DTOs**
-`CreateWorkshopResource`, `ServiceCatalogItemResource`, `CreateAppointmentResource(driverId, vehicleId, services[], preferredWindow)`,
-`ScheduleWorkOrderResource(appointmentId?, services[], preferredWindow)`, `WorkOrderResource(id, status, slot, assignment, estimatedCost, services[])`.
-
-**C) Assemblers**
-`WorkshopResourceAssembler`, `AppointmentResourceAssembler`, `WorkOrderResourceAssembler`.
-
-**D) Errores (contrato)**
-`Problem+JSON`, `400` validación, `404` no encontrado, `409` conflicto de agenda, `422` reglas de negocio.
-
-
-#### 4.2.6.3. Application Layer
-
-**Command Services**
-- `WorkshopCommandService` → `createWorkshop`, `addServiceToCatalog`
-- `AppointmentCommandService` → `create`, `reschedule`, `cancel`
-- `WorkOrderCommandService` → `schedule`, `start`, `complete`, `cancel`
-  - En `complete(..)`: calcula costo (via `CostEstimator`) y **publica** `WorkOrderCompleted(amount)`.
-
-**Query Services**
-`WorkshopQueryService`, `WorkOrderQueryService`.
-
-**Event Handlers**
-- `OnAppointmentRequested` → intenta `ScheduleWorkOrder`.
-- `OnWorkOrderCompleted` → `ExternalBillingFacade.openInvoiceFor(..)`.
-
-**ACL / Outbound**
-`ExternalDriverService` (impl de `ExternalDriverFacade`), `ExternalBillingService` (impl de `ExternalBillingFacade`).
-
-#### 4.2.6.4. Infrastructure Layer
-
-**Persistencia (JPA/MySQL)**
-- `WorkshopEntity(id, name, address, openingHoursJson)`
-- `ServiceCatalogItemEntity(id, workshopId, code, name, laborMinutes, basePrice)`
-- `WorkOrderEntity(id, workshopId, driverId, vehicleId, status, slotStart, slotEnd, estimatedAmount, currency, createdAt, updatedAt)`
-- `WorkOrderServiceEntity(workOrderId, code, laborMinutes, price, currency)`
-- `ResourceEntity(id, workshopId, type, name, skillsJson)`
-Repos `*JpaRepository` + adaptadores `*RepositoryImpl` (mappers Entity ⇄ Aggregate).
-Migraciones con Flyway/Liquibase. Índices: `(workshop_id, status, slot_start)`.
-
-**Integraciones**
-- (Opc.) Email/SMS al confirmar cita (cliente Twilio).
-- Observabilidad y métricas de tiempos de agendado.
-
-#### 4.2.6.5. Bounded Context Software Architecture Component Level Diagrams
-
-**Componentes (y responsabilidades):**
-- **Scheduling Component** (Application+Domain): orquesta `SchedulingPolicy` y repos.
-- **Work Orders Component** (Application+Domain): gestiona ciclo de vida de órdenes.
-- **Catalog Component** (Application+Domain): catálogo y recursos.
-- **Persistence Adapter** (Infrastructure): JPA para Workshop/WorkOrder.
-- **Driver ACL / Billing ACL** (Application outbound): integración inter-BC.
-
-<img src="../assets/img/capitulo-IV/BC-Workshop.png" alt="BC Workshop Container C4"/>
-
-#### 4.2.6.6. Bounded Context Software Architecture Code Level Diagrams
-
-
-#### 4.2.6.6.1. Bounded Context Domain Layer Class Diagrams
-##### 4.2.6.6.2. Bounded Context Database Design Diagram
-
-Diagram
-
-Tablas:
-- `workshops(id PK, name, address, opening_hours JSON, created_at)`
-- `service_catalog_items(id PK, workshop_id FK, code, name, labor_minutes, base_price, currency, UNIQUE(workshop_id, code))`
-- `work_orders(id PK, workshop_id FK, driver_id, vehicle_id, status, slot_start, slot_end, estimated_amount, currency, created_at, updated_at)`
-- `work_order_services(id PK, work_order_id FK, code, labor_minutes, price, currency)`
-- `workshop_resources(id PK, workshop_id FK, type, name, skills JSON)`
-Índices: `workshop_id`, `status`, `(slot_start, slot_end)`.
-
-
-### 4.2.7. Bounded Context: Admin and Billing
-#### 4.2.7.1. Domain Layer
+#### 4.2.4.1. Domain Layer
 
 **Propósito del BC**
 Administrar **planes, suscripciones, facturación y pagos** para conductores y talleres; integrar con **pasarela de pagos** e impuestos.
@@ -1997,7 +1731,7 @@ Administrar **planes, suscripciones, facturación y pagos** para conductores y t
 `InvalidPlanException`, `SubscriptionNotActiveException`, `InvoiceAlreadyPaidException`, `PaymentGatewayException`.
 
 
-#### 4.2.7.2. Interface Layer
+#### 4.2.4.2. Interface Layer
 
 **A) REST Controllers**
 
@@ -2032,7 +1766,7 @@ Administrar **planes, suscripciones, facturación y pagos** para conductores y t
 `400` validación, `402` *Payment Required*, `404`, `409` conflictos, `422` reglas (prorrateo/estado).
 
 
-#### 4.2.7.3. Application Layer
+#### 4.2.4.3. Application Layer
 
 **Command Services**
 - `PlanCommandService` → alta/edición de planes.
@@ -2052,7 +1786,7 @@ Administrar **planes, suscripciones, facturación y pagos** para conductores y t
 - (Opc.) `TaxServiceClient`.
 
 
-#### 4.2.7.4. Infrastructure Layer
+#### 4.2.4.4. Infrastructure Layer
 
 **Persistencia (JPA/MySQL)**
 - `plans(id, name, price_amount, currency, billing_cycle, active)`
@@ -2067,7 +1801,7 @@ Repos Spring Data + adaptadores `*RepositoryImpl`. Índices: `account_id`, `stat
 Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `payment_intent.succeeded/failed`.
 
 
-#### 4.2.7.5. Bounded Context Software Architecture Component Level Diagrams
+#### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
 
 **Componentes (y responsabilidades):**
 - **Plans Component** — catálogo de planes.
@@ -2078,18 +1812,49 @@ Cliente `Stripe/MercadoPago`; secretos en vault; (opc.) webhook receiver para `p
 - **Payment Gateway Adapter** — Stripe/MercadoPago (ACL).
 - **Billing API** — controladores REST.
 
-<img src="../assets/img/capitulo-IV/BC-Billing.png" alt="BC Billing Container C4"/>
+##### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
+- Este diagrama presenta la arquitectura de alto nivel del backend de la plataforma SafeCar, organizada en tres Contextos Delimitados (BC), un patrón común en la arquitectura de Microservicios y Domain-Driven Design (DDD). Los tres componentes están implementados utilizando Spring Boot y están agrupados en un único "Contenedor" llamado "SafeCar backend platform".
 
-#### 4.2.7.6. Bounded Context Software Architecture Code Level Diagrams
+- IAM BC (Identity, Authentication, Authorization): Su responsabilidad principal es la gestión de la identidad del usuario, la autenticación, la autorización mediante RBAC (Control de Acceso Basado en Roles) y la auditoría de acceso. Recibe peticiones de autorización del WorkshopOps BC.
+
+- Payments BC: Este componente se encarga de la gestión integral de Planes, Suscripciones y Facturación. Está diseñado para integrarse con Stripe para procesar los pagos. Su flujo requiere consultar al IAM BC para verificar el estado actual de la suscripción de un usuario.
+
+- WorkshopOps BC: Gestiona las operaciones del taller (Workshop operations) y la ingesta y normalización de datos de telemetría. Para funcionar, este servicio consulta al Payments BC para determinar el plan y los límites aplicables al usuario, y también consulta al IAM BC para verificar la autorización (RBAC) necesaria para sus operaciones.
+
+<img src="../assets/img/capitulo-IV/c4-bc-payments-component-level.png" alt="BC Payments Container C4" width=800/>
+
+#### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
+- Este diagrama ilustra el esquema de la base de datos relacional para manejar la información de usuarios, roles y el estado de las suscripciones. El diseño sigue un patrón modular que separa la gestión de la autenticación de la lógica de negocio de las suscripciones.
+
+- Tablas de Autenticación y Autorización: La tabla users almacena la información de autenticación del usuario (id, email, password). La tabla roles define los roles del sistema (name). La relación de muchos a muchos (N:M) entre usuarios y roles se implementa mediante la tabla pivote user_roles, que gestiona el Control de Acceso Basado en Roles (RBAC).
+
+- Tabla de Suscripciones: La tabla subscriptions contiene los detalles de la suscripción de cada usuario. Incluye campos esenciales como user_id (clave foránea), plan_type y status. El campo stripe_subscription_id es crítico, ya que proporciona la referencia externa necesaria para la integración y comunicación con el procesador de pagos Stripe. Las relaciones son: un usuario puede tener muchas suscripciones (1:N), aunque se espera una activa por sistema.
+
+<img src="../assets/img/capitulo-IV/diagrama-clases-payments.jpg" alt="BC Payments class diagram" width=800/>
 
 
+#### 4.2.1.6.2. Bounded Context Database Design Diagram
 
-#### 4.2.7.6.1. Bounded Context Domain Layer Class Diagrams
+- Este diagrama UML detalla la estructura interna del componente Payments BC, centrándose en el dominio de las Suscripciones y la interacción con Stripe.
+
+- Dominio y Persistencia: La clase central es Subscription (el Agregado de Dominio), que representa el estado de la suscripción del usuario, incluyendo el plan y la referencia externa a Stripe. El SubscriptionRepository define la interfaz para acceder y almacenar estas entidades, cuya implementación concreta es SubscriptionRepositoryImpl (la capa de persistencia).
+
+- Integración Externa: El componente StripePaymentGateway (un Gateway Externo) encapsula toda la comunicación con la API de Stripe, abstrayendo la lógica externa del resto del sistema.
+
+- Lógica de Negocio y Coordinación: El PaymentApplicationService actúa como el coordinador principal de la lógica de negocio. Utiliza el StripePaymentGateway para iniciar sesiones de pago y el SubscriptionRepository para persistir los cambios.
+
+- Puntos de Entrada (APIs): El PaymentController expone el endpoint REST para que los clientes inicien el proceso de suscripción creando una checkout session. El StripeWebhookController es el punto de entrada asíncrono, manejando las llamadas entrantes (webhooks) de Stripe para actualizar el estado de la suscripción después de que un pago se haya completado o haya fallado. El flujo de pago principal inicia en el PaymentController y termina de forma asíncrona en el StripeWebhookController.
+
+<img src="../assets/img/capitulo-IV/diagrama-base-de-dato.jpg" alt="BC Payments data base diagram" width=800/>
+
+
+#### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
 
 Incluir: `Plan`, `Subscription`, `Invoice` (con `InvoiceLine`), `Payment`, VOs (`Money`, `Percentage`, `BillingCycle`, `TaxRate`), servicios (`BillingService`, `ProrationService`, `TaxService`, `PaymentProcessor`), repos y eventos (`InvoiceGenerated`, `PaymentSucceeded`, `PaymentFailed`).
 
-
-##### 4.2.7.6.2. Bounded Context Database Design Diagram
+##### 4.2.4.6.2. Bounded Context Database Design Diagram
 
 Relaciones:
 - `accounts 1—N subscriptions`
@@ -2097,166 +1862,3 @@ Relaciones:
 - `invoices 1—N invoice_lines`
 - `invoices 1—N payments`
 Índices por `account_id`, `status`, `(period_start, period_end)`; FKs con `ON UPDATE CASCADE`, `ON DELETE RESTRICT`.
-
-### 4.2.8. Bounded Context: Security and Compliance
-#### 4.2.8.1. Domain Layer
-
-**Propósito del BC**
-Gestionar la **identidad, autenticación, autorización y auditoría** de todos los actores del sistema. Asegura que solo usuarios autorizados puedan acceder a los recursos y realizar acciones permitidas, registrando eventos de seguridad para cumplimiento y análisis.
-
-**A) Agregados y Entidades**
-
-- **Aggregate Root: `User`**
-  `userId`, `username`, `email: EmailAddress`, `hashedPassword: HashedPassword`, `roles: Set<RoleId>`, `status: UserStatus (ACTIVE|LOCKED|SUSPENDED)`, `failedLoginAttempts`, `lastLoginAt?`.
-  **Reglas:** el `username` y `email` deben ser únicos. La cuenta se bloquea (`LOCKED`) tras N intentos fallidos.
-
-- **Aggregate Root: `Role`**
-  `roleId`, `name`, `permissions: Set<Permission>`.
-  **Reglas:** el `name` del rol es único (ej. `ADMIN`, `DRIVER`, `WORKSHOP_OWNER`).
-
-- **Entidad (o Value Object): `Permission`**
-  `permissionCode` (ej. `invoices:read`, `work-orders:create`).
-
-- **Aggregate Root: `AuditLog`**
-  `logId`, `actorId`, `action`, `timestamp`, `ipAddress: IpAddress`, `details: Map<String, String>`, `status: (SUCCESS|FAILURE)`.
-
-**B) Value Objects**
-`HashedPassword`, `EmailAddress`, `IpAddress`, `JwtToken`.
-
-**C) Servicios de Dominio**
-- `AuthenticationService` → `authenticate(username, password): User`
-- `AuthorizationService` → `canPerform(userId, permissionCode): boolean`
-- `PasswordPolicyService` → `hash(plainPassword): HashedPassword`, `matches(plainPassword, hashedPassword): boolean`
-- `TokenGenerationService` → `generateFor(user): JwtToken`
-
-**D) Repositorios (puertos)**
-`UserRepository`, `RoleRepository`, `AuditLogRepository`.
-
-**E) Commands & Queries**
-**Commands:** `RegisterUser`, `AuthenticateUser`, `LockUserAccount`, `AssignRoleToUser`, `LogAuditEvent`, `ResetPassword`.
-**Queries:** `GetUserByUsername`, `ListRolesForUser`, `GetAuditLogs`.
-
-**F) Domain Events**
-`UserRegistered`, `UserAuthenticated`, `AuthenticationFailed`, `UserLockedOut`, `RoleAssignedToUser`, `PasswordResetRequested`.
-
-**G) Facades**
-Este BC es fundamental y no expone fachadas complejas. En cambio, otros BCs reaccionan a sus eventos (ej. `UserRegistered`).
-
-**H) Excepciones**
-`AuthenticationException`, `UserNotFoundException`, `PermissionDeniedException`, `AccountLockedException`, `WeakPasswordException`, `UsernameAlreadyExistsException`.
-
-
-#### 4.2.8.2. Interface Layer
-
-**A) REST Controllers**
-
-1) **`AuthController`**
-- `POST /api/v1/security/auth/token` → `AuthenticateUser` (retorna JWT).
-- `POST /api/v1/security/auth/logout` → (Opcional) Invalida token si se usa una *blacklist*.
-
-2) **`UsersController`**
-- `POST /api/v1/security/users/register` → `RegisterUser`.
-- `POST /api/v1/security/users/{id}/lock` → `LockUserAccount`.
-- `POST /api/v1/security/users/request-password-reset` → `ResetPassword`.
-
-3) **`RolesController`**
-- `POST /api/v1/security/users/{userId}/roles` → `AssignRoleToUser`.
-
-**B) DTOs**
-`AuthRequest(username, password)`,
-`AuthResponse(accessToken, refreshToken, expiresIn)`,
-`RegisterUserResource(username, email, password)`,
-`AssignRoleResource(roleName)`.
-
-**C) Assemblers**
-`UserResourceAssembler`, `TokenResourceAssembler`.
-
-**D) Errores (contrato)**
-`400` Bad Request, `401` Unauthorized, `403` Forbidden, `404` Not Found, `409` Conflict (usuario ya existe).
-
-
-#### 4.2.8.3. Application Layer
-
-**Command Services**
-- `AuthenticationCommandService` → orquesta la autenticación, el conteo de intentos fallidos y la generación de tokens (`TokenGenerationService`).
-- `UserManagementCommandService` → maneja el registro, bloqueo y reseteo de contraseñas.
-- `AuditCommandService` → se encarga de persistir los logs de auditoría.
-
-**Query Services**
-`UserQueryService`, `AuditQueryService`.
-
-**Event Handlers**
-- `OnAuthenticationFailed` → incrementa `failedLoginAttempts` y bloquea la cuenta si se alcanza el umbral. Dispara `LogAuditEvent`.
-- `OnUserAuthenticated` → resetea `failedLoginAttempts`, actualiza `lastLoginAt`. Dispara `LogAuditEvent`.
-- `OnDriverCreated` / `OnWorkshopCreated` (eventos de otros BCs) → invoca el comando `RegisterUser` para crear la identidad correspondiente.
-
-**ACL / Outbound**
-- `TokenService` (impl. de `TokenGenerationService` usando JWT).
-- `NotificationService` (puerto) para enviar correos de bienvenida o de reseteo de contraseña.
-
-
-#### 4.2.8.4. Infrastructure Layer
-
-**Persistencia (JPA/MySQL)**
-- `users(id, username, email, hashed_password, status, failed_login_attempts, last_login_at)`
-- `roles(id, name)`
-- `permissions(id, permission_code)`
-- `user_roles(user_id FK, role_id FK)`
-- `role_permissions(role_id FK, permission_id FK)`
-- `audit_logs(id, actor_id, action, ip_address, details_json, status, created_at)`
-Repositorios con Spring Data JPA. Índices únicos en `users.username` y `users.email`.
-
-**Integraciones**
-- Librería de JWT (ej. `io.jsonwebtoken.jjwt`).
-- Librería de hashing de contraseñas (ej. `Spring Security BCryptPasswordEncoder`).
-- Cliente SMTP para `NotificationService`.
-- Secret Manager (ej. HashiCorp Vault, AWS Secrets Manager) para almacenar la clave de firma del JWT.
-
-
-#### 4.2.8.5. Bounded Context Software Architecture Component Level Diagrams
-
-**Componentes (y responsabilidades):**
-- **Authentication Component** — Valida credenciales y genera tokens de sesión (JWT).
-- **User Management Component** — Administra el ciclo de vida de las cuentas de usuario (registro, bloqueo).
-- **Authorization Component** — Gestiona roles y permisos, y verifica el acceso.
-- **Auditing Component** — Registra todos los eventos relevantes de seguridad.
-- **Persistence Adapter** — Implementación de repositorios con JPA/MySQL.
-- **Security API** — Controladores REST para exponer la funcionalidad del BC.
-
-<img src="/assets/img/capitulo-IV/Bounded Context Segurity.png" alt="BC Security Container C4"/>
-
-#### 4.2.8.6. Bounded Context Software Architecture Code Level Diagrams
-
-#### 4.2.8.6.1. Bounded Context Domain Layer Class Diagrams
-
-El diagrama debe incluir las relaciones entre los agregados y entidades principales:
-
-<img src="/assets/img/capitulo-IV/dbseguriti.png" alt="seguriti dc C4"/>
-
-- `User` (Aggregate Root) tiene una relación many-to-many con `Role` (Aggregate Root).
-- `Role` tiene una relación many-to-many con `Permission` (Value Object o Entidad).
-- `AuthenticationService` y `AuthorizationService` utilizan `UserRepository` y `RoleRepository`.
-- Se disparan eventos como `UserRegistered` y `AuthenticationFailed`.
-- Se utilizan Value Objects como `HashedPassword` y `EmailAddress` dentro de la entidad `User`.
-- `AuditLog` (Aggregate Root) captura información del `User` que realiza una acción.
-
-
-##### 4.2.8.6.2. Bounded Context Database Design Diagram
-
-El diseño de la base de datos refleja el modelo de dominio con tablas normalizadas:
-
-
-<img src="/assets/img/capitulo-IV/dcssergurity.png" alt="seguriti db C4"/>
-
-
-
-- **Tablas:** `users`, `roles`, `permissions`, `audit_logs`.
-- **Tablas de Unión (Join Tables):** `user_roles` (para la relación N-M entre `users` y `roles`) y `role_permissions` (para la relación N-M entre `roles` y `permissions`).
-- **Relaciones y Claves Foráneas (FK):**
-  - `user_roles.user_id` → `users.id`
-  - `user_roles.role_id` → `roles.id`
-  - `role_permissions.role_id` → `roles.id`
-  - `role_permissions.permission_id` → `permissions.id`
-  - `audit_logs.actor_id` → `users.id` (puede ser nulo para acciones del sistema).
-- **Índices Clave:** Índices únicos en `users(username)` y `users(email)`. Índices en las claves foráneas para optimizar los *joins*.
-- **Restricciones:** `ON DELETE CASCADE` en las tablas de unión si al borrar un usuario/rol se deben eliminar sus asignaciones. `ON DELETE RESTRICT` si se prefiere evitar borrados en cascada.

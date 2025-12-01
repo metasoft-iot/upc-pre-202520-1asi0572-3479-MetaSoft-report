@@ -8,13 +8,13 @@ Aquí documentaremos las decisiones transversales de la identidad visual y del l
 Para la elección de los colores representativos para los productos, escogimos investigar la reacción que causaría en los usuarios durante el uso de la aplicación o landing page. En este proyecto, se decidió utilizar los colores negro y rojo, con esto creamos la paleta de colores característica de LawConnect. Con estos colores esperamos transmitir un sentido de modernidad y calidez. En este caso, escogimos negro para tener una base sólida, también, transmite un aire de confianza, que es justamente lo que esperamos con hacer por la importancia de la aplicación en la vida de nuestros usuarios; así, también tiene un toque de elegancia y seriedad. Además, utilizamos rojo suave para que transmita energía, algo que llama bastante la atención de los usuarios. Por eso es que será utilizado en las llamadas de acción, botones y puntos clave de la aplicación. En sí, buscamos que haya un balance y armonía visual en el diseño de los productos y lo logramos con ambos colores.
 </p>
 
-<img alt="Paleta de color" src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/color-palette.png" />
+<img alt="Paleta de color" src="../assets/img/capitulo-V/color-palette.png" />
 
 <b>Typography</b></br>
 <p align="justify">
 Familia(s), jerarquía tipográfica (display, títulos, cuerpos), escala modular y line-height para lectura cómoda.Spacing & Grid: unidad base (4/8 px), columnas y gutters para desktop/tablet/móvil, y reglas de alineación.
 </p>
-<img alt="Matriz tipográfica: jerarquías y escala modular" src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/typography.png"/>
+<img alt="Matriz tipográfica: jerarquías y escala modular" src="../assets/img/capitulo-V/typography.png"/>
 
 ### 5.1.2. Web, Mobile and IoT Style Guidelines
 
@@ -123,7 +123,7 @@ En la página principal de SafeCar, se definieron etiquetas cortas y directas qu
 
 Estas etiquetas buscan mantener una **estructura simple y accesible**, permitiendo que el visitante comprenda la oferta de la plataforma y acceda fácilmente a la aplicación web o móvil.
 
-<img alt="Barra de navegación de la Landing Page de SafeCar" src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/labeling-system.png" />
+<img alt="Barra de navegación de la Landing Page de SafeCar" src="../assets/img/capitulo-V/labeling-system.png" />
 
 ##### **Etiquetas para la Aplicación Móvil**
 
@@ -369,7 +369,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - Este wireframe representa la pantalla de inicio de sesión, el punto de entrada a la plataforma. La interfaz es limpia y profesional, con un área destacada a la izquierda para la marca "Tracker Mobility" y su eslogan, reforzando la identidad de la empresa. A la derecha, se encuentra un formulario simple para ingresar el correo electrónico y la contraseña. Incluye opciones para recuperar la contraseña y registrarse, lo que facilita el acceso de usuarios nuevos y recurrentes. El diseño minimalista asegura una experiencia de usuario sin distracciones, enfocada en un rápido acceso.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Login.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
+  <img src="../assets/img/capitulo-V/Login.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
 - El diseño está dividido: la izquierda es un espacio destacado para la marca (identidad), y la derecha contiene el formulario de login (correo y contraseña), junto con opciones para recuperar contraseña y registro.
@@ -380,7 +380,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - La pantalla de registro para SafeCar muestra un formulario dividido en secciones para una inscripción organizada y eficiente. Los campos están agrupados lógicamente en "Información personal" y "Información del vehículo", lo que facilita que el usuario complete la información necesaria de manera secuencial. Este enfoque por bloques reduce la carga cognitiva y hace que el proceso de registro, que puede ser tedioso, se sienta más manejable y directo. El botón de "Completar Registro" al final cierra el proceso.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Register.png" alt="Imagen de la pantalla de registro de MetaSoft">
+  <img src="../assets/img/capitulo-V/Register.png" alt="Imagen de la pantalla de registro de MetaSoft">
 </p>
 
 - Muestra un formulario de registro extenso que está organizado en bloques temáticos (e.g., Información Personal, Información del Vehículo) para ser secuencial y fácil de completar. Termina con el botón "Completar Registro".
@@ -389,7 +389,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - Este wireframe muestra el diseño del panel de control o dashboard. Representa el centro de comando de la plataforma, donde los usuarios pueden obtener una visión general y estratégica de sus datos. Aunque la pantalla está vacía en el wireframe, su propósito es ser un espacio dinámico que presentará resúmenes, gráficos y métricas clave. La estructura de navegación lateral (con íconos para "Reportes", "Verificadores", etc.) es constante, lo que garantiza una transición fluida entre las diferentes secciones y reafirma la coherencia de la plataforma.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Dashboard.png" alt="Imagen del panel de control o dashboard de MetaSoft">
+  <img src="../assets/img/capitulo-V/Dashboard.png" alt="Imagen del panel de control o dashboard de MetaSoft">
 </p>
 
 - Se compone de una barra de navegación lateral con iconos y un gran espacio central vacío reservado para mostrar gráficos, resúmenes y métricas estratégicas. Su objetivo es dar una visión general coherente de los datos.
@@ -398,7 +398,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - La vista de Solicitudes es una interfaz para la gestión y supervisión de peticiones. Presenta una tabla con diversas columnas que permiten a los usuarios ver y gestionar las solicitudes de manera organizada. La funcionalidad de búsqueda, los filtros por fecha y los botones para "Eliminar" y "Exportar" demuestran la capacidad de la plataforma para procesar grandes cantidades de datos de forma eficiente, cumpliendo con la misión de transformar datos en conocimiento útil.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Solicitudes.png" alt="Imagen de la pantalla de solicitudes de MetaSoft">
+  <img src="../assets/img/capitulo-V/Solicitudes.png" alt="Imagen de la pantalla de solicitudes de MetaSoft">
 </p>
 
 - El wireframe "Solicitudes - Tracker Mobility" es una interfaz de gestión de peticiones.
@@ -409,7 +409,7 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - Este wireframe de Detalle de orden muestra una vista exhaustiva de una solicitud específica. La información se presenta en bloques o tarjetas que detallan desde la información general y la dirección de entrega hasta los documentos adjuntos. El diseño permite un análisis minucioso y la capacidad de editar la información, con campos para texto, fechas y menús desplegables. Este nivel de detalle es clave para la eficiencia operativa, una de las prioridades de la misión de la startup.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Detalle%20de%20orden.png" alt="Imagen de la pantalla de detalles de la orden de MetaSoft">
+  <img src="../assets/img/capitulo-V/Detalle%20de%20orden.png" alt="Imagen de la pantalla de detalles de la orden de MetaSoft">
 </p>
 
 - El wireframe "Detalle de orden - Tracker Mobility" ofrece una vista exhaustiva de una solicitud o pedido específico.
@@ -424,14 +424,14 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - Vista detallada: Al seleccionar un verificador, se accede a su perfil, que incluye opciones para editar la información y secciones colapsables para datos adicionales. Este diseño se enfoca en la gestión individualizada del personal, lo que potencia la eficiencia de los procesos.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Verificadores.png" alt="Imagen de la pantalla de verificadores de MetaSoft">
+  <img src="../assets/img/capitulo-V/Verificadores.png" alt="Imagen de la pantalla de verificadores de MetaSoft">
 </p>
 
 - El wireframe "Verificadores - Tracker Mobility" presenta la Vista de Tabla, optimizada para la gestión masiva de personal. Incluye una gran tabla con capacidad de búsqueda, filtrado y acciones (añadir, eliminar) para administrar un listado claro de todos los verificadores.
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Verificadores2.png" alt="Imagen de la segunda pantalla de verificadores de MetaSoft">
+  <img src="../assets/img/capitulo-V/Verificadores2.png" alt="Imagen de la segunda pantalla de verificadores de MetaSoft">
 </p>
 
 - Este wireframe muestra la Vista Detallada de un verificador específico. Al seleccionar a alguien de la lista, se accede a su perfil individual. Presenta la información en bloques editables en la parte superior y secciones colapsables con datos adicionales en la parte inferior, enfocándose en la gestión individualizada del personal.
@@ -445,13 +445,13 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 - Vista detallada: Un wireframe complejo y extenso que muestra la información completa de un reporte. Con múltiples secciones para texto, tablas y espacios para imágenes, esta pantalla es el núcleo de la promesa de MetaSoft de transformar datos en conocimiento, permitiendo un análisis profundo y la toma de decisiones informada.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Reportes.png" alt="Imagen de la pantalla de reportes de MetaSoft">
+  <img src="../assets/img/capitulo-V/Reportes.png" alt="Imagen de la pantalla de reportes de MetaSoft">
 </p>
 
 - El wireframe "Reportes - Tracker Mobility" muestra la Vista de Listado principal. Es una interfaz de gestión tabular con filtros, búsqueda y botones de acción (como añadir o ver detalles), diseñada para visualizar y administrar de forma masiva y eficiente todos los reportes generados.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/docs/capitulo-V/assets/img/capitulo-V/Reportes2.png" alt="Imagen de la segunda pantalla de reportes de MetaSoft">
+  <img src="../assets/img/capitulo-V/Reportes2.png" alt="Imagen de la segunda pantalla de reportes de MetaSoft">
 </p>
 
 - Este wireframe de Reporte muestra una vista de detalle muy extensa y vertical. La información está segmentada en numerosos bloques y secciones que contienen texto, campos, y grandes espacios reservados para imágenes o gráficos (indicados con las "X"). Esta vista permite un análisis exhaustivo y minucioso de un reporte individual.
@@ -460,39 +460,39 @@ Lectura escaneable, blancos generosos, contenido alineado al container; accesibi
 
 Los diagramas de Wireflow elaborados para SafeCar muestran de forma visual cómo se conectan las distintas pantallas de la aplicación, combinando el diseño de la interfaz con el recorrido de navegación del usuario. Estos flujos ilustran las principales acciones que realizan tanto los conductores como los talleres, permitiendo evaluar la usabilidad del sistema y garantizar una experiencia coherente e intuitiva en todo momento.
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20Safecar.jpg" alt="Wireframe Safecar" width="1000px">
+<div align="center" style="margin-top: 20px;"><img src="../assets/img/capitulo-V/Wireframe%20Safecar.jpg" alt="Wireframe Safecar" width="1000px">
 </div>
 
  **Wireflow – Taller mecanico (Web)**
 
 El diagrama de wireflow para el segmento de talleres mecánicos en SafeCar representa de manera detallada el flujo de interacción del usuario desde el proceso de inicio de sesión o registro hasta la gestión de sus operaciones dentro del sistema. Este recorrido comienza cuando el mecánico accede a la plataforma, donde puede iniciar sesión con sus credenciales o, en caso de ser un nuevo usuario, crear una cuenta específica para talleres afiliados. Una vez registrado, el sistema lo redirige automáticamente al tablero principal (dashboard).
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20login.jpg" alt="Wireframe taller mecanico login" width="1000px"></div>
+<div align="center" style="margin-top: 20px;"><img src="../assets/img/capitulo-V/Wireframe%20taller%20mecanico%20login.jpg" alt="Wireframe taller mecanico login" width="1000px"></div>
 
 Desde este tablero, el usuario visualiza una interfaz central que agrupa las herramientas esenciales para la gestión diaria del taller, divididas en tres módulos principales: Solicitudes, Reportes y Verificadores.
 
 
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20funciones.jpg" alt="Wireframe taller mecanico funciones" width="1000px"></div>
+<div align="center" style="margin-top: 20px;"><img src="../assets/img/capitulo-V/Wireframe%20taller%20mecanico%20funciones.jpg" alt="Wireframe taller mecanico funciones" width="1000px"></div>
 
 En la sección Solicitudes, el mecánico accede a una lista organizada de las citas solicitadas por los conductores, incluyendo información clave como nombre del cliente, tipo de servicio, modelo y color del vehículo, fecha y hora de la cita, además del estado actual de la solicitud. Desde esta pantalla también puede aceptar, reprogramar o rechazar citas según la disponibilidad del taller.
 
-<div align="center" style="margin-top: 20px;"> <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20solicitudes.jpg"  alt="Wireframe taller mecanico solicitudes" width="1000px"> </div>
+<div align="center" style="margin-top: 20px;"> <img src="../assets/img/capitulo-V/Wireframe%20taller%20mecanico%20solicitudes.jpg"  alt="Wireframe taller mecanico solicitudes" width="1000px"> </div>
 
 En el módulo de Reportes, el usuario puede revisar el historial de mantenimientos y diagnósticos realizados, generar nuevos reportes técnicos o actualizar los ya existentes. Este apartado está diseñado para optimizar el seguimiento de los trabajos efectuados y permitir la trazabilidad de los servicios ofrecidos, mejorando la transparencia con los clientes.
 
-<div align="center" style="margin-top: 20px;"> <img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20reportes.jpg"  alt="Wireframe taller mecanico reportes" width="1000px"></div>
+<div align="center" style="margin-top: 20px;"> <img src="../assets/img/capitulo-V/Wireframe%20taller%20mecanico%20reportes.jpg"  alt="Wireframe taller mecanico reportes" width="1000px"></div>
 
 Por último, la sección de Verificadores integra los datos enviados por los dispositivos IoT, mostrando métricas en tiempo real sobre el estado de los vehículos. Aquí, el mecánico puede validar las lecturas del sistema, registrar observaciones o crear alertas preventivas que se enviarán directamente al conductor.
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20taller%20mecanico%20verificadores.jpg" alt="Wireframe taller mecanico verificadores" width="1000px">
+<div align="center" style="margin-top: 20px;"><img src="../assets/img/capitulo-V/Wireframe%20taller%20mecanico%20verificadores.jpg" alt="Wireframe taller mecanico verificadores" width="1000px">
 </div>
 
  **Wireflow – Conductor (Web)**
 
 El diagrama de wireflow para el segmento de conductores en SafeCar, al igual que en el caso de los talleres mecánicos, incluye el flujo completo desde el inicio de sesión o registro hasta la gestión de las principales funciones del sistema. El recorrido comienza cuando el conductor accede a la plataforma, donde puede ingresar con sus credenciales o crear una cuenta personal si es un nuevo usuario. Una vez autenticado, el sistema lo dirige automáticamente a su panel principal (dashboard), donde se centralizan las herramientas clave para la gestión de su vehículo y el seguimiento de mantenimientos.
 
-<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/MetaSoft-IOT/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/chapter-V/assets/img/capitulo-V/Wireframe%20conductor.jpg" alt="Wireframe conductor" width="1000px">
+<div align="center" style="margin-top: 20px;"><img src="../assets/img/capitulo-V/Wireframe%20conductor.jpg" alt="Wireframe conductor" width="1000px">
 </div>
 
 ### 5.4.3. Applications Mock-ups
@@ -569,6 +569,51 @@ El diseño utiliza tarjetas organizadas y colores contrastantes para resaltar se
 
 ### 5.4.4. Applications User Flow Diagrams
 
+**User Goal 1: Ver reporte del vehículo**
+
+Happy Path: Visualización del estado general del vehículo con todos los indicadores dentro de parámetros normales. El usuario revisa sin recibir alertas.
+
+Unhappy Path: El sistema detecta valores anormales (temperatura, aceite, batería, etc.) y muestra alertas que requieren acción inmediata del usuario.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal.png" alt="UserGoal1" width="1000px">
+</div>
+
+**User Goal 2: Ver alertas del vehículo**
+
+Happy Path: No existen alertas activas y el usuario confirma que el vehículo está en condiciones normales.
+
+Unhappy Path: El sistema muestra alertas críticas o moderadas del vehículo, indicando fallas o riesgos que requieren revisión o mantenimiento inmediato.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal2.png" alt="UserGoal2" width="1000px">
+</div>
+
+**User Goal 3: Gestionar y consultar vehículos registrados**
+
+Happy Path: El usuario visualiza la lista de vehículos, puede registrar uno nuevo y consultar la información detallada de cualquier vehículo existente.
+
+Unhappy Path: El vehículo no puede registrarse por falta de datos o existe un error de validación
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal3.png" width="1000px">
+</div>
+
+**User Goal 4: Crear y Consultar Citas del Vehículo**
+
+Happy Path: El usuario crea una nueva cita desde un tablero inicialmente vacío, ingresando los datos requeridos. Luego visualiza la cita registrada en el tablero y puede consultar sus detalles sin problemas.
+
+Unhappy Path: El usuario intenta crear una cita pero falta información obligatoria o la fecha/hora no es válida. El sistema muestra un mensaje de error e impide el registro hasta corregir los datos.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal4.png" width="1000px">
+</div>
+
+**User Goal 5: Gestionar citas del vehículo**
+
+Happy Path: El usuario crea una nueva cita desde un tablero inicialmente vacío, ingresando los datos requeridos. Después visualiza la cita registrada en el tablero, puede abrir sus detalles y tiene la opción de cancelarla o reprogramarla. Si reprograma, ingresa la nueva fecha y horario, confirma la acción y el sistema actualiza correctamente la información.
+
+Unhappy Path: El usuario intenta crear o reprogramar una cita pero falta información obligatoria o la fecha/hora no es válida. El sistema muestra un mensaje de error e impide continuar hasta corregir los datos.
+
+<div align="center" style="margin-top: 20px;"><img src="https://raw.githubusercontent.com/metasoft-iot/upc-pre-202520-1asi0572-3479-MetaSoft-report/refs/heads/docs/tb2/assets/img/capitulo-V/User%20goal5.png" width="1000px">
+</div>
+
 ## **5.5. Applications Prototyping**
 
 ####  Web Application Prototyping
@@ -601,4 +646,6 @@ El uso de Figma permitió validar la estructura de navegación y el diseño visu
   <img src="../assets/img/capitulo-V/App-prototyping.png" alt="Imagen de la pantalla de inicio de sesión de MetaSoft">
 </p>
 
-Link: [Prototipo Web App](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202124162_upc_edu_pe/Ee1cZiLNP_dJjL1prSmIih4B1u6ixglswnGvMM2Vo6pt6g?e=NhgeQJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+Link: https://shorturl.at/V9EuD 
+
+
