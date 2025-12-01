@@ -13987,7 +13987,7 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
     </tr>
     <tr>
         <td>TF</td>
-        <td></td>
+        <td>https://tinyurl.com/msb4rb35</td>
         <td>Video explicativo del proyecto SafeCar para la cuarta entrega del proyecto</td>
     </tr>
 </table>
