@@ -14124,3 +14124,23 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
         <td>Video explicativo del proyecto SafeCar para la cuarta entrega del proyecto</td>
     </tr>
 </table>
+
+### Anexo C. Videos de Demostración
+<table>
+    <tr>
+        <th>Video</th>
+        <th>Link to Video</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>Video About the Product</td>
+        <td>https://tinyurl.com/5n7t2kwf</td>
+        <td>Video promocional del proyecto SafeCar</td>
+    </tr>
+    <tr>
+        <td>Video About the Team</td>
+        <td>https://tinyurl.com/vw4u3ve7</td>
+        <td>Video de presentación del equipo de desarrollo de SafeCar</td>
+    </tr>
+    <tr>
+</table>
