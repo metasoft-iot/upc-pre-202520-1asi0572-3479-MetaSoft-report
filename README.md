@@ -457,261 +457,255 @@ Se dividieron las siguientes ramas para la colaboración en el proyecto:
 * annexes
 * release-v1.0
 
-### ENTREGABLE DEL TB2 (Sprint 2)
-
-**Gráficos de colaboración de los integrantes del equipo**
-
-<p align="justify">
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
-repositorio de nuestro segundo sprint. Estos gráficos ofrecen una representación visual de la cantidad
-de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
-cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
-en cada uno de los commits.
-</p>
-
-<p align="justify">
-La primera imagen muestra el gráfico de colaboración asociado al repositorio de backend, donde se registran los commits, contribuyentes y la evolución de los cambios realizados durante el Sprint 2.
-</p>
-<img src="assets/img/insights/insights-backend.png" alt="Gráfico de colaboración backend Sprint 2" width="100%"/>
-
-<p align="justify">
-La segunda imagen presenta el gráfico de colaboración del repositorio de frontend, reflejando la participación de los integrantes del equipo en las interfaces web desarrolladas en este sprint.
-</p>
-<img src="assets/img/insights/insights-frontend.png" alt="Gráfico de colaboración frontend Sprint 2" width="100%"/>
-
-<p align="justify">
-La tercera imagen corresponde al repositorio del sitio web de negocio, mostrando las contribuciones vinculadas a la comunicación y presentación del producto SafeCar.
-</p>
-<img src="assets/img/insights/insights-web-business.png" alt="Gráfico de colaboración web business Sprint 2" width="100%"/>
-
----
-
-### ENTREGABLE DEL TRABAJO FINAL (Sprint 3)
-
-**Gráficos de colaboración de los integrantes del equipo**
-
-<p align="justify">
-A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
-repositorio de nuestro tercer sprint. Estos gráficos ofrecen una representación visual de la cantidad
-de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
-cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
-en cada uno de los commits para los distintos repositorios involucrados.
-</p>
-
-<p align="justify">
-La primera imagen muestra el gráfico de colaboración del repositorio de backend en el Sprint 3, evidenciando el trabajo realizado sobre los servicios centrales de la plataforma.
-</p>
-<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-backend.png" alt="Gráfico de colaboración backend Sprint 3" width="100%"/>
-
-<p align="justify">
-La segunda imagen corresponde al repositorio de la aplicación web principal, donde se visualiza la actividad de desarrollo orientada a las funcionalidades para los usuarios finales.
-</p>
-<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-web.png" alt="Gráfico de colaboración web app Sprint 3" width="100%"/>
-
-<p align="justify">
-La tercera imagen presenta el gráfico de colaboración del sitio web de negocio (landing page), asociado a la comunicación y posicionamiento del producto SafeCar.
-</p>
-<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-landing.png" alt="Gráfico de colaboración web business Sprint 3" width="100%"/>
-
-<p align="justify">
-La cuarta imagen muestra el repositorio de la aplicación móvil, reflejando las contribuciones enfocadas en la experiencia del conductor desde dispositivos móviles.
-</p>
-<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-mobile.png" alt="Gráfico de colaboración mobile Sprint 3" width="100%"/>
-
-<p align="justify">
-La quinta imagen corresponde al repositorio del servicio Edge, responsable del procesamiento intermedio de los datos telemétricos.
-</p>
-<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-edge.png" alt="Gráfico de colaboración edge service Sprint 3" width="100%"/>
-
-<p align="justify">
-La sexta imagen presenta el gráfico de colaboración de la aplicación embebida en cabina, relacionada con la interacción directa con el conductor y la lectura de sensores dentro del vehículo.
-</p>
-<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-cabine-embedded.png" alt="Gráfico de colaboración embedded cabine Sprint 3" width="100%"/>
-
-<p align="justify">
-La séptima imagen muestra el repositorio de la aplicación embebida en el nodo Edge, donde se concentran las contribuciones orientadas al procesamiento local y envío de datos a la plataforma SafeCar.
-</p>
-<img src="assets/img/capitulo-VI/sprint-3/insights/insights-sprint3-edge-embedded.png" alt="Gráfico de colaboración embedded edge Sprint 3" width="100%"/>
+<table>
+  <tr>
+    <th width="20%">Sprint #</th>
+    <th width="30%">Description</th>
+    <th width="50%">Insight Collaboration</th>
+  </tr>
+  <tr>
+    <td align="center">Sprint 0 (Planificación)</td>
+    <td>
+      <p align="justify">
+        Durante la planificación del proyecto, se realizó un análisis inicial de los requisitos y se definieron las principales características del producto. Además, se establecieron las estrategias de desarrollo y se asignaron las tareas a los miembros del equipo. Se asentaron las bases de arquitectura y diseño del proyecto y se definieron los flujos de trabajo para el desarrollo del producto.
+      </p>
+    </td>
+    <td align="center">
+      <p>
+        No se cuenta con los gráficos de insights de colaboración generados automáticamente por la plataforma.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Sprint 1</td>
+    <td>
+      <p align="justify">
+        Para el primer Sprint, lamentablemente no se cuenta con los gráficos de insights de colaboración generados automáticamente por la plataforma. Debido a la antigüedad de este ciclo de desarrollo inicial y a las políticas de retención de datos históricos de la herramienta de análisis, la información detallada sobre la frecuencia de commits, revisión de código y actividad diaria específica de ese periodo ya no se encuentra disponible para su consulta o visualización. No obstante, el trabajo realizado durante esta etapa fue fundamental con el desarorllo de la landing page y la aplicación web.
+      </p>
+    </td>
+    <td align="center">
+      <p>
+        No se cuenta con los gráficos de insights de colaboración generados automáticamente por la plataforma.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Sprint 2</td>
+    <td>
+      <p align="justify">
+        A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
+        reporte de nuestro segundo sprint. Estos gráficos ofrecen una representación visual de la cantidad
+        de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
+        cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
+        en cada uno de los commits.
+      </p>
+    </td>
+    <td>
+      <img src="assets/img/insights/insights-report-sprint2.png" alt="Gráfico de colaboración backend Sprint 2" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Sprint 3</td>
+    <td>
+      <p align="justify">
+        A continuación se presentan los gráficos de colaboración de los integrantes del equipo en el
+        reporte de nuestro tercer sprint. Estos gráficos ofrecen una representación visual de la cantidad
+        de contribuciones realizadas por cada miembro del equipo, junto con la fecha en que se llevaron a
+        cabo. Además, se presenta información sobre la cantidad de líneas de código que se han modificado
+        en cada uno de los commits.
+      </p>
+    </td>
+    <td>
+      <img src="assets/img/insights/insights-report-sprint3.png" alt="Gráfico de colaboración Sprint 3" width="100%"/>
+    </td>
+  </tr>
+</table>
 
 <div style="page-break-after: always;"></div>
 
 ## Tabla de Contenido
 
-### [Capítulo I: Introducción](docs/capitulo-I.md)
+### [Capítulo I: Introducción](#capítulo-i-introducción)
 
-**[1.1. Startup Profile](docs/capitulo-I.md#11-startup-profile)**  
-**[1.1.1. Descripción de la Startup](docs/capitulo-I.md#111-descripcion-de-la-startup)**  
-[1.1.2. Perfiles de integrantes del equipo](docs/capitulo-I.md#112-perfiles-de-integrantes-del-equipo)
+**[1.1. Startup Profile](#11-startup-profile)**  
+[1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)  
+[1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
 
-**[1.2. Solution Profile](docs/capitulo-I.md#12-solution-profile)**  
-[1.2.1. Antecedentes y problemática](docs/capitulo-I.md#121-antecedentes-y-problematica)  
-[1.2.2. Lean UX Process](docs/capitulo-I.md#122-lean-ux-process)  
- [1.2.2.1. Lean UX Problem Statements](docs/capitulo-I.md#1221-lean-ux-problem-statements)  
- [1.2.2.2. Lean UX Assumptions](docs/capitulo-I.md#1222-lean-ux-assumptions)  
- [1.2.2.3. Lean UX Hypothesis Statements](docs/capitulo-I.md#1223-lean-ux-hypothesis-statements)  
- [1.2.2.4. Lean UX Canvas](docs/capitulo-I.md#1224-lean-ux-canvas)
+**[1.2. Solution Profile](#12-solution-profile)**  
+[1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)  
+[1.2.2. Lean UX Process](#122-lean-ux-process)  
+&emsp;[1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)  
+&emsp;[1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)  
+&emsp;[1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)  
+&emsp;[1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
 
-**[1.3. Segmentos objetivo](docs/capitulo-I.md#13-segmentos-objetivo)**
-
-
-### [Capítulo II: Requirements Elicitation & Analysis](docs/capitulo-II.md)
-
-**[2.1. Competidores](docs/capitulo-II.md#21-competidores)**  
-[2.1.1. Análisis competitivo](docs/capitulo-II.md#211-analisis-competitivo)  
-[2.1.2. Estrategias y tácticas frente a competidores](docs/capitulo-II.md#212-estrategias-y-tacticas-frente-a-competidores)
-
-**[2.2. Entrevistas](docs/capitulo-II.md#22-entrevistas)**  
-[2.2.1. Diseño de entrevistas](docs/capitulo-II.md#221-diseno-de-entrevistas)  
-[2.2.2. Registro de entrevistas](docs/capitulo-II.md#222-registro-de-entrevistas)  
-[2.2.3. Análisis de entrevistas](docs/capitulo-II.md#223-analisis-de-entrevistas)
-
-**[2.3. Needfinding](docs/capitulo-II.md#23-needfinding)**  
-[2.3.1. User Personas](docs/capitulo-II.md#231-user-personas)  
-[2.3.2. User Task Matrix](docs/capitulo-II.md#232-user-task-matrix)  
-[2.3.3. User Journey Mapping](docs/capitulo-II.md#233-user-journey-mapping)  
-[2.3.4. Empathy Mapping](docs/capitulo-II.md#234-empathy-mapping)
-
-**[2.4. Big Picture EventStorming](docs/capitulo-II.md#24-big-picture-eventstorming)**  
-
-**[2.5. Ubiquitous Language](docs/capitulo-II.md#25-ubiquitous-language)**
+**[1.3. Segmentos objetivo](#13-segmentos-objetivo)**
 
 
-### [Capítulo III: Requirements Specification](docs/capitulo-III.md)
+### [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
 
-**[3.1. User Stories](docs/capitulo-III.md#31-user-stories)**  
-**[3.2. Impact Mapping](docs/capitulo-III.md#32-impact-mapping)**  
-**[3.3. Product Backlog](docs/capitulo-III.md#33-product-backlog)**
+**[2.1. Competidores](#21-competidores)**  
+[2.1.1. Análisis competitivo](#211-análisis-competitivo)  
+[2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
 
+**[2.2. Entrevistas](#22-entrevistas)**  
+[2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)  
+[2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)  
+[2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
 
-### [Capítulo IV: Solution Software Design](docs/capitulo-IV.md)
+**[2.3. Needfinding](#23-needfinding)**  
+[2.3.1. User Personas](#231-user-personas)  
+[2.3.2. User Task Matrix](#232-user-task-matrix)  
+[2.3.3. User Journey Mapping](#233-user-journey-mapping)  
+[2.3.4. Empathy Mapping](#234-empathy-mapping)
 
-**[4.1. Strategic-Level Domain-Driven Design](docs/capitulo-IV.md#41-strategic-level-domain-driven-design)**  
-[4.1.1. Design-Level EventStorming](docs/capitulo-IV.md#411-design-level-eventstorming)  
- [4.1.1.1. Candidate Context Discovery](docs/capitulo-IV.md#4111-candidate-context-discovery)  
- [4.1.1.2. Domain Message Flows Modeling](docs/capitulo-IV.md#4112-domain-message-flows-modeling)  
- [4.1.1.3. Bounded Context Canvases](docs/capitulo-IV.md#4113-bounded-context-canvases)
+**[2.4. Big Picture EventStorming](#24-big-picture-eventstorming)**
 
-[4.1.2. Context Mapping](docs/capitulo-IV.md#412-context-mapping)  
-[4.1.3. Software Architecture](docs/capitulo-IV.md#413-software-architecture)  
- [4.1.3.1. Software Architecture System Landscape Diagram](docs/capitulo-IV.md#4131-software-architecture-system-landscape-diagram)  
- [4.1.3.2. Software Architecture Context Level Diagrams](docs/capitulo-IV.md#4132-software-architecture-context-level-diagrams)  
- [4.1.3.3. Software Architecture Container Level Diagrams](docs/capitulo-IV.md#4133-software-architecture-container-level-diagrams)  
- [4.1.3.4. Software Architecture Deployment Diagrams](docs/capitulo-IV.md#4134-software-architecture-deployment-diagrams)
-
-**[4.2. Tactical-Level Domain-Driven Design](docs/capitulo-IV.md#42-tactical-level-domain-driven-design)**  
-
-[4.2.1. Bounded Context: Workshop Operations & Telemetry Processing](docs/capitulo-IV.md#421-bounded-context-workshop-operations--telemetry-processing)  
- [4.2.1.1. Domain Layer](docs/capitulo-IV.md#4211-domain-layer)  
- [4.2.1.2. Interface Layer](docs/capitulo-IV.md#4212-interface-layer)  
- [4.2.1.3. Application Layer](docs/capitulo-IV.md#4213-application-layer)  
- [4.2.1.4. Infrastructure Layer](docs/capitulo-IV.md#4214-infrastructure-layer)  
- [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](docs/capitulo-IV.md#4215-bounded-context-software-architecture-component-level-diagrams)  
- [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](docs/capitulo-IV.md#4216-bounded-context-software-architecture-code-level-diagrams)  
-  [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](docs/capitulo-IV.md#42161-bounded-context-domain-layer-class-diagrams)  
-  [4.2.1.6.2. Bounded Context Database Design Diagram](docs/capitulo-IV.md#42162-bounded-context-database-design-diagram)
-
-[4.2.2. Bounded Context: Communication](docs/capitulo-IV.md#422-bounded-context-communication)  
- [4.2.2.1. Domain Layer](docs/capitulo-IV.md#4221-domain-layer)  
- [4.2.2.2. Interface Layer](docs/capitulo-IV.md#4222-interface-layer)  
- [4.2.2.3. Application Layer](docs/capitulo-IV.md#4223-application-layer)  
- [4.2.2.4. Infrastructure Layer](docs/capitulo-IV.md#4224-infrastructure-layer)  
- [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](docs/capitulo-IV.md#4225-bounded-context-software-architecture-component-level-diagrams)  
- [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](docs/capitulo-IV.md#4226-bounded-context-software-architecture-code-level-diagrams)  
-  [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](docs/capitulo-IV.md#42261-bounded-context-domain-layer-class-diagrams)  
-  [4.2.2.6.2. Bounded Context Database Design Diagram](docs/capitulo-IV.md#42262-bounded-context-database-design-diagram)
-
-[4.2.3. Bounded Context: Analytics and Recommendations](docs/capitulo-IV.md#423-bounded-context-analytics-and-recommendations)  
- [4.2.3.1. Domain Layer](docs/capitulo-IV.md#4231-domain-layer)  
- [4.2.3.2. Interface Layer](docs/capitulo-IV.md#4232-interface-layer)  
- [4.2.3.3. Application Layer](docs/capitulo-IV.md#4233-application-layer)  
- [4.2.3.4. Infrastructure Layer](docs/capitulo-IV.md#4234-infrastructure-layer)  
- [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](docs/capitulo-IV.md#4235-bounded-context-software-architecture-component-level-diagrams)  
- [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](docs/capitulo-IV.md#4236-bounded-context-software-architecture-code-level-diagrams)  
-  [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](docs/capitulo-IV.md#42361-bounded-context-domain-layer-class-diagrams)  
-  [4.2.3.6.2. Bounded Context Database Design Diagram](docs/capitulo-IV.md#42362-bounded-context-database-design-diagram)
-
-[4.2.4. Bounded Context: Subscription & Payments](docs/capitulo-IV.md#424-bounded-context-subscription--payments)  
- [4.2.4.1. Domain Layer](docs/capitulo-IV.md#4241-domain-layer)  
- [4.2.4.2. Interface Layer](docs/capitulo-IV.md#4242-interface-layer)  
- [4.2.4.3. Application Layer](docs/capitulo-IV.md#4243-application-layer)  
- [4.2.4.4. Infrastructure Layer](docs/capitulo-IV.md#4244-infrastructure-layer)  
- [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](docs/capitulo-IV.md#4245-bounded-context-software-architecture-component-level-diagrams)  
- [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](docs/capitulo-IV.md#4246-bounded-context-software-architecture-code-level-diagrams)  
-  [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](docs/capitulo-IV.md#42461-bounded-context-domain-layer-class-diagrams)  
-  [4.2.4.6.2. Bounded Context Database Design Diagram](docs/capitulo-IV.md#42462-bounded-context-database-design-diagram)
+**[2.5. Ubiquitous Language](#25-ubiquitous-language)**
 
 
-### [Capítulo V: Solution UI/UX Design](docs/capitulo-V.md)
+### [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
 
-**[5.1. Style Guidelines](docs/capitulo-V.md#51-style-guidelines)**  
-[5.1.1. General Style Guidelines](docs/capitulo-V.md#511-general-style-guidelines)  
-[5.1.2. Web, Mobile and IoT Style Guidelines](docs/capitulo-V.md#512-web-mobile-and-iot-style-guidelines)
-
-**[5.2. Information Architecture](docs/capitulo-V.md#52-information-architecture)**  
-[5.2.1. Organization Systems](docs/capitulo-V.md#521-organization-systems)  
-[5.2.2. Labeling Systems](docs/capitulo-V.md#522-labeling-systems)  
-[5.2.3. SEO Tags and Meta Tags](docs/capitulo-V.md#523-seo-tags-and-meta-tags)  
-[5.2.4. Searching Systems](docs/capitulo-V.md#524-searching-systems)  
-[5.2.5. Navigation Systems](docs/capitulo-V.md#525-navigation-systems)
-
-**[5.3. Landing Page UI Design](docs/capitulo-V.md#53-landing-page-ui-design)**  
-[5.3.1. Landing Page Wireframe](docs/capitulo-V.md#531-landing-page-wireframe)  
-[5.3.2. Landing Page Mock-up](docs/capitulo-V.md#532-landing-page-mock-up)
-
-**[5.4. Applications UX/UI Design](docs/capitulo-V.md#54-applications-uxui-design)**  
-[5.4.1. Applications Wireframes](docs/capitulo-V.md#541-applications-wireframes)  
-[5.4.2. Applications Wireflow Diagrams](docs/capitulo-V.md#542-applications-wireflow-diagrams)  
-[5.4.3. Applications Mock-ups](docs/capitulo-V.md#543-applications-mock-ups)  
-[5.4.4. Applications User Flow Diagrams](docs/capitulo-V.md#544-applications-user-flow-diagrams)
-
-**[5.5. Applications Prototyping](docs/capitulo-V.md#55-applications-prototyping)**
+**[3.1. User Stories](#31-user-stories)**  
+**[3.2. Impact Mapping](#32-impact-mapping)**  
+**[3.3. Product Backlog](#33-product-backlog)**
 
 
-### [Capítulo VI: Product Implementation, Validation & Deployment](docs/capitulo-VI.md)
+### [Capítulo IV: Solution Software Design](#capítulo-iv-solution-software-design)
 
-**[6.1. Software Configuration Management](docs/capitulo-VI.md#61-software-configuration-management)**  
-[6.1.1. Software Development Environment Configuration](docs/capitulo-VI.md#611-software-development-environment-configuration)  
-[6.1.2. Source Code Management](docs/capitulo-VI.md#612-source-code-management)  
-[6.1.3. Source Code Style Guide & Conventions](docs/capitulo-VI.md#613-source-code-style-guide--conventions)  
-[6.1.4. Software Deployment Configuration](docs/capitulo-VI.md#614-software-deployment-configuration)
+**[4.1. Strategic-Level Domain-Driven Design](#41-strategic-level-domain-driven-design)**  
+[4.1.1. Design-Level EventStorming](#411-design-level-eventstorming)  
+&emsp;[4.1.1.1. Candidate Context Discovery](#4111-candidate-context-discovery)  
+&emsp;[4.1.1.2. Domain Message Flows Modeling](#4112-domain-message-flows-modeling)  
+&emsp;[4.1.1.3. Bounded Context Canvases](#4113-bounded-context-canvases)
 
-**[6.2. Landing Page, Services & Applications Implementation](docs/capitulo-VI.md#62-landing-page-services--applications-implementation)**  
-[6.2.1. Sprint 1](docs/capitulo-VI.md#621-sprint-1)  
- [6.2.1.1. Sprint Planning 1](docs/capitulo-VI.md#6211-sprint-planning-1)  
- [6.2.1.2. Aspect Leaders and Collaborators](docs/capitulo-VI.md#6212-aspect-leaders-and-collaborators)  
- [6.2.1.3. Sprint Backlog 1](docs/capitulo-VI.md#6213-sprint-backlog-1)  
- [6.2.1.4. Development Evidence for Sprint Review](docs/capitulo-VI.md#6214-development-evidence-for-sprint-review)  
- [6.2.1.5. Testing Suite Evidence for Sprint Review](docs/capitulo-VI.md#6215-testing-suite-evidence-for-sprint-review)  
- [6.2.1.6. Execution Evidence for Sprint Review](docs/capitulo-VI.md#6216-execution-evidence-for-sprint-review)  
- [6.2.1.7. Services Documentation Evidence for Sprint Review](docs/capitulo-VI.md#6217-services-documentation-evidence-for-sprint-review)  
- [6.2.1.8. Software Deployment Evidence for Sprint Review](docs/capitulo-VI.md#6218-software-deployment-evidence-for-sprint-review)  
- [6.2.1.9. Team Collaboration Insights during Sprint](docs/capitulo-VI.md#6219-team-collaboration-insights-during-sprint)
+[4.1.2. Context Mapping](#412-context-mapping)  
+[4.1.3. Software Architecture](#413-software-architecture)  
+&emsp;[4.1.3.1. Software Architecture System Landscape Diagram](#4131-software-architecture-system-landscape-diagram)  
+&emsp;[4.1.3.2. Software Architecture Context Level Diagrams](#4132-software-architecture-context-level-diagrams)  
+&emsp;[4.1.3.3. Software Architecture Container Level Diagrams](#4133-software-architecture-container-level-diagrams)  
+&emsp;[4.1.3.4. Software Architecture Deployment Diagrams](#4134-software-architecture-deployment-diagrams)
 
-[6.2.2. Sprint 2](docs/capitulo-VI.md#622-sprint-2)  
- [6.2.2.1. Sprint Planning 2](docs/capitulo-VI.md#6221-sprint-planning-2)  
- [6.2.2.2. Aspect Leaders and Collaborators](docs/capitulo-VI.md#6222-aspect-leaders-and-collaborators)  
- [6.2.2.3. Sprint Backlog 2](docs/capitulo-VI.md#6223-sprint-backlog-2)  
- [6.2.2.4. Development Evidence for Sprint Review](docs/capitulo-VI.md#6224-development-evidence-for-sprint-review)  
- [6.2.2.5. Testing Suite Evidence for Sprint Review](docs/capitulo-VI.md#6225-testing-suite-evidence-for-sprint-review)  
- [6.2.2.6. Execution Evidence for Sprint Review](docs/capitulo-VI.md#6226-execution-evidence-for-sprint-review)  
- [6.2.2.7. Services Documentation Evidence for Sprint Review](docs/capitulo-VI.md#6227-services-documentation-evidence-for-sprint-review)  
- [6.2.2.8. Software Deployment Evidence for Sprint Review](docs/capitulo-VI.md#6228-software-deployment-evidence-for-sprint-review)  
- [6.2.2.9. Team Collaboration Insights during Sprint](docs/capitulo-VI.md#6229-team-collaboration-insights-during-sprint)
+**[4.2. Tactical-Level Domain-Driven Design](#42-tactical-level-domain-driven-design)**
 
-**[6.3. Validation Interviews](docs/capitulo-VI.md#63-validation-interviews)**  
-[6.3.1. Diseño de Entrevistas](docs/capitulo-VI.md#631-diseno-de-entrevistas)  
-[6.3.2. Registro de Entrevistas](docs/capitulo-VI.md#632-registro-de-entrevistas)  
-[6.3.3. Evaluaciones según heurísticas](docs/capitulo-VI.md#633-evaluaciones-segun-heuristicas)
+[4.2.1. Bounded Context: Workshop Operations & Telemetry Processing](#421-bounded-context-workshop-operations--telemetry-processing)  
+&emsp;[4.2.1.1. Domain Layer](#4211-domain-layer)  
+&emsp;[4.2.1.2. Interface Layer](#4212-interface-layer)  
+&emsp;[4.2.1.3. Application Layer](#4213-application-layer)  
+&emsp;[4.2.1.4. Infrastructure Layer](#4214-infrastructure-layer)  
+&emsp;[4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](#4215-bounded-context-software-architecture-component-level-diagrams)  
+&emsp;[4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](#4216-bounded-context-software-architecture-code-level-diagrams)  
+&emsp;&emsp;[4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](#42161-bounded-context-domain-layer-class-diagrams)  
+&emsp;&emsp;[4.2.1.6.2. Bounded Context Database Design Diagram](#42162-bounded-context-database-design-diagram)
 
-**[6.4. Video About-the-Product](docs/capitulo-VI.md#64-video-about-the-product)**
+[4.2.2. Bounded Context: Communication](#422-bounded-context-communication)  
+&emsp;[4.2.2.1. Domain Layer](#4221-domain-layer)  
+&emsp;[4.2.2.2. Interface Layer](#4222-interface-layer)  
+&emsp;[4.2.2.3. Application Layer](#4223-application-layer)  
+&emsp;[4.2.2.4. Infrastructure Layer](#4224-infrastructure-layer)  
+&emsp;[4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](#4225-bounded-context-software-architecture-component-level-diagrams)  
+&emsp;[4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](#4226-bounded-context-software-architecture-code-level-diagrams)  
+&emsp;&emsp;[4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](#42261-bounded-context-domain-layer-class-diagrams)  
+&emsp;&emsp;[4.2.2.6.2. Bounded Context Database Design Diagram](#42262-bounded-context-database-design-diagram)
+
+[4.2.3. Bounded Context: Analytics and Recommendations](#423-bounded-context-analytics-and-recommendations)  
+&emsp;[4.2.3.1. Domain Layer](#4231-domain-layer)  
+&emsp;[4.2.3.2. Interface Layer](#4232-interface-layer)  
+&emsp;[4.2.3.3. Application Layer](#4233-application-layer)  
+&emsp;[4.2.3.4. Infrastructure Layer](#4234-infrastructure-layer)  
+&emsp;[4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](#4235-bounded-context-software-architecture-component-level-diagrams)  
+&emsp;[4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](#4236-bounded-context-software-architecture-code-level-diagrams)  
+&emsp;&emsp;[4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](#42361-bounded-context-domain-layer-class-diagrams)  
+&emsp;&emsp;[4.2.3.6.2. Bounded Context Database Design Diagram](#42362-bounded-context-database-design-diagram)
+
+[4.2.4. Bounded Context: Subscription & Payments](#424-bounded-context-subscription--payments)  
+&emsp;[4.2.4.1. Domain Layer](#4241-domain-layer)  
+&emsp;[4.2.4.2. Interface Layer](#4242-interface-layer)  
+&emsp;[4.2.4.3. Application Layer](#4243-application-layer)  
+&emsp;[4.2.4.4. Infrastructure Layer](#4244-infrastructure-layer)  
+&emsp;[4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](#4245-bounded-context-software-architecture-component-level-diagrams)  
+&emsp;[4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](#4246-bounded-context-software-architecture-code-level-diagrams)  
+&emsp;&emsp;[4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](#42461-bounded-context-domain-layer-class-diagrams)  
+&emsp;&emsp;[4.2.4.6.2. Bounded Context Database Design Diagram](#42462-bounded-context-database-design-diagram)
+
+
+### [Capítulo V: Solution UI/UX Design](#capítulo-v-solution-uiux-design)
+
+**[5.1. Style Guidelines](#51-style-guidelines)**  
+[5.1.1. General Style Guidelines](#511-general-style-guidelines)  
+[5.1.2. Web, Mobile and IoT Style Guidelines](#512-web-mobile-and-iot-style-guidelines)
+
+**[5.2. Information Architecture](#52-information-architecture)**  
+[5.2.1. Organization Systems](#521-organization-systems)  
+[5.2.2. Labeling Systems](#522-labeling-systems)  
+[5.2.3. SEO Tags and Meta Tags](#523-seo-tags-and-meta-tags)  
+[5.2.4. Searching Systems](#524-searching-systems)  
+[5.2.5. Navigation Systems](#525-navigation-systems)
+
+**[5.3. Landing Page UI Design](#53-landing-page-ui-design)**  
+[5.3.1. Landing Page Wireframe](#531-landing-page-wireframe)  
+[5.3.2. Landing Page Mock-up](#532-landing-page-mock-up)
+
+**[5.4. Applications UX/UI Design](#54-applications-uxui-design)**  
+[5.4.1. Applications Wireframes](#541-applications-wireframes)  
+[5.4.2. Applications Wireflow Diagrams](#542-applications-wireflow-diagrams)  
+[5.4.3. Applications Mock-ups](#543-applications-mock-ups)  
+[5.4.4. Applications User Flow Diagrams](#544-applications-user-flow-diagrams)
+
+**[5.5. Applications Prototyping](#55-applications-prototyping)**
+
+
+### [Capítulo VI: Product Implementation, Validation & Deployment](#capítulo-vi-product-implementation-validation--deployment)
+
+**[6.1. Software Configuration Management](#61-software-configuration-management)**  
+[6.1.1. Software Development Environment Configuration](#611-software-development-environment-configuration)  
+[6.1.2. Source Code Management](#612-source-code-management)  
+[6.1.3. Source Code Style Guide & Coding Conventions](#613-source-code-style-guide--coding-conventions)  
+[6.1.4. Software Deployment Configuration](#614-software-deployment-configuration)
+
+**[6.2. Landing Page, Services & Applications Implementation](#62-landing-page-services--applications-implementation)**  
+[6.2.1. Sprint 1](#621-sprint-1)  
+&emsp;[6.2.1.1. Sprint Planning 1](#6211-sprint-planning-1)  
+&emsp;[6.2.1.2. Aspect Leaders and Collaborators](#6212-aspect-leaders-and-collaborators)  
+&emsp;[6.2.1.3. Sprint Backlog 1](#6213-sprint-backlog-1)  
+&emsp;[6.2.1.4. Development Evidence for Sprint Review](#6214-development-evidence-for-sprint-review)  
+&emsp;[6.2.1.5. Testing Suite Evidence for Sprint Review](#6215-testing-suite-evidence-for-sprint-review)  
+&emsp;[6.2.1.6. Execution Evidence for Sprint Review](#6216-execution-evidence-for-sprint-review)  
+&emsp;[6.2.1.7. Services Documentation Evidence for Sprint Review](#6217-services-documentation-evidence-for-sprint-review)  
+&emsp;[6.2.1.8. Software Deployment Evidence for Sprint Review](#6218-software-deployment-evidence-for-sprint-review)  
+&emsp;[6.2.1.9. Team Collaboration Insights during Sprint](#6219-team-collaboration-insights-during-sprint)
+
+[6.2.2. Sprint 2](#622-sprint-2)  
+&emsp;[6.2.2.1. Sprint Planning 2](#6221-sprint-planning-2)  
+&emsp;[6.2.2.2. Aspect Leaders and Collaborators](#6222-aspect-leaders-and-collaborators)  
+&emsp;[6.2.2.3. Sprint Backlog 2](#6223-sprint-backlog-2)  
+&emsp;[6.2.2.4. Development Evidence for Sprint Review](#6224-development-evidence-for-sprint-review)  
+&emsp;[6.2.2.5. Testing Suite Evidence for Sprint Review](#6225-testing-suite-evidence-for-sprint-review)  
+&emsp;[6.2.2.6. Execution Evidence for Sprint Review](#6226-execution-evidence-for-sprint-review)  
+&emsp;[6.2.2.7. Services Documentation Evidence for Sprint Review](#6227-services-documentation-evidence-for-sprint-review)  
+&emsp;[6.2.2.8. Software Deployment Evidence for Sprint Review](#6228-software-deployment-evidence-for-sprint-review)  
+&emsp;[6.2.2.9. Team Collaboration Insights during Sprint](#6229-team-collaboration-insights-during-sprint)
+
+[6.2.3. Sprint 3](#623-sprint-3)  
+&emsp;[6.2.3.1. Sprint Planning 3](#6231-sprint-planning-3)  
+&emsp;[6.2.3.2. Aspect Leaders and Collaborators](#6232-aspect-leaders-and-collaborators)  
+&emsp;[6.2.3.3. Sprint Backlog 3 (IoT & Edge Computing)](#6233-sprint-backlog-3-iot--edge-computing)
+
+**[6.3. Validation Interviews](#63-validation-interviews)**  
+[6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)  
+[6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)  
+[6.3.3. Evaluaciones según heurísticas](#633-evaluaciones-segun-heuristicas)
+
+**[6.4. Video About the Product](#64-video-about-the-product)**
 
 
 ### **Secciones Finales**
-**Conclusiones**  
-**Conclusiones y recomendaciones**  
-**Video About-the-Team**  
-**Bibliografía**  
-**Anexos**
+[Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)  
+[Video About the Team](#video-about-the-team)  
+[Bibliografía](#bibliografía)  
+[Anexos](#anexos)  
+[Anexo A. GitHub Repositories](#anexo-a-github-repositories)  
+[Anexo B. Videos de Exposiciones](#anexo-b-videos-de-exposiciones)
 
 <div style="page-break-after: always;"></div>
 
