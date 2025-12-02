@@ -13,7 +13,7 @@
 <h3>Startup: MetaSoft </h3> 
 <h3>Producto: SafeCar</h3>
 
-## Relación de integrantes:
+<h3>Relación de integrantes:</h3>
 
 <table>
   <tr>
