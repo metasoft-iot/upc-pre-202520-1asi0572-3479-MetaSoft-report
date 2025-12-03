@@ -14065,6 +14065,8 @@ En esta sección presentamos al equipo de desarrollo detrás de SafeCar. A trav�
 10. Asociación Automotriz del Perú (AAP). (2021). Más de 70,000 talleres mecánicos necesitan capacitación en nuevas tecnologías. Recuperado de https://aap.org.pe/aap-mas-de-70000-talleres-mecanicos-necesitan-capacitacion-en-nuevas-tecnologias
 11. TechSenati. (2022). Talleres automotrices en el Perú: condiciones actuales y necesidad de capacitación tecnológica. Recuperado de https://techsenati.edu.pe/talleres-automotrices-en-el-peru-cuales-son-sus-condiciones-actuales-y-por-que-necesitan-mayor-capacitacion-tecnologica
 
+<div style="page-break-after: always;"></div>
+
 ## Anexos 
 ### Anexo A. GitHub Repositories
 Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
@@ -14117,6 +14119,8 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
     </tr>
 </table>
 
+<div style="page-break-after: always;"></div>
+
 ### Anexo B. Videos de Exposiciones
 
 <table>
@@ -14146,6 +14150,8 @@ Link de la organización MetaSoft: https://github.com/MetaSoft-IOT
         <td>Video explicativo del proyecto SafeCar para la cuarta entrega del proyecto</td>
     </tr>
 </table>
+
+<div style="page-break-after: always;"></div>
 
 ### Anexo C. Videos de Demostración
 <table>
