@@ -13663,6 +13663,13 @@ A continuación, se detalla la documentación técnica de los servicios desarrol
 Esta sección presenta la evidencia del despliegue exitoso de los incrementos del producto en los entornos de prueba y producción. Se incluyen registros del proceso de despliegue, configuraciones de infraestructura y verificaciones de disponibilidad, demostrando que los entregables están operativos y accesibles para su validación y uso.
 </p>
 
+*Backend Deployment Evidence - Railway*
+<p>
+A continuacion se muestra la evidencia del despliegue del servicio Backend en la plataforma Railway, confirmando que el servicio está activo y accesible mostrando los logs de ejecución y la URL pública generada por el entorno cloud.
+</p>
+
+<img src="assets/img/capitulo-VI/sprint-3/railway-deployment.png"/>
+
 6.2.3.9. Team Collaboration Insights during Sprint
 
 <p align="justify">
