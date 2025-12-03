@@ -13912,6 +13912,8 @@ En esta sección se presentan las entrevistas realizadas a los usuarios finales 
   <strong>Resumen:</strong> En esta entrevista, la persona representante del taller destacó la importancia de tener una vista consolidada de los vehículos atendidos en el día y del estado en que se encuentran dentro del flujo de trabajo (en diagnóstico, en reparación, listo para entrega, etc.). Señaló que un sistema que centralice la información de cada orden de trabajo —incluyendo datos del conductor, detalles del vehículo y trabajos realizados— facilitaría la coordinación interna y la comunicación con los clientes. Además, mencionó que disponer de reportes generados por la plataforma ayudaría a dar seguimiento a los servicios ofrecidos y a proyectar mejor la carga de trabajo futura del taller.
 </p>
 
+<div style="page-break-after: always;"></div>
+
 ### 6.3.3. Evaluación según heurísticas
 
 <p align="justify">
@@ -13967,6 +13969,8 @@ Esta sección presenta el análisis de la experiencia de usuario de SafeCar basa
   </tbody>
 </table>
 
+<div style="page-break-after: always;"></div>
+
 ## 6.4. Video About the Product
 
 <p align="justify">
@@ -13988,6 +13992,8 @@ A continuación, se presenta un video promocional que resume la propuesta de val
 <b>Link del video:</b> https://tinyurl.com/5n7t2kwf
 <b>Link del video en Youtube:</b> https://www.youtube.com/watch?v=Ug90jxSF7eg
 
+<div style="page-break-after: always;"></div>
+
 # Conclusiones
 
 <p align="justify">
@@ -14005,6 +14011,8 @@ En el ámbito técnico y metodológico, la aplicación del enfoque Lean UX y el 
 <p align="justify">
 Finalmente, el proyecto sienta las bases para una evolución continua hacia un ecosistema de movilidad inteligente más amplio. Los resultados obtenidos no solo validan el modelo de negocio actual, sino que abren la puerta a futuras expansiones como la integración de inteligencia artificial para diagnósticos predictivos más precisos y la conexión con otros actores del sector automotriz. SafeCar se posiciona así no solo como una herramienta de gestión, sino como un habilitador clave para la transformación digital del mantenimiento vehicular en el mercado objetivo.
 </p>
+
+<div style="page-break-after: always;"></div>
 
 ## Conclusiones y recomendaciones
 
@@ -14027,6 +14035,8 @@ Tras finalizar las iteraciones del desarrollo de SafeCar, se han alcanzado concl
 **Criterios de Éxito Lean UX vs. Resultados**
 El proceso de validación ha demostrado que SafeCar cumple con los criterios de éxito cualitativos establecidos para la etapa de MVP. Se ha logrado una solución funcional que conecta el dispositivo IoT (Edge), la nube y las interfaces de usuario de manera estable. Las pruebas de aceptación y las sesiones de feedback con usuarios indican que el producto base es sólido para un lanzamiento a mercado piloto.
 
+<div style="page-break-after: always;"></div>
+
 ### Recomendaciones
 
 Basado en los hallazgos y el estado actual del proyecto, se proponen las siguientes recomendaciones para las próximas etapas del Roadmap de Producto:
@@ -14036,6 +14046,8 @@ Basado en los hallazgos y el estado actual del proyecto, se proponen las siguien
 3.  **Gamificación para Conductores:** Incorporar elementos de gamificación en la aplicación móvil (puntos por conducción segura o mantenimiento puntual) para incentivar el uso recurrente y la retención de usuarios a largo plazo.
 4.  **Integración con Pasarelas de Pago:** Desarrollar completamente el flujo de pagos dentro de la plataforma para permitir la transacción directa entre conductores y talleres, cerrando el ciclo comercial y habilitando modelos de monetización por comisión.
 5.  **Programa de Certificación de Talleres:** Crear un sello de "Taller Verificado SafeCar" para generar mayor confianza en los conductores y estandarizar la calidad del servicio dentro de la red de afiliados.
+
+<div style="page-break-after: always;"></div>
 
 ## Video About the Team
 
@@ -14057,6 +14069,8 @@ En esta sección presentamos al equipo de desarrollo detrás de SafeCar. A trav�
 
 <b>Link del video en Clipchamp:</b> https://tinyurl.com/vw4u3ve7
 <b>Link del video en Youtube:</b>https://www.youtube.com/watch?v=pIR9UxDGdzA
+
+<div style="page-break-after: always;"></div>
 
 # Bibliografía
 
