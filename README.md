@@ -13966,9 +13966,20 @@ Esta sección presenta el análisis de la experiencia de usuario de SafeCar basa
 A continuación, se presenta un video promocional que resume la propuesta de valor de SafeCar, destacando sus principales funcionalidades y beneficios para los usuarios. Este material audiovisual busca ilustrar de manera clara y atractiva cómo nuestra solución transforma la gestión del mantenimiento vehicular mediante el uso de tecnología IoT y una plataforma intuitiva.
 </p>
 
+*Timing*
+
+<ul>
+  <li>0:0:00 - 0:0:12 min -> Presentación de Safecar</li>
+  <li>0:0:13 - 0:0:30 min -> Beneficios Conductores</li>
+  <li>0:0:31 - 0:0:45 min -> Beneficios Talleres</li>
+  <li>0:0:46 - 0:01:02 min -> Modelo de Negocio</li>
+  <li>0:01:03 - 0:01:18 min -> Cierre</li>
+</ul>
+
 <img src="assets/img/capitulo-VI/sprint-3/video-about-the-product.png" alt="Video About the Product" width="100%"/>
 
 <b>Link del video:</b> https://tinyurl.com/5n7t2kwf
+<b>Link del video en Youtube:</b> https://www.youtube.com/watch?v=Ug90jxSF7eg
 
 # Conclusiones
 
@@ -14025,9 +14036,20 @@ Basado en los hallazgos y el estado actual del proyecto, se proponen las siguien
 En esta sección presentamos al equipo de desarrollo detrás de SafeCar. A través de este video, los integrantes de MetaSoft comparten sus experiencias, roles y aportes individuales que hicieron posible la construcción de esta solución tecnológica. Es un espacio para reconocer el esfuerzo conjunto y la sinergia que permitieron alcanzar los objetivos del proyecto.
 </p>
 
+*Timing*
+
+<ul>
+  <li>0:0:00 - 0:04:37 min -> Retrospectiva del equipo</li>
+  <li>0:04:38 - 0:05:35 min -> Testimonio Gonzalo Andre Zavala Quedena</li>
+  <li>0:05:36 - 0:06:50 min -> Testimonio Gustavo Aguirre</li>
+  <li>0:06:51 - 0:08:15 min -> Testimonio Hardie Holguin</li>
+  <li>0:08:16 - 0:09:54 min -> Testimonio Sharvel Irigoyen</li>
+</ul>
+
 <img src="assets/img/capitulo-VI/video-about-the-team.png" alt="Video About the Team" width="100%"/>
 
-<b>Link del video:</b> https://tinyurl.com/vw4u3ve7
+<b>Link del video en Clipchamp:</b> https://tinyurl.com/vw4u3ve7
+<b>Link del video en Youtube:</b>https://www.youtube.com/watch?v=pIR9UxDGdzA
 
 # Bibliografía
 
